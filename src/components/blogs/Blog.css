@@ -1,0 +1,36 @@
+.blogs{
+    background-color: green;
+}
+.blogs>h1{
+    text-align: center;
+}
+.blogs_grid{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.blogs_grid>:nth-child(1){
+width: 200px;
+height: 100px;
+}
+.first_image>img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.blogs_grid>:nth-child(2){
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+.firstrigtimage{
+    width: 100px;
+    height: 100px;
+}
+.firstrigtimage>img{
+    width: 100%;
+    height: 100%;
+}

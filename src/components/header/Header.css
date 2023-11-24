@@ -1,8 +1,10 @@
 header{
     display: flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
     align-items: center;
-
+    margin: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 /* logo */
 header>div>span{
@@ -10,8 +12,6 @@ header>div>span{
     color: rgb(25, 36, 195);
     font-weight: bold;
 }
-
-
 
 .navitems>ul{
     display: flex;
@@ -37,7 +37,7 @@ li{
     background-color: rgb(75, 75, 226);
     font-weight: bold;
     font-size: larger;
-    border-radius: 10px ;
+    border-radius: 6px ;
     padding: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
