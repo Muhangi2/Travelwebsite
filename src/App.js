@@ -6,17 +6,19 @@ import Services from "./components/services/Services";
 import Testmonials from "./components/testimonials/Testmonials";
 import Footer from "./components/footer/Footer";
 import Blog from "./components/blogs/Blog";
+import Recomendation from "./components/recommendation/Recomendation";
 
 function App() {
   return (
     <>
       <Header />
-      <Hero />
+      {/* <Hero />
       <Search />
       <Services />
       <Blog />
       <Testmonials />
-      <Footer />
+      <Footer /> */}
+      <Recomendation />
     </>
   );
 }
