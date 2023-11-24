@@ -7,7 +7,7 @@ import yess from "../../assets/yess.jpg";
 
 const Blog = () => {
   return (
-    <section className="blogs">
+    <section className="blogs" id="blog">
       <h1>Blogs</h1>
       <div className="blogs_grid">
         {/* First Column */}

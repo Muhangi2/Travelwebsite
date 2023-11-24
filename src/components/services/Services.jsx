@@ -5,7 +5,7 @@ import { servicesdata } from "../../data/servicesdata";
 const Services = () => {
   console.log(servicesdata);
   return (
-    <section className="services">
+    <section className="services" id="about">
       {servicesdata.map((service, index) => (
         <div key={index} className="servicess_card">
           {service.icon}

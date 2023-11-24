@@ -32,3 +32,32 @@ footer>:nth-child(3){
  display: flex;
  gap: 2rem;
 }
+@media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+    }
+  
+    footer > :nth-child(2) {
+      padding: 0;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    footer > :nth-child(2) > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  
+    footer > :nth-child(2) > ul > li {
+      font-size: 14px;
+    }
+  
+    footer > :nth-child(3) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }

@@ -10,7 +10,7 @@ margin: 2rem;
     background-size: cover; /* or cover, depending on your design preference */
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
+    color: rgb(241, 229, 229);
     text-align: center;
     display: flex;
     justify-content: center;

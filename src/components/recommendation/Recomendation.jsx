@@ -25,7 +25,7 @@ const Recomendation = () => {
   const destinationData = getDestinationData();
 
   return (
-    <main className="recommendation">
+    <main className="recommendation" id="places">
       <h1>Recommended Destination</h1>
       <header className="recommdation_header">
         <div

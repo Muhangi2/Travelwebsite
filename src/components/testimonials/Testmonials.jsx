@@ -3,7 +3,7 @@ import "./Testimonials.css";
 import { blog } from "../../data/blogdata.js";
 const Testmonials = () => {
   return (
-    <main className="testimonial">
+    <main className="testimonial" id="testimonials">
       <h1>Clients</h1>
       <div className="testimonialgrid">
         {blog.map((blog, index) => (
