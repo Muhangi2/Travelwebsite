@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Recomendation.css";
 import { destinations } from "../../data/destinations";
 import { africandestination } from "../../data/africadestination";
+import { usadestination } from "../../data/americadestination";
+import { europedestination } from "../../data/europedestination";
 const Recomendation = () => {
   const [selected, setSelected] = useState("Africa");
 
@@ -13,11 +15,11 @@ const Recomendation = () => {
       case "Asia":
         return destinations; // Use the data for Asia
       case "Europe":
-        return destinations; // Use the data for Europe
+        return europedestination; // Use the data for Europe
       case "Africa":
         return africandestination; // Use the data for Africa
       case "America":
-        return destinations; // Use the data for America
+        return usadestination; // Use the data for America
       default:
         return destinations; // Default to destinations data
     }
@@ -49,7 +51,7 @@ const Recomendation = () => {
           America
         </div>
       </header>
-      
+
       <div className="grid_places">
         {destinationData.map((item, index) => {
           return (
