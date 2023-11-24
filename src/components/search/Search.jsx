@@ -4,6 +4,8 @@ import DatePicker from "react-datepicker";
 import "./Search.css";
 import { FaSearch } from "react-icons/fa";
 
+import "react-datepicker/dist/react-datepicker.css";
+
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [startDate, setStartDate] = useState(null);
@@ -15,9 +17,9 @@ const Search = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // Your logic to handle the form submission (e.g., search, date range, etc.)
-    console.log("Search Term:", searchTerm);
-    console.log("Check-in Date:", startDate);
-    console.log("Check-out Date:", endDate);
+    // console.log("Search Term:", searchTerm);
+    // console.log("Check-in Date:", startDate);
+    // console.log("Check-out Date:", endDate);
   };
 
   return (
@@ -38,7 +40,7 @@ const Search = () => {
         </div>
         <div className="border_div"></div>
         <div>
-          <label>Check-in</label>
+          <label>Check-in</label><br/>
           <DatePicker
             selectsStart
             selected={startDate}
@@ -50,7 +52,7 @@ const Search = () => {
         </div>
         <div className="border_div"></div>
         <div>
-          <label>Check-out</label>
+          <label>Check-out</label><br/>
           <DatePicker
             selectsEnd
             selected={endDate}
