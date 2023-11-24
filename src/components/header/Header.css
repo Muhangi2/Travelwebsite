@@ -1,0 +1,48 @@
+header{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+
+}
+/* logo */
+header>div>span{
+    font-size: 25px;
+    color: rgb(25, 36, 195);
+    font-weight: bold;
+}
+
+
+
+.navitems>ul{
+    display: flex;
+    gap:2rem;
+    list-style: none;
+}
+li{
+    font-size: 20px;
+    color:rgb(223, 157, 26)
+}
+
+.header_left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_left>img{
+    width: 70px;
+    height: 30px;
+    object-fit:cover;
+}
+.button{
+    background-color: rgb(75, 75, 226);
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 10px ;
+    padding: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    border-color: white;
+    border: 2px solid white;
+  
+  }
