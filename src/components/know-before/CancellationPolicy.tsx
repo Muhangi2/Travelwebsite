@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture'
 export default function CancellationPolicy() {
   return (
     <section className="bg-neutral-50 py-16">
@@ -6,11 +7,10 @@ export default function CancellationPolicy() {
 
         <div className="mt-10 grid items-start gap-10 md:grid-cols-2">
           <div>
-            <img
-              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80"
+            <Picture
+              src="/images/parks/rwanda/akagera/wilderness-magashi-1.jpg"
               alt="Africa map with route pins"
-              className="rounded-md object-cover shadow-md"
-            />
+              className="rounded-md object-cover shadow-md" loading="lazy" decoding="async" />
           </div>
           <div>
             <div className="h-px w-16 bg-brand-green" />

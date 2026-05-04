@@ -23,7 +23,7 @@ export default function PolicyBlock({ title, body, image, imageOnRight = true, b
               <div className="mt-4 text-sm leading-relaxed text-neutral-600">{body}</div>
             </div>
             <div className={imageOnRight ? 'order-2' : 'order-2 md:order-1'}>
-              <img src={image} alt="" className="rounded-md object-cover shadow-md" />
+              <img src={image} alt="" className="rounded-md object-cover shadow-md" loading="lazy" decoding="async" />
             </div>
           </div>
         )}

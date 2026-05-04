@@ -21,7 +21,7 @@ export default function KnowBeforeYouGo() {
             requirements.
           </p>
         }
-        image="https://images.unsplash.com/photo-1452796382428-1a47ddf63bc5?auto=format&fit=crop&w=1200&q=80"
+        image="/images/parks/uganda/murchison-falls/dsc-6951.jpg"
         imageOnRight
       />
 
@@ -54,7 +54,7 @@ export default function KnowBeforeYouGo() {
             medications and a basic first-aid kit.
           </p>
         }
-        image="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1200&q=80"
+        image="/images/parks/uganda/murchison-falls/dsc-7081.jpg"
         imageOnRight={false}
       />
 

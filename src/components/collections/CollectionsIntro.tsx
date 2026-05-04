@@ -1,13 +1,13 @@
+import Picture from '@/components/Picture'
 export default function CollectionsIntro() {
   return (
     <section className="bg-white py-20">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 md:items-center">
         <div className="order-2 md:order-1">
-          <img
-            src="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?auto=format&fit=crop&w=1400&q=80"
+          <Picture
+            src="/images/parks/uganda/murchison-falls/dsc-6280.jpg"
             alt="Safari vehicle on the savanna"
-            className="rounded-md object-cover shadow-md"
-          />
+            className="rounded-md object-cover shadow-md" loading="lazy" decoding="async" />
         </div>
         <div className="order-1 md:order-2">
           <div className="h-px w-24 bg-brand-green" />

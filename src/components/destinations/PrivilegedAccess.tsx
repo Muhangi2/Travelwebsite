@@ -25,7 +25,7 @@ export default function PrivilegedAccess({ items }: { items: Country['privileged
             {items.map((it) => (
               <article key={it.title} className="overflow-hidden rounded-md bg-white text-neutral-800 shadow-md">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={it.image} alt={it.title} className="h-full w-full object-cover" />
+                  <img src={it.image} alt={it.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-serif text-base">{it.title}</h3>

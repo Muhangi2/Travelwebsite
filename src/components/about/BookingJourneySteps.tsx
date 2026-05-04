@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 type Step = {
   title: string
   body: string
@@ -109,9 +111,9 @@ export default function BookingJourneySteps() {
         </div>
 
         <div className="mt-10 text-center">
-          <button className="rounded-full bg-brand-green px-8 py-3 text-[10px] tracking-[0.2em] text-white shadow hover:bg-brand-green-dark">
+          <NavLink to="/contact" className="btn-primary">
             BOOK NOW
-          </button>
+          </NavLink>
         </div>
       </div>
     </section>

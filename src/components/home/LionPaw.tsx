@@ -1,4 +1,4 @@
-const lionImg = 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1400&q=80'
+const lionImg = '/images/activities/big-five/roho-ya-selous-elephant.jpg'
 
 export default function LionPaw() {
   return (

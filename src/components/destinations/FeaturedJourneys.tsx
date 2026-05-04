@@ -4,17 +4,17 @@ const journeys = [
   {
     slug: 'uganda-exclusive-primate',
     title: 'Uganda Exclusive Primate Journey',
-    image: 'https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=900&q=80',
+    image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
   },
   {
     slug: 'great-lakes-primate-odyssey',
     title: '',
-    image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c3?auto=format&fit=crop&w=900&q=80',
+    image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
   },
   {
     slug: 'ultimate-gorilla-expedition',
     title: '',
-    image: 'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=900&q=80',
+    image: '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.jpg',
   },
 ]
 
@@ -32,7 +32,7 @@ export default function FeaturedJourneys() {
               className="group relative overflow-hidden rounded-md"
             >
               <div className="aspect-[4/3] overflow-hidden">
-                <img src={j.image} alt={j.title || 'Journey'} className="h-full w-full object-cover transition group-hover:scale-105" />
+                <img src={j.image} alt={j.title || 'Journey'} className="h-full w-full object-cover transition group-hover:scale-105" loading="lazy" decoding="async" />
               </div>
               {j.title && (
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">

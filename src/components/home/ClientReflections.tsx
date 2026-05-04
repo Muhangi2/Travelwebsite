@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture'
 export default function ClientReflections() {
   return (
     <section className="bg-white py-24">
@@ -7,11 +8,10 @@ export default function ClientReflections() {
         <div className="mt-14 grid items-center gap-12 md:grid-cols-2">
           <div className="flex justify-center">
             <div className="aspect-square w-72 overflow-hidden rounded-full ring-4 ring-white shadow-lg md:w-96">
-              <img
-                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+              <Picture
+                src="/images/destinations/tanzania/sayari-lioness.jpg"
                 alt="Harrison family on safari"
-                className="h-full w-full object-cover"
-              />
+                className="h-full w-full object-cover" loading="lazy" decoding="async" />
             </div>
           </div>
 
@@ -26,11 +26,10 @@ export default function ClientReflections() {
 
             <div className="mt-8 flex items-center gap-3">
               <div className="h-10 w-10 overflow-hidden rounded-full bg-neutral-200">
-                <img
-                  src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=200&q=80"
+                <Picture
+                  src="/images/team/kelly.jpg"
                   alt=""
-                  className="h-full w-full object-cover"
-                />
+                  className="h-full w-full object-cover" loading="lazy" decoding="async" />
               </div>
               <p className="text-sm text-neutral-600">— The Harrison Family, New York</p>
             </div>

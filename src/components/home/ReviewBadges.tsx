@@ -22,9 +22,14 @@ export default function ReviewBadges() {
             </div>
             <div className="mt-5 flex justify-center gap-1"><Star /><Star /><Star /><Star /><Star /></div>
             <p className="mt-4 font-serif text-3xl">5.0</p>
-            <button className="mt-5 rounded-full bg-brand-green px-7 py-2 text-[10px] tracking-[0.2em] text-white hover:bg-brand-green-dark">
+            <a
+              href="https://www.google.com/search?q=MasterPolo+Safaris+reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-block rounded-full bg-brand-green px-7 py-2 text-[10px] tracking-[0.2em] text-white hover:bg-brand-green-dark"
+            >
               REVIEW US
-            </button>
+            </a>
           </div>
 
           <div className="rounded-md bg-white p-8 text-center shadow-md ring-1 ring-neutral-100">
@@ -36,9 +41,14 @@ export default function ReviewBadges() {
             </div>
             <div className="mt-5 flex justify-center gap-1"><Star /><Star /><Star /><Star /><Star /></div>
             <p className="mt-4 font-serif text-3xl">5.0</p>
-            <button className="mt-5 rounded-full border border-neutral-300 px-7 py-2 text-[10px] tracking-[0.2em] text-neutral-800 hover:bg-neutral-50">
+            <a
+              href="https://www.tripadvisor.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-block rounded-full border border-neutral-300 px-7 py-2 text-[10px] tracking-[0.2em] text-neutral-800 hover:bg-neutral-50"
+            >
               REVIEW US
-            </button>
+            </a>
           </div>
         </div>
       </div>

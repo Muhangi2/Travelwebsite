@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Picture from '@/components/Picture'
 
 const subjects = [
   'Plan a Bespoke Safari',
@@ -30,11 +31,10 @@ export default function Contact() {
   return (
     <>
       <section className="relative isolate overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=2400&q=80"
+        <Picture
+          src="/images/destinations/tanzania/sayari-lioness.jpg"
           alt="The MasterPolo Safaris team"
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
-        />
+          className="absolute inset-0 -z-10 h-full w-full object-cover" loading="lazy" decoding="async" />
         <div className="absolute inset-0 -z-10 bg-black/40" />
         <div className="mx-auto flex min-h-[42svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
           <h1 className="font-serif text-5xl md:text-6xl">Contact Us</h1>
@@ -44,11 +44,10 @@ export default function Contact() {
       <section className="bg-white py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-2 md:items-center">
           <div className="overflow-hidden rounded-md">
-            <img
-              src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1400&q=80"
+            <Picture
+              src="/images/activities/helicopter-rwanda/1000045751.jpg"
               alt="Safari guide on a walking safari"
-              className="h-full w-full object-cover"
-            />
+              className="h-full w-full object-cover" loading="lazy" decoding="async" />
           </div>
 
           <div>

@@ -1,95 +1,86 @@
+import { NavLink } from 'react-router-dom'
+
 type Card = {
   image: string
   duration: string
   title: string
   desc: string
-  cta: string
+  href: string
 }
 
 const cards: Card[] = [
   {
-    image: 'https://images.unsplash.com/photo-1551634979-2b11f8c218da?auto=format&fit=crop&w=1200&q=80',
-    duration: '11 Days  |  Uganda & Rwanda',
+    image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+    duration: '11 Days  ·  Uganda & Rwanda',
     title: 'Ultimate Gorilla Expedition',
-    desc: 'A journey through the heart of East Africa, from the bustling streets of Kampala to the misty mountains of the Virunga.',
-    cta: 'EXPLORE NOW',
+    desc: 'A journey through the heart of East Africa, from Kampala to the misty Virungas — twin gorilla treks across Bwindi and Volcanoes.',
+    href: '/safari-collections',
   },
   {
-    image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=1200&q=80',
-    duration: '9 Days  |  Uganda',
+    image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
+    duration: '9 Days  ·  Uganda',
     title: 'Uganda Primate & Adventure Circuit',
-    desc: "A Perfect Blend of Adrenaline, Wildlife, and Uganda's World-Famous Primate Encounters…",
-    cta: 'EXPLORE NOW',
+    desc: "A perfect blend of adrenaline, wildlife, and Uganda's world-famous primate encounters — gorillas, chimpanzees and the savannahs of Queen Elizabeth.",
+    href: '/safari-collections',
   },
   {
-    image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80',
-    duration: '4 Days  |  Rwanda',
+    image: '/images/lodges/rwanda/volcanoes-national-park/wildernes-bisate-lodge/1753110933515-bisate-gorilla-trekking-06-25-fr-31.jpg',
+    duration: '4 Days  ·  Rwanda',
     title: 'The "Ikaze" (Welcome) Short Break',
-    desc: 'The essence of Rwanda in four days. A short but profound encounter with the majestic mountain gorillas.',
-    cta: 'VISIT NOW',
+    desc: 'The essence of Rwanda in four days. A short but profound encounter with mountain gorillas, served with eco-luxury at Wilderness Bisate.',
+    href: '/safari-collections',
   },
 ]
 
 export default function SafariCollection() {
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="explore" className="bg-brand-cream/40 py-16 sm:py-20 md:py-28">
+      <div className="container-page">
         <div className="text-center">
-          <h2 className="font-serif text-5xl">Our Safari Collection</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-neutral-600">
-            Our safari collection brings together exclusive wildlife encounters, breathtaking scenery, and expertly
-            guided journeys across Uganda.
+          <p className="eyebrow">Curated Itineraries</p>
+          <h2 className="mt-3">Our Safari Collection</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-brand-muted sm:text-base">
+            Six signature journeys across East Africa — each itinerary handcrafted by our travel designers, every
+            lodge personally vetted, every moment privately curated.
           </p>
         </div>
 
-        <div className="relative mt-14">
-          <button
-            aria-label="Previous"
-            className="absolute -left-4 top-1/2 hidden -translate-y-1/2 rounded-full border border-neutral-300 bg-white p-3 text-neutral-700 hover:bg-neutral-50 lg:block"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {cards.map((c) => (
-              <article key={c.title} className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-200">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={c.image} alt={c.title} className="h-full w-full object-cover" />
-                </div>
-                <div className="p-6">
-                  <p className="text-xs font-medium tracking-wide text-brand-green">{c.duration}</p>
-                  <h3 className="mt-2 font-serif text-xl">{c.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-600">{c.desc}</p>
-                  <button
-                    className={`mt-5 rounded-full px-5 py-2 text-[10px] tracking-[0.2em] ${
-                      c.cta === 'VISIT NOW'
-                        ? 'border border-neutral-900 text-neutral-900 hover:bg-neutral-100'
-                        : 'bg-neutral-900 text-white hover:bg-black'
-                    }`}
-                  >
-                    {c.cta}
-                  </button>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <button
-            aria-label="Next"
-            className="absolute -right-4 top-1/2 hidden -translate-y-1/2 rounded-full border border-neutral-300 bg-white p-3 text-neutral-700 hover:bg-neutral-50 lg:block"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </button>
+        <div className="mt-12 grid gap-6 md:mt-14 md:grid-cols-3 md:gap-8">
+          {cards.map((c) => (
+            <article
+              key={c.title}
+              className="group overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-neutral-200/70 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={c.image}
+                  alt={c.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-5 sm:p-6">
+                <p className="text-[11px] font-medium tracking-[0.18em] text-brand-gold uppercase">{c.duration}</p>
+                <h3 className="mt-2 font-serif text-xl sm:text-2xl">{c.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-brand-muted">{c.desc}</p>
+                <NavLink
+                  to={c.href}
+                  className="mt-5 inline-flex items-center gap-2 text-xs font-medium tracking-[0.2em] text-brand-green transition hover:gap-3 hover:text-brand-green-dark"
+                >
+                  EXPLORE
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </NavLink>
+              </div>
+            </article>
+          ))}
         </div>
 
         <div className="mt-12 text-center">
-          <button className="rounded-full bg-brand-green px-8 py-3 text-xs tracking-[0.2em] text-white shadow hover:bg-brand-green-dark">
-            VIEW ALL SAFARI COLLECTION
-          </button>
+          <NavLink to="/safari-collections" className="btn-primary">
+            VIEW ALL SAFARI COLLECTIONS
+          </NavLink>
         </div>
       </div>
     </section>

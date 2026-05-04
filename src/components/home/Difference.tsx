@@ -1,70 +1,61 @@
+import Picture from '@/components/Picture'
 const points = [
   {
     title: 'Expert Local Guides',
-    body: 'Our guides are our greatest asset. Born and raised in Uganda, they possess an intimate knowledge of the land, the wildlife, and the culture. Their passion is infectious, and their expertise ensures you have a safe, insightful, and fascinating adventure. They know the best spots to find wildlife and are skilled storytellers who bring the African bush to life.',
+    body: "Our guides are born and raised in East Africa — intimately knowledgeable about the land, the wildlife and the culture. They are passionate storytellers who bring the bush to life.",
   },
   {
     title: 'Tailor-Made Itineraries',
-    body: 'Your dream safari is unique. We specialize in crafting personalized itineraries that match your interests, budget, and travel style. Whether you seek thrilling adventure, a focus on photography, a family-friendly holiday, or a luxurious romantic getaway, we will design the perfect trip for you.',
+    body: "Your dream safari is unique. We craft personalised itineraries matched to your interests, your travel pace and your budget — adventure-led, family-friendly or romantic.",
   },
   {
     title: 'Commitment to Excellence',
-    body: 'From comfortable and reliable 4x4 safari vehicles to carefully selected lodges and camps, we ensure every aspect of your journey is seamless. We focus on providing.',
+    body: "From the comfortable 4x4 safari vehicles to the lodges we hand-pick, every aspect of your journey is seamlessly delivered to a single high standard.",
   },
   {
     title: '24/7 Support',
-    body: 'From the moment you land in Entebbe until you fly home, we are with you.',
+    body: "From the moment you land at Entebbe, Kigali or Nairobi until you fly home, our team is reachable around the clock.",
   },
 ]
 
 export default function Difference() {
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-10 md:grid-cols-2">
+    <section className="bg-white py-16 sm:py-20 md:py-28">
+      <div className="container-page">
+        <div className="grid items-end gap-6 md:grid-cols-2">
           <div>
-            <h2 className="font-serif text-5xl leading-tight">
-              The MasterPolo Safaris<br />Difference
-            </h2>
+            <p className="eyebrow">Why Travel With Us</p>
+            <h2 className="mt-3">The MasterPolo Difference</h2>
           </div>
-          <div className="flex justify-end">
-            <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full ring-1 ring-neutral-200">
-              <span className="font-serif text-xs">
-                <span className="text-brand-rust">Master</span>
-                <span className="text-brand-forest">Polo</span>
-              </span>
-            </div>
-          </div>
+          <p className="font-serif text-lg italic leading-relaxed text-brand-charcoal sm:text-xl">
+            We believe a truly great safari depends on the quality of the journey. With us, you are not a tourist —
+            you are an explorer.
+          </p>
         </div>
 
-        <p className="mt-6 max-w-3xl font-serif text-2xl leading-relaxed text-neutral-800">
-          We believe a truly great safari depends on the quality of the journey. With us, you are not just a tourist;
-          you are an explorer.
-        </p>
-
-        <div className="mt-12 grid gap-12 md:grid-cols-2">
-          <div className="space-y-6">
-            <div className="h-px w-24 bg-brand-green" />
+        <div className="mt-12 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-14 lg:gap-16">
+          <ul className="space-y-6">
+            <div className="h-px w-20 bg-brand-gold" />
             {points.map((p) => (
-              <div key={p.title} className="flex gap-3">
-                <span className="mt-1 text-brand-green">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M8 12l3 3 5-6" />
+              <li key={p.title} className="flex gap-4">
+                <span className="mt-1 flex h-7 w-7 flex-none items-center justify-center rounded-full bg-brand-green/10 text-brand-green">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M5 12l5 5L20 7" />
                   </svg>
                 </span>
-                <p className="text-sm text-neutral-700">
-                  <span className="font-semibold text-brand-green">{p.title}:</span> {p.body}
-                </p>
-              </div>
+                <div>
+                  <h3 className="font-serif text-lg text-brand-ink">{p.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-brand-muted sm:text-base">{p.body}</p>
+                </div>
+              </li>
             ))}
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=1400&q=80"
-              alt="Lion cub resting on a log"
-              className="h-full w-full rounded-md object-cover"
-            />
+          </ul>
+          <div className="overflow-hidden rounded-xl shadow-lg">
+            <Picture
+              src="/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg"
+              alt="Elephants walking along the river at sunset"
+              loading="lazy"
+              className="h-full w-full object-cover" />
           </div>
         </div>
       </div>

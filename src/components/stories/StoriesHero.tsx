@@ -1,27 +1,22 @@
+import Picture from '@/components/Picture'
 export default function StoriesHero() {
   return (
-    <section className="relative isolate min-h-[55svh] overflow-hidden">
-      <img
-        src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=2400&q=80"
-        alt="Mountain sunset"
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-black/45" />
+    <section className="relative isolate min-h-[65svh] overflow-hidden">
+      <Picture
+        src="/images/activities/helicopter-rwanda/1000045751.jpg"
+        alt="Aerial view of Rwanda's volcanoes at golden hour"
+        className="absolute inset-0 -z-10 h-full w-full object-cover" fetchPriority="high" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/35 to-black/65" />
 
-      <div className="mx-auto flex min-h-[55svh] max-w-4xl items-center justify-center px-6 pt-24 text-center text-white">
-        <div>
-          <h1 className="font-serif text-5xl leading-tight md:text-6xl">Stories from the Wild</h1>
-          <p className="mt-4 text-sm text-white/85">
-            Travel tales, wildlife insights, and behind-the-scenes moments from our safaris across East Africa.
+      <div className="container-page flex min-h-[65svh] items-center justify-center pt-28 pb-14 text-center text-white sm:pt-32">
+        <div className="max-w-4xl">
+          <p className="eyebrow text-brand-gold">Journal</p>
+          <h1 className="text-display mt-4 text-white">Stories from the Wild</h1>
+          <p className="mx-auto mt-5 max-w-2xl text-base text-white/85 sm:text-lg">
+            Travel tales, wildlife insights and behind-the-scenes moments from our safaris across Uganda, Rwanda
+            and Kenya — written by guides, designers and the explorers we travel alongside.
           </p>
-          <p className="mx-auto mt-3 max-w-2xl text-xs leading-relaxed text-white/75">
-            From misty gorilla forests to golden savannah sunsets, our blog brings you closer to the heart of Africa.
-            Discover stories, travel tips, conservation insights, and unforgettable safari moments — written by guides,
-            explorers, and passionate storytellers.
-          </p>
-          <button className="mt-8 rounded-full bg-brand-green px-7 py-3 text-[10px] tracking-[0.25em] text-white shadow hover:bg-brand-green-dark">
-            EXPLORE OUR STORIES
-          </button>
+          <a href="#articles" className="btn-primary mt-8">EXPLORE OUR STORIES</a>
         </div>
       </div>
     </section>

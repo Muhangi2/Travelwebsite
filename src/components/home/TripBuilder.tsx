@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 const adventures = [
-  { id: 'gorillas', label: 'Gorillas', image: 'https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=900&q=80' },
-  { id: 'big-five', label: 'Big Five', image: 'https://images.unsplash.com/photo-1546708973-b321b3f1c4f6?auto=format&fit=crop&w=900&q=80' },
-  { id: 'birding', label: 'Birding', image: 'https://images.unsplash.com/photo-1526666923127-b2970f64b422?auto=format&fit=crop&w=900&q=80' },
+  { id: 'gorillas', label: 'Gorillas', image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg' },
+  { id: 'big-five', label: 'Big Five', image: '/images/activities/big-five/roho-ya-selous-elephant.jpg' },
+  { id: 'birding', label: 'Birding', image: '/images/activities/birding/lensoffthegreen-1748944212110.jpg' },
 ]
 
 const STEPS = 8
@@ -63,7 +63,7 @@ export default function TripBuilder() {
                 className="group relative overflow-hidden rounded-md text-left shadow-sm ring-1 ring-neutral-200 transition hover:shadow-md"
               >
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={a.image} alt={a.label} className="h-full w-full object-cover transition group-hover:scale-105" />
+                  <img src={a.image} alt={a.label} className="h-full w-full object-cover transition group-hover:scale-105" loading="lazy" decoding="async" />
                 </div>
                 <div className="bg-white px-5 py-4">
                   <p className="font-serif text-lg">{a.label}</p>

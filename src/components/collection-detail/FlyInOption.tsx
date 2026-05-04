@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture'
 export default function FlyInOption() {
   return (
     <section className="bg-white py-20">
@@ -6,11 +7,10 @@ export default function FlyInOption() {
 
         <div className="mt-12 grid items-center gap-10 md:grid-cols-2">
           <div>
-            <img
-              src="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?auto=format&fit=crop&w=1200&q=80"
+            <Picture
+              src="/images/parks/uganda/murchison-falls/dsc-6280.jpg"
               alt="Safari vehicle"
-              className="rounded-md object-cover"
-            />
+              className="rounded-md object-cover" loading="lazy" decoding="async" />
           </div>
           <div>
             <div className="h-px w-24 bg-brand-green" />

@@ -1,19 +1,20 @@
+import Picture from '@/components/Picture'
 export default function KnowBeforeHero() {
   return (
-    <section className="relative isolate min-h-[40svh] overflow-hidden">
-      <img
-        src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=2400&q=80"
-        alt="Forest"
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-black/55" />
+    <section className="relative isolate min-h-[55svh] overflow-hidden">
+      <Picture
+        src="/images/parks/uganda/murchison-falls/dsc-6951.jpg"
+        alt="Safari preparation"
+        className="absolute inset-0 -z-10 h-full w-full object-cover" fetchPriority="high" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/40 to-black/65" />
 
-      <div className="mx-auto flex min-h-[40svh] max-w-3xl items-center justify-center px-6 pt-24 text-center text-white">
-        <div>
-          <h1 className="font-serif text-5xl leading-tight md:text-6xl">Know Before You Go</h1>
-          <p className="mx-auto mt-4 max-w-xl text-sm text-white/85">
-            The single most important thing we want our travelers to know is how much information to bring. You ensure
-            for a smooth, worry-free safari experience.
+      <div className="container-page flex min-h-[55svh] items-center justify-center pt-28 pb-14 text-center text-white sm:pt-32">
+        <div className="max-w-3xl">
+          <p className="eyebrow text-brand-gold">Travel Essentials</p>
+          <h1 className="text-display mt-4 text-white">Know Before You Go</h1>
+          <p className="mx-auto mt-5 max-w-2xl text-base text-white/85 sm:text-lg">
+            Practical information to make sure your safari runs effortlessly — visas, packing, payments, tipping
+            and trekking fitness.
           </p>
         </div>
       </div>

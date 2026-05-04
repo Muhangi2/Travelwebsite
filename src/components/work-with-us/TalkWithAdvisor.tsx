@@ -1,19 +1,21 @@
+import { NavLink } from 'react-router-dom'
+import Picture from '@/components/Picture'
+
 export default function TalkWithAdvisor() {
   return (
-    <section className="relative isolate overflow-hidden py-20 text-white">
-      <img
-        src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=2400&q=80"
-        alt="Elephants at sunset"
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-black/40" />
+    <section className="relative isolate overflow-hidden py-20 text-white sm:py-24">
+      <Picture
+        src="/images/activities/helicopter-rwanda/1000045751.jpg"
+        alt="Aerial sunset over the Virungas"
+        loading="lazy"
+        className="absolute inset-0 -z-10 h-full w-full object-cover" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/35 to-black/65" />
 
-      <div className="mx-auto max-w-3xl px-6 text-center">
-        <h2 className="font-serif text-5xl">Talk With Our Travel Advisor</h2>
-        <p className="mt-3 text-sm text-white/85">For Agent Rates &amp; Safari Packages</p>
-        <button className="mt-7 rounded-full bg-brand-green px-7 py-3 text-[10px] tracking-[0.25em] text-white shadow hover:bg-brand-green-dark">
-          TALK WITH OUR TRAVEL ADVISOR
-        </button>
+      <div className="container-page text-center">
+        <p className="eyebrow text-brand-gold">Travel Trade</p>
+        <h2 className="text-display mt-3 text-white">Talk With Our Travel Advisor</h2>
+        <p className="mt-4 text-base text-white/85">For agent rates, group quotes and bespoke safari packages.</p>
+        <NavLink to="/contact" className="btn-primary mt-8">TALK WITH OUR TRAVEL ADVISOR</NavLink>
       </div>
     </section>
   )

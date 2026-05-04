@@ -18,7 +18,7 @@ export default function NationalParksList({ countrySlug, parks }: Props) {
 
         <div className="mt-10 grid items-center gap-12 md:grid-cols-2">
           <div className="overflow-hidden rounded-md shadow-md">
-            <img src={park.image} alt={park.name} className="h-full w-full object-cover" />
+            <img src={park.image} alt={park.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
           </div>
           <div>
             <h3 className="font-serif text-2xl text-brand-green">{park.name}</h3>

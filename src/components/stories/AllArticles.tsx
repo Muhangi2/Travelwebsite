@@ -17,8 +17,8 @@ export default function AllArticles() {
   const visible = filtered.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE)
 
   return (
-    <section className="bg-white pb-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="articles" className="bg-white pb-20">
+      <div className="container-page">
         <div className="flex flex-wrap justify-center gap-3">
           {categories.map((c) => {
             const isActive = c === active
@@ -47,7 +47,7 @@ export default function AllArticles() {
           {visible.map((a) => (
             <article key={a.slug} className="overflow-hidden rounded-md shadow-sm ring-1 ring-neutral-100">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={a.image} alt={a.title} className="h-full w-full object-cover" />
+                <img src={a.image} alt={a.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                 <span className="absolute right-3 top-3 rounded-full bg-brand-green/90 px-3 py-1 text-[10px] tracking-wide text-white">
                   {a.tags.join(', ')}
                 </span>

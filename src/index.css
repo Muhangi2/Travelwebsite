@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* Brand palette — warmed, refined */
   --color-brand-rust: #a94727;
   --color-brand-rust-dark: #8a3a1f;
   --color-brand-forest: #3f4e3a;
@@ -8,29 +9,105 @@
   --color-brand-green: #1e5631;
   --color-brand-green-dark: #163f23;
   --color-brand-cream: #f7f4ee;
+  --color-brand-sand: #e8dfcf;
+  --color-brand-gold: #b88a4a;
+  --color-brand-gold-dark: #8a651f;
   --color-brand-ink: #0e1410;
+  --color-brand-charcoal: #2a2f2c;
+  --color-brand-muted: #6b6b66;
 
   --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Heading scale */
+  --text-display: clamp(2.5rem, 6vw + 1rem, 5.25rem);
+  --text-h1: clamp(2rem, 4.5vw + 1rem, 4rem);
+  --text-h2: clamp(1.6rem, 2.6vw + 1rem, 2.75rem);
+  --text-h3: clamp(1.3rem, 1.6vw + 1rem, 1.875rem);
 }
 
 @layer base {
   html {
     font-family: var(--font-sans);
+    font-size: 16px;
     color: var(--color-brand-ink);
     background: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
     margin: 0;
     min-height: 100svh;
+    line-height: 1.6;
+    color: var(--color-brand-charcoal);
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-family: var(--font-serif);
     font-weight: 500;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
+    color: var(--color-brand-ink);
+    line-height: 1.15;
+  }
+
+  h1 { font-size: var(--text-h1); }
+  h2 { font-size: var(--text-h2); }
+  h3 { font-size: var(--text-h3); }
+
+  p {
+    line-height: 1.7;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 200ms ease, opacity 200ms ease;
+  }
+
+  button {
+    font-family: var(--font-sans);
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-brand-green);
+    color: #fff;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-serif);
+    font-size: var(--text-display);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  .container-page {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-brand-green px-6 py-3 text-xs font-medium tracking-[0.18em] text-white shadow-md transition hover:bg-brand-green-dark hover:shadow-lg sm:px-8;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-xs font-medium tracking-[0.18em] text-white backdrop-blur transition hover:bg-white/10 sm:px-8;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-brand-ink/15 bg-white px-6 py-3 text-xs font-medium tracking-[0.18em] text-brand-ink transition hover:border-brand-green hover:text-brand-green;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-medium uppercase tracking-[0.25em] text-brand-gold;
   }
 }

@@ -1,22 +1,22 @@
+import { NavLink } from 'react-router-dom'
+import Picture from '@/components/Picture'
+
 export default function BeginYourLegacy() {
   return (
-    <section className="relative isolate overflow-hidden py-24 text-white">
-      <img
-        src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=2400&q=80"
-        alt="African savanna sunset"
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
+    <section className="relative isolate overflow-hidden py-20 text-white sm:py-28">
+      <Picture
+        src="/images/activities/helicopter-rwanda/1000045751.jpg"
+        alt="Aerial sunset view of the Virunga Mountains"
+        className="absolute inset-0 -z-10 h-full w-full object-cover" loading="lazy" decoding="async" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/45 to-black/75" />
 
-      <div className="mx-auto max-w-3xl px-6 text-center">
-        <h2 className="font-serif text-6xl">Begin Your Legacy</h2>
-        <p className="mx-auto mt-4 max-w-xl text-sm text-white/85">
-          Africa is waiting to change you. Let us guide you there. Contact our travel specialists today to start
-          planning your signature safari.
+      <div className="container-page text-center">
+        <p className="eyebrow text-brand-gold">Your Story Starts Here</p>
+        <h2 className="text-display mt-3 text-white">Begin Your Legacy</h2>
+        <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
+          Africa is waiting to change you. Let our travel designers craft the safari you were always meant to take.
         </p>
-        <button className="mt-8 rounded-full border border-white/40 bg-white/5 px-8 py-3 text-xs tracking-[0.25em] text-white backdrop-blur hover:bg-white/15">
-          INQUIRE NOW
-        </button>
+        <NavLink to="/contact" className="btn-primary mt-9">INQUIRE NOW</NavLink>
       </div>
     </section>
   )

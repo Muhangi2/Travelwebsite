@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture'
 const personalInfo = [
   'Full name',
   'Email address',
@@ -29,8 +30,8 @@ const userRights = [
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mt-10">
-      <h2 className="font-serif text-2xl">{title}</h2>
-      <div className="mt-3 space-y-3 text-sm leading-relaxed text-neutral-700">{children}</div>
+      <h2 className="font-serif text-2xl text-brand-ink">{title}</h2>
+      <div className="mt-3 space-y-3 text-sm leading-relaxed text-brand-charcoal sm:text-base">{children}</div>
     </section>
   )
 }
@@ -58,28 +59,28 @@ function BulletList({ items }: { items: string[] }) {
 export default function PrivacyPolicy() {
   return (
     <>
-      <section className="relative isolate overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2400&q=80"
-          alt="Wilderness magazine on a desk"
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 -z-10 bg-black/55" />
-        <div className="mx-auto flex min-h-[36svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
-          <h1 className="font-serif text-5xl md:text-6xl">Privacy Policy</h1>
+      <section className="relative isolate min-h-[45svh] overflow-hidden">
+        <Picture
+          src="/images/parks/rwanda/volcanoes/wilderness-bisate.jpg"
+          alt=""
+          className="absolute inset-0 -z-10 h-full w-full object-cover" loading="lazy" decoding="async" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/40 to-black/65" />
+        <div className="container-page flex min-h-[45svh] items-center justify-center pt-28 pb-12 text-center text-white sm:pt-32">
+          <div className="max-w-3xl">
+            <p className="eyebrow text-brand-gold">Legal</p>
+            <h1 className="text-display mt-3 text-white">Privacy Policy</h1>
+            <p className="mt-3 text-sm tracking-wide text-white/80">Effective Date · 02 May 2026</p>
+          </div>
         </div>
       </section>
 
-      <article className="mx-auto max-w-3xl px-6 py-20">
-        <h2 className="font-serif text-3xl">Privacy Policy</h2>
-        <p className="mt-2 text-sm font-semibold text-neutral-700">Effective Date: 05-02-2026</p>
-
-        <p className="mt-6 text-sm leading-relaxed text-neutral-700">
+      <article className="container-page max-w-3xl py-16 md:py-20">
+        <p className="text-base leading-relaxed text-brand-charcoal sm:text-lg">
           MasterPolo Safaris (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) values your privacy. This
-          Privacy Policy explains how we collect, use, store, and protect your personal information when you visit
+          Privacy Policy explains how we collect, use, store and protect your personal information when you visit
           www.masterpolosafaris.com or use our services.
         </p>
-        <p className="mt-3 text-sm leading-relaxed text-neutral-700">
+        <p className="mt-4 leading-relaxed text-brand-charcoal">
           By using our website, you agree to the practices described in this policy.
         </p>
 

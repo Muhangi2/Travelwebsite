@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture'
 export default function WhyChoose() {
   return (
     <section className="bg-white py-20">
@@ -16,11 +17,10 @@ export default function WhyChoose() {
           </p>
         </div>
         <div>
-          <img
-            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+          <Picture
+            src="/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.jpg"
             alt="Luxury safari lodge bedroom"
-            className="rounded-md object-cover"
-          />
+            className="rounded-md object-cover" loading="lazy" decoding="async" />
         </div>
       </div>
     </section>

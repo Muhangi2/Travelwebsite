@@ -6,14 +6,14 @@ type Props = {
 
 export default function DestinationHero({ title, subtitle, image }: Props) {
   return (
-    <section className="relative isolate min-h-[60svh] overflow-hidden">
-      <img src={image} alt={title} className="absolute inset-0 -z-10 h-full w-full object-cover" />
-      <div className="absolute inset-0 -z-10 bg-black/55" />
+    <section className="relative isolate min-h-[75svh] overflow-hidden">
+      <img src={image} alt={title} className="absolute inset-0 -z-10 h-full w-full object-cover" fetchPriority="high" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
 
-      <div className="mx-auto flex min-h-[60svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
-        <div>
-          <h1 className="whitespace-pre-line font-serif text-5xl leading-[1.1] md:text-6xl">{title}</h1>
-          <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-white/85">{subtitle}</p>
+      <div className="container-page flex min-h-[75svh] items-center justify-center pt-28 pb-16 text-center text-white sm:pt-32">
+        <div className="max-w-4xl">
+          <h1 className="text-display whitespace-pre-line text-white">{title}</h1>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">{subtitle}</p>
         </div>
       </div>
     </section>

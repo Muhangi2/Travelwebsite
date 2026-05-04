@@ -1,26 +1,29 @@
+import { NavLink } from 'react-router-dom'
+import Picture from '@/components/Picture'
+
 export default function AboutHero() {
   return (
-    <section className="relative isolate min-h-[60svh] overflow-hidden">
-      <img
-        src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=2400&q=80"
-        alt="Mountain gorilla"
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-black/55" />
+    <section className="relative isolate min-h-[80svh] overflow-hidden">
+      <Picture
+        src="/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg"
+        alt="Mountain gorilla in Bwindi Impenetrable Forest"
+        className="absolute inset-0 -z-10 h-full w-full object-cover" fetchPriority="high" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/45 to-black/70" />
 
-      <div className="mx-auto flex min-h-[60svh] max-w-4xl items-center justify-center px-6 pt-24 text-center text-white">
-        <div>
-          <h1 className="font-serif text-5xl leading-[1.1] md:text-6xl">
-            Welcome to <br />
-            MasterPolo Safaris
-          </h1>
-          <p className="mt-4 text-sm text-white/85">East Africa's Chinese-Focused Destination Management Company</p>
-          <button className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-green px-7 py-3 text-[10px] tracking-[0.25em] text-white shadow hover:bg-brand-green-dark">
-            START YOUR SAFARI JOURNEY
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <div className="container-page flex min-h-[80svh] items-center justify-center pt-28 pb-16 text-center text-white sm:pt-32">
+        <div className="max-w-3xl">
+          <p className="eyebrow text-brand-gold">Our Story</p>
+          <h1 className="text-display mt-4 text-white">Welcome to MasterPolo Safaris</h1>
+          <p className="mx-auto mt-5 max-w-xl text-base text-white/85 sm:text-lg">
+            East Africa’s bespoke destination management company — designing private safaris in Uganda, Rwanda and
+            Kenya for travelers who value depth, access and exclusivity.
+          </p>
+          <NavLink to="/safari-collections" className="btn-primary mt-8">
+            START YOUR JOURNEY
+            <svg className="ml-2" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M13 5l7 7-7 7" />
             </svg>
-          </button>
+          </NavLink>
         </div>
       </div>
     </section>

@@ -8,17 +8,17 @@ const experiences: Experience[] = [
   {
     title: 'Triple Primate Encounter',
     body: 'Track the intelligent Chimpanzees in Kibale Forest and the magnificent Mountain Gorillas in Bwindi, offering diverse primate encounters across Uganda’s most biodiverse regions.',
-    image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
   },
   {
     title: 'Shoebill Stalking Adventure',
     body: 'Experience a final thrilling adventure searching for the magnificent and prehistoric-looking shoebill stork, a fitting finale to your wildlife safari.',
-    image: 'https://images.unsplash.com/photo-1626268220505-67d39ec0bf6f?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/activities/helicopter-rwanda/1000045712.jpg',
   },
   {
     title: 'Kazinga Channel Wildlife',
     body: "Enjoy spectacular game viewing along one of Africa's most wildlife-rich waterways, home to massive hippo pods, crocodiles, and diverse birdlife.",
-    image: 'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.jpg',
   },
 ]
 
@@ -42,7 +42,7 @@ export default function UniqueExperiences() {
             {experiences.map((e) => (
               <article key={e.title} className="overflow-hidden rounded-md bg-white text-neutral-800 shadow-md">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={e.image} alt={e.title} className="h-full w-full object-cover" />
+                  <img src={e.image} alt={e.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-serif text-lg">{e.title}</h3>

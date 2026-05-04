@@ -19,7 +19,7 @@ export default function FeaturedPosts() {
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           <article className="relative overflow-hidden rounded-md shadow-sm ring-1 ring-neutral-100">
             <div className="relative aspect-[4/5] overflow-hidden lg:aspect-[4/5]">
-              <img src={main.image} alt={main.title} className="h-full w-full object-cover" />
+              <img src={main.image} alt={main.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
               <TagPill tags={main.tags} />
             </div>
             <div className="bg-white p-6">
@@ -44,7 +44,7 @@ export default function FeaturedPosts() {
             {side.map((p) => (
               <article key={p.slug} className="overflow-hidden rounded-md shadow-sm ring-1 ring-neutral-100">
                 <div className="relative aspect-[16/9] overflow-hidden">
-                  <img src={p.image} alt={p.title} className="h-full w-full object-cover" />
+                  <img src={p.image} alt={p.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                   <TagPill tags={p.tags} />
                 </div>
                 <div className="bg-white p-5">

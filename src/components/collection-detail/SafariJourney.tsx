@@ -45,7 +45,7 @@ export default function SafariJourney({ days }: { days: JourneyDay[] }) {
             </p>
           </div>
           <div>
-            <img src={day.image} alt={day.title} className="h-full w-full object-cover" />
+            <img src={day.image} alt={day.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
           </div>
         </article>
 

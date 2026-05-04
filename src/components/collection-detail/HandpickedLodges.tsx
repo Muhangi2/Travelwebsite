@@ -8,14 +8,14 @@ type Lodge = {
 
 const tiers = {
   midRange: [
-    { name: 'Hotel No. 5', nights: 'CHECK IN 1 NIGHT', image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=80' },
-    { name: 'Protea Hotel Entebbe', nights: 'JIPALO 1 NIGHT', image: 'https://images.unsplash.com/photo-1568084680786-a84f91d1153c?auto=format&fit=crop&w=900&q=80' },
-    { name: 'Protea Hotel Entebbe', nights: 'EWAN 1 NIGHT', image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80' },
+    { name: 'Hotel No. 5', nights: 'CHECK IN 1 NIGHT', image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg' },
+    { name: 'Protea Hotel Entebbe', nights: 'JIPALO 1 NIGHT', image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg' },
+    { name: 'Protea Hotel Entebbe', nights: 'EWAN 1 NIGHT', image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg' },
   ] as Lodge[],
   luxury: [
-    { name: 'Singita Kwitonda Lodge', nights: 'CHECK IN 1 NIGHT', image: 'https://images.unsplash.com/photo-1580977251946-1633a59c20a6?auto=format&fit=crop&w=900&q=80' },
-    { name: 'Bisate Lodge', nights: 'JIPALO 1 NIGHT', image: 'https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=900&q=80' },
-    { name: 'Mahogany Springs', nights: 'EWAN 1 NIGHT', image: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=900&q=80' },
+    { name: 'Singita Kwitonda Lodge', nights: 'CHECK IN 1 NIGHT', image: '/images/parks/rwanda/volcanoes/wilderness-bisate.jpg' },
+    { name: 'Bisate Lodge', nights: 'JIPALO 1 NIGHT', image: '/images/parks/rwanda/volcanoes/wilderness-bisate.jpg' },
+    { name: 'Mahogany Springs', nights: 'EWAN 1 NIGHT', image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.jpg' },
   ] as Lodge[],
 }
 
@@ -66,7 +66,7 @@ export default function HandpickedLodges() {
             {lodges.map((l) => (
               <article key={`${tier}-${l.name}`} className="overflow-hidden">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-md">
-                  <img src={l.image} alt={l.name} className="h-full w-full object-cover" />
+                  <img src={l.image} alt={l.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                   <span className="absolute right-3 top-3 rounded-full bg-brand-green/90 px-3 py-1 text-[10px] tracking-[0.2em] text-white">
                     {l.nights}
                   </span>

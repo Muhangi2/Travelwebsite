@@ -28,7 +28,7 @@ export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] })
             {lodges.map((l) => (
               <article key={l.name} className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-200">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={l.image} alt={l.name} className="h-full w-full object-cover" />
+                  <img src={l.image} alt={l.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-serif text-base">{l.name}</h3>

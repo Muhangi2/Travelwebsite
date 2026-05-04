@@ -1,31 +1,28 @@
+import { NavLink } from 'react-router-dom'
+import Picture from '@/components/Picture'
+
 export default function CollectionsHero() {
   return (
     <section className="relative isolate min-h-[80svh] overflow-hidden">
-      <img
-        src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=2400&q=80"
+      <Picture
+        src="/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg"
         alt="Mountain gorilla portrait"
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-black/55" />
+        className="absolute inset-0 -z-10 h-full w-full object-cover" fetchPriority="high" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/45 to-black/70" />
 
-      <div className="mx-auto flex min-h-[80svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
-        <div>
-          <h1 className="font-serif text-6xl leading-[1.05] md:text-7xl">
-            Curated Journeys Across<br />East Africa
-          </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-white/90">
-            Our Safari Collections group our journeys by theme — whether you seek gorilla encounters, classic
-            wildlife, luxury escapes, family adventures, or photography safaris. Each collection opens the door to
-            unforgettable, tailor-made experiences across Uganda, Rwanda, Kenya, and beyond.
+      <div className="container-page flex min-h-[80svh] items-center justify-center pt-28 pb-16 text-center text-white sm:pt-32">
+        <div className="max-w-4xl">
+          <p className="eyebrow text-brand-gold">Safari Collections</p>
+          <h1 className="text-display mt-4 text-white">Curated Journeys Across East Africa</h1>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/90 sm:text-lg">
+            Six themed collections — from gorilla encounters and migration safaris to family adventures and
+            photography tours. Each itinerary is hand-built by our travel designers and personally vetted in the
+            field.
           </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <button className="rounded-full bg-brand-green px-7 py-3 text-xs tracking-[0.2em] text-white shadow-lg hover:bg-brand-green-dark">
-              EXPLORE OUR JOURNEYS
-            </button>
-            <button className="rounded-full border border-white/50 px-7 py-3 text-xs tracking-[0.2em] text-white backdrop-blur hover:bg-white/10">
-              REQUEST A CUSTOM QUOTE
-            </button>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <NavLink to="/safari-collections" className="btn-primary">EXPLORE OUR JOURNEYS</NavLink>
+            <NavLink to="/contact" className="btn-ghost">REQUEST A CUSTOM QUOTE</NavLink>
           </div>
         </div>
       </div>

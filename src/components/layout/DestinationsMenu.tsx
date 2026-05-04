@@ -18,10 +18,10 @@ const countries: Country[] = [
       'Mgahinga Gorilla National Park',
     ],
     images: [
-      'https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=900&q=80',
+      '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
+      '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
+      '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
+      '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
     ],
   },
   {
@@ -33,9 +33,9 @@ const countries: Country[] = [
       'Gishwati-Mukura National Park',
     ],
     images: [
-      'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1604569370408-cea5e9d99cf6?auto=format&fit=crop&w=900&q=80',
+      '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.jpg',
+      '/images/parks/rwanda/volcanoes/wilderness-bisate.jpg',
+      '/images/team/emmanuel-kiiza.jpg',
     ],
   },
   {
@@ -51,18 +51,18 @@ const countries: Country[] = [
       'Mount Kenya National Park',
     ],
     images: [
-      'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1604569370408-cea5e9d99cf6?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=900&q=80',
+      '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
+      '/images/team/emmanuel-kiiza.jpg',
+      '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
+      '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.jpg',
     ],
   },
   {
     name: 'Burundi',
     parks: ['Kibira National Park', 'Ruvubu National Park'],
     images: [
-      'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=900&q=80',
+      '/images/activities/big-five/roho-ya-selous-elephant.jpg',
+      '/images/destinations/tanzania/sayari-lioness.jpg',
     ],
   },
 ]
@@ -130,8 +130,7 @@ export default function DestinationsMenu({ onClose }: { onClose: () => void }) {
                 <img
                   src={country.images[imageIndex]}
                   alt={`${country.name} lodge`}
-                  className="h-56 w-full object-cover"
-                />
+                  className="h-56 w-full object-cover" loading="lazy" decoding="async" />
               </div>
               <div className="mt-3 flex justify-center gap-1.5">
                 {country.images.map((_, i) => (

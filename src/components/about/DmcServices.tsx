@@ -3,31 +3,31 @@ import { useState } from 'react'
 const services = [
   {
     title: 'FIT Itineraries',
-    image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c3?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
   },
   {
     title: 'Group & Incentive Travel',
-    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg',
   },
   {
     title: 'Gorilla & Chimpanzee Trekking',
-    image: 'https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
   },
   {
     title: 'Cultural Encounters',
-    image: 'https://images.unsplash.com/photo-1604569370408-cea5e9d99cf6?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.jpg',
   },
   {
     title: 'Conservation Experiences',
-    image: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/activities/big-five/roho-ya-selous-elephant.jpg',
   },
   {
     title: 'Luxury Lodge Stays',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.jpg',
   },
   {
     title: 'Photography Expeditions',
-    image: 'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
   },
 ]
 
@@ -48,7 +48,7 @@ export default function DmcServices() {
             const num = String(((start + idx) % max) + 1).padStart(2, '0')
             return (
               <article key={`${num}-${s.title}`} className="relative aspect-[4/3] overflow-hidden rounded-md">
-                <img src={s.image} alt={s.title} className="h-full w-full object-cover" />
+                <img src={s.image} alt={s.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5 text-white">
                   <p className="font-serif text-xs text-white/70">{num}</p>

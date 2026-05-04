@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture'
 export default function WhoWeAre() {
   return (
     <section className="bg-white py-20">
@@ -13,11 +14,10 @@ export default function WhoWeAre() {
             </p>
           </div>
           <div>
-            <img
-              src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1400&q=80"
+            <Picture
+              src="/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg"
               alt="MasterPolo Safaris team"
-              className="rounded-md object-cover shadow-md"
-            />
+              className="rounded-md object-cover shadow-md" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>

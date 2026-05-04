@@ -1,14 +1,14 @@
+import Picture from '@/components/Picture'
 export default function ArchitectsOfJourney() {
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-5xl px-6">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
-            <img
-              src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=1200&q=80"
+            <Picture
+              src="/images/team/ahmed.jpg"
               alt="Safari planning"
-              className="rounded-md object-cover shadow-md"
-            />
+              className="rounded-md object-cover shadow-md" loading="lazy" decoding="async" />
           </div>
           <div>
             <h2 className="font-serif text-3xl">The Architects of <br />Your Journey</h2>

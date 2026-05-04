@@ -15,7 +15,7 @@ type Journey = {
 const journeys: Journey[] = [
   {
     id: 'uganda-exclusive-primate',
-    image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c3?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
     country: 'UGANDA',
     tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'],
     title: 'Uganda Exclusive Primate  Journey',
@@ -24,35 +24,35 @@ const journeys: Journey[] = [
   },
   {
     id: 'great-lakes-primate-odyssey',
-    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg',
     tags: ['Family-Friendly', 'Photography Focus'],
     title: 'The Great Lakes & Primate Odyssey',
     duration: '10 Days / 9 Nights',
   },
   {
     id: 'ultimate-gorilla-expedition',
-    image: 'https://images.unsplash.com/photo-1551634979-2b11f8c218da?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/destinations/tanzania/sayari-lioness.jpg',
     tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'],
     title: 'The Ultimate Gorilla Expedition',
     duration: '11 Days / 10 Nights',
   },
   {
     id: 'primates-mist-rainforest',
-    image: 'https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.jpg',
     tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'],
     title: 'Primates of the Mist & Rainforest',
     duration: '8 Days / 7 Nights',
   },
   {
     id: 'conservationists-path',
-    image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/activities/helicopter-rwanda/1000045751.jpg',
     tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'],
     title: "The Conservationist's Path",
     duration: '7 Days / 6 Nights',
   },
   {
     id: 'ikaze-short-welcome',
-    image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/parks/rwanda/volcanoes/wilderness-bisate.jpg',
     tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'],
     title: 'The Ikaze Short Welcome',
     duration: '4  Days / 3 Nights',
@@ -91,7 +91,7 @@ export default function CollectionsGrid() {
               className="group overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-200 transition hover:shadow-md"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={j.image} alt={j.title} className="h-full w-full object-cover transition group-hover:scale-105" />
+                <img src={j.image} alt={j.title} className="h-full w-full object-cover transition group-hover:scale-105" loading="lazy" decoding="async" />
                 {j.country && (
                   <span className="absolute right-4 top-4 rounded-full bg-brand-green px-4 py-1 text-[10px] tracking-[0.2em] text-white">
                     {j.country}
@@ -124,9 +124,9 @@ export default function CollectionsGrid() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="rounded-full bg-brand-green px-8 py-3 text-xs tracking-[0.2em] text-white shadow hover:bg-brand-green-dark">
-            LOAD MORE
-          </button>
+          <Link to="/contact" className="btn-primary">
+            REQUEST A CUSTOM JOURNEY
+          </Link>
         </div>
       </div>
     </section>
