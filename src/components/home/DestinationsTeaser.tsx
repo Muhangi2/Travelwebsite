@@ -1,112 +1,129 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { countries } from '@/data/destinations'
 
-type Spotlight = {
+type Item = {
   country: string
-  slug: string
-  tagline: string
-  body: string
   image: string
-  imageAlt: string
+  href: string
 }
 
-const spotlights: Spotlight[] = [
-  {
-    country: 'Uganda: The Pearl of Africa',
-    slug: 'uganda',
-    tagline: 'Mountain gorillas. Tree-climbing lions. The source of the Nile.',
-    body:
-      "A sanctuary for luxury adventurers, Uganda offers a rare blend of raw wilderness and refined comfort. Encounter mountain gorillas in ancient forests, glide across crater lakes by yacht, and unwind in boutique lodges perched on volcanic ridges.",
-    image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
-    imageAlt: 'Mountain gorilla in Uganda’s Bwindi Impenetrable Forest',
-  },
-  {
-    country: 'Rwanda: A Thousand Hills',
-    slug: 'rwanda',
-    tagline: 'Sustainable luxury and conservation triumphs.',
-    body:
-      "From misty volcanoes where mountain gorillas roam to the restored Big-Five plains of Akagera — Rwanda is small, modern and conservation-led. Wilderness Bisate, Singita Kwitonda and Wilderness Magashi set the global benchmark for safari luxury.",
-    image: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
-    imageAlt: 'Wilderness Bisate eco-luxury lodge, Volcanoes National Park',
-  },
-  {
-    country: 'Kenya: The Original Safari',
-    slug: 'kenya',
-    tagline: 'Where the great migration meets private conservancies.',
-    body:
-      "Kenya is the safari country reinvented through private conservancies. The Mara migration, elephants under Kilimanjaro, the rhinos of Laikipia and the unique Samburu Five — every chapter delivered with exclusivity at its core.",
-    image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
-    imageAlt: 'Hot-air balloon at sunrise over the Masai Mara',
-  },
-]
+// Round-robin interleave parks across countries so a 3-card window
+// usually shows three different countries.
+const buildItems = (): Item[] => {
+  const buckets = Object.values(countries).map((c) =>
+    c.parks.map<Item>((p) => ({
+      country: c.name,
+      image: p.image,
+      href: `/destinations/${c.slug}/${p.slug}`,
+    })),
+  )
+  const out: Item[] = []
+  let added = true
+  while (added) {
+    added = false
+    for (const b of buckets) {
+      const next = b.shift()
+      if (next) {
+        out.push(next)
+        added = true
+      }
+    }
+  }
+  return out
+}
+
+const items = buildItems()
+
+const VISIBLE = 3
+const AUTO_MS = 4000
 
 export default function DestinationsTeaser() {
-  const [idx, setIdx] = useState(0)
-  const total = spotlights.length
-  const s = spotlights[idx]
+  const [start, setStart] = useState(0)
+  const total = items.length
+
+  useEffect(() => {
+    const id = setInterval(() => setStart((s) => (s + 1) % total), AUTO_MS)
+    return () => clearInterval(id)
+  }, [total])
+
+  const visible = Array.from({ length: VISIBLE }, (_, i) => items[(start + i) % total])
+  const prev = () => setStart((s) => (s - 1 + total) % total)
+  const next = () => setStart((s) => (s + 1) % total)
 
   return (
-    <section className="bg-white py-16 sm:py-20 md:py-28">
+    <section className="bg-white py-20 sm:py-24 md:py-32">
       <div className="container-page">
-        <div className="text-center">
-          <p className="eyebrow">Destinations</p>
-          <h2 className="mt-3">Three Countries · One Continent of Wonder</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-brand-muted sm:text-base">
-            Uganda, Rwanda and Kenya — each a different chapter of the East African safari, each curated to the
-            highest standard of comfort, access and authenticity.
-          </p>
-        </div>
-
-        <div className="mt-12 grid items-center gap-10 md:mt-14 md:grid-cols-2 md:gap-14">
-          <div className="order-2 md:order-1 md:pl-6">
-            <p className="font-serif text-sm italic text-brand-green sm:text-base">{s.tagline}</p>
-            <h3 className="mt-3">{s.country}</h3>
-            <p className="mt-5 text-sm leading-relaxed text-brand-charcoal sm:text-base">{s.body}</p>
-            <NavLink to={`/destinations/${s.slug}`} className="btn-primary mt-7 bg-brand-green text-white">
-              EXPLORE {s.country.split(':')[0].toUpperCase()}
-            </NavLink>
-          </div>
-          <div className="order-1 md:order-2">
-            <div className="relative overflow-hidden rounded-lg shadow-xl">
-              <img
-                src={s.image}
-                alt={s.imageAlt}
-                className="aspect-[4/5] w-full object-cover transition duration-700 hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/40 to-transparent p-4 sm:p-5">
-                <p className="text-xs tracking-[0.2em] text-white/90 uppercase">{s.country}</p>
-              </div>
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+          <div className="lg:pr-8">
+            <p className="eyebrow">Destinations &amp; Experiences</p>
+            <h2 className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-brand-ink sm:text-5xl lg:text-[3.5rem]">
+              Where will you go wild?
+            </h2>
+            <p className="mt-7 max-w-md text-base leading-[1.8] text-brand-muted">
+              Africa is a continent of unparalleled diversity, offering a myriad of landscapes, cultures, and wildlife
+              encounters. Explore our handpicked destinations, each promising a unique and unforgettable safari
+              experience. From the vast plains of the Serengeti to the lush forests of Rwanda, your next adventure
+              awaits.
+            </p>
+            <div className="mt-12 flex items-center gap-5 border-l border-neutral-300 pl-8">
+              <NavLink
+                to="/destinations"
+                aria-label="Discover destinations"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brand-rust text-brand-rust transition hover:bg-brand-rust hover:text-white"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </NavLink>
+              <NavLink
+                to="/destinations"
+                className="text-xs font-semibold tracking-[0.28em] text-brand-rust hover:text-brand-rust-dark"
+              >
+                DISCOVER DESTINATIONS
+              </NavLink>
             </div>
           </div>
-        </div>
 
-        <div className="mt-10 flex items-center justify-between sm:mt-12">
-          <p className="text-sm text-brand-muted">
-            <span className="text-brand-ink">{idx + 1}</span> / {total}
-          </p>
-          <div className="mx-4 h-px flex-1 bg-neutral-200 sm:mx-6">
-            <div
-              className="h-full bg-brand-green transition-all duration-500"
-              style={{ width: `${((idx + 1) / total) * 100}%` }}
-            />
-          </div>
-          <div className="flex gap-2">
+          <div className="relative">
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
+              {visible.map((it, i) => (
+                <NavLink
+                  key={`${start}-${i}-${it.href}`}
+                  to={it.href}
+                  className="group relative block aspect-[3/5] overflow-hidden"
+                >
+                  <img
+                    src={it.image}
+                    alt={it.country}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-[1500ms] ease-out group-hover:scale-110 animate-[fadeIn_900ms_ease-out]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 md:p-7">
+                    <p className="font-serif text-3xl leading-tight text-white drop-shadow-md sm:text-4xl md:text-[2.5rem]">
+                      {it.country}
+                    </p>
+                  </div>
+                </NavLink>
+              ))}
+            </div>
+
             <button
+              onClick={prev}
               aria-label="Previous destination"
-              onClick={() => setIdx((p) => (p - 1 + total) % total)}
-              className="rounded-full border border-neutral-300 p-3 text-brand-ink transition hover:border-brand-green hover:bg-brand-cream"
+              className="absolute left-[33.333%] top-1/2 z-10 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/90 bg-black/15 text-white backdrop-blur-sm transition hover:bg-black/40 sm:h-14 sm:w-14"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M15 18l-6-6 6-6" />
               </svg>
             </button>
             <button
+              onClick={next}
               aria-label="Next destination"
-              onClick={() => setIdx((p) => (p + 1) % total)}
-              className="rounded-full border border-neutral-300 p-3 text-brand-ink transition hover:border-brand-green hover:bg-brand-cream"
+              className="absolute left-[66.666%] top-1/2 z-10 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/90 bg-black/15 text-white backdrop-blur-sm transition hover:bg-black/40 sm:h-14 sm:w-14"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M9 6l6 6-6 6" />
               </svg>
             </button>

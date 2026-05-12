@@ -98,10 +98,56 @@ const queenElizabeth: Park = {
   size: '1,978 km²',
   altitude: '910 — 1,845 m',
   bestTime: 'January–February & June–September',
-  overview: 'Spanning the equator and dominated by the Kazinga Channel, Queen Elizabeth is a mosaic of grassland, wetland and forest with iconic East-African wildlife.',
-  attractions: [],
-  activities: [],
-  faqs: [],
+  overview:
+    "Spanning the equator and dominated by the Kazinga Channel, Queen Elizabeth is a mosaic of grassland, wetland and forest with iconic East-African wildlife. Its open savannahs hold elephants, buffalo and the famously tree-climbing lions of the Ishasha sector, while the channel itself supports one of the highest hippo concentrations in Africa. With volcanic crater lakes to the north and the chimpanzee-filled Kyambura Gorge to the south, the park rewards travellers who give it three nights or more.",
+  attractions: [
+    {
+      title: 'Tree-Climbing Lions of Ishasha',
+      body: "Ishasha's southern sector is one of only two places on earth where lions habitually rest in the limbs of giant fig trees — a sighting our guides specifically plan for.",
+      image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
+    },
+    {
+      title: 'Kazinga Channel Cruise',
+      body: 'A 40-km natural channel linking Lakes Edward and George, lined with the densest hippo population in Africa and a non-stop parade of elephants, buffalo and waterbirds at the banks.',
+      image: '/images/activities/game-drive/boating-safari-hippo-spot2.jpg',
+    },
+    {
+      title: 'Kyambura Gorge Chimps',
+      body: 'A hidden tropical gorge slicing through the savannah, home to a small habituated chimpanzee community — a half-day primate experience without the long road transfer to Kibale.',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/25-kyambura-gorge-rf-dsc-3399-copie.jpg',
+    },
+  ],
+  activities: [
+    {
+      title: 'Stay at Kyambura Gorge Lodge',
+      body: 'A renovated coffee plantation overlooking the gorge, balancing intimate luxury with one of Africa’s most progressive community-conservation models.',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/23-kyambura-gorge-lodge-qe-30042024-volcanoessafaris-8624-edit-copy.jpg',
+    },
+    {
+      title: 'Crater-Lakes Drive',
+      body: 'A scenic loop through the explosion craters of the northern park — dramatic ridge-top viewpoints over the Rift Valley and pink-flecked flamingo lakes.',
+      image: '/images/parks/uganda/murchison-falls/dsc-6584.jpg',
+    },
+    {
+      title: 'Mongoose Tracking',
+      body: 'A relaxed walk with researchers in Mweya following habituated banded mongoose troops — a delight for families and a glimpse of long-running primate-style fieldwork.',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.jpg',
+    },
+  ],
+  faqs: [
+    {
+      q: 'How many nights should I plan in Queen Elizabeth?',
+      a: 'Three nights is the sweet spot — one in the north for game drives and the channel cruise, two further south in Ishasha for tree-climbing lions and (optionally) Kyambura chimp tracking.',
+    },
+    {
+      q: 'How does it pair with gorilla trekking?',
+      a: 'Beautifully. Queen Elizabeth sits directly between Kibale’s chimpanzees and Bwindi’s gorillas, so most of our itineraries weave all three together over 7–9 nights.',
+    },
+    {
+      q: 'Best time to visit?',
+      a: 'June–September and January–February are driest, with the best game viewing. The greener “shoulder” months still deliver excellent sightings and fewer vehicles.',
+    },
+  ],
 }
 
 const murchison: Park = {
@@ -113,10 +159,56 @@ const murchison: Park = {
   size: '3,840 km²',
   altitude: '619 — 1,292 m',
   bestTime: 'December–February & June–September',
-  overview: '',
-  attractions: [],
-  activities: [],
-  faqs: [],
+  overview:
+    "Murchison Falls is Uganda at its most theatrical — the Nile compressed through a seven-metre rock cleft, a thunder of water that defines the park and gives it its name. Above the falls, vast savannahs of borassus palms host elephants, Rothschild's giraffe, lions and the highest density of leopards in the country. Below, the river opens into a wildlife-rich delta on Lake Albert where Nile crocodiles, hippos and the elusive shoebill make their home. A perfect three- to four-night stay combining big-game drives, boat safaris and a hike to the top of the falls.",
+  attractions: [
+    {
+      title: 'The Falls Themselves',
+      body: 'The full force of the Nile squeezed through a 7-metre cleft — best appreciated by boat to the base, then a guided climb to the “Top of the Falls” viewpoint above the spray.',
+      image: '/images/parks/uganda/murchison-falls/dsc-6584.jpg',
+    },
+    {
+      title: 'Rothschild’s Giraffe',
+      body: 'Murchison protects the largest remaining population of the endangered Rothschild’s giraffe — a sub-species you’ll see in tower-of-twenty herds across the northern savannah.',
+      image: '/images/parks/uganda/murchison-falls/dsc-6828.jpg',
+    },
+    {
+      title: 'Nile Delta & Shoebill',
+      body: 'A specialist boat safari into the papyrus delta on Lake Albert in search of the prehistoric shoebill stork — Africa’s most sought-after bird sighting.',
+      image: '/images/parks/uganda/murchison-falls/dsc-6951.jpg',
+    },
+  ],
+  activities: [
+    {
+      title: 'Launch Cruise to the Falls',
+      body: 'A three-hour upstream boat safari past hippo pods, crocodile sandbanks and bathing elephants, ending at the base of the cascade.',
+      image: '/images/parks/uganda/murchison-falls/dsc-6271.jpg',
+    },
+    {
+      title: 'Northern Savannah Game Drives',
+      body: 'Open-vehicle drives across the Buligi tracks at dawn — lion prides, Jackson’s hartebeest, oribi, and the park’s famous leopards along the Albert Nile.',
+      image: '/images/parks/uganda/murchison-falls/dsc-6884.jpg',
+    },
+    {
+      title: 'Nile Angling for Nile Perch',
+      body: 'A private fishing expedition by launch — catch-and-release Nile perch of trophy size, fully guided and serviced from the riverside.',
+      image: '/images/parks/uganda/murchison-falls/dsc-7062.jpg',
+    },
+  ],
+  faqs: [
+    {
+      q: 'How do we get there?',
+      a: 'A 1-hour scheduled or charter flight from Entebbe to Pakuba or Bugungu airstrip is the recommended option. The road journey is 5–6 hours via the Ziwa Rhino Sanctuary, which we often build in as a half-day stop.',
+    },
+    {
+      q: 'How many days do we need?',
+      a: 'Three nights gives you the falls, a launch cruise, full days of game viewing and time for the delta shoebill cruise. Two nights is the absolute minimum.',
+    },
+    {
+      q: 'Is malaria a concern?',
+      a: 'Like the rest of Uganda’s lowland parks, prophylaxis is recommended. Lodges are well-screened and use repellent provision and mosquito nets as standard.',
+    },
+  ],
 }
 
 const kibale: Park = {
@@ -128,10 +220,56 @@ const kibale: Park = {
   size: '795 km²',
   altitude: '1,100 — 1,590 m',
   bestTime: 'June–September & December–February',
-  overview: '',
-  attractions: [],
-  activities: [],
-  faqs: [],
+  overview:
+    "Kibale is the primate capital of Africa — a sprawling tract of rainforest harbouring 13 species in total, including over 1,500 chimpanzees in well-habituated communities. A morning trek with the chimps is the obvious draw, but the all-day Habituation Experience and the bird-rich Bigodi Wetlands on the edge of the park reward those who linger. Pair Kibale with Queen Elizabeth or Bwindi for the classic Uganda primate circuit.",
+  attractions: [
+    {
+      title: 'Habituated Chimpanzee Communities',
+      body: 'Trek into the forest with researchers to spend an hour with one of three habituated communities — a high-success encounter with our closest living relatives.',
+      image: '/images/destinations/tanzania/chimp-habituation-project1.jpg',
+    },
+    {
+      title: 'Thirteen Primate Species',
+      body: 'Red colobus, L’Hoest’s, blue, grey-cheeked mangabey, black-and-white colobus — Kibale’s canopy is in constant motion overhead during a forest walk.',
+      image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+    },
+    {
+      title: 'Bigodi Wetland Sanctuary',
+      body: 'A community-run papyrus swamp on the park edge — over 200 bird species, including the great blue turaco, and a low-impact afternoon walk.',
+      image: '/images/activities/birding/lensoffthegreen-1748944212110.jpg',
+    },
+  ],
+  activities: [
+    {
+      title: 'Chimpanzee Habituation Experience',
+      body: 'A full-day immersion with the researchers, dawn-to-dusk, as a community is gradually conditioned to human presence — the most intimate primate encounter in East Africa.',
+      image: '/images/destinations/tanzania/chimp-habituation-project1.jpg',
+    },
+    {
+      title: 'Stay at Kyaninga Lodge',
+      body: 'Hand-built log lodge above a crater lake, with vast suites, dramatic views over Kibale, and effortless access to the trek start point.',
+      image: '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.jpg',
+    },
+    {
+      title: 'Crater-Lakes Walk',
+      body: 'A gentle walk along the chain of volcanic crater lakes between Kibale and Fort Portal — tea estates, lake-edge picnics and rural-Uganda atmosphere.',
+      image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+    },
+  ],
+  faqs: [
+    {
+      q: 'How likely am I to see chimpanzees?',
+      a: 'Success rates on the morning trek run at over 90% — communities are tracked daily by researchers and our guides coordinate with the ranger team to position you correctly.',
+    },
+    {
+      q: 'Standard trek or Habituation Experience?',
+      a: 'The 1-hour trek is best for most travellers. The full-day Habituation Experience is for keen primatologists and photographers willing to invest a long, demanding day for an extraordinary encounter.',
+    },
+    {
+      q: 'What should I wear?',
+      a: 'Long trousers, sturdy walking shoes and a long-sleeve shirt — the forest is humid and the undergrowth lively. Lodges provide gaiters and gardening gloves on request.',
+    },
+  ],
 }
 
 const lakeMburo: Park = {
@@ -143,10 +281,56 @@ const lakeMburo: Park = {
   size: '370 km²',
   altitude: '1,220 — 1,828 m',
   bestTime: 'Year-round',
-  overview: '',
-  attractions: [],
-  activities: [],
-  faqs: [],
+  overview:
+    "Lake Mburo punches well above its weight. The only Ugandan park with plains zebra, it's also the most accessible for guests breaking the long drive between Entebbe and the gorillas. Without lions in the open park, walking and horseback safaris are part of daily life — a rare way to feel the African bush at ground level. Compact, friendly and underrated, it makes an elegant first or last night on a Uganda journey.",
+  attractions: [
+    {
+      title: 'Plains Zebra',
+      body: "The only park in Uganda where you'll see large herds of zebra grazing in the open — alongside impala, topi, eland and the largest population of Uganda's only antelope, the topi.",
+      image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
+    },
+    {
+      title: 'Lake Mburo Itself',
+      body: 'The boat cruise along the lake reveals hippos, crocodiles, fish eagles and the rare African finfoot in quiet papyrus channels.',
+      image: '/images/parks/uganda/lake-mburo/16498738142-978e9993ef-o.jpg',
+    },
+    {
+      title: 'Eland & Roan Antelope',
+      body: 'Africa’s largest antelope is common here in herds of fifty, and roan — rare elsewhere in East Africa — make a quiet showing across the southern plains.',
+      image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
+    },
+  ],
+  activities: [
+    {
+      title: 'Walking Safari',
+      body: 'With no lions in the immediate area, you can walk Mburo with an armed ranger — gentle, slow, ear-to-the-ground bush time you cannot replicate from a vehicle.',
+      image: '/images/parks/uganda/lake-mburo/15829575593-2fb45ea828-o.jpg',
+    },
+    {
+      title: 'Horseback Safari',
+      body: 'Mihingo Lodge runs the only ridden safari in Uganda — quiet, low-impact, and astonishing for how close you can approach plains game on horseback.',
+      image: '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
+    },
+    {
+      title: 'Sunset Boat Cruise',
+      body: 'A two-hour cruise across the lake at golden hour — hippos surfacing, fish eagles calling, the savannah glowing pink behind the papyrus.',
+      image: '/images/parks/uganda/lake-mburo/52760819657-a6f9d6bf99-o.jpg',
+    },
+  ],
+  faqs: [
+    {
+      q: 'How does it fit into a Uganda safari?',
+      a: 'Most often as a first night out of Entebbe before heading to Bwindi, or as a wind-down stop on the return — it breaks the long drive and adds a completely different habitat.',
+    },
+    {
+      q: 'Is it safe to walk?',
+      a: 'Yes — guided walks with an armed ranger are a hallmark of the park. There are no resident lions, and the larger predators (leopard, hyena) are nocturnal and shy.',
+    },
+    {
+      q: 'When is the best time to visit?',
+      a: 'Lake Mburo is genuinely year-round. The drier months (June–August, January–February) deliver crisp game viewing; the wet months bring lush landscapes and excellent birding.',
+    },
+  ],
 }
 
 const mgahinga: Park = {
@@ -158,10 +342,56 @@ const mgahinga: Park = {
   size: '33.7 km²',
   altitude: '2,227 — 4,127 m',
   bestTime: 'June–August & December–February',
-  overview: '',
-  attractions: [],
-  activities: [],
-  faqs: [],
+  overview:
+    "Mgahinga is Uganda's quiet alternative to Bwindi — smaller, higher and dramatically framed by three Virunga volcanoes that march along the Rwandan border. A single habituated gorilla family, the Nyakagezi group, roams freely across the three countries (Uganda, Rwanda and the DRC) and when they're home, the trekking is exceptional. Add habituated golden monkeys found nowhere else in Uganda, a half-day immersion with the indigenous Batwa, and the option to summit Mt Sabyinyo straddling all three borders — Mgahinga is small but layered, and well worth the effort.",
+  attractions: [
+    {
+      title: 'The Nyakagezi Gorilla Family',
+      body: 'A single habituated mountain-gorilla group ranges across the Virunga massif — fewer trekkers, drier terrain than Bwindi, and unmatched volcanic backdrops when conditions align.',
+      image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+    },
+    {
+      title: 'Habituated Golden Monkeys',
+      body: 'A vibrant, endemic monkey species found only in the Virunga bamboo zone. The morning trek is far easier than gorilla tracking and the photography is sensational.',
+      image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+    },
+    {
+      title: 'Three Virunga Volcanoes',
+      body: 'Mt Sabyinyo, Mt Gahinga and Mt Muhabura — three dormant volcanoes that define the park, each climbable as a full-day summit hike with extraordinary triple-country views.',
+      image: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
+    },
+  ],
+  activities: [
+    {
+      title: 'Batwa Trail Experience',
+      body: "A half-day cultural walk led by Batwa elders — the original forest-dwelling people of the Virungas — showing fire-making, hunting techniques, medicinal plants and traditional song in the lower forest.",
+      image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.jpg',
+    },
+    {
+      title: 'Volcano Summit Hike',
+      body: "Climb Mt Sabyinyo (3,669 m) to stand simultaneously in Uganda, Rwanda and the DRC, or take on the steeper Muhabura (4,127 m) — for fit walkers, two of East Africa's most rewarding day-summits.",
+      image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg',
+    },
+    {
+      title: 'Stay at Mount Gahinga Lodge',
+      body: 'Stone-and-thatch bandas at the foot of the volcanoes — intimate, fire-warmed and the most direct base for both gorilla and golden-monkey trekking.',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.jpg',
+    },
+  ],
+  faqs: [
+    {
+      q: 'Mgahinga or Bwindi for gorilla tracking?',
+      a: 'Bwindi has 20+ habituated families and near-certain tracking. Mgahinga has one family that occasionally crosses into Rwanda or the DRC — we secure a permit only when our local team confirms the group is currently in Uganda.',
+    },
+    {
+      q: 'How fit do I need to be?',
+      a: 'Golden-monkey trekking is gentle (1–2 hours, mild gradient). Gorilla trekking is moderate (2–5 hours on volcanic slopes). The summit hikes are strenuous full days requiring a good level of fitness.',
+    },
+    {
+      q: 'How does it fit into a wider itinerary?',
+      a: 'Mgahinga pairs beautifully with Bwindi (2.5-hour drive) and is the natural border-crossing point into Rwanda’s Volcanoes National Park — a classic combined-Virunga itinerary.',
+    },
+  ],
 }
 
 export const countries: Record<string, Country> = {
@@ -521,7 +751,20 @@ export const countries: Record<string, Country> = {
             image: '/images/lodges/kenya/amboseli-national-park/elewana-tortilis-camp-amboseli/elewana-tortilis-camp-amboseli-1.jpg',
           },
         ],
-        faqs: [],
+        faqs: [
+          {
+            q: 'When is Kilimanjaro most visible?',
+            a: 'The mountain is famously shy. Your best window is dawn and the hour before sunset during the dry months (June–October, January–February), when the cloud cap typically lifts. Plan two nights minimum to maximise your chances.',
+          },
+          {
+            q: 'How does Amboseli pair with the Mara?',
+            a: 'Beautifully — a quick scheduled flight links the two, and the contrast is the magic. Amboseli for elephants and Kilimanjaro, the Mara for big-cat density and (in season) the migration.',
+          },
+          {
+            q: 'Is it good for families?',
+            a: 'Yes. Amboseli\'s short distances, large elephant herds and easy game viewing make it one of the most family-friendly parks in East Africa. ol Donyo and Tortilis both welcome children.',
+          },
+        ],
       },
       {
         slug: 'laikipia',
@@ -564,7 +807,20 @@ export const countries: Record<string, Country> = {
             image: '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.jpg',
           },
         ],
-        faqs: [],
+        faqs: [
+          {
+            q: 'How is Laikipia different from the Mara?',
+            a: 'Laikipia is private — a working mosaic of conservancies and ranches rather than a public reserve. Expect off-road driving, night drives, walking, horseriding and a small number of vehicles per sighting. Predators are present but not as densely as the Mara.',
+          },
+          {
+            q: 'Best time to visit?',
+            a: 'Genuinely year-round. June–October is classic dry-season game viewing, but the green seasons (March–May, November) deliver lush landscapes, newborn wildlife and superb photography light.',
+          },
+          {
+            q: 'Is it good for families?',
+            a: 'Outstanding — many Laikipia properties (Sirikoi, Lewa Wilderness, Loisaba) welcome children with bespoke activities, family suites and guides who genuinely engage with younger guests.',
+          },
+        ],
       },
       {
         slug: 'samburu',
@@ -595,8 +851,37 @@ export const countries: Record<string, Country> = {
             image: '/images/lodges/kenya/sasaab/images/aerial-view-of-sasaab.jpg',
           },
         ],
-        activities: [],
-        faqs: [],
+        activities: [
+          {
+            title: 'Stay at Sasaab',
+            body: "The Safari Collection's Moorish-inspired villa-style lodge above the Ewaso Ng'iro — vast open-air suites, plunge pools and one of the most distinctive properties in northern Kenya.",
+            image: '/images/parks/kenya/samburu/sasaab.jpg',
+          },
+          {
+            title: 'Camel-Back Bush Walks',
+            body: 'A relaxed half-day walking safari with a string of pack camels — the Samburu way of crossing the bush, with bush breakfast served on a riverbank.',
+            image: '/images/parks/kenya/laikipia-loisaba/1752747977434-kenya-suyian-conservancy-walk-with-camels-5.jpg',
+          },
+          {
+            title: 'Visit a Samburu Manyatta',
+            body: "A genuine, unstaged visit to a Samburu homestead — singing, beadwork, and the everyday life of a semi-nomadic pastoralist community.",
+            image: '/images/parks/kenya/samburu/samburu-manyatta.jpg',
+          },
+        ],
+        faqs: [
+          {
+            q: 'How does Samburu pair with the rest of Kenya?',
+            a: "It's the ideal counterpoint to the Mara — opposite landscape, different species, a fraction of the vehicles. Most of our itineraries combine Samburu (2–3 nights) with the Mara or Laikipia.",
+          },
+          {
+            q: 'Is it hot?',
+            a: "Yes, Samburu is the warmest of Kenya's classic safari regions — expect 30–35°C in the daytime. Lodges design around the heat with airy architecture, pools and siesta hours.",
+          },
+          {
+            q: 'When is the best time to visit?',
+            a: "Dry season (June–October, January–February) is best for game concentrations along the river. The greens of November and April–May are stunning for photography but expect occasional afternoon showers.",
+          },
+        ],
       },
       {
         slug: 'tsavo',
@@ -610,9 +895,54 @@ export const countries: Record<string, Country> = {
         bestTime: 'June–October & January–February',
         overview:
           "Tsavo East and Tsavo West together cover 4% of Kenya — vast, raw and beautifully under-visited. Best experienced as part of a longer Kenya circuit alongside Amboseli or the coast.",
-        attractions: [],
-        activities: [],
-        faqs: [],
+        attractions: [
+          {
+            title: '“Red Elephants” of Tsavo',
+            body: "Tsavo's iron-rich red dust coats the elephants who bathe in it — yielding the iconic ochre-skinned giants the park is famous for. Herds along the Galana River are a sure sighting.",
+            image: '/images/parks/kenya/tsavo/1736494647848-4z6a7096.jpg',
+          },
+          {
+            title: 'Mzima Springs',
+            body: 'Crystal-clear, hippo-filled springs welling up at the base of the Chyulu Hills — viewable from a partly submerged glass tank, one of the more unusual experiences in East Africa.',
+            image: '/images/parks/kenya/tsavo/1736494647850-dzf3773.jpg',
+          },
+          {
+            title: 'Lugard Falls & Yatta Plateau',
+            body: 'The fissure-falls on the Galana River and the world\'s longest lava flow at Yatta — Tsavo\'s scale is geological as much as wild.',
+            image: '/images/parks/kenya/tsavo/1736494647851-img-8731.jpg',
+          },
+        ],
+        activities: [
+          {
+            title: 'Combined Tsavo & Coast Itinerary',
+            body: 'Fly from the Mara or Nairobi straight into Tsavo for two nights of raw wilderness, then onward to the Lamu archipelago or Diani for a beach finish — the classic “bush-and-beach” combination.',
+            image: '/images/parks/kenya/tsavo/1736494647851-img-8731.jpg',
+          },
+          {
+            title: 'Walking Safari',
+            body: "Tsavo's vast wilderness lends itself to walking with specialist guides — an evening hike to a fly-camp on the riverbank is one of the most authentic experiences in Kenya.",
+            image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.jpg',
+          },
+          {
+            title: 'Chyulu Hills Riding & Hiking',
+            body: 'Tsavo West blurs into the Chyulu Hills — open volcanic grasslands ideal for horseriding and walking from ol Donyo Lodge.',
+            image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.jpg',
+          },
+        ],
+        faqs: [
+          {
+            q: 'East or West Tsavo?',
+            a: 'Tsavo East is bigger, drier and the home of the red elephants. Tsavo West is more dramatic — volcanic, watered and home to Mzima Springs. A combined-circuit itinerary gives you the full picture.',
+          },
+          {
+            q: 'How many nights should I plan?',
+            a: "Two nights is the minimum — three to four if you want to walk, visit both East and West, and experience the Chyulu Hills. Pair it with Amboseli (1-hour drive) or onward flights to the coast.",
+          },
+          {
+            q: 'Is it as good for wildlife as the Mara?',
+            a: "Different. Sightings are less concentrated than the Mara, but you'll have entire stretches of bush to yourself, and the elephants here are bigger, dustier, and far less photographed.",
+          },
+        ],
       },
     ],
     privilegedAccess: [

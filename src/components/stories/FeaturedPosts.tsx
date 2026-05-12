@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { articles } from '@/data/articles'
+import { useStories } from '@/sanity/stories'
 
 const TagPill = ({ tags }: { tags: string[] }) => (
   <span className="absolute right-4 top-4 rounded-full bg-brand-green/90 px-3 py-1 text-[10px] tracking-wide text-white">
@@ -8,8 +8,10 @@ const TagPill = ({ tags }: { tags: string[] }) => (
 )
 
 export default function FeaturedPosts() {
+  const { items: articles } = useStories()
   const main = articles[0]
-  const side = [articles[1], articles[2]]
+  const side = [articles[1], articles[2]].filter(Boolean)
+  if (!main) return null
 
   return (
     <section className="bg-white py-20">

@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="max-w-2xl text-white">
           <p className="eyebrow text-brand-gold">Bespoke Luxury Safaris · East Africa</p>
           <h1 className="text-display mt-5 text-white">
-            In the Heart <span className="block sm:inline">of Africa</span>
+            The World is Still Wild. <span className="block sm:inline">Come and Explore</span>
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-white/85 sm:text-lg">
             Bespoke safari experiences curated for the discerning traveler. Discover the raw beauty of Uganda, Rwanda
