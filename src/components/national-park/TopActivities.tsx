@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture'
 import type { Park } from '@/data/destinations'
 
 export default function TopActivities({ items }: { items: Park['activities'] }) {
@@ -9,7 +10,12 @@ export default function TopActivities({ items }: { items: Park['activities'] }) 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {items.map((a) => (
             <article key={a.title} className="relative aspect-[4/3] overflow-hidden rounded-md">
-              <img src={a.image} alt={a.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+              <Picture
+                src={a.image}
+                alt={a.title}
+                className="absolute inset-0 h-full w-full"
+                imgClassName="h-full w-full object-cover"
+              />
               {a.body && (
                 <>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
