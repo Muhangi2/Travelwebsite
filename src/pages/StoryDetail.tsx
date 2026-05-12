@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-import { articles } from '@/data/articles'
+import { useStories, useStory } from '@/sanity/stories'
+import StoryBody from '@/components/stories/StoryBody'
 import Picture from '@/components/Picture'
 
 const safariTypes = [
@@ -13,10 +14,14 @@ const safariTypes = [
 
 export default function StoryDetail() {
   const { slug } = useParams<{ slug: string }>()
-  const article = articles.find((a) => a.slug === slug) ?? articles[0]
+  const { items: articles } = useStories()
+  const { article: fetched } = useStory(slug)
+  const article = fetched ?? articles.find((a) => a.slug === slug) ?? articles[0]
+  if (!article) return null
   const idx = articles.findIndex((a) => a.slug === article.slug)
   const prev = idx > 0 ? articles[idx - 1] : null
-  const next = idx < articles.length - 1 ? articles[idx + 1] : null
+  const next = idx >= 0 && idx < articles.length - 1 ? articles[idx + 1] : null
+  const hasBody = Boolean(fetched?.body && fetched.body.length > 0)
 
   const [form, setForm] = useState({ name: '', email: '', safariType: '', consent: false })
   const [submitted, setSubmitted] = useState(false)
@@ -43,65 +48,73 @@ export default function StoryDetail() {
         <div className="mx-auto max-w-3xl">
           <p className="text-base leading-relaxed text-brand-charcoal sm:text-lg">{article.excerpt}</p>
 
-          <h2 className="mt-12">Akagera National Park: Rwanda's Big Five Comeback Story</h2>
-          <p className="mt-4 leading-relaxed text-brand-charcoal">
-            Akagera National Park, located in the east of Rwanda, is the country's only savannah park and the setting
-            for a remarkable conservation success story. Once decimated by conflict and poaching, Akagera has been
-            meticulously restored and is now a thriving ecosystem where the{' '}
-            <span className="font-semibold text-brand-green">Big Five (Lion, Leopard, Rhino, Elephant, Buffalo)</span>{' '}
-            roam freely.
-          </p>
+          {hasBody && fetched?.body ? (
+            <div className="mt-8">
+              <StoryBody value={fetched.body} />
+            </div>
+          ) : (
+            <>
+              <h2 className="mt-12">Akagera National Park: Rwanda's Big Five Comeback Story</h2>
+              <p className="mt-4 leading-relaxed text-brand-charcoal">
+                Akagera National Park, located in the east of Rwanda, is the country's only savannah park and the setting
+                for a remarkable conservation success story. Once decimated by conflict and poaching, Akagera has been
+                meticulously restored and is now a thriving ecosystem where the{' '}
+                <span className="font-semibold text-brand-green">Big Five (Lion, Leopard, Rhino, Elephant, Buffalo)</span>{' '}
+                roam freely.
+              </p>
 
-          <div className="mt-10 overflow-hidden rounded-xl border border-neutral-200 shadow-sm">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="bg-brand-forest-dark text-white">
-                  <th className="px-4 py-3 text-left font-medium">Detail</th>
-                  <th className="px-4 py-3 text-left font-medium">Information for 2026</th>
-                  <th className="px-4 py-3 text-left font-medium">Pro-Tip</th>
-                </tr>
-              </thead>
-              <tbody className="text-brand-charcoal">
-                <tr className="border-t border-neutral-100">
-                  <td className="px-4 py-3 align-top">Permit Cost</td>
-                  <td className="px-4 py-3 align-top">USD 1,500 per person, per trek</td>
-                  <td className="px-4 py-3 align-top">Book through a reputable tour operator at least 6 months in advance.</td>
-                </tr>
-                <tr className="border-t border-neutral-100 bg-brand-cream/30">
-                  <td className="px-4 py-3 align-top">Location</td>
-                  <td className="px-4 py-3 align-top">Volcanoes National Park (VNP)</td>
-                  <td className="px-4 py-3 align-top">Permits are non-refundable but transferable in some cases.</td>
-                </tr>
-                <tr className="border-t border-neutral-100">
-                  <td className="px-4 py-3 align-top">Time With Gorillas</td>
-                  <td className="px-4 py-3 align-top">One hour, strictly observed</td>
-                  <td className="px-4 py-3 align-top">Only 8 trekkers per gorilla family per day — book early.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+              <div className="mt-10 overflow-hidden rounded-xl border border-neutral-200 shadow-sm">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-brand-forest-dark text-white">
+                      <th className="px-4 py-3 text-left font-medium">Detail</th>
+                      <th className="px-4 py-3 text-left font-medium">Information for 2026</th>
+                      <th className="px-4 py-3 text-left font-medium">Pro-Tip</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-brand-charcoal">
+                    <tr className="border-t border-neutral-100">
+                      <td className="px-4 py-3 align-top">Permit Cost</td>
+                      <td className="px-4 py-3 align-top">USD 1,500 per person, per trek</td>
+                      <td className="px-4 py-3 align-top">Book through a reputable tour operator at least 6 months in advance.</td>
+                    </tr>
+                    <tr className="border-t border-neutral-100 bg-brand-cream/30">
+                      <td className="px-4 py-3 align-top">Location</td>
+                      <td className="px-4 py-3 align-top">Volcanoes National Park (VNP)</td>
+                      <td className="px-4 py-3 align-top">Permits are non-refundable but transferable in some cases.</td>
+                    </tr>
+                    <tr className="border-t border-neutral-100">
+                      <td className="px-4 py-3 align-top">Time With Gorillas</td>
+                      <td className="px-4 py-3 align-top">One hour, strictly observed</td>
+                      <td className="px-4 py-3 align-top">Only 8 trekkers per gorilla family per day — book early.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
-          <div className="mt-12 overflow-hidden rounded-xl shadow-md">
-            <Picture
-              src="/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg"
-              alt="Wildlife on the savannah"
-              loading="lazy"
-              className="aspect-[16/9] w-full object-cover" />
-          </div>
+              <div className="mt-12 overflow-hidden rounded-xl shadow-md">
+                <Picture
+                  src="/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg"
+                  alt="Wildlife on the savannah"
+                  loading="lazy"
+                  className="aspect-[16/9] w-full object-cover" />
+              </div>
 
-          <h2 className="mt-12">Nyungwe Forest: Primates &amp; Canopy Walks</h2>
-          <p className="mt-4 leading-relaxed text-brand-charcoal">
-            Moving from the dry savannah, Nyungwe Forest National Park in the southwest is one of the oldest rainforests
-            in Africa and a biodiversity hotspot. Home to 13 primate species — including the charismatic chimpanzee —
-            and a 200-metre suspended canopy walkway 70 metres above the forest floor.
-          </p>
+              <h2 className="mt-12">Nyungwe Forest: Primates &amp; Canopy Walks</h2>
+              <p className="mt-4 leading-relaxed text-brand-charcoal">
+                Moving from the dry savannah, Nyungwe Forest National Park in the southwest is one of the oldest rainforests
+                in Africa and a biodiversity hotspot. Home to 13 primate species — including the charismatic chimpanzee —
+                and a 200-metre suspended canopy walkway 70 metres above the forest floor.
+              </p>
 
-          <h2 className="mt-12">Lake Kivu: Rwanda's Coastal Escape</h2>
-          <p className="mt-4 leading-relaxed text-brand-charcoal">
-            Rwanda's western border is defined by the shores of Lake Kivu — a vast freshwater lake and the perfect
-            post-safari relaxation spot. The towns of Rubavu and Karongi are tranquil bases for boat trips,
-            water sports and sunset over the Congolese mountains.
-          </p>
+              <h2 className="mt-12">Lake Kivu: Rwanda's Coastal Escape</h2>
+              <p className="mt-4 leading-relaxed text-brand-charcoal">
+                Rwanda's western border is defined by the shores of Lake Kivu — a vast freshwater lake and the perfect
+                post-safari relaxation spot. The towns of Rubavu and Karongi are tranquil bases for boat trips,
+                water sports and sunset over the Congolese mountains.
+              </p>
+            </>
+          )}
 
           <div className="mt-14 flex items-center justify-between border-t border-neutral-200 pt-6 text-sm">
             {prev ? (

@@ -1,61 +1,99 @@
+import { useState } from 'react'
 import Picture from '@/components/Picture'
-const points = [
+
+const tabs = [
   {
-    title: 'Expert Local Guides',
-    body: "Our guides are born and raised in East Africa — intimately knowledgeable about the land, the wildlife and the culture. They are passionate storytellers who bring the bush to life.",
+    label: 'Local Roots',
+    title: 'Locally Rooted, Globally Responsible',
+    body: 'We forge deep partnerships with community-owned conservancies and employ local guides, ensuring your adventure directly supports wildlife protection and empowers the people who live alongside it. This approach fosters sustainable economic growth and authentic cultural exchange, making every journey a force for good.',
+    image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
   },
   {
-    title: 'Tailor-Made Itineraries',
-    body: "Your dream safari is unique. We craft personalised itineraries matched to your interests, your travel pace and your budget — adventure-led, family-friendly or romantic.",
+    label: 'Low Impact',
+    title: 'Low Impact, High Reward',
+    body: 'Experience the wild intimately with our small groups and eco-certified camps. We eschew mass-market tourism, offering exclusive access to pristine wilderness without the crowds. Our philosophy is simple: minimize our footprint, maximize your connection with nature. This means more profound encounters and a truly undisturbed safari experience.',
+    image: '/images/lodges/rwanda/volcanoes-national-park/wildernes-bisate-lodge/1753110933515-bisate-gorilla-trekking-06-25-fr-31.jpg',
   },
   {
-    title: 'Commitment to Excellence',
-    body: "From the comfortable 4x4 safari vehicles to the lodges we hand-pick, every aspect of your journey is seamlessly delivered to a single high standard.",
+    label: 'Tailored',
+    title: 'Built Around You, Not a Brochure',
+    body: 'Your dream safari is unique, and so is our approach. Whether you envision a classic 7-day expedition through the Serengeti or a bespoke month-long exploration of hidden gems, we meticulously tailor every detail. From selecting the perfect camps to curating daily activities, we transform your aspirations into an unforgettable reality. You dream it. We track it down.',
+    image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
   },
   {
-    title: '24/7 Support',
-    body: "From the moment you land at Entebbe, Kigali or Nairobi until you fly home, our team is reachable around the clock.",
+    label: 'Carbon-Conscious',
+    title: 'Carbon-Conscious Travel, Standard',
+    body: 'Environmental stewardship is at the heart of our operations. Every trip booked with Still Wild Safaris is 100% carbon offset, and we actively reinvest in vital tree-planting initiatives and anti-poaching efforts. For us, being "green" isn\'t merely a label; it\'s an integral part of our daily practice, ensuring a healthier planet for future generations.',
+    image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
   },
 ]
 
 export default function Difference() {
+  const [active, setActive] = useState(0)
+  const current = tabs[active]
+
   return (
     <section className="bg-white py-16 sm:py-20 md:py-28">
       <div className="container-page">
         <div className="grid items-end gap-6 md:grid-cols-2">
           <div>
-            <p className="eyebrow">Why Travel With Us</p>
-            <h2 className="mt-3">The MasterPolo Difference</h2>
+            <p className="eyebrow">Why Still Wild Safaris</p>
+            <h2 className="mt-3">Not just another safari. A better way to go wild.</h2>
+            <p className="mt-4 font-serif text-base italic text-brand-charcoal sm:text-lg">
+              Small. Thoughtful. Wild by nature.
+            </p>
           </div>
-          <p className="font-serif text-lg italic leading-relaxed text-brand-charcoal sm:text-xl">
-            We believe a truly great safari depends on the quality of the journey. With us, you are not a tourist —
-            you are an explorer.
+          <p className="text-sm leading-relaxed text-brand-muted sm:text-base">
+            At Still Wild Safaris, we believe that extraordinary adventure and profound conservation are not mutually
+            exclusive; they are intrinsically linked. We craft journeys that immerse you in the breathtaking beauty of
+            Africa while actively contributing to its preservation — a promise to the wild and its communities.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-10 md:mt-14 md:grid-cols-2 md:gap-14 lg:gap-16">
-          <ul className="space-y-6">
-            <div className="h-px w-20 bg-brand-gold" />
-            {points.map((p) => (
-              <li key={p.title} className="flex gap-4">
-                <span className="mt-1 flex h-7 w-7 flex-none items-center justify-center rounded-full bg-brand-green/10 text-brand-green">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M5 12l5 5L20 7" />
-                  </svg>
-                </span>
-                <div>
-                  <h3 className="font-serif text-lg text-brand-ink">{p.title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-brand-muted sm:text-base">{p.body}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+        <div
+          role="tablist"
+          aria-label="What sets us apart"
+          className="mt-10 flex items-center gap-4 overflow-x-auto border-b border-brand-ink/10 pb-px sm:gap-8 md:mt-14"
+        >
+          {tabs.map((tab, idx) => {
+            const isActive = idx === active
+            return (
+              <button
+                key={tab.label}
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setActive(idx)}
+                className={`relative whitespace-nowrap px-1 pb-3 text-[11px] font-medium uppercase tracking-[0.2em] transition sm:text-xs ${
+                  isActive ? 'text-brand-ink' : 'text-brand-muted hover:text-brand-ink'
+                }`}
+              >
+                {tab.label}
+                <span
+                  aria-hidden
+                  className={`absolute inset-x-0 -bottom-px h-0.5 transition ${
+                    isActive ? 'bg-brand-gold' : 'bg-transparent'
+                  }`}
+                />
+              </button>
+            )
+          })}
+        </div>
+
+        <div className="mt-10 grid items-center gap-10 md:mt-12 md:grid-cols-2 md:gap-14 lg:gap-16">
           <div className="overflow-hidden rounded-xl shadow-lg">
             <Picture
-              src="/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg"
-              alt="Elephants walking along the river at sunset"
+              key={current.image}
+              src={current.image}
+              alt={current.title}
               loading="lazy"
-              className="h-full w-full object-cover" />
+              className="aspect-[4/3] w-full object-cover"
+            />
+          </div>
+          <div>
+            <h3 className="font-serif text-3xl leading-tight text-brand-ink sm:text-4xl md:text-5xl">
+              {current.title}
+            </h3>
+            <p className="mt-6 text-sm leading-relaxed text-brand-muted sm:text-base">{current.body}</p>
           </div>
         </div>
       </div>

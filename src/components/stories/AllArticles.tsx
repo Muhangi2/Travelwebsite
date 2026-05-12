@@ -1,17 +1,19 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { articles, categories } from '@/data/articles'
+import { categories } from '@/data/articles'
+import { useStories } from '@/sanity/stories'
 
 const PER_PAGE = 6
 
 export default function AllArticles() {
   const [active, setActive] = useState('All')
   const [page, setPage] = useState(0)
+  const { items: articles } = useStories()
 
   const filtered = useMemo(() => {
     if (active === 'All') return articles
     return articles.filter((a) => a.tags.some((t) => t.toLowerCase() === active.toLowerCase()))
-  }, [active])
+  }, [active, articles])
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE))
   const visible = filtered.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE)

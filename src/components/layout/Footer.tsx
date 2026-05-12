@@ -13,16 +13,16 @@ const Social = ({ label, path }: { label: string; path: string }) => (
 )
 
 const partners = [
-  { label: 'ATTA', logo: '/images/logos/trade-associations/atta-logo.png' },
-  { label: 'AUTO Uganda', logo: '/images/logos/trade-associations/auto.png' },
-  { label: 'ITB Asia', logo: '/images/logos/trade-associations/itb-asia.jpg' },
-  { label: 'We Are Africa', logo: '/images/logos/trade-associations/we-are-africa-logo.jpg' },
+  { label: 'Singita', logo: '/images/logos/partners/singita.jpg' },
+  { label: 'One & Only', logo: '/images/logos/partners/one-and-only.jpg' },
+  { label: 'Marriott', logo: '/images/logos/partners/marriot.png' },
+  { label: 'MARASA Africa', logo: '/images/logos/partners/marasa-africa.png' },
 ]
 
 const destinations = [
-  { label: 'Explore Uganda — The Pearl of Africa', logo: '/images/logos/tourism-boards/explore-uganda.png' },
-  { label: 'Magical Kenya', logo: '/images/logos/tourism-boards/magical-kenya-logo.png' },
-  { label: 'Visit Rwanda', logo: '/images/logos/tourism-boards/visit-rwanda-logo.jpg' },
+  { label: 'Explore Uganda — The Pearl of Africa', logo: '/images/logos/tourism-boards/explore-uganda.png', light: true },
+  { label: 'Magical Kenya', logo: '/images/logos/tourism-boards/magical-kenya-logo.png', light: false },
+  { label: 'Visit Rwanda', logo: '/images/logos/tourism-boards/visit-rwanda-logo.jpg', light: false },
 ]
 
 export default function Footer() {
@@ -36,7 +36,7 @@ export default function Footer() {
                 src={p.logo}
                 alt={p.label}
                 loading="lazy"
-                className="h-10 w-auto max-w-[140px] object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0 sm:h-12 sm:max-w-[160px]"
+                className="h-10 w-auto max-w-[140px] object-contain opacity-70 invert mix-blend-screen transition hover:opacity-100 sm:h-12 sm:max-w-[160px]"
               />
             </div>
           ))}
@@ -125,7 +125,9 @@ export default function Footer() {
                 src={d.logo}
                 alt={d.label}
                 loading="lazy"
-                className="h-12 w-auto max-w-[180px] object-contain opacity-80 transition hover:opacity-100 sm:h-14 sm:max-w-[200px]"
+                className={`h-12 w-auto max-w-[180px] object-contain opacity-70 mix-blend-screen transition hover:opacity-100 sm:h-14 sm:max-w-[200px] ${
+                  d.light ? '' : 'invert'
+                }`}
               />
             </div>
           ))}
