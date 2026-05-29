@@ -78,8 +78,8 @@ export default function Nav() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY
-      // Hide navbar when scrolled past 1000px (roughly hero section)
-      setNavVisible(scrollPos < 1000)
+      // Hide navbar when scrolled past 300px
+      setNavVisible(scrollPos < 100)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
