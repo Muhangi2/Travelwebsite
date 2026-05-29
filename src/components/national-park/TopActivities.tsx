@@ -7,7 +7,7 @@ export default function TopActivities({ items }: { items: Park['activities'] }) 
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-center font-serif text-4xl text-white">Top Activities</h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="cards-scroll-3 mt-10 gap-6">
           {items.map((a) => (
             <article key={a.title} className="relative aspect-[4/3] overflow-hidden rounded-md">
               <Picture

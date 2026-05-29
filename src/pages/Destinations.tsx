@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import { countries } from '@/data/destinations'
+import { useCountries } from '@/sanity/destinations'
 
 export default function Destinations() {
-  const list = Object.values(countries)
+  const { list } = useCountries()
   return (
     <section className="mx-auto max-w-6xl px-6 pt-32 pb-24">
       <h1 className="text-center font-serif text-5xl">Destinations</h1>
@@ -10,7 +10,7 @@ export default function Destinations() {
         Choose where to begin. Each destination opens a different chapter of East Africa.
       </p>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="cards-scroll-3 mt-12 gap-6">
         {list.map((c) => (
           <Link
             key={c.slug}

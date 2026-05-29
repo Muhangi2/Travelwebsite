@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { countries } from '@/data/destinations'
+import type { Country } from '@/data/destinations'
+import { useCountries } from '@/sanity/destinations'
 
 type Item = {
   country: string
@@ -10,8 +11,8 @@ type Item = {
 
 // Round-robin interleave parks across countries so a 3-card window
 // usually shows three different countries.
-const buildItems = (): Item[] => {
-  const buckets = Object.values(countries).map((c) =>
+const buildItems = (countries: Country[]): Item[] => {
+  const buckets = countries.map((c) =>
     c.parks.map<Item>((p) => ({
       country: c.name,
       image: p.image,
@@ -33,12 +34,12 @@ const buildItems = (): Item[] => {
   return out
 }
 
-const items = buildItems()
-
 const VISIBLE = 3
 const AUTO_MS = 4000
 
 export default function DestinationsTeaser() {
+  const { list } = useCountries()
+  const items = buildItems(list)
   const [start, setStart] = useState(0)
   const total = items.length
 

@@ -43,7 +43,7 @@ export default function DmcServices() {
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="font-serif text-4xl">Our DMC Services</h2>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className="cards-scroll-3 mt-8 gap-6">
           {visible.map((s, idx) => {
             const num = String(((start + idx) % max) + 1).padStart(2, '0')
             return (
@@ -73,7 +73,7 @@ export default function DmcServices() {
             <button
               aria-label="Previous"
               onClick={() => setStart((s) => (s - 1 + max) % max)}
-              className="rounded-full border border-neutral-300 p-3 hover:bg-neutral-50"
+              className="btn-icon"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M15 18l-6-6 6-6" />
@@ -82,7 +82,7 @@ export default function DmcServices() {
             <button
               aria-label="Next"
               onClick={() => setStart((s) => (s + 1) % max)}
-              className="rounded-full border border-neutral-300 p-3 hover:bg-neutral-50"
+              className="btn-icon"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M9 6l6 6-6 6" />

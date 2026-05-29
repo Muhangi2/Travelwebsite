@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom'
+import Logo from './Logo'
 
 const Social = ({ label, path }: { label: string; path: string }) => (
   <a
     href="#"
     aria-label={label}
-    className="flex h-9 w-9 items-center justify-center rounded-full bg-white/8 text-white ring-1 ring-white/15 transition hover:bg-white/15 hover:ring-brand-gold"
+    className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/20 transition hover:bg-white/20 hover:ring-white/40"
   >
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
       <path d={path} />
@@ -27,7 +28,7 @@ const destinations = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-forest-dark text-white/80">
+    <footer className="bg-black text-white/75">
       <div className="container-page pb-10 pt-14 sm:pt-16">
         <div className="grid grid-cols-2 items-center gap-6 border-b border-white/10 pb-10 sm:grid-cols-4 sm:gap-10">
           {partners.map((p) => (
@@ -43,7 +44,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="eyebrow text-brand-gold">Stay In Touch</p>
+          <Logo variant="full" />
+          <p className="eyebrow mt-8 text-white/50">Stay In Touch</p>
           <h4 className="mt-2 font-serif text-2xl text-white sm:text-3xl">Connect with us</h4>
           <div className="mt-5 flex justify-center gap-3">
             <Social label="Facebook" path="M13 22v-8h3l1-4h-4V7c0-1 .5-2 2-2h2V1h-3c-3 0-5 2-5 5v4H6v4h3v8z" />
@@ -72,7 +74,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="rounded-full bg-brand-green px-5 py-2 text-[10px] font-medium tracking-[0.2em] text-white transition hover:bg-brand-green-dark sm:px-6"
+              className="rounded-full bg-black px-5 py-2 text-[10px] font-medium tracking-[0.2em] text-white ring-1 ring-black transition hover:bg-neutral-900 sm:px-6"
             >
               SUBSCRIBE
             </button>
@@ -136,9 +138,9 @@ export default function Footer() {
         <div className="mt-10 flex items-center justify-center gap-3 text-[10px] tracking-[0.3em] text-white/55 sm:gap-6 sm:text-xs sm:tracking-[0.25em]">
           <span className="h-px flex-1 bg-white/10" />
           <span>UGANDA</span>
-          <span className="text-brand-gold">·</span>
+          <span className="text-white/40">·</span>
           <span>RWANDA</span>
-          <span className="text-brand-gold">·</span>
+          <span className="text-white/40">·</span>
           <span>KENYA</span>
           <span className="h-px flex-1 bg-white/10" />
         </div>

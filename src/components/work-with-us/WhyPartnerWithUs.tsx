@@ -11,7 +11,7 @@ export default function WhyPartnerWithUs() {
       <div className="mx-auto max-w-5xl px-6">
         <h2 className="text-center font-serif text-4xl text-brand-green">Why Partner With Us</h2>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="cards-scroll-4 mt-12 gap-8">
           {reasons.map((r, idx) => (
             <div key={r.num} className="relative flex flex-col items-center text-center">
               {idx < reasons.length - 1 && (

@@ -1,5 +1,5 @@
 import { useParams, Navigate } from 'react-router-dom'
-import { countries } from '@/data/destinations'
+import { useCountry } from '@/sanity/destinations'
 import DestinationHero from '@/components/destinations/DestinationHero'
 import FeaturedJourneys from '@/components/destinations/FeaturedJourneys'
 import ExploreParks from '@/components/destinations/ExploreParks'
@@ -10,8 +10,8 @@ import BespokeJourneyCTA from '@/components/destinations/BespokeJourneyCTA'
 import SeoKeywords from '@/components/destinations/SeoKeywords'
 
 export default function DestinationCountry() {
-  const { country } = useParams<{ country: string }>()
-  const data = country ? countries[country] : undefined
+  const { country: countrySlug } = useParams<{ country: string }>()
+  const { country: data } = useCountry(countrySlug)
 
   if (!data) return <Navigate to="/destinations" replace />
 

@@ -100,7 +100,7 @@ export default function BookingJourneySteps() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="cards-scroll-4 mt-10 gap-4">
           {steps.map((s) => (
             <div key={s.title} className="rounded-md bg-white p-5 shadow-sm ring-1 ring-neutral-100">
               <span className="text-brand-green">{s.icon}</span>

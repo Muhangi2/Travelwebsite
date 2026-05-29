@@ -17,14 +17,14 @@ export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] })
         <div className="relative mt-12">
           <button
             aria-label="Previous"
-            className="absolute -left-4 top-1/2 hidden -translate-y-1/2 rounded-full border border-neutral-300 p-3 text-neutral-700 hover:bg-neutral-50 lg:block"
+            className="btn-icon absolute -left-4 top-1/2 hidden -translate-y-1/2 lg:block"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="cards-scroll-3 gap-6">
             {lodges.map((l) => (
               <article key={l.name} className="overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-200">
                 <div className="aspect-[4/3] overflow-hidden">
@@ -47,7 +47,7 @@ export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] })
 
           <button
             aria-label="Next"
-            className="absolute -right-4 top-1/2 hidden -translate-y-1/2 rounded-full border border-neutral-300 p-3 text-neutral-700 hover:bg-neutral-50 lg:block"
+            className="btn-icon absolute -right-4 top-1/2 hidden -translate-y-1/2 lg:block"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M9 6l6 6-6 6" />

@@ -30,7 +30,7 @@ export default function WhatMakesDifferent() {
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-center font-serif text-4xl text-brand-green">What Makes Us Different</h2>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="cards-scroll-4 mt-10 gap-5">
           {items.map((it) => (
             <div key={it.title} className="rounded-md bg-white p-5 shadow-sm ring-1 ring-neutral-100">
               <div className="flex h-10 w-10 items-center justify-center rounded-md bg-brand-green/10">

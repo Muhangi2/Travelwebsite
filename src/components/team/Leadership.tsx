@@ -22,7 +22,7 @@ export default function Leadership() {
     <section className="bg-white pb-16">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="text-center font-serif text-3xl">The Leadership</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="cards-scroll-2 mt-10 gap-6">
           {leadership.map((m) => (
             <TeamMemberCard key={m.name} member={m} />
           ))}

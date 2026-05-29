@@ -45,7 +45,7 @@ export default function SafariCollection() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:mt-14 md:grid-cols-3 md:gap-8">
+        <div className="cards-scroll-3 mt-12 gap-6 md:mt-14 md:gap-8">
           {cards.map((c) => (
             <article
               key={c.title}

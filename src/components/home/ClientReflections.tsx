@@ -35,12 +35,12 @@ export default function ClientReflections() {
             </div>
 
             <div className="mt-8 flex gap-3">
-              <button aria-label="Previous" className="rounded-full border border-brand-green/40 p-3 text-brand-green hover:bg-brand-green/5">
+              <button aria-label="Previous" className="btn-icon">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M15 18l-6-6 6-6" />
                 </svg>
               </button>
-              <button aria-label="Next" className="rounded-full border border-brand-green/40 p-3 text-brand-green hover:bg-brand-green/5">
+              <button aria-label="Next" className="btn-icon">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 6l6 6-6 6" />
                 </svg>

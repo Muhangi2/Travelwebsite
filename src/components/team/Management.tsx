@@ -22,7 +22,7 @@ export default function Management() {
     <section className="bg-neutral-50 py-16">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="text-center font-serif text-3xl text-brand-green">Management and Specialization</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="cards-scroll-2 mt-10 gap-6">
           {management.map((m) => (
             <TeamMemberCard key={m.name} member={m} />
           ))}

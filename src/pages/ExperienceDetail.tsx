@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import { useParams, Navigate, NavLink } from 'react-router-dom'
-import { experiencesBySlug, experiences } from '@/data/experiences'
+import { useExperience, useExperiences } from '@/sanity/experiences'
 
 export default function ExperienceDetail() {
   const { slug } = useParams<{ slug: string }>()
-  const exp = slug ? experiencesBySlug[slug] : undefined
+  const { experience: exp } = useExperience(slug)
+  const { items: experiences } = useExperiences()
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' })
@@ -71,7 +72,7 @@ export default function ExperienceDetail() {
               <p className="eyebrow">What Sets It Apart</p>
               <h2 className="mt-3">Designed for the Discerning</h2>
             </div>
-            <div className="mx-auto mt-12 grid max-w-6xl gap-8 md:grid-cols-3 md:gap-10">
+            <div className="cards-scroll-3 mx-auto mt-12 max-w-6xl gap-8 md:gap-10">
               {exp.highlights.map((h, i) => (
                 <div key={i} className="rounded-2xl border border-brand-ink/10 bg-brand-cream/30 p-6 sm:p-8">
                   <p className="font-serif text-2xl text-brand-gold sm:text-3xl">{String(i + 1).padStart(2, '0')}</p>
@@ -91,7 +92,7 @@ export default function ExperienceDetail() {
               <p className="eyebrow text-brand-gold">Where to Experience It</p>
               <h2 className="mt-3 text-white">Our Recommended Locations</h2>
             </div>
-            <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+            <div className="cards-scroll-3 mx-auto mt-12 max-w-6xl gap-6 md:gap-8">
               {exp.locations.map((loc, i) => (
                 <article
                   key={i}
@@ -173,7 +174,7 @@ export default function ExperienceDetail() {
                 ALL EXPERIENCES →
               </NavLink>
             </div>
-            <div className="mt-10 grid gap-6 md:grid-cols-3 md:gap-8">
+            <div className="cards-scroll-3 mt-10 gap-6 md:gap-8">
               {fallback.map((e) => (
                 <NavLink
                   key={e.slug}

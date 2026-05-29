@@ -37,12 +37,12 @@ export default function Stories() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:mt-14 md:grid-cols-3">
-          {posts.map((p, idx) => (
+        <div className="cards-scroll-3 mt-12 gap-6 md:mt-14">
+          {posts.map((p) => (
             <NavLink
               to={`/stories/${p.slug}`}
               key={p.slug}
-              className={`group relative block overflow-hidden rounded-xl shadow-md transition hover:shadow-2xl ${idx === 1 ? 'md:scale-105' : ''}`}
+              className="group relative block overflow-hidden rounded-xl shadow-md transition hover:shadow-2xl"
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img src={p.image} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />

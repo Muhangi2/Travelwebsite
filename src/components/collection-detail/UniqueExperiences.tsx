@@ -38,7 +38,7 @@ export default function UniqueExperiences() {
             </svg>
           </button>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="cards-scroll-3 gap-6">
             {experiences.map((e) => (
               <article key={e.title} className="overflow-hidden rounded-md bg-white text-neutral-800 shadow-md">
                 <div className="aspect-[4/3] overflow-hidden">

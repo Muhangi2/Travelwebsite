@@ -33,8 +33,8 @@ export default function AllArticles() {
                 }}
                 className={`rounded-full border px-5 py-2 text-xs ${
                   isActive
-                    ? 'border-brand-green bg-brand-green text-white'
-                    : 'border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50'
+                    ? 'border-black bg-black text-white'
+                    : 'border-neutral-300 bg-white text-neutral-700 hover:border-black hover:text-black'
                 }`}
               >
                 {c}
@@ -45,7 +45,7 @@ export default function AllArticles() {
 
         <h2 className="mt-12 font-serif text-4xl">All Articles</h2>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="cards-scroll-3 mt-8 gap-6">
           {visible.map((a) => (
             <article key={a.slug} className="overflow-hidden rounded-md shadow-sm ring-1 ring-neutral-100">
               <div className="relative aspect-[4/3] overflow-hidden">
@@ -80,7 +80,7 @@ export default function AllArticles() {
               aria-label="Previous"
               onClick={() => setPage((p) => Math.max(0, p - 1))}
               disabled={page === 0}
-              className="rounded-full border border-neutral-300 p-2.5 hover:bg-neutral-50 disabled:opacity-40"
+              className="btn-icon p-2.5"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M15 18l-6-6 6-6" />
@@ -103,7 +103,7 @@ export default function AllArticles() {
               aria-label="Next"
               onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
               disabled={page === totalPages - 1}
-              className="rounded-full bg-brand-green p-2.5 text-white hover:bg-brand-green-dark disabled:opacity-40"
+              className="rounded-full bg-black p-2.5 text-white hover:bg-neutral-800 disabled:opacity-40"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M9 6l6 6-6 6" />

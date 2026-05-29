@@ -23,13 +23,13 @@ const reviews: Review[] = [
 ]
 
 const Star = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="#f4a82c">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="#000000">
     <path d="M12 2l2.95 6.97 7.55.63-5.74 4.95L18.5 22 12 17.77 5.5 22l1.74-7.45L1.5 9.6l7.55-.63z" />
   </svg>
 )
 
 const VerifiedBadge = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="#1e5631">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="#000000">
     <path d="M12 1l3 3 4-1 1 4 3 3-3 3 1 4-4-1-3 3-3-3-4 1-1-4-3-3 3-3-1-4 4 1z" />
     <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" fill="none" />
   </svg>
@@ -49,7 +49,7 @@ export default function GuestReviews() {
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="text-center font-serif text-4xl">Our Guests Reviews</h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="cards-scroll-3 mt-10 gap-6">
           {reviews.map((r) => (
             <article key={r.name} className="rounded-md bg-white p-6 shadow-sm ring-1 ring-neutral-100">
               <div className="flex items-start justify-between">
@@ -82,7 +82,7 @@ export default function GuestReviews() {
           {[0, 1, 2, 3].map((i) => (
             <span
               key={i}
-              className={`h-2 w-2 rounded-full ${i === 0 ? 'bg-brand-green' : 'bg-neutral-300'}`}
+              className={`h-2 w-2 rounded-full ${i === 0 ? 'bg-black' : 'bg-neutral-300'}`}
             />
           ))}
         </div>
