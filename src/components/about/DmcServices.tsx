@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from '@/components/ui/Reveal'
 
 const services = [
   {
@@ -41,13 +42,16 @@ export default function DmcServices() {
   return (
     <section className="bg-white pb-20 pt-12">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="font-serif text-4xl">Our DMC Services</h2>
+        <Reveal>
+          <h2 className="font-serif text-4xl">Our DMC Services</h2>
+        </Reveal>
 
         <div className="cards-scroll-3 mt-8 gap-6">
           {visible.map((s, idx) => {
             const num = String(((start + idx) % max) + 1).padStart(2, '0')
             return (
-              <article key={`${num}-${s.title}`} className="relative aspect-[4/3] overflow-hidden rounded-md">
+              <Reveal key={`${num}-${s.title}`} delay={idx * 80}>
+              <article className="card-lift img-zoom relative aspect-[4/3] overflow-hidden rounded-md">
                 <img src={s.image} alt={s.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5 text-white">
@@ -55,6 +59,7 @@ export default function DmcServices() {
                   <h3 className="mt-1 font-serif text-lg">{s.title}</h3>
                 </div>
               </article>
+              </Reveal>
             )
           })}
         </div>
@@ -65,7 +70,7 @@ export default function DmcServices() {
           </p>
           <div className="mx-6 h-px flex-1 bg-neutral-200">
             <div
-              className="h-full bg-brand-green transition-all"
+              className="h-full bg-black transition-all"
               style={{ width: `${((start + 1) / max) * 100}%` }}
             />
           </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 type Lodge = {
   name: string
@@ -24,67 +25,53 @@ export default function HandpickedLodges() {
   const lodges = tiers[tier]
 
   return (
-    <section className="bg-neutral-50 py-20">
+    <section className="section-alt py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="text-center">
-          <h2 className="font-serif text-4xl text-brand-forest">Handpicked Lodges</h2>
-          <p className="mt-2 text-xs tracking-wide text-neutral-600">Carefully Selected Stays Along Your Safari Journey</p>
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <div className="inline-flex rounded-full bg-white p-1 ring-1 ring-neutral-200">
-            <button
-              onClick={() => setTier('midRange')}
-              className={`rounded-full px-6 py-2 text-[10px] tracking-[0.2em] ${
-                tier === 'midRange' ? 'bg-brand-green text-white' : 'text-neutral-700 hover:text-neutral-900'
-              }`}
-            >
-              MID RANGE
-            </button>
-            <button
-              onClick={() => setTier('luxury')}
-              className={`rounded-full px-6 py-2 text-[10px] tracking-[0.2em] ${
-                tier === 'luxury' ? 'bg-brand-green text-white' : 'text-neutral-700 hover:text-neutral-900'
-              }`}
-            >
-              LUXURY
-            </button>
+        <Reveal>
+          <div className="text-center">
+            <h2 className="font-serif text-4xl">Handpicked Lodges</h2>
+            <p className="mt-2 text-xs tracking-wide text-neutral-600">Carefully Selected Stays Along Your Safari Journey</p>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="relative mt-10">
-          <button
-            aria-label="Previous"
-            className="btn-icon absolute -left-4 top-1/2 hidden -translate-y-1/2 bg-white lg:block"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-
-          <div className="cards-scroll-3 gap-6">
-            {lodges.map((l) => (
-              <article key={`${tier}-${l.name}`} className="overflow-hidden">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-md">
-                  <img src={l.image} alt={l.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
-                  <span className="absolute right-3 top-3 rounded-full bg-brand-green/90 px-3 py-1 text-[10px] tracking-[0.2em] text-white">
-                    {l.nights}
-                  </span>
-                </div>
-                <p className="mt-3 text-sm font-medium">{l.name}</p>
-              </article>
-            ))}
+        <Reveal delay={80}>
+          <div className="mt-8 flex justify-center">
+            <div className="inline-flex rounded-full bg-white p-1 ring-1 ring-neutral-200">
+              <button
+                type="button"
+                onClick={() => setTier('midRange')}
+                className={`rounded-full px-6 py-2 text-[10px] tracking-[0.2em] transition ${
+                  tier === 'midRange' ? 'bg-black text-white' : 'text-neutral-700 hover:text-neutral-900'
+                }`}
+              >
+                MID RANGE
+              </button>
+              <button
+                type="button"
+                onClick={() => setTier('luxury')}
+                className={`rounded-full px-6 py-2 text-[10px] tracking-[0.2em] transition ${
+                  tier === 'luxury' ? 'bg-black text-white' : 'text-neutral-700 hover:text-neutral-900'
+                }`}
+              >
+                LUXURY
+              </button>
+            </div>
           </div>
+        </Reveal>
 
-          <button
-            aria-label="Next"
-            className="btn-icon absolute -right-4 top-1/2 hidden -translate-y-1/2 bg-white lg:block"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </button>
-        </div>
+        <Stagger className="cards-scroll-3 relative mt-10 gap-6" staggerMs={100} key={tier}>
+          {lodges.map((l) => (
+            <article key={`${tier}-${l.name}`} className="card-lift overflow-hidden">
+              <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-md">
+                <img src={l.image} alt={l.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                <span className="absolute right-3 top-3 rounded-full bg-black/90 px-3 py-1 text-[10px] tracking-[0.2em] text-white">
+                  {l.nights}
+                </span>
+              </div>
+              <p className="mt-3 text-sm font-medium">{l.name}</p>
+            </article>
+          ))}
+        </Stagger>
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTourPackages } from '@/sanity/tourPackages'
+import Reveal from '@/components/ui/Reveal'
 
 const tagIcon: Record<string, React.ReactNode> = {
   'Luxury Adventure': (
@@ -26,24 +27,27 @@ export default function CollectionsGrid() {
   return (
     <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-center font-serif text-5xl">Safari Collections and Journeys</h2>
+        <Reveal>
+          <h2 className="text-center font-serif text-5xl">Safari Collections and Journeys</h2>
+        </Reveal>
 
         <div className="cards-scroll-3 mt-12 gap-6">
-          {journeys.map((j) => (
-            <article
-              key={j.id}
-              className="group overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-200 transition hover:shadow-md"
+          {journeys.map((j, i) => (
+            <Reveal key={j.id} delay={i * 90}>
+            <Link
+              to={`/safari-collections/${j.id}`}
+              className="card-lift group block overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-200"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={j.image} alt={j.title} className="h-full w-full object-cover transition group-hover:scale-105" loading="lazy" decoding="async" />
+              <div className="img-zoom relative aspect-[4/3]">
+                <img src={j.image} alt={j.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
                 {j.country && (
-                  <span className="absolute right-4 top-4 rounded-full bg-brand-green px-4 py-1 text-[10px] tracking-[0.2em] text-white">
+                  <span className="absolute right-4 top-4 rounded-full bg-black px-4 py-1 text-[10px] tracking-[0.2em] text-white">
                     {j.country}
                   </span>
                 )}
               </div>
               <div className="p-5">
-                <div className="flex flex-wrap gap-3 text-[10px] text-brand-green">
+                <div className="flex flex-wrap gap-3 text-[10px] text-neutral-600">
                   {j.tags.map((t) => (
                     <span key={t} className="inline-flex items-center gap-1">
                       {tagIcon[t]} {t}
@@ -52,26 +56,28 @@ export default function CollectionsGrid() {
                 </div>
                 <h3 className="mt-3 font-serif text-xl">{j.title}</h3>
                 <p className="mt-1 text-sm text-neutral-500">{j.duration}</p>
-                <Link
-                  to={`/safari-collections/${j.id}`}
+                <span
                   className={`mt-4 inline-block rounded-full px-5 py-2 text-[10px] tracking-[0.2em] ${
                     j.highlight
-                      ? 'bg-neutral-900 text-white hover:bg-black'
-                      : 'border border-neutral-300 text-neutral-800 hover:bg-neutral-50'
+                      ? 'bg-black text-white'
+                      : 'border border-neutral-300 text-neutral-800'
                   }`}
                 >
                   VIEW FULL ITINERARY
-                </Link>
+                </span>
               </div>
-            </article>
+            </Link>
+            </Reveal>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <Link to="/contact" className="btn-primary">
-            REQUEST A CUSTOM JOURNEY
-          </Link>
-        </div>
+        <Reveal>
+          <div className="mt-12 text-center">
+            <Link to="/contact" className="btn-primary">
+              REQUEST A CUSTOM JOURNEY
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

@@ -1,16 +1,17 @@
 import { NavLink } from 'react-router-dom'
+import { site } from '@/config/site'
 import Logo from './Logo'
 
 const Social = ({ label, path }: { label: string; path: string }) => (
-  <a
-    href="#"
-    aria-label={label}
+  <NavLink
+    to="/contact"
+    aria-label={`${label} — contact us`}
     className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/20 transition hover:bg-white/20 hover:ring-white/40"
   >
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
       <path d={path} />
     </svg>
-  </a>
+  </NavLink>
 )
 
 const partners = [
@@ -44,7 +45,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 text-center">
-          <Logo variant="full" />
+          <NavLink to="/">
+            <Logo variant="full" />
+          </NavLink>
           <p className="eyebrow mt-8 text-white/50">Stay In Touch</p>
           <h4 className="mt-2 font-serif text-2xl text-white sm:text-3xl">Connect with us</h4>
           <div className="mt-5 flex justify-center gap-3">
@@ -62,7 +65,7 @@ export default function Footer() {
             onSubmit={(e) => {
               e.preventDefault()
               const email = (e.currentTarget.elements.namedItem('email') as HTMLInputElement)?.value
-              window.location.href = `mailto:info@masterpolosafaris.com?subject=Newsletter%20signup&body=Please%20add%20me:%20${encodeURIComponent(email || '')}`
+              window.location.href = `mailto:${site.email}?subject=Newsletter%20signup&body=Please%20add%20me:%20${encodeURIComponent(email || '')}`
             }}
           >
             <input
@@ -85,7 +88,7 @@ export default function Footer() {
           <div>
             <h4 className="font-serif text-lg text-white">About Us</h4>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><NavLink to="/about" className="hover:text-white">The East African DMC</NavLink></li>
+              <li><NavLink to="/about" className="hover:text-white">Our Story</NavLink></li>
               <li><NavLink to="/meet-the-team" className="hover:text-white">Meet the Team</NavLink></li>
               <li><NavLink to="/know-before-you-go" className="hover:text-white">Know Before You Go</NavLink></li>
               <li><NavLink to="/work-with-us" className="hover:text-white">Work With Us</NavLink></li>
@@ -112,10 +115,22 @@ export default function Footer() {
           <div>
             <h4 className="font-serif text-lg text-white">Contact</h4>
             <ul className="mt-4 space-y-2 text-sm">
-              <li>info@masterpolosafaris.com</li>
-              <li>Imperial Mall — Ground Level, Suite 30, Uganda</li>
-              <li>+256 769 797 796</li>
-              <li>+256 705 527 599</li>
+              <li>
+                <a href={`mailto:${site.email}`} className="hover:text-white">
+                  {site.email}
+                </a>
+              </li>
+              <li>{site.address}</li>
+              <li>
+                <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="hover:text-white">
+                  {site.phone}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${site.phoneAlt.replace(/\s/g, '')}`} className="hover:text-white">
+                  {site.phoneAlt}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -146,11 +161,17 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 flex flex-col items-center justify-between gap-3 text-xs text-white/55 sm:mt-10 md:flex-row">
-          <p>© {new Date().getFullYear()} MasterPolo Safaris. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {site.name}. All rights reserved.
+          </p>
           <div className="flex gap-3">
-            <NavLink to="/privacy-policy" className="hover:text-white">Privacy Policy</NavLink>
+            <NavLink to="/privacy-policy" className="hover:text-white">
+              Privacy Policy
+            </NavLink>
             <span>·</span>
-            <a href="#" className="hover:text-white">Terms &amp; Conditions</a>
+            <NavLink to="/privacy-policy" className="hover:text-white">
+              Terms &amp; Conditions
+            </NavLink>
           </div>
         </div>
       </div>

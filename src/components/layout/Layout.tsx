@@ -13,11 +13,13 @@ function ScrollToTop() {
 }
 
 export default function Layout() {
+  const { pathname } = useLocation()
+
   return (
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />
       <Nav />
-      <main className="flex-1">
+      <main key={pathname} className="page-enter flex-1">
         <Outlet />
       </main>
       <Footer />

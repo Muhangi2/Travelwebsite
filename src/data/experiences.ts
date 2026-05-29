@@ -43,7 +43,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Private Porters & Guides',
-        body: 'Every guest is paired with a personal porter (carrying your pack, assisting on slopes), and you travel with your own MasterPolo guide for the entire safari.',
+        body: 'Every guest is paired with a personal porter (carrying your pack, assisting on slopes), and you travel with your own Still Wild Safaris guide for the entire safari.',
       },
     ],
     locations: [

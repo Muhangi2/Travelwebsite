@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import Reveal from '@/components/ui/Reveal'
 
 type Step = {
   title: string
@@ -92,29 +93,35 @@ export default function BookingJourneySteps() {
   return (
     <section className="bg-neutral-50 py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="text-center">
-          <h2 className="font-serif text-4xl">Your Journey to the Wild Starts Here</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-neutral-600">
-            Planning your dream African safari should feel exciting, not overwhelming. Our simple 8-step booking
-            journey guides you from choosing your adventure to arriving in Uganda.
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center">
+            <h2 className="font-serif text-4xl">Your Journey to the Wild Starts Here</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-neutral-600">
+              Planning your dream African safari should feel exciting, not overwhelming. Our simple 8-step booking
+              journey guides you from choosing your adventure to arriving in Uganda.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="cards-scroll-4 mt-10 gap-4">
-          {steps.map((s) => (
-            <div key={s.title} className="rounded-md bg-white p-5 shadow-sm ring-1 ring-neutral-100">
-              <span className="text-brand-green">{s.icon}</span>
-              <h3 className="mt-3 font-serif text-base">{s.title}</h3>
-              <p className="mt-2 text-xs leading-relaxed text-neutral-600">{s.body}</p>
-            </div>
+          {steps.map((s, i) => (
+            <Reveal key={s.title} delay={i * 70}>
+              <div className="card-lift h-full rounded-md bg-white p-5 shadow-sm ring-1 ring-neutral-100">
+                <span className="text-black">{s.icon}</span>
+                <h3 className="mt-3 font-serif text-base">{s.title}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-neutral-600">{s.body}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <NavLink to="/contact" className="btn-primary">
-            BOOK NOW
-          </NavLink>
-        </div>
+        <Reveal>
+          <div className="mt-10 text-center">
+            <NavLink to="/contact" className="btn-primary">
+              BOOK NOW
+            </NavLink>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

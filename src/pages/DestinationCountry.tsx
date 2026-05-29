@@ -21,9 +21,11 @@ export default function DestinationCountry() {
       <FeaturedJourneys />
       <ExploreParks
         countryName={data.name}
+        countrySlug={data.slug}
         intro={data.exploreIntro}
         summary={data.parkSummary}
         image={data.parkSummaryImage}
+        parksHref="#national-parks"
       />
       <NationalParksList countrySlug={data.slug} parks={data.parks} />
       <PrivilegedAccess items={data.privilegedAccess} />

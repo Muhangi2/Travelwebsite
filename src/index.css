@@ -242,3 +242,165 @@
   from { opacity: 0; transform: scale(1.04); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* ——— Page & hero motion ——— */
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.page-enter {
+  animation: pageIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-stagger .hero-item {
+  opacity: 0;
+  animation: heroIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-stagger .hero-item:nth-child(1) {
+  animation-delay: 0.08s;
+}
+.hero-stagger .hero-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.hero-stagger .hero-item:nth-child(3) {
+  animation-delay: 0.32s;
+}
+.hero-stagger .hero-item:nth-child(4) {
+  animation-delay: 0.44s;
+}
+.hero-stagger .hero-item:nth-child(5) {
+  animation-delay: 0.56s;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(36px);
+}
+.reveal-fade {
+  transform: none;
+}
+.reveal-scale {
+  transform: scale(0.96);
+}
+.reveal-left {
+  transform: translateX(-32px);
+}
+.reveal-right {
+  transform: translateX(32px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Card & image polish */
+.card-lift {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgb(0 0 0 / 0.18);
+}
+
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img,
+.img-zoom picture,
+.img-zoom video {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.img-zoom:hover img,
+.img-zoom:hover picture img,
+.img-zoom:hover video {
+  transform: scale(1.06);
+}
+
+.section-rule {
+  height: 1px;
+  width: 4rem;
+  transform-origin: left;
+  background: linear-gradient(90deg, #000 0%, #a3a3a3 100%);
+  animation: lineGrow 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.section-alt {
+  background: linear-gradient(180deg, #fafafa 0%, #ffffff 48%, #f5f5f5 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter,
+  .hero-stagger .hero-item,
+  .section-rule {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .card-lift:hover {
+    transform: none;
+  }
+
+  .img-zoom:hover img,
+  .img-zoom:hover picture img,
+  .img-zoom:hover video {
+    transform: none;
+  }
+}

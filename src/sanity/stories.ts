@@ -18,7 +18,7 @@ function toArticle(s: SanityStorySummary): Article {
     title: s.title,
     excerpt: s.excerpt ?? '',
     image: urlFor(s.mainImage) ?? '',
-    author: s.author ?? 'MasterPolo Safaris Team',
+    author: s.author ?? 'Still Wild Safaris Team',
     date: formatDate(s.publishedAt),
     tags: s.tags ?? [],
   }

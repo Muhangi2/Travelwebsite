@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import Reveal from '@/components/ui/Reveal'
 
 type Card = {
   image: string
@@ -14,21 +15,21 @@ const cards: Card[] = [
     duration: '11 Days  ·  Uganda & Rwanda',
     title: 'Ultimate Gorilla Expedition',
     desc: 'A journey through the heart of East Africa, from Kampala to the misty Virungas — twin gorilla treks across Bwindi and Volcanoes.',
-    href: '/safari-collections',
+    href: '/safari-collections/ultimate-gorilla-expedition',
   },
   {
     image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
     duration: '9 Days  ·  Uganda',
     title: 'Uganda Primate & Adventure Circuit',
     desc: "A perfect blend of adrenaline, wildlife, and Uganda's world-famous primate encounters — gorillas, chimpanzees and the savannahs of Queen Elizabeth.",
-    href: '/safari-collections',
+    href: '/safari-collections/uganda-exclusive-primate',
   },
   {
     image: '/images/lodges/rwanda/volcanoes-national-park/wildernes-bisate-lodge/1753110933515-bisate-gorilla-trekking-06-25-fr-31.jpg',
     duration: '4 Days  ·  Rwanda',
     title: 'The "Ikaze" (Welcome) Short Break',
     desc: 'The essence of Rwanda in four days. A short but profound encounter with mountain gorillas, served with eco-luxury at Wilderness Bisate.',
-    href: '/safari-collections',
+    href: '/safari-collections/great-lakes-primate-odyssey',
   },
 ]
 
@@ -36,22 +37,22 @@ export default function SafariCollection() {
   return (
     <section id="explore" className="bg-brand-cream/40 py-16 sm:py-20 md:py-28">
       <div className="container-page">
-        <div className="text-center">
-          <p className="eyebrow">Curated Itineraries</p>
-          <h2 className="mt-3">Our Safari Collection</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-brand-muted sm:text-base">
-            Six signature journeys across East Africa — each itinerary handcrafted by our travel designers, every
-            lodge personally vetted, every moment privately curated.
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center">
+            <p className="eyebrow">Curated Itineraries</p>
+            <h2 className="mt-3">Our Safari Collection</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-brand-muted sm:text-base">
+              Six signature journeys across East Africa — each itinerary handcrafted by our travel designers, every
+              lodge personally vetted, every moment privately curated.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="cards-scroll-3 mt-12 gap-6 md:mt-14 md:gap-8">
-          {cards.map((c) => (
-            <article
-              key={c.title}
-              className="group overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-neutral-200/70 transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="aspect-[4/3] overflow-hidden">
+          {cards.map((c, i) => (
+            <Reveal key={c.title} delay={i * 100}>
+            <article className="card-lift overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-neutral-200/70">
+              <div className="img-zoom aspect-[4/3]">
                 <img
                   src={c.image}
                   alt={c.title}
@@ -74,14 +75,17 @@ export default function SafariCollection() {
                 </NavLink>
               </div>
             </article>
+            </Reveal>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <NavLink to="/safari-collections" className="btn-primary">
-            VIEW ALL SAFARI COLLECTIONS
-          </NavLink>
-        </div>
+        <Reveal>
+          <div className="mt-12 text-center">
+            <NavLink to="/safari-collections" className="btn-primary">
+              VIEW ALL SAFARI COLLECTIONS
+            </NavLink>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

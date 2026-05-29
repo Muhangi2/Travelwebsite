@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import DestinationsMenu from './DestinationsMenu'
 import Logo from './Logo'
+import { site } from '@/config/site'
 import { useCountries } from '@/sanity/destinations'
 
 type NavLinkItem = {
@@ -339,11 +340,11 @@ export default function Nav() {
             <div className="mt-8 grid gap-3 text-sm text-white/70">
               <div>
                 <p className="font-serif text-base text-white">Contact</p>
-                <a href="mailto:info@masterpolosafaris.com" className="mt-1 block transition hover:text-white">
-                  info@masterpolosafaris.com
+                <a href={`mailto:${site.email}`} className="mt-1 block transition hover:text-white">
+                  {site.email}
                 </a>
-                <a href="tel:+256769797796" className="block transition hover:text-white">
-                  +256 769 797 796
+                <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="block transition hover:text-white">
+                  {site.phone}
                 </a>
               </div>
               <NavLink
