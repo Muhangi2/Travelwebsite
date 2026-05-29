@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 const steps = [
   {
@@ -29,52 +30,50 @@ export default function HowWeCraft() {
     <section className="relative overflow-hidden bg-neutral-50 py-20 sm:py-24 md:py-28">
       <div className="container-page">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-serif text-4xl leading-[1.05] text-brand-rust sm:text-5xl md:text-6xl">
-            How we craft <span className="italic">the journey</span>
-          </h2>
+          <Reveal>
+            <h2 className="font-serif text-4xl leading-[1.05] text-brand-rust sm:text-5xl md:text-6xl">
+              How we craft <span className="italic">the journey</span>
+            </h2>
+          </Reveal>
 
-          <ol className="mt-14 space-y-12">
+          <Stagger className="mt-14 space-y-12" staggerMs={120}>
             {steps.map((step, i) => (
-              <li key={step.title} className="relative pl-10 sm:pl-14">
+              <li key={step.title} className="relative list-none pl-10 sm:pl-14">
                 <span
                   aria-hidden
-                  className="absolute left-2 top-3 h-2 w-2 rounded-full bg-brand-rust sm:left-4"
+                  className="absolute left-2 top-3 h-2 w-2 rounded-full bg-black sm:left-4"
                 />
                 {i < steps.length - 1 && (
                   <span
                     aria-hidden
-                    className="absolute left-[calc(0.5rem+3px)] top-6 bottom-[-3rem] w-px bg-brand-rust/30 sm:left-[calc(1rem+3px)]"
+                    className="absolute left-[calc(0.5rem+3px)] top-6 bottom-[-3rem] w-px bg-neutral-300 sm:left-[calc(1rem+3px)]"
                   />
                 )}
 
-                <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-brand-rust/70">
+                <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-500">
                   {step.label}
                 </p>
-                <h3 className="mt-1 font-serif text-3xl italic text-brand-rust sm:text-4xl">
+                <h3 className="mt-1 font-serif text-3xl italic text-brand-ink sm:text-4xl">
                   {step.title}
                 </h3>
                 <div className="mt-3 space-y-1">
                   {step.body.map((line, idx) => (
-                    <p key={idx} className="text-sm leading-relaxed text-brand-rust/80 sm:text-base">
+                    <p key={idx} className="text-sm leading-relaxed text-neutral-600 sm:text-base">
                       {line}
                     </p>
                   ))}
                 </div>
               </li>
             ))}
-          </ol>
+          </Stagger>
 
-          <div className="mt-14">
-            <NavLink
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-brand-rust/60 px-8 py-3 text-xs font-medium tracking-[0.22em] text-brand-rust transition hover:bg-brand-rust hover:text-white"
-            >
-              START DREAMING
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </NavLink>
-          </div>
+          <Reveal delay={200}>
+            <div className="mt-14">
+              <NavLink to="/contact" className="btn-secondary">
+                START DREAMING
+              </NavLink>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

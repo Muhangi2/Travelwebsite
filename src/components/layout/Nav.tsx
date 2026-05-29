@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import DestinationsMenu from './DestinationsMenu'
-import { countries as countriesData } from '@/data/destinations'
+import Logo from './Logo'
+import { site } from '@/config/site'
+import { useCountries } from '@/sanity/destinations'
 
 type NavLinkItem = {
   to: string
@@ -28,29 +30,21 @@ const links: NavLinkItem[] = [
   { to: '/contact', label: 'Contact Us' },
 ]
 
-const mobileDestinations = Object.values(countriesData).map((c) => ({
-  slug: c.slug,
-  name: c.name,
-}))
-
 const HOVER_CLOSE_DELAY = 160
 
 export default function Nav() {
+  const { list: countryList } = useCountries()
+  const mobileDestinations = countryList.map((c) => ({
+    slug: c.slug,
+    name: c.name,
+  }))
   const [destOpen, setDestOpen] = useState(false)
   const [aboutOpen, setAboutOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
   const location = useLocation()
   const destTimer = useRef<number | null>(null)
   const aboutTimer = useRef<number | null>(null)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
@@ -95,23 +89,16 @@ export default function Nav() {
   }
 
   const navItemClass = (active: boolean, open: boolean) =>
-    `inline-flex items-center gap-1 text-[11px] font-medium tracking-[0.2em] text-white/90 transition hover:text-white ${
-      active || open ? 'border-b-2 border-brand-gold pb-1' : ''
+    `inline-flex items-center gap-1 text-[11px] font-medium tracking-[0.2em] text-white transition hover:text-white/70 ${
+      active || open ? 'border-b-2 border-white pb-1' : ''
     }`
 
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-300 ${
-          scrolled ? 'bg-brand-ink/85 backdrop-blur-md shadow-lg' : 'bg-transparent'
-        }`}
-      >
-        <div className="container-page flex items-center justify-between py-4 sm:py-5">
-          <NavLink to="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2">
-            <span className="font-serif text-2xl font-semibold text-white sm:text-3xl">
-              <span className="text-brand-gold">Master</span>
-              <span className="text-white">Polo</span>
-            </span>
+      <header className="fixed top-0 left-0 right-0 z-40 bg-black shadow-md">
+        <div className="container-page flex min-h-[5.25rem] items-center justify-between py-5 sm:min-h-[5.75rem] sm:py-6 md:min-h-[6.25rem] md:py-7">
+          <NavLink to="/" onClick={() => setMobileOpen(false)} className="flex shrink-0 items-center">
+            <Logo />
           </NavLink>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -179,7 +166,7 @@ export default function Nav() {
                       </svg>
                     </NavLink>
                     {aboutOpen && (
-                      <div className="absolute left-1/2 top-full z-40 mt-2 w-60 -translate-x-1/2 overflow-hidden rounded-md bg-white shadow-2xl ring-1 ring-black/5">
+                      <div className="absolute left-1/2 top-full z-40 mt-2 w-60 -translate-x-1/2 overflow-hidden rounded-md bg-black shadow-2xl ring-1 ring-white/10">
                         <ul className="py-2">
                           {l.subLinks.map((s) => (
                             <li key={s.to}>
@@ -190,8 +177,8 @@ export default function Nav() {
                                 className={({ isActive }) =>
                                   `block px-4 py-2.5 text-sm transition ${
                                     isActive
-                                      ? 'bg-brand-green/10 font-medium text-brand-green'
-                                      : 'text-neutral-800 hover:bg-neutral-100'
+                                      ? 'bg-white/10 font-medium text-white'
+                                      : 'text-white/75 hover:bg-white/5 hover:text-white'
                                   }`
                                 }
                               >
@@ -222,7 +209,7 @@ export default function Nav() {
           <div className="flex items-center gap-2 sm:gap-3">
             <NavLink
               to="/contact"
-              className="hidden rounded-full border border-white/40 bg-white/8 px-4 py-2 text-[10px] font-medium tracking-[0.2em] text-white backdrop-blur transition hover:bg-white/15 sm:inline-flex sm:px-5 sm:text-xs"
+              className="hidden rounded-full border border-white px-4 py-2 text-[10px] font-medium tracking-[0.2em] text-black bg-white transition hover:bg-white/90 sm:inline-flex sm:px-5 sm:text-xs"
             >
               INQUIRE NOW
             </NavLink>
@@ -257,12 +244,12 @@ export default function Nav() {
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`absolute right-0 top-0 h-full w-[88%] max-w-sm overflow-y-auto bg-brand-forest-dark text-white shadow-2xl transition-transform duration-300 ${
+          className={`absolute right-0 top-0 h-full w-[88%] max-w-sm overflow-y-auto bg-black text-white shadow-2xl transition-transform duration-300 ${
             mobileOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="flex flex-col px-6 pb-10 pt-24">
-            <p className="eyebrow text-brand-gold mb-2">Menu</p>
+          <div className="flex flex-col px-6 pb-10 pt-32">
+            <p className="eyebrow mb-2 text-white/50">Menu</p>
             <nav className="flex flex-col">
               {links.map((l) => {
                 const subs = l.hasFlyout
@@ -282,8 +269,8 @@ export default function Nav() {
                           end={l.to === '/'}
                           onClick={() => setMobileOpen(false)}
                           className={({ isActive }) =>
-                            `flex-1 py-4 font-serif text-xl transition hover:text-brand-gold ${
-                              isActive ? 'text-brand-gold' : 'text-white'
+                            `flex-1 py-4 font-serif text-xl transition hover:text-white/70 ${
+                              isActive ? 'text-white' : 'text-white/80'
                             }`
                           }
                         >
@@ -317,8 +304,8 @@ export default function Nav() {
                                 to={s.to}
                                 onClick={() => setMobileOpen(false)}
                                 className={({ isActive }) =>
-                                  `block py-2 text-sm transition hover:text-brand-gold ${
-                                    isActive ? 'text-brand-gold' : 'text-white/80'
+                                  `block py-2 text-sm transition hover:text-white ${
+                                    isActive ? 'text-white' : 'text-white/70'
                                   }`
                                 }
                               >
@@ -339,8 +326,8 @@ export default function Nav() {
                     end={l.to === '/'}
                     onClick={() => setMobileOpen(false)}
                     className={({ isActive }) =>
-                      `border-b border-white/10 py-4 font-serif text-xl transition hover:text-brand-gold ${
-                        isActive ? 'text-brand-gold' : 'text-white'
+                      `border-b border-white/10 py-4 font-serif text-xl transition hover:text-white/70 ${
+                        isActive ? 'text-white' : 'text-white/80'
                       }`
                     }
                   >
@@ -353,11 +340,11 @@ export default function Nav() {
             <div className="mt-8 grid gap-3 text-sm text-white/70">
               <div>
                 <p className="font-serif text-base text-white">Contact</p>
-                <a href="mailto:info@masterpolosafaris.com" className="mt-1 block transition hover:text-white">
-                  info@masterpolosafaris.com
+                <a href={`mailto:${site.email}`} className="mt-1 block transition hover:text-white">
+                  {site.email}
                 </a>
-                <a href="tel:+256769797796" className="block transition hover:text-white">
-                  +256 769 797 796
+                <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="block transition hover:text-white">
+                  {site.phone}
                 </a>
               </div>
               <NavLink

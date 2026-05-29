@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal from '@/components/ui/Reveal'
 
 const services = [
   {
@@ -41,13 +42,16 @@ export default function DmcServices() {
   return (
     <section className="bg-white pb-20 pt-12">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="font-serif text-4xl">Our DMC Services</h2>
+        <Reveal>
+          <h2 className="font-serif text-4xl">Our DMC Services</h2>
+        </Reveal>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className="cards-scroll-3 mt-8 gap-6">
           {visible.map((s, idx) => {
             const num = String(((start + idx) % max) + 1).padStart(2, '0')
             return (
-              <article key={`${num}-${s.title}`} className="relative aspect-[4/3] overflow-hidden rounded-md">
+              <Reveal key={`${num}-${s.title}`} delay={idx * 80}>
+              <article className="card-lift img-zoom relative aspect-[4/3] overflow-hidden rounded-md">
                 <img src={s.image} alt={s.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5 text-white">
@@ -55,6 +59,7 @@ export default function DmcServices() {
                   <h3 className="mt-1 font-serif text-lg">{s.title}</h3>
                 </div>
               </article>
+              </Reveal>
             )
           })}
         </div>
@@ -65,7 +70,7 @@ export default function DmcServices() {
           </p>
           <div className="mx-6 h-px flex-1 bg-neutral-200">
             <div
-              className="h-full bg-brand-green transition-all"
+              className="h-full bg-black transition-all"
               style={{ width: `${((start + 1) / max) * 100}%` }}
             />
           </div>
@@ -73,7 +78,7 @@ export default function DmcServices() {
             <button
               aria-label="Previous"
               onClick={() => setStart((s) => (s - 1 + max) % max)}
-              className="rounded-full border border-neutral-300 p-3 hover:bg-neutral-50"
+              className="btn-icon"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M15 18l-6-6 6-6" />
@@ -82,7 +87,7 @@ export default function DmcServices() {
             <button
               aria-label="Next"
               onClick={() => setStart((s) => (s + 1) % max)}
-              className="rounded-full border border-neutral-300 p-3 hover:bg-neutral-50"
+              className="btn-icon"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M9 6l6 6-6 6" />

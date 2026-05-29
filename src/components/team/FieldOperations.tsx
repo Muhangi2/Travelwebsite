@@ -49,7 +49,7 @@ export default function FieldOperations() {
           standards, and obsessed with making every day in the field unforgettable.
         </p>
 
-        <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-3">
+        <div className="cards-scroll-3 mt-10 gap-6 sm:mt-12">
           {visible.map((m) => (
             <TeamMemberCard key={m.name} member={m} />
           ))}
@@ -62,7 +62,7 @@ export default function FieldOperations() {
             </p>
             <div className="mx-4 h-px flex-1 bg-neutral-200 sm:mx-6">
               <div
-                className="h-full bg-brand-green transition-all"
+                className="h-full bg-black transition-all"
                 style={{ width: `${((page + 1) / totalPages) * 100}%` }}
               />
             </div>
@@ -71,7 +71,7 @@ export default function FieldOperations() {
                 aria-label="Previous"
                 onClick={() => setPage((p) => Math.max(0, p - 1))}
                 disabled={page === 0}
-                className="rounded-full border border-neutral-300 p-3 text-brand-ink transition hover:border-brand-green hover:bg-brand-cream disabled:opacity-40"
+                className="btn-icon"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M15 18l-6-6 6-6" />
@@ -81,7 +81,7 @@ export default function FieldOperations() {
                 aria-label="Next"
                 onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
                 disabled={page === totalPages - 1}
-                className="rounded-full border border-neutral-300 p-3 text-brand-ink transition hover:border-brand-green hover:bg-brand-cream disabled:opacity-40"
+                className="btn-icon"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 6l6 6-6 6" />

@@ -1,3 +1,5 @@
+import Reveal, { Stagger } from '@/components/ui/Reveal'
+
 type Experience = {
   title: string
   body: string
@@ -24,43 +26,25 @@ const experiences: Experience[] = [
 
 export default function UniqueExperiences() {
   return (
-    <section className="bg-brand-forest py-20 text-white">
+    <section className="bg-black py-20 text-white">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-center font-serif text-4xl">Unique &amp; Exclusive Experiences</h2>
+        <Reveal>
+          <h2 className="text-center font-serif text-4xl">Unique &amp; Exclusive Experiences</h2>
+        </Reveal>
 
-        <div className="relative mt-12">
-          <button
-            aria-label="Previous"
-            className="absolute -left-4 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/30 p-3 text-white hover:bg-white/10 lg:block"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {experiences.map((e) => (
-              <article key={e.title} className="overflow-hidden rounded-md bg-white text-neutral-800 shadow-md">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={e.image} alt={e.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-serif text-lg">{e.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-neutral-600">{e.body}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <button
-            aria-label="Next"
-            className="absolute -right-4 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/30 p-3 text-white hover:bg-white/10 lg:block"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </button>
-        </div>
+        <Stagger className="cards-scroll-3 relative mt-12 gap-6" staggerMs={100}>
+          {experiences.map((e) => (
+            <article key={e.title} className="card-lift overflow-hidden rounded-md bg-white text-neutral-800 shadow-md">
+              <div className="img-zoom aspect-[4/3] overflow-hidden">
+                <img src={e.image} alt={e.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+              </div>
+              <div className="p-5">
+                <h3 className="font-serif text-lg">{e.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-neutral-600">{e.body}</p>
+              </div>
+            </article>
+          ))}
+        </Stagger>
       </div>
     </section>
   )

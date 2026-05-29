@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { countries as countriesData } from '@/data/destinations'
-
-const countries = Object.values(countriesData).map((c) => ({
-  slug: c.slug,
-  name: c.name,
-  parks: c.parks.map((p) => ({ slug: p.slug, name: p.name })),
-  images: [c.heroImage, c.parkSummaryImage, ...c.parks.slice(0, 2).map((p) => p.image)],
-}))
+import { useCountries } from '@/sanity/destinations'
 
 export default function DestinationsMenu({ onClose }: { onClose: () => void }) {
+  const { list: countryList } = useCountries()
+  const countries = countryList.map((c) => ({
+    slug: c.slug,
+    name: c.name,
+    parks: c.parks.map((p) => ({ slug: p.slug, name: p.name })),
+    images: [c.heroImage, c.parkSummaryImage, ...c.parks.slice(0, 2).map((p) => p.image)],
+  }))
   const [active, setActive] = useState(countries[0]?.slug ?? '')
   const [imageIndex, setImageIndex] = useState(0)
   const country = countries.find((c) => c.slug === active) ?? countries[0]

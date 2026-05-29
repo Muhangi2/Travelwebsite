@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Picture from '@/components/Picture'
+import Reveal from '@/components/ui/Reveal'
 
 const tabs = [
   {
@@ -36,65 +37,71 @@ export default function Difference() {
     <section className="bg-white py-16 sm:py-20 md:py-28">
       <div className="container-page">
         <div className="grid items-end gap-6 md:grid-cols-2">
-          <div>
+          <Reveal variant="left">
             <p className="eyebrow">Why Still Wild Safaris</p>
             <h2 className="mt-3">Not just another safari. A better way to go wild.</h2>
             <p className="mt-4 font-serif text-base italic text-brand-charcoal sm:text-lg">
               Small. Thoughtful. Wild by nature.
             </p>
-          </div>
-          <p className="text-sm leading-relaxed text-brand-muted sm:text-base">
-            At Still Wild Safaris, we believe that extraordinary adventure and profound conservation are not mutually
-            exclusive; they are intrinsically linked. We craft journeys that immerse you in the breathtaking beauty of
-            Africa while actively contributing to its preservation — a promise to the wild and its communities.
-          </p>
+          </Reveal>
+          <Reveal variant="right" delay={100}>
+            <p className="text-sm leading-relaxed text-brand-muted sm:text-base">
+              At Still Wild Safaris, we believe that extraordinary adventure and profound conservation are not mutually
+              exclusive; they are intrinsically linked. We craft journeys that immerse you in the breathtaking beauty of
+              Africa while actively contributing to its preservation — a promise to the wild and its communities.
+            </p>
+          </Reveal>
         </div>
 
-        <div
-          role="tablist"
-          aria-label="What sets us apart"
-          className="mt-10 flex items-center gap-4 overflow-x-auto border-b border-brand-ink/10 pb-px sm:gap-8 md:mt-14"
-        >
-          {tabs.map((tab, idx) => {
-            const isActive = idx === active
-            return (
-              <button
-                key={tab.label}
-                role="tab"
-                aria-selected={isActive}
-                onClick={() => setActive(idx)}
-                className={`relative whitespace-nowrap px-1 pb-3 text-[11px] font-medium uppercase tracking-[0.2em] transition sm:text-xs ${
-                  isActive ? 'text-brand-ink' : 'text-brand-muted hover:text-brand-ink'
-                }`}
-              >
-                {tab.label}
-                <span
-                  aria-hidden
-                  className={`absolute inset-x-0 -bottom-px h-0.5 transition ${
-                    isActive ? 'bg-brand-gold' : 'bg-transparent'
+        <Reveal delay={150}>
+          <div
+            role="tablist"
+            aria-label="What sets us apart"
+            className="mt-10 flex items-center gap-4 overflow-x-auto border-b border-brand-ink/10 pb-px sm:gap-8 md:mt-14"
+          >
+            {tabs.map((tab, idx) => {
+              const isActive = idx === active
+              return (
+                <button
+                  key={tab.label}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  onClick={() => setActive(idx)}
+                  className={`relative whitespace-nowrap px-1 pb-3 text-[11px] font-medium uppercase tracking-[0.2em] transition sm:text-xs ${
+                    isActive ? 'text-brand-ink' : 'text-brand-muted hover:text-brand-ink'
                   }`}
-                />
-              </button>
-            )
-          })}
-        </div>
+                >
+                  {tab.label}
+                  <span
+                    aria-hidden
+                    className={`absolute inset-x-0 -bottom-px h-0.5 transition ${
+                      isActive ? 'bg-black' : 'bg-transparent'
+                    }`}
+                  />
+                </button>
+              )
+            })}
+          </div>
+        </Reveal>
 
         <div className="mt-10 grid items-center gap-10 md:mt-12 md:grid-cols-2 md:gap-14 lg:gap-16">
-          <div className="overflow-hidden rounded-xl shadow-lg">
-            <Picture
-              key={current.image}
-              src={current.image}
-              alt={current.title}
-              loading="lazy"
-              className="aspect-[4/3] w-full object-cover"
-            />
-          </div>
-          <div>
+          <Reveal variant="left" key={current.image}>
+            <div className="img-zoom overflow-hidden rounded-xl shadow-lg">
+              <Picture
+                src={current.image}
+                alt={current.title}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
+          </Reveal>
+          <Reveal variant="right" delay={100} key={current.title}>
             <h3 className="font-serif text-3xl leading-tight text-brand-ink sm:text-4xl md:text-5xl">
               {current.title}
             </h3>
             <p className="mt-6 text-sm leading-relaxed text-brand-muted sm:text-base">{current.body}</p>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

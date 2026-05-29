@@ -1,8 +1,12 @@
+import { NavLink } from 'react-router-dom'
+import Reveal from '@/components/ui/Reveal'
+
 export default function BookingForm() {
   return (
-    <section className="bg-white pb-24">
+    <section className="section-alt pb-24 pt-8">
       <div className="mx-auto max-w-3xl px-6">
-        <div className="rounded-lg bg-neutral-50 p-8 shadow-sm md:p-12">
+        <Reveal>
+        <div className="rounded-lg bg-white p-8 shadow-sm ring-1 ring-neutral-100 md:p-12">
           <div className="text-center">
             <h2 className="font-serif text-3xl">Ready to Book Your Dream Safari?</h2>
             <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-600">
@@ -27,21 +31,25 @@ export default function BookingForm() {
               <input type="checkbox" required className="mt-0.5 accent-brand-green" />
               <span>
                 * I agree with{' '}
-                <a href="#" className="text-brand-green underline">Terms of Service</a> and{' '}
-                <a href="#" className="text-brand-green underline">Privacy Statement</a>.
+                <NavLink to="/privacy-policy" className="underline hover:text-black">
+                  Terms of Service
+                </NavLink>{' '}
+                and{' '}
+                <NavLink to="/privacy-policy" className="underline hover:text-black">
+                  Privacy Statement
+                </NavLink>
+                .
               </span>
             </label>
 
             <div className="text-center pt-2">
-              <button
-                type="submit"
-                className="rounded-full bg-brand-green px-8 py-3 text-[10px] tracking-[0.2em] text-white hover:bg-brand-green-dark"
-              >
+              <button type="submit" className="btn-primary">
                 SUBMIT ENQUIRY
               </button>
             </div>
           </form>
         </div>
+        </Reveal>
       </div>
     </section>
   )

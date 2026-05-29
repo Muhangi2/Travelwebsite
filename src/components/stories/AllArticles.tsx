@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { categories } from '@/data/articles'
 import { useStories } from '@/sanity/stories'
+import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 const PER_PAGE = 6
 
@@ -21,48 +22,53 @@ export default function AllArticles() {
   return (
     <section id="articles" className="bg-white pb-20">
       <div className="container-page">
-        <div className="flex flex-wrap justify-center gap-3">
-          {categories.map((c) => {
-            const isActive = c === active
-            return (
-              <button
-                key={c}
-                onClick={() => {
-                  setActive(c)
-                  setPage(0)
-                }}
-                className={`rounded-full border px-5 py-2 text-xs ${
-                  isActive
-                    ? 'border-brand-green bg-brand-green text-white'
-                    : 'border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50'
-                }`}
-              >
-                {c}
-              </button>
-            )
-          })}
-        </div>
+        <Reveal>
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((c) => {
+              const isActive = c === active
+              return (
+                <button
+                  key={c}
+                  type="button"
+                  onClick={() => {
+                    setActive(c)
+                    setPage(0)
+                  }}
+                  className={`rounded-full border px-5 py-2 text-xs transition ${
+                    isActive
+                      ? 'border-black bg-black text-white'
+                      : 'border-neutral-300 bg-white text-neutral-700 hover:border-black hover:text-black'
+                  }`}
+                >
+                  {c}
+                </button>
+              )
+            })}
+          </div>
+        </Reveal>
 
-        <h2 className="mt-12 font-serif text-4xl">All Articles</h2>
+        <Reveal delay={80}>
+          <h2 className="mt-12 font-serif text-4xl">All Articles</h2>
+        </Reveal>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <Stagger className="cards-scroll-3 mt-8 gap-6" staggerMs={80}>
           {visible.map((a) => (
-            <article key={a.slug} className="overflow-hidden rounded-md shadow-sm ring-1 ring-neutral-100">
-              <div className="relative aspect-[4/3] overflow-hidden">
+            <article key={a.slug} className="card-lift overflow-hidden rounded-md shadow-sm ring-1 ring-neutral-100">
+              <div className="img-zoom relative aspect-[4/3] overflow-hidden">
                 <img src={a.image} alt={a.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
-                <span className="absolute right-3 top-3 rounded-full bg-brand-green/90 px-3 py-1 text-[10px] tracking-wide text-white">
+                <span className="absolute right-3 top-3 rounded-full bg-black/90 px-3 py-1 text-[10px] tracking-wide text-white">
                   {a.tags.join(', ')}
                 </span>
               </div>
               <div className="bg-white p-5">
-                <p className="text-[10px] tracking-wide text-brand-green">
+                <p className="text-[10px] tracking-wide text-neutral-500">
                   Author: {a.author} | {a.date}
                 </p>
                 <h3 className="mt-2 font-serif text-base">{a.title}</h3>
                 <p className="mt-2 text-xs leading-relaxed text-neutral-600">{a.excerpt}</p>
                 <Link
                   to={`/stories/${a.slug}`}
-                  className="mt-3 inline-flex items-center gap-1 text-[10px] tracking-[0.2em] text-brand-green hover:underline"
+                  className="mt-3 inline-flex items-center gap-1 text-[10px] tracking-[0.2em] text-black hover:underline"
                 >
                   READ STORY
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -72,44 +78,49 @@ export default function AllArticles() {
               </div>
             </article>
           ))}
-        </div>
+        </Stagger>
 
         {totalPages > 1 && (
-          <div className="mt-12 flex items-center justify-center gap-2">
-            <button
-              aria-label="Previous"
-              onClick={() => setPage((p) => Math.max(0, p - 1))}
-              disabled={page === 0}
-              className="rounded-full border border-neutral-300 p-2.5 hover:bg-neutral-50 disabled:opacity-40"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-            </button>
-            {Array.from({ length: totalPages }).map((_, i) => (
+          <Reveal>
+            <div className="mt-12 flex items-center justify-center gap-2">
               <button
-                key={i}
-                onClick={() => setPage(i)}
-                className={`flex h-9 w-9 items-center justify-center rounded-full text-xs ${
-                  i === page
-                    ? 'bg-neutral-900 text-white'
-                    : 'border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50'
-                }`}
+                aria-label="Previous"
+                type="button"
+                onClick={() => setPage((p) => Math.max(0, p - 1))}
+                disabled={page === 0}
+                className="btn-icon p-2.5"
               >
-                {i + 1}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
               </button>
-            ))}
-            <button
-              aria-label="Next"
-              onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
-              disabled={page === totalPages - 1}
-              className="rounded-full bg-brand-green p-2.5 text-white hover:bg-brand-green-dark disabled:opacity-40"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M9 6l6 6-6 6" />
-              </svg>
-            </button>
-          </div>
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setPage(i)}
+                  className={`flex h-9 w-9 items-center justify-center rounded-full text-xs transition ${
+                    i === page
+                      ? 'bg-neutral-900 text-white'
+                      : 'border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50'
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button
+                aria-label="Next"
+                type="button"
+                onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+                disabled={page === totalPages - 1}
+                className="rounded-full bg-black p-2.5 text-white hover:bg-neutral-800 disabled:opacity-40"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+          </Reveal>
         )}
       </div>
     </section>

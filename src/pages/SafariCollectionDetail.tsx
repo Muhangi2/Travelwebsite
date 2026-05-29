@@ -1,5 +1,5 @@
 import { useParams, Navigate } from 'react-router-dom'
-import { journeys } from '@/data/journeys'
+import { useTourPackage } from '@/sanity/tourPackages'
 import DetailHero from '@/components/collection-detail/DetailHero'
 import JourneyOverview from '@/components/collection-detail/JourneyOverview'
 import SafariJourney from '@/components/collection-detail/SafariJourney'
@@ -11,7 +11,7 @@ import BookingForm from '@/components/collection-detail/BookingForm'
 
 export default function SafariCollectionDetail() {
   const { slug } = useParams<{ slug: string }>()
-  const journey = slug ? journeys[slug] : undefined
+  const { journey } = useTourPackage(slug)
 
   if (!journey) return <Navigate to="/safari-collections" replace />
 

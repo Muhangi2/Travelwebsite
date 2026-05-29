@@ -53,7 +53,7 @@ export default function TripBuilder() {
           })}
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="cards-scroll-3 mt-12 gap-6">
           {adventures.map((a) => {
             const isSelected = selected.has(a.id)
             return (
