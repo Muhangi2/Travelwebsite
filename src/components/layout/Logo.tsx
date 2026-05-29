@@ -11,7 +11,7 @@ export default function Logo({ variant = 'nav', className = '' }: LogoProps) {
       <img
         src={LOGO}
         alt="Still Wild Safaris"
-        className={`mx-auto block h-auto w-48 sm:w-56 ${className}`}
+        className={`mx-auto block h-auto w-56 sm:w-64 md:w-72 ${className}`}
       />
     )
   }
@@ -20,7 +20,7 @@ export default function Logo({ variant = 'nav', className = '' }: LogoProps) {
     <img
       src={LOGO}
       alt="Still Wild Safaris"
-      className={`block h-14 w-auto sm:h-16 md:h-[4.75rem] ${className}`}
+      className={`block h-36 w-auto sm:h-40 md:h-44 lg:h-48 ${className}`}
     />
   )
 }

@@ -42,6 +42,7 @@ export default function Nav() {
   const [aboutOpen, setAboutOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
+  const [navVisible, setNavVisible] = useState(true)
   const location = useLocation()
   const destTimer = useRef<number | null>(null)
   const aboutTimer = useRef<number | null>(null)
@@ -73,6 +74,17 @@ export default function Nav() {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
+  // Hide navbar after hero section (100vh), show on scroll up
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = window.scrollY
+      // Hide navbar when scrolled past 1000px (roughly hero section)
+      setNavVisible(scrollPos < 1000)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const openWithGrace = (
     setter: (v: boolean) => void,
     timerRef: React.MutableRefObject<number | null>,
@@ -89,14 +101,16 @@ export default function Nav() {
   }
 
   const navItemClass = (active: boolean, open: boolean) =>
-    `inline-flex items-center gap-1 text-[11px] font-medium tracking-[0.2em] text-white transition hover:text-white/70 ${
+    `inline-flex items-center gap-1 text-[11px] font-bold tracking-[0.2em] text-white transition hover:text-white/70 ${
       active || open ? 'border-b-2 border-white pb-1' : ''
     }`
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 bg-black shadow-md">
-        <div className="container-page flex min-h-[5.25rem] items-center justify-between py-5 sm:min-h-[5.75rem] sm:py-6 md:min-h-[6.25rem] md:py-7">
+      <header className={`fixed top-0 left-0 right-0 z-40 bg-transparent transition-all duration-500 ${
+        navVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+      }`}>
+        <div className="container-page flex h-[8rem] items-center justify-between sm:h-[9rem] md:h-[10rem] lg:h-[11rem]">
           <NavLink to="/" onClick={() => setMobileOpen(false)} className="flex shrink-0 items-center">
             <Logo />
           </NavLink>
@@ -209,7 +223,7 @@ export default function Nav() {
           <div className="flex items-center gap-2 sm:gap-3">
             <NavLink
               to="/contact"
-              className="hidden rounded-full border border-white px-4 py-2 text-[10px] font-medium tracking-[0.2em] text-black bg-white transition hover:bg-white/90 sm:inline-flex sm:px-5 sm:text-xs"
+              className="hidden rounded-full border border-black px-4 py-2 text-[10px] font-medium tracking-[0.2em] text-black bg-white transition hover:bg-white/90 sm:inline-flex sm:px-5 sm:text-xs"
             >
               INQUIRE NOW
             </NavLink>
