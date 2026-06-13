@@ -183,7 +183,7 @@ const experiences: Experience[] = [
 export default function StoriesCarousel() {
   const [start, setStart] = useState(0)
   const [phase, setPhase] = useState<Phase>('rest')
-  const [paused, setPaused] = useState(false)
+  const [paused] = useState(false)
   const [isDesktop, setIsDesktop] = useState(true)
   const [inView, setInView] = useState(true)
   const touchStart = useRef<{ x: number; y: number } | null>(null)
