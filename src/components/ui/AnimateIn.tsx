@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode, type CSSProperties } from 'react'
+import { useEffect, useRef, useState, type ReactNode, type CSSProperties, type JSX } from 'react'
 
 type Variant = 'blur-up' | 'wipe-left' | 'slide-right' | 'count-in' | 'fade-up' | 'scale-up'
 
