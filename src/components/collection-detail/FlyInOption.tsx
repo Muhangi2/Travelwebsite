@@ -3,7 +3,7 @@ import Reveal from '@/components/ui/Reveal'
 
 export default function FlyInOption() {
   return (
-    <section className="section-alt py-20">
+    <section className="section-alt py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">
@@ -13,9 +13,9 @@ export default function FlyInOption() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid items-center gap-10 md:grid-cols-2">
+        <div className="mt-8 sm:mt-12 grid items-center gap-8 sm:gap-10 md:grid-cols-2">
           <Reveal variant="left">
-            <div className="img-zoom overflow-hidden rounded-md shadow-md">
+            <div className="img-zoom min-h-[220px] overflow-hidden rounded-md shadow-md">
               <Picture
                 src="/images/parks/uganda/murchison-falls/dsc-6280.jpg"
                 alt="Safari vehicle"
@@ -27,7 +27,7 @@ export default function FlyInOption() {
           </Reveal>
           <Reveal variant="right" delay={100}>
             <div className="section-rule" />
-            <h3 className="mt-4 font-serif text-2xl">For travelers seeking</h3>
+            <h3 className="mt-4 font-serif text-xl sm:text-2xl">For travelers seeking</h3>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">
               To minimize driving time, replace the long Bwindi → Entebbe drive with a scenic 1.5-hour flight from
               Kihihi/Kisoro. Additional flights can be added between western parks to further reduce driving time and

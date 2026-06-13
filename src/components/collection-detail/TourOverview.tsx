@@ -9,7 +9,7 @@ export default function TourOverview({ overview, subtitle, country, daysCount }:
   return (
     <section className="bg-white py-16 sm:py-20 border-b border-neutral-100">
       <div className="container-page">
-        <div className="grid gap-12 lg:grid-cols-[1fr_320px] xl:gap-20">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1fr_320px] xl:gap-20">
 
           {/* Left — text */}
           <div>
