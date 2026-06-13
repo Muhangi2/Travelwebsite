@@ -418,23 +418,6 @@ export default function StoriesCarousel() {
           </div>
 
           <div className="mt-4 flex items-center gap-3 sm:mt-5">
-            <button
-              type="button"
-              onClick={() => setPaused((p) => !p)}
-              aria-label={paused ? 'Play' : 'Pause'}
-              className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-white text-brand-ink shadow-md transition hover:bg-white/90 sm:h-11 sm:w-11"
-            >
-              {paused ? (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              ) : (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                  <rect x="6" y="5" width="4" height="14" rx="1" />
-                  <rect x="14" y="5" width="4" height="14" rx="1" />
-                </svg>
-              )}
-            </button>
             <div className="relative h-1 flex-1 overflow-hidden rounded-full bg-white/15">
               <div
                 ref={progressRef}
@@ -546,23 +529,6 @@ export default function StoriesCarousel() {
         </div>
 
         <div className="mt-8 flex items-center gap-4 sm:mt-10">
-          <button
-            type="button"
-            onClick={() => setPaused((p) => !p)}
-            aria-label={paused ? 'Play' : 'Pause'}
-            className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-white text-brand-ink shadow-md transition hover:bg-white/90"
-          >
-            {paused ? (
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            ) : (
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="6" y="5" width="4" height="14" rx="1" />
-                <rect x="14" y="5" width="4" height="14" rx="1" />
-              </svg>
-            )}
-          </button>
           <div className="relative h-1 flex-1 overflow-hidden rounded-full bg-white/15">
             <div
               ref={progressRef}

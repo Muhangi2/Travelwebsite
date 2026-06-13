@@ -6,7 +6,7 @@ export default function CancellationPolicy() {
     <section className="section-alt py-16">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-3xl">Cancellation Policy</h2>
+          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Cancellation Policy</h2>
         </Reveal>
 
         <div className="mt-10 grid items-start gap-10 md:grid-cols-2">

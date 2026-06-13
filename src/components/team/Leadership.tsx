@@ -23,7 +23,7 @@ export default function Leadership() {
     <section className="bg-white pb-16">
       <div className="mx-auto max-w-4xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-3xl">The Leadership</h2>
+          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">The Leadership</h2>
         </Reveal>
         <Stagger className="cards-scroll-2 mt-10 gap-6">
           {leadership.map((m) => (
