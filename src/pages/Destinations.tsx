@@ -5,9 +5,9 @@ import Reveal from '@/components/ui/Reveal'
 export default function Destinations() {
   const { list } = useCountries()
   return (
-    <section className="mx-auto max-w-6xl px-6 pt-32 pb-24">
+    <section className="mx-auto max-w-6xl px-4 pt-28 pb-20 sm:px-6 sm:pt-32 sm:pb-24">
       <Reveal>
-        <h1 className="text-center font-serif text-5xl">Destinations</h1>
+        <h1 className="text-center font-serif text-2xl sm:text-4xl lg:text-5xl">Destinations</h1>
         <p className="mx-auto mt-3 max-w-xl text-center text-sm text-neutral-600">
           Choose where to begin. Each destination opens a different chapter of East Africa.
         </p>

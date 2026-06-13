@@ -121,7 +121,7 @@ export default function HandpickedLodges({ days }: Props) {
                 <button
                   type="button"
                   onClick={() => setTier('midRange')}
-                  className={`rounded-full px-6 py-2 text-[10px] tracking-[0.2em] transition ${
+                  className={`rounded-full px-4 sm:px-6 py-1.5 sm:py-2 text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] transition ${
                     tier === 'midRange' ? 'bg-black text-white' : 'text-neutral-700 hover:text-neutral-900'
                   }`}
                 >
@@ -130,7 +130,7 @@ export default function HandpickedLodges({ days }: Props) {
                 <button
                   type="button"
                   onClick={() => setTier('luxury')}
-                  className={`rounded-full px-6 py-2 text-[10px] tracking-[0.2em] transition ${
+                  className={`rounded-full px-4 sm:px-6 py-1.5 sm:py-2 text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] transition ${
                     tier === 'luxury' ? 'bg-black text-white' : 'text-neutral-700 hover:text-neutral-900'
                   }`}
                 >
