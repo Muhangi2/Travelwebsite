@@ -3,8 +3,8 @@ import Reveal from '@/components/ui/Reveal'
 
 export default function WhyChoose() {
   return (
-    <section className="bg-white py-20">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
+    <section className="bg-white py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 sm:gap-12 px-6 md:grid-cols-2">
         <Reveal variant="left">
           <div className="section-rule" />
           <h2 className="mt-4 font-serif text-xl sm:text-3xl lg:text-4xl">
@@ -20,7 +20,7 @@ export default function WhyChoose() {
           </p>
         </Reveal>
         <Reveal variant="right" delay={100}>
-          <div className="img-zoom overflow-hidden rounded-md shadow-md">
+          <div className="img-zoom min-h-[240px] overflow-hidden rounded-md shadow-md">
             <Picture
               src="/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.jpg"
               alt="Luxury safari lodge bedroom"

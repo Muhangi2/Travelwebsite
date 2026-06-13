@@ -6,9 +6,9 @@ export default function BookingForm() {
     <section className="section-alt pb-24 pt-8">
       <div className="mx-auto max-w-3xl px-6">
         <Reveal>
-        <div className="rounded-lg bg-white p-8 shadow-sm ring-1 ring-neutral-100 md:p-12">
+        <div className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-neutral-100 sm:p-8 md:p-12">
           <div className="text-center">
-            <h2 className="font-serif text-3xl">Ready to Book Your Dream Safari?</h2>
+            <h2 className="font-serif text-2xl sm:text-3xl">Ready to Book Your Dream Safari?</h2>
             <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-600">
               We understand that a journey of this magnitude requires personalized planning. Tell us a little about
               your travel preferences, and one of our Safari Specialists will be in touch within 24 hours to craft
