@@ -1,4 +1,5 @@
 import TeamMemberCard, { type TeamMember } from './TeamMemberCard'
+import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 const management: TeamMember[] = [
   {
@@ -19,14 +20,16 @@ const management: TeamMember[] = [
 
 export default function Management() {
   return (
-    <section className="bg-neutral-50 py-16">
+    <section className="section-alt py-16">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="text-center font-serif text-3xl text-brand-green">Management and Specialization</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <Reveal>
+          <h2 className="text-center font-serif text-3xl">Management and Specialization</h2>
+        </Reveal>
+        <Stagger className="cards-scroll-2 mt-10 gap-6">
           {management.map((m) => (
             <TeamMemberCard key={m.name} member={m} />
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   )

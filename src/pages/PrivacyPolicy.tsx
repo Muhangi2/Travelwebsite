@@ -1,4 +1,5 @@
 import Picture from '@/components/Picture'
+import { site } from '@/config/site'
 const personalInfo = [
   'Full name',
   'Email address',
@@ -76,9 +77,9 @@ export default function PrivacyPolicy() {
 
       <article className="container-page max-w-3xl py-16 md:py-20">
         <p className="text-base leading-relaxed text-brand-charcoal sm:text-lg">
-          MasterPolo Safaris (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) values your privacy. This
+          Still Wild Safaris (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) values your privacy. This
           Privacy Policy explains how we collect, use, store and protect your personal information when you visit
-          www.masterpolosafaris.com or use our services.
+          our website or use our services.
         </p>
         <p className="mt-4 leading-relaxed text-brand-charcoal">
           By using our website, you agree to the practices described in this policy.
@@ -133,7 +134,7 @@ export default function PrivacyPolicy() {
 
         <Section title="Data Retention">
           <p>
-            MasterPolo Safaris retains personal information only for as long as necessary to fulfill the purposes for
+            Still Wild Safaris retains personal information only for as long as necessary to fulfill the purposes for
             which it was collected, comply with legal obligations, resolve disputes, and enforce our agreements.
           </p>
         </Section>
@@ -141,7 +142,7 @@ export default function PrivacyPolicy() {
         <Section title="Contact Us">
           <p>
             If you have questions about this Privacy Policy or how your information is handled, please reach out to us
-            at info@masterpolosafaris.com.
+            at {site.email}.
           </p>
         </Section>
       </article>

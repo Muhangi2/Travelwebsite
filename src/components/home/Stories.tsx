@@ -1,18 +1,19 @@
 import { NavLink } from 'react-router-dom'
+import Reveal from '@/components/ui/Reveal'
 
 const posts = [
   {
     slug: 'visit-saves-uganda-mountain-gorillas',
     image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
     title: 'Tracking the Mountain Gorillas of Bwindi',
-    author: 'MasterPolo Safaris Team',
+    author: 'Still Wild Safaris Team',
     date: 'Jan 2026',
   },
   {
     slug: 'beyond-gorillas-rwanda-big-five',
     image: '/images/parks/rwanda/akagera/wilderness-magashi-7.jpg',
     title: 'Beyond the Gorillas: Discovering Rwanda’s Big Five and Hidden Gems',
-    author: 'MasterPolo Safaris Team',
+    author: 'Still Wild Safaris Team',
     date: 'Jan 2026',
     tag: 'Rwanda',
   },
@@ -20,7 +21,7 @@ const posts = [
     slug: 'safari-photography-uganda',
     image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
     title: 'Photography in the African Bush',
-    author: 'MasterPolo Safaris Team',
+    author: 'Still Wild Safaris Team',
     date: 'Jan 2026',
   },
 ]
@@ -29,22 +30,24 @@ export default function Stories() {
   return (
     <section className="bg-white py-16 sm:py-20 md:py-28">
       <div className="container-page">
-        <div className="text-center">
-          <p className="eyebrow">Journal</p>
-          <h2 className="mt-3">Stories from the Wild</h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm text-brand-muted sm:text-base">
-            Travel tales, wildlife moments and behind-the-scenes safari life from East Africa.
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center">
+            <p className="eyebrow">Journal</p>
+            <h2 className="mt-3">Stories from the Wild</h2>
+            <p className="mx-auto mt-4 max-w-xl text-sm text-brand-muted sm:text-base">
+              Travel tales, wildlife moments and behind-the-scenes safari life from East Africa.
+            </p>
+          </div>
+        </Reveal>
 
-        <div className="mt-12 grid gap-6 md:mt-14 md:grid-cols-3">
-          {posts.map((p, idx) => (
+        <div className="cards-scroll-3 mt-12 gap-6 md:mt-14">
+          {posts.map((p, i) => (
+            <Reveal key={p.slug} delay={i * 100}>
             <NavLink
               to={`/stories/${p.slug}`}
-              key={p.slug}
-              className={`group relative block overflow-hidden rounded-xl shadow-md transition hover:shadow-2xl ${idx === 1 ? 'md:scale-105' : ''}`}
+              className="card-lift group relative block overflow-hidden rounded-xl shadow-md"
             >
-              <div className="aspect-[4/5] overflow-hidden">
+              <div className="img-zoom aspect-[4/5]">
                 <img src={p.image} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
@@ -64,12 +67,17 @@ export default function Stories() {
                 </span>
               </div>
             </NavLink>
+            </Reveal>
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <NavLink to="/stories" className="btn-secondary">VIEW ALL STORIES</NavLink>
-        </div>
+        <Reveal>
+          <div className="mt-10 text-center">
+            <NavLink to="/stories" className="btn-secondary">
+              VIEW ALL STORIES
+            </NavLink>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

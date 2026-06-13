@@ -1,3 +1,5 @@
+import Reveal from '@/components/ui/Reveal'
+
 type Props = {
   title: string
   body: React.ReactNode
@@ -7,24 +9,39 @@ type Props = {
   centered?: boolean
 }
 
-export default function PolicyBlock({ title, body, image, imageOnRight = true, bg = 'bg-white', centered = false }: Props) {
+export default function PolicyBlock({
+  title,
+  body,
+  image,
+  imageOnRight = true,
+  bg = 'bg-white',
+  centered = false,
+}: Props) {
   return (
     <section className={`${bg} py-16`}>
       <div className="mx-auto max-w-5xl px-6">
         {centered ? (
-          <div className="text-center">
-            <h2 className="font-serif text-3xl">{title}</h2>
-            <div className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600">{body}</div>
-          </div>
+          <Reveal>
+            <div className="text-center">
+              <div className="section-rule mx-auto" />
+              <h2 className="mt-4 font-serif text-3xl">{title}</h2>
+              <div className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600">{body}</div>
+            </div>
+          </Reveal>
         ) : (
           <div className="grid items-center gap-10 md:grid-cols-2">
-            <div className={imageOnRight ? 'order-1' : 'order-1 md:order-2'}>
-              <h2 className="font-serif text-3xl">{title}</h2>
+            <Reveal variant={imageOnRight ? 'left' : 'right'}>
+              <div className="section-rule" />
+              <h2 className="mt-4 font-serif text-3xl">{title}</h2>
               <div className="mt-4 text-sm leading-relaxed text-neutral-600">{body}</div>
-            </div>
-            <div className={imageOnRight ? 'order-2' : 'order-2 md:order-1'}>
-              <img src={image} alt="" className="rounded-md object-cover shadow-md" loading="lazy" decoding="async" />
-            </div>
+            </Reveal>
+            <Reveal variant={imageOnRight ? 'right' : 'left'} delay={100}>
+              {image ? (
+                <div className="img-zoom overflow-hidden rounded-md shadow-md">
+                  <img src={image} alt="" className="rounded-md object-cover" loading="lazy" decoding="async" />
+                </div>
+              ) : null}
+            </Reveal>
           </div>
         )}
       </div>

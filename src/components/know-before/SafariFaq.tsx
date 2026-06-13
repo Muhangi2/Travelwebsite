@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 const faqs = [
   {
@@ -27,16 +28,19 @@ export default function SafariFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="bg-white py-16">
+    <section className="section-alt py-16">
       <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-center font-serif text-3xl">Safari FAQ for East Africa</h2>
+        <Reveal>
+          <h2 className="text-center font-serif text-3xl">Safari FAQ for East Africa</h2>
+        </Reveal>
 
-        <div className="mt-10 space-y-3">
+        <Stagger className="mt-10 space-y-3" staggerMs={60}>
           {faqs.map((f, i) => {
             const isOpen = openIndex === i
             return (
-              <div key={f.q} className="rounded-md border border-neutral-200 bg-white">
+              <div key={f.q} className="card-lift rounded-md border border-neutral-200 bg-white">
                 <button
+                  type="button"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                 >
@@ -48,20 +52,26 @@ export default function SafariFaq() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className={`shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                    className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                   >
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </button>
-                {isOpen && (
-                  <div className="border-t border-neutral-100 px-5 py-4 text-sm leading-relaxed text-neutral-600">
-                    {f.a}
+                <div
+                  className={`grid transition-all duration-300 ease-out ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="border-t border-neutral-100 px-5 py-4 text-sm leading-relaxed text-neutral-600">
+                      {f.a}
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             )
           })}
-        </div>
+        </Stagger>
       </div>
     </section>
   )

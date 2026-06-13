@@ -7,7 +7,7 @@ export default function Faq({ items }: { items: Park['faqs'] }) {
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-center font-serif text-4xl">Frequently Asked Questions</h2>
+        <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Frequently Asked Questions</h2>
 
         <div className="mt-10 space-y-3">
           {items.map((f, i) => {
