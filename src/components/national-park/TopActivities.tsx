@@ -5,7 +5,7 @@ export default function TopActivities({ items }: { items: Park['activities'] }) 
   return (
     <section className="bg-brand-forest py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-center font-serif text-4xl text-white">Top Activities</h2>
+        <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl text-white">Top Activities</h2>
 
         <div className="cards-scroll-3 mt-10 gap-6">
           {items.map((a) => (

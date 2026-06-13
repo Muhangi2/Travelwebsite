@@ -50,7 +50,7 @@ export default function GuestReviews() {
     <section className="section-alt py-20">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-4xl">Our Guests Reviews</h2>
+          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Our Guests Reviews</h2>
         </Reveal>
 
         <Stagger className="cards-scroll-3 mt-10 gap-6" staggerMs={100}>
@@ -81,7 +81,7 @@ export default function GuestReviews() {
                 <VerifiedBadge />
               </div>
               <div className="relative mt-4">
-                <span className="absolute -right-1 -top-1 select-none text-5xl leading-none text-neutral-200">&rdquo;</span>
+                <span className="absolute -right-1 -top-1 select-none text-3xl sm:text-5xl leading-none text-neutral-200">&rdquo;</span>
                 <p className="text-sm leading-relaxed text-neutral-700">{r.body}</p>
               </div>
             </article>

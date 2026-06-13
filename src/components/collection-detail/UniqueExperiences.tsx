@@ -29,7 +29,7 @@ export default function UniqueExperiences() {
     <section className="bg-black py-20 text-white">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-4xl">Unique &amp; Exclusive Experiences</h2>
+          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Unique &amp; Exclusive Experiences</h2>
         </Reveal>
 
         <Stagger className="cards-scroll-3 relative mt-12 gap-6" staggerMs={100}>

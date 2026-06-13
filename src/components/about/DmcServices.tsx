@@ -43,7 +43,7 @@ export default function DmcServices() {
     <section className="bg-white pb-20 pt-12">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
-          <h2 className="font-serif text-4xl">Our DMC Services</h2>
+          <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">Our DMC Services</h2>
         </Reveal>
 
         <div className="cards-scroll-3 mt-8 gap-6">

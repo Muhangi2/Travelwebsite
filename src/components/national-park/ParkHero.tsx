@@ -24,7 +24,7 @@ export default function ParkHero({ name, blurb, image }: Props) {
       <div className="mx-auto flex min-h-[55svh] max-w-3xl items-center justify-center px-6 pt-24 text-center text-white">
         <HeroStagger>
           <HeroItem>
-            <h1 className="font-serif text-5xl leading-tight md:text-6xl">{name}</h1>
+            <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">{name}</h1>
           </HeroItem>
           <HeroItem>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/90">{blurb}</p>

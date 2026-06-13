@@ -31,7 +31,7 @@ export default function WhatMakesDifferent() {
     <section className="bg-white pb-12">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-4xl">What Makes Us Different</h2>
+          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">What Makes Us Different</h2>
         </Reveal>
 
         <div className="cards-scroll-4 mt-10 gap-5">

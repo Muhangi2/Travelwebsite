@@ -48,7 +48,7 @@ export default function AllArticles() {
         </Reveal>
 
         <Reveal delay={80}>
-          <h2 className="mt-12 font-serif text-4xl">All Articles</h2>
+          <h2 className="mt-12 font-serif text-xl sm:text-3xl lg:text-4xl">All Articles</h2>
         </Reveal>
 
         <Stagger className="cards-scroll-3 mt-8 gap-6" staggerMs={80}>

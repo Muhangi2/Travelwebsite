@@ -43,9 +43,11 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
   const [navVisible, setNavVisible] = useState(true)
+  const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
   const destTimer = useRef<number | null>(null)
   const aboutTimer = useRef<number | null>(null)
+  const lastScrollY = useRef(0)
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
@@ -74,43 +76,56 @@ export default function Nav() {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  // Hide navbar after hero section (100vh), show on scroll up
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPos = window.scrollY
-      // Hide navbar when scrolled past 300px
-      setNavVisible(scrollPos < 100)
+      const y = window.scrollY
+      setScrolled(y > 60)
+      if (y < 80) {
+        setNavVisible(true)
+      } else if (y > lastScrollY.current + 6) {
+        setNavVisible(false) // scrolling down — hide
+      } else if (y < lastScrollY.current - 6) {
+        setNavVisible(true)  // scrolling up — show
+      }
+      lastScrollY.current = y
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const openWithGrace = (
     setter: (v: boolean) => void,
-    timerRef: React.MutableRefObject<number | null>,
+    timerRef: React.RefObject<number | null>,
   ) => {
     if (timerRef.current) window.clearTimeout(timerRef.current)
     setter(true)
   }
   const closeWithGrace = (
     setter: (v: boolean) => void,
-    timerRef: React.MutableRefObject<number | null>,
+    timerRef: React.RefObject<number | null>,
   ) => {
     if (timerRef.current) window.clearTimeout(timerRef.current)
     timerRef.current = window.setTimeout(() => setter(false), HOVER_CLOSE_DELAY)
   }
 
+  const linkColor = scrolled ? 'text-neutral-800 hover:text-black' : 'text-white hover:text-white/70'
+  const activeIndicator = scrolled ? 'border-black' : 'border-white'
+
   const navItemClass = (active: boolean, open: boolean) =>
-    `inline-flex items-center gap-1 text-[11px] font-bold tracking-[0.2em] text-white transition hover:text-white/70 ${
-      active || open ? 'border-b-2 border-white pb-1' : ''
+    `inline-flex items-center gap-1 text-[11px] font-bold tracking-[0.2em] transition ${linkColor} ${
+      active || open ? `border-b-2 ${activeIndicator} pb-1` : ''
     }`
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-40 bg-transparent transition-all duration-500 ${
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? 'bg-white/95 shadow-sm backdrop-blur-md'
+          : 'bg-transparent'
+      } ${
         navVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
       }`}>
-        <div className="container-page flex h-[8rem] items-center justify-between sm:h-[9rem] md:h-[10rem] lg:h-[11rem]">
+        <div className="container-page flex h-20 items-center justify-between sm:h-[7rem] md:h-[8rem] lg:h-[9rem]">
           <NavLink to="/" onClick={() => setMobileOpen(false)} className="flex shrink-0 items-center">
             <Logo />
           </NavLink>
@@ -122,8 +137,8 @@ export default function Nav() {
                   <div
                     key={l.to}
                     className="relative"
-                    onMouseEnter={() => openWithGrace(setDestOpen, destTimer)}
-                    onMouseLeave={() => closeWithGrace(setDestOpen, destTimer)}
+                    onPointerEnter={(e) => { if (e.pointerType === 'mouse') openWithGrace(setDestOpen, destTimer) }}
+                    onPointerLeave={(e) => { if (e.pointerType === 'mouse') closeWithGrace(setDestOpen, destTimer) }}
                   >
                     <NavLink
                       to={l.to}
@@ -155,8 +170,8 @@ export default function Nav() {
                   <div
                     key={l.to}
                     className="relative"
-                    onMouseEnter={() => openWithGrace(setAboutOpen, aboutTimer)}
-                    onMouseLeave={() => closeWithGrace(setAboutOpen, aboutTimer)}
+                    onPointerEnter={(e) => { if (e.pointerType === 'mouse') openWithGrace(setAboutOpen, aboutTimer) }}
+                    onPointerLeave={(e) => { if (e.pointerType === 'mouse') closeWithGrace(setAboutOpen, aboutTimer) }}
                   >
                     <NavLink
                       to={l.to}
@@ -223,7 +238,11 @@ export default function Nav() {
           <div className="flex items-center gap-2 sm:gap-3">
             <NavLink
               to="/contact"
-              className="hidden rounded-full border border-black px-4 py-2 text-[10px] font-medium tracking-[0.2em] text-black bg-white transition hover:bg-white/90 sm:inline-flex sm:px-5 sm:text-xs"
+              className={`hidden rounded-full border px-4 py-2 text-[10px] font-medium tracking-[0.2em] transition sm:inline-flex sm:px-5 sm:text-xs ${
+                scrolled
+                  ? 'border-black bg-black text-white hover:bg-neutral-800'
+                  : 'border-white bg-white/10 text-white backdrop-blur hover:bg-white/20'
+              }`}
             >
               INQUIRE NOW
             </NavLink>
@@ -231,7 +250,9 @@ export default function Nav() {
               aria-label="Toggle menu"
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((v) => !v)}
-              className="flex h-10 w-10 items-center justify-center rounded-full text-white transition hover:bg-white/10 lg:hidden"
+              className={`flex h-10 w-10 items-center justify-center rounded-full transition lg:hidden ${
+                scrolled ? 'text-black hover:bg-black/10' : 'text-white hover:bg-white/10'
+              }`}
             >
               {mobileOpen ? (
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

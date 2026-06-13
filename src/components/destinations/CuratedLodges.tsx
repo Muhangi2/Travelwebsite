@@ -7,7 +7,7 @@ export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] })
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="text-center">
-            <h2 className="font-serif text-4xl">
+            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">
               Your Sanctuary in the Wild: Curated
               <br />
               Luxury Lodges

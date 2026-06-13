@@ -28,7 +28,7 @@ export default function CollectionsGrid() {
     <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-5xl">Safari Collections and Journeys</h2>
+          <h2 className="text-center font-serif text-2xl sm:text-4xl lg:text-5xl">Safari Collections and Journeys</h2>
         </Reveal>
 
         <div className="cards-scroll-3 mt-12 gap-6">

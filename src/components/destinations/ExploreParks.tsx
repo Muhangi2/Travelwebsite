@@ -17,7 +17,7 @@ export default function ExploreParks({ countryName, countrySlug, intro, summary,
       <div className="container-page">
         <Reveal>
           <div className="text-center">
-            <h2 className="font-serif text-4xl">Explore {countryName}&apos;s National Parks</h2>
+            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">Explore {countryName}&apos;s National Parks</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-brand-muted sm:text-base">{intro}</p>
           </div>
         </Reveal>

@@ -6,7 +6,7 @@ export default function FlyInOption() {
     <section className="section-alt py-20">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-4xl">
+          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">
             Optional Luxury Fly-In
             <br />
             Version (7 Days)

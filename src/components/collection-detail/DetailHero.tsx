@@ -20,7 +20,7 @@ export default function DetailHero({ title, subtitle, image }: Props) {
       <div className="mx-auto flex min-h-[70svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
         <HeroStagger>
           <HeroItem>
-            <h1 className="whitespace-pre-line font-serif text-5xl leading-tight md:text-6xl">{title}</h1>
+            <h1 className="whitespace-pre-line font-serif text-3xl leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">{title}</h1>
           </HeroItem>
           <HeroItem>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/90">{subtitle}</p>

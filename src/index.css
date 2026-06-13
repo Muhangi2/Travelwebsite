@@ -16,8 +16,10 @@
   --color-brand-charcoal: #262626;
   --color-brand-muted: #737373;
 
-  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Display / heading font — geometric sans (Google Sans aesthetic) */
+  --font-serif: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  /* Body font — pure system stack, zero web-font download */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   --text-display: clamp(2.5rem, 6vw + 1rem, 5.25rem);
   --text-h1: clamp(2rem, 4.5vw + 1rem, 4rem);
@@ -45,15 +47,16 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-serif);
-    font-weight: 500;
-    letter-spacing: -0.01em;
+    font-weight: 600;
     color: var(--color-brand-ink);
     line-height: 1.15;
   }
 
-  h1 { font-size: var(--text-h1); }
-  h2 { font-size: var(--text-h2); }
-  h3 { font-size: var(--text-h3); }
+  /* Tighter tracking at large display sizes, looser at small */
+  h1 { font-size: var(--text-h1); letter-spacing: -0.03em; font-weight: 700; }
+  h2 { font-size: var(--text-h2); letter-spacing: -0.02em; }
+  h3 { font-size: var(--text-h3); letter-spacing: -0.01em; }
+  h4 { letter-spacing: 0; }
 
   p {
     line-height: 1.7;
@@ -93,8 +96,8 @@
   .text-display {
     font-family: var(--font-serif);
     font-size: var(--text-display);
-    font-weight: 500;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
     line-height: 1.05;
   }
 
@@ -243,6 +246,85 @@
   to { opacity: 1; transform: scale(1); }
 }
 
+/* ——— Premium animation library ——— */
+
+/* Blur-fade: opacity + translateY + blur dissolve */
+@keyframes blurFadeUp {
+  from { opacity: 0; transform: translateY(28px); filter: blur(8px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0px); }
+}
+
+/* Text mask — line slides up from clip (luxury brand style) */
+@keyframes textMaskUp {
+  from { transform: translateY(105%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* Horizontal wipe — clip-path reveals left → right */
+@keyframes wipeInLeft {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0%   0 0); }
+}
+
+/* Ambient float — for decorative elements */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px)   rotate(0deg); }
+  33%       { transform: translateY(-9px)  rotate(0.6deg); }
+  66%       { transform: translateY(-5px)  rotate(-0.4deg); }
+}
+
+/* Count-in — for large decorative numbers */
+@keyframes countIn {
+  from { opacity: 0; transform: scale(0.8) translateY(16px); }
+  to   { opacity: 1; transform: scale(1)   translateY(0); }
+}
+
+/* Slide from right */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Draw-line (for hr / decorative lines) */
+@keyframes drawLine {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+
+/* Marquee */
+@keyframes marqueeLoop {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+
+/* Utility classes */
+.animate-blur-up {
+  animation: blurFadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-wipe-left {
+  animation: wipeInLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+.animate-count-in {
+  animation: countIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-slide-right {
+  animation: slideInRight 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-draw-line {
+  animation: drawLine 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Text mask wrapper + inner span */
+.text-mask { overflow: hidden; display: inline-block; }
+.text-mask > span {
+  display: inline-block;
+  animation: textMaskUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 /* ——— Page & hero motion ——— */
 @keyframes heroIn {
   from {
@@ -379,6 +461,84 @@
   background: linear-gradient(180deg, #fafafa 0%, #ffffff 48%, #f5f5f5 100%);
 }
 
+/* ——— Safari Collection Cards — 3D tilt + spotlight ——— */
+.safari-card {
+  --rx: 0deg;
+  --ry: 0deg;
+  /* three-shadow baseline so CSS can interpolate all three on hover */
+  box-shadow:
+    0 0 0 0px transparent,
+    0 2px 8px -2px rgb(0 0 0 / 0.08),
+    0 0 0 0px transparent;
+  transform: perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.safari-card:hover {
+  transform: perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-7px);
+  box-shadow:
+    0 0 0 2px #000,
+    0 32px 64px -20px rgb(0 0 0 / 0.22),
+    0 0 0 4px rgb(0 0 0 / 0.04);
+}
+
+/* Cursor-following spotlight on the image */
+.safari-card .safari-card__spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle 200px at var(--sx, 50%) var(--sy, 50%),
+    rgba(255, 255, 255, 0.18) 0%,
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.safari-card:hover .safari-card__spotlight {
+  opacity: 1;
+}
+
+/* Diagonal shimmer sweep on hover */
+.safari-card .safari-card__sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    108deg,
+    transparent 18%,
+    rgba(255, 255, 255, 0.24) 50%,
+    transparent 82%
+  );
+  transform: translateX(-140%) skewX(-14deg);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.safari-card:hover .safari-card__sheen {
+  transform: translateX(140%) skewX(-14deg);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Growing accent line at top of content on hover */
+.safari-card .safari-card__accent {
+  position: absolute;
+  top: 0;
+  left: 1.25rem;
+  right: 1.25rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #111 20%, #555 80%, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.safari-card:hover .safari-card__accent {
+  transform: scaleX(1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .page-enter,
   .hero-stagger .hero-item,
@@ -402,5 +562,18 @@
   .img-zoom:hover picture img,
   .img-zoom:hover video {
     transform: none;
+  }
+
+  .safari-card,
+  .safari-card:hover {
+    transform: none;
+    transition: none;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.08);
+  }
+
+  .safari-card .safari-card__sheen,
+  .safari-card .safari-card__spotlight,
+  .safari-card .safari-card__accent {
+    display: none;
   }
 }

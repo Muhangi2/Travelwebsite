@@ -8,7 +8,7 @@ export default function WhoWeAre() {
         <div className="grid items-center gap-10 md:grid-cols-2">
           <Reveal variant="left">
             <div className="section-rule" />
-            <h2 className="mt-3 font-serif text-4xl">Who We Are</h2>
+            <h2 className="mt-3 font-serif text-xl sm:text-3xl lg:text-4xl">Who We Are</h2>
             <p className="mt-4 text-sm leading-relaxed text-neutral-600">
               We are local experts with a global outlook. Based in Uganda and operating across East Africa, we design
               journeys that go beyond sightseeing — connecting people to nature, wildlife, and culture with comfort,

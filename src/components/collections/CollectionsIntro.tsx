@@ -18,7 +18,7 @@ export default function CollectionsIntro() {
         </Reveal>
         <Reveal variant="right" delay={100} className="order-1 md:order-2">
           <div className="section-rule" />
-          <h2 className="mt-4 font-serif text-5xl">Safari collections</h2>
+          <h2 className="mt-4 font-serif text-2xl sm:text-4xl lg:text-5xl">Safari collections</h2>
           <p className="mt-5 text-sm leading-relaxed text-neutral-600">
             East Africa is a tapestry of vibrant cultures, diverse landscapes, and unparalleled wildlife. At Still Wild
             Safaris, we believe that a safari is more than just a trip; it is a transformative experience. Our team of

@@ -47,7 +47,7 @@ export default function Contact() {
         <div className="mx-auto flex min-h-[42svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
           <HeroStagger>
             <HeroItem>
-              <h1 className="font-serif text-5xl md:text-6xl">Contact Us</h1>
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Contact Us</h1>
             </HeroItem>
           </HeroStagger>
         </div>
@@ -150,7 +150,7 @@ export default function Contact() {
       <section className="bg-white pb-24">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
-            <h2 className="text-center font-serif text-4xl">Find Still Wild Safaris</h2>
+            <h2 className="text-center font-serif text-2xl sm:text-3xl lg:text-4xl">Find Still Wild Safaris</h2>
           </Reveal>
           <Reveal delay={120}>
             <div className="mt-8 overflow-hidden rounded-md border border-neutral-200 shadow-sm">
@@ -159,7 +159,7 @@ export default function Contact() {
                 src="https://www.google.com/maps?q=Imperial+Mall+Entebbe+Uganda&output=embed"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="h-[420px] w-full"
+                className="h-[260px] sm:h-[420px] w-full"
               />
             </div>
           </Reveal>

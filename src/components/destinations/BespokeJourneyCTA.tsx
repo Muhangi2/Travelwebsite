@@ -9,7 +9,7 @@ export default function BespokeJourneyCTA() {
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <div className="text-center">
-            <h2 className="font-serif text-4xl">Begin Your Bespoke Journey</h2>
+            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">Begin Your Bespoke Journey</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-neutral-600">
               Connect with our dedicated specialists to transform your vision into a meticulously planned,
               life-altering reality.

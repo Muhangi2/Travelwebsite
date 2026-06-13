@@ -18,7 +18,7 @@ export default function NationalParksList({ countrySlug, parks }: Props) {
     <section id="national-parks" className="bg-white py-20">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-4xl">National Parks</h2>
+          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">National Parks</h2>
         </Reveal>
 
         <div className="mt-10 grid items-center gap-12 md:grid-cols-2">

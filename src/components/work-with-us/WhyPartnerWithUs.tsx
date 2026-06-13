@@ -12,7 +12,7 @@ export default function WhyPartnerWithUs() {
     <section className="section-alt py-20">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-4xl">Why Partner With Us</h2>
+          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Why Partner With Us</h2>
         </Reveal>
 
         <Stagger className="cards-scroll-4 mt-12 gap-8" staggerMs={100}>

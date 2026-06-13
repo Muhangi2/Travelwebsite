@@ -12,8 +12,7 @@ export default function Hero() {
         playsInline
         poster="/images/destinations/rwanda/image-20260331125636.jpg"
       >
-        <source src="/videos/homepage-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
-        <source src="/videos/homepage-desktop.mp4" type="video/mp4" />
+        <source src="/videos/homepagevideo.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent" />
@@ -48,15 +47,8 @@ export default function Hero() {
         </HeroStagger>
       </div>
 
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 select-none text-center font-serif font-bold leading-none text-white/8"
-        style={{ fontSize: 'clamp(6rem, 22vw, 22rem)' }}
-      >
-        AFRICA
-      </div>
 
-      <a
+<a
         href="#explore"
         aria-label="Scroll down"
         className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 text-white/70 transition hover:text-white sm:block"

@@ -23,7 +23,7 @@ export default function WhoWePartnerWith() {
         <div className="grid items-start gap-12 md:grid-cols-2">
           <Reveal variant="left">
             <div className="section-rule" />
-            <h2 className="mt-4 font-serif text-4xl">
+            <h2 className="mt-4 font-serif text-xl sm:text-3xl lg:text-4xl">
               Who We <br />
               Partner With
             </h2>
@@ -44,7 +44,7 @@ export default function WhoWePartnerWith() {
               <iframe
                 title={`${site.name} office location`}
                 src={`https://www.google.com/maps?q=${site.mapsQuery}&output=embed`}
-                className="h-[420px] w-full"
+                className="h-[260px] sm:h-[420px] w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />

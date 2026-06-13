@@ -7,7 +7,7 @@ export default function PrivilegedAccess({ items }: { items: Country['privileged
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="text-center">
-            <h2 className="font-serif text-4xl">Privileged Access: Beyond the Itinerary</h2>
+            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">Privileged Access: Beyond the Itinerary</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-white/80">
               Elevate your journey with immersive experiences, insider access, and one-of-a-kind events reserved for our guests.
             </p>

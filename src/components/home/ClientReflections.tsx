@@ -6,7 +6,7 @@ export default function ClientReflections() {
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-5xl">
+          <h2 className="text-center font-serif text-2xl sm:text-4xl lg:text-5xl">
             What Our Clients
             <br />
             Are Saying
@@ -29,7 +29,7 @@ export default function ClientReflections() {
           </Reveal>
 
           <Reveal variant="right" delay={100}>
-            <span className="select-none text-5xl leading-none text-neutral-300">&ldquo;</span>
+            <span className="select-none text-3xl sm:text-5xl leading-none text-neutral-300">&ldquo;</span>
             <h3 className="font-serif text-2xl">Client Reflections</h3>
             <p className="mt-4 text-sm leading-relaxed text-neutral-700">
               &ldquo;Still Wild Safaris didn&apos;t just plan a vacation; they orchestrated a masterpiece. The attention to
