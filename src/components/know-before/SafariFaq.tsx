@@ -31,7 +31,7 @@ export default function SafariFaq() {
     <section className="section-alt py-16">
       <div className="mx-auto max-w-3xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-3xl">Safari FAQ for East Africa</h2>
+          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Safari FAQ for East Africa</h2>
         </Reveal>
 
         <Stagger className="mt-10 space-y-3" staggerMs={60}>
