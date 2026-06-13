@@ -105,7 +105,7 @@ export default function HandpickedLodges({ days }: Props) {
   const lodges = derived[tier]
 
   return (
-    <section className="section-alt py-20">
+    <section className="section-alt py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="text-center">

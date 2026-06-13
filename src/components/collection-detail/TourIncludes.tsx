@@ -24,14 +24,14 @@ export default function TourIncludes({ included, notIncluded }: Props) {
     <section className="overflow-hidden">
 
       {/* Section header */}
-      <div className="bg-white px-6 py-14 sm:py-16 text-center">
+      <div className="bg-white px-6 py-10 sm:py-14 lg:py-16 text-center">
         <AnimateIn variant="fade-up" duration={500}>
           <p className="eyebrow mb-3 text-teal-600">What's covered</p>
         </AnimateIn>
         <SplitText
           text="Included & not included"
           as="h2"
-          className="font-serif text-3xl sm:text-4xl lg:text-5xl text-neutral-900 leading-tight"
+          className="font-serif text-2xl sm:text-4xl lg:text-5xl text-neutral-900 leading-tight"
           delay={80}
           stagger={55}
         />
@@ -43,12 +43,12 @@ export default function TourIncludes({ included, notIncluded }: Props) {
       </div>
 
       {/* Split panel */}
-      <div className="container-page pb-16 sm:pb-20">
+      <div className="container-page pb-10 sm:pb-16 lg:pb-20">
         <div className="grid lg:grid-cols-2 rounded-2xl overflow-hidden shadow-sm ring-1 ring-neutral-200">
 
           {/* LEFT — dark included */}
-          <div className="bg-[#0d1f1e] px-6 py-12 sm:px-10 sm:py-14 lg:px-14 xl:px-20">
-            <div className="flex items-center gap-4 mb-10">
+          <div className="bg-[#0d1f1e] px-6 py-10 sm:px-10 sm:py-14 lg:px-14 xl:px-20">
+            <div className="flex items-center gap-4 mb-6 sm:mb-10">
               <AnimateIn variant="count-in" duration={1000}>
                 <span className="font-serif text-[48px] sm:text-[64px] leading-none text-teal-800/40 select-none animate-float-slow">
                   <AnimatedCounter target={1} prefix="0" duration={800} />
@@ -79,8 +79,8 @@ export default function TourIncludes({ included, notIncluded }: Props) {
           </div>
 
           {/* RIGHT — light not-included */}
-          <div className="bg-neutral-50 px-6 py-12 sm:px-10 sm:py-14 lg:px-14 xl:px-20">
-            <div className="flex items-center gap-4 mb-10">
+          <div className="bg-neutral-50 px-6 py-10 sm:px-10 sm:py-14 lg:px-14 xl:px-20">
+            <div className="flex items-center gap-4 mb-6 sm:mb-10">
               <AnimateIn variant="count-in" delay={200} duration={1000}>
                 <span className="font-serif text-[48px] sm:text-[64px] leading-none text-neutral-200 select-none">
                   <AnimatedCounter target={2} prefix="0" duration={1000} />

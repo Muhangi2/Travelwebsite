@@ -84,16 +84,16 @@ export default function TourHighlights({ highlights }: Props) {
       <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white/6 blur-3xl" />
 
       {/* Header */}
-      <div className="container-page relative py-20 sm:py-24">
-        <div className="grid lg:grid-cols-[1fr_260px] gap-10 items-end">
+      <div className="container-page relative py-12 sm:py-16 lg:py-20">
+        <div className="grid lg:grid-cols-[1fr_260px] gap-8 lg:gap-10 items-end">
           <div>
             <AnimateIn variant="fade-up" duration={500}>
-              <p className="eyebrow mb-5 text-teal-400">Journey Highlights</p>
+              <p className="eyebrow mb-4 sm:mb-5 text-teal-400">Journey Highlights</p>
             </AnimateIn>
             <SplitText
               text="What makes this journey unforgettable"
               as="h2"
-              className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.1] text-white"
+              className="font-serif text-3xl sm:text-4xl lg:text-[3.5rem] leading-[1.1] text-white"
               delay={60}
               stagger={45}
             />
@@ -115,11 +115,11 @@ export default function TourHighlights({ highlights }: Props) {
       </div>
 
       {/* Glass cards */}
-      <div className="container-page relative py-12 sm:py-16">
+      <div className="container-page relative py-8 sm:py-12 lg:py-16">
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {highlights.map((item, i) => (
             <ThrowIn key={i} delay={i * 110} rotate={ROTATIONS[i % ROTATIONS.length]}>
-              <div className="group relative flex h-full min-h-[190px] flex-col justify-between overflow-hidden rounded-2xl p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_64px_rgba(0,0,0,0.5)] bg-white/[0.07] ring-1 ring-white/[0.13] hover:bg-white/[0.12] hover:ring-white/25">
+              <div className="group relative flex h-full min-h-[160px] sm:min-h-[190px] flex-col justify-between overflow-hidden rounded-2xl p-5 sm:p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_64px_rgba(0,0,0,0.5)] bg-white/[0.07] ring-1 ring-white/[0.13] hover:bg-white/[0.12] hover:ring-white/25">
 
                 {/* Inner shimmer gradient */}
                 <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 via-transparent to-teal-500/5" />

@@ -26,13 +26,13 @@ const experiences: Experience[] = [
 
 export default function UniqueExperiences() {
   return (
-    <section className="bg-black py-20 text-white">
+    <section className="bg-black py-12 sm:py-16 lg:py-20 text-white">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Unique &amp; Exclusive Experiences</h2>
         </Reveal>
 
-        <Stagger className="cards-scroll-3 relative mt-12 gap-6" staggerMs={100}>
+        <Stagger className="cards-scroll-3 relative mt-8 sm:mt-12 gap-6" staggerMs={100}>
           {experiences.map((e) => (
             <article key={e.title} className="card-lift overflow-hidden rounded-md bg-white text-neutral-800 shadow-md">
               <div className="img-zoom aspect-[4/3] overflow-hidden">
