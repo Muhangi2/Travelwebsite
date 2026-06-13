@@ -97,32 +97,32 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
   }, [active])
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-10 sm:py-16 lg:py-20">
       <div className="container-page">
-        <div className="grid gap-10 lg:grid-cols-[2fr_3fr] xl:grid-cols-[400px_1fr] xl:gap-14">
+        <div className="grid gap-8 sm:gap-10 lg:grid-cols-[2fr_3fr] xl:grid-cols-[400px_1fr] xl:gap-14">
 
           {/* ── LEFT PANEL ─────────────────────────────────── */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 sm:gap-8">
 
             {/* Overview */}
             <div>
               {country && <p className="eyebrow mb-2">{country}</p>}
-              {title && <h2 className="font-serif text-2xl sm:text-3xl leading-tight">{title.replace('\n', ' ')}</h2>}
-              <p className="mt-4 text-[14px] leading-relaxed text-neutral-500">{overview}</p>
+              {title && <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl leading-tight">{title.replace('\n', ' ')}</h2>}
+              <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-neutral-500">{overview}</p>
             </div>
 
             {/* Horizontal day photo strip */}
             <div>
-              <p className="text-sm font-medium text-neutral-800 mb-4">The Experience</p>
-              <div className="flex gap-3 overflow-x-auto pb-3 snap-x snap-mandatory" style={{ scrollbarWidth: 'none' }}>
+              <p className="text-xs sm:text-sm font-medium text-neutral-800 mb-3 sm:mb-4">The Experience</p>
+              <div className="flex gap-2.5 overflow-x-auto pb-3 snap-x snap-mandatory" style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
                 {days.map((d, i) => (
                   <button
                     key={d.day}
                     onClick={() => setActive(i)}
-                    className="group snap-start shrink-0 relative rounded-2xl overflow-hidden transition-all duration-200 hover:shadow-lg"
+                    className="group snap-start shrink-0 relative rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-200 hover:shadow-lg"
                     style={{
-                      width: 160,
-                      height: 230,
+                      width: 130,
+                      height: 185,
                       outline: active === i ? `2.5px solid ${TEAL}` : '1.5px solid #e5e5e5',
                       outlineOffset: active === i ? '2px' : '0',
                     }}
@@ -134,12 +134,12 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                    <div className="absolute bottom-0 inset-x-0 px-3 py-3">
-                      <span className="text-[11px] font-semibold tracking-[0.12em] text-white">Day {d.day}</span>
-                      <p className="text-[10px] text-white/70 mt-0.5 line-clamp-2 leading-snug">{d.title}</p>
+                    <div className="absolute bottom-0 inset-x-0 px-2.5 py-2.5">
+                      <span className="text-[10px] font-semibold tracking-[0.12em] text-white">Day {d.day}</span>
+                      <p className="text-[9px] text-white/70 mt-0.5 line-clamp-2 leading-snug">{d.title}</p>
                     </div>
                     {active === i && (
-                      <div className="absolute top-2.5 right-2.5 flex h-5 w-5 items-center justify-center rounded-full bg-white shadow">
+                      <div className="absolute top-2 right-2 flex h-5 w-5 items-center justify-center rounded-full bg-white shadow">
                         <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke={TEAL} strokeWidth="3"><path d="M5 12l5 5L20 7" /></svg>
                       </div>
                     )}
@@ -150,31 +150,31 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
           </div>
 
           {/* ── RIGHT PANEL ─────────────────────────────────── */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-4 sm:gap-5">
 
             {/* Heading + arrow buttons */}
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-serif text-2xl sm:text-3xl">Itinerary</h3>
-                <p className="mt-1 text-sm text-neutral-400 tracking-wide">Day {day.day} of {days.length}</p>
+                <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl">Itinerary</h3>
+                <p className="mt-0.5 text-xs sm:text-sm text-neutral-400 tracking-wide">Day {day.day} of {days.length}</p>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 sm:gap-2">
                 <button
                   onClick={() => setActive((i) => Math.max(0, i - 1))}
                   disabled={active === 0}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white shadow-md transition hover:bg-neutral-800 disabled:opacity-25"
+                  className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-black text-white shadow-md transition hover:bg-neutral-800 disabled:opacity-25"
                   aria-label="Previous day"
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6" /></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6" /></svg>
                 </button>
-                <span className="text-xs font-medium text-neutral-400 tabular-nums">{active + 1} / {days.length}</span>
+                <span className="text-[11px] sm:text-xs font-medium text-neutral-400 tabular-nums">{active + 1} / {days.length}</span>
                 <button
                   onClick={() => setActive((i) => Math.min(days.length - 1, i + 1))}
                   disabled={active === days.length - 1}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white shadow-md transition hover:bg-neutral-800 disabled:opacity-25"
+                  className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-black text-white shadow-md transition hover:bg-neutral-800 disabled:opacity-25"
                   aria-label="Next day"
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 6l6 6-6 6" /></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 6l6 6-6 6" /></svg>
                 </button>
               </div>
             </div>
@@ -182,12 +182,12 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
             {/* Photo + teal card (card overlaps image bottom) */}
             <div className="flex flex-col">
               {/* Photo */}
-              <div className="relative overflow-hidden rounded-3xl shadow-xl">
+              <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-xl">
                 <img
                   key={day.day}
                   src={day.image}
                   alt={day.title}
-                  className="h-72 w-full object-cover sm:h-80"
+                  className="h-56 w-full object-cover sm:h-72 lg:h-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
 
@@ -195,36 +195,36 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
                 <button
                   onClick={() => setActive((i) => Math.max(0, i - 1))}
                   disabled={active === 0}
-                  className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition hover:bg-black/80 disabled:opacity-20"
+                  className="absolute left-2.5 top-1/2 z-10 flex h-9 w-9 sm:h-10 sm:w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition hover:bg-black/80 disabled:opacity-20"
                   aria-label="Previous day"
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6" /></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 18l-6-6 6-6" /></svg>
                 </button>
                 <button
                   onClick={() => setActive((i) => Math.min(days.length - 1, i + 1))}
                   disabled={active === days.length - 1}
-                  className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition hover:bg-black/80 disabled:opacity-20"
+                  className="absolute right-2.5 top-1/2 z-10 flex h-9 w-9 sm:h-10 sm:w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition hover:bg-black/80 disabled:opacity-20"
                   aria-label="Next day"
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 6l6 6-6 6" /></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 6l6 6-6 6" /></svg>
                 </button>
               </div>
 
-              {/* Teal card — peeks above the image bottom, extends below */}
-              <div className="relative z-10 -mt-12 px-4">
-                <div className="rounded-2xl p-4 shadow-2xl" style={{ background: TEAL }}>
-                  <p className="font-semibold text-[15px] text-white leading-snug">{day.title}</p>
-                  <p className="mt-2 text-[12px] leading-relaxed text-white/85">{day.body}</p>
+              {/* Teal card — peeks above image bottom, extends below */}
+              <div className="relative z-10 -mt-8 sm:-mt-12 px-3 sm:px-4">
+                <div className="rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-2xl" style={{ background: TEAL }}>
+                  <p className="font-semibold text-[13px] sm:text-[15px] text-white leading-snug">{day.title}</p>
+                  <p className="mt-1.5 sm:mt-2 text-[11px] sm:text-[12px] leading-relaxed text-white/85">{day.body}</p>
                   {((day.accommodation && day.accommodation !== '—') || day.meals) && (
-                    <div className="mt-3 border-t border-white/20 pt-3 flex flex-wrap gap-3">
+                    <div className="mt-2.5 sm:mt-3 border-t border-white/20 pt-2.5 sm:pt-3 flex flex-wrap gap-2 sm:gap-3">
                       {day.accommodation && day.accommodation !== '—' && (
-                        <span className="flex items-center gap-1.5 text-[11px] text-white/75">
+                        <span className="flex items-center gap-1.5 text-[10px] sm:text-[11px] text-white/75">
                           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 21V7l9-4 9 4v14M9 21V12h6v9" /></svg>
                           {day.accommodation.replace(/Mid-Range:|Luxury:/gi, '').replace(/\|/g, ' · ').trim()}
                         </span>
                       )}
                       {day.meals && (
-                        <span className="flex items-center gap-1.5 text-[11px] text-white/75">
+                        <span className="flex items-center gap-1.5 text-[10px] sm:text-[11px] text-white/75">
                           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" /></svg>
                           {day.meals}
                         </span>
@@ -237,7 +237,7 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
 
             {/* Mini route map */}
             {stops.length >= 2 && (
-              <div className="overflow-hidden rounded-2xl ring-1 ring-neutral-200 shadow-sm" style={{ height: 200 }}>
+              <div className="overflow-hidden rounded-xl sm:rounded-2xl ring-1 ring-neutral-200 shadow-sm" style={{ height: 180 }}>
                 <div ref={miniMapRef} style={{ width: '100%', height: '100%' }} />
               </div>
             )}
