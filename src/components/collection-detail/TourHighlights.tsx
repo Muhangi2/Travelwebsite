@@ -7,7 +7,6 @@ type Props = {
   images?: string[]
 }
 
-// Curated scenic/landscape images — never animal close-ups
 const SCENIC_IMAGES = [
   '/images/parks/uganda/murchison-falls/mf-1.jpg',
   '/images/destinations/rwanda/image-20260331125636.jpg',
@@ -25,6 +24,138 @@ const SCENIC_IMAGES = [
   '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
   '/images/activities/big-five/singita-boulders-lodge-21.jpg',
 ]
+
+function HighlightCard({ text, image, index }: { text: string; image: string; index: number }) {
+  const cardRef = useRef<HTMLDivElement>(null)
+  const imgRef = useRef<HTMLImageElement>(null)
+  const shimmerRef = useRef<HTMLDivElement>(null)
+  const [hovered, setHovered] = useState(false)
+
+  function onMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    const el = cardRef.current
+    const img = imgRef.current
+    if (!el || !img) return
+    const { top, height } = el.getBoundingClientRect()
+    const y = (e.clientY - top) / height
+    const shift = (y - 0.5) * -18
+    img.style.transform = `scale(1.1) translateY(${shift}px)`
+  }
+
+  function onMouseEnter() {
+    setHovered(true)
+    if (imgRef.current) imgRef.current.style.transform = 'scale(1.1) translateY(0px)'
+  }
+
+  function onMouseLeave() {
+    setHovered(false)
+    if (imgRef.current) {
+      imgRef.current.style.transform = 'scale(1) translateY(0px)'
+    }
+  }
+
+  return (
+    <AnimateIn
+      variant="blur-up"
+      delay={index * 90}
+      duration={750}
+      className="shrink-0 snap-start"
+      style={{ width: 'clamp(240px, 78vw, 300px)' }}
+    >
+      <div
+        ref={cardRef}
+        onMouseMove={onMouseMove}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        className="group relative h-[380px] sm:h-[440px] lg:h-[480px] w-full overflow-hidden rounded-2xl cursor-default"
+        style={{
+          transition: 'transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s cubic-bezier(0.22,1,0.36,1)',
+          transform: hovered ? 'translateY(-10px)' : 'translateY(0)',
+          boxShadow: hovered ? '0 32px 64px rgba(0,0,0,0.55)' : '0 4px 20px rgba(0,0,0,0.25)',
+        }}
+      >
+        {/* Parallax image */}
+        <img
+          ref={imgRef}
+          src={image}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{ transition: 'transform 0.45s cubic-bezier(0.22,1,0.36,1)', transform: 'scale(1) translateY(0px)', willChange: 'transform' }}
+          loading={index < 3 ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+
+        {/* Gradient — lightens slightly on hover to reveal more image */}
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/5"
+          style={{ transition: 'opacity 0.5s ease', opacity: hovered ? 0.8 : 1 }}
+        />
+
+        {/* Shimmer sweep */}
+        <div
+          ref={shimmerRef}
+          className="absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent via-white/12 to-transparent"
+          style={{
+            transform: hovered ? 'translateX(110%)' : 'translateX(-110%)',
+            transition: hovered ? 'transform 0.65s cubic-bezier(0.22,1,0.36,1)' : 'none',
+          }}
+        />
+
+        {/* Number watermark */}
+        <span
+          className="absolute top-4 left-5 font-serif leading-none select-none pointer-events-none"
+          style={{
+            fontSize: hovered ? '64px' : '48px',
+            color: hovered ? 'rgba(255,255,255,0.14)' : 'rgba(255,255,255,0.07)',
+            transition: 'font-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.5s ease',
+          }}
+        >
+          {String(index + 1).padStart(2, '0')}
+        </span>
+
+        {/* Check badge — inverts on hover */}
+        <div
+          className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center rounded-full backdrop-blur-sm"
+          style={{
+            background: hovered ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.15)',
+            boxShadow: hovered ? '0 0 0 1px rgba(255,255,255,1)' : '0 0 0 1px rgba(255,255,255,0.25)',
+            transition: 'background 0.35s ease, box-shadow 0.35s ease',
+          }}
+        >
+          <svg
+            width="12" height="12" viewBox="0 0 24 24" fill="none"
+            stroke={hovered ? '#000' : '#fff'}
+            strokeWidth="2.5"
+            style={{ transition: 'stroke 0.35s ease' }}
+          >
+            <path d="M5 12l5 5L20 7" />
+          </svg>
+        </div>
+
+        {/* Bottom text block */}
+        <div
+          className="absolute inset-x-0 bottom-0 p-5 sm:p-6"
+          style={{
+            transform: hovered ? 'translateY(0)' : 'translateY(6px)',
+            transition: 'transform 0.5s cubic-bezier(0.22,1,0.36,1)',
+          }}
+        >
+          {/* Line expands to full width on hover */}
+          <div
+            className="mb-3 h-[1.5px] rounded-full bg-white"
+            style={{
+              width: hovered ? '100%' : '28px',
+              opacity: hovered ? 0.3 : 0.5,
+              transition: 'width 0.6s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease',
+            }}
+          />
+          <p className="font-serif text-[15px] sm:text-[17px] lg:text-[18px] font-medium leading-snug text-white">
+            {text}
+          </p>
+        </div>
+      </div>
+    </AnimateIn>
+  )
+}
 
 export default function TourHighlights({ highlights, images }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -50,16 +181,17 @@ export default function TourHighlights({ highlights, images }: Props) {
     scrollRef.current?.scrollBy({ left: dir === 'right' ? 320 : -320, behavior: 'smooth' })
   }
 
-  // Use curated scenic images, fall back to journey heroImage if provided
-  const pool = images && images.length
-    ? [images[0], ...SCENIC_IMAGES]   // heroImage first, then scenic
-    : SCENIC_IMAGES
+  // Use ALL journey images (hero + every day image) before falling back to scenic
+  // Deduplicate so no image appears twice
+  const raw = images && images.length ? [...images, ...SCENIC_IMAGES] : SCENIC_IMAGES
+  const seen = new Set<string>()
+  const pool = raw.filter((src) => { if (seen.has(src)) return false; seen.add(src); return true })
 
   return (
-    <section className="bg-black py-14 sm:py-20">
+    <section className="bg-black py-10 sm:py-14 lg:py-20">
 
       {/* Header */}
-      <div className="container-page mb-10">
+      <div className="container-page mb-7 sm:mb-10">
         <div className="flex items-end justify-between gap-6">
           <div className="flex-1 min-w-0">
             <AnimateIn variant="fade-up" duration={500}>
@@ -74,7 +206,6 @@ export default function TourHighlights({ highlights, images }: Props) {
             />
           </div>
 
-          {/* Scroll arrows — hidden on mobile (touch swipe works) */}
           <AnimateIn variant="fade-up" delay={300} duration={600}>
             <div className="hidden sm:flex shrink-0 gap-2">
               <button
@@ -105,52 +236,16 @@ export default function TourHighlights({ highlights, images }: Props) {
       {/* Carousel */}
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pl-4 pr-8 sm:pl-6 sm:pr-12 lg:pl-8 pb-2"
+        className="flex gap-3 sm:gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 sm:px-6 lg:px-8 pb-4"
         style={{ scrollbarWidth: 'none' }}
       >
         {highlights.map((text, i) => (
-          <AnimateIn
+          <HighlightCard
             key={i}
-            variant="fade-up"
-            delay={i * 70}
-            duration={600}
-            className="shrink-0 snap-start"
-            style={{ width: 'clamp(260px, 72vw, 310px)' }}
-          >
-            <div className="group relative h-[420px] sm:h-[460px] w-full overflow-hidden rounded-2xl">
-              {/* Scenic background image */}
-              <img
-                src={pool[i % pool.length]}
-                alt=""
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading={i < 3 ? 'eager' : 'lazy'}
-                decoding="async"
-              />
-
-              {/* Strong gradient so text is always readable */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/5" />
-
-              {/* Number watermark top-left */}
-              <span className="absolute top-4 left-5 font-serif text-[56px] leading-none text-white/[0.07] select-none pointer-events-none">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-
-              {/* Checkmark badge top-right */}
-              <div className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25 backdrop-blur-sm">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                  <path d="M5 12l5 5L20 7" />
-                </svg>
-              </div>
-
-              {/* Text — fully visible at bottom */}
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
-                <div className="mb-4 h-[1.5px] w-8 rounded-full bg-white/50 transition-all duration-500 group-hover:w-16 group-hover:bg-white" />
-                <p className="font-serif text-[17px] sm:text-[19px] font-medium leading-snug text-white">
-                  {text}
-                </p>
-              </div>
-            </div>
-          </AnimateIn>
+            text={text}
+            image={pool[i % pool.length]}
+            index={i}
+          />
         ))}
       </div>
     </section>
