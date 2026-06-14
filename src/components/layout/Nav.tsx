@@ -132,10 +132,10 @@ export default function Nav() {
       }`}>
 
         {/* ── Desktop: centred-logo split nav ── */}
-        <div className="container-page hidden h-[9rem] items-center lg:grid lg:grid-cols-[1fr_auto_1fr]">
+        <div className="container-page hidden h-[9rem] items-center xl:grid xl:grid-cols-[1fr_auto_1fr]">
 
           {/* Left links */}
-          <nav className="flex items-center gap-6 xl:gap-8">
+          <nav className="flex items-center gap-7">
             {leftLinks.map((l) => {
               if (l.hasFlyout) {
                 return (
@@ -181,7 +181,7 @@ export default function Nav() {
           </NavLink>
 
           {/* Right links + CTA */}
-          <nav className="flex items-center justify-end gap-6 xl:gap-8">
+          <nav className="flex items-center justify-end gap-7">
             {rightLinks.map((l) => {
               if (l.subLinks) {
                 return (
@@ -255,7 +255,7 @@ export default function Nav() {
         </div>
 
         {/* ── Mobile: logo centred absolutely, hamburger left ── */}
-        <div className="container-page relative flex h-20 items-center sm:h-[7rem] md:h-[8rem] lg:hidden">
+        <div className="container-page relative flex h-20 items-center sm:h-[7rem] md:h-[8rem] xl:hidden">
           {/* Burger left */}
           <button
             aria-label="Toggle menu"
@@ -293,7 +293,7 @@ export default function Nav() {
 
       {/* Mobile drawer */}
       <div
-        className={`fixed inset-0 z-30 lg:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 z-30 xl:hidden transition-opacity duration-300 ${
           mobileOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
         aria-hidden={!mobileOpen}

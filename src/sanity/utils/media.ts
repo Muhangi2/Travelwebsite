@@ -7,12 +7,12 @@ export type SanityMediaImage = {
   alt?: string
 }
 
-export function resolveMediaImage(media: SanityMediaImage | undefined | null): string {
+export function resolveMediaImage(media: SanityMediaImage | undefined | null, width = 1600): string {
   if (!media) return ''
-  return urlFor(media.asset) ?? media.path ?? ''
+  return urlFor(media.asset, width) ?? media.path ?? ''
 }
 
-export function resolveMediaImages(items: SanityMediaImage[] | undefined | null): string[] {
+export function resolveMediaImages(items: SanityMediaImage[] | undefined | null, width = 1600): string[] {
   if (!items?.length) return []
-  return items.map(resolveMediaImage).filter(Boolean)
+  return items.map((item) => resolveMediaImage(item, width)).filter(Boolean)
 }

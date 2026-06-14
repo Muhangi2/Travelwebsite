@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 type Props = {
   countryName: string
@@ -33,7 +34,7 @@ export default function ExploreParks({ countryName, countrySlug, intro, summary,
           </Reveal>
           <Reveal variant="right" delay={100}>
             <div className="img-zoom overflow-hidden rounded-xl shadow-lg">
-              <img src={image} alt={countryName} loading="lazy" className="w-full object-cover" />
+              <Picture src={image} alt={countryName} loading="lazy" imgClassName="w-full object-cover" />
             </div>
           </Reveal>
         </div>

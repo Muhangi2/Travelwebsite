@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Park } from '@/data/destinations'
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 type Props = {
   countrySlug: string
@@ -24,7 +25,7 @@ export default function NationalParksList({ countrySlug, parks }: Props) {
         <div className="mt-10 grid items-center gap-12 md:grid-cols-2">
           <Reveal variant="left" key={`img-${park.slug}`}>
             <div className="img-zoom overflow-hidden rounded-md shadow-md">
-              <img src={park.image} alt={park.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+              <Picture src={park.image} alt={park.name} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
             </div>
           </Reveal>
           <Reveal variant="right" delay={100} key={`text-${park.slug}`}>

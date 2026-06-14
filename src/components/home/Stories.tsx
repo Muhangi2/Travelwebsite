@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 const posts = [
   {
@@ -48,7 +49,7 @@ export default function Stories() {
               className="card-lift group relative block overflow-hidden rounded-xl shadow-md"
             >
               <div className="img-zoom aspect-[4/5]">
-                <img src={p.image} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <Picture src={p.image} alt={p.title} loading="lazy" imgClassName="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
               {p.tag && (
