@@ -1,20 +1,30 @@
+import { useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    const isMobile = window.matchMedia('(max-width: 767px)').matches
+    video.src = isMobile ? '/videos/smallscrensize.mp4' : '/videos/bigscreensiz.mp4'
+    video.load()
+  }, [])
+
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-brand-ink">
       <video
+        ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         poster="/images/destinations/rwanda/image-20260331125636.jpg"
-      >
-        <source src="/videos/smallscrensize.mp4" type="video/mp4" media="(max-width: 767px)" />
-        <source src="/videos/bigscreensiz.mp4" type="video/mp4" />
-      </video>
+      />
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40" />

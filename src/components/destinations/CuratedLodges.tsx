@@ -1,5 +1,6 @@
 import type { Country } from '@/data/destinations'
 import Reveal, { Stagger } from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] }) {
   return (
@@ -23,7 +24,7 @@ export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] })
           {lodges.map((l) => (
             <article key={l.name} className="card-lift overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-200">
               <div className="img-zoom aspect-[4/3] overflow-hidden">
-                <img src={l.image} alt={l.name} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                <Picture src={l.image} alt={l.name} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
               </div>
               <div className="p-5">
                 <h3 className="font-serif text-base">{l.name}</h3>

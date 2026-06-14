@@ -1,4 +1,5 @@
 import Reveal, { Stagger } from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 type Experience = {
   title: string
@@ -36,7 +37,7 @@ export default function UniqueExperiences() {
           {experiences.map((e) => (
             <article key={e.title} className="card-lift overflow-hidden rounded-md bg-white text-neutral-800 shadow-md">
               <div className="img-zoom aspect-[4/3] overflow-hidden">
-                <img src={e.image} alt={e.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                <Picture src={e.image} alt={e.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
               </div>
               <div className="p-5">
                 <h3 className="font-serif text-lg">{e.title}</h3>

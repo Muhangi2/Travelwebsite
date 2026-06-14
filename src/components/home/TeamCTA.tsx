@@ -78,7 +78,7 @@ function Member({ name, role, image }: { name: string; role: string; image: stri
   return (
     <NavLink to="/meet-the-team" className="group flex flex-col items-center text-center">
       <div className="h-20 w-20 overflow-hidden rounded-full bg-neutral-200 ring-2 ring-white/40 transition group-hover:ring-white sm:h-24 sm:w-24">
-        <img src={image} alt={name} loading="lazy" className="h-full w-full object-cover" />
+        <Picture src={image} alt={name} loading="lazy" imgClassName="h-full w-full object-cover" />
       </div>
       <p className="mt-3 font-serif text-sm sm:text-base">{name}</p>
       <p className="text-[10px] text-white/70 sm:text-xs">{role}</p>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Picture from '@/components/Picture'
 
 const adventures = [
   { id: 'gorillas', label: 'Gorillas', image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg' },
@@ -63,7 +64,7 @@ export default function TripBuilder() {
                 className="group relative overflow-hidden rounded-md text-left shadow-sm ring-1 ring-neutral-200 transition hover:shadow-md"
               >
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={a.image} alt={a.label} className="h-full w-full object-cover transition group-hover:scale-105" loading="lazy" decoding="async" />
+                  <Picture src={a.image} alt={a.label} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover transition group-hover:scale-105" />
                 </div>
                 <div className="bg-white px-5 py-4">
                   <p className="font-serif text-lg">{a.label}</p>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useStories } from '@/sanity/stories'
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 const TagPill = ({ tags }: { tags: string[] }) => (
   <span className="absolute right-4 top-4 rounded-full bg-black/90 px-3 py-1 text-[10px] tracking-wide text-white">
@@ -25,7 +26,7 @@ export default function FeaturedPosts() {
           <Reveal>
             <article className="card-lift overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-100">
               <div className="img-zoom relative aspect-[4/5] overflow-hidden lg:aspect-[4/5]">
-                <img src={main.image} alt={main.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                <Picture src={main.image} alt={main.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
                 <TagPill tags={main.tags} />
               </div>
               <div className="bg-white p-6">
@@ -46,7 +47,7 @@ export default function FeaturedPosts() {
               <Reveal key={p.slug} delay={i * 100}>
                 <article className="card-lift overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-100">
                   <div className="img-zoom relative aspect-[16/9] overflow-hidden">
-                    <img src={p.image} alt={p.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                    <Picture src={p.image} alt={p.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
                     <TagPill tags={p.tags} />
                   </div>
                   <div className="bg-white p-5">

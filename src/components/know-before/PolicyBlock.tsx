@@ -1,4 +1,5 @@
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 type Props = {
   title: string
@@ -38,7 +39,7 @@ export default function PolicyBlock({
             <Reveal variant={imageOnRight ? 'right' : 'left'} delay={100}>
               {image ? (
                 <div className="img-zoom overflow-hidden rounded-md shadow-md">
-                  <img src={image} alt="" className="rounded-md object-cover" loading="lazy" decoding="async" />
+                  <Picture src={image} alt="" loading="lazy" decoding="async" imgClassName="rounded-md object-cover" />
                 </div>
               ) : null}
             </Reveal>
