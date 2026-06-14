@@ -9,7 +9,7 @@ export default function Destinations() {
     <div>
       {/* Hero */}
       <div
-        className="relative flex min-h-[100svh] items-end bg-cover bg-center"
+        className="relative flex h-[100svh] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.webp')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/65" />
