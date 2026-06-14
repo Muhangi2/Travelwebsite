@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
-import maplibregl from 'maplibre-gl'
-import 'maplibre-gl/dist/maplibre-gl.css'
+import mapboxgl from 'mapbox-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
 import type { JourneyDay } from '@/components/collection-detail/SafariJourney'
 import type { RouteWaypoint } from '@/data/journeys'
 
-const TEAL = '#0d9488'
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN as string
+
+const ROUTE_COLOR = '#2563eb'
 
 function parseAccommodation(raw: string): { tier: string | null; name: string }[] {
   if (!raw || raw === '—') return []
@@ -35,7 +37,7 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
   const day = days[active]
 
   const miniMapRef = useRef<HTMLDivElement>(null)
-  const miniMapInstance = useRef<maplibregl.Map | null>(null)
+  const miniMapInstance = useRef<mapboxgl.Map | null>(null)
   const markerEls = useRef<HTMLDivElement[]>([])
 
   const stops = (waypoints ?? []).filter((wp, i) => {
@@ -51,15 +53,16 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
 
     const coords = stops.map((s) => s.coords as [number, number])
     const bounds = coords.reduce(
-      (b, c) => b.extend(c),
-      new maplibregl.LngLatBounds(coords[0], coords[0]),
+      (b, c) => b.extend(c as mapboxgl.LngLatLike),
+      new mapboxgl.LngLatBounds(coords[0], coords[0]),
     )
 
-    const map = new maplibregl.Map({
+    const map = new mapboxgl.Map({
       container: miniMapRef.current,
-      style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+      style: 'mapbox://styles/mapbox/outdoors-v12',
       interactive: false,
       attributionControl: false,
+      logoPosition: 'bottom-right',
     })
 
     map.on('load', () => {
@@ -74,24 +77,24 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
         type: 'line',
         source: 'route',
         layout: { 'line-join': 'round', 'line-cap': 'round' },
-        paint: { 'line-color': TEAL, 'line-width': 2, 'line-opacity': 0.7, 'line-dasharray': [3, 2] },
+        paint: { 'line-color': ROUTE_COLOR, 'line-width': 2.5, 'line-opacity': 0.8, 'line-dasharray': [3, 2] },
       })
 
       stops.forEach((stop, i) => {
         const el = document.createElement('div')
         el.style.cssText = `
           width:22px;height:22px;border-radius:50%;
-          background:${i === 0 ? TEAL : '#fff'};
-          border:2.5px solid ${TEAL};
+          background:#111;
+          border:2px solid #fff;
           display:flex;align-items:center;justify-content:center;
           font-size:9px;font-weight:700;
-          color:${i === 0 ? '#fff' : TEAL};
-          box-shadow:0 1px 4px rgba(0,0,0,0.15);
-          transition:background 200ms,color 200ms;
+          color:#fff;
+          box-shadow:0 1px 6px rgba(0,0,0,0.3);
+          transition:transform 200ms;
         `
         el.textContent = `${i + 1}`
         markerEls.current[i] = el
-        new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat(stop.coords).addTo(map)
+        new mapboxgl.Marker({ element: el, anchor: 'center' }).setLngLat(stop.coords as mapboxgl.LngLatLike).addTo(map)
       })
     })
 
@@ -103,22 +106,23 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
   useEffect(() => {
     markerEls.current.forEach((el, i) => {
       if (!el) return
-      el.style.background = i === active ? TEAL : '#fff'
-      el.style.color = i === active ? '#fff' : TEAL
+      el.style.background = i === active ? '#fff' : '#111'
+      el.style.color = i === active ? '#111' : '#fff'
+      el.style.border = i === active ? '2px solid #111' : '2px solid #fff'
       el.style.transform = i === active ? 'scale(1.3)' : 'scale(1)'
     })
     if (miniMapInstance.current && stops[active]) {
-      miniMapInstance.current.easeTo({ center: stops[active].coords, zoom: 8, duration: 600 })
+      miniMapInstance.current.easeTo({ center: stops[active].coords as mapboxgl.LngLatLike, zoom: 8, duration: 600 })
     }
   }, [active])
 
   return (
     <section className="bg-white py-10 sm:py-16 lg:py-20">
       <div className="container-page">
-        <div className="grid gap-8 sm:gap-10 lg:grid-cols-[2fr_3fr] xl:grid-cols-[400px_1fr] xl:gap-14">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-[2fr_3fr] xl:grid-cols-[400px_1fr] xl:gap-14">
 
           {/* ── LEFT PANEL ─────────────────────────────────── */}
-          <div className="flex flex-col gap-6 sm:gap-8">
+          <div className="flex flex-col gap-6 sm:gap-8 min-w-0">
 
             {/* Overview */}
             <div>
@@ -192,10 +196,10 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
           </div>
 
           {/* ── RIGHT PANEL ─────────────────────────────────── */}
-          <div className="flex flex-col gap-4 sm:gap-5">
+          <div className="flex flex-col gap-4 sm:gap-5 min-w-0">
 
             {/* Heading + arrow chevron day stepper */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 min-w-0">
               <div className="flex items-center justify-between">
                 <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl">Itinerary</h3>
                 <div className="flex items-center gap-1.5">

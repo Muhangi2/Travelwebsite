@@ -20,7 +20,7 @@ export default function ExperienceDetail() {
 
   return (
     <>
-      <section className="relative min-h-[78svh] overflow-hidden bg-brand-ink text-white">
+      <section className="relative h-[100svh] overflow-hidden bg-brand-ink text-white">
         <img
           src={exp.image}
           alt=""
@@ -28,7 +28,7 @@ export default function ExperienceDetail() {
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/40" />
-        <div className="container-page relative z-10 flex min-h-[78svh] flex-col justify-end pb-16 pt-32 sm:pt-40">
+        <div className="container-page relative z-10 flex h-full flex-col justify-end pb-16">
           <span className="inline-flex w-fit rounded bg-brand-rust px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em]">
             {exp.badge}
           </span>

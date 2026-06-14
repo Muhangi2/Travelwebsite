@@ -1,147 +1,252 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
-import SplitText from '@/components/ui/SplitText'
+import { useEffect, useRef, useState } from 'react'
 import AnimateIn from '@/components/ui/AnimateIn'
-import Marquee from '@/components/ui/Marquee'
+import SplitText from '@/components/ui/SplitText'
 
-type Props = { highlights: string[] }
+type Props = {
+  highlights: string[]
+  images?: string[]
+}
 
-const MARQUEE_ITEMS = [
-  'Expert-guided trekking',
-  'Habituated gorilla families',
-  'Luxury forest lodges',
-  'Ancient Bwindi rainforest',
-  'Private driver-guide',
-  'All meals included',
-  'Emergency evacuation cover',
-  'Uganda Wildlife Authority permits',
+const SCENIC_IMAGES = [
+  '/images/parks/uganda/murchison-falls/mf-1.jpg',
+  '/images/destinations/rwanda/image-20260331125636.jpg',
+  '/images/parks/uganda/murchison-falls/dsc-6951.jpg',
+  '/images/activities/helicopter-rwanda/1000045711.jpg',
+  '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
+  '/images/destinations/rwanda/image-20260331125652.jpg',
+  '/images/parks/uganda/murchison-falls/dsc-7494.jpg',
+  '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.jpg',
+  '/images/destinations/rwanda/image-20260331125729.jpg',
+  '/images/parks/uganda/murchison-falls/dsc-7442.jpg',
+  '/images/activities/big-five/singita-boulders-lodge-20.jpg',
+  '/images/activities/game-drive/roho-ya-selous-fishing-at-sunrise.jpg',
+  '/images/destinations/rwanda/image-20260331125705.jpg',
+  '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
+  '/images/activities/big-five/singita-boulders-lodge-21.jpg',
 ]
 
-const ROTATIONS = [-7, 6, -5, 8, -6, 5, -4, 7]
+function HighlightCard({ text, image, index }: { text: string; image: string; index: number }) {
+  const cardRef = useRef<HTMLDivElement>(null)
+  const imgRef = useRef<HTMLImageElement>(null)
+  const shimmerRef = useRef<HTMLDivElement>(null)
+  const [hovered, setHovered] = useState(false)
 
-function ThrowIn({
-  children,
-  delay = 0,
-  rotate = -5,
-}: {
-  children: ReactNode
-  delay?: number
-  rotate?: number
-}) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [triggered, setTriggered] = useState(false)
+  function onMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    const el = cardRef.current
+    const img = imgRef.current
+    if (!el || !img) return
+    const { top, height } = el.getBoundingClientRect()
+    const y = (e.clientY - top) / height
+    const shift = (y - 0.5) * -18
+    img.style.transform = `scale(1.1) translateY(${shift}px)`
+  }
 
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) { setTriggered(true); obs.disconnect() }
-      },
-      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' },
-    )
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [])
+  function onMouseEnter() {
+    setHovered(true)
+    if (imgRef.current) imgRef.current.style.transform = 'scale(1.1) translateY(0px)'
+  }
+
+  function onMouseLeave() {
+    setHovered(false)
+    if (imgRef.current) {
+      imgRef.current.style.transform = 'scale(1) translateY(0px)'
+    }
+  }
 
   return (
-    <div
-      ref={ref}
-      style={
-        {
-          '--tr': `${rotate}deg`,
-          animation: triggered
-            ? `card-thrown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}ms both`
-            : undefined,
-          opacity: triggered ? undefined : 0,
-        } as React.CSSProperties
-      }
+    <AnimateIn
+      variant="blur-up"
+      delay={index * 90}
+      duration={750}
+      className="shrink-0 snap-start"
+      style={{ width: 'clamp(240px, 78vw, 300px)' }}
     >
-      {children}
-    </div>
+      <div
+        ref={cardRef}
+        onMouseMove={onMouseMove}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        className="group relative h-[380px] sm:h-[440px] lg:h-[480px] w-full overflow-hidden rounded-2xl cursor-default"
+        style={{
+          transition: 'transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s cubic-bezier(0.22,1,0.36,1)',
+          transform: hovered ? 'translateY(-10px)' : 'translateY(0)',
+          boxShadow: hovered ? '0 32px 64px rgba(0,0,0,0.55)' : '0 4px 20px rgba(0,0,0,0.25)',
+        }}
+      >
+        {/* Parallax image */}
+        <img
+          ref={imgRef}
+          src={image}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{ transition: 'transform 0.45s cubic-bezier(0.22,1,0.36,1)', transform: 'scale(1) translateY(0px)', willChange: 'transform' }}
+          loading={index < 3 ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+
+        {/* Gradient — lightens slightly on hover to reveal more image */}
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/5"
+          style={{ transition: 'opacity 0.5s ease', opacity: hovered ? 0.8 : 1 }}
+        />
+
+        {/* Shimmer sweep */}
+        <div
+          ref={shimmerRef}
+          className="absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent via-white/12 to-transparent"
+          style={{
+            transform: hovered ? 'translateX(110%)' : 'translateX(-110%)',
+            transition: hovered ? 'transform 0.65s cubic-bezier(0.22,1,0.36,1)' : 'none',
+          }}
+        />
+
+        {/* Number watermark */}
+        <span
+          className="absolute top-4 left-5 font-serif leading-none select-none pointer-events-none"
+          style={{
+            fontSize: hovered ? '64px' : '48px',
+            color: hovered ? 'rgba(255,255,255,0.14)' : 'rgba(255,255,255,0.07)',
+            transition: 'font-size 0.5s cubic-bezier(0.22,1,0.36,1), color 0.5s ease',
+          }}
+        >
+          {String(index + 1).padStart(2, '0')}
+        </span>
+
+        {/* Check badge — inverts on hover */}
+        <div
+          className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center rounded-full backdrop-blur-sm"
+          style={{
+            background: hovered ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.15)',
+            boxShadow: hovered ? '0 0 0 1px rgba(255,255,255,1)' : '0 0 0 1px rgba(255,255,255,0.25)',
+            transition: 'background 0.35s ease, box-shadow 0.35s ease',
+          }}
+        >
+          <svg
+            width="12" height="12" viewBox="0 0 24 24" fill="none"
+            stroke={hovered ? '#000' : '#fff'}
+            strokeWidth="2.5"
+            style={{ transition: 'stroke 0.35s ease' }}
+          >
+            <path d="M5 12l5 5L20 7" />
+          </svg>
+        </div>
+
+        {/* Bottom text block */}
+        <div
+          className="absolute inset-x-0 bottom-0 p-5 sm:p-6"
+          style={{
+            transform: hovered ? 'translateY(0)' : 'translateY(6px)',
+            transition: 'transform 0.5s cubic-bezier(0.22,1,0.36,1)',
+          }}
+        >
+          {/* Line expands to full width on hover */}
+          <div
+            className="mb-3 h-[1.5px] rounded-full bg-white"
+            style={{
+              width: hovered ? '100%' : '28px',
+              opacity: hovered ? 0.3 : 0.5,
+              transition: 'width 0.6s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease',
+            }}
+          />
+          <p className="font-serif text-[15px] sm:text-[17px] lg:text-[18px] font-medium leading-snug text-white">
+            {text}
+          </p>
+        </div>
+      </div>
+    </AnimateIn>
   )
 }
 
-export default function TourHighlights({ highlights }: Props) {
-  return (
-    <section className="relative bg-black overflow-hidden">
-      <style>{`
-        @keyframes card-thrown {
-          from {
-            opacity: 0;
-            transform: translateY(-55px) rotate(var(--tr, -5deg)) scale(0.78);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) rotate(0deg) scale(1);
-          }
-        }
-      `}</style>
+export default function TourHighlights({ highlights, images }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
 
-      {/* Decorative orbs */}
-      <div className="pointer-events-none absolute -top-20 left-10 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
-      <div className="pointer-events-none absolute top-40 right-0 h-96 w-96 rounded-full bg-white/4 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white/3 blur-3xl" />
+  const updateArrows = () => {
+    const el = scrollRef.current
+    if (!el) return
+    setCanScrollLeft(el.scrollLeft > 10)
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10)
+  }
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    el.addEventListener('scroll', updateArrows, { passive: true })
+    updateArrows()
+    return () => el.removeEventListener('scroll', updateArrows)
+  }, [])
+
+  const scroll = (dir: 'left' | 'right') => {
+    scrollRef.current?.scrollBy({ left: dir === 'right' ? 320 : -320, behavior: 'smooth' })
+  }
+
+  // Use ALL journey images (hero + every day image) before falling back to scenic
+  // Deduplicate so no image appears twice
+  const raw = images && images.length ? [...images, ...SCENIC_IMAGES] : SCENIC_IMAGES
+  const seen = new Set<string>()
+  const pool = raw.filter((src) => { if (seen.has(src)) return false; seen.add(src); return true })
+
+  return (
+    <section className="bg-black py-10 sm:py-14 lg:py-20">
 
       {/* Header */}
-      <div className="container-page relative py-12 sm:py-16 lg:py-20">
-        <div className="grid lg:grid-cols-[1fr_260px] gap-8 lg:gap-10 items-end">
-          <div>
+      <div className="container-page mb-7 sm:mb-10">
+        <div className="flex items-end justify-between gap-6">
+          <div className="flex-1 min-w-0">
             <AnimateIn variant="fade-up" duration={500}>
-              <p className="eyebrow mb-4 sm:mb-5 text-white/50">Journey Highlights</p>
+              <p className="eyebrow mb-4 text-white/50">Journey Highlights</p>
             </AnimateIn>
             <SplitText
               text="What makes this journey unforgettable"
               as="h2"
-              className="font-serif text-3xl sm:text-4xl lg:text-[3.5rem] leading-[1.1] text-white"
+              className="font-serif text-2xl sm:text-4xl lg:text-5xl leading-[1.1] text-white"
               delay={60}
-              stagger={45}
+              stagger={40}
             />
           </div>
-          <AnimateIn variant="fade-up" delay={350} duration={700}>
-            <div className="lg:mb-1 space-y-4">
-              <div className="h-[1.5px] w-12 rounded-full bg-white/60" />
-              <p className="text-sm leading-relaxed text-white/40">
-                Every element curated for your comfort, wonder, and absolute peace of mind.
-              </p>
+
+          <AnimateIn variant="fade-up" delay={300} duration={600}>
+            <div className="hidden sm:flex shrink-0 gap-2">
+              <button
+                onClick={() => scroll('left')}
+                disabled={!canScrollLeft}
+                aria-label="Previous"
+                className="flex h-11 w-11 items-center justify-center rounded-full ring-1 ring-white/20 text-white transition hover:bg-white/10 disabled:opacity-25"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                disabled={!canScrollRight}
+                aria-label="Next"
+                className="flex h-11 w-11 items-center justify-center rounded-full ring-1 ring-white/20 text-white transition hover:bg-white/10 disabled:opacity-25"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
             </div>
           </AnimateIn>
         </div>
       </div>
 
-      {/* Marquee */}
-      <div className="border-y border-white/10 bg-white/5 py-4">
-        <Marquee items={MARQUEE_ITEMS} speed={30} className="text-white/30" />
-      </div>
-
-      {/* Cards */}
-      <div className="container-page relative py-8 sm:py-12 lg:py-16">
-        <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-          {highlights.map((item, i) => (
-            <ThrowIn key={i} delay={i * 110} rotate={ROTATIONS[i % ROTATIONS.length]}>
-              <div className="group relative flex h-full min-h-[130px] sm:min-h-[160px] flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_64px_rgba(0,0,0,0.8)] bg-white/[0.06] ring-1 ring-white/[0.12] hover:bg-white/[0.10] hover:ring-white/25">
-
-                {/* Inner shimmer */}
-                <div className="pointer-events-none absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/8 via-transparent to-transparent" />
-
-                {/* Watermark number */}
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute -bottom-4 -right-1 select-none font-serif text-[64px] sm:text-[96px] leading-none text-white/[0.04]"
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-
-                {/* Accent line */}
-                <div className="relative mb-3 sm:mb-6 h-[1.5px] w-6 sm:w-8 rounded-full bg-white/50 transition-all duration-500 group-hover:w-12 sm:group-hover:w-16 group-hover:bg-white" />
-
-                {/* Text */}
-                <p className="relative z-10 flex-1 text-[12px] sm:text-[14px] lg:text-[15px] font-medium leading-relaxed text-white/65 group-hover:text-white/90 transition-colors duration-300">
-                  {item}
-                </p>
-              </div>
-            </ThrowIn>
-          ))}
-        </ul>
+      {/* Carousel */}
+      <div
+        ref={scrollRef}
+        className="flex gap-3 sm:gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 sm:px-6 lg:px-8 pb-4"
+        style={{ scrollbarWidth: 'none' }}
+      >
+        {highlights.map((text, i) => (
+          <HighlightCard
+            key={i}
+            text={text}
+            image={pool[i % pool.length]}
+            index={i}
+          />
+        ))}
       </div>
     </section>
   )

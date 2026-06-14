@@ -135,7 +135,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 items-center gap-6 border-t border-white/10 pt-10 sm:grid-cols-3 sm:gap-8">
+        <div className="mt-14 grid grid-cols-3 items-center gap-4 border-t border-white/10 pt-10 sm:gap-8">
           {destinations.map((d) => (
             <div key={d.label} className="flex items-center justify-center">
               <img

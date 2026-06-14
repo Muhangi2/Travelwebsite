@@ -4,7 +4,7 @@ import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
 
 export default function AboutHero() {
   return (
-    <section className="relative isolate min-h-[80svh] overflow-hidden">
+    <section className="relative isolate h-[100svh] overflow-hidden">
       <Picture
         src="/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg"
         alt="Mountain gorilla in Bwindi Impenetrable Forest"
@@ -13,7 +13,7 @@ export default function AboutHero() {
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/45 to-black/70" />
 
-      <div className="container-page flex min-h-[80svh] items-center justify-center pt-28 pb-16 text-center text-white sm:pt-32">
+      <div className="container-page flex h-full items-center justify-center text-center text-white">
         <HeroStagger className="max-w-3xl">
           <HeroItem>
             <p className="eyebrow text-white/70">Our Story</p>

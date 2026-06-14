@@ -36,6 +36,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
 
   body {
@@ -43,6 +44,7 @@
     min-height: 100svh;
     line-height: 1.6;
     color: var(--color-brand-charcoal);
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4 {

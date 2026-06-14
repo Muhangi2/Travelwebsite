@@ -60,13 +60,13 @@ function BulletList({ items }: { items: string[] }) {
 export default function PrivacyPolicy() {
   return (
     <>
-      <section className="relative isolate min-h-[45svh] overflow-hidden">
+      <section className="relative isolate h-[100svh] overflow-hidden">
         <Picture
           src="/images/parks/rwanda/volcanoes/wilderness-bisate.jpg"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover" loading="lazy" decoding="async" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/40 to-black/65" />
-        <div className="container-page flex min-h-[45svh] items-center justify-center pt-28 pb-12 text-center text-white sm:pt-32">
+        <div className="container-page flex h-full items-center justify-center text-center text-white">
           <div className="max-w-3xl">
             <p className="eyebrow text-brand-gold">Legal</p>
             <h1 className="text-display mt-3 text-white">Privacy Policy</h1>

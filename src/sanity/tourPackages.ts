@@ -222,7 +222,14 @@ export function useTourPackage(slug: string | undefined): { journey: JourneyData
       .then((data) => {
         if (cancelled || !data) return
         const mapped = toJourneyData(data)
-        if (mapped) setJourney(mapped)
+        if (mapped) setJourney((prev) => ({
+          highlights: prev?.highlights,
+          included:   prev?.included,
+          notIncluded: prev?.notIncluded,
+          faq:        prev?.faq,
+          waypoints:  prev?.waypoints,
+          ...mapped,
+        }))
       })
       .catch((err) => {
         console.warn('Sanity tour package fetch failed, using local data:', err)

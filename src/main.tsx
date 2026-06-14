@@ -6,6 +6,7 @@ import Layout from '@/components/layout/Layout'
 import Home from '@/pages/Home'
 import SafariCollections from '@/pages/SafariCollections'
 import SafariCollectionDetail from '@/pages/SafariCollectionDetail'
+import SafariDayDetail from '@/pages/SafariDayDetail'
 import Destinations from '@/pages/Destinations'
 import DestinationCountry from '@/pages/DestinationCountry'
 import NationalPark from '@/pages/NationalPark'
@@ -37,6 +38,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/" element={<Home />} />
           <Route path="/safari-collections" element={<SafariCollections />} />
           <Route path="/safari-collections/:slug" element={<SafariCollectionDetail />} />
+          <Route path="/safari-collections/:slug/day/:day" element={<SafariDayDetail />} />
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/destinations/:country" element={<DestinationCountry />} />
           <Route path="/destinations/:country/:park" element={<NationalPark />} />

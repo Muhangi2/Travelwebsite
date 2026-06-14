@@ -13,7 +13,7 @@ export default function FlyInOption() {
           </h2>
         </Reveal>
 
-        <div className="mt-8 sm:mt-12 grid items-center gap-8 sm:gap-10 md:grid-cols-2">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 items-center gap-8 sm:gap-10 md:grid-cols-2">
           <Reveal variant="left">
             <div className="img-zoom min-h-[220px] overflow-hidden rounded-md shadow-md">
               <Picture

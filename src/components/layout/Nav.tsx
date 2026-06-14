@@ -30,6 +30,9 @@ const links: NavLinkItem[] = [
   { to: '/contact', label: 'Contact Us' },
 ]
 
+const leftLinks = links.slice(0, 3)
+const rightLinks = links.slice(3)
+
 const HOVER_CLOSE_DELAY = 160
 
 export default function Nav() {
@@ -43,8 +46,9 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
   const [navVisible, setNavVisible] = useState(true)
-  const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+  const hasDarkHero = true
+  const [scrolled, setScrolled] = useState(!hasDarkHero)
   const destTimer = useRef<number | null>(null)
   const aboutTimer = useRef<number | null>(null)
   const lastScrollY = useRef(0)
@@ -56,12 +60,13 @@ export default function Nav() {
     }
   }, [mobileOpen])
 
-  // Close all menus on route change
+  // Close all menus and reset nav style on route change
   useEffect(() => {
     setMobileOpen(false)
     setDestOpen(false)
     setAboutOpen(false)
     setMobileExpanded(null)
+    setScrolled(window.scrollY > 60)
   }, [location.pathname])
 
   // Escape closes any open menu
@@ -112,7 +117,7 @@ export default function Nav() {
   const activeIndicator = scrolled ? 'border-black' : 'border-white'
 
   const navItemClass = (active: boolean, open: boolean) =>
-    `inline-flex items-center gap-1 text-[11px] font-bold tracking-[0.2em] transition ${linkColor} ${
+    `inline-flex items-center gap-1 whitespace-nowrap text-[11px] font-bold tracking-[0.2em] transition ${linkColor} ${
       active || open ? `border-b-2 ${activeIndicator} pb-1` : ''
     }`
 
@@ -125,13 +130,13 @@ export default function Nav() {
       } ${
         navVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
       }`}>
-        <div className="container-page flex h-20 items-center justify-between sm:h-[7rem] md:h-[8rem] lg:h-[9rem]">
-          <NavLink to="/" onClick={() => setMobileOpen(false)} className="flex shrink-0 items-center">
-            <Logo />
-          </NavLink>
 
-          <nav className="hidden items-center gap-7 lg:flex">
-            {links.map((l) => {
+        {/* ── Desktop: centred-logo split nav ── */}
+        <div className="container-page hidden h-[9rem] items-center lg:grid lg:grid-cols-[1fr_auto_1fr]">
+
+          {/* Left links */}
+          <nav className="flex items-center gap-6 xl:gap-8">
+            {leftLinks.map((l) => {
               if (l.hasFlyout) {
                 return (
                   <div
@@ -148,15 +153,8 @@ export default function Nav() {
                       className={({ isActive }) => navItemClass(isActive, destOpen)}
                     >
                       {l.label.toUpperCase()}
-                      <svg
-                        width="10"
-                        height="10"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        className={`transition-transform ${destOpen ? 'rotate-180' : ''}`}
-                      >
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+                        className={`transition-transform ${destOpen ? 'rotate-180' : ''}`}>
                         <path d="M6 9l6 6 6-6" />
                       </svg>
                     </NavLink>
@@ -164,7 +162,27 @@ export default function Nav() {
                   </div>
                 )
               }
+              return (
+                <NavLink key={l.to} to={l.to} end={l.to === '/'}
+                  className={({ isActive }) => navItemClass(isActive, false)}>
+                  {l.label.toUpperCase()}
+                </NavLink>
+              )
+            })}
+          </nav>
 
+          {/* Centre logo */}
+          <NavLink
+            to="/"
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center justify-center px-8"
+          >
+            <Logo />
+          </NavLink>
+
+          {/* Right links + CTA */}
+          <nav className="flex items-center justify-end gap-6 xl:gap-8">
+            {rightLinks.map((l) => {
               if (l.subLinks) {
                 return (
                   <div
@@ -182,15 +200,8 @@ export default function Nav() {
                       className={({ isActive }) => navItemClass(isActive, aboutOpen)}
                     >
                       {l.label.toUpperCase()}
-                      <svg
-                        width="10"
-                        height="10"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        className={`transition-transform ${aboutOpen ? 'rotate-180' : ''}`}
-                      >
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+                        className={`transition-transform ${aboutOpen ? 'rotate-180' : ''}`}>
                         <path d="M6 9l6 6 6-6" />
                       </svg>
                     </NavLink>
@@ -205,9 +216,7 @@ export default function Nav() {
                                 onClick={() => setAboutOpen(false)}
                                 className={({ isActive }) =>
                                   `block px-4 py-2.5 text-sm transition ${
-                                    isActive
-                                      ? 'bg-white/10 font-medium text-white'
-                                      : 'text-white/75 hover:bg-white/5 hover:text-white'
+                                    isActive ? 'bg-white/10 font-medium text-white' : 'text-white/75 hover:bg-white/5 hover:text-white'
                                   }`
                                 }
                               >
@@ -221,24 +230,20 @@ export default function Nav() {
                   </div>
                 )
               }
-
               return (
-                <NavLink
-                  key={l.to}
-                  to={l.to}
-                  end={l.to === '/'}
-                  className={({ isActive }) => navItemClass(isActive, false)}
-                >
+                <NavLink key={l.to} to={l.to} end={l.to === '/'}
+                  className={({ isActive }) => navItemClass(isActive, false)}>
                   {l.label.toUpperCase()}
                 </NavLink>
               )
             })}
-          </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Thin divider */}
+            <span className={`h-4 w-px ${scrolled ? 'bg-black/20' : 'bg-white/30'}`} />
+
             <NavLink
               to="/contact"
-              className={`hidden rounded-full border px-4 py-2 text-[10px] font-medium tracking-[0.2em] transition sm:inline-flex sm:px-5 sm:text-xs ${
+              className={`rounded-full border px-4 py-2 text-[10px] font-medium tracking-[0.2em] transition xl:px-5 xl:text-xs ${
                 scrolled
                   ? 'border-black bg-black text-white hover:bg-neutral-800'
                   : 'border-white bg-white/10 text-white backdrop-blur hover:bg-white/20'
@@ -246,26 +251,44 @@ export default function Nav() {
             >
               INQUIRE NOW
             </NavLink>
-            <button
-              aria-label="Toggle menu"
-              aria-expanded={mobileOpen}
-              onClick={() => setMobileOpen((v) => !v)}
-              className={`flex h-10 w-10 items-center justify-center rounded-full transition lg:hidden ${
-                scrolled ? 'text-black hover:bg-black/10' : 'text-white hover:bg-white/10'
-              }`}
-            >
-              {mobileOpen ? (
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M6 6l12 12M6 18L18 6" />
-                </svg>
-              ) : (
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M4 7h16M4 12h16M4 17h16" />
-                </svg>
-              )}
-            </button>
-          </div>
+          </nav>
         </div>
+
+        {/* ── Mobile: logo centred absolutely, hamburger left ── */}
+        <div className="container-page relative flex h-20 items-center sm:h-[7rem] md:h-[8rem] lg:hidden">
+          {/* Burger left */}
+          <button
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((v) => !v)}
+            className={`flex h-10 w-10 items-center justify-center rounded-full transition ${
+              scrolled ? 'text-black hover:bg-black/10' : 'text-white hover:bg-white/10'
+            }`}
+          >
+            {mobileOpen ? (
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M6 6l12 12M6 18L18 6" />
+              </svg>
+            ) : (
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            )}
+          </button>
+
+          {/* Logo absolutely centred */}
+          <NavLink
+            to="/"
+            onClick={() => setMobileOpen(false)}
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <Logo />
+          </NavLink>
+
+          {/* Right spacer to balance burger */}
+          <div className="ml-auto h-10 w-10" />
+        </div>
+
       </header>
 
       {/* Mobile drawer */}
