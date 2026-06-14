@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { useTourPackage } from '@/sanity/tourPackages'
+import Picture from '@/components/Picture'
 
 function parseAccommodation(raw: string): { tier: string | null; name: string }[] {
   if (!raw || raw === '—') return []
@@ -202,8 +203,7 @@ export default function SafariDayDetail() {
                   to={`/safari-collections/${slug}/day/${prev.day}`}
                   className="group relative h-52 overflow-hidden rounded-2xl sm:h-64"
                 >
-                  <img src={prev.image} alt={prev.title} loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <Picture src={prev.image} alt={prev.title} loading="lazy" imgClassName="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-5">
                     <p className="mb-1 flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-white/50">
@@ -220,8 +220,7 @@ export default function SafariDayDetail() {
                   to={`/safari-collections/${slug}/day/${next.day}`}
                   className="group relative h-52 overflow-hidden rounded-2xl sm:h-64"
                 >
-                  <img src={next.image} alt={next.title} loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <Picture src={next.image} alt={next.title} loading="lazy" imgClassName="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-5 text-right">
                     <p className="mb-1 flex items-center justify-end gap-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-white/50">

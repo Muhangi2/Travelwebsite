@@ -1,5 +1,6 @@
 import type { Country } from '@/data/destinations'
 import Reveal, { Stagger } from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 export default function PrivilegedAccess({ items }: { items: Country['privilegedAccess'] }) {
   return (
@@ -18,7 +19,7 @@ export default function PrivilegedAccess({ items }: { items: Country['privileged
           {items.map((it) => (
             <article key={it.title} className="card-lift overflow-hidden rounded-md bg-white text-neutral-800 shadow-md">
               <div className="img-zoom aspect-[4/3] overflow-hidden">
-                <img src={it.image} alt={it.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                <Picture src={it.image} alt={it.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
               </div>
               <div className="p-5">
                 <h3 className="font-serif text-base">{it.title}</h3>

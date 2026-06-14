@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useParams, Navigate, NavLink } from 'react-router-dom'
 import { useExperience, useExperiences } from '@/sanity/experiences'
+import Picture from '@/components/Picture'
 
 export default function ExperienceDetail() {
   const { slug } = useParams<{ slug: string }>()
@@ -21,11 +22,12 @@ export default function ExperienceDetail() {
   return (
     <>
       <section className="relative h-[100svh] overflow-hidden bg-brand-ink text-white">
-        <img
+        <Picture
           src={exp.image}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover"
           loading="eager"
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/40" />
         <div className="container-page relative z-10 flex h-full flex-col justify-end pb-16">
@@ -130,7 +132,7 @@ export default function ExperienceDetail() {
             <div className="mx-auto mt-10 grid max-w-6xl gap-3 sm:grid-cols-2 sm:gap-4 md:mt-12 md:grid-cols-4">
               {exp.gallery.slice(0, 8).map((src, i) => (
                 <div key={i} className="aspect-[4/5] overflow-hidden rounded-xl">
-                  <img src={src} alt="" loading="lazy" className="h-full w-full object-cover transition duration-700 hover:scale-105" />
+                  <Picture src={src} alt="" loading="lazy" imgClassName="h-full w-full object-cover transition duration-700 hover:scale-105" />
                 </div>
               ))}
             </div>
@@ -139,7 +141,7 @@ export default function ExperienceDetail() {
       )}
 
       <section className="relative overflow-hidden bg-brand-ink py-20 text-white sm:py-24">
-        <img src={exp.image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" loading="lazy" />
+        <Picture src={exp.image} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/85 via-brand-ink/70 to-brand-ink/90" />
         <div className="container-page relative z-10 text-center">
           <p className="eyebrow text-brand-gold">Ready to Plan?</p>

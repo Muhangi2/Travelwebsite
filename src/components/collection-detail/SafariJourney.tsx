@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 export type JourneyDay = {
   day: number
@@ -49,7 +50,7 @@ export default function SafariJourney({ days }: { days: JourneyDay[] }) {
               </p>
             </div>
             <div className="img-zoom overflow-hidden">
-              <img src={day.image} alt={day.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+              <Picture src={day.image} alt={day.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
             </div>
           </article>
         </Reveal>

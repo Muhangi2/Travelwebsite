@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTourPackages } from '@/sanity/tourPackages'
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 const tagIcon: Record<string, React.ReactNode> = {
   'Luxury Adventure': (
@@ -39,7 +40,7 @@ export default function CollectionsGrid() {
               className="card-lift group block overflow-hidden rounded-md bg-white shadow-sm ring-1 ring-neutral-200"
             >
               <div className="img-zoom relative aspect-[4/3]">
-                <img src={j.image} alt={j.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+                <Picture src={j.image} alt={j.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                 {j.country && (
                   <span className="absolute right-4 top-4 rounded-full bg-black px-4 py-1 text-[10px] tracking-[0.2em] text-white">
                     {j.country}

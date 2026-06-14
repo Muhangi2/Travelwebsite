@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { NavLink } from 'react-router-dom'
+import Picture from '@/components/Picture'
 
 const SLIDE_INTERVAL = 2500
 const TRANSITION_MS = 700
@@ -406,7 +407,7 @@ export default function StoriesCarousel() {
                       active ? 'ring-brand-rust' : 'opacity-60 ring-transparent hover:opacity-100'
                     }`}
                   >
-                    <img src={exp.image} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+                    <Picture src={exp.image} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
                     <span className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/10" />
                     <span className="absolute inset-x-0 bottom-0 truncate px-1 pb-0.5 text-[8px] font-semibold uppercase tracking-wider text-white">
                       {exp.badge}
