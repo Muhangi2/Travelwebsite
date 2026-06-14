@@ -8,7 +8,7 @@ type Props = {
 
 export default function DestinationHero({ title, subtitle, image }: Props) {
   return (
-    <section className="relative isolate min-h-[75svh] overflow-hidden">
+    <section className="relative isolate h-[100svh] overflow-hidden">
       <img
         src={image}
         alt={title}
@@ -17,7 +17,7 @@ export default function DestinationHero({ title, subtitle, image }: Props) {
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
 
-      <div className="container-page flex min-h-[75svh] items-center justify-center pt-28 pb-16 text-center text-white sm:pt-32">
+      <div className="container-page flex h-full items-center justify-center text-center text-white">
         <HeroStagger className="max-w-4xl">
           <HeroItem>
             <h1 className="text-display whitespace-pre-line text-white">{title}</h1>

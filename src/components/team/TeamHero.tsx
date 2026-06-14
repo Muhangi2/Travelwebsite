@@ -3,7 +3,7 @@ import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
 
 export default function TeamHero() {
   return (
-    <section className="relative isolate min-h-[60svh] overflow-hidden">
+    <section className="relative isolate h-[100svh] overflow-hidden">
       <Picture
         src="/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg"
         alt="Still Wild Safaris team in the field"
@@ -12,7 +12,7 @@ export default function TeamHero() {
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/40 to-black/65" />
 
-      <div className="container-page flex min-h-[60svh] items-center justify-center pt-28 pb-14 text-center text-white sm:pt-32">
+      <div className="container-page flex h-full items-center justify-center text-center text-white">
         <HeroStagger className="max-w-3xl">
           <HeroItem>
             <p className="eyebrow text-white/70">Our Team</p>

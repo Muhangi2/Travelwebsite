@@ -8,7 +8,7 @@ type Props = {
 
 export default function DetailHero({ title, subtitle, image }: Props) {
   return (
-    <section className="relative isolate min-h-[70svh] overflow-hidden">
+    <section className="relative isolate h-[100svh] overflow-hidden">
       <img
         src={image}
         alt={title}
@@ -17,7 +17,7 @@ export default function DetailHero({ title, subtitle, image }: Props) {
       />
       <div className="absolute inset-0 -z-10 bg-black/50" />
 
-      <div className="mx-auto flex min-h-[70svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
+      <div className="mx-auto flex h-full max-w-5xl items-center justify-center px-6 text-center text-white">
         <HeroStagger>
           <HeroItem>
             <h1 className="whitespace-pre-line font-serif text-3xl leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">{title}</h1>

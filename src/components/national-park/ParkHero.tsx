@@ -10,7 +10,7 @@ type Props = {
 
 export default function ParkHero({ name, blurb, image }: Props) {
   return (
-    <section className="relative isolate min-h-[55svh] overflow-hidden">
+    <section className="relative isolate h-[100svh] overflow-hidden">
       <Picture
         src={image}
         alt={name}
@@ -21,7 +21,7 @@ export default function ParkHero({ name, blurb, image }: Props) {
       />
       <div className="absolute inset-0 -z-10 bg-black/55" />
 
-      <div className="mx-auto flex min-h-[55svh] max-w-3xl items-center justify-center px-6 pt-24 text-center text-white">
+      <div className="mx-auto flex h-full max-w-3xl items-center justify-center px-6 text-center text-white">
         <HeroStagger>
           <HeroItem>
             <h1 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">{name}</h1>

@@ -40,7 +40,7 @@ export default function SafariDayDetail() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative isolate flex min-h-[90svh] flex-col justify-end overflow-hidden">
+      <section className="relative isolate flex h-[100svh] flex-col justify-end overflow-hidden">
         <img
           src={current.image}
           alt={current.title}
