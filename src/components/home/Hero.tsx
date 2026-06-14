@@ -12,7 +12,8 @@ export default function Hero() {
         playsInline
         poster="/images/destinations/rwanda/image-20260331125636.jpg"
       >
-        <source src="/videos/homepagevideo.mp4" type="video/mp4" />
+        <source src="/videos/smallscrensize.mp4" type="video/mp4" media="(max-width: 767px)" />
+        <source src="/videos/bigscreensiz.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent" />

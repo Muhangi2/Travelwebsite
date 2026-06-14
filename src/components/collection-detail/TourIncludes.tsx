@@ -44,10 +44,10 @@ export default function TourIncludes({ included, notIncluded }: Props) {
 
       {/* Split panel */}
       <div className="container-page pb-10 sm:pb-16 lg:pb-20">
-        <div className="grid lg:grid-cols-2 rounded-2xl overflow-hidden shadow-sm ring-1 ring-neutral-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden shadow-sm ring-1 ring-neutral-200">
 
           {/* LEFT — dark included */}
-          <div className="bg-[#0d1f1e] px-6 py-10 sm:px-10 sm:py-14 lg:px-14 xl:px-20">
+          <div className="bg-black px-6 py-10 sm:px-10 sm:py-14 lg:px-14 xl:px-20">
             <div className="flex items-center gap-4 mb-6 sm:mb-10">
               <AnimateIn variant="count-in" duration={1000}>
                 <span className="font-serif text-[48px] sm:text-[64px] leading-none text-teal-800/40 select-none animate-float-slow">

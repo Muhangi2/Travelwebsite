@@ -1,147 +1,157 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
-import SplitText from '@/components/ui/SplitText'
+import { useEffect, useRef, useState } from 'react'
 import AnimateIn from '@/components/ui/AnimateIn'
-import Marquee from '@/components/ui/Marquee'
+import SplitText from '@/components/ui/SplitText'
 
-type Props = { highlights: string[] }
-
-const MARQUEE_ITEMS = [
-  'Expert-guided trekking',
-  'Habituated gorilla families',
-  'Luxury forest lodges',
-  'Ancient Bwindi rainforest',
-  'Private driver-guide',
-  'All meals included',
-  'Emergency evacuation cover',
-  'Uganda Wildlife Authority permits',
-]
-
-const ROTATIONS = [-7, 6, -5, 8, -6, 5, -4, 7]
-
-function ThrowIn({
-  children,
-  delay = 0,
-  rotate = -5,
-}: {
-  children: ReactNode
-  delay?: number
-  rotate?: number
-}) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [triggered, setTriggered] = useState(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) { setTriggered(true); obs.disconnect() }
-      },
-      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' },
-    )
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [])
-
-  return (
-    <div
-      ref={ref}
-      style={
-        {
-          '--tr': `${rotate}deg`,
-          animation: triggered
-            ? `card-thrown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}ms both`
-            : undefined,
-          opacity: triggered ? undefined : 0,
-        } as React.CSSProperties
-      }
-    >
-      {children}
-    </div>
-  )
+type Props = {
+  highlights: string[]
+  images?: string[]
 }
 
-export default function TourHighlights({ highlights }: Props) {
-  return (
-    <section className="relative bg-black overflow-hidden">
-      <style>{`
-        @keyframes card-thrown {
-          from {
-            opacity: 0;
-            transform: translateY(-55px) rotate(var(--tr, -5deg)) scale(0.78);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) rotate(0deg) scale(1);
-          }
-        }
-      `}</style>
+// Curated scenic/landscape images — never animal close-ups
+const SCENIC_IMAGES = [
+  '/images/parks/uganda/murchison-falls/mf-1.jpg',
+  '/images/destinations/rwanda/image-20260331125636.jpg',
+  '/images/parks/uganda/murchison-falls/dsc-6951.jpg',
+  '/images/activities/helicopter-rwanda/1000045711.jpg',
+  '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
+  '/images/destinations/rwanda/image-20260331125652.jpg',
+  '/images/parks/uganda/murchison-falls/dsc-7494.jpg',
+  '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.jpg',
+  '/images/destinations/rwanda/image-20260331125729.jpg',
+  '/images/parks/uganda/murchison-falls/dsc-7442.jpg',
+  '/images/activities/big-five/singita-boulders-lodge-20.jpg',
+  '/images/activities/game-drive/roho-ya-selous-fishing-at-sunrise.jpg',
+  '/images/destinations/rwanda/image-20260331125705.jpg',
+  '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
+  '/images/activities/big-five/singita-boulders-lodge-21.jpg',
+]
 
-      {/* Decorative orbs */}
-      <div className="pointer-events-none absolute -top-20 left-10 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
-      <div className="pointer-events-none absolute top-40 right-0 h-96 w-96 rounded-full bg-white/4 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-white/3 blur-3xl" />
+export default function TourHighlights({ highlights, images }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const updateArrows = () => {
+    const el = scrollRef.current
+    if (!el) return
+    setCanScrollLeft(el.scrollLeft > 10)
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10)
+  }
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    el.addEventListener('scroll', updateArrows, { passive: true })
+    updateArrows()
+    return () => el.removeEventListener('scroll', updateArrows)
+  }, [])
+
+  const scroll = (dir: 'left' | 'right') => {
+    scrollRef.current?.scrollBy({ left: dir === 'right' ? 320 : -320, behavior: 'smooth' })
+  }
+
+  // Use curated scenic images, fall back to journey heroImage if provided
+  const pool = images && images.length
+    ? [images[0], ...SCENIC_IMAGES]   // heroImage first, then scenic
+    : SCENIC_IMAGES
+
+  return (
+    <section className="bg-black py-14 sm:py-20">
 
       {/* Header */}
-      <div className="container-page relative py-12 sm:py-16 lg:py-20">
-        <div className="grid lg:grid-cols-[1fr_260px] gap-8 lg:gap-10 items-end">
-          <div>
+      <div className="container-page mb-10">
+        <div className="flex items-end justify-between gap-6">
+          <div className="flex-1 min-w-0">
             <AnimateIn variant="fade-up" duration={500}>
-              <p className="eyebrow mb-4 sm:mb-5 text-white/50">Journey Highlights</p>
+              <p className="eyebrow mb-4 text-white/50">Journey Highlights</p>
             </AnimateIn>
             <SplitText
               text="What makes this journey unforgettable"
               as="h2"
-              className="font-serif text-3xl sm:text-4xl lg:text-[3.5rem] leading-[1.1] text-white"
+              className="font-serif text-2xl sm:text-4xl lg:text-5xl leading-[1.1] text-white"
               delay={60}
-              stagger={45}
+              stagger={40}
             />
           </div>
-          <AnimateIn variant="fade-up" delay={350} duration={700}>
-            <div className="lg:mb-1 space-y-4">
-              <div className="h-[1.5px] w-12 rounded-full bg-white/60" />
-              <p className="text-sm leading-relaxed text-white/40">
-                Every element curated for your comfort, wonder, and absolute peace of mind.
-              </p>
+
+          {/* Scroll arrows — hidden on mobile (touch swipe works) */}
+          <AnimateIn variant="fade-up" delay={300} duration={600}>
+            <div className="hidden sm:flex shrink-0 gap-2">
+              <button
+                onClick={() => scroll('left')}
+                disabled={!canScrollLeft}
+                aria-label="Previous"
+                className="flex h-11 w-11 items-center justify-center rounded-full ring-1 ring-white/20 text-white transition hover:bg-white/10 disabled:opacity-25"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                disabled={!canScrollRight}
+                aria-label="Next"
+                className="flex h-11 w-11 items-center justify-center rounded-full ring-1 ring-white/20 text-white transition hover:bg-white/10 disabled:opacity-25"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
             </div>
           </AnimateIn>
         </div>
       </div>
 
-      {/* Marquee */}
-      <div className="border-y border-white/10 bg-white/5 py-4">
-        <Marquee items={MARQUEE_ITEMS} speed={30} className="text-white/30" />
-      </div>
+      {/* Carousel */}
+      <div
+        ref={scrollRef}
+        className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pl-4 pr-8 sm:pl-6 sm:pr-12 lg:pl-8 pb-2"
+        style={{ scrollbarWidth: 'none' }}
+      >
+        {highlights.map((text, i) => (
+          <AnimateIn
+            key={i}
+            variant="fade-up"
+            delay={i * 70}
+            duration={600}
+            className="shrink-0 snap-start"
+            style={{ width: 'clamp(260px, 72vw, 310px)' }}
+          >
+            <div className="group relative h-[420px] sm:h-[460px] w-full overflow-hidden rounded-2xl">
+              {/* Scenic background image */}
+              <img
+                src={pool[i % pool.length]}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading={i < 3 ? 'eager' : 'lazy'}
+                decoding="async"
+              />
 
-      {/* Cards */}
-      <div className="container-page relative py-8 sm:py-12 lg:py-16">
-        <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-          {highlights.map((item, i) => (
-            <ThrowIn key={i} delay={i * 110} rotate={ROTATIONS[i % ROTATIONS.length]}>
-              <div className="group relative flex h-full min-h-[130px] sm:min-h-[160px] flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_64px_rgba(0,0,0,0.8)] bg-white/[0.06] ring-1 ring-white/[0.12] hover:bg-white/[0.10] hover:ring-white/25">
+              {/* Strong gradient so text is always readable */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/5" />
 
-                {/* Inner shimmer */}
-                <div className="pointer-events-none absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/8 via-transparent to-transparent" />
+              {/* Number watermark top-left */}
+              <span className="absolute top-4 left-5 font-serif text-[56px] leading-none text-white/[0.07] select-none pointer-events-none">
+                {String(i + 1).padStart(2, '0')}
+              </span>
 
-                {/* Watermark number */}
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute -bottom-4 -right-1 select-none font-serif text-[64px] sm:text-[96px] leading-none text-white/[0.04]"
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </span>
+              {/* Checkmark badge top-right */}
+              <div className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25 backdrop-blur-sm">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                  <path d="M5 12l5 5L20 7" />
+                </svg>
+              </div>
 
-                {/* Accent line */}
-                <div className="relative mb-3 sm:mb-6 h-[1.5px] w-6 sm:w-8 rounded-full bg-white/50 transition-all duration-500 group-hover:w-12 sm:group-hover:w-16 group-hover:bg-white" />
-
-                {/* Text */}
-                <p className="relative z-10 flex-1 text-[12px] sm:text-[14px] lg:text-[15px] font-medium leading-relaxed text-white/65 group-hover:text-white/90 transition-colors duration-300">
-                  {item}
+              {/* Text — fully visible at bottom */}
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
+                <div className="mb-4 h-[1.5px] w-8 rounded-full bg-white/50 transition-all duration-500 group-hover:w-16 group-hover:bg-white" />
+                <p className="font-serif text-[17px] sm:text-[19px] font-medium leading-snug text-white">
+                  {text}
                 </p>
               </div>
-            </ThrowIn>
-          ))}
-        </ul>
+            </div>
+          </AnimateIn>
+        ))}
       </div>
     </section>
   )

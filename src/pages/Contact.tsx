@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative isolate min-h-[42svh] overflow-hidden">
+      <section className="relative isolate min-h-[100svh] overflow-hidden">
         <Picture
           src="/images/destinations/tanzania/sayari-lioness.jpg"
           alt="Still Wild Safaris"
@@ -45,7 +45,7 @@ export default function Contact() {
           decoding="async"
         />
         <div className="absolute inset-0 -z-10 bg-black/50" />
-        <div className="mx-auto flex min-h-[42svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
+        <div className="mx-auto flex min-h-[100svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
           <HeroStagger>
             <HeroItem>
               <h1 className="font-serif text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl">Contact Us</h1>

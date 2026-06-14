@@ -4,7 +4,7 @@ import Reveal from '@/components/ui/Reveal'
 export default function WhyChoose() {
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20">
-      <div className="mx-auto grid max-w-6xl items-center gap-8 sm:gap-12 px-6 md:grid-cols-2">
+      <div className="mx-auto grid grid-cols-1 max-w-6xl items-center gap-8 sm:gap-12 px-6 md:grid-cols-2">
         <Reveal variant="left">
           <div className="section-rule" />
           <h2 className="mt-4 font-serif text-xl sm:text-3xl lg:text-4xl">
