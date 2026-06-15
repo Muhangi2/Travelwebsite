@@ -12,7 +12,7 @@ type CardProps = {
   tall?: boolean
 }
 
-function DestinationCard({ country, index, className = '', tall = false }: CardProps) {
+function DestinationCard({ country, index, className = '' }: CardProps) {
   return (
     <Link
       to={`/destinations/${country.slug}`}
