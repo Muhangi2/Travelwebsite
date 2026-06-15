@@ -255,7 +255,7 @@ export default function Nav() {
         </div>
 
         {/* ── Mobile: logo centred absolutely, hamburger left ── */}
-        <div className="container-page relative flex h-24 items-center sm:h-[9rem] md:h-[11rem] xl:hidden">
+        <div className="container-page relative flex h-32 items-center sm:h-[9rem] md:h-[11rem] xl:hidden">
           {/* Burger left */}
           <button
             aria-label="Toggle menu"
