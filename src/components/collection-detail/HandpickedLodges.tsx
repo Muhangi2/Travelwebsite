@@ -197,7 +197,7 @@ export default function HandpickedLodges({ days }: Props) {
         {/* Lodge cards for active location */}
         <Stagger
           key={activeLocation}
-          className="mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          className="cards-scroll-3 mt-10 gap-5"
           staggerMs={80}
         >
           {activeGroup.lodges.map((l) => (

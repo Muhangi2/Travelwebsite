@@ -13,7 +13,7 @@ function toExperience(raw: SanityExperience): Experience {
     shortTitle: raw.shortTitle,
     excerpt: raw.excerpt,
     cta: raw.cta ?? 'Explore this experience',
-    image: resolveMediaImage(raw.image),
+    image: resolveMediaImage(raw.image, 1600),
     tagline: raw.tagline,
     intro: raw.intro ?? [],
     highlights: raw.highlights ?? [],
@@ -21,9 +21,9 @@ function toExperience(raw: SanityExperience): Experience {
       name: loc.name,
       country: loc.country,
       description: loc.description,
-      image: loc.image ? resolveMediaImage(loc.image) : undefined,
+      image: loc.image ? resolveMediaImage(loc.image, 800) : undefined,
     })),
-    gallery: resolveMediaImages(raw.gallery),
+    gallery: resolveMediaImages(raw.gallery, 800),
   }
 }
 

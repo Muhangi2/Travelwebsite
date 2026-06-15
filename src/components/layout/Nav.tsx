@@ -132,7 +132,7 @@ export default function Nav() {
       }`}>
 
         {/* ── Desktop: centred-logo split nav ── */}
-        <div className="container-page hidden h-[9rem] items-center xl:grid xl:grid-cols-[1fr_auto_1fr]">
+        <div className="container-page hidden h-[13rem] items-center xl:grid xl:grid-cols-[1fr_auto_1fr]">
 
           {/* Left links */}
           <nav className="flex items-center gap-7">
@@ -255,7 +255,7 @@ export default function Nav() {
         </div>
 
         {/* ── Mobile: logo centred absolutely, hamburger left ── */}
-        <div className="container-page relative flex h-20 items-center sm:h-[7rem] md:h-[8rem] xl:hidden">
+        <div className="container-page relative flex h-24 items-center sm:h-[9rem] md:h-[11rem] xl:hidden">
           {/* Burger left */}
           <button
             aria-label="Toggle menu"
@@ -306,7 +306,7 @@ export default function Nav() {
             mobileOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="flex flex-col px-6 pb-10 pt-32">
+          <div className="flex flex-col px-6 pb-10 pt-32 sm:pt-40 md:pt-48">
             <p className="eyebrow mb-2 text-white/50">Menu</p>
             <nav className="flex flex-col">
               {links.map((l) => {

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import type { RouteWaypoint } from '@/data/journeys'
@@ -23,6 +23,9 @@ export default function TourRouteMap({ waypoints, days, title }: Props) {
   const [selectedDay, setSelectedDay] = useState<JourneyDay | null>(null)
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null)
 
+  const zoomIn  = useCallback(() => mapRef.current?.zoomIn(),  [])
+  const zoomOut = useCallback(() => mapRef.current?.zoomOut(), [])
+
   const uniqueWaypoints = waypoints.filter((wp, i) => {
     if (i === 0) return true
     const isLastDupe =
@@ -46,12 +49,12 @@ export default function TourRouteMap({ waypoints, days, title }: Props) {
       style: MAP_STYLE,
       center: [31.0, 0.5],
       zoom: 5,
-      maxZoom: 13,
+      minZoom: 2,
+      maxZoom: 16,
       attributionControl: false,
       logoPosition: 'bottom-right',
     })
 
-    map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-right')
     map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-right')
 
     map.on('load', () => {
@@ -59,9 +62,6 @@ export default function TourRouteMap({ waypoints, days, title }: Props) {
         padding: { top: 70, bottom: 70, left: 70, right: 70 },
         maxZoom: 9,
         duration: 0,
-      })
-      map.once('idle', () => {
-        map.setMinZoom(Math.max(4, map.getZoom() - 0.5))
       })
 
       map.addSource('route', {
@@ -201,6 +201,26 @@ export default function TourRouteMap({ waypoints, days, title }: Props) {
           ref={containerRef}
           style={{ width: '100%', height: 480, opacity: ready ? 1 : 0, transition: 'opacity 700ms ease' }}
         />
+
+        {/* Zoom controls */}
+        {ready && (
+          <div className="absolute top-4 right-4 z-10 flex flex-col overflow-hidden rounded-lg shadow-lg ring-1 ring-black/10">
+            <button
+              onClick={zoomIn}
+              aria-label="Zoom in"
+              className="flex h-9 w-9 items-center justify-center bg-white text-neutral-700 hover:bg-neutral-100 active:bg-neutral-200 transition-colors text-lg font-light leading-none border-b border-neutral-200"
+            >
+              +
+            </button>
+            <button
+              onClick={zoomOut}
+              aria-label="Zoom out"
+              className="flex h-9 w-9 items-center justify-center bg-white text-neutral-700 hover:bg-neutral-100 active:bg-neutral-200 transition-colors text-lg font-light leading-none"
+            >
+              −
+            </button>
+          </div>
+        )}
 
         {/* Day detail popup */}
         {selectedDay && (

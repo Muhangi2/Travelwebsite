@@ -268,6 +268,8 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
                   key={day.day}
                   src={day.image}
                   alt={day.title}
+                  loading="lazy"
+                  decoding="async"
                   className="h-60 w-full object-cover sm:h-80 lg:h-[360px]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />

@@ -18,7 +18,7 @@ export type TourPackageCard = {
 
 function toJourneyData(raw: SanityTourPackage): JourneyData | null {
   if (!raw.days?.length) return null
-  const hero = raw.heroImage ? resolveMediaImage(raw.heroImage) : resolveMediaImage(raw.listImage)
+  const hero = raw.heroImage ? resolveMediaImage(raw.heroImage, 1600) : resolveMediaImage(raw.listImage, 1600)
   return {
     slug: raw.slug,
     title: raw.detailTitle ?? raw.title,
@@ -32,7 +32,7 @@ function toJourneyData(raw: SanityTourPackage): JourneyData | null {
         body: d.body,
         accommodation: d.accommodation ?? '—',
         meals: d.meals ?? '',
-        image: resolveMediaImage(d.image),
+        image: resolveMediaImage(d.image, 900),
       }),
     ),
   }
@@ -41,7 +41,7 @@ function toJourneyData(raw: SanityTourPackage): JourneyData | null {
 function toCard(raw: SanityTourPackage): TourPackageCard {
   return {
     id: raw.slug,
-    image: resolveMediaImage(raw.listImage),
+    image: resolveMediaImage(raw.listImage, 800),
     country: raw.country,
     tags: raw.tags ?? [],
     title: raw.title,

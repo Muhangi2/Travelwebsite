@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40" />
 
-      <div className="container-page relative z-10 flex min-h-[100svh] items-center pb-20 pt-32 sm:pt-36">
+      <div className="container-page relative z-10 flex min-h-[100svh] items-center pb-20 pt-32 sm:pt-44 md:pt-52 xl:pt-60">
         <HeroStagger className="max-w-2xl text-white">
           <HeroItem>
             <p className="eyebrow text-white/70">Bespoke Luxury Safaris · East Africa</p>

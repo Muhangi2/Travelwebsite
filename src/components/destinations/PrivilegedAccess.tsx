@@ -1,40 +1,92 @@
 import type { Country } from '@/data/destinations'
-import Reveal, { Stagger } from '@/components/ui/Reveal'
+import Reveal from '@/components/ui/Reveal'
 import Picture from '@/components/Picture'
 
 export default function PrivilegedAccess({ items }: { items: Country['privilegedAccess'] }) {
   return (
-    <section className="bg-black py-20 text-white">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="overflow-hidden bg-[#0a0a0a] py-24 text-white sm:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        {/* heading */}
         <Reveal>
-          <div className="text-center">
-            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">Privileged Access: Beyond the Itinerary</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-sm text-white/80">
-              Elevate your journey with immersive experiences, insider access, and one-of-a-kind events reserved for our guests.
+          <p className="eyebrow mb-3 text-white/40">Exclusive Access</p>
+          <div className="flex flex-col gap-y-4 sm:flex-row sm:items-end sm:justify-between">
+            <h2 className="max-w-xl font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
+              Privileged Access:<br className="hidden sm:block" /> Beyond the Itinerary
+            </h2>
+            <p className="max-w-xs text-sm leading-relaxed text-white/50 sm:text-right">
+              Immersive experiences and insider access reserved exclusively for our guests.
             </p>
           </div>
         </Reveal>
 
-        <Stagger className="cards-scroll-3 relative mt-12 gap-6" staggerMs={100}>
-          {items.map((it) => (
-            <article key={it.title} className="card-lift overflow-hidden rounded-md bg-white text-neutral-800 shadow-md">
-              <div className="img-zoom aspect-[4/3] overflow-hidden">
-                <Picture src={it.image} alt={it.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
-              </div>
-              <div className="p-5">
-                <h3 className="font-serif text-base">{it.title}</h3>
-                <p className="mt-1 flex items-center gap-1 text-[10px] text-neutral-500">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z" />
-                    <circle cx="12" cy="9" r="2.5" />
-                  </svg>
-                  {it.location}
-                </p>
-                <p className="mt-3 text-xs leading-relaxed text-neutral-600">{it.body}</p>
-              </div>
-            </article>
-          ))}
-        </Stagger>
+        {/* items */}
+        <div className="mt-20 divide-y divide-white/10">
+          {items.map((it, i) => {
+            const isEven = i % 2 === 0
+            return (
+              <article key={it.title} className="group py-16 sm:py-20">
+                <Reveal variant="up" delay={80}>
+                  <div
+                    className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-20 ${
+                      isEven ? '' : 'lg:flex-row-reverse'
+                    }`}
+                  >
+                    {/* image col */}
+                    <div className={`relative ${isEven ? '' : 'lg:order-2'}`}>
+                      {/* giant ghosted number */}
+                      <span
+                        aria-hidden
+                        className="pointer-events-none absolute -right-4 -top-8 select-none font-serif text-[clamp(6rem,14vw,10rem)] font-bold leading-none text-white/[0.04] sm:-right-6 sm:-top-10"
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+
+                      <div className="img-zoom relative overflow-hidden rounded-xl">
+                        <Picture
+                          src={it.image}
+                          alt={it.title}
+                          loading="lazy"
+                          decoding="async"
+                          imgClassName="w-full object-cover aspect-[4/3]"
+                        />
+                        {/* subtle overlay on hover */}
+                        <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/10" />
+                      </div>
+                    </div>
+
+                    {/* text col */}
+                    <div className={`${isEven ? '' : 'lg:order-1'}`}>
+                      <p className="mb-5 flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/40">
+                        <svg
+                          width="10"
+                          height="10"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z" />
+                          <circle cx="12" cy="9" r="2.5" />
+                        </svg>
+                        {it.location}
+                      </p>
+
+                      {/* accent line */}
+                      <div className="section-rule mb-6 invert" />
+
+                      <h3 className="font-serif text-2xl leading-snug text-white sm:text-3xl">
+                        {it.title}
+                      </h3>
+                      <p className="mt-5 text-sm leading-relaxed text-white/55">{it.body}</p>
+
+                      <button className="btn-ghost mt-8 text-xs">Inquire About Access</button>
+                    </div>
+                  </div>
+                </Reveal>
+              </article>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

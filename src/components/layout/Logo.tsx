@@ -20,7 +20,7 @@ export default function Logo({ variant = 'nav', className = '' }: LogoProps) {
     <img
       src={LOGO}
       alt="Still Wild Safaris"
-      className={`block h-16 w-auto sm:h-28 md:h-36 lg:h-40 ${className}`}
+      className={`block h-20 w-auto sm:h-32 md:h-40 lg:h-48 ${className}`}
     />
   )
 }

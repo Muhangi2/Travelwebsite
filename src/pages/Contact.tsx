@@ -60,6 +60,8 @@ export default function Contact() {
           src="/images/parks/uganda/murchison-falls/mf-1.jpg"
           alt=""
           aria-hidden
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 -z-10 bg-black/65" />
