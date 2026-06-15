@@ -60,9 +60,11 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
     const map = new mapboxgl.Map({
       container: miniMapRef.current,
       style: 'mapbox://styles/mapbox/outdoors-v12',
-      interactive: false,
+      interactive: true,
       attributionControl: false,
       logoPosition: 'bottom-right',
+      minZoom: 2,
+      maxZoom: 16,
     })
 
     map.on('load', () => {
@@ -375,8 +377,28 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
 
             {/* Mini route map */}
             {stops.length >= 2 && (
-              <div className="overflow-hidden rounded-2xl ring-1 ring-neutral-200 shadow-sm" style={{ height: 190 }}>
+              <div className="relative overflow-hidden rounded-2xl ring-1 ring-neutral-200 shadow-sm" style={{ height: 280 }}>
                 <div ref={miniMapRef} style={{ width: '100%', height: '100%' }} />
+
+                {/* Zoom controls */}
+                <div className="absolute right-3 top-3 z-10 flex flex-col overflow-hidden rounded-lg shadow-md ring-1 ring-black/10">
+                  <button
+                    type="button"
+                    aria-label="Zoom in"
+                    onClick={() => miniMapInstance.current?.zoomIn()}
+                    className="flex h-9 w-9 items-center justify-center border-b border-neutral-200 bg-white text-lg font-light leading-none text-neutral-700 transition hover:bg-neutral-50 active:bg-neutral-100 select-none"
+                  >
+                    +
+                  </button>
+                  <button
+                    type="button"
+                    aria-label="Zoom out"
+                    onClick={() => miniMapInstance.current?.zoomOut()}
+                    className="flex h-9 w-9 items-center justify-center bg-white text-lg font-light leading-none text-neutral-700 transition hover:bg-neutral-50 active:bg-neutral-100 select-none"
+                  >
+                    −
+                  </button>
+                </div>
               </div>
             )}
           </div>

@@ -193,34 +193,35 @@ export default function TourRouteMap({ waypoints, days, title }: Props) {
       {/* Map — full width edge to edge */}
       <div className="relative overflow-hidden" style={{ lineHeight: 0 }}>
         {!ready && (
-          <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-center bg-neutral-100" style={{ height: 480 }}>
+          <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-center bg-neutral-100" style={{ height: 560 }}>
             <div className="h-7 w-7 rounded-full border-2 border-neutral-300 border-t-neutral-700 animate-spin" />
           </div>
         )}
         <div
           ref={containerRef}
-          style={{ width: '100%', height: 480, opacity: ready ? 1 : 0, transition: 'opacity 700ms ease' }}
+          style={{ width: '100%', height: 560, opacity: ready ? 1 : 0, transition: 'opacity 700ms ease' }}
         />
 
-        {/* Zoom controls */}
-        {ready && (
-          <div className="absolute top-4 right-4 z-10 flex flex-col overflow-hidden rounded-lg shadow-lg ring-1 ring-black/10">
-            <button
-              onClick={zoomIn}
-              aria-label="Zoom in"
-              className="flex h-9 w-9 items-center justify-center bg-white text-neutral-700 hover:bg-neutral-100 active:bg-neutral-200 transition-colors text-lg font-light leading-none border-b border-neutral-200"
-            >
-              +
-            </button>
-            <button
-              onClick={zoomOut}
-              aria-label="Zoom out"
-              className="flex h-9 w-9 items-center justify-center bg-white text-neutral-700 hover:bg-neutral-100 active:bg-neutral-200 transition-colors text-lg font-light leading-none"
-            >
-              −
-            </button>
-          </div>
-        )}
+        {/* Zoom controls — always rendered so they're usable as soon as map loads */}
+        <div
+          className="absolute top-4 right-4 z-10 flex flex-col overflow-hidden rounded-lg shadow-lg ring-1 ring-black/10"
+          style={{ opacity: ready ? 1 : 0, transition: 'opacity 400ms ease', pointerEvents: ready ? 'auto' : 'none' }}
+        >
+          <button
+            onClick={zoomIn}
+            aria-label="Zoom in"
+            className="flex h-10 w-10 items-center justify-center bg-white text-neutral-700 hover:bg-neutral-50 active:bg-neutral-200 transition-colors border-b border-neutral-200 text-xl font-light leading-none select-none"
+          >
+            +
+          </button>
+          <button
+            onClick={zoomOut}
+            aria-label="Zoom out"
+            className="flex h-10 w-10 items-center justify-center bg-white text-neutral-700 hover:bg-neutral-50 active:bg-neutral-200 transition-colors text-xl font-light leading-none select-none"
+          >
+            −
+          </button>
+        </div>
 
         {/* Day detail popup */}
         {selectedDay && (
