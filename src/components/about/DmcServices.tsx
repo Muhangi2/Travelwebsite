@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 const services = [
   {
@@ -52,7 +53,7 @@ export default function DmcServices() {
             return (
               <Reveal key={`${num}-${s.title}`} delay={idx * 80}>
               <article className="card-lift img-zoom relative aspect-[4/3] overflow-hidden rounded-md">
-                <img src={s.image} alt={s.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                <Picture src={s.image} alt={s.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5 text-white">
                   <p className="font-serif text-xs text-white/70">{num}</p>

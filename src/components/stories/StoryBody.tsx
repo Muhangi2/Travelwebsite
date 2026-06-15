@@ -29,7 +29,7 @@ const components: PortableTextComponents = {
   },
   types: {
     image: ({ value }) => {
-      const src = urlFor(value)
+      const src = urlFor(value, 1200)
       if (!src) return null
       return (
         <figure className="mt-10 overflow-hidden rounded-xl shadow-md">

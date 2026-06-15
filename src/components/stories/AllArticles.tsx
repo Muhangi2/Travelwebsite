@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { categories } from '@/data/articles'
 import { useStories } from '@/sanity/stories'
 import Reveal, { Stagger } from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 const PER_PAGE = 6
 
@@ -55,7 +56,7 @@ export default function AllArticles() {
           {visible.map((a) => (
             <article key={a.slug} className="card-lift overflow-hidden rounded-md shadow-sm ring-1 ring-neutral-100">
               <div className="img-zoom relative aspect-[4/3] overflow-hidden">
-                <img src={a.image} alt={a.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                <Picture src={a.image} alt={a.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
                 <span className="absolute right-3 top-3 rounded-full bg-black/90 px-3 py-1 text-[10px] tracking-wide text-white">
                   {a.tags.join(', ')}
                 </span>

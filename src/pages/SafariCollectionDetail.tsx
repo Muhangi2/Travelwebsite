@@ -8,7 +8,6 @@ import TourIncludes from '@/components/collection-detail/TourIncludes'
 import TourFAQ from '@/components/collection-detail/TourFAQ'
 import HandpickedLodges from '@/components/collection-detail/HandpickedLodges'
 import FlyInOption from '@/components/collection-detail/FlyInOption'
-import UniqueExperiences from '@/components/collection-detail/UniqueExperiences'
 import WhyChoose from '@/components/collection-detail/WhyChoose'
 import BookingForm from '@/components/collection-detail/BookingForm'
 
@@ -42,7 +41,10 @@ export default function SafariCollectionDetail() {
 
       {hasHighlights && (
         <div id="highlights">
-          <TourHighlights highlights={journey.highlights!} />
+          <TourHighlights
+            highlights={journey.highlights!}
+            images={[journey.heroImage, ...journey.days.map((d) => d.image)]}
+          />
         </div>
       )}
 
@@ -66,7 +68,6 @@ export default function SafariCollectionDetail() {
       </div>
 
       <FlyInOption />
-      <UniqueExperiences />
       <WhyChoose />
 
       <div id="contact">

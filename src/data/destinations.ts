@@ -394,6 +394,254 @@ const mgahinga: Park = {
   ],
 }
 
+const serengetiPark = {
+  slug: 'serengeti',
+  name: 'Serengeti National Park',
+  blurb:
+    "The greatest wildlife spectacle on earth — 1.5 million wildebeest and 250,000 zebra crossing an endless plain, with lion, leopard and cheetah in extraordinary numbers year-round.",
+  image: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg',
+  location: 'Northern Tanzania',
+  size: '14,763 km²',
+  altitude: '920 — 1,850 m',
+  bestTime: 'June–October (northern crossings) & January–March (calving season)',
+  overview:
+    "The Serengeti is Tanzania's crown jewel and the stage for the most iconic safari experience on the planet. An ancient ecosystem stretching from the volcanic plains of the south to the Mara River in the north, it supports the single largest terrestrial mammal migration in the world. Beyond the migration, the Serengeti harbours more lions than almost anywhere on earth, dense resident leopard, cheetah on the open plains and a year-round cast of supporting wildlife that makes every drive compelling. The private concessions to the north and west — home to Sayari and Dunia camps — offer off-road driving and night-drive access that transforms the experience entirely.",
+  attractions: [
+    {
+      title: 'The Great Migration',
+      body: 'Over 1.5 million wildebeest and 250,000 zebra move in an annual clockwise loop — with dramatic Mara River crossings from July to October and calving season on the short-grass plains in January and February.',
+      image: '/images/destinations/tanzania/sayari-game-drive-with-hyena-viewing1.jpg',
+    },
+    {
+      title: 'Lion & Leopard Density',
+      body: 'The Serengeti holds one of the highest concentrations of lion in Africa, plus resident leopard in the riverine forest, cheetah on the open plains and a near-certain chance of wild dog in the north.',
+      image: '/images/destinations/tanzania/sayari-lioness.jpg',
+    },
+    {
+      title: 'Private Northern Concessions',
+      body: "The far north — Lamai Wedge, Mara Triangle interface — offers off-road driving, night drives and a far lower vehicle count than the central Seronera area. It's where Sayari Camp and our most exclusive itineraries are based.",
+      image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.jpg',
+    },
+  ],
+  activities: [
+    {
+      title: 'Stay at Sayari Camp',
+      body: "Asilia's northernmost Serengeti camp — closest to the Mara River crossings, with just fifteen tented rooms, a stellar guiding team and full off-road access.",
+      image: '/images/destinations/tanzania/sayari-elephant.jpg',
+    },
+    {
+      title: 'Stay at Dunia Camp',
+      body: "A mobile-style camp in the Central Serengeti — brilliantly positioned for the resident game of the Seronera valley and following the migration into the south in calving season.",
+      image: '/images/destinations/tanzania/dunia-camp-game-drive-vehicle-lookout-hr-eliza-deacon1.jpg',
+    },
+    {
+      title: 'Ballooning over the Plains',
+      body: 'A dawn balloon flight over the Serengeti, following migrating herds from 500 feet, ending with a champagne breakfast in the bush — the definitive aerial safari experience.',
+      image: '/images/destinations/tanzania/dunia-lion-and-plane-in-the-serengeti.jpg',
+    },
+  ],
+  faqs: [
+    {
+      q: 'When are the Mara River crossings?',
+      a: 'Crossings are most reliable from late July through October, peaking in August and September. The exact timing shifts by a week or two each year — our in-field team monitors the herds daily and positions guests accordingly.',
+    },
+    {
+      q: 'Is calving season worth visiting?',
+      a: "Absolutely. January and February, when half a million wildebeest calves are born in ten days on the short-grass southern plains, is one of Africa's great wildlife events — dramatic predator action, enormous herds, and exceptional photographic light.",
+    },
+    {
+      q: 'Private concession vs the main reserve — which is better?',
+      a: "For luxury safari, the private concessions (northern Serengeti, Wogakuria) are transformative — off-road access, night drives, no vehicle queues. We design itineraries that use both: northern concessions for exclusivity, central Seronera for the long-established resident game.",
+    },
+  ],
+}
+
+const ngorongoroPark = {
+  slug: 'ngorongoro',
+  name: 'Ngorongoro Conservation Area',
+  blurb:
+    "An ancient, collapsed caldera sheltering the densest concentration of wildlife in Africa — the world's largest intact volcanic crater and home to all of the Big Five in a single enclosed ecosystem.",
+  image: '/images/destinations/tanzania/dunia-giraffe.jpg',
+  location: 'Northern Tanzania',
+  size: '8,292 km² (crater floor: 260 km²)',
+  altitude: '1,800 — 3,648 m',
+  bestTime: 'Year-round (driest June–September)',
+  overview:
+    "Ngorongoro Crater is a natural wonder — a collapsed volcano the size of a small city, its 600-metre walls sheltering a permanently enclosed ecosystem with an extraordinary density of wildlife. More than 25,000 large mammals live on the crater floor, including one of the densest black rhino populations in East Africa. The drive down from the rim at dawn, with the mist clearing to reveal the plains below, is one of the defining moments of an African safari. Ngorongoro pairs beautifully with the Serengeti as part of our northern Tanzania circuit.",
+  attractions: [
+    {
+      title: 'Black Rhino on the Crater Floor',
+      body: 'One of the last strongholds for critically endangered black rhino in East Africa — sightings are regular at the Lerai Forest and the crater lake margins.',
+      image: '/images/destinations/tanzania/dunia-leopard.jpg',
+    },
+    {
+      title: 'Crater Rim Viewpoints',
+      body: 'The panoramic viewpoint from the crater rim at 2,300 m — looking down over the entire enclosed ecosystem at dawn as the mist lifts from the crater floor.',
+      image: '/images/destinations/tanzania/dunia-view-from-the-main-area.jpg',
+    },
+    {
+      title: 'Lerai Forest & Flamingo Lake',
+      body: 'The crater floor\'s fever-tree forest shelters elephant and leopard; the soda lake at its centre draws thousands of flamingos and is a prime staging ground for the predator–prey dramas that play out here daily.',
+      image: '/images/destinations/tanzania/dunia-crane.jpg',
+    },
+  ],
+  activities: [
+    {
+      title: 'Full-Day Crater Drive',
+      body: 'An immersive full-day game drive on the crater floor — a circuit of the lake, the Lerai Forest, the Hippo Pool and the open plains, with a bush picnic at a designated viewpoint.',
+      image: '/images/destinations/tanzania/dunia-camp-game-drive-serengeti-safari-2.jpg',
+    },
+    {
+      title: 'Olduvai Gorge Visit',
+      body: 'A short diversion to the cradle of human evolution — the site where Mary Leakey discovered the 1.8-million-year-old footprints that changed our understanding of human ancestry.',
+      image: '/images/destinations/tanzania/dunia-game-drive.jpg',
+    },
+    {
+      title: 'Maasai Village Visit',
+      body: 'The Ngorongoro Conservation Area is co-managed with the Maasai community — a genuine homestead visit, arranged through our local partners, is one of the most memorable cultural encounters in northern Tanzania.',
+      image: '/images/destinations/tanzania/dunia-seronera-river.jpg',
+    },
+  ],
+  faqs: [
+    {
+      q: 'Can I sleep inside the crater?',
+      a: 'No — overnight access to the crater floor is not permitted. All lodges are on the rim or outside the conservation area. The drive to the floor takes approximately 45 minutes each way.',
+    },
+    {
+      q: 'How does it fit with the Serengeti?',
+      a: "Ngorongoro is a natural one- or two-night add-on to a Serengeti safari — the lodges are 2–3 hours by road from the central Serengeti, or 1 hour by charter flight. The two destinations complement each other perfectly.",
+    },
+    {
+      q: 'When is the best time to visit?',
+      a: "Year-round — the crater is productive in every season. June to September (dry season) offer easier wildlife viewing. The green season (November–May) brings lush vegetation, newborn wildlife and softer photography light.",
+    },
+  ],
+}
+
+const selousPark = {
+  slug: 'nyerere',
+  name: 'Nyerere National Park',
+  blurb:
+    "Africa's largest national park — a vast, wild, boat-safari heartland of the Rufiji River, famous for African wild dogs, hippos and a remote, uncrowded safari atmosphere.",
+  image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
+  location: 'Southern Tanzania',
+  size: '30,893 km²',
+  altitude: '50 — 1,000 m',
+  bestTime: 'June–October',
+  overview:
+    "Formerly the Selous Game Reserve, now Nyerere National Park, this vast southern wilderness is four times the size of the Serengeti and sees a fraction of its visitors. The Rufiji River and its system of lakes and channels is the lifeblood of the park — boat safaris here, drifting past hippo pods, crocodile banks and waterbirds, rival anything in East Africa. Nyerere holds one of the largest lion populations on the continent, significant wild-dog packs, and elephant herds in the thousands. For the traveller who values space, privacy and an authentic bush experience, it is incomparable.",
+  attractions: [
+    {
+      title: 'Rufiji River Boat Safaris',
+      body: 'The most dramatic river safari in East Africa — hippos, crocodiles, fish eagles and bathing elephants at close quarters from a motorised pontoon.',
+      image: '/images/activities/big-five/roho-ya-selous-hippo.jpg',
+    },
+    {
+      title: 'African Wild Dog',
+      body: "One of Tanzania's most reliable places to track packs of the endangered African wild dog — Nyerere's vast, unfenced wilderness supports several large packs with regular denning activity.",
+      image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.jpg',
+    },
+    {
+      title: 'Walking Safaris',
+      body: "Nyerere is one of the few Tanzanian parks where walking safaris are permitted — a profoundly different pace, with specialist guides reading tracks, insects and ecosystem in a way a vehicle cannot replicate.",
+      image: '/images/activities/game-drive/roho-ya-selous-walking-safari-guide-showing-off-a-hippos-skull.jpg',
+    },
+  ],
+  activities: [
+    {
+      title: 'Stay at Roho ya Selous',
+      body: 'Eight tented suites on a private concession within the park — boat safaris, game drives, walking, and a guiding team with decades of Selous experience.',
+      image: '/images/activities/big-five/roho-ya-selous-elephant.jpg',
+    },
+    {
+      title: 'Fly Camping on the Rufiji',
+      body: 'Spend a night on a sandbank under the stars, with your guide and a campfire — the ultimate immersion in the southern wilderness.',
+      image: '/images/activities/game-drive/roho-ya-selous-fishing-at-sunrise.jpg',
+    },
+    {
+      title: 'Fishing the Rufiji',
+      body: 'Catch-and-release tigerfish and catfish on the river — an optional afternoon activity for keen anglers staying at Roho ya Selous.',
+      image: '/images/activities/big-five/roho-ya-selous-giraffes.jpg',
+    },
+  ],
+  faqs: [
+    {
+      q: 'How do we get there?',
+      a: 'A 45-minute charter flight from Dar es Salaam or a 1.5-hour flight from Kilimanjaro — the park is not accessible by scheduled airline. We include charter flights in all Nyerere itineraries.',
+    },
+    {
+      q: 'Why visit the south instead of the Serengeti?',
+      a: "Nyerere is for guests who value raw wilderness over big-name recognition. You'll share the park with almost no other vehicles, you can take a boat and a walk on the same morning, and the scale of the landscape is humbling. It pairs perfectly with the Serengeti as a contrasting final leg.",
+    },
+    {
+      q: 'How many nights do we need?',
+      a: "Three nights minimum — one for the boat safari, one for a full game drive and walking, one to simply exhale and appreciate the scale. Four nights is better.",
+    },
+  ],
+}
+
+const rubondoPark = {
+  slug: 'rubondo',
+  name: 'Rubondo Island National Park',
+  blurb:
+    "An island wilderness on Lake Victoria — chimp habituation, forest walks, fishing, and a cast of reintroduced species in one of Africa's most unusual and uncrowded national parks.",
+  image: '/images/destinations/tanzania/rubondo-island-camp-landscape.jpg',
+  location: 'Northwestern Tanzania, Lake Victoria',
+  size: '457 km²',
+  altitude: '1,130 — 1,480 m',
+  bestTime: 'June–February',
+  overview:
+    "Rubondo Island is one of Africa's best-kept secrets — an island park on Lake Victoria where chimps were reintroduced and are now partially habituated, where sitatunga and grey-cheeked mangabey move through riverine forest, and where Nile perch fishing from the lake shore can be world class. With just one camp on the island, this is genuinely off-the-beaten-track East Africa — best woven into an itinerary as a remarkable four-night detour from the northern Tanzania circuit.",
+  attractions: [
+    {
+      title: 'Chimpanzee Habituation',
+      body: 'A long-running habituation project with a community of reintroduced chimps — forest walks with researchers tracking their progress, an intimate and rarely-visited alternative to Kibale.',
+      image: '/images/destinations/tanzania/rubondo-island-camp-chimp.jpg',
+    },
+    {
+      title: 'Birdlife of Lake Victoria',
+      body: 'Over 300 bird species recorded — African fish eagle, pied kingfisher, goliath heron, and the rare shoebill in the papyrus fringe of the lake.',
+      image: '/images/destinations/tanzania/rubondo-island-camp-fish-eagle-eric-frank-mr.jpg',
+    },
+    {
+      title: 'Pristine Forest Walks',
+      body: 'A dense tropical forest of ebony, wild mango and giant ficus — walked with specialist naturalist guides, tracking chimp signs and the island\'s unique community of reintroduced mammals.',
+      image: '/images/destinations/tanzania/rubondo-island-forest-walks-experience-with-your-guide1.jpg',
+    },
+  ],
+  activities: [
+    {
+      title: 'Forest Walk with Chimp Team',
+      body: 'Early morning walk with the habituation team — tracking chimp nests, calls and movement, with close encounters increasingly possible as the project matures.',
+      image: '/images/destinations/tanzania/rubondo-island-camp-forest-walk-mr1.jpg',
+    },
+    {
+      title: 'Nile Perch Fishing',
+      body: 'Lake Victoria is one of the great sport-fishing destinations in Africa — Nile perch in the hundreds of kilos, plus tilapia and catfish on a catch-and-release basis from the camp launch.',
+      image: '/images/destinations/tanzania/rubondo-island-game-drives-on-the-hills-above-lake-victoria1.jpg',
+    },
+    {
+      title: 'Canoe Safari',
+      body: "A slow, silent exploration of the island's shoreline by dugout canoe — hippos, crocodiles, sitatunga and a gallery of waterbirds at a pace that no motor safari can match.",
+      image: '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
+    },
+  ],
+  faqs: [
+    {
+      q: 'How do we get to Rubondo Island?',
+      a: 'A charter flight from the Serengeti or Mwanza (1–1.5 hours) lands on the island\'s grass airstrip, followed by a short boat transfer to camp. We include the full routing in our itineraries.',
+    },
+    {
+      q: 'Are chimp encounters guaranteed?',
+      a: "No — the chimps are partially habituated, not fully. Close encounters are increasingly common but depend on daily ranging behaviour. The forest walk is wonderful regardless; a chimp sighting makes it extraordinary.",
+    },
+    {
+      q: 'How does it fit into a Tanzania itinerary?',
+      a: "Best as a 3–4 night detour from a northern Tanzania circuit — fly from the Serengeti to Rubondo, spend three nights on the island, then fly directly back to Kilimanjaro or Dar es Salaam.",
+    },
+  ],
+}
+
 export const countries: Record<string, Country> = {
   uganda: {
     slug: 'uganda',
@@ -1005,5 +1253,68 @@ export const countries: Record<string, Country> = {
     ],
     seoKeywords:
       'luxury Kenya safari, Masai Mara migration, Amboseli elephants Kilimanjaro, Laikipia rhino conservation, Samburu safari, Giraffe Manor Nairobi.',
+  },
+
+  tanzania: {
+    slug: 'tanzania',
+    name: 'Tanzania',
+    heroTitle: "Tanzania: The Roof of\nAfrica's Wild Kingdom",
+    heroSubtitle:
+      "Tanzania is Africa at its most elemental — the Serengeti's endless plains, the ancient walls of Ngorongoro, the wild silence of the Selous, and a private island on Lake Victoria where chimps still roam. Every landscape is extraordinary. We reveal them at their quietest and most private.",
+    heroImage: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg',
+    exploreIntro:
+      'From the Great Migration of the Serengeti to the remote river safaris of Nyerere, Tanzania offers the full spectrum of the African wild — curated through private concessions and exclusive camps.',
+    parkSummary:
+      "Tanzania's national parks range from the world's most famous plains to an island wilderness on Lake Victoria and Africa's largest game reserve in the south. No two experiences are alike — and no other country offers quite this range in a single itinerary.",
+    parkSummaryImage: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg',
+    parks: [serengetiPark, ngorongoroPark, selousPark, rubondoPark],
+    privilegedAccess: [
+      {
+        title: 'Private Migration Crossing with Sayari Camp',
+        location: 'Serengeti (Northern Mara River)',
+        body: 'A Mara River crossing viewed from a private vehicle with just your guide — no queues, no competing vehicles. Sayari Camp positions guests based on daily herd intelligence from our partner rangers on the ground.',
+        image: '/images/destinations/tanzania/sayari-game-drive-with-hyena-viewing1.jpg',
+      },
+      {
+        title: 'Wild Dog Tracking with the Research Team',
+        location: 'Nyerere National Park',
+        body: 'Join a specialist researcher for a morning tracking the wild-dog packs of the Rufiji ecosystem — collared packs, telemetry equipment, and the kind of behavioural insight you cannot get from a standard game drive.',
+        image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.jpg',
+      },
+      {
+        title: 'Rubondo Island Chimp Habituation Walk',
+        location: 'Rubondo Island National Park',
+        body: 'Access the chimp habituation programme with the island\'s resident researchers — a morning in the forest with the team, learning how a wild community is slowly brought into human company.',
+        image: '/images/destinations/tanzania/rubondo-island-camp-chimp.jpg',
+      },
+    ],
+    lodges: [
+      {
+        name: 'Sayari Camp',
+        location: 'Northern Serengeti',
+        body: "Asilia's flagship Serengeti camp — fifteen tented rooms in the far north, closest to the Mara River crossings, with full off-road access and one of the best guiding teams in Tanzania.",
+        image: '/images/destinations/tanzania/sayari-lioness.jpg',
+      },
+      {
+        name: 'Dunia Camp',
+        location: 'Central Serengeti',
+        body: 'Eight intimate tents following the game to the southern calving grounds in season and the central Seronera valley in others — a mobile-style camp at its most comfortable.',
+        image: '/images/destinations/tanzania/dunia-view-from-the-main-area.jpg',
+      },
+      {
+        name: 'Roho ya Selous',
+        location: 'Nyerere National Park',
+        body: "Eight tented suites on a private concession in the heart of the Rufiji river system — boat safaris, game drives and walking in one of Africa's most exclusive wild settings.",
+        image: '/images/activities/big-five/roho-ya-selous-elephant.jpg',
+      },
+      {
+        name: 'Rubondo Island Camp',
+        location: 'Rubondo Island National Park',
+        body: "The only camp on the island — ten simple, beautiful bandas at the forest edge, with chimp walks, fishing and canoe safaris on the world's largest tropical lake.",
+        image: '/images/destinations/tanzania/rubondo-island-camp-landscape.jpg',
+      },
+    ],
+    seoKeywords:
+      'luxury Tanzania safari, Serengeti Great Migration, private Serengeti camps, Ngorongoro Crater lodges, Nyerere wild dog, Rubondo Island chimp trekking.',
   },
 }

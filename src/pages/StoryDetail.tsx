@@ -32,10 +32,10 @@ export default function StoryDetail() {
 
   return (
     <>
-      <section className="relative isolate min-h-[55svh] overflow-hidden">
-        <img src={article.image} alt={article.title} className="absolute inset-0 -z-10 h-full w-full object-cover" loading="lazy" decoding="async" />
+      <section className="relative isolate h-[100svh] overflow-hidden">
+        <Picture src={article.image} alt={article.title} loading="eager" fetchPriority="high" className="absolute inset-0 -z-10 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/40 to-black/70" />
-        <div className="container-page flex min-h-[55svh] items-center justify-center pt-28 pb-12 text-center text-white sm:pt-32">
+        <div className="container-page flex h-full items-center justify-center text-center text-white">
           <div className="max-w-3xl">
             <p className="eyebrow text-brand-gold">{article.tags.join(' · ')}</p>
             <h1 className="text-display mt-4 text-white">{article.title}</h1>

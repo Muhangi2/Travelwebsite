@@ -14,7 +14,7 @@ export default function TourFAQ({ faq }: Props) {
     <section className="bg-[#fafaf9] py-16 sm:py-20 border-t border-neutral-100 overflow-hidden">
       <div className="container-page">
 
-        <div className="grid gap-12 lg:grid-cols-[1fr_580px] lg:gap-16 xl:gap-20 items-start">
+        <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-[1fr_580px] lg:gap-16 xl:gap-20 items-start">
 
           {/* Left — sticky heading */}
           <div className="lg:sticky lg:top-24">

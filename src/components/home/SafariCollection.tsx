@@ -1,6 +1,7 @@
 import { useRef, type MouseEvent } from 'react'
 import { NavLink } from 'react-router-dom'
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
 
 type Card = {
   image: string
@@ -67,11 +68,11 @@ function SafariCard({ card, index }: { card: Card; index: number }) {
         className="safari-card group overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-neutral-200/70"
       >
         <div className="relative aspect-[4/3] overflow-hidden">
-          <img
+          <Picture
             src={card.image}
             alt={card.title}
             loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            imgClassName="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div className="safari-card__spotlight" />
           <div className="safari-card__sheen" />
