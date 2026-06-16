@@ -12,7 +12,7 @@ export default function Logo({ variant = 'nav', className = '' }: LogoProps) {
         src={LOGO}
         alt="Still Wild Safaris"
         className={`mx-auto block h-auto w-56 sm:w-64 md:w-72 ${className}`}
-      />
+      /> 
     )
   }
 

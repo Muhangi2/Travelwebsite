@@ -4,23 +4,23 @@ import Picture from '@/components/Picture'
 
 export default function PrivilegedAccess({ items }: { items: Country['privilegedAccess'] }) {
   return (
-    <section className="overflow-hidden bg-[#0a0a0a] py-24 text-white sm:py-32">
+    <section className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         {/* heading */}
         <Reveal>
-          <p className="eyebrow mb-3 text-white/40">Exclusive Access</p>
+          <p className="eyebrow mb-3">Exclusive Access</p>
           <div className="flex flex-col gap-y-4 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="max-w-xl font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
+            <h2 className="max-w-xl font-serif text-3xl leading-tight text-neutral-900 sm:text-4xl lg:text-5xl">
               Privileged Access:<br className="hidden sm:block" /> Beyond the Itinerary
             </h2>
-            <p className="max-w-xs text-sm leading-relaxed text-white/50 sm:text-right">
+            <p className="max-w-xs text-sm leading-relaxed text-neutral-500 sm:text-right">
               Immersive experiences and insider access reserved exclusively for our guests.
             </p>
           </div>
         </Reveal>
 
         {/* items */}
-        <div className="mt-20 divide-y divide-white/10">
+        <div className="mt-20 divide-y divide-neutral-200">
           {items.map((it, i) => {
             const isEven = i % 2 === 0
             return (
@@ -36,7 +36,7 @@ export default function PrivilegedAccess({ items }: { items: Country['privileged
                       {/* giant ghosted number */}
                       <span
                         aria-hidden
-                        className="pointer-events-none absolute -right-4 -top-8 select-none font-serif text-[clamp(6rem,14vw,10rem)] font-bold leading-none text-white/[0.04] sm:-right-6 sm:-top-10"
+                        className="pointer-events-none absolute -right-4 -top-8 select-none font-serif text-[clamp(6rem,14vw,10rem)] font-bold leading-none text-black/[0.05] sm:-right-6 sm:-top-10"
                       >
                         {String(i + 1).padStart(2, '0')}
                       </span>
@@ -49,14 +49,13 @@ export default function PrivilegedAccess({ items }: { items: Country['privileged
                           decoding="async"
                           imgClassName="w-full object-cover aspect-[4/3]"
                         />
-                        {/* subtle overlay on hover */}
                         <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/10" />
                       </div>
                     </div>
 
                     {/* text col */}
                     <div className={`${isEven ? '' : 'lg:order-1'}`}>
-                      <p className="mb-5 flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/40">
+                      <p className="mb-5 flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.22em] text-neutral-400">
                         <svg
                           width="10"
                           height="10"
@@ -71,15 +70,14 @@ export default function PrivilegedAccess({ items }: { items: Country['privileged
                         {it.location}
                       </p>
 
-                      {/* accent line */}
-                      <div className="section-rule mb-6 invert" />
+                      <div className="section-rule mb-6" />
 
-                      <h3 className="font-serif text-2xl leading-snug text-white sm:text-3xl">
+                      <h3 className="font-serif text-2xl leading-snug text-neutral-900 sm:text-3xl">
                         {it.title}
                       </h3>
-                      <p className="mt-5 text-sm leading-relaxed text-white/55">{it.body}</p>
+                      <p className="mt-5 text-sm leading-relaxed text-neutral-600">{it.body}</p>
 
-                      <button className="btn-ghost mt-8 text-xs">Inquire About Access</button>
+                      <button className="btn-primary mt-8 text-xs">Inquire About Access</button>
                     </div>
                   </div>
                 </Reveal>

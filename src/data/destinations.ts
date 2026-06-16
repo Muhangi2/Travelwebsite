@@ -13,6 +13,14 @@ export type Park = {
   faqs: { q: string; a: string }[]
 }
 
+export type Season = {
+  dates: string
+  name: string
+  wildlife: string
+  description: string
+  image?: string
+}
+
 export type Country = {
   slug: string
   name: string
@@ -26,24 +34,30 @@ export type Country = {
   privilegedAccess: { title: string; location: string; body: string; image: string }[]
   lodges: { name: string; location: string; body: string; image: string }[]
   seoKeywords: string
+  travelStats?: { bestTime: string; duration: string; keyWildlife: string; travelStyle: string }
+  whyVisit?: { intro: string; bullets: string[]; stats: Array<{ number: string; label: string }> }
+  seasons?: Season[]
+  specialistQuote?: { quote: string; author: string; role: string }
+  conservation?: { intro: string; stats: Array<{ number: string; label: string }>; partners: string[] }
+  countryFaqs?: Array<{ question: string; answer: string }>
 }
 
 const bwindi: Park = {
   slug: 'bwindi',
   name: 'Bwindi Impenetrable National Park',
   blurb:
-    "Bwindi Impenetrable National Park is a UNESCO World Heritage site and one of Africa's most ancient and biologically diverse rainforests. Located in southwestern Uganda, this mist-covered primeval forest is home to roughly half of the world's remaining mountain gorilla population.",
+    "Bwindi Impenetrable National Park is a UNESCO World Heritage site and one of Africa’s most ancient and biologically diverse rainforests. Located in southwestern Uganda, this mist-covered primeval forest is home to roughly half of the world’s remaining mountain gorilla population.",
   image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
   location: 'Southwestern Uganda',
   size: '331 km² (128 sq mi)',
   altitude: '1,160 — 2,607 m (3,806 — 8,553 ft)',
   bestTime: 'June–August & December–February',
   overview:
-    "Bwindi Impenetrable National Park is a UNESCO World Heritage site and one of Africa's most ancient and biologically diverse rainforests. Located in southwestern Uganda, this mist-covered primeval forest is home to roughly half of the world's remaining mountain gorilla population. Its rugged terrain and dense canopy provide a sanctuary for a staggering array of wildlife, making it a bucket-list destination for nature enthusiasts and adventurers alike.",
+    "Bwindi Impenetrable National Park is a UNESCO World Heritage site and one of Africa’s most ancient and biologically diverse rainforests. Located in southwestern Uganda, this mist-covered primeval forest is home to roughly half of the world’s remaining mountain gorilla population. Its rugged terrain and dense canopy provide a sanctuary for a staggering array of wildlife, making it a bucket-list destination for nature enthusiasts and adventurers alike.",
   attractions: [
     {
       title: 'Mountain Gorillas',
-      body: "The park's primary draw, offering a rare opportunity to observe these gentle giants in their natural habitat.",
+      body: "The park’s primary draw, offering a rare opportunity to observe these gentle giants in their natural habitat.",
       image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
     },
     {
@@ -92,7 +106,7 @@ const queenElizabeth: Park = {
   slug: 'queen-elizabeth',
   name: 'Queen Elizabeth National Park',
   blurb:
-    "Uganda's most popular savanna park, famed for tree-climbing lions, the Kazinga Channel and the volcanic crater lakes of the Rift Valley.",
+    "Uganda’s most popular savanna park, famed for tree-climbing lions, the Kazinga Channel and the volcanic crater lakes of the Rift Valley.",
   image: '/images/activities/game-drive/asilia-roho-2017-1-1.jpg',
   location: 'Western Uganda',
   size: '1,978 km²',
@@ -103,7 +117,7 @@ const queenElizabeth: Park = {
   attractions: [
     {
       title: 'Tree-Climbing Lions of Ishasha',
-      body: "Ishasha's southern sector is one of only two places on earth where lions habitually rest in the limbs of giant fig trees — a sighting our guides specifically plan for.",
+      body: "Ishasha’s southern sector is one of only two places on earth where lions habitually rest in the limbs of giant fig trees — a sighting our guides specifically plan for.",
       image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
     },
     {
@@ -153,14 +167,14 @@ const queenElizabeth: Park = {
 const murchison: Park = {
   slug: 'murchison-falls',
   name: 'Murchison Falls National Park',
-  blurb: "Uganda's largest national park, where the mighty Nile thunders through a 7-metre gorge before fanning into a delta on Lake Albert.",
+  blurb: "Uganda’s largest national park, where the mighty Nile thunders through a 7-metre gorge before fanning into a delta on Lake Albert.",
   image: '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
   location: 'Northwestern Uganda',
   size: '3,840 km²',
   altitude: '619 — 1,292 m',
   bestTime: 'December–February & June–September',
   overview:
-    "Murchison Falls is Uganda at its most theatrical — the Nile compressed through a seven-metre rock cleft, a thunder of water that defines the park and gives it its name. Above the falls, vast savannahs of borassus palms host elephants, Rothschild's giraffe, lions and the highest density of leopards in the country. Below, the river opens into a wildlife-rich delta on Lake Albert where Nile crocodiles, hippos and the elusive shoebill make their home. A perfect three- to four-night stay combining big-game drives, boat safaris and a hike to the top of the falls.",
+    "Murchison Falls is Uganda at its most theatrical — the Nile compressed through a seven-metre rock cleft, a thunder of water that defines the park and gives it its name. Above the falls, vast savannahs of borassus palms host elephants, Rothschild’s giraffe, lions and the highest density of leopards in the country. Below, the river opens into a wildlife-rich delta on Lake Albert where Nile crocodiles, hippos and the elusive shoebill make their home. A perfect three- to four-night stay combining big-game drives, boat safaris and a hike to the top of the falls.",
   attractions: [
     {
       title: 'The Falls Themselves',
@@ -275,18 +289,18 @@ const kibale: Park = {
 const lakeMburo: Park = {
   slug: 'lake-mburo',
   name: 'Lake Mburo National Park',
-  blurb: "Uganda's smallest savanna park — a compact mosaic of acacia and lake habitats famous for zebra, eland and walking safaris.",
+  blurb: "Uganda’s smallest savanna park — a compact mosaic of acacia and lake habitats famous for zebra, eland and walking safaris.",
   image: '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.jpg',
   location: 'Western Uganda',
   size: '370 km²',
   altitude: '1,220 — 1,828 m',
   bestTime: 'Year-round',
   overview:
-    "Lake Mburo punches well above its weight. The only Ugandan park with plains zebra, it's also the most accessible for guests breaking the long drive between Entebbe and the gorillas. Without lions in the open park, walking and horseback safaris are part of daily life — a rare way to feel the African bush at ground level. Compact, friendly and underrated, it makes an elegant first or last night on a Uganda journey.",
+    "Lake Mburo punches well above its weight. The only Ugandan park with plains zebra, it’s also the most accessible for guests breaking the long drive between Entebbe and the gorillas. Without lions in the open park, walking and horseback safaris are part of daily life — a rare way to feel the African bush at ground level. Compact, friendly and underrated, it makes an elegant first or last night on a Uganda journey.",
   attractions: [
     {
       title: 'Plains Zebra',
-      body: "The only park in Uganda where you'll see large herds of zebra grazing in the open — alongside impala, topi, eland and the largest population of Uganda's only antelope, the topi.",
+      body: "The only park in Uganda where you’ll see large herds of zebra grazing in the open — alongside impala, topi, eland and the largest population of Uganda’s only antelope, the topi.",
       image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
     },
     {
@@ -343,7 +357,7 @@ const mgahinga: Park = {
   altitude: '2,227 — 4,127 m',
   bestTime: 'June–August & December–February',
   overview:
-    "Mgahinga is Uganda's quiet alternative to Bwindi — smaller, higher and dramatically framed by three Virunga volcanoes that march along the Rwandan border. A single habituated gorilla family, the Nyakagezi group, roams freely across the three countries (Uganda, Rwanda and the DRC) and when they're home, the trekking is exceptional. Add habituated golden monkeys found nowhere else in Uganda, a half-day immersion with the indigenous Batwa, and the option to summit Mt Sabyinyo straddling all three borders — Mgahinga is small but layered, and well worth the effort.",
+    "Mgahinga is Uganda’s quiet alternative to Bwindi — smaller, higher and dramatically framed by three Virunga volcanoes that march along the Rwandan border. A single habituated gorilla family, the Nyakagezi group, roams freely across the three countries (Uganda, Rwanda and the DRC) and when they’re home, the trekking is exceptional. Add habituated golden monkeys found nowhere else in Uganda, a half-day immersion with the indigenous Batwa, and the option to summit Mt Sabyinyo straddling all three borders — Mgahinga is small but layered, and well worth the effort.",
   attractions: [
     {
       title: 'The Nyakagezi Gorilla Family',
@@ -369,7 +383,7 @@ const mgahinga: Park = {
     },
     {
       title: 'Volcano Summit Hike',
-      body: "Climb Mt Sabyinyo (3,669 m) to stand simultaneously in Uganda, Rwanda and the DRC, or take on the steeper Muhabura (4,127 m) — for fit walkers, two of East Africa's most rewarding day-summits.",
+      body: "Climb Mt Sabyinyo (3,669 m) to stand simultaneously in Uganda, Rwanda and the DRC, or take on the steeper Muhabura (4,127 m) — for fit walkers, two of East Africa’s most rewarding day-summits.",
       image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg',
     },
     {
@@ -405,7 +419,7 @@ const serengetiPark = {
   altitude: '920 — 1,850 m',
   bestTime: 'June–October (northern crossings) & January–March (calving season)',
   overview:
-    "The Serengeti is Tanzania's crown jewel and the stage for the most iconic safari experience on the planet. An ancient ecosystem stretching from the volcanic plains of the south to the Mara River in the north, it supports the single largest terrestrial mammal migration in the world. Beyond the migration, the Serengeti harbours more lions than almost anywhere on earth, dense resident leopard, cheetah on the open plains and a year-round cast of supporting wildlife that makes every drive compelling. The private concessions to the north and west — home to Sayari and Dunia camps — offer off-road driving and night-drive access that transforms the experience entirely.",
+    "The Serengeti is Tanzania’s crown jewel and the stage for the most iconic safari experience on the planet. An ancient ecosystem stretching from the volcanic plains of the south to the Mara River in the north, it supports the single largest terrestrial mammal migration in the world. Beyond the migration, the Serengeti harbours more lions than almost anywhere on earth, dense resident leopard, cheetah on the open plains and a year-round cast of supporting wildlife that makes every drive compelling. The private concessions to the north and west — home to Sayari and Dunia camps — offer off-road driving and night-drive access that transforms the experience entirely.",
   attractions: [
     {
       title: 'The Great Migration',
@@ -419,14 +433,14 @@ const serengetiPark = {
     },
     {
       title: 'Private Northern Concessions',
-      body: "The far north — Lamai Wedge, Mara Triangle interface — offers off-road driving, night drives and a far lower vehicle count than the central Seronera area. It's where Sayari Camp and our most exclusive itineraries are based.",
+      body: "The far north — Lamai Wedge, Mara Triangle interface — offers off-road driving, night drives and a far lower vehicle count than the central Seronera area. It’s where Sayari Camp and our most exclusive itineraries are based.",
       image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.jpg',
     },
   ],
   activities: [
     {
       title: 'Stay at Sayari Camp',
-      body: "Asilia's northernmost Serengeti camp — closest to the Mara River crossings, with just fifteen tented rooms, a stellar guiding team and full off-road access.",
+      body: "Asilia’s northernmost Serengeti camp — closest to the Mara River crossings, with just fifteen tented rooms, a stellar guiding team and full off-road access.",
       image: '/images/destinations/tanzania/sayari-elephant.jpg',
     },
     {
@@ -447,7 +461,7 @@ const serengetiPark = {
     },
     {
       q: 'Is calving season worth visiting?',
-      a: "Absolutely. January and February, when half a million wildebeest calves are born in ten days on the short-grass southern plains, is one of Africa's great wildlife events — dramatic predator action, enormous herds, and exceptional photographic light.",
+      a: "Absolutely. January and February, when half a million wildebeest calves are born in ten days on the short-grass southern plains, is one of Africa’s great wildlife events — dramatic predator action, enormous herds, and exceptional photographic light.",
     },
     {
       q: 'Private concession vs the main reserve — which is better?',
@@ -460,7 +474,7 @@ const ngorongoroPark = {
   slug: 'ngorongoro',
   name: 'Ngorongoro Conservation Area',
   blurb:
-    "An ancient, collapsed caldera sheltering the densest concentration of wildlife in Africa — the world's largest intact volcanic crater and home to all of the Big Five in a single enclosed ecosystem.",
+    "An ancient, collapsed caldera sheltering the densest concentration of wildlife in Africa — the world’s largest intact volcanic crater and home to all of the Big Five in a single enclosed ecosystem.",
   image: '/images/destinations/tanzania/dunia-giraffe.jpg',
   location: 'Northern Tanzania',
   size: '8,292 km² (crater floor: 260 km²)',
@@ -522,7 +536,7 @@ const selousPark = {
   slug: 'nyerere',
   name: 'Nyerere National Park',
   blurb:
-    "Africa's largest national park — a vast, wild, boat-safari heartland of the Rufiji River, famous for African wild dogs, hippos and a remote, uncrowded safari atmosphere.",
+    "Africa’s largest national park — a vast, wild, boat-safari heartland of the Rufiji River, famous for African wild dogs, hippos and a remote, uncrowded safari atmosphere.",
   image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
   location: 'Southern Tanzania',
   size: '30,893 km²',
@@ -538,7 +552,7 @@ const selousPark = {
     },
     {
       title: 'African Wild Dog',
-      body: "One of Tanzania's most reliable places to track packs of the endangered African wild dog — Nyerere's vast, unfenced wilderness supports several large packs with regular denning activity.",
+      body: "One of Tanzania’s most reliable places to track packs of the endangered African wild dog — Nyerere’s vast, unfenced wilderness supports several large packs with regular denning activity.",
       image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.jpg',
     },
     {
@@ -571,7 +585,7 @@ const selousPark = {
     },
     {
       q: 'Why visit the south instead of the Serengeti?',
-      a: "Nyerere is for guests who value raw wilderness over big-name recognition. You'll share the park with almost no other vehicles, you can take a boat and a walk on the same morning, and the scale of the landscape is humbling. It pairs perfectly with the Serengeti as a contrasting final leg.",
+      a: "Nyerere is for guests who value raw wilderness over big-name recognition. You’ll share the park with almost no other vehicles, you can take a boat and a walk on the same morning, and the scale of the landscape is humbling. It pairs perfectly with the Serengeti as a contrasting final leg.",
     },
     {
       q: 'How many nights do we need?',
@@ -584,14 +598,14 @@ const rubondoPark = {
   slug: 'rubondo',
   name: 'Rubondo Island National Park',
   blurb:
-    "An island wilderness on Lake Victoria — chimp habituation, forest walks, fishing, and a cast of reintroduced species in one of Africa's most unusual and uncrowded national parks.",
+    "An island wilderness on Lake Victoria — chimp habituation, forest walks, fishing, and a cast of reintroduced species in one of Africa’s most unusual and uncrowded national parks.",
   image: '/images/destinations/tanzania/rubondo-island-camp-landscape.jpg',
   location: 'Northwestern Tanzania, Lake Victoria',
   size: '457 km²',
   altitude: '1,130 — 1,480 m',
   bestTime: 'June–February',
   overview:
-    "Rubondo Island is one of Africa's best-kept secrets — an island park on Lake Victoria where chimps were reintroduced and are now partially habituated, where sitatunga and grey-cheeked mangabey move through riverine forest, and where Nile perch fishing from the lake shore can be world class. With just one camp on the island, this is genuinely off-the-beaten-track East Africa — best woven into an itinerary as a remarkable four-night detour from the northern Tanzania circuit.",
+    "Rubondo Island is one of Africa’s best-kept secrets — an island park on Lake Victoria where chimps were reintroduced and are now partially habituated, where sitatunga and grey-cheeked mangabey move through riverine forest, and where Nile perch fishing from the lake shore can be world class. With just one camp on the island, this is genuinely off-the-beaten-track East Africa — best woven into an itinerary as a remarkable four-night detour from the northern Tanzania circuit.",
   attractions: [
     {
       title: 'Chimpanzee Habituation',
@@ -622,7 +636,7 @@ const rubondoPark = {
     },
     {
       title: 'Canoe Safari',
-      body: "A slow, silent exploration of the island's shoreline by dugout canoe — hippos, crocodiles, sitatunga and a gallery of waterbirds at a pace that no motor safari can match.",
+      body: "A slow, silent exploration of the island’s shoreline by dugout canoe — hippos, crocodiles, sitatunga and a gallery of waterbirds at a pace that no motor safari can match.",
       image: '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
     },
   ],
@@ -646,89 +660,196 @@ export const countries: Record<string, Country> = {
   uganda: {
     slug: 'uganda',
     name: 'Uganda',
-    heroTitle: 'Uganda: The Pearl of Africa,\nRevealed in Absolute Luxury',
+    heroTitle: 'The Pearl of Africa,\nWhere the Wild Reigns Supreme',
     heroSubtitle:
-      "Beyond Bwindi's misty forests lies Uganda's wild beauty. Our expertly crafted safaris offer rare access to mountain gorillas, chimpanzees, and iconic wildlife, paired with seamless travel and eco-luxury stays — an unforgettable journey into the true Pearl of Africa.",
+      "In the heart of equatorial Africa, where the Nile begins its legendary journey northward and ancient forests shelter half the world’s remaining mountain gorillas, Uganda emerges as a destination of extraordinary, intimate wilderness. We invite you to be changed by it.",
     heroImage: '/images/parks/uganda/murchison-falls/dsc-6584.jpg',
     exploreIntro:
-      "From misty rainforests and endangered gorillas to wide savannahs and roaring waterfalls, Uganda is Africa's most diverse safari destination.",
+      "From misty rainforests and endangered gorillas to wide savannahs and roaring waterfalls, Uganda is Africa’s most diverse safari destination.",
     parkSummary:
-      "Each of Uganda's national parks offers a completely different world — rich wildlife, dramatic landscapes, and unforgettable encounters. Choose your journey and explore the wild heart of the Pearl of Africa.",
+      "Each of Uganda’s national parks offers a completely different world — rich wildlife, dramatic landscapes, and unforgettable encounters. Choose your journey and explore the wild heart of the Pearl of Africa.",
     parkSummaryImage: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
     parks: [bwindi, queenElizabeth, murchison, kibale, lakeMburo, mgahinga],
     privilegedAccess: [
       {
-        title: 'Lion Tracking with Research Team',
-        location: 'Queen Elizabeth National Park',
-        body: 'Join a dedicated research team for a morning to track and monitor the park’s iconic lion prides, gaining scientific insight few travelers ever receive.',
-        image: '/images/activities/big-five/roho-ya-selous-elephant.jpg',
-      },
-      {
-        title: 'Conservation Legacy: Meet the Park Director',
-        location: 'Bwindi Impenetrable National Park',
-        body: 'An exclusive opportunity to meet with a senior park official or conservationist to understand how your visit directly funds the protection of the gorillas and the local Batwa community.',
+        title: "Gorilla Researcher’s Morning Briefing",
+        location: 'Bwindi Impenetrable Forest, SW Uganda',
+        body: 'A private pre-trek session with the Uganda Wildlife Authority\'s gorilla monitoring team. Learn exactly how your permit fee funds gorilla protection, meet the research staff who track these families daily, and understand which family you will visit that morning and what to expect from their current behaviour.',
         image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.jpg',
       },
       {
-        title: 'Nile Angling Expedition by Private Launch',
-        location: 'Murchison Falls National Park',
-        body: 'A bespoke angling experience on the mighty Nile, targeting the legendary Nile Perch from the comfort of a private, fully-staffed launch.',
+        title: 'Chimpanzee Wake-Up at First Light',
+        location: 'Kibale National Park, W Uganda',
+        body: "Enter Kibale’s chimpanzee zone before the park opens to general visitors. Watch a habituated troupe rise from their night nests, begin grooming, and commence morning foraging — with no other guests present, in complete silence, accompanied by a specialist primatologist.",
+        image: '/images/destinations/tanzania/chimp-habituation-project1.jpg',
+      },
+      {
+        title: 'Private Helicopter Flight over Murchison Falls',
+        location: 'Murchison Falls National Park, NW Uganda',
+        body: 'A private charter directly over the seven-metre gorge where the entire River Nile is compressed into one extraordinary point of power and spray. The helicopter then lands at a remote game-viewing site inaccessible by road, where a champagne sundowner awaits with your private ranger.',
         image: '/images/parks/uganda/murchison-falls/dsc-6951.jpg',
       },
     ],
     lodges: [
       {
-        name: 'Kyaninga Lodge',
+        name: 'Bwindi Lodge',
+        location: 'Bwindi Impenetrable Forest (Buhoma)',
+        body: 'Eight stone cottages on the forest rim with panoramic canopy views and direct access to the gorilla trekking assembly point — the most established luxury address in Bwindi.',
+        image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.jpg',
+      },
+      {
+        name: 'Clouds Mountain Gorilla Lodge',
+        location: 'Bwindi Impenetrable Forest (Nkuringo)',
+        body: "Uganda’s highest-altitude gorilla lodge, with heated plunge pools, private butler service, and the most dramatic viewpoint in the entire Bwindi region.",
+        image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
+      },
+      {
+        name: 'Apoka Safari Lodge',
+        location: 'Kidepo Valley National Park',
+        body: "The most exclusive address in Uganda’s most remote park. Private game drives across Kidepo’s semi-arid savannah with zero other tourist vehicles in sight.",
+        image: '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
+      },
+      {
+        name: 'Wildwaters Lodge',
+        location: 'Nile River, Jinja',
+        body: 'A private island accessible only by boat — total seclusion on the Nile within reach of Jinja\'s white-water rapids and adventure activities.',
+        image: '/images/parks/uganda/murchison-falls/dsc-6271.jpg',
+      },
+      {
+        name: 'Primate Lodge Kibale',
         location: 'Kibale National Park',
-        body: 'Architectural Marvel: Perched above a stunning crater lake, offering exceptional views and direct access to chimpanzee trekking.',
+        body: 'Set within the park boundary for direct forest access — private guided night walks and the dawn chimpanzee experience are available exclusively to lodge guests.',
         image: '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.jpg',
       },
       {
-        name: 'Ishasha Wilderness Camp',
-        location: 'Queen Elizabeth National Park',
-        body: 'Untamed Seclusion: A remote, eco-friendly tented camp in the heart of the tree-climbing lion territory, offering an authentic, yet luxurious, bush experience.',
-        image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.jpg',
-      },
-      {
-        name: 'Kyambura Gorge Lodge',
-        location: 'Queen Elizabeth National Park',
-        body: 'Transformative Retreat: A former coffee plantation transformed into an intimate lodge overlooking the dramatic Kyambura Gorge, ideal for trail-tracker experiences.',
-        image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/23-kyambura-gorge-lodge-qe-30042024-volcanoessafaris-8624-edit-copy.jpg',
+        name: "Baker’s Lodge",
+        location: 'Murchison Falls National Park',
+        body: "Eight East African-style cottages on the northern bank of the Nile with resident hippo pools, private river decks, and the falls thundering upstream.",
+        image: '/images/parks/uganda/murchison-falls/dsc-6884.jpg',
       },
     ],
     seoKeywords:
-      'luxury safaris Uganda, bespoke gorilla trekking, private Uganda safari, high-end Uganda lodges, exclusive Uganda travel.',
+      'luxury Uganda safari, gorilla trekking Uganda, bespoke Uganda primate safari, private gorilla trek Bwindi, Murchison Falls luxury camp, Kidepo Valley exclusive safari, Uganda chimp tracking Kibale, mountain gorilla permit Uganda',
+    travelStats: {
+      bestTime: 'Jun–Sep & Dec–Feb',
+      duration: '8–12 Days',
+      keyWildlife: 'Mountain Gorilla · Chimpanzee · Elephant · Lion',
+      travelStyle: 'Trekking · Forest Lodge · Fly-In',
+    },
+    whyVisit: {
+      intro:
+        "Uganda is Africa's most intimate wildlife destination. Half the world’s remaining mountain gorillas, the largest chimpanzee population in East Africa, and tree-climbing lions — all in a country the size of the United Kingdom.",
+      bullets: [
+        'Bwindi — half the world’s remaining mountain gorillas',
+        'Kibale Forest — the highest chimpanzee density in Africa',
+        'Murchison Falls — the world’s most powerful waterfall on the Nile',
+        'Queen Elizabeth — tree-climbing lions and the Kazinga Channel',
+        'Kidepo Valley — one of Africa’s last true wilderness frontiers',
+        'Source of the Nile — Jinja, the birthplace of Africa’s greatest river',
+      ],
+      stats: [
+        { number: '460+', label: 'mountain gorillas in Uganda' },
+        { number: '1,000+', label: 'bird species recorded' },
+        { number: '10', label: 'national parks' },
+      ],
+    },
+    seasons: [
+      {
+        dates: 'Jun – Sep',
+        name: 'Long Dry Season',
+        wildlife: 'Mountain Gorilla · Chimpanzee · Savannah Big Five',
+        description:
+          'The main trekking season. Firmer trails in Bwindi, clear forest visibility in Kibale, and excellent savannah game viewing in Murchison and Queen Elizabeth. Gorilla permit demand is highest — book 6+ months ahead.',
+      },
+      {
+        dates: 'Dec – Feb',
+        name: 'Short Dry Season',
+        wildlife: 'Mountain Gorilla · Chimpanzee · Migratory Birds',
+        description:
+          'The second peak trekking window. Lower visitor numbers than June–September, with equally good conditions for gorilla and chimp trekking. Christmas and New Year in the forest is a profoundly special experience.',
+      },
+      {
+        dates: 'Mar – May',
+        name: 'Long Green Season',
+        wildlife: 'Migratory Birds · Forest Newborns · Lush Bwindi',
+        description:
+          'Wet season brings extraordinary birdlife and vivid green forest. Gorilla trekking is still possible, though trails are muddier. Lodge rates are significantly lower — excellent value for the adventurous traveller.',
+      },
+    ],
+    specialistQuote: {
+      quote:
+        "The moment a mountain gorilla makes eye contact with you in the forest, everything else falls away. Uganda delivers that encounter in a way that no other country can — intimate, unhurried, and deeply personal.",
+      author: 'David Ochieng',
+      role: 'Uganda & Rwanda Specialist, Still Wild Safaris',
+    },
+    conservation: {
+      intro:
+        'Uganda’s gorilla population has grown from 620 to over 1,000 individuals in two decades — a conservation success directly funded by gorilla trekking permits. Every Still Wild Uganda journey contributes to this extraordinary recovery.',
+      stats: [
+        { number: '1,000+', label: 'mountain gorillas now living' },
+        { number: '$800', label: 'gorilla permit fee funds conservation' },
+        { number: '45%', label: 'permit revenue to local communities' },
+      ],
+      partners: [
+        'Uganda Wildlife Authority (UWA)',
+        'Bwindi Community Hospital',
+        'International Gorilla Conservation Programme',
+        'Volcanoes Safaris Partnership Trust',
+      ],
+    },
+    countryFaqs: [
+      {
+        question: 'How do I get a gorilla trekking permit for Uganda?',
+        answer:
+          'Uganda Wildlife Authority gorilla permits cost USD 800 per person per trek and must be booked in advance. We secure permits as part of your itinerary planning — availability is limited, especially June–September, so we recommend booking 6–12 months ahead.',
+      },
+      {
+        question: 'Is gorilla trekking in Uganda difficult?',
+        answer:
+          'Treks range from 1 to 8 hours depending on gorilla family location that day. Bwindi is steep and can be muddy — good fitness and waterproof hiking boots are essential. Porters are available and strongly recommended.',
+      },
+      {
+        question: 'Can I combine gorilla trekking with a traditional safari?',
+        answer:
+          'Yes — this is the classic Uganda itinerary. Gorilla trekking in Bwindi, chimp tracking in Kibale, and a savannah safari in Murchison Falls or Queen Elizabeth can be combined in 10–12 days using light aircraft between parks.',
+      },
+      {
+        question: 'Is Uganda safe to visit?',
+        answer:
+          'Uganda is one of East Africa’s safest and most welcoming destinations. We monitor FCO and US State Department travel advisories continuously and will advise you if anything changes ahead of your departure.',
+      },
+    ],
   },
 
   rwanda: {
     slug: 'rwanda',
     name: 'Rwanda',
-    heroTitle: 'Rwanda: A Land of\nA Thousand Hills',
+    heroTitle: "The Land of a Thousand Hills\nWhere Purpose and Luxury Converge",
     heroSubtitle:
-      "From the misty volcanoes where mountain gorillas roam to the vast plains of Akagera teeming with the Big Five, Rwanda is a small country with extraordinary depth — sustainable luxury, conservation triumphs, and a warm, modern capital wrapped into one extraordinary safari.",
+      "Beyond the mist-shrouded peaks of the Virunga Mountains, Rwanda is Africa’s most remarkable conservation success story and one of its most sophisticated travel destinations. From intimate gorilla encounters in ancient volcanic forests to Big Five savannah in Akagera, Rwanda rewards those who travel with both curiosity and conscience.",
     heroImage: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
     exploreIntro:
       "Rwanda is conservation-led luxury at its purest — gorilla trekking in Volcanoes, the Big Five in restored Akagera, canopy walks in Nyungwe and lakeside elegance on Kivu.",
     parkSummary:
-      "Two flagship national parks, two distinct safari worlds. Volcanoes opens the door to mountain gorillas in their misty bamboo realm; Akagera's restored savannahs unite lions, leopards, elephants, buffalo and rhino on a single horizon.",
+      "Two flagship national parks, two distinct safari worlds. Volcanoes opens the door to mountain gorillas in their misty bamboo realm; Akagera’s restored savannahs unite lions, leopards, elephants, buffalo and rhino on a single horizon.",
     parkSummaryImage: '/images/parks/rwanda/akagera/wilderness-magashi-1.jpg',
     parks: [
       {
         slug: 'volcanoes',
         name: 'Volcanoes National Park',
         blurb:
-          "The Rwandan section of the Virunga Massif — five towering volcanoes cloaked in bamboo and rainforest, sanctuary to roughly a third of the world's mountain gorillas and a thriving population of golden monkeys.",
+          "The Rwandan section of the Virunga Massif — five towering volcanoes cloaked in bamboo and rainforest, sanctuary to roughly a third of the world’s mountain gorillas and a thriving population of golden monkeys.",
         image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
         location: 'Northwestern Rwanda',
         size: '160 km²',
         altitude: '2,400 — 4,507 m',
         bestTime: 'June–September & December–February',
         overview:
-          "Volcanoes is where Dian Fossey changed the world for mountain gorillas, and where the model of conservation-driven tourism continues to flourish. Trekking groups are kept small and intimate; lodges are some of Africa's most refined.",
+          "Volcanoes is where Dian Fossey changed the world for mountain gorillas, and where the model of conservation-driven tourism continues to flourish. Trekking groups are kept small and intimate; lodges are some of Africa’s most refined.",
         attractions: [
           {
             title: 'Mountain Gorilla Tracking',
-            body: "An intimate hour with a habituated family group in a bamboo cathedral — the experience that defined Rwanda's modern tourism.",
+            body: "An intimate hour with a habituated family group in a bamboo cathedral — the experience that defined Rwanda’s modern tourism.",
             image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
           },
           {
@@ -778,14 +899,14 @@ export const countries: Record<string, Country> = {
         slug: 'akagera',
         name: 'Akagera National Park',
         blurb:
-          "Africa's most successful conservation comeback story — savannahs, papyrus swamps and lakes restored to a full Big Five reserve since 2010, with reintroduced lions and rhinos thriving alongside elephants, leopards and buffalo.",
+          "Africa’s most successful conservation comeback story — savannahs, papyrus swamps and lakes restored to a full Big Five reserve since 2010, with reintroduced lions and rhinos thriving alongside elephants, leopards and buffalo.",
         image: '/images/parks/rwanda/akagera/wilderness-magashi-1.jpg',
         location: 'Eastern Rwanda',
         size: '1,122 km²',
         altitude: '1,250 — 1,825 m',
         bestTime: 'July–September & December–February',
         overview:
-          "Akagera is Rwanda's only savannah park — a landscape of acacia plains, hippo-filled lakes and rolling escarpments. African Parks took over management in 2010; lions returned in 2015, rhinos in 2017, and the Big Five circle is now complete.",
+          "Akagera is Rwanda’s only savannah park — a landscape of acacia plains, hippo-filled lakes and rolling escarpments. African Parks took over management in 2010; lions returned in 2015, rhinos in 2017, and the Big Five circle is now complete.",
         attractions: [
           {
             title: 'The Restored Big Five',
@@ -834,66 +955,161 @@ export const countries: Record<string, Country> = {
     ],
     privilegedAccess: [
       {
-        title: 'Private Helicopter to the Volcanoes',
-        location: 'Volcanoes National Park',
-        body: "Skip the four-hour road. A private R44 helicopter transfer from Kigali to Bisate or Singita Kwitonda — with a low-level pass over the Twin Lakes en route.",
-        image: '/images/activities/helicopter-rwanda/1000045744.jpg',
-      },
-      {
-        title: 'Behind-the-Scenes at the Dian Fossey Campus',
-        location: 'Volcanoes National Park',
-        body: 'A private tour of the new Ellen DeGeneres Campus of the Dian Fossey Gorilla Fund — meet researchers and see the lab work that protects the gorillas you visit in the wild.',
+        title: 'Behind-the-Scenes Briefing — Karisoke Research Centre',
+        location: 'Volcanoes National Park, NW Rwanda',
+        body: "An exclusive opportunity to meet with a senior researcher at the Dian Fossey Gorilla Fund’s Karisoke Research Centre. Receive a private briefing on current gorilla monitoring methods, the science behind habituation, and how your permit fee flows directly into the conservation programme — before your trek begins.",
         image: '/images/parks/rwanda/volcanoes/wilderness-bisate-29.jpg',
       },
       {
-        title: 'Rhino Conservation Briefing in Akagera',
-        location: 'Akagera National Park',
-        body: "A private session with the African Parks rhino-monitoring unit — understand exactly how your visit funds the rhino reintroduction programme.",
+        title: 'Private Canopy Walkway at Sunrise — Nyungwe',
+        location: 'Nyungwe Forest National Park, SW Rwanda',
+        body: "Access the famous Nyungwe Canopy Walkway — suspended 70 metres above the forest floor — before the park opens to general visitors, for a completely private, silent sunrise experience. The ancient rainforest spreads below in the morning mist, colobus monkeys move through the canopy at eye level, and 310 bird species wake around you.",
+        image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+      },
+      {
+        title: 'Rhino Tracking with the Research Team',
+        location: 'Akagera National Park, Eastern Rwanda',
+        body: "Join a dedicated research team for a morning tracking Rwanda’s critically endangered black and white rhinos — reintroduced to Akagera after an absence of decades. Accompany researchers monitoring collar data, recording behaviour, and assessing range. Scientific insight few travellers ever receive, in a park that represents one of Africa’s most successful rewilding stories.",
         image: '/images/parks/rwanda/akagera/wilderness-magashi-31.jpg',
       },
     ],
     lodges: [
       {
-        name: 'Wilderness Bisate',
-        location: 'Volcanoes National Park',
-        body: "Six conical forest villas built on the rim of an extinct volcano — sustainably built, deeply local, and the gold standard for gorilla-tracking lodges.",
-        image: '/images/lodges/rwanda/volcanoes-national-park/wildernes-bisate-lodge/1753110933515-bisate-gorilla-trekking-06-25-fr-31.jpg',
-      },
-      {
         name: 'Singita Kwitonda Lodge',
         location: 'Volcanoes National Park',
-        body: 'Eight suites and a private two-bedroom villa on a 178-acre reforestation property right at the park boundary — quiet luxury in service of conservation.',
+        body: 'Ultra-luxury low-impact suites with Sabyinyo volcano views and direct gorilla trekking access. Conservation-first ethos throughout.',
         image: '/images/lodges/rwanda/volcanoes-national-park/singita-kwitonda-lodge/dsc07739.jpg',
       },
       {
-        name: 'Wilderness Magashi',
+        name: 'Bisate Lodge',
+        location: 'Volcanoes National Park',
+        body: 'Six spherical forest villas built in an eroded volcanic cone. An active reforestation programme on-site. Among Africa\'s most architecturally significant lodges.',
+        image: '/images/lodges/rwanda/volcanoes-national-park/wildernes-bisate-lodge/1753110933515-bisate-gorilla-trekking-06-25-fr-31.jpg',
+      },
+      {
+        name: "One&Only Gorilla’s Nest",
+        location: 'Volcanoes National Park',
+        body: 'Nestled in eucalyptus forest moments from the gorilla trekking starting point. Unparalleled luxury in immediate proximity to the gorillas.',
+        image: '/images/lodges/rwanda/volcanoes-national-park/one-and-only-gorilla-nest/ajqwtbm-sghilb7nle6tsj60kf09t2y-5t9-yogkjdukgiwdyxdqa3q5xhnkhpsmgq-zfpyh4-wq0ahhc9fjpalj-rthz6sczpv5eey2khgmwvwq0mmt-h400-nu.jpg',
+      },
+      {
+        name: 'One&Only Nyungwe House',
+        location: 'Nyungwe Forest National Park',
+        body: 'A tea plantation transformed into a luxury forest retreat — the ideal base for chimpanzee trekking and the famous Nyungwe canopy walkway.',
+        image: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
+      },
+      {
+        name: 'Magashi Peninsula',
         location: 'Akagera National Park',
-        body: "Six lakeside tented suites in Akagera's most exclusive concession — an unhurried Big-Five safari with no other vehicles in sight.",
+        body: 'Exclusive lakeside camp on Lake Rwanyakizinga. Classic Big Five safari in an intimate tented setting, operated in partnership with African Parks.',
         image: '/images/parks/rwanda/akagera/wilderness-magashi.jpg',
       },
       {
-        name: 'Virunga Lodge',
-        location: 'Volcanoes National Park',
-        body: 'Volcanoes Safaris’ original gorilla lodge — a hilltop sanctuary with sweeping views of the Twin Lakes and the volcano chain.',
-        image: '/images/lodges/rwanda/volcanoes-national-park/virunga-lodge/11-virunga-lodge-map-room-gvw-dsc-2068-hdr.jpg',
-      },
-      {
-        name: 'One&Only Gorilla’s Nest',
-        location: 'Volcanoes National Park',
-        body: 'A modern, design-forward retreat at the foot of Mount Sabyinyo — ideal for travelers who prefer contemporary architecture to safari rustic.',
-        image: '/images/lodges/rwanda/volcanoes-national-park/one-and-only-gorilla-nest/ajqwtbm-sghilb7nle6tsj60kf09t2y-5t9-yogkjdukgiwdyxdqa3q5xhnkhpsmgq-zfpyh4-wq0ahhc9fjpalj-rthz6sczpv5eey2khgmwvwq0mmt-h400-nu.jpg',
+        name: 'The Retreat by Heaven',
+        location: 'Kigali',
+        body: "The finest arrival and departure experience in Kigali — world-class spa, the city’s best dining, and a serene garden setting.",
+        image: '/images/destinations/rwanda/image-20260331125636.jpg',
       },
     ],
     seoKeywords:
-      'luxury Rwanda safari, gorilla trekking Rwanda, Akagera Big Five, Wilderness Bisate, Singita Kwitonda, Volcanoes National Park lodges.',
+      'luxury Rwanda safari, gorilla trekking Rwanda, Rwanda gorilla permit, Volcanoes National Park lodge, Bisate Lodge Rwanda, Dian Fossey gorilla tour, Akagera Big Five Rwanda, Nyungwe canopy walk, bespoke Rwanda travel',
+    travelStats: {
+      bestTime: 'Jun–Sep & Dec–Feb',
+      duration: '6–10 Days',
+      keyWildlife: 'Mountain Gorilla · Golden Monkey · Black Rhino · Chimp',
+      travelStyle: 'Lodge · Trekking · Conservation-First',
+    },
+    whyVisit: {
+      intro:
+        "Rwanda is Africa’s most remarkable conservation success story. In three decades, the country has transformed from crisis to become one of the continent’s most sought-after destinations — its gorillas thriving, its parks rewilded, its lodges setting the global standard for sustainable luxury.",
+      bullets: [
+        'Volcanoes National Park — the original Dian Fossey gorilla habitat',
+        'Bisate Lodge — one of Africa’s most awarded conservation properties',
+        'Akagera — the Big Five, restored through community-led conservation',
+        'Nyungwe — ancient montane forest with chimpanzees and canopy walks',
+        'Kigali — one of Africa’s cleanest, safest and most fascinating cities',
+        'Compact geography — everything within a short flight or scenic drive',
+      ],
+      stats: [
+        { number: '604', label: 'mountain gorillas in Volcanoes NP' },
+        { number: '30%', label: 'of Volcanoes NP revenue to communities' },
+        { number: '3', label: 'distinct ecosystems in one country' },
+      ],
+    },
+    seasons: [
+      {
+        dates: 'Jun – Sep',
+        name: 'Long Dry Season',
+        wildlife: 'Mountain Gorilla · Golden Monkey · Black Rhino',
+        description:
+          'The best season for gorilla trekking in the Virungas. Clear skies, firm forest trails and excellent visibility. Akagera is outstanding for Big Five game viewing with water levels low and animals concentrated around rivers.',
+      },
+      {
+        dates: 'Dec – Feb',
+        name: 'Short Dry Season',
+        wildlife: 'Mountain Gorilla · Chimpanzee · Canopy Birds',
+        description:
+          'The second peak trekking window. Fewer visitors than the June–September season, with equally good conditions in the Virungas and Nyungwe. An excellent time for a quieter, more intimate Rwanda journey.',
+      },
+      {
+        dates: 'Mar – May',
+        name: 'Long Green Season',
+        wildlife: 'Migratory Birds · Lush Forest · Gorilla Families',
+        description:
+          'Rain transforms Rwanda into vivid green. Gorilla trekking continues year-round and trails are passable. Significantly lower lodge rates and very few other visitors — ideal for the experienced traveller.',
+      },
+    ],
+    specialistQuote: {
+      quote:
+        "Rwanda has rebuilt itself into one of the most inspiring destinations on earth. The gorillas, the lodges, the story of renewal — it is unlike anywhere else in Africa, and our guests leave profoundly changed by it.",
+      author: 'David Ochieng',
+      role: 'Uganda & Rwanda Specialist, Still Wild Safaris',
+    },
+    conservation: {
+      intro:
+        'Rwanda reinvested gorilla permit revenue directly into conservation and community programmes — and the gorilla population has doubled as a result. Every Still Wild Rwanda journey is part of that story.',
+      stats: [
+        { number: '604', label: 'mountain gorillas in Volcanoes NP' },
+        { number: '30%', label: 'permit revenue to communities' },
+        { number: '2x', label: 'gorilla population growth since 2008' },
+      ],
+      partners: [
+        'Rwanda Development Board (RDB)',
+        'Dian Fossey Gorilla Fund',
+        'African Parks (Akagera)',
+        'Wilderness Safaris',
+      ],
+    },
+    countryFaqs: [
+      {
+        question: 'How much does a Rwanda gorilla permit cost?',
+        answer:
+          'A Rwanda gorilla trekking permit costs USD 1,500 per person per trek — the highest in Africa, and deliberately so. The premium funds Rwanda’s world-class conservation programme directly. We secure permits as part of your itinerary.',
+      },
+      {
+        question: 'Can I see the Big Five in Rwanda?',
+        answer:
+          'Yes — Akagera National Park in eastern Rwanda is home to lion, leopard, elephant, buffalo and black rhino, successfully reintroduced through a partnership with African Parks. A classic Rwanda itinerary combines Volcanoes with Akagera.',
+      },
+      {
+        question: 'How do I get to Rwanda?',
+        answer:
+          'Rwanda’s Kigali International Airport has direct connections to London Heathrow (RwandAir), Amsterdam, Brussels, Dubai and Nairobi. It is one of the easiest African countries to fly to from Europe. Your trip manager will advise on the best routing.',
+      },
+      {
+        question: 'Is Rwanda suitable for first-time Africa visitors?',
+        answer:
+          'Rwanda is an excellent first Africa destination. The country is exceptionally safe, clean, well-organised and English-speaking. The gorilla experience is one of the most powerful encounters available anywhere on earth — ideal for a first safari of genuine depth.',
+      },
+    ],
   },
 
   kenya: {
     slug: 'kenya',
     name: 'Kenya',
-    heroTitle: 'Kenya: The Original\nSafari Country',
+    heroTitle: 'The Classic Stage of Africa,\nRewritten in Luxury',
     heroSubtitle:
-      "Kenya is where the safari was born — and where it has been quietly reinvented. From the herds of the Mara to the elephants of Amboseli framed by Kilimanjaro, the rhinos of Laikipia to the unique north of Samburu, every chapter is delivered through a private conservancy lens.",
+      "Where else on earth does a single horizon contain a million wildebeest, a pride of lions in golden light, and a hot-air balloon drifting silently at dawn? Kenya is Africa’s most storied safari destination — and for those who know where to look, it remains a place of profound, unhurried discovery.",
     heroImage: '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
     exploreIntro:
       "Kenya offers the broadest variety of any East African safari — wildebeest spectacle, elephant herds beneath Kilimanjaro, rhino conservation pioneers, the unique “Samburu Five” and the most exclusive private conservancies on the continent.",
@@ -905,14 +1121,14 @@ export const countries: Record<string, Country> = {
         slug: 'masai-mara',
         name: 'Masai Mara National Reserve',
         blurb:
-          "The northern extension of the Serengeti and the stage for the Great Migration each July to October — plus year-round resident lion, leopard and cheetah on Africa's most photographed plains.",
+          "The northern extension of the Serengeti and the stage for the Great Migration each July to October — plus year-round resident lion, leopard and cheetah on Africa’s most photographed plains.",
         image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
         location: 'Southwest Kenya',
         size: '1,510 km² + 6 conservancies',
         altitude: '1,500 — 2,170 m',
         bestTime: 'July–October (migration) & January–February (calving in Serengeti)',
         overview:
-          "The Mara reserve and its surrounding private conservancies are where you'll find the highest big-cat density in Africa, the most reliable migration crossings and the most varied luxury lodging in East Africa.",
+          "The Mara reserve and its surrounding private conservancies are where you’ll find the highest big-cat density in Africa, the most reliable migration crossings and the most varied luxury lodging in East Africa.",
         attractions: [
           {
             title: 'The Great Migration',
@@ -962,18 +1178,18 @@ export const countries: Record<string, Country> = {
         slug: 'amboseli',
         name: 'Amboseli National Park',
         blurb:
-          "The classic 'elephants under Kilimanjaro' park — small, accessible, and home to some of Africa's largest tuskers in front of an impossibly photogenic mountain backdrop.",
+          "The classic 'elephants under Kilimanjaro' park — small, accessible, and home to some of Africa’s largest tuskers in front of an impossibly photogenic mountain backdrop.",
         image: '/images/parks/kenya/amboseli/amboseli-elephants.jpg',
         location: 'Southern Kenya',
         size: '392 km²',
         altitude: '1,100 — 1,200 m',
         bestTime: 'June–October & January–February',
         overview:
-          "Amboseli is compact and easy to read — a swampy heart fed by Kilimanjaro's snowmelt sustains hundreds of elephants year-round. The Tortilis and ol Donyo lodges deliver the experience at the highest level.",
+          "Amboseli is compact and easy to read — a swampy heart fed by Kilimanjaro’s snowmelt sustains hundreds of elephants year-round. The Tortilis and ol Donyo lodges deliver the experience at the highest level.",
         attractions: [
           {
             title: 'Big-Tusker Elephant Herds',
-            body: "Among the world's largest concentrations of giant-tusked elephants, easily observed from open vehicles and walking distance.",
+            body: "Among the world’s largest concentrations of giant-tusked elephants, easily observed from open vehicles and walking distance.",
             image: '/images/parks/kenya/amboseli/amboseli-elephants.jpg',
           },
           {
@@ -983,14 +1199,14 @@ export const countries: Record<string, Country> = {
           },
           {
             title: 'Birdlife at the Swamps',
-            body: "Amboseli's permanent swamps host pelicans, flamingos, herons and over 400 bird species at the water year-round.",
+            body: "Amboseli’s permanent swamps host pelicans, flamingos, herons and over 400 bird species at the water year-round.",
             image: '/images/parks/kenya/amboseli/amboseli-waterhole.jpg',
           },
         ],
         activities: [
           {
             title: 'Stay at ol Donyo Lodge',
-            body: 'Great Plains’ spectacular property in the Chyulu Hills with hide-walking, horseriding and Maasai cultural visits.',
+            body: "Great Plains' spectacular property in the Chyulu Hills with hide-walking, horseriding and Maasai cultural visits.",
             image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.jpg',
           },
           {
@@ -1018,7 +1234,7 @@ export const countries: Record<string, Country> = {
         slug: 'laikipia',
         name: 'Laikipia & Loisaba',
         blurb:
-          "A 9,500 km² conservancy mosaic north of Mount Kenya — home to half of Kenya's black rhino, all of its Grevy's zebras, and some of the most innovative community-led conservation work in Africa.",
+          "A 9,500 km² conservancy mosaic north of Mount Kenya — home to half of Kenya’s black rhino, all of its Grevy’s zebras, and some of the most innovative community-led conservation work in Africa.",
         image: '/images/parks/kenya/laikipia-loisaba/1752747854365-kenya-suyian-lodge-exterior-elephant-view-8.jpg',
         location: 'Central Kenya',
         size: '9,500 km² (private conservancies)',
@@ -1039,7 +1255,7 @@ export const countries: Record<string, Country> = {
           },
           {
             title: 'Grevy’s Zebra Spotting',
-            body: "The endangered Grevy's zebra has its global stronghold across Laikipia and Samburu — distinctive and beautiful.",
+            body: "The endangered Grevy’s zebra has its global stronghold across Laikipia and Samburu — distinctive and beautiful.",
             image: '/images/parks/kenya/samburu/grevys-zebra-1.jpg',
           },
         ],
@@ -1074,18 +1290,18 @@ export const countries: Record<string, Country> = {
         slug: 'samburu',
         name: 'Samburu National Reserve',
         blurb:
-          "The dry, dramatic north — home to the 'Samburu Five' (Grevy's zebra, reticulated giraffe, gerenuk, beisa oryx and Somali ostrich), found nowhere else in Kenya.",
+          "The dry, dramatic north — home to the 'Samburu Five' (Grevy’s zebra, reticulated giraffe, gerenuk, beisa oryx and Somali ostrich), found nowhere else in Kenya.",
         image: '/images/parks/kenya/samburu/grevys-zebra-1.jpg',
         location: 'Northern Kenya',
         size: '165 km² (plus surrounding conservancies)',
         altitude: '800 — 1,250 m',
         bestTime: 'June–October & January–February',
         overview:
-          "Samburu offers a completely different palette — red earth, doum palms, the Ewaso Ng'iro river, and species you won't see in the Mara. Sasaab and Saruni Samburu deliver the safari at exceptional standards.",
+          "Samburu offers a completely different palette — red earth, doum palms, the Ewaso Ng’iro river, and species you won’t see in the Mara. Sasaab and Saruni Samburu deliver the safari at exceptional standards.",
         attractions: [
           {
             title: 'The Samburu Five',
-            body: "Five iconic dry-country species — Grevy's zebra, reticulated giraffe, gerenuk, beisa oryx and Somali ostrich — found together only in northern Kenya.",
+            body: "Five iconic dry-country species — Grevy’s zebra, reticulated giraffe, gerenuk, beisa oryx and Somali ostrich — found together only in northern Kenya.",
             image: '/images/parks/kenya/samburu/53a3831.jpg',
           },
           {
@@ -1102,7 +1318,7 @@ export const countries: Record<string, Country> = {
         activities: [
           {
             title: 'Stay at Sasaab',
-            body: "The Safari Collection's Moorish-inspired villa-style lodge above the Ewaso Ng'iro — vast open-air suites, plunge pools and one of the most distinctive properties in northern Kenya.",
+            body: "The Safari Collection’s Moorish-inspired villa-style lodge above the Ewaso Ng’iro — vast open-air suites, plunge pools and one of the most distinctive properties in northern Kenya.",
             image: '/images/parks/kenya/samburu/sasaab.jpg',
           },
           {
@@ -1119,11 +1335,11 @@ export const countries: Record<string, Country> = {
         faqs: [
           {
             q: 'How does Samburu pair with the rest of Kenya?',
-            a: "It's the ideal counterpoint to the Mara — opposite landscape, different species, a fraction of the vehicles. Most of our itineraries combine Samburu (2–3 nights) with the Mara or Laikipia.",
+            a: "It’s the ideal counterpoint to the Mara — opposite landscape, different species, a fraction of the vehicles. Most of our itineraries combine Samburu (2–3 nights) with the Mara or Laikipia.",
           },
           {
             q: 'Is it hot?',
-            a: "Yes, Samburu is the warmest of Kenya's classic safari regions — expect 30–35°C in the daytime. Lodges design around the heat with airy architecture, pools and siesta hours.",
+            a: "Yes, Samburu is the warmest of Kenya’s classic safari regions — expect 30–35°C in the daytime. Lodges design around the heat with airy architecture, pools and siesta hours.",
           },
           {
             q: 'When is the best time to visit?',
@@ -1135,7 +1351,7 @@ export const countries: Record<string, Country> = {
         slug: 'tsavo',
         name: 'Tsavo National Park',
         blurb:
-          "Kenya's largest park — a vast, red-earth wilderness famous for its 'red elephants' coated in Tsavo's distinctive dust, and for raw, uncrowded wildness.",
+          "Kenya’s largest park — a vast, red-earth wilderness famous for its 'red elephants' coated in Tsavo’s distinctive dust, and for raw, uncrowded wildness.",
         image: '/images/parks/kenya/tsavo/1736494647848-4z6a7096.jpg',
         location: 'Southern Kenya',
         size: '21,812 km²',
@@ -1146,7 +1362,7 @@ export const countries: Record<string, Country> = {
         attractions: [
           {
             title: '“Red Elephants” of Tsavo',
-            body: "Tsavo's iron-rich red dust coats the elephants who bathe in it — yielding the iconic ochre-skinned giants the park is famous for. Herds along the Galana River are a sure sighting.",
+            body: "Tsavo’s iron-rich red dust coats the elephants who bathe in it — yielding the iconic ochre-skinned giants the park is famous for. Herds along the Galana River are a sure sighting.",
             image: '/images/parks/kenya/tsavo/1736494647848-4z6a7096.jpg',
           },
           {
@@ -1168,7 +1384,7 @@ export const countries: Record<string, Country> = {
           },
           {
             title: 'Walking Safari',
-            body: "Tsavo's vast wilderness lends itself to walking with specialist guides — an evening hike to a fly-camp on the riverbank is one of the most authentic experiences in Kenya.",
+            body: "Tsavo’s vast wilderness lends itself to walking with specialist guides — an evening hike to a fly-camp on the riverbank is one of the most authentic experiences in Kenya.",
             image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.jpg',
           },
           {
@@ -1188,84 +1404,173 @@ export const countries: Record<string, Country> = {
           },
           {
             q: 'Is it as good for wildlife as the Mara?',
-            a: "Different. Sightings are less concentrated than the Mara, but you'll have entire stretches of bush to yourself, and the elephants here are bigger, dustier, and far less photographed.",
+            a: "Different. Sightings are less concentrated than the Mara, but you’ll have entire stretches of bush to yourself, and the elephants here are bigger, dustier, and far less photographed.",
           },
         ],
       },
     ],
     privilegedAccess: [
       {
-        title: 'Helicopter Sunrise Picnic over the Mara',
-        location: 'Masai Mara',
-        body: 'Lift off at dawn for a breakfast on a remote escarpment with Mara Plains — an unforgettable way to experience the migration in motion.',
-        image: '/images/parks/kenya/masai-mara/activites-game-drive.jpg',
+        title: 'Hot-Air Balloon Safari at Sunrise',
+        location: 'Masai Mara Private Conservancy, SW Kenya',
+        body: 'An exclusively arranged early-morning balloon flight over private conservancy land — launching before the public balloon companies depart. You float in near-silence over lions, elephants, and golden grasslands, landing on the open plain for a private champagne bush breakfast as the African sun fully rises.',
+        image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
       },
       {
-        title: 'Rhino Tracking on Foot at Lewa',
-        location: 'Laikipia (Lewa Conservancy)',
-        body: "Track black rhino on foot with a Lewa ranger — a small-group, by-permit experience that funds frontline anti-poaching.",
+        title: 'Anti-Poaching Unit Field Morning',
+        location: 'Laikipia Private Conservancy, Central Kenya',
+        body: 'Join a ranger team for a four-hour morning patrol across private conservancy land. You will track, observe, and learn about the front-line reality of Kenya’s wildlife protection — how technology, community informants, and ranger expertise combine to protect rhinos and elephants.',
         image: '/images/lodges/kenya/lakipia/elewana-kifaru-house/1770879317943whiterhino-elewanacar.jpg',
       },
       {
-        title: 'Giraffe Manor Breakfast',
-        location: 'Nairobi',
-        body: "Endangered Rothschild's giraffes joining you for breakfast — the most photographed twelve hours of any Kenya itinerary.",
-        image: '/images/lodges/kenya/nairobi/giraffe-manor/a-spot-of-tea-and-a-giraffe.jpg',
+        title: 'Private Riverside Fly-Camp on the Ewaso Nyiro',
+        location: 'Samburu National Reserve, N Kenya',
+        body: 'A private one-night fly-camp on a sandbank beside the Ewaso Nyiro River — available to no more than two guests. Your personal ranger accompanies you from sunset, when elephant and crocodile patrol the opposite bank, through a night of river sounds, to dawn when the birds begin on the water.',
+        image: '/images/parks/kenya/samburu/grevys-zebra-1.jpg',
       },
     ],
     lodges: [
       {
         name: 'Angama Mara',
-        location: 'Masai Mara',
-        body: 'Suspended on the Oloololo Escarpment with sweeping views of the Mara Triangle — architecturally distinctive, service-driven luxury.',
+        location: 'Mara Triangle, Masai Mara Conservancy',
+        body: 'Suspended on the Rift Valley escarpment with the most dramatic Mara views available. Private conservancy access, exceptional guide team.',
         image: '/images/lodges/kenya/masai-mara/angama-mara/a-rocking-chair-safari.jpg',
       },
       {
-        name: 'Mara Plains Camp',
-        location: 'Masai Mara (Olare Motorogi Conservancy)',
-        body: "Great Plains' flagship Mara camp — just seven tented suites in the heart of the migration corridor.",
-        image: '/images/lodges/kenya/masai-mara/mara-plains-camp/getting-a-bird-s-eye-view-in-the-omc.jpg',
+        name: 'Mahali Mzuri',
+        location: 'Mara North Conservancy',
+        body: "Sir Richard Branson’s private camp — 12 tented suites on an exclusive conservancy with zero shared game drives, ever.",
+        image: '/images/lodges/kenya/masai-mara/mahali-mzuri/bush-sundowners.jpg',
       },
       {
-        name: 'Sirikoi',
-        location: 'Lewa Wildlife Conservancy',
-        body: 'Family-run, deeply personal, and one of the few lodges where the founders are still on the floor every night — a sanctuary inside Lewa.',
-        image: '/images/lodges/kenya/lakipia/sirikoi-lodge-kenya/1744025471001-2024-cottage-outside-dec-sunset.jpg',
-      },
-      {
-        name: 'Sasaab',
-        location: 'Samburu',
-        body: 'Moroccan-inspired suites overlooking the Ewaso Ng’iro — the standout lodge in northern Kenya.',
+        name: 'Sasaab Lodge',
+        location: 'Samburu District',
+        body: 'Moroccan-influenced retreat on the Ewaso Nyiro River with private plunge pools overlooking elephant-rich riverine forest.',
         image: '/images/lodges/kenya/sasaab/images/aerial-view-of-sasaab.jpg',
       },
       {
-        name: 'ol Donyo Lodge',
-        location: 'Chyulu Hills (Amboseli)',
-        body: 'Great Plains’ stunning property in Maasai community land — with views to Kilimanjaro and one of the finest hide systems in East Africa.',
-        image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.jpg',
+        name: 'Segera Retreat',
+        location: 'Laikipia Plateau',
+        body: 'A 50,000-acre conservancy featuring Africa’s finest contemporary art collection and community conservation on an extraordinary scale.',
+        image: '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.jpg',
       },
       {
         name: 'Giraffe Manor',
         location: 'Nairobi',
-        body: 'A boutique manor home outside Nairobi where Rothschild’s giraffes pop their heads through the breakfast windows — the perfect bookend to a Kenya safari.',
+        body: 'East Africa’s most iconic boutique hotel. Resident Rothschild giraffes appear at breakfast — the ultimate arrival or farewell experience.',
         image: '/images/lodges/kenya/nairobi/giraffe-manor/a-spot-of-tea-and-a-giraffe.jpg',
+      },
+      {
+        name: 'The Emakoko',
+        location: 'Nairobi National Park Edge',
+        body: 'City convenience meets genuine wilderness — an ideal gateway or farewell property with direct access to Nairobi National Park.',
+        image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
       },
     ],
     seoKeywords:
-      'luxury Kenya safari, Masai Mara migration, Amboseli elephants Kilimanjaro, Laikipia rhino conservation, Samburu safari, Giraffe Manor Nairobi.',
+      'luxury Kenya safari, Masai Mara private conservancy, Great Migration luxury tour, Samburu exclusive camp, Laikipia rhino tracking safari, bespoke Kenya travel, Kenya hot-air balloon safari, private conservancy game drives',
+    travelStats: {
+      bestTime: 'Jul–Oct & Jan–Mar',
+      duration: '8–12 Days',
+      keyWildlife: 'Big Five · Wildebeest · Cheetah · Rhino',
+      travelStyle: 'Fly-In · Private Conservancy · Tented Camps',
+    },
+    whyVisit: {
+      intro:
+        "Kenya is Africa's original safari destination — and for those who know where to look, it remains the continent's most rewarding. Private conservancies bordering the Masai Mara offer exclusivity that the national reserve cannot match.",
+      bullets: [
+        'Masai Mara — the greatest wildlife spectacle on earth, year-round',
+        'Private conservancies — exclusive access, night drives, walking safaris',
+        'Samburu — dry-country species found nowhere else in the region',
+        'Laikipia Plateau — large-scale rhino and elephant conservation',
+        'Giraffe Manor — one of the world’s most photographed properties',
+        'Nairobi — a genuine cultural capital to open or close your journey',
+      ],
+      stats: [
+        { number: '1,500', label: 'km² Masai Mara ecosystem' },
+        { number: '7%', label: 'of Africa’s lion population' },
+        { number: '60+', label: 'private conservancies' },
+      ],
+    },
+    seasons: [
+      {
+        dates: 'Jul – Oct',
+        name: 'The Great Migration',
+        wildlife: 'Wildebeest Crossings · Lion · Leopard · Cheetah',
+        description:
+          'The Mara River crossings draw the wildebeest in their millions from Tanzania. This is the most dramatic wildlife spectacle on earth — and Kenya’s private conservancies give you front-row access.',
+      },
+      {
+        dates: 'Jan – Mar',
+        name: 'Dry Shoulder Season',
+        wildlife: 'Resident Wildlife · Calving Herds · Predators',
+        description:
+          'Lower rainfall and excellent visibility make January to March outstanding for predator sightings. Laikipia and Samburu are at their best. Far fewer visitors than peak migration season.',
+      },
+      {
+        dates: 'Apr – Jun',
+        name: 'Long Green Season',
+        wildlife: 'Migratory Birds · Newborn Animals · Lush Scenery',
+        description:
+          'The long rains bring a different kind of beauty — vivid green landscapes, abundant birdlife, and significantly lower lodge rates. An ideal time for a first Kenya safari at exceptional value.',
+      },
+    ],
+    specialistQuote: {
+      quote:
+        "Kenya rewards those who choose to go beyond the reserve fence. In a private conservancy you have the landscape to yourself — no other vehicles, no fixed circuit. That is the Kenya most travellers never find.",
+      author: 'Sarah Mwangi',
+      role: 'Kenya Safari Specialist, Still Wild Safaris',
+    },
+    conservation: {
+      intro:
+        'Kenya’s private conservancies have reversed local wildlife decline through community-owned conservation. Every Still Wild Kenya itinerary supports anti-poaching, ranger training and school programmes.',
+      stats: [
+        { number: '60+', label: 'private conservancies' },
+        { number: '25,000', label: 'Maasai community members benefiting' },
+        { number: '1,100', label: 'black rhino in Kenya' },
+      ],
+      partners: [
+        'Kenya Wildlife Service (KWS)',
+        'Ol Pejeta Conservancy',
+        'Mara Elephant Project',
+        'Space for Giants',
+      ],
+    },
+    countryFaqs: [
+      {
+        question: 'When is the best time to visit Kenya?',
+        answer:
+          'July to October offers the Great Migration river crossings in the Masai Mara — the most dramatic wildlife spectacle on earth. January to March is excellent for predator sightings with fewer visitors. Kenya is genuinely good year-round.',
+      },
+      {
+        question: 'Do I need a visa to enter Kenya?',
+        answer:
+          'Kenya uses an Electronic Travel Authorisation (ETA) system. Most nationalities apply online before travel. We will walk you through the process as part of your pre-departure briefing.',
+      },
+      {
+        question: 'What is the difference between the Masai Mara and a private conservancy?',
+        answer:
+          'The Masai Mara National Reserve is open to all licensed vehicles — popular crossings can attract 30+ safari vehicles. A private conservancy (Olare Motorogi, Naboisho, Ol Kinyei) bordering the reserve limits vehicles, allows night drives and off-road driving, and typically has exclusive camp access.',
+      },
+      {
+        question: 'Can I combine Kenya and Tanzania?',
+        answer:
+          'Absolutely. A classic East Africa itinerary starts in Kenya’s Masai Mara, crosses into the Serengeti by light aircraft, continues to Ruaha or Nyerere, and ends in Zanzibar. We can design this as a seamless 14–18 day journey.',
+      },
+    ],
   },
 
   tanzania: {
     slug: 'tanzania',
     name: 'Tanzania',
-    heroTitle: "Tanzania: The Roof of\nAfrica's Wild Kingdom",
+    heroTitle: 'The Serengeti Eternal\nAfrica in Its Most Original State',
     heroSubtitle:
-      "Tanzania is Africa at its most elemental — the Serengeti's endless plains, the ancient walls of Ngorongoro, the wild silence of the Selous, and a private island on Lake Victoria where chimps still roam. Every landscape is extraordinary. We reveal them at their quietest and most private.",
+      "No country holds as much concentrated, uninterrupted wilderness as Tanzania. From the infinite Serengeti where 1.5 million wildebeest move in ancient circular rhythm, to the world’s largest intact volcanic caldera at Ngorongoro, the remote wild south, and the spice-scented Indian Ocean coast of Zanzibar — Tanzania is not merely a safari. It is the Earth in its most original state.",
     heroImage: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg',
     exploreIntro:
       'From the Great Migration of the Serengeti to the remote river safaris of Nyerere, Tanzania offers the full spectrum of the African wild — curated through private concessions and exclusive camps.',
     parkSummary:
-      "Tanzania's national parks range from the world's most famous plains to an island wilderness on Lake Victoria and Africa's largest game reserve in the south. No two experiences are alike — and no other country offers quite this range in a single itinerary.",
+      "Tanzania’s national parks range from the world’s most famous plains to an island wilderness on Lake Victoria and Africa’s largest game reserve in the south. No two experiences are alike — and no other country offers quite this range in a single itinerary.",
     parkSummaryImage: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg',
     parks: [serengetiPark, ngorongoroPark, selousPark, rubondoPark],
     privilegedAccess: [
@@ -1290,31 +1595,140 @@ export const countries: Record<string, Country> = {
     ],
     lodges: [
       {
-        name: 'Sayari Camp',
-        location: 'Northern Serengeti',
-        body: "Asilia's flagship Serengeti camp — fifteen tented rooms in the far north, closest to the Mara River crossings, with full off-road access and one of the best guiding teams in Tanzania.",
-        image: '/images/destinations/tanzania/sayari-lioness.jpg',
+        name: 'Singita Grumeti',
+        location: 'Western Serengeti',
+        body: 'A private concession of 350,000 acres with four distinct camps. Unmatched migration-season access across the entire Serengeti ecosystem.',
+        image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.jpg',
       },
       {
-        name: 'Dunia Camp',
-        location: 'Central Serengeti',
-        body: 'Eight intimate tents following the game to the southern calving grounds in season and the central Seronera valley in others — a mobile-style camp at its most comfortable.',
+        name: 'Nomad Tanzania Lamai',
+        location: 'Northern Serengeti',
+        body: 'Positioned in the migration corridor’s most productive crossing section — an intimate camp with exceptional big-cat and crossing sightings.',
+        image: '/images/destinations/tanzania/sayari-game-drive-with-hyena-viewing1.jpg',
+      },
+      {
+        name: 'Ngorongoro Crater Lodge',
+        location: 'Ngorongoro Crater Rim',
+        body: 'Three camps perched on the crater rim with butler service, open-fire boudoirs, and the crater floor unfolding 600 metres below your private veranda.',
         image: '/images/destinations/tanzania/dunia-view-from-the-main-area.jpg',
+      },
+      {
+        name: 'Jongomero Camp',
+        location: 'Ruaha National Park',
+        body: 'Eight exclusive tented suites on the Jongomero River — wild dogs, lions, and elephant, with zero other camps in visible range.',
+        image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.jpg',
       },
       {
         name: 'Roho ya Selous',
         location: 'Nyerere National Park',
-        body: "Eight tented suites on a private concession in the heart of the Rufiji river system — boat safaris, game drives and walking in one of Africa's most exclusive wild settings.",
+        body: 'Private sand-bank camp on the Rufiji River with boat safaris, walking safaris, and total seclusion inside Africa’s largest game reserve.',
         image: '/images/activities/big-five/roho-ya-selous-elephant.jpg',
       },
       {
-        name: 'Rubondo Island Camp',
-        location: 'Rubondo Island National Park',
-        body: "The only camp on the island — ten simple, beautiful bandas at the forest edge, with chimp walks, fishing and canoe safaris on the world's largest tropical lake.",
-        image: '/images/destinations/tanzania/rubondo-island-camp-landscape.jpg',
+        name: 'The Manta Resort',
+        location: 'Pemba Island, Zanzibar Archipelago',
+        body: "Africa’s legendary underwater room — a private floating suite anchored above a coral reef with the Indian Ocean as your entire horizon.",
+        image: '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
       },
     ],
     seoKeywords:
-      'luxury Tanzania safari, Serengeti Great Migration, private Serengeti camps, Ngorongoro Crater lodges, Nyerere wild dog, Rubondo Island chimp trekking.',
+      'luxury Tanzania safari, Serengeti private camp, Great Migration luxury tour, Ngorongoro crater exclusive access, Ruaha wild dog safari, Zanzibar luxury villa, southern Tanzania safari, bespoke Tanzania travel, Tanzania fly-camp',
+    travelStats: {
+      bestTime: 'Jun–Oct & Jan–Feb',
+      duration: '10–14 Days',
+      keyWildlife: 'Wildebeest · Lion · Elephant · Wild Dog',
+      travelStyle: 'Fly-In · Tented Camps · Island',
+    },
+    whyVisit: {
+      intro:
+        "Tanzania is the only safari destination on earth where four of Africa's greatest wild landscapes — the Serengeti, Ngorongoro, Ruaha and Nyerere — exist within a single itinerary. Add the Indian Ocean islands of Zanzibar and Pemba, and you have the continent's most complete safari.",
+      bullets: [
+        'The Great Migration — 1.5 million wildebeest in perpetual seasonal circuit',
+        'Ngorongoro Crater — the world’s largest intact volcanic caldera',
+        'Ruaha & Nyerere — wild south, wild dogs, almost no other guests',
+        'Zanzibar — spice coast, coral reefs, barefoot Indian Ocean luxury',
+        'Year-round game viewing across four distinct ecosystems',
+        'Fly-in infrastructure means seamless multi-park itineraries',
+      ],
+      stats: [
+        { number: '30,000', label: 'km² Serengeti ecosystem' },
+        { number: '1.5M', label: 'wildebeest migration' },
+        { number: '4', label: 'UNESCO World Heritage Sites' },
+      ],
+    },
+    seasons: [
+      {
+        dates: 'Jun – Oct',
+        name: 'The Dry Season',
+        image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.jpg',
+        wildlife: 'Migration Crossings · Predators · All Big Five',
+        description:
+          'The premier safari season. Clear skies and sparse vegetation make wildlife viewing exceptional across all parks. Mara River crossings peak July–September in the northern Serengeti — one of nature’s most intense spectacles.',
+      },
+      {
+        dates: 'Nov – Dec',
+        name: 'Short Green Season',
+        image: '/images/destinations/tanzania/dunia-game-drive.jpg',
+        wildlife: 'Migratory Birds · Lush Landscapes · Newborn Calves',
+        description:
+          'Short rains transform the landscape to emerald. Far fewer guests, lower rates, and the arrival of thousands of migratory birds. The southern Serengeti sees the first calving action begin in December.',
+      },
+      {
+        dates: 'Jan – Feb',
+        name: 'The Calving Season',
+        image: '/images/destinations/tanzania/sayari-lioness.jpg',
+        wildlife: 'Wildebeest Calves · Cheetah · Lion · Hyena',
+        description:
+          'Roughly 8,000 wildebeest calves are born every day in the southern Serengeti. The concentration of predators — cheetah, lion, hyena — creates some of the most intense natural drama on earth.',
+      },
+    ],
+    specialistQuote: {
+      quote:
+        "Tanzania is the only place on earth where the sheer scale of wildlife still takes your breath away, no matter how many times you have been. The Serengeti humbles you — and Zanzibar restores you.",
+      author: 'James Kariuki',
+      role: 'Senior Safari Specialist, Still Wild Safaris',
+    },
+    conservation: {
+      intro:
+        'Tanzania protects more land than almost any other African country. Every Still Wild itinerary contributes directly to anti-poaching, community ranger programmes and wildlife research.',
+      stats: [
+        { number: '38%', label: 'of Tanzania under conservation' },
+        { number: '800+', label: 'bird species recorded' },
+        { number: '4', label: 'UNESCO World Heritage Sites' },
+      ],
+      partners: [
+        'Tanzania National Parks (TANAPA)',
+        'Ruaha Carnivore Project',
+        'African Wildlife Foundation',
+        'Singita Grumeti Fund',
+      ],
+    },
+    countryFaqs: [
+      {
+        question: 'When is the best time to see the Great Migration?',
+        answer:
+          'Mara River crossings peak July–September in the northern Serengeti. For the calving season — 8,000 calves per day — visit January–February in the southern Serengeti. Tanzania offers outstanding game viewing year-round.',
+      },
+      {
+        question: 'Do I need a visa for Tanzania?',
+        answer:
+          'Most nationalities require a visa. We recommend applying for an e-Visa online before arrival. Your trip manager will guide you through current requirements for your nationality.',
+      },
+      {
+        question: 'How do you get around Tanzania on safari?',
+        answer:
+          'We build all Tanzania itineraries around fly-in travel — light aircraft connecting the Serengeti, Ruaha, Nyerere and the islands. This eliminates long road transfers and maximises time in the wild.',
+      },
+      {
+        question: 'Can I combine a Tanzania safari with Zanzibar?',
+        answer:
+          'Absolutely — we strongly recommend it. A classic Still Wild itinerary pairs 7 nights in the Serengeti and Ruaha with 3 nights on Zanzibar or Pemba Island. Bush to barefoot ocean is an unmatched contrast.',
+      },
+      {
+        question: 'What is the best lodge for Ngorongoro Crater?',
+        answer:
+          'Ngorongoro Crater Lodge sits on the crater rim with butler service and views 600 metres down to the crater floor. We combine it with an early-morning private descent — arriving before the day-trippers — for the definitive crater experience.',
+      },
+    ],
   },
 }

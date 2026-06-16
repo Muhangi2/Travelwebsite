@@ -141,7 +141,6 @@ export default function Nav() {
                 return (
                   <div
                     key={l.to}
-                    className="relative"
                     onPointerEnter={(e) => { if (e.pointerType === 'mouse') openWithGrace(setDestOpen, destTimer) }}
                     onPointerLeave={(e) => { if (e.pointerType === 'mouse') closeWithGrace(setDestOpen, destTimer) }}
                   >
@@ -158,7 +157,6 @@ export default function Nav() {
                         <path d="M6 9l6 6 6-6" />
                       </svg>
                     </NavLink>
-                    {destOpen && <DestinationsMenu onClose={() => setDestOpen(false)} />}
                   </div>
                 )
               }
@@ -253,6 +251,16 @@ export default function Nav() {
             </NavLink>
           </nav>
         </div>
+
+        {/* Destinations mega-menu — absolute from the fixed header so it centres correctly */}
+        {destOpen && (
+          <div
+            onPointerEnter={(e) => { if (e.pointerType === 'mouse') openWithGrace(setDestOpen, destTimer) }}
+            onPointerLeave={(e) => { if (e.pointerType === 'mouse') closeWithGrace(setDestOpen, destTimer) }}
+          >
+            <DestinationsMenu onClose={() => setDestOpen(false)} />
+          </div>
+        )}
 
         {/* ── Mobile: logo centred absolutely, hamburger left ── */}
         <div className="container-page relative flex h-40 items-center sm:h-[9rem] md:h-[11rem] xl:hidden">

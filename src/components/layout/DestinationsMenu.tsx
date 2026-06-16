@@ -17,7 +17,7 @@ export default function DestinationsMenu({ onClose }: { onClose: () => void }) {
   if (!country) return null
 
   return (
-    <div className="absolute left-1/2 top-full z-40 w-[920px] max-w-[calc(100vw-2rem)] -translate-x-1/2 pt-3">
+    <div className="absolute left-1/2 top-[13rem] z-50 w-[920px] max-w-[calc(100vw-2rem)] -translate-x-1/2 pt-2">
       <div className="overflow-hidden rounded-md bg-white shadow-2xl ring-1 ring-black/5">
       <div className="grid grid-cols-[260px_1fr]">
         <aside className="border-r border-neutral-100 bg-white p-6">

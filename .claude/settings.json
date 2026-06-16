@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(python3 -c ' *)",
+      "Bash(awk -F'\\(' '{print $2}')",
+      "Bash(python3)",
+      "Bash(pkill -f \"vite --port 5173\")",
+      "Bash(lsof -ti:5173,5174,5175)"
     ]
   }
 }
