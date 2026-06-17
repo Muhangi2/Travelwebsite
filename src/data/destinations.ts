@@ -1581,7 +1581,7 @@ export const countries: Record<string, Country> = {
       'From the Great Migration of the Serengeti to the remote river safaris of Nyerere, Tanzania offers the full spectrum of the African wild — curated through private concessions and exclusive camps.',
     parkSummary:
       "Tanzania’s national parks range from the world’s most famous plains to an island wilderness on Lake Victoria and Africa’s largest game reserve in the south. No two experiences are alike — and no other country offers quite this range in a single itinerary.",
-    parkSummaryImage: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg',
+    parkSummaryImage: '/images/destinations/tanzania/forest-walk-096.webp',
     parks: [serengetiPark, ngorongoroPark, selousPark, rubondoPark],
     privilegedAccess: [
       {

@@ -10,10 +10,12 @@ export default function WhereToGo({
   countryName,
   countrySlug,
   parks,
+  backgroundImage,
 }: {
   countryName: string
   countrySlug: string
   parks: Park[]
+  backgroundImage?: string
 }) {
   if (!parks.length) return null
 
@@ -21,13 +23,14 @@ export default function WhereToGo({
   const items = [...parks, ...parks, ...parks]
   const shiftPx = parks.length * (CARD_W + GAP)
   const duration = parks.length * 7
+  const bg = backgroundImage ?? parks[0].image
 
   return (
     <section id="where-to-go" className="relative overflow-hidden py-24 sm:py-32">
-      {/* Fixed background image */}
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${parks[0].image}')` }}
+        style={{ backgroundImage: `url('${bg}')` }}
       />
       <div className="absolute inset-0 bg-black/65" />
 

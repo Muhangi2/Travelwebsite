@@ -24,7 +24,7 @@ export default function DestinationFAQ({
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url('${backgroundImage}')` }}
           />
-          <div className="absolute inset-0 bg-[#f5f4f2]/90 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-[#f5f4f2]/65" />
         </>
       ) : (
         <div className="absolute inset-0 bg-[#f5f4f2]" />
