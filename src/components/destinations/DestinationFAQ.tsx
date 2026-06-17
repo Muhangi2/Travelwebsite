@@ -14,7 +14,7 @@ export default function DestinationFAQ({
   if (!faqs?.length) return null
 
   return (
-    <section className="relative overflow-hidden bg-[#f5f4f2] py-24 sm:py-32">
+    <section id="faq" className="relative overflow-hidden bg-[#f5f4f2] py-24 sm:py-32">
       {/* Giant ghosted number */}
       <span
         aria-hidden

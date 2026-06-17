@@ -2,11 +2,11 @@ import { useParams, Navigate } from 'react-router-dom'
 import { useCountry } from '@/sanity/destinations'
 import DestinationHero from '@/components/destinations/DestinationHero'
 import DestinationStatBar from '@/components/destinations/DestinationStatBar'
+import DestinationNavTabs from '@/components/destinations/DestinationNavTabs'
 import WhyVisit from '@/components/destinations/WhyVisit'
 import WhenToGo from '@/components/destinations/WhenToGo'
 import SpecialistQuote from '@/components/destinations/SpecialistQuote'
 import WhereToGo from '@/components/destinations/WhereToGo'
-import NationalParksList from '@/components/destinations/NationalParksList'
 import PrivilegedAccess from '@/components/destinations/PrivilegedAccess'
 import CuratedLodges from '@/components/destinations/CuratedLodges'
 import ConservationImpact from '@/components/destinations/ConservationImpact'
@@ -25,25 +25,25 @@ export default function DestinationCountry() {
       {/* Hero */}
       <DestinationHero title={data.heroTitle} subtitle={data.heroSubtitle} image={data.heroImage} />
 
-      {/* Stats bar — bestTime, duration, wildlife, travel style */}
+      {/* Stats bar */}
       <DestinationStatBar stats={data.travelStats} />
+
+      {/* Sticky section tab nav */}
+      <DestinationNavTabs />
 
       {/* 01 Why [Country] */}
       <WhyVisit countryName={data.name} data={data.whyVisit} />
 
-      {/* 02 When to Go — seasonal guide */}
+      {/* 02 When to Go */}
       <WhenToGo countryName={data.name} seasons={data.seasons} />
 
       {/* Specialist quote */}
       <SpecialistQuote data={data.specialistQuote} />
 
-      {/* 03 Where to Go — parks overview table */}
+      {/* 03 Where to Go */}
       <WhereToGo countryName={data.name} countrySlug={data.slug} parks={data.parks} />
 
-      {/* Individual park detail cards */}
-      <NationalParksList countrySlug={data.slug} parks={data.parks} />
-
-      {/* 05 Unique Experiences / Privileged Access */}
+      {/* 05 Unique Experiences */}
       <PrivilegedAccess items={data.privilegedAccess} />
 
       {/* 06 Curated Luxury Lodges */}

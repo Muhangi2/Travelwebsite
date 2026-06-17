@@ -11,7 +11,7 @@ export default function WhyVisit({
   if (!data) return null
 
   return (
-    <section className="relative overflow-hidden bg-[#f5f4f2] py-24 sm:py-32">
+    <section id="overview" className="relative overflow-hidden bg-[#f5f4f2] py-24 sm:py-32">
       {/* Giant ghosted section number */}
       <span
         aria-hidden
@@ -44,13 +44,26 @@ export default function WhyVisit({
                 <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.25em] text-neutral-400">
                   What Sets {countryName} Apart
                 </p>
-                <ul className="grid gap-3 sm:grid-cols-2">
-                  {data.bullets.map((bullet) => (
-                    <li key={bullet} className="flex items-start gap-3">
-                      <span className="mt-[3px] shrink-0 text-amber-500 text-xs" aria-hidden>◉</span>
-                      <span className="text-sm leading-relaxed text-neutral-700">{bullet}</span>
-                    </li>
-                  ))}
+                <ul className="grid gap-5 sm:grid-cols-2">
+                  {data.bullets.map((bullet) => {
+                    const isRich = typeof bullet === 'object'
+                    const key = isRich ? bullet.title : bullet
+                    return (
+                      <li key={key} className="flex items-start gap-3">
+                        <span className="mt-1 shrink-0 text-amber-500 text-xs" aria-hidden>◉</span>
+                        <div>
+                          {isRich ? (
+                            <>
+                              <p className="text-sm font-semibold leading-snug text-neutral-900">{bullet.title}</p>
+                              <p className="mt-1 text-sm leading-relaxed text-neutral-500">{bullet.body}</p>
+                            </>
+                          ) : (
+                            <span className="text-sm leading-relaxed text-neutral-700">{bullet}</span>
+                          )}
+                        </div>
+                      </li>
+                    )
+                  })}
                 </ul>
               </div>
             </Reveal>

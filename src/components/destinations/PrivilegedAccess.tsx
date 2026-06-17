@@ -4,7 +4,7 @@ import Picture from '@/components/Picture'
 
 export default function PrivilegedAccess({ items }: { items: Country['privilegedAccess'] }) {
   return (
-    <section className="overflow-hidden bg-white py-24 sm:py-32">
+    <section id="experiences" className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         {/* heading */}
         <Reveal>

@@ -12,7 +12,7 @@ export default function WhenToGo({
   if (!seasons?.length) return null
 
   return (
-    <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+    <section id="when-to-go" className="relative overflow-hidden bg-white py-24 sm:py-32">
       {/* Giant ghosted section number */}
       <span
         aria-hidden

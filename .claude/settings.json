@@ -6,7 +6,8 @@
       "Bash(awk -F'\\(' '{print $2}')",
       "Bash(python3)",
       "Bash(pkill -f \"vite --port 5173\")",
-      "Bash(lsof -ti:5173,5174,5175)"
+      "Bash(lsof -ti:5173,5174,5175)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(data[0]['text']\\)\")"
     ]
   }
 }

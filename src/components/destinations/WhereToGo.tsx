@@ -1,6 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import type { Park } from '@/data/destinations'
 import Reveal from '@/components/ui/Reveal'
+import Picture from '@/components/Picture'
+
+const CARD_W = 580
+const GAP = 28
 
 export default function WhereToGo({
   countryName,
@@ -13,93 +17,146 @@ export default function WhereToGo({
 }) {
   if (!parks.length) return null
 
+  // Triple the list so the loop is seamless
+  const items = [...parks, ...parks, ...parks]
+  const shiftPx = parks.length * (CARD_W + GAP)
+  const duration = parks.length * 7
+
   return (
-    <section className="relative overflow-hidden bg-[#f5f4f2] py-24 sm:py-32" id="national-parks">
-      {/* Giant ghosted number */}
+    <section id="where-to-go" className="relative overflow-hidden py-24 sm:py-32">
+      {/* Fixed background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url('${parks[0].image}')` }}
+      />
+      <div className="absolute inset-0 bg-black/65" />
+
       <span
         aria-hidden
-        className="pointer-events-none absolute -right-6 top-8 select-none font-serif text-[clamp(8rem,22vw,18rem)] font-bold leading-none text-black/[0.04]"
+        className="pointer-events-none absolute -right-6 top-8 select-none font-serif text-[clamp(8rem,22vw,18rem)] font-bold leading-none text-white/[0.04]"
       >
         03
       </span>
 
-      <div className="container-page relative z-10">
-        <Reveal>
-          <div className="flex items-center gap-4 mb-10">
-            <span className="eyebrow">03 &nbsp; Where to Go</span>
-            <div className="h-px flex-1 bg-neutral-300" />
-          </div>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
-              {countryName}'s<br className="sm:hidden" /> National Parks
-            </h2>
-            <p className="max-w-xs text-sm leading-relaxed text-neutral-500 sm:text-right">
-              Each park is a completely different world. We design itineraries that show you the full spectrum.
-            </p>
-          </div>
-        </Reveal>
+      <div className="relative z-10">
+        {/* Section header */}
+        <div className="container-page">
+          <Reveal>
+            <div className="mb-10 flex items-center gap-4">
+              <span className="eyebrow text-white/60">03 &nbsp; Where to Go</span>
+              <div className="h-px flex-1 bg-white/20" />
+            </div>
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <h2 className="font-serif text-4xl leading-tight text-white sm:text-5xl">
+                {countryName}&apos;s<br className="sm:hidden" /> National Parks
+              </h2>
+              <p className="max-w-xs text-sm leading-relaxed text-white/60 sm:text-right">
+                Each park is a completely different world. We design itineraries that show you the full spectrum.
+              </p>
+            </div>
+          </Reveal>
+        </div>
 
-        {/* Park list — editorial rows */}
-        <div className="mt-12 flex flex-col">
-          {parks.map((park, i) => {
-            const topWildlife = park.attractions
-              .slice(0, 2)
-              .map((a) => a.title)
-              .join(' · ')
+        {/* Infinite marquee strip — full bleed */}
+        <div className="mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+          <div
+            className="flex hover:[animation-play-state:paused]"
+            style={{
+              gap: `${GAP}px`,
+              paddingLeft: `${GAP}px`,
+              width: 'max-content',
+              animation: `ww-marquee ${duration}s linear infinite`,
+            }}
+          >
+            {items.map((park, i) => {
+              const topWildlife = park.attractions
+                .slice(0, 2)
+                .map((a) => a.title)
+                .join(' · ')
 
-            return (
-              <Reveal key={park.slug} delay={i * 60}>
+              return (
                 <NavLink
+                  key={`${park.slug}-${i}`}
                   to={`/destinations/${countrySlug}/${park.slug}`}
-                  className="group grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 border-t border-neutral-300 py-7 transition-colors duration-200 last:border-b hover:bg-white sm:grid-cols-[3rem_1fr_1fr_auto] sm:items-center sm:gap-x-8 sm:py-8"
+                  className="group flex shrink-0 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl"
+                  style={{ width: `${CARD_W}px`, height: '300px' }}
                 >
-                  {/* Number */}
-                  <span className="row-span-2 flex h-10 w-10 shrink-0 items-center justify-center self-center rounded-full border border-neutral-300 font-mono text-[11px] font-bold text-neutral-400 transition-colors group-hover:border-neutral-900 group-hover:bg-neutral-900 group-hover:text-white sm:row-span-1 sm:h-12 sm:w-12">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
+                  {/* Image — left 44% */}
+                  <div className="relative w-[44%] shrink-0 overflow-hidden">
+                    <Picture
+                      src={park.image}
+                      alt={park.name}
+                      loading="lazy"
+                      imgClassName="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    {/* Gradient fade into content */}
+                    <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-r from-transparent to-white" />
+                    <span className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 font-mono text-[11px] font-bold text-white backdrop-blur-sm">
+                      {String((i % parks.length) + 1).padStart(2, '0')}
+                    </span>
+                  </div>
 
-                  {/* Name + location */}
-                  <div className="sm:col-span-1">
-                    <p className="font-serif text-lg leading-snug text-neutral-900 sm:text-xl">
-                      {park.name}
-                    </p>
-                    <p className="mt-0.5 flex items-center gap-1.5 text-[11px] text-neutral-500">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z" /><circle cx="12" cy="9" r="2.5" />
+                  {/* Content — right 56% */}
+                  <div className="flex flex-1 flex-col justify-between px-6 py-6">
+                    {/* Top: location + name */}
+                    <div>
+                      <p className="flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
+                        <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z" />
+                          <circle cx="12" cy="9" r="2.5" />
+                        </svg>
+                        {park.location}
+                      </p>
+                      <h3 className="mt-2 font-serif text-xl leading-snug text-neutral-900">
+                        {park.name}
+                      </h3>
+                    </div>
+
+                    {/* Middle: stats */}
+                    <div className="space-y-3">
+                      <div className="h-px bg-neutral-100" />
+                      <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                        <div>
+                          <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-neutral-400">Top Wildlife</p>
+                          <p className="mt-1 text-xs leading-snug text-neutral-700">{topWildlife}</p>
+                        </div>
+                        <div>
+                          <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-neutral-400">Best Time</p>
+                          <p className="mt-1 text-xs leading-snug text-neutral-700">{park.bestTime}</p>
+                        </div>
+                      </div>
+                      <div className="h-px bg-neutral-100" />
+                    </div>
+
+                    {/* Bottom: CTA */}
+                    <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-900 transition-colors group-hover:text-amber-700">
+                      Explore Park
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        className="transition-transform duration-200 group-hover:translate-x-1"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
                       </svg>
-                      {park.location}
-                    </p>
-                  </div>
-
-                  {/* Wildlife + best time */}
-                  <div className="col-start-2 sm:col-start-auto">
-                    <p className="text-sm text-neutral-700">{topWildlife}</p>
-                    <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-neutral-400">
-                      Best: {park.bestTime}
-                    </p>
-                  </div>
-
-                  {/* Arrow */}
-                  <div className="hidden items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400 transition-colors group-hover:text-neutral-900 sm:flex">
-                    Explore
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      className="transition-transform duration-200 group-hover:translate-x-1"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
+                    </div>
                   </div>
                 </NavLink>
-              </Reveal>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes ww-marquee {
+          from { transform: translateX(0); }
+          to   { transform: translateX(-${shiftPx}px); }
+        }
+      `}</style>
     </section>
   )
 }

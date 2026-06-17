@@ -1,33 +1,44 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import type { Country } from '@/data/destinations'
 import Reveal from '@/components/ui/Reveal'
 import Picture from '@/components/Picture'
 
+const CARD_W = 300
+const CARD_H = 460
+const GAP = 18
+const INTERVAL_MS = 3500
+
 export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] }) {
   const [active, setActive] = useState(0)
   const count = lodges.length
+  const timerRef = useRef<number | null>(null)
 
-  useEffect(() => {
+  const resetTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current)
     if (count < 2) return
-    const id = setInterval(() => setActive(i => (i + 1) % count), 2500)
-    return () => clearInterval(id)
+    timerRef.current = window.setInterval(
+      () => setActive(i => (i + 1) % count),
+      INTERVAL_MS,
+    )
   }, [count])
 
-  const go = (dir: 1 | -1) => setActive(i => (i + dir + count) % count)
+  useEffect(() => {
+    resetTimer()
+    return () => { if (timerRef.current) clearInterval(timerRef.current) }
+  }, [resetTimer])
+
+  const go = (idx: number) => {
+    setActive((idx + count) % count)
+    resetTimer()
+  }
 
   if (!lodges.length) return null
 
-  // Card dimensions — keeps geometry below consistent
-  const CARD_W = 380
-  const CARD_H = 500
-
   return (
-    <section
-      className="overflow-hidden bg-[#f5f4f2] py-24 sm:py-32"
-    >
-      {/* heading */}
+    <section id="lodges" className="overflow-hidden bg-[#f5f4f2] py-24 sm:py-32">
+      {/* Heading */}
       <Reveal>
-        <div className="container-page mb-16 flex flex-col gap-y-3 sm:flex-row sm:items-end sm:justify-between">
+        <div className="container-page mb-14 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="eyebrow mb-2">Where you'll stay</p>
             <h2 className="font-serif text-3xl sm:text-4xl">Curated Luxury Lodges</h2>
@@ -38,39 +49,23 @@ export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] })
         </div>
       </Reveal>
 
-      {/* ── card stage ───────────────────────────────────────────────────────────
-           perspective is on the parent so every card shares a single vanishing
-           point — critical for the stacked 3-D look.
-      ─────────────────────────────────────────────────────────────────────────── */}
+      {/* Card stage */}
       <div
-        className="relative mx-auto"
-        style={{ height: CARD_H + 60, perspective: '1200px', perspectiveOrigin: '50% 50%' }}
+        className="relative mx-auto select-none"
+        style={{ height: CARD_H + 48 }}
       >
         {lodges.map((lodge, i) => {
-          // Normalised signed offset from the active card
           let offset = i - active
-          if (offset > count / 2) offset -= count
+          if (offset > count / 2)  offset -= count
           if (offset < -count / 2) offset += count
 
           const abs = Math.abs(offset)
+          if (abs > 2) return null
+
           const isActive = abs === 0
-          const isAdjacent = abs === 1
-
-          // Only keep active + its two immediate neighbours in the DOM
-          if (abs > 1) return null
-
-          /*
-           * The magic numbers that create the "stack on top of each other" look:
-           *
-           *  translateX  — small offset so side cards mostly hide behind the center
-           *  translateZ  — center is pushed toward the viewer; sides go back
-           *  rotateY     — side cards tilt away from viewer, adding real 3-D depth
-           *  scale       — side cards shrink slightly so they read as behind
-           */
-          const tx  = offset * 370
-          const tz  = isActive ? 70 : -30
-          const ry  = offset * -10
-          const sc  = isActive ? 1 : 0.85
+          const tx      = offset * (CARD_W + GAP)
+          const scale   = isActive ? 1 : 0.88
+          const opacity = abs === 0 ? 1 : abs === 1 ? 0.72 : 0
 
           return (
             <div
@@ -83,95 +78,103 @@ export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] })
                 top: '50%',
                 marginLeft: -(CARD_W / 2),
                 marginTop: -(CARD_H / 2),
-
-                transform: `translateX(${tx}px) translateZ(${tz}px) rotateY(${ry}deg) scale(${sc})`,
-                opacity: isActive ? 1 : 0.88,
-                zIndex: isActive ? 10 : 4,
-
+                transform: `translateX(${tx}px) scale(${scale})`,
+                opacity,
+                zIndex: isActive ? 10 : 5 - abs,
                 transition: [
-                  'transform 0.9s cubic-bezier(0.22,1,0.36,1)',
-                  'opacity 0.9s cubic-bezier(0.22,1,0.36,1)',
+                  'transform 0.75s cubic-bezier(0.22,1,0.36,1)',
+                  'opacity 0.75s cubic-bezier(0.22,1,0.36,1)',
                 ].join(', '),
-
-                cursor: isAdjacent ? 'pointer' : 'default',
+                cursor: abs > 0 ? 'pointer' : 'default',
               }}
-              onClick={() => isAdjacent && setActive(i)}
+              onClick={() => abs > 0 && go(i)}
             >
               <div
-                className="group h-full overflow-hidden rounded-3xl bg-white"
-                style={{
-                  // Active card gets a strong lifted shadow; side cards barely any
-                  boxShadow: isActive
-                    ? '0 32px 56px -12px rgba(0,0,0,0.38), 0 0 0 1px rgba(0,0,0,0.05)'
-                    : '0 2px 8px -2px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04)',
-                  transition: 'box-shadow 0.9s cubic-bezier(0.22,1,0.36,1)',
-                }}
+                className="relative h-full w-full overflow-hidden"
+                style={{ borderRadius: '2rem' }}
               >
-                {/* ── image (top 58% of card) */}
-                <div className="relative overflow-hidden" style={{ height: '58%' }}>
-                  <Picture
-                    src={lodge.image}
-                    alt={lodge.name}
-                    loading={isActive ? 'eager' : 'lazy'}
-                    decoding="async"
-                    imgClassName="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
-                  />
-                  {/* very subtle vignette */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/0 via-black/0 to-black/30" />
-                </div>
+                {/* Full-bleed image */}
+                <Picture
+                  src={lodge.image}
+                  alt={lodge.name}
+                  loading={isActive ? 'eager' : 'lazy'}
+                  decoding="async"
+                  imgClassName={`h-full w-full object-cover transition-transform duration-700 ease-out ${isActive ? 'scale-105' : 'scale-100'}`}
+                />
 
-                {/* ── text (bottom 42%) */}
-                <div className="flex h-[42%] flex-col justify-between p-6">
-                  <div>
-                    <p className="mb-3 flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-neutral-400">
-                      <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z" />
-                        <circle cx="12" cy="9" r="2.5" />
-                      </svg>
-                      {lodge.location}
-                    </p>
-                    <h3 className="font-serif text-xl leading-snug">{lodge.name}</h3>
-                    <p className="mt-2 line-clamp-2 text-[13px] leading-relaxed text-neutral-500">
-                      {lodge.body}
-                    </p>
+                {/* Bottom gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+
+                {/* Text overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="mb-2 flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z" />
+                      <circle cx="12" cy="9" r="2.5" />
+                    </svg>
+                    {lodge.location}
+                  </p>
+                  <h3 className="font-serif text-xl font-semibold leading-snug text-white sm:text-2xl">
+                    {lodge.name}
+                  </h3>
+                  <p className="mt-2 line-clamp-2 text-[12px] leading-relaxed text-white/60">
+                    {lodge.body}
+                  </p>
+                  <div className="mt-4 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white/35">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    Luxury Lodge
                   </div>
-
-                  <button
-                    type="button"
-                    className="btn-primary self-start text-[10px]"
-                    onClick={e => e.stopPropagation()}
-                  >
-                    View Lodge
-                  </button>
                 </div>
+
+                {/* Active ring */}
+                {isActive && (
+                  <div
+                    className="absolute inset-0 ring-2 ring-inset ring-white/20"
+                    style={{ borderRadius: '2rem' }}
+                  />
+                )}
               </div>
             </div>
           )
         })}
       </div>
 
-      {/* controls */}
-      <div className="mt-10 flex items-center justify-center gap-5">
-        <button type="button" aria-label="Previous" onClick={() => go(-1)} className="btn-icon">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      {/* Navigation */}
+      <div className="mt-8 flex items-center justify-center gap-5">
+        <button
+          type="button"
+          aria-label="Previous lodge"
+          onClick={() => go(active - 1)}
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-600 shadow-sm transition hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M15 18l-6-6 6-6" />
           </svg>
         </button>
+
         <div className="flex gap-2">
           {lodges.map((_, i) => (
             <button
               key={i}
               type="button"
               aria-label={`Lodge ${i + 1}`}
-              onClick={() => setActive(i)}
-              className={`h-[3px] rounded-full transition-all duration-500 ${
-                i === active ? 'w-8 bg-black' : 'w-2 bg-neutral-300'
+              onClick={() => go(i)}
+              className={`rounded-full transition-all duration-500 ${
+                i === active ? 'h-[3px] w-8 bg-neutral-900' : 'h-[3px] w-2 bg-neutral-300'
               }`}
             />
           ))}
         </div>
-        <button type="button" aria-label="Next" onClick={() => go(1)} className="btn-icon">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+
+        <button
+          type="button"
+          aria-label="Next lodge"
+          onClick={() => go(active + 1)}
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-600 shadow-sm transition hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
+        >
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M9 6l6 6-6 6" />
           </svg>
         </button>

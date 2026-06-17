@@ -35,7 +35,7 @@ export type Country = {
   lodges: { name: string; location: string; body: string; image: string }[]
   seoKeywords: string
   travelStats?: { bestTime: string; duration: string; keyWildlife: string; travelStyle: string }
-  whyVisit?: { intro: string; bullets: string[]; stats: Array<{ number: string; label: string }> }
+  whyVisit?: { intro: string; bullets: Array<string | { title: string; body: string }>; stats: Array<{ number: string; label: string }> }
   seasons?: Season[]
   specialistQuote?: { quote: string; author: string; role: string }
   conservation?: { intro: string; stats: Array<{ number: string; label: string }>; partners: string[] }
@@ -740,12 +740,22 @@ export const countries: Record<string, Country> = {
       intro:
         "Uganda is Africa's most intimate wildlife destination. Half the world’s remaining mountain gorillas, the largest chimpanzee population in East Africa, and tree-climbing lions — all in a country the size of the United Kingdom.",
       bullets: [
-        'Bwindi — half the world’s remaining mountain gorillas',
-        'Kibale Forest — the highest chimpanzee density in Africa',
-        'Murchison Falls — the world’s most powerful waterfall on the Nile',
-        'Queen Elizabeth — tree-climbing lions and the Kazinga Channel',
-        'Kidepo Valley — one of Africa’s last true wilderness frontiers',
-        'Source of the Nile — Jinja, the birthplace of Africa’s greatest river',
+        {
+          title: "Half the World's Mountain Gorillas",
+          body: "Bwindi and Mgahinga together shelter over 54% of the global mountain gorilla population — making Uganda the single most important gorilla conservation site on earth.",
+        },
+        {
+          title: '13 Primate Species in Kibale Alone',
+          body: "Kibale National Park holds the highest concentration of primates in Africa — 13 species including chimpanzees, olive baboons, L'Hoest's monkeys, and the black-and-white colobus.",
+        },
+        {
+          title: '1,066 Recorded Bird Species',
+          body: 'More bird species than the entire North American continent, including the prehistoric shoebill, the rare African green broadbill, and 150 species found nowhere else in East Africa.',
+        },
+        {
+          title: 'Year-Round Safari Destination',
+          body: 'Unlike seasonal East African destinations, Uganda offers productive wildlife encounters across all months — gorilla trekking, chimp tracking, and savannah game drives are available year-round.',
+        },
       ],
       stats: [
         { number: '460+', label: 'mountain gorillas in Uganda' },
