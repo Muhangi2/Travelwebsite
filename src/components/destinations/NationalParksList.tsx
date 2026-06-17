@@ -7,24 +7,38 @@ import Picture from '@/components/Picture'
 type Props = {
   countrySlug: string
   parks: Park[]
+  backgroundImage?: string
 }
 
-export default function NationalParksList({ countrySlug, parks }: Props) {
+export default function NationalParksList({ countrySlug, parks, backgroundImage }: Props) {
   const [index, setIndex] = useState(0)
   const park = parks[index]
 
   if (!park) return null
 
   return (
-    <section id="national-parks" className="bg-white py-20">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="national-parks" className="relative overflow-hidden py-20">
+      {/* Background */}
+      {backgroundImage && (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('${backgroundImage}')` }}
+          />
+          {/* Very light overlay — keeps dark text legible */}
+          <div className="absolute inset-0 bg-white/88 backdrop-blur-[2px]" />
+        </>
+      )}
+      {!backgroundImage && <div className="absolute inset-0 bg-white" />}
+
+      <div className="relative z-10 mx-auto max-w-6xl px-6">
         <Reveal>
           <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">National Parks</h2>
         </Reveal>
 
         <div className="mt-10 grid items-center gap-12 md:grid-cols-2">
           <Reveal variant="left" key={`img-${park.slug}`}>
-            <div className="img-zoom overflow-hidden rounded-md shadow-md">
+            <div className="img-zoom overflow-hidden rounded-2xl shadow-lg">
               <Picture src={park.image} alt={park.name} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
             </div>
           </Reveal>

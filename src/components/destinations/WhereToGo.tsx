@@ -3,8 +3,8 @@ import type { Park } from '@/data/destinations'
 import Reveal from '@/components/ui/Reveal'
 import Picture from '@/components/Picture'
 
-const CARD_W = 580
-const GAP = 28
+const CARD_W = 700
+const GAP = 32
 
 export default function WhereToGo({
   countryName,
@@ -79,10 +79,10 @@ export default function WhereToGo({
                   key={`${park.slug}-${i}`}
                   to={`/destinations/${countrySlug}/${park.slug}`}
                   className="group flex shrink-0 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl"
-                  style={{ width: `${CARD_W}px`, height: '300px' }}
+                  style={{ width: `${CARD_W}px`, height: '420px' }}
                 >
-                  {/* Image — left 44% */}
-                  <div className="relative w-[44%] shrink-0 overflow-hidden">
+                  {/* Image — left 45% */}
+                  <div className="relative w-[45%] shrink-0 overflow-hidden">
                     <Picture
                       src={park.image}
                       alt={park.name}
@@ -90,50 +90,53 @@ export default function WhereToGo({
                       imgClassName="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                     {/* Gradient fade into content */}
-                    <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-r from-transparent to-white" />
-                    <span className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 font-mono text-[11px] font-bold text-white backdrop-blur-sm">
+                    <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-r from-transparent to-white" />
+                    <span className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 font-mono text-[12px] font-bold text-white backdrop-blur-sm">
                       {String((i % parks.length) + 1).padStart(2, '0')}
                     </span>
                   </div>
 
-                  {/* Content — right 56% */}
-                  <div className="flex flex-1 flex-col justify-between px-6 py-6">
+                  {/* Content — right 55% */}
+                  <div className="flex flex-1 flex-col justify-between px-8 py-8">
                     {/* Top: location + name */}
                     <div>
-                      <p className="flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
-                        <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <p className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
+                        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                           <path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z" />
                           <circle cx="12" cy="9" r="2.5" />
                         </svg>
                         {park.location}
                       </p>
-                      <h3 className="mt-2 font-serif text-xl leading-snug text-neutral-900">
+                      <h3 className="mt-3 font-serif text-2xl leading-snug text-neutral-900">
                         {park.name}
                       </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-neutral-500 line-clamp-3">
+                        {park.blurb}
+                      </p>
                     </div>
 
                     {/* Middle: stats */}
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       <div className="h-px bg-neutral-100" />
-                      <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                      <div className="grid grid-cols-2 gap-x-6 gap-y-4">
                         <div>
-                          <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-neutral-400">Top Wildlife</p>
-                          <p className="mt-1 text-xs leading-snug text-neutral-700">{topWildlife}</p>
+                          <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-400">Top Wildlife</p>
+                          <p className="mt-1.5 text-sm leading-snug text-neutral-700">{topWildlife}</p>
                         </div>
                         <div>
-                          <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-neutral-400">Best Time</p>
-                          <p className="mt-1 text-xs leading-snug text-neutral-700">{park.bestTime}</p>
+                          <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-400">Best Time</p>
+                          <p className="mt-1.5 text-sm leading-snug text-neutral-700">{park.bestTime}</p>
                         </div>
                       </div>
                       <div className="h-px bg-neutral-100" />
                     </div>
 
                     {/* Bottom: CTA */}
-                    <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-900 transition-colors group-hover:text-amber-700">
+                    <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-900 transition-colors group-hover:text-amber-700">
                       Explore Park
                       <svg
-                        width="11"
-                        height="11"
+                        width="12"
+                        height="12"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"

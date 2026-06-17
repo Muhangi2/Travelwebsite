@@ -5,16 +5,31 @@ import Reveal from '@/components/ui/Reveal'
 export default function DestinationFAQ({
   countryName,
   faqs,
+  backgroundImage,
 }: {
   countryName: string
   faqs: Country['countryFaqs']
+  backgroundImage?: string
 }) {
   const [open, setOpen] = useState<number | null>(0)
 
   if (!faqs?.length) return null
 
   return (
-    <section id="faq" className="relative overflow-hidden bg-[#f5f4f2] py-24 sm:py-32">
+    <section id="faq" className="relative overflow-hidden py-24 sm:py-32">
+      {/* Background */}
+      {backgroundImage ? (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('${backgroundImage}')` }}
+          />
+          <div className="absolute inset-0 bg-[#f5f4f2]/90 backdrop-blur-[1px]" />
+        </>
+      ) : (
+        <div className="absolute inset-0 bg-[#f5f4f2]" />
+      )}
+
       {/* Giant ghosted number */}
       <span
         aria-hidden

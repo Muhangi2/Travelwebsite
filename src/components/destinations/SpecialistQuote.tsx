@@ -1,15 +1,33 @@
 import type { Country } from '@/data/destinations'
 import Reveal from '@/components/ui/Reveal'
 
-export default function SpecialistQuote({ data }: { data: Country['specialistQuote'] }) {
+type Props = {
+  data: Country['specialistQuote']
+  backgroundImage?: string
+}
+
+export default function SpecialistQuote({ data, backgroundImage }: Props) {
   if (!data) return null
 
   return (
-    <section className="relative overflow-hidden bg-[#0d1f15] py-24 sm:py-32">
+    <section className="relative overflow-hidden py-24 sm:py-32">
+      {/* Background */}
+      {backgroundImage ? (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('${backgroundImage}')` }}
+          />
+          <div className="absolute inset-0 bg-black/72" />
+        </>
+      ) : (
+        <div className="absolute inset-0 bg-[#0d1f15]" />
+      )}
+
       {/* Huge decorative open-quote */}
       <span
         aria-hidden
-        className="pointer-events-none absolute -top-6 left-6 select-none font-serif text-[22rem] leading-none text-white/[0.04] sm:left-12"
+        className="pointer-events-none absolute -top-6 left-6 select-none font-serif text-[22rem] leading-none text-white/[0.05] sm:left-12"
         style={{ lineHeight: 1 }}
       >
         &ldquo;
@@ -30,7 +48,6 @@ export default function SpecialistQuote({ data }: { data: Country['specialistQuo
             </blockquote>
 
             <div className="mt-10 flex items-center gap-5">
-              {/* Avatar placeholder */}
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 text-white/60">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />

@@ -1,17 +1,31 @@
 import type { Country } from '@/data/destinations'
 import Reveal from '@/components/ui/Reveal'
 
-export default function ConservationImpact({
-  countryName,
-  data,
-}: {
+type Props = {
   countryName: string
   data: Country['conservation']
-}) {
+  backgroundImage?: string
+}
+
+export default function ConservationImpact({ countryName, data, backgroundImage }: Props) {
   if (!data) return null
 
   return (
-    <section className="relative overflow-hidden bg-[#0d1f15] py-24 text-white sm:py-32">
+    <section className="relative overflow-hidden py-24 text-white sm:py-32">
+      {/* Background */}
+      {backgroundImage ? (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('${backgroundImage}')` }}
+          />
+          {/* Deep green-tinted overlay so the conservation tone is preserved */}
+          <div className="absolute inset-0 bg-[#0d1f15]/82" />
+        </>
+      ) : (
+        <div className="absolute inset-0 bg-[#0d1f15]" />
+      )}
+
       {/* Giant ghosted number */}
       <span
         aria-hidden
@@ -41,7 +55,7 @@ export default function ConservationImpact({
         <Reveal delay={80}>
           <div className="mt-16 grid gap-px bg-white/10 sm:grid-cols-3">
             {data.stats.map((stat) => (
-              <div key={stat.label} className="bg-[#0d1f15] px-0 py-8 sm:px-8">
+              <div key={stat.label} className="bg-black/30 px-0 py-8 backdrop-blur-sm sm:px-8">
                 <p className="font-serif text-5xl font-light leading-none text-amber-400 sm:text-6xl">
                   {stat.number}
                 </p>

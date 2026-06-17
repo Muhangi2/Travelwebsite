@@ -6,6 +6,7 @@ import DestinationNavTabs from '@/components/destinations/DestinationNavTabs'
 import WhyVisit from '@/components/destinations/WhyVisit'
 import WhenToGo from '@/components/destinations/WhenToGo'
 import SpecialistQuote from '@/components/destinations/SpecialistQuote'
+import NationalParksList from '@/components/destinations/NationalParksList'
 import WhereToGo from '@/components/destinations/WhereToGo'
 import PrivilegedAccess from '@/components/destinations/PrivilegedAccess'
 import CuratedLodges from '@/components/destinations/CuratedLodges'
@@ -37,11 +38,18 @@ export default function DestinationCountry() {
       {/* 02 When to Go */}
       <WhenToGo countryName={data.name} seasons={data.seasons} />
 
-      {/* Specialist quote */}
-      <SpecialistQuote data={data.specialistQuote} />
+      {/* Specialist quote — uses heroImage (distinct from any park image) */}
+      <SpecialistQuote data={data.specialistQuote} backgroundImage={data.heroImage} />
 
-      {/* 03 Where to Go */}
+      {/* 03 Where to Go — carousel (uses parks[0].image internally) */}
       <WhereToGo countryName={data.name} countrySlug={data.slug} parks={data.parks} />
+
+      {/* Individual park detail cards — uses parkSummaryImage */}
+      <NationalParksList
+        countrySlug={data.slug}
+        parks={data.parks}
+        backgroundImage={data.parkSummaryImage}
+      />
 
       {/* 05 Unique Experiences */}
       <PrivilegedAccess items={data.privilegedAccess} />
@@ -49,14 +57,24 @@ export default function DestinationCountry() {
       {/* 06 Curated Luxury Lodges */}
       <CuratedLodges lodges={data.lodges} />
 
-      {/* 08 Conservation & Impact */}
-      <ConservationImpact countryName={data.name} data={data.conservation} />
+      {/* 08 Conservation & Impact — uses last park's image */}
+      <ConservationImpact
+        countryName={data.name}
+        data={data.conservation}
+        backgroundImage={data.parks.at(-1)?.image ?? data.parkSummaryImage}
+      />
 
-      {/* 09 FAQ */}
-      <DestinationFAQ countryName={data.name} faqs={data.countryFaqs} />
+      {/* 09 FAQ — uses first lodge image */}
+      <DestinationFAQ
+        countryName={data.name}
+        faqs={data.countryFaqs}
+        backgroundImage={data.lodges[0]?.image}
+      />
 
-      {/* 10 Speak to a Specialist */}
-      <BespokeJourneyCTA />
+      {/* 10 Speak to a Specialist — uses middle park's image */}
+      <BespokeJourneyCTA
+        backgroundImage={data.parks[Math.floor(data.parks.length / 2)]?.image ?? data.heroImage}
+      />
 
       <SeoKeywords keywords={data.seoKeywords} />
     </>
