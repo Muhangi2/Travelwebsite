@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture'
 import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
 
 type Props = {
@@ -9,11 +10,13 @@ type Props = {
 export default function DestinationHero({ title, subtitle, image }: Props) {
   return (
     <section className="relative isolate h-[100svh] overflow-hidden">
-      <img
+      <Picture
         src={image}
         alt={title}
-        className="absolute inset-0 -z-10 h-full w-full object-cover motion-safe:animate-[fadeIn_1.2s_ease-out]"
+        loading="eager"
         fetchPriority="high"
+        className="absolute inset-0 -z-10 h-full w-full motion-safe:animate-[fadeIn_1.2s_ease-out]"
+        imgClassName="absolute inset-0 -z-10 h-full w-full object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
 

@@ -132,7 +132,7 @@ export default function Nav() {
       }`}>
 
         {/* ── Desktop: centred-logo split nav ── */}
-        <div className="container-page hidden h-[13rem] items-center xl:grid xl:grid-cols-[1fr_auto_1fr]">
+        <div className={`container-page hidden items-center xl:grid xl:grid-cols-[1fr_auto_1fr] transition-all duration-500 ${scrolled ? 'h-[5rem]' : 'h-[13rem]'}`}>
 
           {/* Left links */}
           <nav className="flex items-center gap-7">
@@ -175,7 +175,7 @@ export default function Nav() {
             onClick={() => setMobileOpen(false)}
             className="flex items-center justify-center px-8"
           >
-            <Logo />
+            <Logo className={`transition-all duration-500 ${scrolled ? '!h-12' : ''}`} />
           </NavLink>
 
           {/* Right links + CTA */}
@@ -263,7 +263,7 @@ export default function Nav() {
         )}
 
         {/* ── Mobile: logo centred absolutely, hamburger left ── */}
-        <div className="container-page relative flex h-40 items-center sm:h-[9rem] md:h-[11rem] xl:hidden">
+        <div className={`container-page relative flex items-center xl:hidden transition-all duration-500 ${scrolled ? 'h-16' : 'h-40 sm:h-[9rem] md:h-[11rem]'}`}>
           {/* Burger left */}
           <button
             aria-label="Toggle menu"
@@ -290,7 +290,7 @@ export default function Nav() {
             onClick={() => setMobileOpen(false)}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <Logo />
+            <Logo className={`transition-all duration-500 ${scrolled ? '!h-10' : ''}`} />
           </NavLink>
 
           {/* Right spacer to balance burger */}
@@ -314,7 +314,7 @@ export default function Nav() {
             mobileOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="flex flex-col px-6 pb-10 pt-32 sm:pt-40 md:pt-48">
+          <div className="flex flex-col px-6 pb-10 pt-44 sm:pt-40 md:pt-48">
             <p className="eyebrow mb-2 text-white/50">Menu</p>
             <nav className="flex flex-col">
               {links.map((l) => {

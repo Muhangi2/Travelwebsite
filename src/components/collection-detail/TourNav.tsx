@@ -70,7 +70,7 @@ export default function TourNav({ hasHighlights, hasFaq, hasIncludes }: Props) {
     const el = document.getElementById(id)
     if (!el) return
     const navH = navRef.current?.offsetHeight ?? 56
-    const top = el.getBoundingClientRect().top + window.scrollY - navH - 16
+    const top = el.getBoundingClientRect().top + window.scrollY - 80 - navH - 16
     window.scrollTo({ top, behavior: 'smooth' })
   }
 
@@ -78,7 +78,7 @@ export default function TourNav({ hasHighlights, hasFaq, hasIncludes }: Props) {
     <div
       ref={navRef}
       className="sticky z-30 bg-white/90 backdrop-blur-md py-3 sm:py-4"
-      style={{ top: 0 }}
+      style={{ top: '5rem' }}
     >
       <div className="relative">
         {/* flex justify-center: centres the pill on desktop; on mobile overflow-x-auto handles the scroll */}

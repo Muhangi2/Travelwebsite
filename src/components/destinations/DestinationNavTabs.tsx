@@ -34,7 +34,7 @@ export default function DestinationNavTabs() {
     const el = document.getElementById(id)
     if (!el) return
     const barH = barRef.current?.offsetHeight ?? 0
-    const y = el.getBoundingClientRect().top + window.scrollY - barH - 8
+    const y = el.getBoundingClientRect().top + window.scrollY - 80 - barH - 8
     window.scrollTo({ top: y, behavior: 'smooth' })
     setActive(id)
   }
@@ -42,7 +42,7 @@ export default function DestinationNavTabs() {
   return (
     <div
       ref={barRef}
-      className="sticky top-0 z-40 border-b border-neutral-200 bg-white/95 backdrop-blur-md"
+      className="sticky top-[5rem] z-40 border-b border-neutral-200 bg-white/95 backdrop-blur-md"
     >
       <div className="container-page">
         <div className="flex overflow-x-auto">
