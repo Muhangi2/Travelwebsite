@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Picture from '@/components/Picture'
-import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
 import Reveal from '@/components/ui/Reveal'
 
 const subjects = [
