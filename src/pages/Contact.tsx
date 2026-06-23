@@ -45,7 +45,7 @@ export default function Contact() {
         />
         <div className="absolute inset-0 -z-10 bg-black/50" />
         <div className="mx-auto flex h-full max-w-5xl items-center justify-center px-6 text-center text-white">
-          <h1 className="font-serif text-5xl md:text-6xl">Contact Us</h1>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl">Contact Us</h1>
         </div>
       </section>
 
@@ -65,7 +65,7 @@ export default function Contact() {
 
           <Reveal variant="right" delay={100}>
             <div className="section-rule" />
-            <h2 className="mt-3 font-serif text-3xl">Contact Still Wild Safaris</h2>
+            <h2 className="mt-3 font-serif text-2xl sm:text-3xl">Contact Still Wild Safaris</h2>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-600">
               Our team is here to help you design a safari experience tailored exactly to your travel dreams.
             </p>

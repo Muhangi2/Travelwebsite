@@ -85,7 +85,7 @@ export default function AllArticles() {
 
         {/* ── Category pills ── */}
         <Reveal delay={60}>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-5 flex gap-2 overflow-x-auto pb-1 hide-scrollbar sm:flex-wrap">
             {categories.map((c) => {
               const isActive = c === active
               const count = c === 'All'
@@ -96,7 +96,7 @@ export default function AllArticles() {
                   key={c}
                   type="button"
                   onClick={() => selectCategory(c)}
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-[11px] font-medium tracking-wide transition ${
+                  className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-4 py-1.5 text-[11px] font-medium tracking-wide transition ${
                     isActive
                       ? 'border-black bg-black text-white'
                       : 'border-neutral-800 bg-white text-neutral-700 hover:bg-black hover:text-white'

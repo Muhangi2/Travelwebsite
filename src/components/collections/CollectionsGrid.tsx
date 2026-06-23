@@ -54,7 +54,7 @@ function Pill({
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-[11px] font-medium tracking-[0.1em] transition ${
+      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-4 py-1.5 text-[11px] font-medium tracking-[0.1em] transition ${
         active
           ? 'border-black bg-black text-white'
           : 'border-neutral-800 bg-white text-neutral-700 hover:bg-black hover:text-white'
@@ -180,8 +180,8 @@ export default function CollectionsGrid() {
 
         {/* Type pills */}
         <Reveal delay={60}>
-          <div className="mt-4 flex flex-wrap items-center gap-2">
-            <span className="eyebrow mr-2">Type</span>
+          <div className="mt-4 flex items-center gap-2 overflow-x-auto pb-1 hide-scrollbar sm:flex-wrap">
+            <span className="eyebrow mr-2 shrink-0">Type</span>
             <Pill
               label="All"
               count={journeys.length}
@@ -202,8 +202,8 @@ export default function CollectionsGrid() {
 
         {/* Destination pills */}
         <Reveal delay={80}>
-          <div className="mt-3 flex flex-wrap items-center gap-2">
-            <span className="eyebrow mr-2">Where</span>
+          <div className="mt-3 flex items-center gap-2 overflow-x-auto pb-1 hide-scrollbar sm:flex-wrap">
+            <span className="eyebrow mr-2 shrink-0">Where</span>
             <Pill
               label="All destinations"
               active={activeCountry === null}
@@ -223,8 +223,8 @@ export default function CollectionsGrid() {
 
         {/* Duration pills */}
         <Reveal delay={100}>
-          <div className="mt-3 flex flex-wrap items-center gap-2">
-            <span className="eyebrow mr-2">Length</span>
+          <div className="mt-3 flex items-center gap-2 overflow-x-auto pb-1 hide-scrollbar sm:flex-wrap">
+            <span className="eyebrow mr-2 shrink-0">Length</span>
             <Pill
               label="Any length"
               active={activeDuration === null}
