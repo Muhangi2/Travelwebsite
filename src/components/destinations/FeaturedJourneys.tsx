@@ -24,7 +24,7 @@ export default function FeaturedJourneys() {
     <section className="bg-white py-20">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Featured Journeys</h2>
+          <h2 className="text-center">Featured Journeys</h2>
         </Reveal>
 
         <div className="cards-scroll-3 mt-10 gap-6">

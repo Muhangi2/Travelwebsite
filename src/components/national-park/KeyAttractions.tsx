@@ -5,7 +5,7 @@ export default function KeyAttractions({ items }: { items: Park['attractions'] }
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Key Attractions</h2>
+        <h2 className="text-center">Key Attractions</h2>
 
         <div className="cards-scroll-3 mt-10 gap-6">
           {items.map((a) => (
@@ -14,7 +14,7 @@ export default function KeyAttractions({ items }: { items: Park['attractions'] }
                 <Picture src={a.image} alt={a.title} imgClassName="h-full w-full object-cover" />
               </div>
               <div className="p-5">
-                <h3 className="font-serif text-base">{a.title}</h3>
+                <h3 className="text-base">{a.title}</h3>
                 <p className="mt-2 text-xs leading-relaxed text-neutral-600">{a.body}</p>
               </div>
             </article>

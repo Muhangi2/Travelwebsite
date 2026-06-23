@@ -29,7 +29,7 @@ function DestinationsCarousel({ countries }: { countries: Country[] }) {
         <div className="container-page mb-12 flex items-end justify-between gap-6">
           <div>
             <p className="eyebrow mb-2">Where to go</p>
-            <h2 className="font-serif text-3xl sm:text-4xl">Choose your chapter</h2>
+            <h2>Choose your chapter</h2>
           </div>
           <p className="hidden max-w-xs text-right text-sm leading-relaxed text-neutral-500 sm:block">
             Four countries. One extraordinary region. Each one a world apart.
@@ -122,7 +122,7 @@ function DestinationsCarousel({ countries }: { countries: Country[] }) {
                       {c.parks.length} national parks
                     </p>
                     <div className="flex items-end justify-between gap-3">
-                      <h2 className="font-serif text-2xl leading-none text-white">{c.name}</h2>
+                      <h2 className="text-2xl leading-none text-white">{c.name}</h2>
                       <span className="flex h-8 w-8 flex-shrink-0 translate-y-1 items-center justify-center rounded-full border border-white/30 opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                         <svg
                           width="12"

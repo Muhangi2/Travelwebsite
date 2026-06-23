@@ -7,7 +7,7 @@ export default function WhyChoose() {
       <div className="mx-auto grid grid-cols-1 max-w-6xl items-center gap-8 sm:gap-12 px-6 md:grid-cols-2">
         <Reveal variant="left">
           <div className="section-rule" />
-          <h2 className="mt-4 font-serif text-xl sm:text-3xl lg:text-4xl">
+          <h2 className="mt-4">
             Why Choose This <br />
             Safari?
           </h2>

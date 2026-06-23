@@ -90,7 +90,7 @@ export default function TourIncludes({ included, notIncluded }: Props) {
                 <span className="font-serif text-[48px] sm:text-[64px] leading-none text-teal-800/40 select-none">01</span>
                 <div>
                   <p className="text-[10px] tracking-[0.28em] text-teal-500 uppercase mb-0.5">Your package</p>
-                  <h3 className="font-serif text-2xl text-white">What's included</h3>
+                  <h3 className="text-2xl text-white">What's included</h3>
                 </div>
               </div>
               <ul className="divide-y divide-white/[0.07]">
@@ -114,7 +114,7 @@ export default function TourIncludes({ included, notIncluded }: Props) {
                 <span className="font-serif text-[48px] sm:text-[64px] leading-none text-neutral-200 select-none">02</span>
                 <div>
                   <p className="text-[10px] tracking-[0.28em] text-neutral-400 uppercase mb-0.5">Not included</p>
-                  <h3 className="font-serif text-2xl text-neutral-800">Arrange separately</h3>
+                  <h3 className="text-2xl text-neutral-800">Arrange separately</h3>
                 </div>
               </div>
               <ul className="divide-y divide-neutral-200">

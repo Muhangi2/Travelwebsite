@@ -19,7 +19,7 @@ export default function FeaturedPosts() {
     <section className="section-alt py-20">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Featured Posts</h2>
+          <h2 className="text-center">Featured Posts</h2>
         </Reveal>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
@@ -33,7 +33,7 @@ export default function FeaturedPosts() {
                 <p className="text-[10px] tracking-wide text-neutral-500">
                   Author: {main.author} | {main.date}
                 </p>
-                <h3 className="mt-2 font-serif text-xl">{main.title}</h3>
+                <h3 className="mt-2 text-xl">{main.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-neutral-600">{main.excerpt}</p>
                 <Link to={`/stories/${main.slug}`} className="btn-primary mt-5">
                   READ MORE
@@ -54,7 +54,7 @@ export default function FeaturedPosts() {
                     <p className="text-[10px] tracking-wide text-neutral-500">
                       Author: {p.author} | {p.date}
                     </p>
-                    <h3 className="mt-2 font-serif text-base">{p.title}</h3>
+                    <h3 className="mt-2 text-base">{p.title}</h3>
                     <p className="mt-2 text-xs leading-relaxed text-neutral-600">{p.excerpt}</p>
                     <Link
                       to={`/stories/${p.slug}`}

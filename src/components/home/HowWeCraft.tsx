@@ -31,7 +31,7 @@ export default function HowWeCraft() {
       <div className="container-page">
         <div className="mx-auto max-w-3xl">
           <Reveal>
-            <h2 className="font-serif text-xl sm:text-3xl md:text-5xl lg:text-6xl leading-[1.05] text-brand-rust">
+            <h2 className="md:text-5xl lg:text-6xl leading-[1.05] text-brand-rust">
               How we craft <span className="italic">the journey</span>
             </h2>
           </Reveal>
@@ -53,7 +53,7 @@ export default function HowWeCraft() {
                 <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-500">
                   {step.label}
                 </p>
-                <h3 className="mt-1 font-serif text-2xl italic text-brand-ink sm:text-3xl lg:text-4xl">
+                <h3 className="mt-1 text-2xl italic text-brand-ink sm:text-3xl lg:text-4xl">
                   {step.title}
                 </h3>
                 <div className="mt-3 space-y-1">

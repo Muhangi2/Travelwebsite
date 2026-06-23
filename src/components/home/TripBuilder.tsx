@@ -25,7 +25,7 @@ export default function TripBuilder() {
     <section className="bg-neutral-50 py-24">
       <div className="mx-auto max-w-5xl px-6 text-center">
         <p className="font-serif italic text-brand-green">Step {currentStep} of {STEPS} - Trip Basics</p>
-        <h2 className="mt-3 font-serif text-2xl sm:text-4xl lg:text-5xl">Start Your Safari Journey<br />Today</h2>
+        <h2 className="mt-3 text-2xl sm:text-4xl lg:text-5xl">Start Your Safari Journey<br />Today</h2>
         <p className="mt-4 text-sm text-neutral-600">
           Select Your Adventure: Choose from curated packages or start a custom request
         </p>

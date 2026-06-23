@@ -27,7 +27,7 @@ export default function WhenToGo({
             <span className="eyebrow">02 &nbsp; When to Go</span>
             <div className="h-px flex-1 bg-neutral-200" />
           </div>
-          <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
+          <h2 className="text-4xl leading-tight text-neutral-900 sm:text-5xl">
             {countryName} by Season
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-500">
@@ -68,7 +68,7 @@ export default function WhenToGo({
 
                 {/* Content */}
                 <div className="flex flex-1 flex-col p-7">
-                  <h3 className="font-serif text-2xl leading-snug text-neutral-900">
+                  <h3 className="text-2xl leading-snug text-neutral-900">
                     {season.name}
                   </h3>
                   <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">

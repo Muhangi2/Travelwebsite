@@ -18,7 +18,7 @@ export default function ExploreParks({ countryName, countrySlug, intro, summary,
       <div className="container-page">
         <Reveal>
           <div className="text-center">
-            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">Explore {countryName}&apos;s National Parks</h2>
+            <h2 className="">Explore {countryName}&apos;s National Parks</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-brand-muted sm:text-base">{intro}</p>
           </div>
         </Reveal>
@@ -26,7 +26,7 @@ export default function ExploreParks({ countryName, countrySlug, intro, summary,
         <div className="mt-12 grid items-center gap-10 md:grid-cols-2">
           <Reveal variant="left">
             <div className="section-rule" />
-            <h3 className="mt-4 font-serif text-2xl">{countryName}&apos;s National Parks</h3>
+            <h3 className="mt-4 text-2xl">{countryName}&apos;s National Parks</h3>
             <p className="mt-4 text-sm leading-relaxed text-brand-muted sm:text-base">{summary}</p>
             <NavLink to={exploreHref} className="btn-primary mt-6">
               EXPLORE {countryName.toUpperCase()} PARKS

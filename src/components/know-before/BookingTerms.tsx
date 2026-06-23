@@ -85,7 +85,7 @@ export default function BookingTerms() {
       <div className="mx-auto max-w-3xl px-6">
         <Reveal>
           <div className="section-rule" />
-          <h2 className="mt-4 font-serif text-xl sm:text-3xl">Booking Terms</h2>
+          <h2 className="mt-4">Booking Terms</h2>
           <p className="mt-2 text-sm text-neutral-500">
             The details that protect both you and us, so your trip runs exactly as planned. By paying your deposit, you confirm that you accept the terms below.
           </p>

@@ -31,7 +31,7 @@ export default function WhatMakesDifferent() {
     <section className="bg-white pb-12">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">What Makes Us Different</h2>
+          <h2 className="text-center">What Makes Us Different</h2>
         </Reveal>
 
         <div className="cards-scroll-4 mt-10 gap-5">
@@ -41,7 +41,7 @@ export default function WhatMakesDifferent() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-md bg-neutral-100">
                   <LeafIcon />
                 </div>
-                <h3 className="mt-4 font-serif text-base">{it.title}</h3>
+                <h3 className="mt-4 text-base">{it.title}</h3>
                 <p className="mt-2 text-xs leading-relaxed text-neutral-600">{it.body}</p>
               </div>
             </Reveal>

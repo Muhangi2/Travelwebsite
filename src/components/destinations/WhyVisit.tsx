@@ -33,7 +33,7 @@ export default function WhyVisit({
           {/* Left — headline + intro + bullets */}
           <div>
             <Reveal>
-              <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl lg:text-6xl">
+              <h2 className="text-4xl leading-tight text-neutral-900 sm:text-5xl lg:text-6xl">
                 The Essence of<br />{countryName}
               </h2>
               <p className="mt-8 text-base leading-relaxed text-neutral-600 sm:text-lg">{data.intro}</p>

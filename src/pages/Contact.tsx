@@ -65,7 +65,7 @@ export default function Contact() {
 
           <Reveal variant="right" delay={100}>
             <div className="section-rule" />
-            <h2 className="mt-3 font-serif text-2xl sm:text-3xl">Contact Still Wild Safaris</h2>
+            <h2 className="mt-3">Contact Still Wild Safaris</h2>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-600">
               Our team is here to help you design a safari experience tailored exactly to your travel dreams.
             </p>
@@ -145,7 +145,7 @@ export default function Contact() {
 
       <section className="bg-white pb-24">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-center font-serif text-4xl">Find Still Wild Safaris</h2>
+          <h2 className="text-center">Find Still Wild Safaris</h2>
           <div className="mt-8 overflow-hidden rounded-md border border-neutral-200">
             <iframe
               title="Still Wild Safaris office location"

@@ -25,7 +25,7 @@ export default function PricingPayments() {
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <div className="section-rule" />
-          <h2 className="mt-4 font-serif text-xl sm:text-3xl">Safari Pricing &amp; Payments</h2>
+          <h2 className="mt-4">Safari Pricing &amp; Payments</h2>
           <p className="mt-2 text-sm text-neutral-500">
             How our pricing works, what's included, and how to pay.
           </p>
@@ -33,7 +33,7 @@ export default function PricingPayments() {
 
         <div className="mt-10 space-y-10">
           <Reveal>
-            <h3 className="font-serif text-lg">How Our Pricing Works</h3>
+            <h3 className="text-lg">How Our Pricing Works</h3>
             <ul className="mt-4 space-y-2 text-sm leading-relaxed text-neutral-600">
               <li>Pricing is quoted per person, based on two people sharing a room or tent unless otherwise specified.</li>
               <li>Rates vary by season — high season (peak wildlife viewing) is priced differently from low/green season.</li>
@@ -43,7 +43,7 @@ export default function PricingPayments() {
           </Reveal>
 
           <Reveal>
-            <h3 className="font-serif text-lg">What's Included &amp; What's Not</h3>
+            <h3 className="text-lg">What's Included &amp; What's Not</h3>
             <div className="mt-4 grid gap-6 md:grid-cols-2">
               <div className="rounded-md border border-green-100 bg-green-50 p-5">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-green-700">Included</p>
@@ -72,7 +72,7 @@ export default function PricingPayments() {
 
           <Reveal>
             <div className="rounded-md border border-neutral-200 bg-white p-5">
-              <h4 className="font-serif text-base">Currency &amp; Payment Methods</h4>
+              <h4 className="text-base">Currency &amp; Payment Methods</h4>
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                 We accept bank transfer and major credit/debit cards. Card payments are processed securely and we never store your card details. We'll send payment reminders ahead of each due date, so there are no surprises.
               </p>
@@ -82,7 +82,7 @@ export default function PricingPayments() {
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
             <Reveal>
               <div className="rounded-md border border-neutral-200 bg-white p-5">
-                <h4 className="font-serif text-base">Deposit &amp; Balance</h4>
+                <h4 className="text-base">Deposit &amp; Balance</h4>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                   A 50% deposit confirms your booking. The remaining balance is due 45 days before departure. Permits and flights require 100% upfront at the time of booking.
                 </p>
@@ -90,7 +90,7 @@ export default function PricingPayments() {
             </Reveal>
             <Reveal delay={80}>
               <div className="rounded-md border border-neutral-200 bg-white p-5">
-                <h4 className="font-serif text-base">Children's Rates</h4>
+                <h4 className="text-base">Children's Rates</h4>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                   Children aged 0–2 travel free when sharing with a parent and not occupying a separate bed. Children aged 3–11 sharing with an adult are charged at a reduced rate. Minimum age policies vary by property.
                 </p>
@@ -98,7 +98,7 @@ export default function PricingPayments() {
             </Reveal>
             <Reveal delay={160}>
               <div className="rounded-md border border-neutral-200 bg-white p-5">
-                <h4 className="font-serif text-base">Single Supplement</h4>
+                <h4 className="text-base">Single Supplement</h4>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                   Travelling solo? A single supplement applies if you'd like your own room or tent rather than sharing. Let us know at the time of booking and we'll quote accordingly.
                 </p>

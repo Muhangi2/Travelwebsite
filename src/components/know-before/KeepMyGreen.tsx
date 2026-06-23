@@ -52,7 +52,7 @@ export default function KeepMyGreen() {
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
             <p className="eyebrow text-white/70">Our Commitment</p>
-            <h2 className="mt-4 font-serif text-xl sm:text-3xl lg:text-4xl">Keep My Safari Green</h2>
+            <h2 className="mt-4">Keep My Safari Green</h2>
             <p className="mt-4 text-sm leading-relaxed text-white/85">
               Wild places stay wild because of the choices we make before, during, and after every trip. Keep My Safari Green is Still Wild Safaris' promise: that the wonder you experience on your trip doesn't come at the cost of the places that make it possible. It shapes who we partner with, how we operate, and what we ask of every guest who travels with us.
             </p>
@@ -67,7 +67,7 @@ export default function KeepMyGreen() {
         <div className="mx-auto max-w-5xl px-6">
           <Reveal>
             <div className="section-rule" />
-            <h3 className="mt-4 font-serif text-lg sm:text-2xl">How We Operate Responsibly</h3>
+            <h3 className="mt-4 text-lg sm:text-2xl">How We Operate Responsibly</h3>
             <ul className="mt-5 space-y-3">
               {practices.map((p) => (
                 <li key={p} className="flex items-start gap-3 text-sm leading-relaxed text-neutral-600">
@@ -79,7 +79,7 @@ export default function KeepMyGreen() {
           </Reveal>
 
           <Reveal>
-            <h3 className="mt-12 font-serif text-lg sm:text-2xl">Where Your Money Goes</h3>
+            <h3 className="mt-12 text-lg sm:text-2xl">Where Your Money Goes</h3>
             <Stagger className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" staggerMs={70}>
               {impact.map(({ label, description }) => (
                 <div
@@ -95,7 +95,7 @@ export default function KeepMyGreen() {
 
           <Reveal>
             <div className="section-rule mt-12" />
-            <h3 className="mt-4 font-serif text-lg sm:text-2xl">How You Can Travel Green With Us</h3>
+            <h3 className="mt-4 text-lg sm:text-2xl">How You Can Travel Green With Us</h3>
             <p className="mt-2 text-sm text-neutral-500">Sustainability on safari isn't just about what we do behind the scenes — small choices from guests add up too.</p>
             <ul className="mt-5 space-y-3">
               {guestTips.map(({ tip }) => (

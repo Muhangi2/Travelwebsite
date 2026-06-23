@@ -25,7 +25,7 @@ export default function PolicyBlock({
           <Reveal>
             <div className="text-center">
               <div className="section-rule mx-auto" />
-              <h2 className="mt-4 font-serif text-xl sm:text-3xl">{title}</h2>
+              <h2 className="mt-4">{title}</h2>
               <div className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600">{body}</div>
             </div>
           </Reveal>
@@ -33,7 +33,7 @@ export default function PolicyBlock({
           <div className="grid items-center gap-10 md:grid-cols-2">
             <Reveal variant={imageOnRight ? 'left' : 'right'}>
               <div className="section-rule" />
-              <h2 className="mt-4 font-serif text-xl sm:text-3xl">{title}</h2>
+              <h2 className="mt-4">{title}</h2>
               <div className="mt-4 text-sm leading-relaxed text-neutral-600">{body}</div>
             </Reveal>
             <Reveal variant={imageOnRight ? 'right' : 'left'} delay={100}>

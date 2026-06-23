@@ -44,7 +44,7 @@ export default function DestinationFAQ({
             <span className="eyebrow">09 &nbsp; FAQ</span>
             <div className="h-px flex-1 bg-neutral-300" />
           </div>
-          <h2 className="font-serif text-4xl leading-tight text-neutral-900 sm:text-5xl">
+          <h2 className="text-4xl leading-tight text-neutral-900 sm:text-5xl">
             {countryName}:<br />Your Questions Answered
           </h2>
         </Reveal>

@@ -41,7 +41,7 @@ export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] })
         <div className="container-page mb-14 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="eyebrow mb-2">Where you'll stay</p>
-            <h2 className="font-serif text-3xl sm:text-4xl">Curated Luxury Lodges</h2>
+            <h2>Curated Luxury Lodges</h2>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-neutral-500 sm:text-right">
             Hand-selected for exclusivity, sustainability, and uncompromising service.
@@ -114,7 +114,7 @@ export default function CuratedLodges({ lodges }: { lodges: Country['lodges'] })
                     </svg>
                     {lodge.location}
                   </p>
-                  <h3 className="font-serif text-xl font-semibold leading-snug text-white sm:text-2xl">
+                  <h3 className="text-xl font-semibold leading-snug text-white sm:text-2xl">
                     {lodge.name}
                   </h3>
                   <p className="mt-2 line-clamp-2 text-[12px] leading-relaxed text-white/60">

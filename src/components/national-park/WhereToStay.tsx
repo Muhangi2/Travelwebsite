@@ -4,7 +4,7 @@ export default function WhereToStay({ categories }: { categories: NonNullable<Pa
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Where to Stay</h2>
+        <h2 className="text-center">Where to Stay</h2>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {categories.map((cat) => (

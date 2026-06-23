@@ -95,7 +95,7 @@ export default function BookingJourneySteps() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="text-center">
-            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">Your Journey to the Wild Starts Here</h2>
+            <h2 className="">Your Journey to the Wild Starts Here</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-neutral-600">
               Planning your dream African safari should feel exciting, not overwhelming. Our simple 8-step booking
               journey guides you from choosing your adventure to arriving in Uganda.
@@ -108,7 +108,7 @@ export default function BookingJourneySteps() {
             <Reveal key={s.title} delay={i * 70}>
               <div className="card-lift h-full rounded-md bg-white p-5 shadow-sm ring-1 ring-neutral-100">
                 <span className="text-black">{s.icon}</span>
-                <h3 className="mt-3 font-serif text-base">{s.title}</h3>
+                <h3 className="mt-3 text-base">{s.title}</h3>
                 <p className="mt-2 text-xs leading-relaxed text-neutral-600">{s.body}</p>
               </div>
             </Reveal>

@@ -4,7 +4,7 @@ export default function GettingThere({ text }: { text: string }) {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-10 md:grid-cols-2 items-center">
           <div>
-            <h2 className="font-serif text-xl sm:text-3xl text-brand-green">Getting There</h2>
+            <h2 className="text-brand-green">Getting There</h2>
             <p className="mt-4 text-sm leading-relaxed text-neutral-600">{text}</p>
           </div>
           <div className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-neutral-200 space-y-4">

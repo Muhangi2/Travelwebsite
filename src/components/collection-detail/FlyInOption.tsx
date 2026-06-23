@@ -6,7 +6,7 @@ export default function FlyInOption() {
     <section className="section-alt py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">
+          <h2 className="text-center">
             Optional Luxury Fly-In
             <br />
             Version (7 Days)
@@ -27,7 +27,7 @@ export default function FlyInOption() {
           </Reveal>
           <Reveal variant="right" delay={100}>
             <div className="section-rule" />
-            <h3 className="mt-4 font-serif text-xl sm:text-2xl">For travelers seeking</h3>
+            <h3 className="mt-4 text-xl sm:text-2xl">For travelers seeking</h3>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">
               To minimize driving time, replace the long Bwindi → Entebbe drive with a scenic 1.5-hour flight from
               Kihihi/Kisoro. Additional flights can be added between western parks to further reduce driving time and

@@ -5,7 +5,7 @@ export default function TopActivities({ items }: { items: Park['activities'] }) 
   return (
     <section className="bg-brand-forest py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl text-white">Top Activities</h2>
+        <h2 className="text-center text-white">Top Activities</h2>
 
         <div className="cards-scroll-3 mt-10 gap-6">
           {items.map((a) => (
@@ -20,7 +20,7 @@ export default function TopActivities({ items }: { items: Park['activities'] }) 
                 <>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                    <h3 className="font-serif text-base">{a.title}</h3>
+                    <h3 className="text-base">{a.title}</h3>
                     <p className="mt-1 text-xs text-white/85">{a.body}</p>
                   </div>
                 </>

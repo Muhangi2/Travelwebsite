@@ -23,7 +23,7 @@ export default function WhoWePartnerWith() {
         <div className="grid items-start gap-12 md:grid-cols-2">
           <Reveal variant="left">
             <div className="section-rule" />
-            <h2 className="mt-4 font-serif text-xl sm:text-3xl lg:text-4xl">
+            <h2 className="mt-4">
               Who We <br />
               Partner With
             </h2>

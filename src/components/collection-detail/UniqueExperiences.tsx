@@ -30,7 +30,7 @@ export default function UniqueExperiences() {
     <section className="bg-black py-12 sm:py-16 lg:py-20 text-white">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Unique &amp; Exclusive Experiences</h2>
+          <h2 className="text-center">Unique &amp; Exclusive Experiences</h2>
         </Reveal>
 
         <Stagger className="cards-scroll-3 relative mt-8 sm:mt-12 gap-6" staggerMs={100}>
@@ -40,7 +40,7 @@ export default function UniqueExperiences() {
                 <Picture src={e.image} alt={e.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
               </div>
               <div className="p-5">
-                <h3 className="font-serif text-lg">{e.title}</h3>
+                <h3 className="text-lg">{e.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-600">{e.body}</p>
               </div>
             </article>

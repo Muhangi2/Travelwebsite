@@ -33,7 +33,7 @@ export default function NationalParksList({ countrySlug, parks, backgroundImage 
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">National Parks</h2>
+          <h2 className="text-center">National Parks</h2>
         </Reveal>
 
         <div className="mt-10 grid items-center gap-12 md:grid-cols-2">
@@ -44,7 +44,7 @@ export default function NationalParksList({ countrySlug, parks, backgroundImage 
           </Reveal>
           <Reveal variant="right" delay={100} key={`text-${park.slug}`}>
             <div className="section-rule" />
-            <h3 className="mt-4 font-serif text-2xl">{park.name}</h3>
+            <h3 className="mt-4 text-2xl">{park.name}</h3>
             <p className="mt-4 text-sm leading-relaxed text-neutral-600">{park.blurb}</p>
             <Link
               to={`/destinations/${countrySlug}/${park.slug}`}

@@ -29,7 +29,7 @@ export default function SafariJourney({ days }: { days: JourneyDay[] }) {
     <section className="bg-white pb-12">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Safari Journey</h2>
+          <h2 className="text-center">Safari Journey</h2>
         </Reveal>
 
         <Reveal key={day.day}>
@@ -37,7 +37,7 @@ export default function SafariJourney({ days }: { days: JourneyDay[] }) {
             <div className="p-8 md:p-10">
               <UgandaBadge />
               <p className="mt-6 font-serif text-2xl">Day {day.day}:</p>
-              <h3 className="font-serif text-2xl">{day.title}</h3>
+              <h3 className="text-2xl">{day.title}</h3>
               <p className="mt-4 text-sm leading-relaxed text-neutral-600">{day.body}</p>
 
               <p className="mt-6 text-sm">

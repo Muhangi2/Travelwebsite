@@ -7,7 +7,7 @@ const components: PortableTextComponents = {
       <p className="mt-4 leading-relaxed text-brand-charcoal">{children}</p>
     ),
     h2: ({ children }) => <h2 className="mt-12">{children}</h2>,
-    h3: ({ children }) => <h3 className="mt-8 font-serif text-xl">{children}</h3>,
+    h3: ({ children }) => <h3 className="mt-8 text-xl">{children}</h3>,
     blockquote: ({ children }) => (
       <blockquote className="mt-6 border-l-4 border-brand-green pl-4 italic text-brand-charcoal">
         {children}

@@ -165,7 +165,7 @@ export default function SafariDayDetail() {
           <div className="container-page">
             <div className="mb-10">
               <p className="eyebrow mb-3 text-white/40">Visual Journey</p>
-              <h2 className="font-serif text-2xl text-white sm:text-3xl">More from this safari</h2>
+              <h2 className="text-2xl text-white sm:text-3xl">More from this safari</h2>
             </div>
             <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
               {allImages.slice(0, 7).map((src, i) => {

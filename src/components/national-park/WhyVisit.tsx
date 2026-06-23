@@ -4,7 +4,7 @@ export default function WhyVisit({ items }: { items: NonNullable<Park['whyVisit'
   return (
     <section className="bg-brand-forest py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl text-white">
+        <h2 className="text-center text-white">
           Why Visit
         </h2>
 

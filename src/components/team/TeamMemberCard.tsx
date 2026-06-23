@@ -23,7 +23,7 @@ export default function TeamMemberCard({ member }: { member: TeamMember }) {
         </div>
       </div>
       <div className="mt-5 text-center">
-        <h3 className="font-serif text-xl text-brand-ink">{member.name}</h3>
+        <h3 className="text-xl text-brand-ink">{member.name}</h3>
         <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-brand-gold">{member.role}</p>
       </div>
       <p className="mt-5 text-sm leading-relaxed text-brand-muted">{member.bio}</p>

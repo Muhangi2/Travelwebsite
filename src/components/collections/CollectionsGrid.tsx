@@ -324,7 +324,7 @@ export default function CollectionsGrid() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="mt-3 font-serif text-xl leading-snug transition-colors duration-300 group-hover:text-neutral-700">
+                    <h3 className="mt-3 text-xl leading-snug transition-colors duration-300 group-hover:text-neutral-700">
                       {j.title}
                     </h3>
 

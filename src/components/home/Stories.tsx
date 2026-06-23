@@ -59,7 +59,7 @@ export default function Stories() {
               )}
               <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-6">
                 <p className="text-[10px] tracking-wide text-white/75">{p.author} · {p.date}</p>
-                <h3 className="mt-1 font-serif text-lg leading-snug text-white sm:text-xl">{p.title}</h3>
+                <h3 className="mt-1 text-lg leading-snug text-white sm:text-xl">{p.title}</h3>
                 <span className="mt-3 inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.2em] text-brand-gold transition group-hover:gap-3">
                   READ MORE
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

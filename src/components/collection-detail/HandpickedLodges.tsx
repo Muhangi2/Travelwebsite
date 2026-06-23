@@ -167,7 +167,7 @@ export default function HandpickedLodges({ days }: Props) {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="text-center">
-            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">Handpicked Lodges</h2>
+            <h2 className="">Handpicked Lodges</h2>
             <p className="mt-2 text-xs tracking-wide text-neutral-600">Carefully selected stays along your safari journey</p>
           </div>
         </Reveal>

@@ -67,7 +67,7 @@ export default function SafariFaq() {
     <section className="bg-white py-16">
       <div className="mx-auto max-w-3xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Safari FAQ for East Africa</h2>
+          <h2 className="text-center">Safari FAQ for East Africa</h2>
           <p className="mt-2 text-center text-sm text-neutral-500">
             Answers to the questions we hear most before guests travel with us.
           </p>

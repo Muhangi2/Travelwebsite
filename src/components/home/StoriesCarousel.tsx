@@ -286,7 +286,7 @@ export default function StoriesCarousel() {
         <div className="container-page">
           <div className="max-w-3xl pb-6 sm:pb-10">
             <p className="eyebrow text-brand-gold">Our Signature Experiences</p>
-            <h2 className="mt-3 font-serif text-2xl leading-tight text-white sm:text-4xl">
+            <h2 className="mt-3 text-2xl leading-tight text-white sm:text-4xl">
               East Africa: Curated Luxury Experiences
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70 sm:mt-4 sm:text-base">
@@ -330,7 +330,7 @@ export default function StoriesCarousel() {
                       {exp.badge}
                     </span>
                     <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] p-4 pr-14 sm:p-6 sm:pr-20">
-                      <h3 className="font-serif text-xl leading-tight text-white drop-shadow-md sm:text-2xl md:text-3xl">
+                      <h3 className="text-xl leading-tight text-white drop-shadow-md sm:text-2xl md:text-3xl">
                         {exp.title}
                       </h3>
                       <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-white/85 sm:mt-3 sm:line-clamp-4 sm:text-sm">
@@ -465,7 +465,7 @@ export default function StoriesCarousel() {
       <div className="container-page">
         <div className="max-w-3xl pb-10 sm:pb-14">
           <p className="eyebrow text-brand-gold">Our Signature Experiences</p>
-          <h2 className="mt-3 font-serif text-3xl leading-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="mt-3 text-3xl leading-tight text-white sm:text-4xl md:text-5xl">
             East Africa: Curated Luxury Experiences
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base">
@@ -498,7 +498,7 @@ export default function StoriesCarousel() {
                   {exp.badge}
                 </span>
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] p-5">
-                  <h3 className="line-clamp-3 font-serif text-xl leading-tight text-white drop-shadow-md sm:text-2xl">
+                  <h3 className="line-clamp-3 text-xl leading-tight text-white drop-shadow-md sm:text-2xl">
                     {exp.title}
                   </h3>
                   {i === wideIndex && (

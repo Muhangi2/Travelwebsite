@@ -29,7 +29,7 @@ export default function BespokeJourneyCTA({ backgroundImage }: Props) {
             <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.3em] text-white/35">
               Speak to a Specialist
             </p>
-            <h2 className="font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
               Begin Your Bespoke Journey
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/60">
@@ -42,7 +42,7 @@ export default function BespokeJourneyCTA({ backgroundImage }: Props) {
         <div className="mt-14 grid items-center gap-12 md:grid-cols-2 md:gap-16">
           <Reveal variant="left">
             <div className="h-px w-12 bg-amber-400" />
-            <h3 className="mt-6 font-serif text-2xl text-white sm:text-3xl">Our experts possess</h3>
+            <h3 className="mt-6 text-2xl text-white sm:text-3xl">Our experts possess</h3>
             <p className="mt-4 text-base leading-relaxed text-white/60">
               First-hand knowledge of every lodge, every trail, and every hidden gem we recommend. They are your
               personal curators, ensuring a seamless, worry-free experience from the first conversation to your

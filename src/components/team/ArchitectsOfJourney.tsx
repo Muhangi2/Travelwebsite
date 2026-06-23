@@ -19,7 +19,7 @@ export default function ArchitectsOfJourney() {
           </Reveal>
           <Reveal variant="right" delay={100}>
             <div className="section-rule" />
-            <h2 className="mt-4 font-serif text-xl sm:text-3xl">
+            <h2 className="mt-4">
               The Architects of <br />
               Your Journey
             </h2>

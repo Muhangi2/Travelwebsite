@@ -129,7 +129,7 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
             {/* Overview */}
             <div>
               {country && <p className="eyebrow mb-2">{country}</p>}
-              {title && <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl leading-tight">{title.replace('\n', ' ')}</h2>}
+              {title && <h2 className="text-xl sm:text-2xl lg:text-3xl leading-tight">{title.replace('\n', ' ')}</h2>}
               <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-neutral-500">{overview}</p>
             </div>
 
@@ -203,7 +203,7 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
             {/* Heading + arrow chevron day stepper */}
             <div className="flex flex-col gap-3 min-w-0">
               <div className="flex items-center justify-between">
-                <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl">Itinerary</h3>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl">Itinerary</h3>
                 <div className="flex items-center gap-1.5">
                   <button
                     onClick={() => setActive((i) => Math.max(0, i - 1))}

@@ -117,7 +117,7 @@ export default function AllArticles() {
         {/* ── Heading ── */}
         <Reveal delay={80}>
           <div className="mt-12 flex items-baseline justify-between border-b border-neutral-100 pb-4">
-            <h2 className="font-serif text-xl sm:text-3xl lg:text-4xl">All Articles</h2>
+            <h2 className="">All Articles</h2>
             {(query || active !== 'All') && (
               <button
                 type="button"
@@ -154,7 +154,7 @@ export default function AllArticles() {
                   <p className="text-[10px] tracking-wide text-neutral-400">
                     {a.author} · {a.date}
                   </p>
-                  <h3 className="mt-2 font-serif text-base leading-snug">{a.title}</h3>
+                  <h3 className="mt-2 text-base leading-snug">{a.title}</h3>
                   <p className="mt-2 line-clamp-3 flex-1 text-xs leading-relaxed text-neutral-500">{a.excerpt}</p>
                   <Link
                     to={`/stories/${a.slug}`}

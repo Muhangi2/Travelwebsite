@@ -50,7 +50,7 @@ export default function WhereToGo({
               <div className="h-px flex-1 bg-white/20" />
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <h2 className="font-serif text-4xl leading-tight text-white sm:text-5xl">
+              <h2 className="text-4xl leading-tight text-white sm:text-5xl">
                 {countryName}&apos;s<br className="sm:hidden" /> National Parks
               </h2>
               <p className="max-w-xs text-sm leading-relaxed text-white/60 sm:text-right">
@@ -110,7 +110,7 @@ export default function WhereToGo({
                         </svg>
                         {park.location}
                       </p>
-                      <h3 className="mt-3 font-serif text-2xl leading-snug text-neutral-900">
+                      <h3 className="mt-3 text-2xl leading-snug text-neutral-900">
                         {park.name}
                       </h3>
                       <p className="mt-3 text-sm leading-relaxed text-neutral-500 line-clamp-3">

@@ -45,7 +45,7 @@ export default function ConservationImpact({ countryName, data, backgroundImage 
             </span>
             <div className="h-px flex-1 bg-white/10" />
           </div>
-          <h2 className="max-w-2xl font-serif text-4xl leading-tight text-white sm:text-5xl">
+          <h2 className="max-w-2xl text-4xl leading-tight text-white sm:text-5xl">
             Protecting {countryName}<br />for Generations to Come
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-white/60">{data.intro}</p>

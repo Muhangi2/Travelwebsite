@@ -49,7 +49,7 @@ export default function Footer() {
             <Logo variant="full" />
           </NavLink>
           <p className="eyebrow mt-8 text-white/50">Stay In Touch</p>
-          <h4 className="mt-2 font-serif text-2xl text-white sm:text-3xl">Connect with us</h4>
+          <h4 className="mt-2 text-2xl text-white sm:text-3xl">Connect with us</h4>
           <div className="mt-5 flex justify-center gap-3">
             <Social label="Facebook" path="M13 22v-8h3l1-4h-4V7c0-1 .5-2 2-2h2V1h-3c-3 0-5 2-5 5v4H6v4h3v8z" />
             <Social label="LinkedIn" path="M4 4h4v16H4zm2-4a2 2 0 11.001 4 2 2 0 010-4zM10 8h4v2c1-2 3-2 4-2 4 0 4 3 4 6v6h-4v-6c0-1-.5-2-2-2s-2 1-2 2v6h-4z" />
@@ -86,7 +86,7 @@ export default function Footer() {
 
         <div className="mt-14 grid gap-10 sm:grid-cols-2 md:mt-16 md:grid-cols-4">
           <div>
-            <h4 className="font-serif text-lg text-white">About Us</h4>
+            <h4 className="text-lg text-white">About Us</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li><NavLink to="/about" className="hover:text-white">Our Story</NavLink></li>
               <li><NavLink to="/meet-the-team" className="hover:text-white">Meet the Team</NavLink></li>
@@ -95,7 +95,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-serif text-lg text-white">Destinations</h4>
+            <h4 className="text-lg text-white">Destinations</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li><NavLink to="/destinations/uganda" className="hover:text-white">Uganda</NavLink></li>
               <li><NavLink to="/destinations/rwanda" className="hover:text-white">Rwanda</NavLink></li>
@@ -104,7 +104,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-serif text-lg text-white">Explore</h4>
+            <h4 className="text-lg text-white">Explore</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li><NavLink to="/" className="hover:text-white">Home</NavLink></li>
               <li><NavLink to="/safari-collections" className="hover:text-white">Safari Collections</NavLink></li>
@@ -113,7 +113,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-serif text-lg text-white">Contact</h4>
+            <h4 className="text-lg text-white">Contact</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <a href={`mailto:${site.email}`} className="hover:text-white">

@@ -78,7 +78,7 @@ export default function ExperienceDetail() {
               {exp.highlights.map((h, i) => (
                 <div key={i} className="rounded-2xl border border-brand-ink/10 bg-brand-cream/30 p-6 sm:p-8">
                   <p className="font-serif text-2xl text-brand-gold sm:text-3xl">{String(i + 1).padStart(2, '0')}</p>
-                  <h3 className="mt-3 font-serif text-xl text-brand-ink sm:text-2xl">{h.title}</h3>
+                  <h3 className="mt-3 text-xl text-brand-ink sm:text-2xl">{h.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-brand-muted sm:text-base">{h.body}</p>
                 </div>
               ))}
@@ -112,7 +112,7 @@ export default function ExperienceDetail() {
                   )}
                   <div className="p-5 sm:p-6">
                     <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-brand-gold">{loc.country}</p>
-                    <h3 className="mt-2 font-serif text-xl text-white sm:text-2xl">{loc.name}</h3>
+                    <h3 className="mt-2 text-xl text-white sm:text-2xl">{loc.name}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-white/75">{loc.description}</p>
                   </div>
                 </article>
@@ -193,7 +193,7 @@ export default function ExperienceDetail() {
                   </div>
                   <div className="p-5 sm:p-6">
                     <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-brand-gold">{e.badge}</p>
-                    <h3 className="mt-2 font-serif text-xl text-brand-ink sm:text-2xl">{e.shortTitle}</h3>
+                    <h3 className="mt-2 text-xl text-brand-ink sm:text-2xl">{e.shortTitle}</h3>
                     <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-brand-muted">{e.excerpt}</p>
                   </div>
                 </NavLink>

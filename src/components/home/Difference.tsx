@@ -97,7 +97,7 @@ export default function Difference() {
             </div>
           </Reveal>
           <Reveal variant="right" delay={100} key={current.title}>
-            <h3 className="font-serif text-3xl leading-tight text-brand-ink sm:text-4xl md:text-5xl">
+            <h3 className="text-3xl leading-tight text-brand-ink sm:text-4xl md:text-5xl">
               {current.title}
             </h3>
             <p className="mt-6 text-sm leading-relaxed text-brand-muted sm:text-base">{current.body}</p>

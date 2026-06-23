@@ -12,7 +12,7 @@ export default function WhyPartnerWithUs() {
     <section className="section-alt py-20">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
-          <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">Why Partner With Us</h2>
+          <h2 className="text-center">Why Partner With Us</h2>
         </Reveal>
 
         <Stagger className="cards-scroll-4 mt-12 gap-8" staggerMs={100}>
@@ -37,7 +37,7 @@ export default function WhyPartnerWithUs() {
                   {r.num}
                 </span>
               </div>
-              <h3 className="mt-5 whitespace-pre-line font-serif text-sm text-neutral-900">{r.title}</h3>
+              <h3 className="mt-5 whitespace-pre-line text-sm text-neutral-900">{r.title}</h3>
               <p className="mt-2 max-w-[14ch] text-xs text-neutral-500">{r.body}</p>
             </div>
           ))}

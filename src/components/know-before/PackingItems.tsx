@@ -74,7 +74,7 @@ export default function PackingItems() {
       <div className="mx-auto max-w-5xl px-6">
         <Reveal variant="scale">
           <div className="section-rule mx-auto" />
-          <h2 className="mt-4 text-center font-serif text-xl sm:text-3xl">Packing List</h2>
+          <h2 className="mt-4 text-center">Packing List</h2>
           <p className="mx-auto mt-2 max-w-xl text-center text-sm text-neutral-500">
             Everything you need for a comfortable, safari-ready trip — and nothing you don't. Packing for a safari is less about packing more, and more about packing right.
           </p>
@@ -111,7 +111,7 @@ export default function PackingItems() {
         </Reveal>
 
         <Reveal>
-          <h3 className="mt-12 font-serif text-lg sm:text-2xl text-center">Climate at a Glance</h3>
+          <h3 className="mt-12 text-lg sm:text-2xl text-center">Climate at a Glance</h3>
           <p className="mt-1 text-center text-xs text-neutral-400">Exact temperatures vary by region and altitude — your itinerary will include more specific guidance.</p>
           <div className="mt-5 overflow-x-auto rounded-md border border-neutral-200">
             <table className="w-full min-w-[480px] text-sm">

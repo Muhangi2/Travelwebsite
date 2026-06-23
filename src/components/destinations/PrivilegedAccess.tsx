@@ -10,7 +10,7 @@ export default function PrivilegedAccess({ items }: { items: Country['privileged
         <Reveal>
           <p className="eyebrow mb-3">Exclusive Access</p>
           <div className="flex flex-col gap-y-4 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="max-w-xl font-serif text-3xl leading-tight text-neutral-900 sm:text-4xl lg:text-5xl">
+            <h2 className="max-w-xl text-3xl leading-tight text-neutral-900 sm:text-4xl lg:text-5xl">
               Privileged Access:<br className="hidden sm:block" /> Beyond the Itinerary
             </h2>
             <p className="max-w-xs text-sm leading-relaxed text-neutral-500 sm:text-right">
@@ -72,7 +72,7 @@ export default function PrivilegedAccess({ items }: { items: Country['privileged
 
                       <div className="section-rule mb-6" />
 
-                      <h3 className="font-serif text-2xl leading-snug text-neutral-900 sm:text-3xl">
+                      <h3 className="text-2xl leading-snug text-neutral-900 sm:text-3xl">
                         {it.title}
                       </h3>
                       <p className="mt-5 text-sm leading-relaxed text-neutral-600">{it.body}</p>

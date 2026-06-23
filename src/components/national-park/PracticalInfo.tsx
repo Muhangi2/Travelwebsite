@@ -4,7 +4,7 @@ export default function PracticalInfo({ items }: { items: NonNullable<Park['prac
   return (
     <section className="bg-neutral-50 py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-center font-serif text-xl sm:text-3xl lg:text-4xl">
+        <h2 className="text-center">
           Practical Information & Travel Tips
         </h2>
 

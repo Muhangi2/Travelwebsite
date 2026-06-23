@@ -84,7 +84,7 @@ function SafariCard({ card, index }: { card: Card; index: number }) {
           <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-400 transition-[letter-spacing] duration-500 group-hover:tracking-[0.28em]">
             {card.duration}
           </p>
-          <h3 className="mt-2 font-serif text-xl sm:text-2xl">{card.title}</h3>
+          <h3 className="mt-2 text-xl sm:text-2xl">{card.title}</h3>
           <p className="mt-3 text-sm leading-relaxed text-brand-muted">{card.desc}</p>
           <NavLink
             to={card.href}

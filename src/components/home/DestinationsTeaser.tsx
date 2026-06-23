@@ -61,7 +61,7 @@ export default function DestinationsTeaser() {
           <Reveal variant="left">
             <div className="lg:pr-8">
               <p className="eyebrow">Destinations &amp; Experiences</p>
-              <h2 className="mt-6 font-serif text-xl sm:text-3xl md:text-5xl lg:text-[3.5rem] leading-[1.1] tracking-tight text-brand-ink">
+              <h2 className="mt-6 md:text-5xl lg:text-[3.5rem] leading-[1.1] tracking-tight text-brand-ink">
                 Where will you go wild?
               </h2>
               <p className="mt-7 max-w-md text-base leading-[1.8] text-brand-muted">
