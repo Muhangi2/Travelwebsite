@@ -98,13 +98,13 @@ export default function AllArticles() {
                   onClick={() => selectCategory(c)}
                   className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-[11px] font-medium tracking-wide transition ${
                     isActive
-                      ? 'border-black bg-black text-white shadow-sm'
-                      : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400 hover:text-black'
+                      ? 'border-black bg-black text-white'
+                      : 'border-neutral-800 bg-white text-neutral-700 hover:bg-black hover:text-white'
                   }`}
                 >
                   {c}
                   <span className={`rounded-full px-1.5 py-0.5 text-[10px] leading-none ${
-                    isActive ? 'bg-white/20 text-white' : 'bg-neutral-100 text-neutral-500'
+                    isActive ? 'bg-white/20 text-white' : 'bg-neutral-900 text-white'
                   }`}>
                     {count}
                   </span>
@@ -134,7 +134,7 @@ export default function AllArticles() {
         {visible.length > 0 ? (
           <Stagger className="cards-scroll-3 mt-8 gap-6" staggerMs={80}>
             {visible.map((a) => (
-              <article key={a.slug} className="card-lift overflow-hidden rounded-xl shadow-sm ring-1 ring-neutral-100">
+              <article key={a.slug} className="card-lift overflow-hidden rounded-xl ring-1 ring-black">
                 <div className="img-zoom relative aspect-[4/3] overflow-hidden">
                   <Picture src={a.image} alt={a.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
                   <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-1 p-3">
