@@ -55,7 +55,7 @@ const faqs = [
     a: 'Bush flights operated by Aerolink, Bar Aviation, or Akagera Aviation typically permit 15 kg of soft-sided luggage per person, including carry-on. We will confirm exact limits for your specific itinerary.',
   },
   {
-    q: 'What is MasterPolo Safaris doing to protect the environment?',
+    q: 'What is Still Wild Safaris doing to protect the environment?',
     a: "It's central to how we operate. Our Keep My Safari Green commitment means working with conservation-linked partners, encouraging guests to reduce single-use plastics, and ensuring park and conservation fees go toward protecting the wildlife and landscapes we all come to see.",
   },
 ]

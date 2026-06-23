@@ -6,8 +6,8 @@ export default function TalkWithAdvisor() {
   return (
     <section className="relative isolate overflow-hidden py-20 text-white sm:py-24">
       <Picture
-        src="/images/activities/helicopter-rwanda/1000045751.jpg"
-        alt="Aerial sunset over the Virungas"
+        src="/images/parks/uganda/murchison-falls/dsc-6280.jpg"
+        alt="Murchison Falls at the Victoria Nile"
         loading="lazy"
         className="absolute inset-0 -z-10 h-full w-full object-cover motion-safe:animate-[fadeIn_1.2s_ease-out]"
       />

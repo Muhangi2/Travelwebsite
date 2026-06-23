@@ -86,7 +86,7 @@ export const articles: Article[] = [
     slug: 'rwanda-permits-packing-2026',
     title: 'Rwanda Safari Planning 101: Permits, Packing, and Pro-Tips for 2026',
     excerpt: 'Planning a safari to Rwanda is an exciting endeavor…',
-    image: '/images/activities/helicopter-rwanda/1000045751.jpg',
+    image: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
     author: 'Still Wild Safaris Team',
     date: 'Jan 2026',
     tags: ['Gorilla', 'Uganda'],

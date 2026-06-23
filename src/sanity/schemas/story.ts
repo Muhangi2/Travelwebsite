@@ -40,7 +40,7 @@ export const storyType = defineType({
       name: 'author',
       title: 'Author',
       type: 'string',
-      initialValue: 'MasterPolo Safaris Team',
+      initialValue: 'Still Wild Safaris Team',
     }),
     defineField({
       name: 'publishedAt',

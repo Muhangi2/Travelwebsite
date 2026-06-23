@@ -1060,7 +1060,7 @@ export const countries: Record<string, Country> = {
           {
             title: 'Twin Lakes — Lake Ruhondo & Lake Bulera',
             body: 'Visit the scenic twin volcanic lakes at the foot of the Virunga range for boat rides, birdwatching, and stunning reflections of the volcano chain — a beautiful addition to any Volcanoes itinerary.',
-            image: '/images/activities/helicopter-rwanda/1000045751.jpg',
+            image: '/images/destinations/rwanda/image-20260331125636.jpg',
           },
           {
             title: 'Gorilla Naming Ceremony — Kwita Izina',
@@ -1072,7 +1072,7 @@ export const countries: Record<string, Country> = {
           {
             title: 'Helicopter Transfers',
             body: 'Skip the road and arrive in style — aerial transfers from Kigali deliver guests to the lodges with sweeping views over the Twin Lakes and the Virunga volcanoes.',
-            image: '/images/activities/helicopter-rwanda/1000045751.jpg',
+            image: '/images/activities/helicopter-rwanda/1000045745.jpg',
           },
           {
             title: 'Bisate Reforestation Walk',

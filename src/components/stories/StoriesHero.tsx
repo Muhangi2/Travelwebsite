@@ -5,8 +5,8 @@ export default function StoriesHero() {
   return (
     <section className="relative isolate h-[100svh] overflow-hidden">
       <Picture
-        src="/images/activities/helicopter-rwanda/1000045751.jpg"
-        alt="Aerial view of Rwanda's volcanoes at golden hour"
+        src="/images/activities/game-drive/asilia-roho-2017-1-1.jpg"
+        alt="Safari game drive at golden hour"
         className="absolute inset-0 -z-10 h-full w-full object-cover motion-safe:animate-[fadeIn_1.2s_ease-out]"
         fetchPriority="high"
       />

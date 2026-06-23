@@ -39,7 +39,7 @@ const terms = [
   {
     title: '5. Travel Insurance',
     items: [
-      'Comprehensive travel insurance is mandatory for all MasterPolo Safaris guests, including cover for medical treatment, emergency evacuation, repatriation, and trip cancellation.',
+      'Comprehensive travel insurance is mandatory for all Still Wild Safaris guests, including cover for medical treatment, emergency evacuation, repatriation, and trip cancellation.',
       'Proof of valid insurance may be requested before departure.',
     ],
   },
@@ -53,7 +53,7 @@ const terms = [
   },
   {
     title: '7. Conduct on Safari & Our Conservation Commitment',
-    body: "MasterPolo Safaris operates in some of the world's most precious wild spaces, and we ask every guest to help us protect them:",
+    body: "Still Wild Safaris operates in some of the world's most precious wild spaces, and we ask every guest to help us protect them:",
     items: [
       "Follow your guide's instructions at all times, particularly around wildlife distance and vehicle off-track driving rules.",
       'Do not feed, touch, or attempt to approach wildlife.',
@@ -64,12 +64,12 @@ const terms = [
     title: '8. Liability & Assumption of Risk',
     items: [
       'Safari travel involves inherent risks, including those related to wildlife, terrain, weather, and remote locations. Guests participate at their own risk.',
-      'MasterPolo Safaris is not liable for losses, delays, or costs arising from circumstances beyond our reasonable control, including those covered under Force Majeure below.',
+      'Still Wild Safaris is not liable for losses, delays, or costs arising from circumstances beyond our reasonable control, including those covered under Force Majeure below.',
     ],
   },
   {
     title: '9. Force Majeure',
-    body: 'MasterPolo Safaris is not liable for any failure to perform its obligations where that failure results from circumstances beyond our reasonable control, including but not limited to natural disasters, civil unrest, government action, pandemic-related restrictions, or park/border closures.',
+    body: 'Still Wild Safaris is not liable for any failure to perform its obligations where that failure results from circumstances beyond our reasonable control, including but not limited to natural disasters, civil unrest, government action, pandemic-related restrictions, or park/border closures.',
   },
   {
     title: '10. Governing Law',

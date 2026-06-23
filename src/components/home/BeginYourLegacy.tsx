@@ -6,8 +6,8 @@ export default function BeginYourLegacy() {
   return (
     <section className="relative isolate overflow-hidden py-20 text-white sm:py-28">
       <Picture
-        src="/images/activities/helicopter-rwanda/1000045751.jpg"
-        alt="Aerial sunset view of the Virunga Mountains"
+        src="/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg"
+        alt="Hot-air balloon at sunrise over the Masai Mara"
         className="absolute inset-0 -z-10 h-full w-full object-cover"
         loading="lazy"
         decoding="async"

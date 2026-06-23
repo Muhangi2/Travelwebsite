@@ -34,16 +34,17 @@ export default function Contact() {
 
   return (
     <>
-      <section className="relative isolate min-h-[42svh] overflow-hidden">
+      <section className="relative isolate h-[100svh] overflow-hidden">
         <Picture
           src="/images/destinations/tanzania/sayari-lioness.jpg"
           alt="Still Wild Safaris"
           className="absolute inset-0 -z-10 h-full w-full object-cover motion-safe:animate-[fadeIn_1.2s_ease-out]"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
           decoding="async"
         />
         <div className="absolute inset-0 -z-10 bg-black/50" />
-        <div className="mx-auto flex min-h-[42svh] max-w-5xl items-center justify-center px-6 pt-24 text-center text-white">
+        <div className="mx-auto flex h-full max-w-5xl items-center justify-center px-6 text-center text-white">
           <h1 className="font-serif text-5xl md:text-6xl">Contact Us</h1>
         </div>
       </section>
@@ -53,7 +54,7 @@ export default function Contact() {
           <Reveal variant="left">
             <div className="img-zoom overflow-hidden rounded-md shadow-md">
               <Picture
-                src="/images/activities/helicopter-rwanda/1000045751.jpg"
+                src="/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg"
                 alt="Safari guide on a walking safari"
                 className="h-full w-full object-cover"
                 loading="lazy"
@@ -144,10 +145,10 @@ export default function Contact() {
 
       <section className="bg-white pb-24">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-center font-serif text-4xl">Find MasterPolo Safaris</h2>
+          <h2 className="text-center font-serif text-4xl">Find Still Wild Safaris</h2>
           <div className="mt-8 overflow-hidden rounded-md border border-neutral-200">
             <iframe
-              title="MasterPolo Safaris office location"
+              title="Still Wild Safaris office location"
               src="https://www.google.com/maps?q=Imperial+Mall+Entebbe+Uganda&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

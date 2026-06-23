@@ -96,7 +96,7 @@ const experiences: Experience[] = [
     body: "For ultimate luxury, our Helicopter Safaris offer unrivaled access to East Africa's most spectacular landscapes, with private aerial tours and remote landings.",
     cta: 'Plan a Helicopter Safari',
     href: '/safari-collections',
-    image: '/images/activities/helicopter-rwanda/1000045751.jpg',
+    image: '/images/activities/helicopter-rwanda/1000045745.jpg',
   },
   {
     slug: 'fly-in-safaris',

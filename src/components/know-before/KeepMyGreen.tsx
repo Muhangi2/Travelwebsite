@@ -54,7 +54,7 @@ export default function KeepMyGreen() {
             <p className="eyebrow text-white/70">Our Commitment</p>
             <h2 className="mt-4 font-serif text-xl sm:text-3xl lg:text-4xl">Keep My Safari Green</h2>
             <p className="mt-4 text-sm leading-relaxed text-white/85">
-              Wild places stay wild because of the choices we make before, during, and after every trip. Keep My Safari Green is MasterPolo Safaris' promise: that the wonder you experience on your trip doesn't come at the cost of the places that make it possible. It shapes who we partner with, how we operate, and what we ask of every guest who travels with us.
+              Wild places stay wild because of the choices we make before, during, and after every trip. Keep My Safari Green is Still Wild Safaris' promise: that the wonder you experience on your trip doesn't come at the cost of the places that make it possible. It shapes who we partner with, how we operate, and what we ask of every guest who travels with us.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-white/75">
               East Africa's parks and reserves are under real pressure — from habitat loss, climate change, and the sheer popularity of the destinations that draw travellers here in the first place. Responsible tourism isn't a marketing line for us; it's the difference between these landscapes thriving for the next generation, or not.

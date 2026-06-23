@@ -393,7 +393,7 @@ export const experiences: Experience[] = [
     excerpt:
       "Private aerial tours and remote landings across East Africa's most spectacular landscapes.",
     cta: 'Plan a Helicopter Safari',
-    image: '/images/activities/helicopter-rwanda/1000045751.jpg',
+    image: '/images/activities/helicopter-rwanda/1000045745.jpg',
     tagline:
       'Land on a crater rim. Picnic beside a lake no road reaches. Photograph the migration from 200ft.',
     intro: [
@@ -429,8 +429,8 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/helicopter-rwanda/1000045751.jpg',
       '/images/activities/helicopter-rwanda/1000045745.jpg',
+      '/images/activities/helicopter-rwanda/1000045732.jpg',
       '/images/activities/helicopter-rwanda/1000045744.jpg',
     ],
   },
