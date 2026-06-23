@@ -15,7 +15,7 @@ export default function TippingBanner() {
 
       <div className="mx-auto max-w-3xl px-6">
         <Reveal>
-          <h2 className="">Tipping and Local Etiquette</h2>
+          <h2>Tipping and Local Etiquette</h2>
           <p className="mt-4 text-sm leading-relaxed text-white/85">
             Tipping is customary and a significant part of the income for guides, drivers, and lodge staff. We provide a
             suggested tipping guideline in your final itinerary. Always ask permission before taking photographs of

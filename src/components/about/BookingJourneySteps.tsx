@@ -95,7 +95,7 @@ export default function BookingJourneySteps() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="text-center">
-            <h2 className="">Your Journey to the Wild Starts Here</h2>
+            <h2>Your Journey to the Wild Starts Here</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-neutral-600">
               Planning your dream African safari should feel exciting, not overwhelming. Our simple 8-step booking
               journey guides you from choosing your adventure to arriving in Uganda.

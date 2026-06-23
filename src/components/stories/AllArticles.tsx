@@ -117,7 +117,7 @@ export default function AllArticles() {
         {/* ── Heading ── */}
         <Reveal delay={80}>
           <div className="mt-12 flex items-baseline justify-between border-b border-neutral-100 pb-4">
-            <h2 className="">All Articles</h2>
+            <h2>All Articles</h2>
             {(query || active !== 'All') && (
               <button
                 type="button"

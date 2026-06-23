@@ -319,7 +319,7 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
                     </div>
                   </div>
 
-                  <h4 className={`font-serif text-base sm:text-lg lg:text-xl leading-snug ${isDark ? 'text-white' : 'text-neutral-900'}`}>
+                  <h4 className={`text-base sm:text-lg leading-snug ${isDark ? 'text-white' : 'text-neutral-900'}`}>
                     {day.title}
                   </h4>
                   <p className={`mt-2 text-[12px] sm:text-[13px] leading-relaxed ${isDark ? 'text-white/65' : 'text-neutral-500'}`}>
