@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import type { Park } from '@/data/destinations'
 import Reveal from '@/components/ui/Reveal'
@@ -19,10 +20,12 @@ export default function WhereToGo({
 }) {
   if (!parks.length) return null
 
+  const [paused, setPaused] = useState(false)
+
   // Triple the list so the loop is seamless
   const items = [...parks, ...parks, ...parks]
   const shiftPx = parks.length * (CARD_W + GAP)
-  const duration = parks.length * 7
+  const duration = parks.length * 18
   const bg = backgroundImage ?? parks[0].image
 
   return (
@@ -53,9 +56,30 @@ export default function WhereToGo({
               <h2 className="text-4xl leading-tight text-white sm:text-5xl">
                 {countryName}&apos;s<br className="sm:hidden" /> National Parks
               </h2>
-              <p className="max-w-xs text-sm leading-relaxed text-white/60 sm:text-right">
-                Each park is a completely different world. We design itineraries that show you the full spectrum.
-              </p>
+              <div className="flex items-center gap-4">
+                <p className="max-w-xs text-sm leading-relaxed text-white/60 sm:text-right">
+                  Each park is a completely different world. We design itineraries that show you the full spectrum.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setPaused((p) => !p)}
+                  aria-label={paused ? 'Play carousel' : 'Pause carousel'}
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white/20"
+                >
+                  {paused ? (
+                    /* Play icon */
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M5 3l14 9-14 9V3z" />
+                    </svg>
+                  ) : (
+                    /* Pause icon */
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                      <rect x="6" y="4" width="4" height="16" rx="1" />
+                      <rect x="14" y="4" width="4" height="16" rx="1" />
+                    </svg>
+                  )}
+                </button>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -63,12 +87,16 @@ export default function WhereToGo({
         {/* Infinite marquee strip — full bleed */}
         <div className="mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
           <div
-            className="flex hover:[animation-play-state:paused]"
             style={{
+              display: 'flex',
               gap: `${GAP}px`,
               paddingLeft: `${GAP}px`,
               width: 'max-content',
-              animation: `ww-marquee ${duration}s linear infinite`,
+              animationName: 'ww-marquee',
+              animationDuration: `${duration}s`,
+              animationTimingFunction: 'linear',
+              animationIterationCount: 'infinite',
+              animationPlayState: paused ? 'paused' : 'running',
             }}
           >
             {items.map((park, i) => {

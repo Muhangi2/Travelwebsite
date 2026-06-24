@@ -113,11 +113,11 @@ export default function Nav() {
     timerRef.current = window.setTimeout(() => setter(false), HOVER_CLOSE_DELAY)
   }
 
-  const linkColor = scrolled ? 'text-neutral-800 hover:text-black' : 'text-white hover:text-white/70'
-  const activeIndicator = scrolled ? 'border-black' : 'border-white'
+  const linkColor = scrolled ? 'text-white hover:text-white/70' : 'text-white hover:text-white/70'
+  const activeIndicator = scrolled ? 'border-white' : 'border-white'
 
   const navItemClass = (active: boolean, open: boolean) =>
-    `inline-flex items-center gap-1 whitespace-nowrap text-[11px] font-bold tracking-[0.2em] transition ${linkColor} ${
+    `inline-flex items-center gap-1 whitespace-nowrap text-[13px] font-bold tracking-[0.2em] transition ${linkColor} ${
       active || open ? `border-b-2 ${activeIndicator} pb-1` : ''
     }`
 
@@ -125,7 +125,7 @@ export default function Nav() {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/95 shadow-sm backdrop-blur-md'
+          ? 'bg-black shadow-sm backdrop-blur-md'
           : 'bg-transparent'
       } ${
         navVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
@@ -175,7 +175,7 @@ export default function Nav() {
             onClick={() => setMobileOpen(false)}
             className="flex items-center justify-center px-8"
           >
-            <Logo className={`transition-all duration-500 ${scrolled ? '!h-12' : ''}`} />
+            <Logo className={`transition-all duration-500 ${scrolled ? '!h-12 brightness-0 invert' : ''}`} />
           </NavLink>
 
           {/* Right links + CTA */}
@@ -237,13 +237,13 @@ export default function Nav() {
             })}
 
             {/* Thin divider */}
-            <span className={`h-4 w-px ${scrolled ? 'bg-black/20' : 'bg-white/30'}`} />
+            <span className={`h-4 w-px ${scrolled ? 'bg-white/30' : 'bg-white/30'}`} />
 
             <NavLink
               to="/contact"
               className={`rounded-full border px-4 py-2 text-[10px] font-medium tracking-[0.2em] transition xl:px-5 xl:text-xs ${
                 scrolled
-                  ? 'border-black bg-black text-white hover:bg-neutral-800'
+                  ? 'border-white bg-white text-black hover:bg-white/90'
                   : 'border-white bg-white/10 text-white backdrop-blur hover:bg-white/20'
               }`}
             >
@@ -270,7 +270,7 @@ export default function Nav() {
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((v) => !v)}
             className={`flex h-10 w-10 items-center justify-center rounded-full transition ${
-              scrolled ? 'text-black hover:bg-black/10' : 'text-white hover:bg-white/10'
+              scrolled ? 'text-white hover:bg-white/10' : 'text-white hover:bg-white/10'
             }`}
           >
             {mobileOpen ? (
@@ -290,7 +290,7 @@ export default function Nav() {
             onClick={() => setMobileOpen(false)}
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <Logo className={`transition-all duration-500 ${scrolled ? '!h-10' : ''}`} />
+            <Logo className={`transition-all duration-500 ${scrolled ? '!h-10 brightness-0 invert' : ''}`} />
           </NavLink>
 
           {/* Right spacer to balance burger */}

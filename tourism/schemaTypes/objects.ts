@@ -1,113 +1,5 @@
 import { defineField, defineType } from 'sanity'
 
-export const statItemType = defineType({
-  name: 'statItem',
-  title: 'Stat',
-  type: 'object',
-  fields: [
-    defineField({ name: 'number', title: 'Number / value', type: 'string', validation: (r) => r.required() }),
-    defineField({ name: 'label', title: 'Label', type: 'string', validation: (r) => r.required() }),
-  ],
-  preview: { select: { title: 'number', subtitle: 'label' } },
-})
-
-export const whyVisitBulletType = defineType({
-  name: 'whyVisitBullet',
-  title: 'Bullet point',
-  type: 'object',
-  fields: [
-    defineField({ name: 'title', title: 'Title', type: 'string', validation: (r) => r.required() }),
-    defineField({ name: 'body', title: 'Body', type: 'text', rows: 2 }),
-  ],
-  preview: { select: { title: 'title' } },
-})
-
-export const whyVisitType = defineType({
-  name: 'whyVisit',
-  title: 'Why Visit section',
-  type: 'object',
-  fields: [
-    defineField({ name: 'intro', title: 'Intro paragraph', type: 'text', rows: 4, validation: (r) => r.required() }),
-    defineField({ name: 'bullets', title: 'Bullets', type: 'array', of: [{ type: 'whyVisitBullet' }] }),
-    defineField({ name: 'stats', title: 'Stats', type: 'array', of: [{ type: 'statItem' }] }),
-  ],
-})
-
-export const seasonType = defineType({
-  name: 'season',
-  title: 'Season',
-  type: 'object',
-  fields: [
-    defineField({ name: 'name', title: 'Name', type: 'string', validation: (r) => r.required() }),
-    defineField({ name: 'dates', title: 'Dates', type: 'string', validation: (r) => r.required() }),
-    defineField({ name: 'wildlife', title: 'Wildlife highlight', type: 'string', validation: (r) => r.required() }),
-    defineField({ name: 'description', title: 'Description', type: 'text', rows: 3, validation: (r) => r.required() }),
-    defineField({ name: 'image', title: 'Image', type: 'mediaImage' }),
-  ],
-  preview: { select: { title: 'name', subtitle: 'dates' } },
-})
-
-export const specialistQuoteType = defineType({
-  name: 'specialistQuote',
-  title: 'Specialist quote',
-  type: 'object',
-  fields: [
-    defineField({ name: 'quote', title: 'Quote', type: 'text', rows: 3, validation: (r) => r.required() }),
-    defineField({ name: 'author', title: 'Author', type: 'string', validation: (r) => r.required() }),
-    defineField({ name: 'role', title: 'Role / title', type: 'string' }),
-  ],
-})
-
-export const conservationType = defineType({
-  name: 'conservation',
-  title: 'Conservation & Impact',
-  type: 'object',
-  fields: [
-    defineField({ name: 'intro', title: 'Intro', type: 'text', rows: 4, validation: (r) => r.required() }),
-    defineField({ name: 'stats', title: 'Stats', type: 'array', of: [{ type: 'statItem' }] }),
-    defineField({
-      name: 'partners',
-      title: 'Partners',
-      type: 'array',
-      of: [{ type: 'string' }],
-      description: 'List of conservation partner names.',
-    }),
-  ],
-})
-
-export const countryFaqType = defineType({
-  name: 'countryFaq',
-  title: 'Country FAQ',
-  type: 'object',
-  fields: [
-    defineField({ name: 'question', title: 'Question', type: 'string', validation: (r) => r.required() }),
-    defineField({ name: 'answer', title: 'Answer', type: 'text', rows: 3, validation: (r) => r.required() }),
-  ],
-  preview: { select: { title: 'question' } },
-})
-
-export const travelStatsType = defineType({
-  name: 'travelStats',
-  title: 'Travel stats bar',
-  type: 'object',
-  fields: [
-    defineField({ name: 'bestTime', title: 'Best time to visit', type: 'string' }),
-    defineField({ name: 'duration', title: 'Recommended duration', type: 'string' }),
-    defineField({ name: 'keyWildlife', title: 'Key wildlife', type: 'string' }),
-    defineField({ name: 'travelStyle', title: 'Travel style', type: 'string' }),
-  ],
-})
-
-export const pageHeroCtaType = defineType({
-  name: 'pageHeroCta',
-  title: 'CTA button',
-  type: 'object',
-  fields: [
-    defineField({ name: 'label', title: 'Button label', type: 'string', validation: (r) => r.required() }),
-    defineField({ name: 'href', title: 'Link URL or path', type: 'string', validation: (r) => r.required() }),
-  ],
-})
-
 /** Image upload or static path under /public (e.g. /images/...) */
 export const mediaImageType = defineType({
   name: 'mediaImage',
@@ -298,15 +190,6 @@ export const journeyDayType = defineType({
 })
 
 export const objectTypes = [
-  statItemType,
-  whyVisitBulletType,
-  whyVisitType,
-  seasonType,
-  specialistQuoteType,
-  conservationType,
-  countryFaqType,
-  travelStatsType,
-  pageHeroCtaType,
   mediaImageType,
   titleBodyType,
   faqItemType,

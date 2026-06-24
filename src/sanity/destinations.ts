@@ -54,6 +54,30 @@ function toCountry(raw: SanityDestination): Country {
       image: resolveMediaImage(lodge.image, 900),
     })),
     seoKeywords: raw.seoKeywords ?? '',
+    travelStats: raw.travelStats,
+    whyVisit: raw.whyVisit
+      ? {
+          intro: raw.whyVisit.intro,
+          bullets: raw.whyVisit.bullets ?? [],
+          stats: raw.whyVisit.stats ?? [],
+        }
+      : undefined,
+    seasons: raw.seasons?.map((s) => ({
+      name: s.name,
+      dates: s.dates,
+      wildlife: s.wildlife,
+      description: s.description,
+      image: s.image ? resolveMediaImage(s.image, 900) : undefined,
+    })),
+    specialistQuote: raw.specialistQuote,
+    conservation: raw.conservation
+      ? {
+          intro: raw.conservation.intro,
+          stats: raw.conservation.stats ?? [],
+          partners: raw.conservation.partners ?? [],
+        }
+      : undefined,
+    countryFaqs: raw.countryFaqs?.map((f) => ({ question: f.question, answer: f.answer })),
   }
 }
 

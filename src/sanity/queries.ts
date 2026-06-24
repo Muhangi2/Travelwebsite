@@ -1,3 +1,15 @@
+export const pageHeroByKeyQuery = /* groq */ `
+  *[_type == "pageHero" && _id == $id][0] {
+    pageKey,
+    eyebrow,
+    heading,
+    body,
+    image { asset, path, alt },
+    primaryCta { label, href },
+    secondaryCta { label, href }
+  }
+`
+
 export const allStoriesQuery = /* groq */ `
   *[_type == "story" && defined(slug.current)] | order(coalesce(featured, false) desc, publishedAt desc) {
     _id,
@@ -79,6 +91,29 @@ export const experienceBySlugQuery = /* groq */ `
   }
 `
 
+const destinationRichProjection = /* groq */ `
+  travelStats { bestTime, duration, keyWildlife, travelStyle },
+  whyVisit {
+    intro,
+    bullets[] { title, body },
+    stats[] { number, label }
+  },
+  seasons[] {
+    name,
+    dates,
+    wildlife,
+    description,
+    image ${mediaImageProjection}
+  },
+  specialistQuote { quote, author, role },
+  conservation {
+    intro,
+    stats[] { number, label },
+    partners
+  },
+  countryFaqs[] { question, answer }
+`
+
 export const allDestinationsQuery = /* groq */ `
   *[_type == "destination" && defined(slug.current)] | order(coalesce(sortOrder, 0) asc, name asc) {
     _id,
@@ -124,6 +159,7 @@ export const allDestinationsQuery = /* groq */ `
       body,
       image ${mediaImageProjection}
     },
+    ${destinationRichProjection},
     seoKeywords,
     sortOrder
   }
@@ -174,6 +210,7 @@ export const destinationBySlugQuery = /* groq */ `
       body,
       image ${mediaImageProjection}
     },
+    ${destinationRichProjection},
     seoKeywords
   }
 `

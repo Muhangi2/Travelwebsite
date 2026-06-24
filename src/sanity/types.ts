@@ -2,6 +2,16 @@ import type { PortableTextBlock } from '@portabletext/react'
 import type { SanityImageSource } from '@sanity/image-url'
 import type { SanityMediaImage } from './utils/media'
 
+export type SanityPageHero = {
+  pageKey: string
+  eyebrow?: string
+  heading: string
+  body?: string
+  image: SanityMediaImage
+  primaryCta?: { label: string; href: string }
+  secondaryCta?: { label: string; href: string }
+}
+
 export type SanityStorySummary = {
   _id: string
   title: string
@@ -54,6 +64,8 @@ export type SanityPark = {
   faqs?: { q: string; a: string }[]
 }
 
+export type SanityStatItem = { number: string; label: string }
+
 export type SanityDestination = {
   _id: string
   name: string
@@ -67,6 +79,22 @@ export type SanityDestination = {
   parks?: SanityPark[]
   privilegedAccess?: { title: string; location?: string; body: string; image: SanityMediaImage }[]
   lodges?: { name: string; location?: string; body: string; image: SanityMediaImage }[]
+  travelStats?: { bestTime?: string; duration?: string; keyWildlife?: string; travelStyle?: string }
+  whyVisit?: {
+    intro: string
+    bullets?: { title: string; body?: string }[]
+    stats?: SanityStatItem[]
+  }
+  seasons?: {
+    name: string
+    dates: string
+    wildlife: string
+    description: string
+    image?: SanityMediaImage
+  }[]
+  specialistQuote?: { quote: string; author: string; role?: string }
+  conservation?: { intro: string; stats?: SanityStatItem[]; partners?: string[] }
+  countryFaqs?: { question: string; answer: string }[]
   seoKeywords?: string
 }
 

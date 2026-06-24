@@ -2,16 +2,18 @@ import { NavLink } from 'react-router-dom'
 import { site } from '@/config/site'
 import Logo from './Logo'
 
-const Social = ({ label, path }: { label: string; path: string }) => (
-  <NavLink
-    to="/contact"
-    aria-label={`${label} — contact us`}
+const Social = ({ label, href, path }: { label: string; href: string; path: string }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={label}
     className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/20 transition hover:bg-white/20 hover:ring-white/40"
   >
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
       <path d={path} />
     </svg>
-  </NavLink>
+  </a>
 )
 
 const partners = [
@@ -51,11 +53,21 @@ export default function Footer() {
           <p className="eyebrow mt-8 text-white/50">Stay In Touch</p>
           <h4 className="mt-2 text-2xl text-white sm:text-3xl">Connect with us</h4>
           <div className="mt-5 flex justify-center gap-3">
-            <Social label="Facebook" path="M13 22v-8h3l1-4h-4V7c0-1 .5-2 2-2h2V1h-3c-3 0-5 2-5 5v4H6v4h3v8z" />
-            <Social label="LinkedIn" path="M4 4h4v16H4zm2-4a2 2 0 11.001 4 2 2 0 010-4zM10 8h4v2c1-2 3-2 4-2 4 0 4 3 4 6v6h-4v-6c0-1-.5-2-2-2s-2 1-2 2v6h-4z" />
-            <Social label="X" path="M18 3l-6 8 7 10h-4l-5-7-5 7H3l7-9-7-9h4l4 6 4-6z" />
-            <Social label="YouTube" path="M22 8s-.2-1.5-.8-2.1c-.7-.8-1.6-.8-2-.9C16.4 4.7 12 4.7 12 4.7s-4.4 0-7.2.3c-.4.1-1.3.1-2 .9C2.2 6.5 2 8 2 8s-.2 1.7-.2 3.5v1.6c0 1.8.2 3.5.2 3.5s.2 1.5.8 2.1c.7.8 1.7.8 2.2.9 1.6.2 7 .3 7 .3s4.4 0 7.2-.3c.4-.1 1.3-.1 2-.9.6-.6.8-2.1.8-2.1s.2-1.7.2-3.5v-1.6C22.2 9.7 22 8 22 8zM10 15V9l5 3z" />
-            <Social label="Pinterest" path="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 0-2.9.2-.8 1.2-5 1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.5-.2 1 .5 1.9 1.5 1.9 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3-.1.3-.3 1-.3 1.2-.1.2-.2.3-.4.2-1.4-.7-2.3-2.7-2.3-4.4 0-3.6 2.6-6.9 7.5-6.9 3.9 0 7 2.8 7 6.6 0 3.9-2.5 7.1-5.9 7.1-1.2 0-2.3-.6-2.6-1.3l-.7 2.7c-.3 1-1 2.3-1.5 3.1.9.3 1.9.4 2.9.4 5.5 0 10-4.5 10-10S17.5 2 12 2z" />
+            <Social
+              label="Follow us on Instagram"
+              href={site.instagram}
+              path="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.2 4.8 1.7 5 5 .1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.2 3.3-1.7 4.8-5 5-1.3.1-1.6.1-4.9.1s-3.6 0-4.8-.1c-3.3-.2-4.8-1.7-5-5C2 16.6 2 16.3 2 12s0-3.6.1-4.8c.2-3.3 1.7-4.8 5-5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.2 0-3.5 0-4.7.1-2.5.1-3.4 1-3.5 3.5C3.7 8.8 3.7 9 3.7 12s0 3.2.1 4.4c.1 2.5 1 3.4 3.5 3.5 1.2.1 1.5.1 4.7.1s3.5 0 4.7-.1c2.5-.1 3.4-1 3.5-3.5.1-1.2.1-1.5.1-4.4s0-3.2-.1-4.4c-.1-2.5-1-3.4-3.5-3.5-1.2-.1-1.5-.1-4.7-.1zm0 3a5 5 0 110 10A5 5 0 0112 7zm0 8.2a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm5.2-9.5a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+            />
+            <Social
+              label="Follow us on Facebook"
+              href={site.facebook}
+              path="M13 22v-8h3l1-4h-4V7c0-1 .5-2 2-2h2V1h-3c-3 0-5 2-5 5v4H6v4h3v8z"
+            />
+            <Social
+              label="Chat on WhatsApp"
+              href={site.whatsappHref}
+              path="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C8.3 9 7.5 9.8 7.5 11.4s1.1 3.1 1.3 3.3c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.3.2-.7.2-1.2.1-1.3-.1-.1-.3-.2-.6-.4zM12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"
+            />
           </div>
         </div>
 
@@ -129,6 +141,11 @@ export default function Footer() {
               <li>
                 <a href={`tel:${site.phoneAlt.replace(/\s/g, '')}`} className="hover:text-white">
                   {site.phoneAlt}
+                </a>
+              </li>
+              <li>
+                <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  WhatsApp: {site.whatsapp}
                 </a>
               </li>
             </ul>

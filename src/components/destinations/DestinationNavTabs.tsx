@@ -42,7 +42,7 @@ export default function DestinationNavTabs() {
   return (
     <div
       ref={barRef}
-      className="sticky top-[5rem] z-40 border-b border-neutral-200 bg-white/95 backdrop-blur-md"
+      className="sticky top-[5rem] z-40 border-b border-white/10 bg-black backdrop-blur-md"
     >
       <div className="container-page">
         <div className="flex overflow-x-auto">
@@ -51,15 +51,15 @@ export default function DestinationNavTabs() {
               key={tab.id}
               type="button"
               onClick={() => scrollTo(tab.id)}
-              className={`relative shrink-0 px-4 py-4 text-[10px] font-bold uppercase tracking-[0.22em] transition-colors sm:px-6 ${
+              className={`relative shrink-0 px-4 py-4 text-[11px] font-bold uppercase tracking-[0.22em] transition-colors sm:px-6 ${
                 active === tab.id
-                  ? 'text-neutral-900'
-                  : 'text-neutral-400 hover:text-neutral-700'
+                  ? 'text-white'
+                  : 'text-white/50 hover:text-white/80'
               }`}
             >
               {tab.label}
               {active === tab.id && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-neutral-900" />
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-white" />
               )}
             </button>
           ))}
