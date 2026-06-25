@@ -63,8 +63,8 @@ export default function StoryDetail() {
                 roam freely.
               </p>
 
-              <div className="mt-10 overflow-hidden rounded-xl border border-neutral-200 shadow-sm">
-                <table className="w-full text-sm">
+              <div className="mt-10 overflow-x-auto rounded-xl border border-neutral-200 shadow-sm">
+                <table className="w-full min-w-[480px] text-sm">
                   <thead>
                     <tr className="bg-brand-forest-dark text-white">
                       <th className="px-4 py-3 text-left font-medium">Detail</th>

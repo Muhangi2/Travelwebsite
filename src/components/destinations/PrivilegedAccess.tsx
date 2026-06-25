@@ -27,9 +27,7 @@ export default function PrivilegedAccess({ items }: { items: Country['privileged
               <article key={it.title} className="group py-16 sm:py-20">
                 <Reveal variant="up" delay={80}>
                   <div
-                    className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-20 ${
-                      isEven ? '' : 'lg:flex-row-reverse'
-                    }`}
+                    className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20"
                   >
                     {/* image col */}
                     <div className={`relative ${isEven ? '' : 'lg:order-2'}`}>

@@ -3,18 +3,16 @@ import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 const leadership: TeamMember[] = [
   {
-    name: 'Rick Cheng',
+    name: 'James Mitchell',
     role: 'The Director',
-    bio: "As the visionary Director, Rick provides the strategic direction and long-term planning that guides our company. His focus is on ensuring sustainable growth, maintaining the highest standards of service, and fostering a culture of excellence and innovation across all operations.",
+    bio: "As the visionary Director, James provides the strategic direction and long-term planning that guides our company. His focus is on ensuring sustainable growth, maintaining the highest standards of service, and fostering a culture of excellence and innovation across all operations.",
     quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    image: '/images/team/rick-cheng.jpg',
   },
   {
-    name: 'Ahemd',
+    name: 'Kagabo Habimana',
     role: 'Co-director',
-    bio: "Working closely with the Director, Ahemd is the operational backbone of the entire team. The Co-director is responsible for the day-to-day execution of our strategy, optimizing internal processes, and ensuring seamless coordination between all departments to deliver exceptional client experiences.",
+    bio: "Working closely with the Director, Kagabo is the operational backbone of the entire team. The Co-director is responsible for the day-to-day execution of our strategy, optimizing internal processes, and ensuring seamless coordination between all departments to deliver exceptional client experiences.",
     quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    image: '/images/team/ahmed.jpg',
   },
 ]
 

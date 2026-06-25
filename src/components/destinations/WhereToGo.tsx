@@ -110,7 +110,7 @@ export default function WhereToGo({
                   key={`${park.slug}-${i}`}
                   to={`/destinations/${countrySlug}/${park.slug}`}
                   className="group flex shrink-0 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl"
-                  style={{ width: `${CARD_W}px`, height: '420px' }}
+                  style={{ width: `min(85vw, ${CARD_W}px)`, height: 'clamp(300px, 55vw, 420px)' }}
                 >
                   {/* Image — left 45% */}
                   <div className="relative w-[45%] shrink-0 overflow-hidden">

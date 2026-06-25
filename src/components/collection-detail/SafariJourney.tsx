@@ -49,7 +49,7 @@ export default function SafariJourney({ days }: { days: JourneyDay[] }) {
                 <span className="text-neutral-600">{day.meals}</span>
               </p>
             </div>
-            <div className="img-zoom overflow-hidden">
+            <div className="img-zoom aspect-[4/3] overflow-hidden md:aspect-auto md:h-full">
               <Picture src={day.image} alt={day.title} loading="lazy" decoding="async" imgClassName="h-full w-full object-cover" />
             </div>
           </article>

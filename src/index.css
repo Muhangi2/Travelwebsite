@@ -245,10 +245,10 @@
   width: min(80vw, 260px);
   scroll-snap-align: start;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .cards-scroll-4 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
@@ -258,6 +258,11 @@
   }
   .cards-scroll-4 > * {
     width: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .cards-scroll-4 {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

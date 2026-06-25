@@ -3,32 +3,28 @@ import TeamMemberCard, { type TeamMember } from './TeamMemberCard'
 
 const guides: TeamMember[] = [
   {
-    name: 'Steven',
+    name: 'Ssemanda Kayiwa',
     role: 'Head Guide',
-    bio: "Steven is the senior-most member of our field team. As the Head Guide, he sets the standard for safety, professionalism and local knowledge — mentoring the guiding team and personally leading our most challenging and exclusive expeditions.",
+    bio: "Ssemanda is the senior-most member of our field team. As the Head Guide, he sets the standard for safety, professionalism and local knowledge — mentoring the guiding team and personally leading our most challenging and exclusive expeditions.",
     quote: 'Every safari is a story written by the land. My job is to read it for you.',
-    image: '/images/team/steven.jpg',
   },
   {
-    name: 'Micheal',
+    name: 'Tumwesigye Byarugaba',
     role: 'Trekking & Excursion Lead',
-    bio: "Micheal specialises in primate trekking and high-altitude excursions across the Albertine Rift. UWA-certified and gorilla-tracking trained, he plans and leads every gorilla, golden-monkey and chimp encounter on our itineraries.",
+    bio: "Tumwesigye specialises in primate trekking and high-altitude excursions across the Albertine Rift. UWA-certified and gorilla-tracking trained, he plans and leads every gorilla, golden-monkey and chimp encounter on our itineraries.",
     quote: 'Spend an hour with a silverback and the rest of life makes more sense.',
-    image: '/images/team/micheal.jpg',
   },
   {
-    name: 'Keke',
+    name: 'Uwimana Ineza',
     role: 'Wildlife Guide',
-    bio: "Keke is known for his infectious enthusiasm and deep connection to the natural environment. As a Wildlife Guide, he excels at making complex ecological information accessible and engaging — turning every game drive into a fascinating field lesson.",
+    bio: "Uwimana is known for her infectious enthusiasm and deep connection to the natural environment. As a Wildlife Guide, she excels at making complex ecological information accessible and engaging — turning every game drive into a fascinating field lesson.",
     quote: 'There is no such thing as a slow day in the bush — only undertrained eyes.',
-    image: '/images/team/keke.jpg',
   },
   {
-    name: 'Kelly',
+    name: 'Sarah Thompson',
     role: 'Birding Specialist',
-    bio: "A certified birding guide, Kelly leads our specialist birding circuits with a sharp eye and an encyclopedic memory of the regional avifauna. From shoebills in the Mabamba swamp to the Albertine endemics of Bwindi, she finds them all.",
+    bio: "A certified birding guide, Sarah leads our specialist birding circuits with a sharp eye and an encyclopedic memory of the regional avifauna. From shoebills in the Mabamba swamp to the Albertine endemics of Bwindi, she finds them all.",
     quote: 'You came for the gorillas. You will leave dreaming of the birds.',
-    image: '/images/team/kelly.jpg',
   },
 ]
 
