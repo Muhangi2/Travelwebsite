@@ -1,4 +1,4 @@
-import Reveal, { Stagger } from '@/components/ui/Reveal'
+import Reveal from '@/components/ui/Reveal'
 
 const categories = [
   {
