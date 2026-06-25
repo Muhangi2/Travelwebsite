@@ -83,7 +83,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '2-day-rwanda-gorilla',
     title: '2 Days from Rwanda\nto the Mountain Gorillas',
     subtitle: 'The shortest route to Africa\'s most extraordinary wildlife encounter — Kigali to Bwindi in one seamless luxury journey.',
-    heroImage: '/images/activities/gorilla-trekking/1-mgl-gorilla-bb.jpg',
+    heroImage: '/images/activities/gorilla-trekking/1-mgl-gorilla-bb.webp',
     overview: 'Designed for discerning travellers with limited time who refuse to compromise on experience, this 2-day luxury gorilla trekking safari departs from Kigali, Rwanda, and crosses swiftly into Uganda and deep into Bwindi Impenetrable Forest — a UNESCO World Heritage Site and home to nearly half of the world\'s remaining mountain gorillas. The overland crossing from Kigali takes just 4–5 hours, making this the most time-efficient route to Bwindi available anywhere. Every detail has been arranged for your comfort: a private driver-guide, a hand-selected luxury forest lodge, and a Uganda Wildlife Authority gorilla permit granting you one extraordinary hour face-to-face with a habituated mountain gorilla family in the wild.',
     country: 'RWANDA · UGANDA',
     days: [
@@ -93,7 +93,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Depart Kigali International Airport with your private driver-guide and begin the scenic 4–5 hour overland drive west through Rwanda\'s rolling hills into Uganda. Cross the border and ascend into the misty highlands of Bwindi Impenetrable Forest. Check into your luxury forest lodge, take a guided forest-edge walk at sunset, and prepare for tomorrow\'s extraordinary encounter.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs / Bwindi Lodge',
         meals: 'Lunch, Dinner',
-        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.webp',
       },
       {
         day: 2,
@@ -101,7 +101,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Rise early for a briefing at Uganda Wildlife Authority headquarters before setting out with expert trackers into the ancient forest. Spend one profound, unhurried hour with a habituated gorilla family — watching them feed, play, and care for their young, often just a few metres away. After the trek, enjoy a celebration lunch at the lodge before the scenic drive back to Kigali.',
         accommodation: '—',
         meals: 'Breakfast, Lunch',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
     ],
     waypoints: [
@@ -119,7 +119,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '3-day-kigali-gorilla',
     title: '3 Days from Kigali\ninto Gorilla Country',
     subtitle: 'Track mountain gorillas in their natural habitat — the classic Uganda experience via Rwanda\'s scenic route.',
-    heroImage: '/images/activities/gorilla-trekking/4-mgl-gorilla-bb.jpg',
+    heroImage: '/images/activities/gorilla-trekking/4-mgl-gorilla-bb.webp',
     overview: 'The most popular itinerary for discerning travellers, this safari begins at Kigali International Airport and takes you deep into the heart of Bwindi Impenetrable Forest — a UNESCO World Heritage Site sheltering nearly half of the world\'s remaining mountain gorillas. With one night in Kigali and two nights in a handpicked luxury forest lodge, this journey gives you time to settle into the rhythm of Bwindi before your gorilla trek: exploring the lodge surroundings, birding among over 350 species, and enjoying fine dining under the forest canopy. Your Uganda Wildlife Authority gorilla permit grants you one extraordinary, unhurried hour with a habituated gorilla family in the wild.',
     country: 'RWANDA · UGANDA',
     days: [
@@ -129,7 +129,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Arrive at Kigali International Airport where your private driver-guide meets you for a seamless transfer to your luxury Kigali hotel. Spend the evening exploring Kigali\'s renowned culinary scene, with dinner at one of the city\'s finest restaurants. Tonight is for settling in, resting, and preparing for the journey ahead.',
         accommodation: 'Luxury: Kigali Serena Hotel / Hotel des Mille Collines',
         meals: 'Dinner',
-        image: '/images/parks/rwanda/volcanoes/wilderness-bisate.jpg',
+        image: '/images/parks/rwanda/volcanoes/wilderness-bisate.webp',
       },
       {
         day: 2,
@@ -137,7 +137,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'After breakfast, depart Kigali with your private guide for the scenic 4–5 hour overland drive through the terraced hills of the "Land of a Thousand Hills" into Uganda. Arrive at Bwindi Impenetrable Forest, check into your luxury lodge, and spend the afternoon exploring the forest edges — birding, guided nature walks, and sunset views over the ancient canopy.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs / Bwindi Lodge',
         meals: 'Breakfast, Lunch, Dinner',
-        image: '/images/activities/gorilla-trekking/27-virunga-lodge-goriila-rf-0464.jpg',
+        image: '/images/activities/gorilla-trekking/27-virunga-lodge-goriila-rf-0464.webp',
       },
       {
         day: 3,
@@ -145,7 +145,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'The day you\'ve been waiting for. After an early briefing, set out with expert trackers into the ancient forest. Your one extraordinary hour with a habituated gorilla family will be the highlight of your travels. After the trek, a celebration lunch at the lodge precedes the scenic drive back to Kigali for your onward flight.',
         accommodation: '—',
         meals: 'Breakfast, Lunch',
-        image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
+        image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp',
       },
     ],
     waypoints: [
@@ -163,7 +163,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '4-day-rwanda-uganda-primate',
     title: 'A 4-Day Rwanda–Uganda\nPrimate Safari',
     subtitle: 'Two of Africa\'s most extraordinary primates — golden monkeys and mountain gorillas — in one unforgettable journey.',
-    heroImage: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.jpg',
+    heroImage: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.webp',
     overview: 'Beginning with an airport pickup at Kigali International Airport and an overnight in Kigali, this extraordinary safari combines two of Uganda\'s rarest primate encounters — golden monkey trekking and mountain gorilla trekking — in a single seamless journey. After your Kigali night, the overland crossing takes you first into Mgahinga Gorilla National Park, where the vivid golden monkey inhabits the bamboo forests of the Virunga volcanoes, before moving to Bwindi Impenetrable Forest for your encounter with the mountain gorillas. Only a few hundred golden monkeys remain in the wild, making this one of Africa\'s rarest wildlife encounters.',
     country: 'RWANDA · UGANDA',
     days: [
@@ -173,7 +173,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Arrive at Kigali International Airport for a smooth private transfer to your luxury hotel. Enjoy an orientation dinner and prepare for the journey across the border into Uganda\'s volcanic southwest.',
         accommodation: 'Luxury: Kigali Serena Hotel / Hotel des Mille Collines',
         meals: 'Dinner',
-        image: '/images/parks/rwanda/volcanoes/wilderness-bisate.jpg',
+        image: '/images/parks/rwanda/volcanoes/wilderness-bisate.webp',
       },
       {
         day: 2,
@@ -181,7 +181,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive from Kigali into Uganda\'s Mgahinga Gorilla National Park in the Virunga highlands. After checking into your lodge, receive your golden monkey trekking briefing and head into the bamboo forest. These vivid, playful primates are found nowhere else — watch them leap through the bamboo fronds, just a few metres away. An extraordinary warm-up for tomorrow\'s gorilla encounter.',
         accommodation: 'Luxury: Mount Gahinga Lodge',
         meals: 'Breakfast, Lunch, Dinner',
-        image: '/images/activities/gorilla-trekking/36-mount-gahinga-lodge-golden-monkey.jpg',
+        image: '/images/activities/gorilla-trekking/36-mount-gahinga-lodge-golden-monkey.webp',
       },
       {
         day: 3,
@@ -189,7 +189,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Transfer to Bwindi Impenetrable Forest for the day\'s centrepiece: your Uganda Wildlife Authority gorilla permit granting one hour face-to-face with a habituated gorilla family. After the trek, settle into your Bwindi lodge for a final forest evening.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/2-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/2-mgl-gorilla-bb.webp',
       },
       {
         day: 4,
@@ -197,7 +197,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'After a final forest breakfast, your private guide drives you back to Kigali — through the terraced hills and over the border — in time for your international departure.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/activities/gorilla-trekking/30-mount-gahinga-lodge-gorilla.jpg',
+        image: '/images/activities/gorilla-trekking/30-mount-gahinga-lodge-gorilla.webp',
       },
     ],
     waypoints: [
@@ -216,7 +216,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '5-day-kigali-great-apes',
     title: '5 Days from Kigali\nAmong Uganda\'s Great Apes',
     subtitle: 'Uganda\'s ultimate primates double-header — gorillas and chimpanzees in one immersive journey.',
-    heroImage: '/images/activities/gorilla-trekking/18-kibale-lodge-chimpanzee-tadevs-vs-08183.jpg',
+    heroImage: '/images/activities/gorilla-trekking/18-kibale-lodge-chimpanzee-tadevs-vs-08183.webp',
     overview: 'The ultimate primate safari begins the moment you land at Kigali International Airport. Over five days in and around Bwindi Impenetrable Forest — one of Africa\'s most biodiverse ecosystems and home to both mountain gorillas and over 600 wild chimpanzees — you track both of our closest great ape relatives in their natural habitat. Two separate trekking days, expert guiding throughout, four nights in hand-selected luxury forest lodges, and an unhurried pace that lets you truly inhabit the forest — this is Uganda\'s most complete primate experience.',
     country: 'RWANDA · UGANDA',
     days: [
@@ -226,7 +226,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Arrive at Kigali International Airport and transfer to your luxury Kigali hotel. Your journey begins from the first moment of arrival — welcome dinner, orientation briefing, and an early night before the drive into Uganda.',
         accommodation: 'Luxury: Kigali Serena Hotel',
         meals: 'Dinner',
-        image: '/images/parks/rwanda/volcanoes/wilderness-bisate.jpg',
+        image: '/images/parks/rwanda/volcanoes/wilderness-bisate.webp',
       },
       {
         day: 2,
@@ -234,7 +234,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'The 4–5 hour overland drive from Kigali takes you through Rwanda\'s terraced hills and across the border into Uganda\'s Kigezi highlands. Arrive at Bwindi and settle into your luxury forest lodge — an afternoon forest walk introduces you to the ancient canopy before dinner.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Breakfast, Lunch, Dinner',
-        image: '/images/activities/gorilla-trekking/9-gorilla3-bfo9.jpg',
+        image: '/images/activities/gorilla-trekking/9-gorilla3-bfo9.webp',
       },
       {
         day: 3,
@@ -242,7 +242,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Your Uganda Wildlife Authority gorilla permit grants you one extraordinary hour with a habituated gorilla family in the wild. Trek through ancient forest with expert trackers, and spend time watching these magnificent creatures at close range in their natural habitat.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         day: 4,
@@ -250,7 +250,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Bwindi is one of the few places where both mountain gorillas and wild chimpanzees share the same ancient forest. Today you track chimpanzees through the forest — swinging through the canopy above, their hooting calls filling the air. An extraordinary counterpoint to yesterday\'s gorilla encounter.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/21-chimpanzee-kya-3-s-g13.jpg',
+        image: '/images/activities/gorilla-trekking/21-chimpanzee-kya-3-s-g13.webp',
       },
       {
         day: 5,
@@ -258,7 +258,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A final forest breakfast, last looks at the mist-draped canopy, and then the scenic drive back to Kigali — over the hills and border — in time for your international departure.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/activities/gorilla-trekking/12-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/12-mgl-gorilla-bb.webp',
       },
     ],
     waypoints: [
@@ -324,7 +324,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '3-day-classic-uganda-gorilla',
     title: '3-Day Classic Uganda\nGorilla Safari',
     subtitle: 'The iconic journey into the heart of the Pearl of Africa — Entebbe to Bwindi via the Equator.',
-    heroImage: '/images/activities/gorilla-trekking/8-gorilla-ah1i2661.jpg',
+    heroImage: '/images/activities/gorilla-trekking/8-gorilla-ah1i2661.webp',
     overview: 'Experience the quintessential Ugandan safari on this classic 3-day gorilla trek. Departing from Entebbe or Kampala, this journey takes you across the Equator and through the diverse landscapes of Uganda — from savannahs to the mist-shrouded tropical highlands. The perfect introduction to Uganda, combining iconic landmarks with the life-changing experience of tracking mountain gorillas in their ancient rainforest home.',
     country: 'UGANDA',
     days: [
@@ -334,7 +334,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'An early departure from Kampala or Entebbe takes you south and west through Uganda\'s heartland. Stop at the Equator in Kayabwe for the famous water-basin experiment and an iconic photo. Continue through the Kigezi highlands — the "Switzerland of Africa" — with stunning terraced hillsides before arriving at Bwindi as evening falls over the ancient forest.',
         accommodation: 'Mid-Range: Buhoma Lodge | Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Dinner',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 2,
@@ -342,7 +342,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'An early briefing at Uganda Wildlife Authority headquarters precedes the trek into the forest with expert trackers and rangers. Spend one extraordinary hour face-to-face with a habituated gorilla family in the wild — an encounter that changes the way you see the natural world. Afternoon at leisure in the forest.',
         accommodation: 'Mid-Range: Buhoma Lodge | Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         day: 3,
@@ -350,7 +350,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Final breakfast in the forest, then the scenic drive back north across the Equator to Entebbe and your onward departure. The memories of the forest stay with you long after you\'ve left.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.jpg',
+        image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.webp',
       },
     ],
     waypoints: [
@@ -369,7 +369,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '3-day-kigali-uganda-gorilla',
     title: '3-Day Gorilla Safari\nKigali to Uganda',
     subtitle: 'A premium cross-border experience — bypass the long Entebbe drive and arrive at Bwindi in just 4 hours.',
-    heroImage: '/images/activities/gorilla-trekking/11-gorilla-ah1i2713.jpg',
+    heroImage: '/images/activities/gorilla-trekking/11-gorilla-ah1i2713.webp',
     overview: 'This exclusive 3-day Uganda gorilla trekking safari starting from Kigali is the ultimate choice for travelers seeking efficiency and comfort. By flying into Rwanda\'s capital, you bypass the 9-hour road transfer from Entebbe, instead enjoying a scenic 4-hour drive through the rolling hills of the "Land of a Thousand Hills" into the misty rainforests of Bwindi or Mgahinga. This route is perfectly designed to maximize your time with the gorillas while experiencing the unique cultures of both Rwanda and Uganda.',
     country: 'RWANDA · UGANDA',
     days: [
@@ -379,7 +379,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Upon arrival at Kigali International Airport, your private driver-guide meets you for the scenic 4–5 hour drive through the "Land of a Thousand Hills" and across the border into Uganda. Arrive at your luxury forest lodge as evening falls, with dinner beneath the ancient canopy.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs / Clouds Mountain Lodge',
         meals: 'Dinner',
-        image: '/images/activities/gorilla-trekking/27-virunga-lodge-goriila-rf-0464.jpg',
+        image: '/images/activities/gorilla-trekking/27-virunga-lodge-goriila-rf-0464.webp',
       },
       {
         day: 2,
@@ -387,7 +387,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'The centrepiece of the journey. After an early briefing at UWA headquarters, expert trackers lead you into the forest. One extraordinary hour with a habituated gorilla family — often at arm\'s length — changes the way you see the natural world. Return to the lodge for celebration lunch and an afternoon at the forest edge.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/4-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/4-mgl-gorilla-bb.webp',
       },
       {
         day: 3,
@@ -395,7 +395,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A final forest breakfast before the scenic drive back to Kigali through the terraced hills and border crossing. Arrive at Kigali International Airport in time for your onward connection.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/activities/gorilla-trekking/5-mgl-golden-monkey-bb.jpg',
+        image: '/images/activities/gorilla-trekking/5-mgl-golden-monkey-bb.webp',
       },
     ],
     waypoints: [
@@ -413,7 +413,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '4-day-luxury-flyin-gorilla',
     title: '4-Day Luxury Uganda\nGorilla Trekking (Fly-In)',
     subtitle: 'Maximum comfort, minimum travel — the premium fly-in gorilla experience from Entebbe.',
-    heroImage: '/images/activities/gorilla-trekking/10-gorilla-ah1i2740.jpg',
+    heroImage: '/images/activities/gorilla-trekking/10-gorilla-ah1i2740.webp',
     overview: 'Designed for the discerning traveler, this 4-day luxury fly-in gorilla safari offers maximum comfort and minimum travel time. Skip the long drives and fly directly from Entebbe to the heart of Bwindi, staying in Uganda\'s most exclusive forest lodges. This is the ultimate way to experience the magic of the mountain gorillas without the fatigue of road travel, ensuring you arrive refreshed and ready for your encounter.',
     country: 'UGANDA',
     days: [
@@ -423,7 +423,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Arrive at Entebbe International Airport for a seamless private transfer to your boutique hotel on the shores of Lake Victoria. Relax in serene surroundings, enjoy a sunset dinner, and prepare for tomorrow\'s flight into the forest.',
         accommodation: 'Luxury: No.5 Boutique Hotel / Protea Hotel Entebbe',
         meals: 'Dinner',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 2,
@@ -431,7 +431,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'After breakfast, transfer to the airstrip for your scheduled scenic flight over Uganda\'s landscapes to Bwindi. Arriving refreshed, you are transferred to your lodge nestled deep within the Impenetrable Forest. Afternoon guided walks and birding introduce you to the ancient ecosystem.',
         accommodation: 'Luxury: Gorilla Forest Camp by A&K / Sanctuary Gorilla Forest Camp',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/9-gorilla3-bfo9.jpg',
+        image: '/images/activities/gorilla-trekking/9-gorilla3-bfo9.webp',
       },
       {
         day: 3,
@@ -439,7 +439,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Begin your extraordinary adventure with a trek into the dense, misty jungle of Bwindi guided by expert trackers. Navigate through thick foliage and tangled vines. Once found, spend an unforgettable hour observing gorillas feed, interact, groom, and care for their young — often just a few meters away. Return to the lodge for celebration and rest.',
         accommodation: 'Luxury: Gorilla Forest Camp by A&K / Sanctuary Gorilla Forest Camp',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
+        image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp',
       },
       {
         day: 4,
@@ -447,7 +447,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'After a final forest breakfast, fly back to Entebbe for your international departure — arriving home with memories that will last a lifetime.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.jpg',
+        image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.webp',
       },
     ],
     waypoints: [
@@ -465,7 +465,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '8-day-western-circuit-primate',
     title: '8-Day Western Circuit\nPrimate & Wildlife',
     subtitle: 'The ultimate primate odyssey — chimps, gorillas, and tree-climbing lions across Uganda\'s western circuit.',
-    heroImage: '/images/activities/gorilla-trekking/19-chimp-kya-bbp-img-20190218-wa0007.jpg',
+    heroImage: '/images/activities/gorilla-trekking/19-chimp-kya-bbp-img-20190218-wa0007.webp',
     overview: 'This 8-day Western Circuit safari is the definitive choice for wildlife enthusiasts seeking a comprehensive primate and savannah experience. From the "Primate Capital of the World" in Kibale Forest to the world-famous tree-climbing lions of Queen Elizabeth National Park and the legendary mountain gorillas of Bwindi, this journey showcases the very best of Uganda\'s biodiversity. Enjoy boat cruises, nature walks, and game drives across some of Africa\'s most stunning landscapes.',
     country: 'UGANDA',
     days: [
@@ -475,7 +475,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Depart from Kampala and head west through lush, green countryside past the town of Fort Portal, nestled in the foothills of the Rwenzori Mountains. Arrive at Kibale National Park, home to 13 primate species and over 1,500 chimpanzees. Check into your lodge as the sounds of the tropical rainforest fill the evening air.',
         accommodation: 'Mid-Range: Turaco Treetops | Luxury: Primate Lodge / Ndali Lodge',
         meals: 'Dinner',
-        image: '/images/activities/gorilla-trekking/6-kibale-lodge-chimpanzee-tadevs-vs-08101.jpg',
+        image: '/images/activities/gorilla-trekking/6-kibale-lodge-chimpanzee-tadevs-vs-08101.webp',
       },
       {
         day: 2,
@@ -483,7 +483,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Head to Kibale headquarters for a tracking briefing, then enter the forest with expert guides to track our closest relatives. Spend an hour watching chimpanzees feed, play, and hoot through the canopy. In the afternoon, guided walk in Bigodi Wetland Sanctuary — famous for birding and smaller primates like the Red Colobus monkey.',
         accommodation: 'Mid-Range: Turaco Treetops | Luxury: Primate Lodge / Ndali Lodge',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/22-chimpanzee-kya-7-s-g13.jpg',
+        image: '/images/activities/gorilla-trekking/22-chimpanzee-kya-7-s-g13.webp',
       },
       {
         day: 3,
@@ -491,7 +491,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A scenic drive down the Albertine Rift Valley floor with breathtaking views of crater lakes and the Rwenzori "Mountains of the Moon." Afternoon game drive on the Kasenyi plains, searching for lions, elephants, and Uganda kob.',
         accommodation: 'Mid-Range: Buffalo Safari Lodge | Luxury: Kyambura Gorge Lodge / Mweya Safari Lodge',
         meals: 'Full Board',
-        image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
+        image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.webp',
       },
       {
         day: 4,
@@ -499,7 +499,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Morning boat cruise on the Kazinga Channel — one of the highest concentrations of hippos and crocodiles in Africa, with prolific birdlife along the banks. Afternoon transfer to the Ishasha sector to search for the world-famous tree-climbing lions lounging in ancient fig trees.',
         accommodation: 'Mid-Range: Ishasha Wilderness Camp | Luxury: Ishasha Wilderness Camp',
         meals: 'Full Board',
-        image: '/images/activities/big-five/roho-ya-selous-hippo.jpg',
+        image: '/images/activities/big-five/roho-ya-selous-hippo.webp',
       },
       {
         day: 5,
@@ -507,7 +507,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Early morning game drive in the Ishasha sector before transferring to Bwindi Impenetrable Forest. Arrive and settle into your luxury forest lodge, with an afternoon guided forest walk introducing you to the ancient ecosystem.',
         accommodation: 'Mid-Range: Buhoma Lodge | Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.webp',
       },
       {
         day: 6,
@@ -515,7 +515,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'The journey\'s centrepiece. Trek with expert guides into Bwindi\'s ancient forest to spend one extraordinary hour with a habituated mountain gorilla family. Watch them feed, play, and care for their young in an encounter that stays with you forever.',
         accommodation: 'Mid-Range: Buhoma Lodge | Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         day: 7,
@@ -523,7 +523,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Transfer north to Lake Mburo National Park — Uganda\'s smallest but most accessible savannah park, home to zebra, eland, impala, and topi. Enjoy a boat safari on the lake and a guided walking safari on the savannah plains.',
         accommodation: 'Mid-Range: Rwakobo Rock | Luxury: Mihingo Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/lake-mburo/15651972443-ec37184968-o.jpg',
+        image: '/images/parks/uganda/lake-mburo/15651972443-ec37184968-o.webp',
       },
       {
         day: 8,
@@ -531,7 +531,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A final game drive in Lake Mburo before the drive back to Kampala or Entebbe for your international departure. A journey of extraordinary primate encounters and wild savannah landscapes, concluded.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
+        image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.webp',
       },
     ],
     waypoints: [
@@ -553,7 +553,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '10-day-grand-uganda-safari',
     title: '10-Day Grand Uganda Safari\nThe Complete Loop',
     subtitle: 'A grand expedition through the Pearl of Africa\'s finest parks — rhinos, falls, chimps, lions, and gorillas.',
-    heroImage: '/images/parks/uganda/murchison-falls/mf-1.jpg',
+    heroImage: '/images/parks/uganda/murchison-falls/mf-1.webp',
     overview: 'The 10-day Grand Uganda Safari is our most comprehensive expedition, covering the "Big Five" and the "Great Primates." From the thunderous Murchison Falls in the north to the mist-shrouded valleys of Bwindi in the south, this loop showcases the incredible diversity of Uganda\'s wildlife, culture, and landscapes. Track rhinos on foot, witness the world\'s most powerful waterfall, encounter chimpanzees, search for tree-climbing lions, and spend a life-changing hour with mountain gorillas.',
     country: 'UGANDA',
     days: [
@@ -563,7 +563,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Head north from Kampala, stopping at Ziwa Rhino Sanctuary for a guided walk to track white rhinos on foot — the only place to see them in Uganda. After lunch, continue to Murchison Falls National Park and visit the "Top of the Falls" to witness the Nile plunge through a narrow 7-metre gap with a thunderous roar.',
         accommodation: 'Mid-Range: Murchison River Lodge | Luxury: Baker\'s Lodge / Paraa Safari Lodge',
         meals: 'Dinner',
-        image: '/images/parks/uganda/murchison-falls/dsc-6584.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6584.webp',
       },
       {
         day: 2,
@@ -571,7 +571,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Early morning game drive in search of lions, giraffes, and elephants on the northern delta. In the afternoon, take a boat cruise to the base of Murchison Falls — viewing hippos, crocodiles, and diverse birdlife along the riverbanks.',
         accommodation: 'Mid-Range: Murchison River Lodge | Luxury: Baker\'s Lodge / Paraa Safari Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-6226.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6226.webp',
       },
       {
         day: 3,
@@ -579,7 +579,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A scenic drive along the Albertine Rift, passing through tea plantations and the vibrant town of Fort Portal. Arrive at Kibale Forest, home to the highest density of primates in Africa.',
         accommodation: 'Mid-Range: Turaco Treetops | Luxury: Chimpundu Lodge / Ndali Lodge',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/7-kibale-lodge-chimpanzee-tadevs-vs-08284.jpg',
+        image: '/images/activities/gorilla-trekking/7-kibale-lodge-chimpanzee-tadevs-vs-08284.webp',
       },
       {
         day: 4,
@@ -587,7 +587,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Morning chimp tracking in the dense forest of Kibale. After lunch, transfer to Queen Elizabeth National Park — afternoon game drive on the vast Kasenyi plains.',
         accommodation: 'Mid-Range: Buffalo Safari Lodge | Luxury: Mweya Safari Lodge',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/20-chimp-ah1i4531.jpg',
+        image: '/images/activities/gorilla-trekking/20-chimp-ah1i4531.webp',
       },
       {
         day: 5,
@@ -595,7 +595,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Morning boat cruise on the Kazinga Channel with prolific wildlife viewing. Afternoon transfer to Ishasha to search for the world-famous tree-climbing lions in ancient fig trees.',
         accommodation: 'Mid-Range: Ishasha Wilderness Camp | Luxury: Ishasha Wilderness Camp',
         meals: 'Full Board',
-        image: '/images/activities/big-five/roho-ya-selous-hippo.jpg',
+        image: '/images/activities/big-five/roho-ya-selous-hippo.webp',
       },
       {
         day: 6,
@@ -603,7 +603,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Early morning game drive before transferring to Bwindi. Arrive and immerse yourself in the ancient forest environment, with a guided afternoon walk.',
         accommodation: 'Mid-Range: Buhoma Lodge | Luxury: Gorilla Forest Camp',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.webp',
       },
       {
         day: 7,
@@ -611,7 +611,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'The world\'s most extraordinary wildlife encounter. Trek with expert trackers into Bwindi\'s ancient forest for one unforgettable hour with a habituated mountain gorilla family.',
         accommodation: 'Mid-Range: Buhoma Lodge | Luxury: Gorilla Forest Camp',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         day: 8,
@@ -619,7 +619,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Transfer north through the Kigezi highlands to Lake Mburo National Park. Afternoon boat safari on the lake and an evening walking safari among zebra and impala.',
         accommodation: 'Luxury: Mihingo Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
+        image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.webp',
       },
       {
         day: 9,
@@ -627,7 +627,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Final game drive in Lake Mburo before the drive to Entebbe. Enjoy a farewell dinner on the shores of Lake Victoria.',
         accommodation: 'Luxury: No.5 Boutique Hotel',
         meals: 'Full Board',
-        image: '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.jpg',
+        image: '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.webp',
       },
       {
         day: 10,
@@ -635,7 +635,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Final breakfast and transfer to Entebbe International Airport for your onward flight — carrying memories of one of Africa\'s greatest wildlife journeys.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
     ],
     waypoints: [
@@ -659,7 +659,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '9-day-rhythm-roots',
     title: 'Rhythm & Roots\nA 9-Day Creative Safari',
     subtitle: 'Nine days in the sound, story, and soul of Uganda — for musicians, writers, and performers.',
-    heroImage: '/images/parks/uganda/murchison-falls/dsc-7062.jpg',
+    heroImage: '/images/parks/uganda/murchison-falls/dsc-7062.webp',
     overview: 'Designed for musicians, writers, spoken-word artists, and performers who refuse to make work from a place of comfort, Rhythm & Roots is a nine-day journey through Uganda\'s living cultural landscape. The route moves deliberately from Kampala\'s electric urban music scene through the source of the Nile at Jinja, the roaring drama of Murchison Falls, the Toro Kingdom\'s royal court in Fort Portal, and deep into Bwindi\'s ancient forest for the gorilla trek. Every location has been chosen for its specific contribution to the sonic and narrative imagination.',
     country: 'UGANDA',
     days: [
@@ -669,7 +669,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Land at Entebbe and transfer to Kampala as the city settles into its evening rhythms. Welcome dinner and orientation briefing with your creative guide. Tonight is for listening.',
         accommodation: 'Luxury: Serena Kampala Hotel | Mid-Range: Kansanga Guest House',
         meals: 'Dinner',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 2,
@@ -677,7 +677,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Owino Market acoustic walk, a full Ndere Cultural Centre performance, and an evening at a Kampala live music venue — Afrobeat, Luganda pop, and hip-hop fusion in one extraordinary day of sonic immersion.',
         accommodation: 'Luxury: Serena Kampala Hotel',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/26-ah1i3781.jpg',
+        image: '/images/activities/gorilla-trekking/26-ah1i3781.webp',
       },
       {
         day: 3,
@@ -685,7 +685,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive to Jinja, where Lake Victoria becomes the River Nile. Stand at the source and feel what that means for a storyteller. Hosted meetup with Jinja musicians whose tradition is born from fishing communities and former port life.',
         accommodation: 'Luxury: Jinja Nile Resort | Mid-Range: Nile Porch',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-6200.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6200.webp',
       },
       {
         day: 4,
@@ -693,7 +693,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive north to Murchison Falls National Park. The landscape shifts dramatically as you enter the savannah. Arrive at your lodge on the Nile in time for a sunset over the water.',
         accommodation: 'Luxury: Baker\'s Lodge / Paraa Safari Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/mf-1.jpg',
+        image: '/images/parks/uganda/murchison-falls/mf-1.webp',
       },
       {
         day: 5,
@@ -701,7 +701,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A Nile boat cruise at dawn — water percussion, birdsong, and the low frequency of hippos — followed by a visit to the top of the falls. Unscheduled afternoon writing session on the riverbank beside the most powerful waterfall on earth.',
         accommodation: 'Luxury: Baker\'s Lodge / Paraa Safari Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-6490.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6490.webp',
       },
       {
         day: 6,
@@ -709,7 +709,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive to Fort Portal and a visit to the Toro Royal Palace. A briefing on Toro oral tradition and royal praise singers — the griot tradition, court musician and historian, is very much alive here.',
         accommodation: 'Luxury: Ndali Lodge / Mountains of the Moon Hotel',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-5888.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-5888.webp',
       },
       {
         day: 7,
@@ -717,7 +717,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive south from Fort Portal, through the crater lake landscape of western Uganda and into the mist-shrouded Bwindi highlands. Arrive at your luxury forest lodge for an evening of stillness and forest sounds.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/9-gorilla3-bfo9.jpg',
+        image: '/images/activities/gorilla-trekking/9-gorilla3-bfo9.webp',
       },
       {
         day: 8,
@@ -725,7 +725,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'The gorilla trek in the morning — one hour with a habituated gorilla family in ancient Bwindi forest. In the afternoon, a Batwa cultural storytelling experience: sung stories, percussion, and call-and-response from the forest\'s original inhabitants. Primary source material of rare integrity.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         day: 9,
@@ -733,7 +733,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Final breakfast in the forest, then the drive back north to Entebbe and your departure flight — carrying not just memories, but new work.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/activities/gorilla-trekking/12-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/12-mgl-gorilla-bb.webp',
       },
     ],
     waypoints: [
@@ -754,7 +754,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '11-day-primate-fishing',
     title: 'Uganda Primate\n& Fishing Safari — 11 Days',
     subtitle: 'World-class fishing and extraordinary primate encounters across Uganda\'s most pristine wilderness.',
-    heroImage: '/images/parks/uganda/murchison-falls/dsc-6828.jpg',
+    heroImage: '/images/parks/uganda/murchison-falls/dsc-6828.webp',
     overview: 'Experience the ultimate African adventure combining world-class fishing and primate encounters across Uganda\'s most pristine wilderness areas. This 11-day journey takes you from the legendary fishing grounds of Lake Victoria to the mountain gorillas of Bwindi, with stops at Murchison Falls, Lake Albert, Queen Elizabeth National Park, and the iconic Ishasha sector. Fish for giant Nile perch, tiger fish, and rare species while tracking chimpanzees, mountain gorillas, and tree-climbing lions.',
     country: 'UGANDA',
     days: [
@@ -764,7 +764,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Upon arrival, transfer to your boutique hotel. After settling in, enjoy an evening fishing excursion on Lake Victoria — casting for giant Nile perch and tilapia as the sun sets over Africa\'s largest lake.',
         accommodation: 'Luxury: No.5 Boutique Hotel / Protea Hotel Entebbe',
         meals: 'Dinner',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 2,
@@ -772,7 +772,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Spend a full day on Lake Victoria with experienced fishing guides. Target giant Nile perch (up to 100+ lbs) and tilapia in some of Africa\'s most productive fishing waters. Return for a gourmet dinner featuring your catch.',
         accommodation: 'Luxury: No.5 Boutique Hotel / Protea Hotel Entebbe',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-6951.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6951.webp',
       },
       {
         day: 3,
@@ -780,7 +780,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Depart Entebbe and drive north through Uganda\'s diverse landscapes toward Murchison Falls National Park. Arrive at your lodge on the Nile as the savannah turns golden in the evening light.',
         accommodation: 'Mid-Range: Murchison River Lodge | Luxury: Paraa Safari Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/mf-1.jpg',
+        image: '/images/parks/uganda/murchison-falls/mf-1.webp',
       },
       {
         day: 4,
@@ -788,7 +788,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Fish the Victoria Nile below Murchison Falls, targeting Nile perch and the ferocious tiger fish. A boat cruise to the base of the falls offers one of Africa\'s most dramatic wildlife spectacles.',
         accommodation: 'Mid-Range: Murchison River Lodge | Luxury: Paraa Safari Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6280.webp',
       },
       {
         day: 5,
@@ -796,7 +796,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Morning game drive in Murchison Falls National Park searching for giraffes, elephants, and lions. Transfer to Lake Albert for evening fishing — targeting Semutundu and tiger fish in these remote waters.',
         accommodation: 'Mid-Range: Murchison River Lodge | Luxury: Paraa Safari Lodge',
         meals: 'Full Board',
-        image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
+        image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.webp',
       },
       {
         day: 6,
@@ -804,7 +804,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive south to Queen Elizabeth National Park through the Albertine Rift. Afternoon game drive on the Kasenyi plains searching for lions, elephants, and Uganda kob.',
         accommodation: 'Luxury: Mweya Safari Lodge / Kyambura Gorge Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
+        image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.webp',
       },
       {
         day: 7,
@@ -812,7 +812,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Morning boat cruise on the Kazinga Channel for world-class wildlife viewing. Visit an authentic fishing village at Katunguru and experience traditional Uganda fishing culture.',
         accommodation: 'Luxury: Mweya Safari Lodge',
         meals: 'Full Board',
-        image: '/images/activities/big-five/roho-ya-selous-hippo.jpg',
+        image: '/images/activities/big-five/roho-ya-selous-hippo.webp',
       },
       {
         day: 8,
@@ -820,7 +820,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Track chimpanzees through the forested gorge of Kyambura — one of Queen Elizabeth National Park\'s most dramatic landscapes. This unique gorge is home to a habituated chimpanzee community.',
         accommodation: 'Luxury: Kyambura Gorge Lodge',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/21-chimpanzee-kya-3-s-g13.jpg',
+        image: '/images/activities/gorilla-trekking/21-chimpanzee-kya-3-s-g13.webp',
       },
       {
         day: 9,
@@ -828,7 +828,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Full day game drive in the Ishasha sector searching for the famous tree-climbing lions. Evening transfer to Bwindi Impenetrable Forest.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.webp',
       },
       {
         day: 10,
@@ -836,7 +836,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'The unforgettable hour with mountain gorillas in ancient Bwindi forest. In the afternoon, an immersive Batwa cultural experience with the forest\'s original inhabitants.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         day: 11,
@@ -844,7 +844,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Final forest breakfast before the drive back to Entebbe for your international departure — an adventure of extraordinary wildlife and world-class fishing, concluded.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
+        image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.webp',
       },
     ],
     waypoints: [
@@ -866,7 +866,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: '7-day-shoebill-primates',
     title: '7-Day Shoebill &\nPrimates Fly-In Safari',
     subtitle: 'From prehistoric Shoebills to great primates — a specialist fly-in expedition for birders and wildlife lovers.',
-    heroImage: '/images/activities/gorilla-trekking/33-mount-gahinga-lodge-gorilla.jpg',
+    heroImage: '/images/activities/gorilla-trekking/33-mount-gahinga-lodge-gorilla.webp',
     overview: 'This specialized 7-day fly-in safari is a dream for birders and primate lovers alike. Starting with the prehistoric Shoebill stork in the Mabamba wetlands, you will fly into the southwestern highlands to encounter both Mountain Gorillas and the rare Golden Monkeys. This itinerary combines birding, canoeing, and walking safaris with the luxury of domestic flights, ensuring a seamless and deeply immersive journey through Uganda\'s most diverse ecosystems.',
     country: 'UGANDA',
     days: [
@@ -876,7 +876,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Arrive in Entebbe and head to the Mabamba Swamp, a RAMSAR site and one of the best places in the world to see the prehistoric Shoebill Stork. Navigate the narrow channels by wooden boat, spotting diverse birdlife before encountering the iconic Shoebill. Return to Entebbe for a relaxed evening by Lake Victoria.',
         accommodation: 'Luxury: No.5 Boutique Hotel',
         meals: 'Dinner',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 2,
@@ -884,7 +884,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Take a scenic morning flight from Entebbe to Kisoro airstrip, with aerial views of the Virunga volcanoes. After checking into your lodge, enjoy a peaceful afternoon canoeing on Lake Mutanda or Lake Bunyonyi — tranquil waters framed by volcano silhouettes.',
         accommodation: 'Mid-Range: Ichumbi Gorilla Lodge | Luxury: Clouds Mountain Lodge / Mount Gahinga Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 3,
@@ -892,7 +892,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Enter Bwindi or Mgahinga forest for an intimate encounter with the mountain gorillas. Spend one hour observing their social behaviour and powerful presence in their natural habitat. A profound experience that connects you deeply with the natural world.',
         accommodation: 'Mid-Range: Ichumbi Gorilla Lodge | Luxury: Clouds Mountain Lodge / Mount Gahinga Lodge',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         day: 4,
@@ -900,7 +900,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A day to relax or choose optional activities: a community walk to meet the local Batwa people, explore vibrant local markets, or take a guided birding walk along the forest edges. Open time for creative and restorative work.',
         accommodation: 'Luxury: Clouds Mountain Lodge / Mount Gahinga Lodge',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/31-mount-gahinga-lodge-gorilla.jpg',
+        image: '/images/activities/gorilla-trekking/31-mount-gahinga-lodge-gorilla.webp',
       },
       {
         day: 5,
@@ -908,7 +908,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Enter the bamboo forest of Mgahinga to track the rare and vivid Golden Monkey — one of Africa\'s most striking primates. Only a few hundred remain in the wild, making this one of the continent\'s rarest wildlife encounters.',
         accommodation: 'Luxury: Mount Gahinga Lodge',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.jpg',
+        image: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.webp',
       },
       {
         day: 6,
@@ -916,7 +916,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A guided walking safari between Bwindi and Mgahinga forests in the morning. Afternoon flight back to Entebbe for a farewell dinner by Lake Victoria.',
         accommodation: 'Luxury: No.5 Boutique Hotel',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/37-mount-gahinga-lodge-golden-monkey.jpg',
+        image: '/images/activities/gorilla-trekking/37-mount-gahinga-lodge-golden-monkey.webp',
       },
       {
         day: 7,
@@ -924,7 +924,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Final breakfast and transfer to Entebbe International Airport for your onward departure — having experienced some of Uganda\'s rarest and most extraordinary wildlife.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/activities/gorilla-trekking/36-mount-gahinga-lodge-golden-monkey.jpg',
+        image: '/images/activities/gorilla-trekking/36-mount-gahinga-lodge-golden-monkey.webp',
       },
     ],
     waypoints: [
@@ -945,7 +945,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: 'deep-dive-creative',
     title: 'The Deep Dive\n12-Day Creative Residency',
     subtitle: 'Come with a project. Leave with work. A field residency for filmmakers, writers, and visual artists across Uganda\'s wildest terrain.',
-    heroImage: '/images/parks/uganda/murchison-falls/dsc-7442.jpg',
+    heroImage: '/images/parks/uganda/murchison-falls/dsc-7442.webp',
     overview: 'Designed for filmmakers, documentary makers, serious visual artists, writers, and creative directors who refuse to make work at a surface level, The Deep Dive is Uganda\'s most comprehensive creative programme. It is structured as a field residency: you arrive with a project intention and leave with substantially developed work. The route moves deliberately from Kampala\'s contemporary art scene through Ziwa\'s rare rhino encounters, Murchison Falls\' primal drama, Queen Elizabeth\'s vast lake channels, the tree-climbing lions of Ishasha, Bwindi\'s ancient gorilla forest, and a final open residency day at Lake Bunyonyi.',
     country: 'UGANDA',
     days: [
@@ -955,7 +955,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Land at Entebbe and transfer to Kampala as the city settles into its evening rhythms. Welcome dinner and orientation briefing with your creative guide. Tonight is for listening and observing.',
         accommodation: 'Luxury: Serena Kampala Hotel',
         meals: 'Dinner',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 2,
@@ -963,7 +963,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Independent studio visits, a street documentary shoot through Kampala old town, and the first artist-in-residence peer critique — setting the tone for the residency from Day 2.',
         accommodation: 'Luxury: Serena Kampala Hotel',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/26-ah1i3781.jpg',
+        image: '/images/activities/gorilla-trekking/26-ah1i3781.webp',
       },
       {
         day: 3,
@@ -971,7 +971,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive north to Ziwa Rhino Sanctuary — Uganda\'s only wild white rhinos, tracked on foot in near silence. A conservation story of extraordinary persistence and a documentary subject of rare integrity.',
         accommodation: 'Luxury: Amuka Safari Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-6271.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6271.webp',
       },
       {
         day: 4,
@@ -979,7 +979,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'The Nile boat cruise at dawn, the top of the falls for wide-format shoots, and an afternoon creative session on the riverbank. The most powerful waterfall on earth — water percussion, birdsong, and low frequencies of hippos.',
         accommodation: 'Luxury: Baker\'s Lodge / Paraa Safari Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/mf-1.jpg',
+        image: '/images/parks/uganda/murchison-falls/mf-1.webp',
       },
       {
         day: 5,
@@ -987,7 +987,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Morning game drive on the northern delta searching for lions, giraffes, and elephants. An afternoon Nile boat cruise to the base of the falls for wildlife and production work along the river.',
         accommodation: 'Luxury: Baker\'s Lodge / Paraa Safari Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-6490.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6490.webp',
       },
       {
         day: 6,
@@ -995,7 +995,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive south through the Albertine Rift to Queen Elizabeth National Park. Afternoon game drive on the Kasenyi plains for lions, elephants, and Uganda kob — the savannah at golden hour.',
         accommodation: 'Luxury: Mweya Safari Lodge / Kyambura Gorge Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-6226.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6226.webp',
       },
       {
         day: 7,
@@ -1003,7 +1003,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Dedicated dawn photography session on the Kazinga Channel — hippos, crocodiles, and 600+ bird species in Uganda\'s most dramatic morning light. Artist critique session in the afternoon.',
         accommodation: 'Luxury: Mweya Safari Lodge',
         meals: 'Full Board',
-        image: '/images/activities/big-five/roho-ya-selous-hippo.jpg',
+        image: '/images/activities/big-five/roho-ya-selous-hippo.webp',
       },
       {
         day: 8,
@@ -1011,7 +1011,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Full day in the remote Ishasha sector shooting the world-famous tree-climbing lions. Late afternoon peer critique session and creative debrief.',
         accommodation: 'Luxury: Ishasha Wilderness Camp',
         meals: 'Full Board',
-        image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
+        image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.webp',
       },
       {
         day: 9,
@@ -1019,7 +1019,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Transfer to Bwindi Impenetrable Forest. Arrive in the ancient forest for an afternoon guided walk — absorbing the visual and sonic landscape before tomorrow\'s gorilla trek.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/9-gorilla3-bfo9.jpg',
+        image: '/images/activities/gorilla-trekking/9-gorilla3-bfo9.webp',
       },
       {
         day: 10,
@@ -1027,7 +1027,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'One hour with a mountain gorilla family in ancient Bwindi forest, followed by an afternoon forest sound bath — lie in the undergrowth with eyes closed and simply record. Primary source material of extraordinary rarity.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         day: 11,
@@ -1035,7 +1035,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Transfer to Lake Bunyonyi — one of Africa\'s most beautiful highland lakes — for an unstructured day of production, reflection, and creative work. Portfolio debrief session in the evening.',
         accommodation: 'Luxury: Arcadia Cottages Lake Bunyonyi',
         meals: 'Full Board',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 12,
@@ -1043,7 +1043,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Formal portfolio debrief with your creative guide — reviewing the 12 days of production, setting next steps for the work. Drive back to Entebbe for your international departure.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
+        image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.webp',
       },
     ],
     waypoints: [
@@ -1066,7 +1066,7 @@ export const journeys: Record<string, JourneyData> = {
     slug: 'wild-muse-creative',
     title: 'The Wild Muse\n7-Day Creative Safari',
     subtitle: 'Seven days of sensory immersion designed to fill the creative well — for visual artists, photographers, and illustrators.',
-    heroImage: '/images/parks/uganda/murchison-falls/dsc-6828.jpg',
+    heroImage: '/images/parks/uganda/murchison-falls/dsc-6828.webp',
     overview: 'Designed for visual artists, photographers, and illustrators who refuse to compromise on depth, The Wild Muse is a 7-day Uganda safari built as a structured creative programme. From the moment you arrive in Kampala, every day is a purposeful sequence of sensory immersion, guided creative sessions, and purposeful stillness set against some of East Africa\'s most visually extraordinary landscapes. Kampala\'s living street-art scene gives way to Queen Elizabeth National Park, the ancient montane forest of Bwindi, and a final open studio day at Lake Bunyonyi.',
     country: 'UGANDA',
     days: [
@@ -1076,7 +1076,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A guided walk through Kampala\'s street-art corridors, a life-drawing session at Nommo Gallery, and a full performance at Ndere Cultural Centre — Uganda\'s finest traditional music and dance space.',
         accommodation: 'Luxury: Serena Kampala Hotel',
         meals: 'Dinner',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 2,
@@ -1084,7 +1084,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive west to Queen Elizabeth National Park through the Albertine Rift. Arrive in time for a golden-hour game drive on the Kasenyi plains — the savannah at its most photogenic.',
         accommodation: 'Luxury: Mweya Safari Lodge / Kyambura Gorge Lodge',
         meals: 'Full Board',
-        image: '/images/parks/uganda/murchison-falls/dsc-5888.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-5888.webp',
       },
       {
         day: 3,
@@ -1092,7 +1092,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Dedicated golden-hour shoots at dawn on the Kazinga Channel — hippos surfacing, egrets landing, the light raking across the water. Guided colour studies in the afternoon — structured sessions for painters, mixed-media artists, and illustrators.',
         accommodation: 'Luxury: Mweya Safari Lodge',
         meals: 'Full Board',
-        image: '/images/activities/big-five/roho-ya-selous-hippo.jpg',
+        image: '/images/activities/big-five/roho-ya-selous-hippo.webp',
       },
       {
         day: 4,
@@ -1100,7 +1100,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Drive through the Kigezi highlands to Bwindi — the landscape shifts from savannah to ancient montane forest. Afternoon creative session at the lodge edge, absorbing the forest atmosphere.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/3-mgl-gorilla-bb.webp',
       },
       {
         day: 5,
@@ -1108,7 +1108,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'One hour with a mountain gorilla family in Bwindi\'s ancient forest — an encounter that will permanently rearrange your visual imagination. Return for an extended sketching and writing session at the forest edge.',
         accommodation: 'Luxury: Gorilla Forest Camp / Mahogany Springs',
         meals: 'Full Board',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         day: 6,
@@ -1116,7 +1116,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'Transfer to Lake Bunyonyi for a full open studio day. Paint, write, photograph, or simply sit in silence beside one of Africa\'s most beautiful highland lakes. No schedule — only the work.',
         accommodation: 'Luxury: Arcadia Cottages Lake Bunyonyi',
         meals: 'Full Board',
-        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+        image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
       },
       {
         day: 7,
@@ -1124,7 +1124,7 @@ export const journeys: Record<string, JourneyData> = {
         body: 'A final portfolio review with your creative guide — what you made, what it means, what comes next. Drive back to Entebbe for your international departure.',
         accommodation: '—',
         meals: 'Breakfast',
-        image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
+        image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.webp',
       },
     ],
     waypoints: [

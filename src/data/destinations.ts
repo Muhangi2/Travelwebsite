@@ -51,7 +51,7 @@ const bwindi: Park = {
   name: 'Bwindi Impenetrable National Park',
   blurb:
     "Home to roughly half the world's remaining mountain gorillas, this UNESCO World Heritage Site protects 331 km² of ancient Albertine Rift rainforest — one of the most extraordinary wildlife destinations on the planet, where a face-to-face encounter with a wild gorilla family changes you forever.",
-  image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
+  image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp',
   location: 'Southwestern Uganda',
   size: '331 km²',
   altitude: '1,160 — 2,607 m',
@@ -63,19 +63,19 @@ const bwindi: Park = {
       title: 'Mountain Gorilla Trekking',
       body:
         "Trek through ancient rainforest with expert Uganda Wildlife Authority rangers and trackers to spend one precious hour observing a wild mountain gorilla family — watching silverbacks demonstrate their power, mothers nurse infants, and juveniles play. With 19 habituated families across four sectors, Bwindi offers more gorilla families than any other destination. Treks range from 1 to 8 hours depending on gorilla location that day. Permits cost USD 800 per person.",
-      image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+      image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
     },
     {
       title: 'Gorilla Habituation Experience',
       body:
         "Spend a full day — dawn to dusk — accompanying researchers with a gorilla family being habituated to human presence. Available exclusively in the Rushaga sector, this exceptional programme provides 8–10 hours with the same group, witnessing a complete day in their social world. The deepest possible gorilla immersion anywhere on earth. Permits cost USD 1,500 per person.",
-      image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.jpg',
+      image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.webp',
     },
     {
       title: 'Batwa Cultural Trail & Albertine Rift Birding',
       body:
         "Walk with the Batwa Forest People — the indigenous forest-dwellers whose ancestors lived in Bwindi for thousands of years — learning traditional survival skills, medicinal plant knowledge, fire-making techniques, and the profound story of a people whose ancestral forest was set aside for conservation. Combine with specialist forest birding for 23 Albertine Rift endemics found nowhere else on earth.",
-      image: '/images/activities/birding/lensoffthegreen-1748944212110.jpg',
+      image: '/images/activities/birding/lensoffthegreen-1748944212110.webp',
     },
   ],
   activities: [
@@ -83,19 +83,19 @@ const bwindi: Park = {
       title: 'Trek in Buhoma — The Original Sector',
       body:
         "Bwindi's first and most established gorilla trekking sector, with the best infrastructure, most comfortable approach track, and multiple gorilla families including the famous Mubare group — the first habituated gorilla family in Uganda. The natural choice for first-time trekkers.",
-      image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.jpg',
+      image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.webp',
     },
     {
       title: 'Nkuringo — The Most Dramatic Sector',
       body:
         "The most scenically spectacular sector, with ridge-top accommodation and stunning views into the Democratic Republic of Congo. The gorillas here range across Bwindi's most dramatic terrain — a visually unforgettable combination of wilderness and wildlife.",
-      image: '/images/activities/gorilla-trekking/10-gorilla-ah1i2740.jpg',
+      image: '/images/activities/gorilla-trekking/10-gorilla-ah1i2740.webp',
     },
     {
       title: 'Stay at Clouds Mountain Gorilla Lodge',
       body:
         "Uganda's highest-altitude gorilla lodge on the Nkuringo ridge, with heated plunge pools, private butler service, and the most dramatic panoramic viewpoint in the entire Bwindi region — including views into the Democratic Republic of Congo.",
-      image: '/images/lodges/uganda/bwindi/clouds-moutain-gorilla-lodge-by-wildplaces/1761689756443ugandawildplaces-samchurchill-6773.jpg',
+      image: '/images/lodges/uganda/bwindi/clouds-moutain-gorilla-lodge-by-wildplaces/1761689756443ugandawildplaces-samchurchill-6773.webp',
     },
   ],
   faqs: [
@@ -119,7 +119,7 @@ const queenElizabeth: Park = {
   name: 'Queen Elizabeth National Park',
   blurb:
     "Uganda's most visited and ecologically complex park — tree-climbing lions in Ishasha, the wildlife-dense Kazinga Channel, chimpanzee trekking in Kyambura Gorge, and over 600 bird species across 1,978 km² of Albertine Rift wilderness.",
-  image: '/images/activities/game-drive/asilia-roho-2017-1-1.jpg',
+  image: '/images/activities/game-drive/asilia-roho-2017-1-1.webp',
   location: 'Western Uganda',
   size: '1,978 km²',
   altitude: '910 — 1,845 m',
@@ -131,19 +131,19 @@ const queenElizabeth: Park = {
       title: 'Kazinga Channel Boat Cruise',
       body:
         "The unmissable centrepiece of any Queen Elizabeth safari. The 2-hour launch trip along the Kazinga Channel passes what may be Africa's highest concentration of hippos in any single waterway, massive Nile crocodiles basking on sandbars, African elephants bathing at the water's edge, and a staggering diversity of waterbirds including Goliath herons, African fish eagles, pink-backed pelicans, and African skimmers. The experience of drifting past hundreds of hippos at close range is one of the most memorable in East African safari. Cruises at USD 30 per person.",
-      image: '/images/activities/game-drive/boating-safari-hippo-spot2.jpg',
+      image: '/images/activities/game-drive/boating-safari-hippo-spot2.webp',
     },
     {
       title: 'Tree-Climbing Lions of Ishasha',
       body:
         "The southern Ishasha sector is one of the world's most unique wildlife destinations. Queen Elizabeth's lions have developed the remarkable habit of climbing and resting in the branches of large fig trees — probably to escape insects and gain better views over their territory. Morning game drives in the Ntungwe River area from 6 to 9am offer the best opportunities to witness this extraordinary behaviour, available nowhere else in Uganda.",
-      image: '/images/lodges/uganda/queen-elizabeth-national-park/ishasha-wilderness-camp/DSC_6859.jpg',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/ishasha-wilderness-camp/DSC_6859.webp',
     },
     {
       title: 'Kyambura Gorge Chimpanzee Trekking',
       body:
         "Descend into the remarkable Kyambura Gorge — a deep, forested ravine cutting dramatically through open savannah — to find the habituated chimpanzee community that lives here. The gorge is one of the most visually striking landscapes in Uganda. Permits cost USD 150 per person. The combination of chimpanzees, dramatic gorge scenery, and surrounding savannah makes this a uniquely Queen Elizabeth primate experience.",
-      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/25-kyambura-gorge-rf-dsc-3399-copie.jpg',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/25-kyambura-gorge-rf-dsc-3399-copie.webp',
     },
   ],
   activities: [
@@ -151,19 +151,19 @@ const queenElizabeth: Park = {
       title: 'Stay at Kyambura Gorge Lodge',
       body:
         "Perched on the gorge rim with the chimpanzee habitat below, managed by Volcanoes Safaris with exceptional guiding and one of Uganda's most progressive community-conservation models. Direct access to chimp trekking from the lodge doorstep.",
-      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/23-kyambura-gorge-lodge-qe-30042024-volcanoessafaris-8624-edit-copy.jpg',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/23-kyambura-gorge-lodge-qe-30042024-volcanoessafaris-8624-edit-copy.webp',
     },
     {
       title: 'Crater Lakes Scenic Drive',
       body:
         "Wind along the dramatic escarpment road above the Albertine Rift past a string of ancient volcanic crater lakes. Lake Munyanyange regularly hosts flocks of flamingos, while Lake Katwe is the site of traditional salt extraction. The views from the escarpment edge across Lake Edward and into the Democratic Republic of Congo are extraordinary.",
-      image: '/images/parks/uganda/murchison-falls/dsc-6584.jpg',
+      image: '/images/parks/uganda/murchison-falls/dsc-6584.webp',
     },
     {
       title: 'Night Game Drive',
       body:
         "After dark in the northern sector, leopards emerge in the riverine thickets, African civets and large-spotted genets appear in the headlights, and the unmistakable silhouette of the aardvark crosses the track. Night drives at USD 20 per person reveal an entirely different dimension of the park.",
-      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.jpg',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.webp',
     },
   ],
   faqs: [
@@ -188,7 +188,7 @@ const murchison: Park = {
   name: 'Murchison Falls National Park',
   blurb:
     "Uganda's largest national park — where the entire volume of the Victoria Nile is forced through a 7-metre gorge in the world's most powerful waterfall, then fans into a wildlife-rich delta on Lake Albert. Lions, Rothschild's giraffes, elephants, and shoebill storks across 3,840 km².",
-  image: '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
+  image: '/images/parks/uganda/murchison-falls/dsc-6280.webp',
   location: 'Northwestern Uganda',
   size: '3,840 km²',
   altitude: '619 — 1,292 m',
@@ -200,19 +200,19 @@ const murchison: Park = {
       title: 'Murchison Falls Nile Boat Cruise',
       body:
         "The iconic 3-hour launch trip from Paraa upstream to the base of the falls is one of East Africa's great safari experiences. Drift past enormous hippo pods (hundreds at a time), Nile crocodiles reaching 5 metres in length, forest elephants drinking on the banks, and over 100 bird species. The approach to the base of Murchison Falls, where the Nile thunders through its 7-metre gorge in a cloud of spray, is one of the most dramatic moments in African safari.",
-      image: '/images/parks/uganda/murchison-falls/dsc-6271.jpg',
+      image: '/images/parks/uganda/murchison-falls/dsc-6271.webp',
     },
     {
       title: "Rothschild's Giraffe & North Bank Game Drives",
       body:
         "The savannah north of the Victoria Nile hosts outstanding game viewing. Lions in family prides, Rothschild's giraffes (Uganda's largest and most endangered giraffe subspecies), African elephants, Cape buffalos, Uganda kobs, oribi, and Jackson's hartebeests are regularly seen on morning and afternoon drives. The Buligi Circuit is particularly productive for large predators and giraffe.",
-      image: '/images/parks/uganda/murchison-falls/dsc-6828.jpg',
+      image: '/images/parks/uganda/murchison-falls/dsc-6828.webp',
     },
     {
       title: 'Nile Delta Shoebill Boat Trip',
       body:
         "A specialist boat safari downstream from Paraa toward the point where the Victoria Nile meets Lake Albert. Exceptionally rich in waterbirds including the prehistoric shoebill stork — one of Africa's most sought-after bird sightings — plus African skimmers, various kingfisher species, herons, and waders in the papyrus delta.",
-      image: '/images/parks/uganda/murchison-falls/dsc-6951.jpg',
+      image: '/images/parks/uganda/murchison-falls/dsc-6951.webp',
     },
   ],
   activities: [
@@ -220,19 +220,19 @@ const murchison: Park = {
       title: 'Hike to the Top of the Falls',
       body:
         "After the boat cruise ends at the base of the falls, a short but strenuous 30-minute hike climbs to the viewing platform directly above Murchison Falls — providing the most dramatic possible perspective on this extraordinary natural feature, looking directly down into the 7-metre gorge.",
-      image: '/images/parks/uganda/murchison-falls/dsc-6584.jpg',
+      image: '/images/parks/uganda/murchison-falls/dsc-6584.webp',
     },
     {
       title: 'Nile Perch Sport Fishing',
       body:
         "The Victoria Nile is one of the world's greatest Nile Perch fisheries. Fish exceeding 80–100kg have been landed at Murchison. Fishing from boats at Pakuba is the primary method, with morning sessions from 6am when the fish are most active. All guided and fully serviced from the riverside.",
-      image: '/images/parks/uganda/murchison-falls/dsc-7062.jpg',
+      image: '/images/parks/uganda/murchison-falls/dsc-7062.webp',
     },
     {
       title: 'Chimp Trekking at Budongo Forest',
       body:
         "The Budongo Forest Reserve, adjacent to Murchison's southern boundary, contains the largest known population of East African chimpanzees in Uganda. Guided treks depart from Kaniyo-Pabidi and Busingiro forest stations at USD 90 per person — a remarkable primate experience combined with savannah game drives.",
-      image: '/images/parks/uganda/murchison-falls/dsc-6884.jpg',
+      image: '/images/parks/uganda/murchison-falls/dsc-6884.webp',
     },
   ],
   faqs: [
@@ -257,7 +257,7 @@ const kibale: Park = {
   name: 'Kibale National Park',
   blurb:
     "The primate capital of the world — 13 species in a single park, including over 1,500 chimpanzees in some of the most accessible and best-studied communities in Africa. Kibale is Uganda's premier chimpanzee trekking destination.",
-  image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+  image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
   location: 'Western Uganda',
   size: '795 km²',
   altitude: '1,100 — 1,590 m',
@@ -269,19 +269,19 @@ const kibale: Park = {
       title: 'Chimpanzee Trekking',
       body:
         "Led by expert Uganda Wildlife Authority rangers and trackers, morning and afternoon trekking sessions follow habituated chimpanzee communities through ancient rainforest. You spend one hour with the chimpanzees — observing complex social interactions, grooming, foraging, infant play, and the extraordinary vocal performances that fill the forest. With over 1,500 chimpanzees in the park, success rates run at over 90%. Permits cost USD 250 per person.",
-      image: '/images/destinations/tanzania/chimp-habituation-project1.jpg',
+      image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
     },
     {
       title: 'Chimpanzee Habituation Experience',
       body:
         "For the deepest possible primate engagement, the full-day Habituation Experience accompanies researchers from before dawn (approximately 5:30am) through to dusk, tracking a chimpanzee community as it wakes, feeds, travels, rests, and eventually builds its sleeping nests. This exceptional programme provides 8–10 hours with the same group of chimpanzees, witnessing a complete day in their social world. Permits cost USD 300 per person.",
-      image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+      image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
     },
     {
       title: 'Bigodi Wetland Sanctuary',
       body:
         "A community-managed 4km guided walk through papyrus wetland and forest edge adjacent to Kibale. Over 200 bird species recorded here including the Great Blue Turaco, Papyrus Gonolek, and numerous kingfishers and sunbirds. Red colobus and L'Hoest's monkeys are regularly seen. All entrance fees (USD 10 per person) go directly to surrounding communities.",
-      image: '/images/activities/birding/lensoffthegreen-1748944212110.jpg',
+      image: '/images/activities/birding/lensoffthegreen-1748944212110.webp',
     },
   ],
   activities: [
@@ -289,19 +289,19 @@ const kibale: Park = {
       title: 'Kanyanchu Primate Walk',
       body:
         "A guided 3–4 hour forest walk through Kibale's diverse habitats, encountering multiple primate species along the route — red colobus, grey-cheeked mangabeys, L'Hoest's monkeys, red-tailed monkeys, and olive baboons — before locating the chimpanzee community. The most comprehensive primate experience in the park at USD 30 per person.",
-      image: '/images/lodges/uganda/kibale-national-park/primate-lodge/1.jpg',
+      image: '/images/lodges/uganda/kibale-national-park/primate-lodge/1.webp',
     },
     {
       title: 'Stay at Kibale Lodge by Volcanoes Safaris',
       body:
         "Hand-built bandas perched on a hilltop ridge above Kibale's forest canopy with panoramic Rwenzori mountain views and direct access to the chimp trekking departure point. Personal butler service, spa, and exceptional guiding.",
-      image: '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.jpg',
+      image: '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.webp',
     },
     {
       title: "Crater Lakes Walk",
       body:
         "A gentle afternoon walk along the chain of volcanic crater lakes between Kibale and Fort Portal — passing through tea estates, swimming in crater lakes, and experiencing rural Uganda. Fort Portal town (22km from Kanyanchu) offers a pleasant highland base.",
-      image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+      image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
     },
   ],
   faqs: [
@@ -326,7 +326,7 @@ const lakeMburo: Park = {
   name: 'Lake Mburo National Park',
   blurb:
     "Uganda's walking safari capital — the only national park in the country offering walking, cycling, and horse-riding safaris through open African savannah. Zebras, impalas, hippos, and leopards on night drives, perfectly positioned between Kampala and Bwindi.",
-  image: '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.jpg',
+  image: '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.webp',
   location: 'Western Uganda',
   size: '370 km²',
   altitude: '1,220 — 1,828 m',
@@ -338,19 +338,19 @@ const lakeMburo: Park = {
       title: 'Walking Safari',
       body:
         "The centrepiece experience of Lake Mburo. Armed Uganda Wildlife Authority rangers lead walks of 2–3 hours through the park's savannah, tracking zebras, impalas, elands, topis, and warthogs on foot. With no lions in the open areas, walking is safe and immersive — the experience of being part of the African bush ecosystem rather than observing it from a vehicle is one that every Lake Mburo visitor should have.",
-      image: '/images/parks/uganda/lake-mburo/15829575593-2fb45ea828-o.jpg',
+      image: '/images/parks/uganda/lake-mburo/15829575593-2fb45ea828-o.webp',
     },
     {
       title: "Burchell's Zebra & Birdwatching",
       body:
         "Lake Mburo is the only national park in southern Uganda with plains zebra — herds graze alongside impalas, elands, topis, and warthogs. The park's diverse habitats (savannah, acacia woodland, lakeshore, wetland, and forest) support over 350 bird species. Key targets include the African finfoot, White-winged Warbler, Bare-faced Go-away Bird, and numerous raptors including Bateleur Eagle.",
-      image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
+      image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.webp',
     },
     {
       title: 'Lake Mburo Boat Cruise',
       body:
         "A 2-hour boat trip on Lake Mburo encounters enormous hippo pods (one of Uganda's densest hippo populations), Nile crocodiles, African fish eagles, various kingfisher species, herons, and ibis. The water-level view of hippos surfacing and the sounds of their calls across the lake is a highlight of any Uganda safari. USD 25 per person.",
-      image: '/images/parks/uganda/lake-mburo/16498738142-978e9993ef-o.jpg',
+      image: '/images/parks/uganda/lake-mburo/16498738142-978e9993ef-o.webp',
     },
   ],
   activities: [
@@ -358,19 +358,19 @@ const lakeMburo: Park = {
       title: 'Horse-Riding Safari',
       body:
         "Arranged through the Mihingo Lodge stables, horse-riding safaris allow visitors to approach wildlife more closely than in vehicles. Experienced, wildlife-habituated horses and guides cater to all riding abilities. Sunset rides across the savannah are particularly magical. USD 35–50 per person per hour.",
-      image: '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
+      image: '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.webp',
     },
     {
       title: 'Night Game Drive',
       body:
         "Guided night drives after sunset reveal Lake Mburo's nocturnal fauna: leopards (regularly seen), African civets, large-spotted genets, white-tailed mongooses, spring hares, and African bushbabies. The sounds of hippos grunting on the lake and hyenas calling across the savannah add to the atmosphere. USD 20 per person.",
-      image: '/images/parks/uganda/lake-mburo/16261416770-9668a9647a-o.jpg',
+      image: '/images/parks/uganda/lake-mburo/16261416770-9668a9647a-o.webp',
     },
     {
       title: 'Stay at Mihingo Lodge',
       body:
         "Uganda's most distinctive luxury lodge — 12 beautifully designed stone and wood cottages perched dramatically on rocky outcrops above the savannah, with stunning views, private pools, horse-riding stables, and exceptional guiding. One of Uganda's most photographed safari properties.",
-      image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.jpg',
+      image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.webp',
     },
   ],
   faqs: [
@@ -394,7 +394,7 @@ const mgahinga: Park = {
   slug: 'mgahinga',
   name: 'Mgahinga Gorilla National Park',
   blurb: 'A small park dominated by three Virunga volcanoes, home to mountain gorillas and the only park in Uganda where you can track golden monkeys.',
-  image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.jpg',
+  image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.webp',
   location: 'Southwestern Uganda',
   size: '33.7 km²',
   altitude: '2,227 — 4,127 m',
@@ -405,34 +405,34 @@ const mgahinga: Park = {
     {
       title: 'The Nyakagezi Gorilla Family',
       body: 'A single habituated mountain-gorilla group ranges across the Virunga massif — fewer trekkers, drier terrain than Bwindi, and unmatched volcanic backdrops when conditions align.',
-      image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+      image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
     },
     {
       title: 'Habituated Golden Monkeys',
       body: 'A vibrant, endemic monkey species found only in the Virunga bamboo zone. The morning trek is far easier than gorilla tracking and the photography is sensational.',
-      image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+      image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
     },
     {
       title: 'Three Virunga Volcanoes',
       body: 'Mt Sabyinyo, Mt Gahinga and Mt Muhabura — three dormant volcanoes that define the park, each climbable as a full-day summit hike with extraordinary triple-country views.',
-      image: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
+      image: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.webp',
     },
   ],
   activities: [
     {
       title: 'Batwa Trail Experience',
       body: "A half-day cultural walk led by Batwa elders — the original forest-dwelling people of the Virungas — showing fire-making, hunting techniques, medicinal plants and traditional song in the lower forest.",
-      image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.jpg',
+      image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.webp',
     },
     {
       title: 'Volcano Summit Hike',
       body: "Climb Mt Sabyinyo (3,669 m) to stand simultaneously in Uganda, Rwanda and the DRC, or take on the steeper Muhabura (4,127 m) — for fit walkers, two of East Africa's most rewarding day-summits.",
-      image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg',
+      image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.webp',
     },
     {
       title: 'Stay at Mount Gahinga Lodge',
       body: 'Stone-and-thatch bandas at the foot of the volcanoes — intimate, fire-warmed and the most direct base for both gorilla and golden-monkey trekking.',
-      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.jpg',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.webp',
     },
   ],
   faqs: [
@@ -456,7 +456,7 @@ const kidepo: Park = {
   name: 'Kidepo Valley National Park',
   blurb:
     "Uganda's most remote and most rewarding safari destination — 1,442 km² of dramatic semi-arid savannah in the far northeast, with cheetahs, wild dogs, lions, and Karamojong warrior culture in a park that receives very few visitors.",
-  image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.jpg',
+  image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.webp',
   location: 'Northeastern Uganda (Karamoja Region)',
   size: '1,442 km²',
   altitude: '914 — 2,750 m',
@@ -468,19 +468,19 @@ const kidepo: Park = {
       title: 'Narus Valley Game Drives',
       body:
         "The Narus Valley is the heart of Kidepo's game viewing. The seasonal Narus River and its associated waterhole attract enormous concentrations of wildlife during the dry season. Lions in large prides of up to 20 individuals, elephants, Cape buffalos, Burchell's zebras, Uganda kobs, Defassa waterbucks, and Jackson's hartebeests are regularly seen on extended morning and afternoon drives.",
-      image: '/images/activities/game-drive/asilia-roho-2017-1-1.jpg',
+      image: '/images/activities/game-drive/asilia-roho-2017-1-1.webp',
     },
     {
       title: 'Cheetah Tracking & Species Unique to Kidepo',
       body:
         "Kidepo's open savannah habitats support a small but established cheetah population — one of the only places in Uganda where cheetah sightings are possible. Expert guides know the territories of resident cheetahs and sightings occur regularly. Species found in Uganda ONLY at Kidepo include cheetah, caracal, ostrich, Burchell's zebra, greater kudu, roan antelope, and African wild dog (occasional).",
-      image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.jpg',
+      image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.webp',
     },
     {
       title: 'Karamojong Warrior Cultural Visit',
       body:
         "The Karamojong people — one of East Africa's most distinctive and traditionally proud cattle-herding cultures — maintain villages around the park periphery. Arranged visits provide extraordinary encounters with warriors, elders, and community members in traditional dress. The cultural context of the Karamoja region adds a dimension to the Kidepo experience unavailable elsewhere in Uganda.",
-      image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg',
+      image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.webp',
     },
   ],
   activities: [
@@ -488,19 +488,19 @@ const kidepo: Park = {
       title: 'Walking Safari in the Savannah',
       body:
         "Guided walks with armed Uganda Wildlife Authority rangers through the park's open savannahs and dry riverbeds provide an intimate, ground-level perspective — reading animal tracks, identifying insects and plants, and approaching wildlife in a fundamentally different way than vehicle-based game drives. In Kidepo's empty wilderness, walking is a profound experience.",
-      image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.jpg',
+      image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.webp',
     },
     {
       title: 'Stay at Apoka Safari Lodge',
       body:
         "Inside the park on a rocky kopje with sweeping Narus Valley views. Stone and canvas cottages with a rock-carved pool, outdoor stone bathtubs, and some of the most exclusive guiding in Uganda. Managed by Wildplaces Africa — Apoka punches well above its weight as a genuine luxury property in Uganda's most remote park.",
-      image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.jpg',
+      image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.webp',
     },
     {
       title: 'Birdwatching (475 Species)',
       body:
         "Kidepo has the highest bird count of any national park in Uganda. Many species here have Ethiopian and Sudanese affinities and are found nowhere else in Uganda — including the Kori Bustard (Africa's heaviest flying bird), Black-bellied Bustard, Yellow-billed Shrike, and numerous raptors. A specialist birding guide transforms the experience.",
-      image: '/images/activities/birding/lensoffthegreen-1748944212110.jpg',
+      image: '/images/activities/birding/lensoffthegreen-1748944212110.webp',
     },
   ],
   faqs: [
@@ -524,7 +524,7 @@ const semuliki: Park = {
   name: 'Semuliki National Park',
   blurb:
     "Uganda's most underrated national park — ancient Congo Basin rainforest, boiling Sempaya Hot Springs, and 441 bird species including 40 Congo Basin endemics found nowhere else in East Africa. The most important forest birding destination in Uganda.",
-  image: '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.jpg',
+  image: '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.webp',
   location: 'Western Uganda (Bundibugyo District)',
   size: '220 km²',
   altitude: '670 — 2,350 m',
@@ -536,19 +536,19 @@ const semuliki: Park = {
       title: 'Congo Basin Birding — 40 Endemics',
       body:
         "Semuliki has 441 bird species including approximately 40 Congo Basin endemics found in Uganda ONLY in this park — entirely absent from Bwindi, Kibale, and other Uganda parks. Priority targets include the Yellow-throated Nicator, African Piculet, Chocolate-backed Kingfisher, Black Dwarf Hornbill, Lemon-bellied Crombec, and the spectacular African Broadbill. Early morning guided walks with specialist birding guides are essential.",
-      image: '/images/activities/birding/lensoffthegreen-1748944212110.jpg',
+      image: '/images/activities/birding/lensoffthegreen-1748944212110.webp',
     },
     {
       title: 'Sempaya Hot Springs',
       body:
         "The park's most visited attraction — two spectacular thermal features in the heart of ancient forest. The female Sempaya Spring (Nyasimbi) maintains a large circular pool at near 100 degrees Celsius surrounded by colourful mineral terraces and steam. The male spring (Bitente) periodically erupts as a geyser. Local communities attribute deep spiritual significance to both springs. The forest walk to the springs is rewarding in itself.",
-      image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
+      image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
     },
     {
       title: 'Primate Tracking in Congo Forest',
       body:
         "Semuliki's forests support chimpanzees, red-tailed monkeys, De Brazza's monkeys, olive baboons, and black-and-white colobus in entirely undisturbed forest conditions. Guided forest walks allow encounters with these primates in some of the most pristine and least-visited rainforest in East Africa.",
-      image: '/images/destinations/tanzania/chimp-habituation-project1.jpg',
+      image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
     },
   ],
   activities: [
@@ -556,19 +556,19 @@ const semuliki: Park = {
       title: 'Early Morning Specialist Bird Walk',
       body:
         "Semuliki's birdwatching is best conducted on foot with expert specialist guides in the pre-dawn hours when Congo Basin endemics are most active. A dedicated 3–4 hour walk through the forest at first light, with a knowledgeable guide interpreting the extraordinary sounds and sightings, is an unforgettable experience for any birder.",
-      image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg',
+      image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.webp',
     },
     {
       title: 'Stay at Kyaninga Lodge (Fort Portal)',
       body:
         "Stone-and-wood cottages on the rim of a volcanic crater lake near Fort Portal — one of Uganda's most spectacular properties and the perfect luxury base for a Semuliki day trip. The lodge is 1.5 hours from the park and combines beautifully with Kibale National Park for a western Uganda circuit.",
-      image: '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.jpg',
+      image: '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.webp',
     },
     {
       title: 'Combine with Kibale & Queen Elizabeth',
       body:
         "Semuliki is best experienced as a 1–2 day addition to a western Uganda circuit from Fort Portal. Combine with Kibale National Park (1.5 hours away) and Queen Elizabeth National Park (3 hours via Kasese) for an outstanding 5–6 day western Uganda birding and primate itinerary.",
-      image: '/images/lodges/uganda/kibale-national-park/crater-safari-lodge/1746563630437_090A2589.jpg',
+      image: '/images/lodges/uganda/kibale-national-park/crater-safari-lodge/1746563630437_090A2589.webp',
     },
   ],
   faqs: [
@@ -593,7 +593,7 @@ const serengetiPark = {
   name: 'Serengeti National Park',
   blurb:
     "The greatest wildlife spectacle on earth — 1.5 million wildebeest and 250,000 zebra crossing an endless plain, with lion, leopard and cheetah in extraordinary numbers year-round.",
-  image: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg',
+  image: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.webp',
   location: 'Northern Tanzania',
   size: '14,763 km²',
   altitude: '920 — 1,850 m',
@@ -604,34 +604,34 @@ const serengetiPark = {
     {
       title: 'The Great Migration',
       body: 'Over 1.5 million wildebeest and 250,000 zebra move in an annual clockwise loop — with dramatic Mara River crossings from July to October and calving season on the short-grass plains in January and February.',
-      image: '/images/destinations/tanzania/sayari-game-drive-with-hyena-viewing1.jpg',
+      image: '/images/destinations/tanzania/sayari-game-drive-with-hyena-viewing1.webp',
     },
     {
       title: 'Lion & Leopard Density',
       body: 'The Serengeti holds one of the highest concentrations of lion in Africa, plus resident leopard in the riverine forest, cheetah on the open plains and a near-certain chance of wild dog in the north.',
-      image: '/images/destinations/tanzania/sayari-lioness.jpg',
+      image: '/images/destinations/tanzania/sayari-lioness.webp',
     },
     {
       title: 'Private Northern Concessions',
       body: "The far north — Lamai Wedge, Mara Triangle interface — offers off-road driving, night drives and a far lower vehicle count than the central Seronera area. It's where Sayari Camp and our most exclusive itineraries are based.",
-      image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.jpg',
+      image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.webp',
     },
   ],
   activities: [
     {
       title: 'Stay at Sayari Camp',
       body: "Asilia's northernmost Serengeti camp — closest to the Mara River crossings, with just fifteen tented rooms, a stellar guiding team and full off-road access.",
-      image: '/images/destinations/tanzania/sayari-elephant.jpg',
+      image: '/images/destinations/tanzania/sayari-elephant.webp',
     },
     {
       title: 'Stay at Dunia Camp',
       body: "A mobile-style camp in the Central Serengeti — brilliantly positioned for the resident game of the Seronera valley and following the migration into the south in calving season.",
-      image: '/images/destinations/tanzania/dunia-camp-game-drive-vehicle-lookout-hr-eliza-deacon1.jpg',
+      image: '/images/destinations/tanzania/dunia-camp-game-drive-vehicle-lookout-hr-eliza-deacon1.webp',
     },
     {
       title: 'Ballooning over the Plains',
       body: 'A dawn balloon flight over the Serengeti, following migrating herds from 500 feet, ending with a champagne breakfast in the bush — the definitive aerial safari experience.',
-      image: '/images/destinations/tanzania/dunia-lion-and-plane-in-the-serengeti.jpg',
+      image: '/images/destinations/tanzania/dunia-lion-and-plane-in-the-serengeti.webp',
     },
   ],
   faqs: [
@@ -655,7 +655,7 @@ const ngorongoroPark = {
   name: 'Ngorongoro Conservation Area',
   blurb:
     "An ancient, collapsed caldera sheltering the densest concentration of wildlife in Africa — the world's largest intact volcanic crater and home to all of the Big Five in a single enclosed ecosystem.",
-  image: '/images/destinations/tanzania/dunia-giraffe.jpg',
+  image: '/images/destinations/tanzania/dunia-giraffe.webp',
   location: 'Northern Tanzania',
   size: '8,292 km² (crater floor: 260 km²)',
   altitude: '1,800 — 3,648 m',
@@ -666,34 +666,34 @@ const ngorongoroPark = {
     {
       title: 'Black Rhino on the Crater Floor',
       body: 'One of the last strongholds for critically endangered black rhino in East Africa — sightings are regular at the Lerai Forest and the crater lake margins.',
-      image: '/images/destinations/tanzania/dunia-leopard.jpg',
+      image: '/images/destinations/tanzania/dunia-leopard.webp',
     },
     {
       title: 'Crater Rim Viewpoints',
       body: 'The panoramic viewpoint from the crater rim at 2,300 m — looking down over the entire enclosed ecosystem at dawn as the mist lifts from the crater floor.',
-      image: '/images/destinations/tanzania/dunia-view-from-the-main-area.jpg',
+      image: '/images/destinations/tanzania/dunia-view-from-the-main-area.webp',
     },
     {
       title: 'Lerai Forest & Flamingo Lake',
       body: "The crater floor\'s fever-tree forest shelters elephant and leopard; the soda lake at its centre draws thousands of flamingos and is a prime staging ground for the predator–prey dramas that play out here daily.",
-      image: '/images/destinations/tanzania/dunia-crane.jpg',
+      image: '/images/destinations/tanzania/dunia-crane.webp',
     },
   ],
   activities: [
     {
       title: 'Full-Day Crater Drive',
       body: 'An immersive full-day game drive on the crater floor — a circuit of the lake, the Lerai Forest, the Hippo Pool and the open plains, with a bush picnic at a designated viewpoint.',
-      image: '/images/destinations/tanzania/dunia-camp-game-drive-serengeti-safari-2.jpg',
+      image: '/images/destinations/tanzania/dunia-camp-game-drive-serengeti-safari-2.webp',
     },
     {
       title: 'Olduvai Gorge Visit',
       body: 'A short diversion to the cradle of human evolution — the site where Mary Leakey discovered the 1.8-million-year-old footprints that changed our understanding of human ancestry.',
-      image: '/images/destinations/tanzania/dunia-game-drive.jpg',
+      image: '/images/destinations/tanzania/dunia-game-drive.webp',
     },
     {
       title: 'Maasai Village Visit',
       body: 'The Ngorongoro Conservation Area is co-managed with the Maasai community — a genuine homestead visit, arranged through our local partners, is one of the most memorable cultural encounters in northern Tanzania.',
-      image: '/images/destinations/tanzania/dunia-seronera-river.jpg',
+      image: '/images/destinations/tanzania/dunia-seronera-river.webp',
     },
   ],
   faqs: [
@@ -717,7 +717,7 @@ const selousPark = {
   name: 'Nyerere National Park',
   blurb:
     "Africa's largest national park — a vast, wild, boat-safari heartland of the Rufiji River, famous for African wild dogs, hippos and a remote, uncrowded safari atmosphere.",
-  image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
+  image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.webp',
   location: 'Southern Tanzania',
   size: '30,893 km²',
   altitude: '50 — 1,000 m',
@@ -728,34 +728,34 @@ const selousPark = {
     {
       title: 'Rufiji River Boat Safaris',
       body: 'The most dramatic river safari in East Africa — hippos, crocodiles, fish eagles and bathing elephants at close quarters from a motorised pontoon.',
-      image: '/images/activities/big-five/roho-ya-selous-hippo.jpg',
+      image: '/images/activities/big-five/roho-ya-selous-hippo.webp',
     },
     {
       title: 'African Wild Dog',
       body: "One of Tanzania's most reliable places to track packs of the endangered African wild dog — Nyerere's vast, unfenced wilderness supports several large packs with regular denning activity.",
-      image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.jpg',
+      image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.webp',
     },
     {
       title: 'Walking Safaris',
       body: "Nyerere is one of the few Tanzanian parks where walking safaris are permitted — a profoundly different pace, with specialist guides reading tracks, insects and ecosystem in a way a vehicle cannot replicate.",
-      image: '/images/activities/game-drive/roho-ya-selous-walking-safari-guide-showing-off-a-hippos-skull.jpg',
+      image: '/images/activities/game-drive/roho-ya-selous-walking-safari-guide-showing-off-a-hippos-skull.webp',
     },
   ],
   activities: [
     {
       title: 'Stay at Roho ya Selous',
       body: 'Eight tented suites on a private concession within the park — boat safaris, game drives, walking, and a guiding team with decades of Selous experience.',
-      image: '/images/activities/big-five/roho-ya-selous-elephant.jpg',
+      image: '/images/activities/big-five/roho-ya-selous-elephant.webp',
     },
     {
       title: 'Fly Camping on the Rufiji',
       body: 'Spend a night on a sandbank under the stars, with your guide and a campfire — the ultimate immersion in the southern wilderness.',
-      image: '/images/activities/game-drive/roho-ya-selous-fishing-at-sunrise.jpg',
+      image: '/images/activities/game-drive/roho-ya-selous-fishing-at-sunrise.webp',
     },
     {
       title: 'Fishing the Rufiji',
       body: 'Catch-and-release tigerfish and catfish on the river — an optional afternoon activity for keen anglers staying at Roho ya Selous.',
-      image: '/images/activities/big-five/roho-ya-selous-giraffes.jpg',
+      image: '/images/activities/big-five/roho-ya-selous-giraffes.webp',
     },
   ],
   faqs: [
@@ -779,7 +779,7 @@ const rubondoPark = {
   name: 'Rubondo Island National Park',
   blurb:
     "An island wilderness on Lake Victoria — chimp habituation, forest walks, fishing, and a cast of reintroduced species in one of Africa's most unusual and uncrowded national parks.",
-  image: '/images/destinations/tanzania/rubondo-island-camp-landscape.jpg',
+  image: '/images/destinations/tanzania/rubondo-island-camp-landscape.webp',
   location: 'Northwestern Tanzania, Lake Victoria',
   size: '457 km²',
   altitude: '1,130 — 1,480 m',
@@ -790,34 +790,34 @@ const rubondoPark = {
     {
       title: 'Chimpanzee Habituation',
       body: 'A long-running habituation project with a community of reintroduced chimps — forest walks with researchers tracking their progress, an intimate and rarely-visited alternative to Kibale.',
-      image: '/images/destinations/tanzania/rubondo-island-camp-chimp.jpg',
+      image: '/images/destinations/tanzania/rubondo-island-camp-chimp.webp',
     },
     {
       title: 'Birdlife of Lake Victoria',
       body: 'Over 300 bird species recorded — African fish eagle, pied kingfisher, goliath heron, and the rare shoebill in the papyrus fringe of the lake.',
-      image: '/images/destinations/tanzania/rubondo-island-camp-fish-eagle-eric-frank-mr.jpg',
+      image: '/images/destinations/tanzania/rubondo-island-camp-fish-eagle-eric-frank-mr.webp',
     },
     {
       title: 'Pristine Forest Walks',
       body: "A dense tropical forest of ebony, wild mango and giant ficus — walked with specialist naturalist guides, tracking chimp signs and the island\'s unique community of reintroduced mammals.",
-      image: '/images/destinations/tanzania/rubondo-island-forest-walks-experience-with-your-guide1.jpg',
+      image: '/images/destinations/tanzania/rubondo-island-forest-walks-experience-with-your-guide1.webp',
     },
   ],
   activities: [
     {
       title: 'Forest Walk with Chimp Team',
       body: 'Early morning walk with the habituation team — tracking chimp nests, calls and movement, with close encounters increasingly possible as the project matures.',
-      image: '/images/destinations/tanzania/rubondo-island-camp-forest-walk-mr1.jpg',
+      image: '/images/destinations/tanzania/rubondo-island-camp-forest-walk-mr1.webp',
     },
     {
       title: 'Nile Perch Fishing',
       body: 'Lake Victoria is one of the great sport-fishing destinations in Africa — Nile perch in the hundreds of kilos, plus tilapia and catfish on a catch-and-release basis from the camp launch.',
-      image: '/images/destinations/tanzania/rubondo-island-game-drives-on-the-hills-above-lake-victoria1.jpg',
+      image: '/images/destinations/tanzania/rubondo-island-game-drives-on-the-hills-above-lake-victoria1.webp',
     },
     {
       title: 'Canoe Safari',
       body: "A slow, silent exploration of the island's shoreline by dugout canoe — hippos, crocodiles, sitatunga and a gallery of waterbirds at a pace that no motor safari can match.",
-      image: '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
+      image: '/images/destinations/tanzania/rubondo-island-camp-beach.webp',
     },
   ],
   faqs: [
@@ -843,31 +843,31 @@ export const countries: Record<string, Country> = {
     heroTitle: 'The Pearl of Africa,\nWhere the Wild Reigns Supreme',
     heroSubtitle:
       "In the heart of equatorial Africa, where the Nile begins its legendary journey northward and ancient forests shelter half the world's remaining mountain gorillas, Uganda emerges as a destination of extraordinary, intimate wilderness. We invite you to be changed by it.",
-    heroImage: '/images/parks/uganda/murchison-falls/dsc-6584.jpg',
+    heroImage: '/images/parks/uganda/murchison-falls/dsc-6584.webp',
     exploreIntro:
       "From misty rainforests and endangered gorillas to wide savannahs and roaring waterfalls, Uganda is Africa's most diverse safari destination.",
     parkSummary:
       "Each of Uganda's national parks offers a completely different world — rich wildlife, dramatic landscapes, and unforgettable encounters. Choose your journey and explore the wild heart of the Pearl of Africa.",
-    parkSummaryImage: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
+    parkSummaryImage: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.webp',
     parks: [bwindi, queenElizabeth, murchison, kibale, lakeMburo, mgahinga, kidepo, semuliki],
     privilegedAccess: [
       {
         title: "Gorilla Researcher's Morning Briefing",
         location: 'Bwindi Impenetrable Forest, SW Uganda',
         body: "A private pre-trek session with the Uganda Wildlife Authority\'s gorilla monitoring team. Learn exactly how your permit fee funds gorilla protection, meet the research staff who track these families daily, and understand which family you will visit that morning and what to expect from their current behaviour.",
-        image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.jpg',
+        image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.webp',
       },
       {
         title: 'Chimpanzee Wake-Up at First Light',
         location: 'Kibale National Park, W Uganda',
         body: "Enter Kibale's chimpanzee zone before the park opens to general visitors. Watch a habituated troupe rise from their night nests, begin grooming, and commence morning foraging — with no other guests present, in complete silence, accompanied by a specialist primatologist.",
-        image: '/images/destinations/tanzania/chimp-habituation-project1.jpg',
+        image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
       },
       {
         title: 'Private Helicopter Flight over Murchison Falls',
         location: 'Murchison Falls National Park, NW Uganda',
         body: 'A private charter directly over the seven-metre gorge where the entire River Nile is compressed into one extraordinary point of power and spray. The helicopter then lands at a remote game-viewing site inaccessible by road, where a champagne sundowner awaits with your private ranger.',
-        image: '/images/parks/uganda/murchison-falls/dsc-6951.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6951.webp',
       },
     ],
     lodges: [
@@ -875,37 +875,37 @@ export const countries: Record<string, Country> = {
         name: 'Bwindi Lodge',
         location: 'Bwindi Impenetrable Forest (Buhoma)',
         body: 'Eight stone cottages on the forest rim with panoramic canopy views and direct access to the gorilla trekking assembly point — the most established luxury address in Bwindi.',
-        image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.jpg',
+        image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.webp',
       },
       {
         name: 'Clouds Mountain Gorilla Lodge',
         location: 'Bwindi Impenetrable Forest (Nkuringo)',
         body: "Uganda's highest-altitude gorilla lodge, with heated plunge pools, private butler service, and the most dramatic viewpoint in the entire Bwindi region.",
-        image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
+        image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp',
       },
       {
         name: 'Apoka Safari Lodge',
         location: 'Kidepo Valley National Park',
         body: "The most exclusive address in Uganda's most remote park. Private game drives across Kidepo's semi-arid savannah with zero other tourist vehicles in sight.",
-        image: '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6280.webp',
       },
       {
         name: 'Wildwaters Lodge',
         location: 'Nile River, Jinja',
         body: "A private island accessible only by boat — total seclusion on the Nile within reach of Jinja\'s white-water rapids and adventure activities.",
-        image: '/images/parks/uganda/murchison-falls/dsc-6271.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6271.webp',
       },
       {
         name: 'Primate Lodge Kibale',
         location: 'Kibale National Park',
         body: 'Set within the park boundary for direct forest access — private guided night walks and the dawn chimpanzee experience are available exclusively to lodge guests.',
-        image: '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.jpg',
+        image: '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.webp',
       },
       {
         name: "Baker's Lodge",
         location: 'Murchison Falls National Park',
         body: "Eight East African-style cottages on the northern bank of the Nile with resident hippo pools, private river decks, and the falls thundering upstream.",
-        image: '/images/parks/uganda/murchison-falls/dsc-6884.jpg',
+        image: '/images/parks/uganda/murchison-falls/dsc-6884.webp',
       },
     ],
     seoKeywords:
@@ -1017,19 +1017,19 @@ export const countries: Record<string, Country> = {
     heroTitle: "The Land of a Thousand Hills\nWhere Purpose and Luxury Converge",
     heroSubtitle:
       "Beyond the mist-shrouded peaks of the Virunga Mountains, Rwanda is Africa's most remarkable conservation success story and one of its most sophisticated travel destinations. From intimate gorilla encounters in ancient volcanic forests to Big Five savannah in Akagera, Rwanda rewards those who travel with both curiosity and conscience.",
-    heroImage: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
+    heroImage: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.webp',
     exploreIntro:
       "Rwanda is conservation-led luxury at its purest — gorilla trekking in Volcanoes, the Big Five in restored Akagera, canopy walks in Nyungwe and lakeside elegance on Kivu.",
     parkSummary:
       "Two flagship national parks, two distinct safari worlds. Volcanoes opens the door to mountain gorillas in their misty bamboo realm; Akagera's restored savannahs unite lions, leopards, elephants, buffalo and rhino on a single horizon.",
-    parkSummaryImage: '/images/parks/rwanda/akagera/wilderness-magashi-1.jpg',
+    parkSummaryImage: '/images/parks/rwanda/akagera/wilderness-magashi-1.webp',
     parks: [
       {
         slug: 'volcanoes',
         name: 'Volcanoes National Park',
         blurb:
           "The Rwandan section of the Virunga Massif — five towering volcanoes cloaked in bamboo and rainforest, sanctuary to roughly a third of the world's mountain gorillas and a thriving population of golden monkeys.",
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
         location: 'Northwestern Rwanda',
         size: '160 km²',
         altitude: '2,400 — 4,507 m',
@@ -1040,49 +1040,49 @@ export const countries: Record<string, Country> = {
           {
             title: 'Mountain Gorilla Trekking',
             body: "Trek with expert rangers through misty forest to spend one magical hour with a habituated gorilla family, observing silverbacks, mothers, and infants in natural behaviour — the experience that defined Rwanda's modern tourism.",
-            image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
+            image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp',
           },
           {
             title: 'Golden Monkey Tracking',
             body: 'Follow rangers through bamboo forest to encounter troops of the endangered golden monkey, found nowhere else in the world outside the Virunga range — playful, photogenic, and utterly captivating.',
-            image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.jpg',
+            image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.webp',
           },
           {
             title: 'Dian Fossey Tomb Trail',
             body: "Hike to Karisoke Research Centre and the grave of Dian Fossey, passing through the gorilla habitat she studied and fought to protect for nearly two decades — a pilgrimage for the conservation-minded traveller.",
-            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-15.jpg',
+            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-15.webp',
           },
           {
             title: "Iby'iwacu Cultural Village",
             body: "Experience traditional Rwandan culture with local community members through dance, archery, traditional medicine demonstrations, and storytelling — a meaningful connection to the people who share this landscape with the gorillas.",
-            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-29.jpg',
+            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-29.webp',
           },
           {
             title: 'Twin Lakes — Lake Ruhondo & Lake Bulera',
             body: 'Visit the scenic twin volcanic lakes at the foot of the Virunga range for boat rides, birdwatching, and stunning reflections of the volcano chain — a beautiful addition to any Volcanoes itinerary.',
-            image: '/images/destinations/rwanda/image-20260331125636.jpg',
+            image: '/images/destinations/rwanda/image-20260331125636.webp',
           },
           {
             title: 'Gorilla Naming Ceremony — Kwita Izina',
             body: "If visiting in September, attend Rwanda's famous annual gorilla naming ceremony — a spectacular national celebration of conservation success where newly born gorilla infants receive their names.",
-            image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+            image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
           },
         ],
         activities: [
           {
             title: 'Helicopter Transfers',
             body: 'Skip the road and arrive in style — aerial transfers from Kigali deliver guests to the lodges with sweeping views over the Twin Lakes and the Virunga volcanoes.',
-            image: '/images/activities/helicopter-rwanda/1000045745.jpg',
+            image: '/images/activities/helicopter-rwanda/1000045745.webp',
           },
           {
             title: 'Bisate Reforestation Walk',
             body: 'Plant a sapling in the Wilderness Bisate reforestation project — your contribution to a 100,000-tree restoration of native forest at the foot of the volcanoes.',
-            image: '/images/parks/rwanda/volcanoes/1750336906468-the-sanctuary-at-bisate-view-1-aerial.jpg',
+            image: '/images/parks/rwanda/volcanoes/1750336906468-the-sanctuary-at-bisate-view-1-aerial.webp',
           },
           {
             title: 'Kigali Genocide Memorial',
             body: 'A respectful, contextual visit to the Kigali Genocide Memorial — essential reading on the journey of modern Rwanda, ideally on arrival or departure day.',
-            image: '/images/destinations/rwanda/image-20260331125636.jpg',
+            image: '/images/destinations/rwanda/image-20260331125636.webp',
           },
         ],
         gettingThere:
@@ -1141,7 +1141,7 @@ export const countries: Record<string, Country> = {
         name: 'Akagera National Park',
         blurb:
           "Africa's most successful conservation comeback story — savannahs, papyrus swamps and lakes restored to a full Big Five reserve since 2010, with reintroduced lions and rhinos thriving alongside elephants, leopards and buffalo.",
-        image: '/images/parks/rwanda/akagera/wilderness-magashi-1.jpg',
+        image: '/images/parks/rwanda/akagera/wilderness-magashi-1.webp',
         location: 'Eastern Rwanda',
         size: '1,122 km²',
         altitude: '1,250 — 1,825 m',
@@ -1152,39 +1152,39 @@ export const countries: Record<string, Country> = {
           {
             title: 'Big Five Game Drives',
             body: "Guided morning and afternoon game drives in search of lion, leopard, elephant, buffalo, and black rhino across the park's diverse savannah habitats — one of Africa's great conservation comeback stories on a single game drive.",
-            image: '/images/parks/rwanda/akagera/wilderness-magashi-7.jpg',
+            image: '/images/parks/rwanda/akagera/wilderness-magashi-7.webp',
           },
           {
             title: 'Lake Ihema Boat Safari',
             body: "A two-hour boat safari on Lake Ihema, drifting through papyrus-fringed channels past hundreds of hippos, Nile crocodiles, and extraordinary waterbird congregations including African fish eagles and malachite kingfishers.",
-            image: '/images/parks/rwanda/akagera/1738327984199-magashi-boating-12-24-tc-025.jpg',
+            image: '/images/parks/rwanda/akagera/1738327984199-magashi-boating-12-24-tc-025.webp',
           },
           {
             title: 'Black Rhino Tracking',
             body: 'Join a specialist ranger for a guided black rhino tracking experience, following the rhino monitoring team to observe these critically endangered animals in their restored bush habitat.',
-            image: '/images/parks/rwanda/akagera/wilderness-magashi-31.jpg',
+            image: '/images/parks/rwanda/akagera/wilderness-magashi-31.webp',
           },
           {
             title: 'Giraffe & Zebra Plains Drive',
             body: 'Drive the open northern savannahs for spectacular concentrations of Masai giraffe, plains zebra, topi, and waterbuck against a backdrop of rolling acacia hills stretching to the Tanzania border.',
-            image: '/images/parks/rwanda/akagera/wilderness-magashi-19.jpg',
+            image: '/images/parks/rwanda/akagera/wilderness-magashi-19.webp',
           },
         ],
         activities: [
           {
             title: 'Wilderness Magashi Camp Stay',
             body: "Six tented suites on the shore of Lake Rwanyakazinga — Rwanda's flagship eco-luxury safari camp in the heart of the best game-viewing terrain.",
-            image: '/images/parks/rwanda/akagera/wilderness-magashi-23.jpg',
+            image: '/images/parks/rwanda/akagera/wilderness-magashi-23.webp',
           },
           {
             title: 'Behind-the-Scenes with Park Rangers',
             body: "Spend a morning with the African Parks ranger team — a privileged window into anti-poaching operations, rhino monitoring, and the conservation science driving Akagera's recovery.",
-            image: '/images/parks/rwanda/akagera/1738328418703-magashi-staff-12-24-tc-035.jpg',
+            image: '/images/parks/rwanda/akagera/1738328418703-magashi-staff-12-24-tc-035.webp',
           },
           {
             title: 'Sundowners on the Plains',
             body: 'Bush bar set up at sunset on a remote escarpment with views over the Tanzania border — the perfect end to an Akagera game drive day.',
-            image: '/images/parks/rwanda/akagera/1738328545766-magashi-sundowners-12-24-tc-012.jpg',
+            image: '/images/parks/rwanda/akagera/1738328545766-magashi-sundowners-12-24-tc-012.webp',
           },
         ],
         gettingThere:
@@ -1236,7 +1236,7 @@ export const countries: Record<string, Country> = {
         name: 'Kigali',
         blurb:
           "Africa's cleanest, safest and most captivating capital — a city of immaculate streets, profound history, world-class dining and forward momentum that defies every expectation. The essential gateway to gorilla trekking, and a destination in its own right.",
-        image: '/images/destinations/rwanda/image-20260331125652.jpg',
+        image: '/images/destinations/rwanda/image-20260331125652.webp',
         location: "Rwanda's Capital City",
         size: 'Metropolitan Capital',
         altitude: '~1,500 m',
@@ -1260,19 +1260,19 @@ export const countries: Record<string, Country> = {
             title: 'Kigali Genocide Memorial',
             body:
               "Visit the solemn and profoundly important memorial, which documents the 1994 genocide and honours the 250,000 victims buried on its grounds. One of Africa's most important historical sites — essential for understanding modern Rwanda.",
-            image: '/images/destinations/rwanda/image-20260331125705.jpg',
+            image: '/images/destinations/rwanda/image-20260331125705.webp',
           },
           {
             title: 'Inema Arts Center',
             body:
               "Explore one of East Africa's most dynamic contemporary art galleries, where resident artists create and sell bold, expressive work rooted in Rwandan culture and identity. A thriving showcase of Rwanda's creative renaissance.",
-            image: '/images/destinations/rwanda/image-20260331125717.jpg',
+            image: '/images/destinations/rwanda/image-20260331125717.webp',
           },
           {
             title: "Nyamirambo Women's Centre Walking Tour",
             body:
               "Join a community-led guided walk through Kigali's most authentic neighbourhood, sampling local food and hearing stories of women-led empowerment. One of the most genuine cultural experiences in the city.",
-            image: '/images/destinations/rwanda/image-20260331125729.jpg',
+            image: '/images/destinations/rwanda/image-20260331125729.webp',
           },
         ],
         activities: [
@@ -1280,19 +1280,19 @@ export const countries: Record<string, Country> = {
             title: 'Kimironko Market',
             body:
               "One of East Africa's most colourful and well-organised markets — perfect for fabrics, crafts, fresh produce, and authentic local atmosphere. A highlight of any Kigali visit.",
-            image: '/images/destinations/rwanda/image-20260331125738.jpg',
+            image: '/images/destinations/rwanda/image-20260331125738.webp',
           },
           {
             title: 'Rooftop Dining & Kigali Coffee Culture',
             body:
               "From rooftop bars with panoramic hill views to fine dining restaurants serving Rwandan and international cuisine, Kigali's food and café scene is exceptional. Rwanda produces some of Africa's finest single-origin coffee.",
-            image: '/images/destinations/rwanda/image-20260331125748.jpg',
+            image: '/images/destinations/rwanda/image-20260331125748.webp',
           },
           {
             title: 'Presidential Palace Museum',
             body:
               "Explore the former residence of President Habyarimana, preserved exactly as it was on the night of April 6, 1994 — including the wreckage of the plane that was shot down. A powerful window into contemporary Rwandan history.",
-            image: '/images/destinations/rwanda/image-20260331125809.jpg',
+            image: '/images/destinations/rwanda/image-20260331125809.webp',
           },
         ],
         gettingThere:
@@ -1357,7 +1357,7 @@ export const countries: Record<string, Country> = {
         name: 'Nyungwe Forest National Park',
         blurb:
           "One of Africa's oldest and most biodiverse rainforests — 1,019 km² of ancient montane forest home to 13 primate species including chimpanzees, and the iconic canopy walkway suspended 70 metres above the forest floor.",
-        image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+        image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
         location: 'Southwestern Rwanda',
         size: '1,019 km²',
         altitude: '1,600 — 2,950 m',
@@ -1368,34 +1368,34 @@ export const countries: Record<string, Country> = {
           {
             title: 'Chimpanzee Trekking',
             body: "Follow expert trackers through dense rainforest to spend time with habituated chimpanzee groups, watching them forage, socialise, and travel through their ancient forest home — an experience increasingly rivalling Uganda's Kibale Forest.",
-            image: '/images/destinations/tanzania/chimp-habituation-project1.jpg',
+            image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
           },
           {
             title: 'Canopy Walkway Experience',
             body: "Cross the 200m suspended canopy bridge network at heights of up to 70m, scanning for colobus monkeys, turacos, and hornbills in the forest crown — one of Rwanda's most spectacular and photographed experiences.",
-            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-15.jpg',
+            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-15.webp',
           },
           {
             title: 'Colobus Monkey Habituation',
             body: "Join trackers following troops of Angola colobus monkeys as they move through the forest — one of the most visually spectacular primate encounters in Africa, with troops of hundreds moving through the canopy overhead.",
-            image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.jpg',
+            image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.webp',
           },
         ],
         activities: [
           {
             title: "One&Only Nyungwe House Stay",
             body: "Set within a working tea estate at the forest edge — exceptional service, sweeping views across the plantation to the ancient forest, and the most luxurious base for all Nyungwe activities.",
-            image: '/images/parks/rwanda/volcanoes/1750336906468-the-sanctuary-at-bisate-view-1-aerial.jpg',
+            image: '/images/parks/rwanda/volcanoes/1750336906468-the-sanctuary-at-bisate-view-1-aerial.webp',
           },
           {
             title: 'Albertine Rift Birding',
             body: "Over 310 recorded bird species including 29 Albertine Rift endemics found nowhere else on earth — Nyungwe is one of Africa's premier birdwatching destinations for serious listers.",
-            image: '/images/activities/birding/lensoffthegreen-1748944212110.jpg',
+            image: '/images/activities/birding/lensoffthegreen-1748944212110.webp',
           },
           {
             title: 'Combine with Lake Kivu',
             body: "Nyungwe is most rewarding when combined with a Lake Kivu stay, creating a complete south-western Rwanda circuit of ancient forest, primates, and lakeside relaxation.",
-            image: '/images/parks/rwanda/akagera/1738328545766-magashi-sundowners-12-24-tc-012.jpg',
+            image: '/images/parks/rwanda/akagera/1738328545766-magashi-sundowners-12-24-tc-012.webp',
           },
         ],
         gettingThere:
@@ -1448,7 +1448,7 @@ export const countries: Record<string, Country> = {
         name: 'Lake Kivu',
         blurb:
           "One of Africa's Great Lakes — a deep mountain lake at 1,460m above sea level, entirely safe for swimming, fringed by volcanic hills, island archipelagos, and Rwanda's most beautiful lakeside resort towns.",
-        image: '/images/destinations/rwanda/image-20260331125636.jpg',
+        image: '/images/destinations/rwanda/image-20260331125636.webp',
         location: "Rwanda's Western Shore",
         size: '2,700 km² (lake surface)',
         altitude: '1,460 m',
@@ -1459,34 +1459,34 @@ export const countries: Record<string, Country> = {
           {
             title: 'Island Boat Trip',
             body: "Take a motorboat or traditional wooden pirogue to explore the lake's island archipelago, stopping for swimming, snorkelling, and picnics on secluded shores in crystal-clear mountain water.",
-            image: '/images/parks/rwanda/akagera/1738327984199-magashi-boating-12-24-tc-025.jpg',
+            image: '/images/parks/rwanda/akagera/1738327984199-magashi-boating-12-24-tc-025.webp',
           },
           {
             title: 'Congo Nile Trail Cycling',
             body: "Rent a bicycle and cycle sections of the scenic 227km lakeside trail through fishing villages, hill farms, coffee estates, and forest patches — one of Africa's most rewarding adventure tourism routes.",
-            image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg',
+            image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.webp',
           },
           {
             title: 'Sunset Boat Cruise',
             body: "Board a dhow or motor launch for a lake sunset cruise as the volcanic hills of Congo reflect in golden water — one of the most spectacular evenings anywhere in Rwanda.",
-            image: '/images/parks/rwanda/akagera/1738328545766-magashi-sundowners-12-24-tc-012.jpg',
+            image: '/images/parks/rwanda/akagera/1738328545766-magashi-sundowners-12-24-tc-012.webp',
           },
         ],
         activities: [
           {
             title: 'Kayaking on Lake Kivu',
             body: "Paddle on the lake's calm highland waters, exploring bays and coves at a leisurely pace with magnificent volcanic hill views stretching to the Congo border.",
-            image: '/images/parks/uganda/lake-mburo/52760819657-a6f9d6bf99-o.jpg',
+            image: '/images/parks/uganda/lake-mburo/52760819657-a6f9d6bf99-o.webp',
           },
           {
             title: 'Lake Kivu Beach Relaxation',
             body: "Spend a day at one of the lake's resort beaches — swimming in clear, safe mountain water and enjoying fresh sambaza (the local endemic sardine, deep-fried and eaten whole) and cold Primus beer.",
-            image: '/images/destinations/rwanda/image-20260331125809.jpg',
+            image: '/images/destinations/rwanda/image-20260331125809.webp',
           },
           {
             title: 'Rusizi & Southern Shore Exploration',
             body: "Visit the southern shore town of Rusizi near Nyungwe, exploring the DRC border area and the dramatic southern lake scenery — often combined with a Nyungwe Forest visit on the same circuit.",
-            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-29.jpg',
+            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-29.webp',
           },
         ],
         gettingThere:
@@ -1541,19 +1541,19 @@ export const countries: Record<string, Country> = {
         title: 'Behind-the-Scenes Briefing — Karisoke Research Centre',
         location: 'Volcanoes National Park, NW Rwanda',
         body: "An exclusive opportunity to meet with a senior researcher at the Dian Fossey Gorilla Fund's Karisoke Research Centre. Receive a private briefing on current gorilla monitoring methods, the science behind habituation, and how your permit fee flows directly into the conservation programme — before your trek begins.",
-        image: '/images/parks/rwanda/volcanoes/wilderness-bisate-29.jpg',
+        image: '/images/parks/rwanda/volcanoes/wilderness-bisate-29.webp',
       },
       {
         title: 'Private Canopy Walkway at Sunrise — Nyungwe',
         location: 'Nyungwe Forest National Park, SW Rwanda',
         body: "Access the famous Nyungwe Canopy Walkway — suspended 70 metres above the forest floor — before the park opens to general visitors, for a completely private, silent sunrise experience. The ancient rainforest spreads below in the morning mist, colobus monkeys move through the canopy at eye level, and 310 bird species wake around you.",
-        image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+        image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
       },
       {
         title: 'Rhino Tracking with the Research Team',
         location: 'Akagera National Park, Eastern Rwanda',
         body: "Join a dedicated research team for a morning tracking Rwanda's critically endangered black and white rhinos — reintroduced to Akagera after an absence of decades. Accompany researchers monitoring collar data, recording behaviour, and assessing range. Scientific insight few travellers ever receive, in a park that represents one of Africa's most successful rewilding stories.",
-        image: '/images/parks/rwanda/akagera/wilderness-magashi-31.jpg',
+        image: '/images/parks/rwanda/akagera/wilderness-magashi-31.webp',
       },
     ],
     lodges: [
@@ -1561,37 +1561,37 @@ export const countries: Record<string, Country> = {
         name: 'Singita Kwitonda Lodge',
         location: 'Volcanoes National Park',
         body: 'Ultra-luxury low-impact suites with Sabyinyo volcano views and direct gorilla trekking access. Conservation-first ethos throughout.',
-        image: '/images/lodges/rwanda/volcanoes-national-park/singita-kwitonda-lodge/dsc07739.jpg',
+        image: '/images/lodges/rwanda/volcanoes-national-park/singita-kwitonda-lodge/dsc07739.webp',
       },
       {
         name: 'Bisate Lodge',
         location: 'Volcanoes National Park',
         body: "Six spherical forest villas built in an eroded volcanic cone. An active reforestation programme on-site. Among Africa\'s most architecturally significant lodges.",
-        image: '/images/lodges/rwanda/volcanoes-national-park/wildernes-bisate-lodge/1753110933515-bisate-gorilla-trekking-06-25-fr-31.jpg',
+        image: '/images/lodges/rwanda/volcanoes-national-park/wildernes-bisate-lodge/1753110933515-bisate-gorilla-trekking-06-25-fr-31.webp',
       },
       {
         name: "One&Only Gorilla's Nest",
         location: 'Volcanoes National Park',
         body: 'Nestled in eucalyptus forest moments from the gorilla trekking starting point. Unparalleled luxury in immediate proximity to the gorillas.',
-        image: '/images/lodges/rwanda/volcanoes-national-park/one-and-only-gorilla-nest/ajqwtbm-sghilb7nle6tsj60kf09t2y-5t9-yogkjdukgiwdyxdqa3q5xhnkhpsmgq-zfpyh4-wq0ahhc9fjpalj-rthz6sczpv5eey2khgmwvwq0mmt-h400-nu.jpg',
+        image: '/images/lodges/rwanda/volcanoes-national-park/one-and-only-gorilla-nest/ajqwtbm-sghilb7nle6tsj60kf09t2y-5t9-yogkjdukgiwdyxdqa3q5xhnkhpsmgq-zfpyh4-wq0ahhc9fjpalj-rthz6sczpv5eey2khgmwvwq0mmt-h400-nu.webp',
       },
       {
         name: 'One&Only Nyungwe House',
         location: 'Nyungwe Forest National Park',
         body: 'A tea plantation transformed into a luxury forest retreat — the ideal base for chimpanzee trekking and the famous Nyungwe canopy walkway.',
-        image: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
+        image: '/images/parks/rwanda/volcanoes/wilderness-bisate-1.webp',
       },
       {
         name: 'Magashi Peninsula',
         location: 'Akagera National Park',
         body: 'Exclusive lakeside camp on Lake Rwanyakizinga. Classic Big Five safari in an intimate tented setting, operated in partnership with African Parks.',
-        image: '/images/parks/rwanda/akagera/wilderness-magashi.jpg',
+        image: '/images/parks/rwanda/akagera/wilderness-magashi.webp',
       },
       {
         name: 'The Retreat by Heaven',
         location: 'Kigali',
         body: "The finest arrival and departure experience in Kigali — world-class spa, the city's best dining, and a serene garden setting.",
-        image: '/images/destinations/rwanda/image-20260331125636.jpg',
+        image: '/images/destinations/rwanda/image-20260331125636.webp',
       },
     ],
     seoKeywords:
@@ -1693,19 +1693,19 @@ export const countries: Record<string, Country> = {
     heroTitle: 'The Classic Stage of Africa,\nRewritten in Luxury',
     heroSubtitle:
       "Where else on earth does a single horizon contain a million wildebeest, a pride of lions in golden light, and a hot-air balloon drifting silently at dawn? Kenya is Africa's most storied safari destination — and for those who know where to look, it remains a place of profound, unhurried discovery.",
-    heroImage: '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
+    heroImage: '/images/parks/kenya/masai-mara/a-balloon-sunrise.webp',
     exploreIntro:
       "Kenya offers the broadest variety of any East African safari — wildebeest spectacle, elephant herds beneath Kilimanjaro, rhino conservation pioneers, the unique “Samburu Five” and the most exclusive private conservancies on the continent.",
     parkSummary:
       "Five distinct ecosystems, each curated to a different traveler. The Mara delivers the great migration; Amboseli, the elephants under Kilimanjaro; Laikipia, the conservation pioneers; Samburu, the dry-country specialists; Tsavo, scale and remoteness in equal measure.",
-    parkSummaryImage: '/images/parks/kenya/laikipia-loisaba/1752747854365-kenya-suyian-lodge-exterior-elephant-view-8.jpg',
+    parkSummaryImage: '/images/parks/kenya/laikipia-loisaba/1752747854365-kenya-suyian-lodge-exterior-elephant-view-8.webp',
     parks: [
       {
         slug: 'masai-mara',
         name: 'Masai Mara National Reserve',
         blurb:
           "The northern extension of the Serengeti and the stage for the Great Migration each July to October — plus year-round resident lion, leopard and cheetah on Africa's most photographed plains.",
-        image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
+        image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.webp',
         location: 'Southwest Kenya',
         size: '1,510 km² + 6 conservancies',
         altitude: '1,500 — 2,170 m',
@@ -1717,36 +1717,36 @@ export const countries: Record<string, Country> = {
             title: 'Mara River Crossing',
             body:
               "Position at the river from early morning to watch wildebeest build courage and plunge into the crocodile-filled waters in one of nature's most breathtaking dramas. The iconic river crossings occur from late July through October, peaking in August and September.",
-            image: '/images/parks/kenya/masai-mara/the-dangers-of-crossing-the-mara-river.jpg',
+            image: '/images/parks/kenya/masai-mara/the-dangers-of-crossing-the-mara-river.webp',
           },
           {
             title: 'Big Five Game Drive',
             body:
               'Morning and afternoon drives with expert Maasai guides tracking lion prides, leopard, cheetah, elephant herds and buffalo across the open Mara plains and private conservancies. The Mara offers year-round predator sightings unmatched anywhere in Africa.',
-            image: '/images/parks/kenya/masai-mara/activites-game-drive.jpg',
+            image: '/images/parks/kenya/masai-mara/activites-game-drive.webp',
           },
           {
             title: 'Hot Air Balloon Safari',
             body:
               "Rise at dawn for a magical balloon flight over the Mara, watching herds of wildebeest, elephant and giraffe from above before landing for a champagne bush breakfast. The definitive Maasai Mara experience and one of Africa's most iconic wildlife moments.",
-            image: '/images/parks/kenya/masai-mara/hot-air-balloon-safari.jpg',
+            image: '/images/parks/kenya/masai-mara/hot-air-balloon-safari.webp',
           },
         ],
         activities: [
           {
             title: 'Private Conservancy Game Drives',
             body: 'Off-road, night-drive and walking-safari options outside the main reserve — lower vehicle density, more privacy, and exclusive sightings unavailable within the public reserve.',
-            image: '/images/lodges/kenya/masai-mara/mara-plains-camp/getting-a-bird-s-eye-view-in-the-omc.jpg',
+            image: '/images/lodges/kenya/masai-mara/mara-plains-camp/getting-a-bird-s-eye-view-in-the-omc.webp',
           },
           {
             title: 'Sundowners with the Maasai',
             body: "Bush bar set up at sunset on a private termite mound or riverbank as the Mara sky blazes in shades of gold and crimson — cultural depth alongside the safari.",
-            image: '/images/parks/kenya/masai-mara/angama-mara-s-sundowner-boma.jpg',
+            image: '/images/parks/kenya/masai-mara/angama-mara-s-sundowner-boma.webp',
           },
           {
             title: 'Guided Bush Walk',
             body: 'Walk the Mara plains with an armed Maasai ranger guide, reading animal tracks and experiencing the landscape at a pace impossible from a vehicle. Available in most private conservancies bordering the reserve.',
-            image: '/images/parks/kenya/masai-mara/cheetahs-in-the-conservancy.jpg',
+            image: '/images/parks/kenya/masai-mara/cheetahs-in-the-conservancy.webp',
           },
         ],
         faqs: [
@@ -1773,7 +1773,7 @@ export const countries: Record<string, Country> = {
         name: 'Amboseli National Park',
         blurb:
           "The classic 'elephants under Kilimanjaro' park — small, accessible, and home to some of Africa's largest tuskers in front of an impossibly photogenic mountain backdrop.",
-        image: '/images/parks/kenya/amboseli/amboseli-elephants.jpg',
+        image: '/images/parks/kenya/amboseli/amboseli-elephants.webp',
         location: 'Southern Kenya',
         size: '392 km²',
         altitude: '1,100 — 1,200 m',
@@ -1785,19 +1785,19 @@ export const countries: Record<string, Country> = {
             title: 'Big-Tusker Elephant Herds',
             body:
               "Among the world's largest concentrations of giant-tusked elephants, easily observed from open vehicles. Amboseli's elephant research, running for over 50 years, has produced the most comprehensive elephant behavioural database in the world — and the guides here know individual animals by name.",
-            image: '/images/parks/kenya/amboseli/amboseli-elephants.jpg',
+            image: '/images/parks/kenya/amboseli/amboseli-elephants.webp',
           },
           {
             title: 'Observation Hill Sundowners with Kilimanjaro',
             body:
               "Climb Observation Hill at sunset for the definitive Amboseli panorama — Africa's highest peak turning gold and pink behind a sea of elephants at the swamp below. Kilimanjaro is clearest in early morning and late afternoon during the dry months.",
-            image: '/images/parks/kenya/amboseli/sundowner-on-observation-hill-overlooking-mt-kilimanjaro.jpg',
+            image: '/images/parks/kenya/amboseli/sundowner-on-observation-hill-overlooking-mt-kilimanjaro.webp',
           },
           {
             title: 'Swamp & Wetland Birdlife',
             body:
               "Amboseli's permanent swamps — fed year-round by Kilimanjaro's snowmelt — host pelicans, flamingos, herons, sacred ibis and over 600 bird species. The swamps also draw lion and cheetah that hunt the waterbirds and wading birds at the water's edge.",
-            image: '/images/parks/kenya/amboseli/amboseli-waterhole.jpg',
+            image: '/images/parks/kenya/amboseli/amboseli-waterhole.webp',
           },
         ],
         activities: [
@@ -1805,18 +1805,18 @@ export const countries: Record<string, Country> = {
             title: 'Stay at ol Donyo Lodge',
             body:
               "Great Plains' spectacular property in the Chyulu Hills with hide-walking, horseriding and Maasai cultural visits — the most complete safari experience in the greater Amboseli ecosystem.",
-            image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.jpg',
+            image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.webp',
           },
           {
             title: 'Stay at Elewana Tortilis Camp',
             body: 'Inside the park boundary with Kilimanjaro views from every tent — the most photogenic lodge in Amboseli and the closest to the iconic elephant herds.',
-            image: '/images/lodges/kenya/amboseli-national-park/elewana-tortilis-camp-amboseli/elewana-tortilis-camp-amboseli-1.jpg',
+            image: '/images/lodges/kenya/amboseli-national-park/elewana-tortilis-camp-amboseli/elewana-tortilis-camp-amboseli-1.webp',
           },
           {
             title: 'Maasai Cultural Village Visit',
             body:
               'Spend a morning with a local Maasai community — traditional homestead, warrior demonstrations and beadwork. The pastoral Maasai culture has coexisted with Amboseli wildlife for centuries and adds rich human depth to the safari experience.',
-            image: '/images/parks/kenya/amboseli/view-from-observation-hill.jpg',
+            image: '/images/parks/kenya/amboseli/view-from-observation-hill.webp',
           },
         ],
         faqs: [
@@ -1843,7 +1843,7 @@ export const countries: Record<string, Country> = {
         name: 'Laikipia & Loisaba',
         blurb:
           "A 9,500 km² conservancy mosaic north of Mount Kenya — home to half of Kenya's black rhino, all of its Grevy's zebras, and some of the most innovative community-led conservation work in Africa.",
-        image: '/images/parks/kenya/laikipia-loisaba/1752747854365-kenya-suyian-lodge-exterior-elephant-view-8.jpg',
+        image: '/images/parks/kenya/laikipia-loisaba/1752747854365-kenya-suyian-lodge-exterior-elephant-view-8.webp',
         location: 'Central Kenya',
         size: '9,500 km² (private conservancies)',
         altitude: '1,500 — 2,500 m',
@@ -1854,29 +1854,29 @@ export const countries: Record<string, Country> = {
           {
             title: 'Rhino Conservation',
             body: "Visit Lewa, Borana and Ol Pejeta — the conservancies that pioneered private rhino protection in Kenya.",
-            image: '/images/lodges/kenya/lakipia/elewana-kifaru-house/1770879317943whiterhino-elewanacar.jpg',
+            image: '/images/lodges/kenya/lakipia/elewana-kifaru-house/1770879317943whiterhino-elewanacar.webp',
           },
           {
             title: 'Walking & Horseback Safaris',
             body: "Laikipia is one of the few places in East Africa where horseback safari is offered — a quiet, low-impact way to cross the savannah.",
-            image: '/images/lodges/kenya/lakipia/lewa-wilderness/fly-camping-star-dome.jpg',
+            image: '/images/lodges/kenya/lakipia/lewa-wilderness/fly-camping-star-dome.webp',
           },
           {
             title: "Grevy's Zebra Spotting",
             body: "The endangered Grevy's zebra has its global stronghold across Laikipia and Samburu — distinctive and beautiful.",
-            image: '/images/parks/kenya/samburu/grevys-zebra-1.jpg',
+            image: '/images/parks/kenya/samburu/grevys-zebra-1.webp',
           },
         ],
         activities: [
           {
             title: 'Stay at Sirikoi',
             body: 'A small, family-run gem inside Lewa — personal, authentic, and exceptional in every detail.',
-            image: '/images/lodges/kenya/lakipia/sirikoi-lodge-kenya/1744025471001-2024-cottage-outside-dec-sunset.jpg',
+            image: '/images/lodges/kenya/lakipia/sirikoi-lodge-kenya/1744025471001-2024-cottage-outside-dec-sunset.webp',
           },
           {
             title: 'Stay at Segera Retreat',
             body: "An art-filled, sustainability-driven retreat in the heart of Laikipia with private spa villas and the renowned ZEITZ Foundation art collection.",
-            image: '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.jpg',
+            image: '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.webp',
           },
         ],
         faqs: [
@@ -1899,7 +1899,7 @@ export const countries: Record<string, Country> = {
         name: 'Samburu National Reserve',
         blurb:
           "Kenya's remote northern frontier — home to the Samburu Special Five (Grevy's zebra, reticulated giraffe, gerenuk, beisa oryx and Somali ostrich) found nowhere else in the region, in a dramatic landscape defined by the Ewaso Ng'iro River.",
-        image: '/images/parks/kenya/samburu/grevys-zebra-1.jpg',
+        image: '/images/parks/kenya/samburu/grevys-zebra-1.webp',
         location: 'Northern Kenya',
         size: '165 km² (plus surrounding conservancies)',
         altitude: '800 — 1,250 m',
@@ -1911,19 +1911,19 @@ export const countries: Record<string, Country> = {
             title: 'Samburu Special Five Game Drive',
             body:
               "Five iconic dry-country species found only in Kenya's northern frontier: reticulated giraffe, Grevy's zebra, Somali ostrich, beisa oryx and gerenuk. Dedicated drives with specialist northern Kenya guides offer the best opportunity to observe all five in a single morning.",
-            image: '/images/parks/kenya/samburu/grevys-zebra.jpg',
+            image: '/images/parks/kenya/samburu/grevys-zebra.webp',
           },
           {
             title: "Ewaso Ng'iro River Drive",
             body:
               "Follow the river's course as elephants drink at dawn, crocodiles bask on the banks and leopard rest in the doum palm and acacia trees. The Ewaso Ng'iro is the lifeblood of the reserve — a constant theatre of wildlife in one of East Africa's most photogenic riverside habitats.",
-            image: '/images/parks/kenya/samburu/sasaab-1.jpg',
+            image: '/images/parks/kenya/samburu/sasaab-1.webp',
           },
           {
             title: 'Leopard Tracking',
             body:
               "Samburu has one of the highest leopard sighting rates in Kenya. Leopards are regularly seen resting in the riverside acacia and doum palm trees along the Ewaso Ng'iro — making sightings far more predictable than in most other Kenyan parks. Samburu's guides are expert trackers.",
-            image: '/images/parks/kenya/samburu/kenya-8346.jpg',
+            image: '/images/parks/kenya/samburu/kenya-8346.webp',
           },
         ],
         activities: [
@@ -1931,19 +1931,19 @@ export const countries: Record<string, Country> = {
             title: 'Stay at Sasaab',
             body:
               "The Safari Collection's Moroccan-inspired villa-style lodge above the Ewaso Ng'iro — vast open-air suites with private plunge pools and one of the most distinctive architectural addresses in northern Kenya.",
-            image: '/images/parks/kenya/samburu/sasaab.jpg',
+            image: '/images/parks/kenya/samburu/sasaab.webp',
           },
           {
             title: 'Camel-Back Bush Walks',
             body:
               "A relaxed half-day walking safari with a string of pack camels — the Samburu way of crossing the bush, with bush breakfast served on a riverbank. A genuinely immersive and culturally authentic experience.",
-            image: '/images/parks/kenya/laikipia-loisaba/1752747977434-kenya-suyian-conservancy-walk-with-camels-5.jpg',
+            image: '/images/parks/kenya/laikipia-loisaba/1752747977434-kenya-suyian-conservancy-walk-with-camels-5.webp',
           },
           {
             title: 'Samburu Cultural Village Visit',
             body:
               "A genuine, unstaged visit to a Samburu manyatta — meeting warrior families and seeing the extraordinary beaded jewellery, warrior demonstrations and the everyday life of a semi-nomadic pastoralist community whose culture is distinct from the Maasai despite their relatedness.",
-            image: '/images/parks/kenya/samburu/samburu-village-visit-residents.jpg',
+            image: '/images/parks/kenya/samburu/samburu-village-visit-residents.webp',
           },
         ],
         faqs: [
@@ -1970,7 +1970,7 @@ export const countries: Record<string, Country> = {
         name: 'Tsavo National Park',
         blurb:
           "Kenya's largest park — a vast, red-earth wilderness famous for its 'red elephants' coated in Tsavo's distinctive dust, and for raw, uncrowded wildness.",
-        image: '/images/parks/kenya/tsavo/1736494647848-4z6a7096.jpg',
+        image: '/images/parks/kenya/tsavo/1736494647848-4z6a7096.webp',
         location: 'Southern Kenya',
         size: '21,812 km²',
         altitude: '230 — 2,400 m',
@@ -1981,34 +1981,34 @@ export const countries: Record<string, Country> = {
           {
             title: '“Red Elephants” of Tsavo',
             body: "Tsavo's iron-rich red dust coats the elephants who bathe in it — yielding the iconic ochre-skinned giants the park is famous for. Herds along the Galana River are a sure sighting.",
-            image: '/images/parks/kenya/tsavo/1736494647848-4z6a7096.jpg',
+            image: '/images/parks/kenya/tsavo/1736494647848-4z6a7096.webp',
           },
           {
             title: 'Mzima Springs',
             body: 'Crystal-clear, hippo-filled springs welling up at the base of the Chyulu Hills — viewable from a partly submerged glass tank, one of the more unusual experiences in East Africa.',
-            image: '/images/parks/kenya/tsavo/1736494647850-dzf3773.jpg',
+            image: '/images/parks/kenya/tsavo/1736494647850-dzf3773.webp',
           },
           {
             title: 'Lugard Falls & Yatta Plateau',
             body: "The fissure-falls on the Galana River and the world\'s longest lava flow at Yatta — Tsavo\'s scale is geological as much as wild.",
-            image: '/images/parks/kenya/tsavo/1736494647851-img-8731.jpg',
+            image: '/images/parks/kenya/tsavo/1736494647851-img-8731.webp',
           },
         ],
         activities: [
           {
             title: 'Combined Tsavo & Coast Itinerary',
             body: 'Fly from the Mara or Nairobi straight into Tsavo for two nights of raw wilderness, then onward to the Lamu archipelago or Diani for a beach finish — the classic “bush-and-beach” combination.',
-            image: '/images/parks/kenya/tsavo/1736494647851-img-8731.jpg',
+            image: '/images/parks/kenya/tsavo/1736494647851-img-8731.webp',
           },
           {
             title: 'Walking Safari',
             body: "Tsavo's vast wilderness lends itself to walking with specialist guides — an evening hike to a fly-camp on the riverbank is one of the most authentic experiences in Kenya.",
-            image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.jpg',
+            image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.webp',
           },
           {
             title: 'Chyulu Hills Riding & Hiking',
             body: 'Tsavo West blurs into the Chyulu Hills — open volcanic grasslands ideal for horseriding and walking from ol Donyo Lodge.',
-            image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.jpg',
+            image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.webp',
           },
         ],
         faqs: [
@@ -2031,7 +2031,7 @@ export const countries: Record<string, Country> = {
         name: 'Lake Nakuru National Park',
         blurb:
           "A compact soda lake sanctuary in the heart of the Great Rift Valley — famous for its dramatic flamingo flocks, Kenya's best rhino viewing, and remarkable wildlife diversity packed into just 188 square kilometres.",
-        image: '/images/parks/kenya/lake-nakuru/flamingos-lake-nakuru.jpg',
+        image: '/images/parks/kenya/lake-nakuru/flamingos-lake-nakuru.webp',
         location: 'Central Kenya, Rift Valley',
         size: '188 km²',
         altitude: '1,760 m',
@@ -2043,19 +2043,19 @@ export const countries: Record<string, Country> = {
             title: 'Flamingo Shore Drive',
             body:
               "Drive the lake's perimeter road scanning for flamingo concentrations, pelican flocks and the extraordinary diversity of Nakuru's waterbirds. The pink wash of thousands of lesser flamingos against the alkaline white shore is one of Kenya's most photographed natural spectacles.",
-            image: '/images/parks/kenya/lake-nakuru/flamingos-lake-nakuru.jpg',
+            image: '/images/parks/kenya/lake-nakuru/flamingos-lake-nakuru.webp',
           },
           {
             title: 'Rhino Tracking',
             body:
               "Focus a dedicated game drive on tracking Nakuru's black and white rhino populations — one of Kenya's best rhino viewing opportunities. The park's electric security fence has created one of the highest rhino densities in Africa, and sightings are excellent year-round.",
-            image: '/images/parks/kenya/lake-nakuru/rhinos-lake-nakuru.jpg',
+            image: '/images/parks/kenya/lake-nakuru/rhinos-lake-nakuru.webp',
           },
           {
             title: "Baboon Cliff & Rothschild's Giraffe",
             body:
               "Drive to Baboon Cliff, the park's signature panoramic viewpoint, for a sweeping view of the entire lake and Rift Valley floor. Then photograph the elegant and endangered Rothschild's giraffe against the lake backdrop — an image unique to Nakuru.",
-            image: '/images/parks/kenya/lake-nakuru/baboon-cliff-view.jpg',
+            image: '/images/parks/kenya/lake-nakuru/baboon-cliff-view.webp',
           },
         ],
         activities: [
@@ -2063,19 +2063,19 @@ export const countries: Record<string, Country> = {
             title: 'Leopard & Lion Tracking',
             body:
               "The lake-shore forest is excellent leopard habitat — the park's resident individuals are regularly spotted in forest trees and rocky outcrops. Nakuru's lion pride is also regularly located by guides in the woodland and grassland habitats.",
-            image: '/images/lodges/kenya/lake-nakuru-national-park/the-cliff/The Cliff_3.jpg',
+            image: '/images/lodges/kenya/lake-nakuru-national-park/the-cliff/The Cliff_3.webp',
           },
           {
             title: 'Stay at Sarova Lion Hill',
             body:
               "Perched on Lion Hill with panoramic views over the lake and savannah — the classic Nakuru lodge address, combining comfort with direct park access and excellent guiding.",
-            image: '/images/lodges/kenya/lake-nakuru-national-park/the-cliff/The Cliff_1.jpg',
+            image: '/images/lodges/kenya/lake-nakuru-national-park/the-cliff/The Cliff_1.webp',
           },
           {
             title: 'Rift Valley Two-Lake Circuit',
             body:
               "Combine Lake Nakuru with Lake Naivasha (60km south) and Lake Bogoria for a scenic Rift Valley circuit — the flamingos, hot springs and geysers of Bogoria alongside Nakuru's rhinos make one of Kenya's finest scenic road journeys.",
-            image: '/images/lodges/kenya/lake-nakuru-national-park/loldia-house-1/Governors Loldia House.jpg',
+            image: '/images/lodges/kenya/lake-nakuru-national-park/loldia-house-1/Governors Loldia House.webp',
           },
         ],
         faqs: [
@@ -2102,7 +2102,7 @@ export const countries: Record<string, Country> = {
         name: 'Nairobi',
         blurb:
           "Africa's safari capital — a dynamic metropolis where lions and rhinos roam in a national park on the city's doorstep, elephant orphans are bottle-fed at 11am, and giraffes join guests for breakfast.",
-        image: '/images/lodges/kenya/nairobi/giraffe-manor/a-spot-of-tea-and-a-giraffe.jpg',
+        image: '/images/lodges/kenya/nairobi/giraffe-manor/a-spot-of-tea-and-a-giraffe.webp',
         location: 'Central Kenya',
         size: 'Metropolitan city at 1,660 m elevation',
         altitude: '1,660 m',
@@ -2114,19 +2114,19 @@ export const countries: Record<string, Country> = {
             title: 'Nairobi National Park Game Drive',
             body:
               "A morning game drive through the world's only capital city wildlife park, with good chances of lion, leopard, rhino, buffalo and giraffe against the city skyline. The juxtaposition of wild animals and glass towers is genuinely unlike anything else in Africa.",
-            image: '/images/parks/kenya/masai-mara/activites-game-drive.jpg',
+            image: '/images/parks/kenya/masai-mara/activites-game-drive.webp',
           },
           {
             title: 'David Sheldrick Elephant Orphanage',
             body:
               "Attend the daily 11:00am visiting hours to watch orphaned elephant calves being bottle-fed and mud-bathed by their dedicated keepers. The world's most successful elephant orphanage and one of Africa's most moving wildlife encounters.",
-            image: '/images/parks/kenya/amboseli/amboseli-elephants.jpg',
+            image: '/images/parks/kenya/amboseli/amboseli-elephants.webp',
           },
           {
             title: 'Giraffe Centre',
             body:
               "Hand-feed Rothschild's giraffes from an elevated platform at the AFEW Giraffe Centre — one of Africa's most joyful and photogenic wildlife experiences. The same endangered subspecies featured at Giraffe Manor joins guests for an intimate eye-level encounter.",
-            image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-popping-in-for-treats.jpg',
+            image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-popping-in-for-treats.webp',
           },
         ],
         activities: [
@@ -2134,19 +2134,19 @@ export const countries: Record<string, Country> = {
             title: 'Stay at Giraffe Manor',
             body:
               "East Africa's most iconic boutique hotel — resident Rothschild's giraffes poke their heads through breakfast windows and join guests for sundowners. Booking typically required 18+ months in advance. The ultimate Nairobi arrival or farewell experience.",
-            image: '/images/lodges/kenya/nairobi/giraffe-manor/afternoon-tea-experience.jpg',
+            image: '/images/lodges/kenya/nairobi/giraffe-manor/afternoon-tea-experience.webp',
           },
           {
             title: 'Karen Blixen Museum',
             body:
               "Tour the beautifully preserved farmhouse where Karen Blixen lived and wrote Out of Africa, surrounded by the Ngong Hills she described. An essential cultural visit combining colonial history with the landscape that inspired one of Africa's most celebrated memoirs.",
-            image: '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.jpg',
+            image: '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.webp',
           },
           {
             title: 'Stay at The Emakoko',
             body:
               "Safari-edge luxury right on the Nairobi National Park boundary — direct park access, game-viewing decks over the Mbagathi River, and a genuine wild atmosphere within minutes of the city centre.",
-            image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-at-giraffe-manor-1.jpg',
+            image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-at-giraffe-manor-1.webp',
           },
         ],
         faqs: [
@@ -2174,19 +2174,19 @@ export const countries: Record<string, Country> = {
         title: 'Hot-Air Balloon Safari at Sunrise',
         location: 'Masai Mara Private Conservancy, SW Kenya',
         body: 'An exclusively arranged early-morning balloon flight over private conservancy land — launching before the public balloon companies depart. You float in near-silence over lions, elephants, and golden grasslands, landing on the open plain for a private champagne bush breakfast as the African sun fully rises.',
-        image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
+        image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.webp',
       },
       {
         title: 'Anti-Poaching Unit Field Morning',
         location: 'Laikipia Private Conservancy, Central Kenya',
         body: "Join a ranger team for a four-hour morning patrol across private conservancy land. You will track, observe, and learn about the front-line reality of Kenya's wildlife protection — how technology, community informants, and ranger expertise combine to protect rhinos and elephants.",
-        image: '/images/lodges/kenya/lakipia/elewana-kifaru-house/1770879317943whiterhino-elewanacar.jpg',
+        image: '/images/lodges/kenya/lakipia/elewana-kifaru-house/1770879317943whiterhino-elewanacar.webp',
       },
       {
         title: 'Private Riverside Fly-Camp on the Ewaso Nyiro',
         location: 'Samburu National Reserve, N Kenya',
         body: 'A private one-night fly-camp on a sandbank beside the Ewaso Nyiro River — available to no more than two guests. Your personal ranger accompanies you from sunset, when elephant and crocodile patrol the opposite bank, through a night of river sounds, to dawn when the birds begin on the water.',
-        image: '/images/parks/kenya/samburu/grevys-zebra-1.jpg',
+        image: '/images/parks/kenya/samburu/grevys-zebra-1.webp',
       },
     ],
     lodges: [
@@ -2194,37 +2194,37 @@ export const countries: Record<string, Country> = {
         name: 'Angama Mara',
         location: 'Mara Triangle, Masai Mara Conservancy',
         body: 'Suspended on the Rift Valley escarpment with the most dramatic Mara views available. Private conservancy access, exceptional guide team.',
-        image: '/images/lodges/kenya/masai-mara/angama-mara/a-rocking-chair-safari.jpg',
+        image: '/images/lodges/kenya/masai-mara/angama-mara/a-rocking-chair-safari.webp',
       },
       {
         name: 'Mahali Mzuri',
         location: 'Mara North Conservancy',
         body: "Sir Richard Branson's private camp — 12 tented suites on an exclusive conservancy with zero shared game drives, ever.",
-        image: '/images/lodges/kenya/masai-mara/mahali-mzuri/bush-sundowners.jpg',
+        image: '/images/lodges/kenya/masai-mara/mahali-mzuri/bush-sundowners.webp',
       },
       {
         name: 'Sasaab Lodge',
         location: 'Samburu District',
         body: 'Moroccan-influenced retreat on the Ewaso Nyiro River with private plunge pools overlooking elephant-rich riverine forest.',
-        image: '/images/lodges/kenya/sasaab/images/aerial-view-of-sasaab.jpg',
+        image: '/images/lodges/kenya/sasaab/images/aerial-view-of-sasaab.webp',
       },
       {
         name: 'Segera Retreat',
         location: 'Laikipia Plateau',
         body: "A 50,000-acre conservancy featuring Africa's finest contemporary art collection and community conservation on an extraordinary scale.",
-        image: '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.jpg',
+        image: '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.webp',
       },
       {
         name: 'Giraffe Manor',
         location: 'Nairobi',
         body: "East Africa's most iconic boutique hotel. Resident Rothschild giraffes appear at breakfast — the ultimate arrival or farewell experience.",
-        image: '/images/lodges/kenya/nairobi/giraffe-manor/a-spot-of-tea-and-a-giraffe.jpg',
+        image: '/images/lodges/kenya/nairobi/giraffe-manor/a-spot-of-tea-and-a-giraffe.webp',
       },
       {
         name: 'The Emakoko',
         location: 'Nairobi National Park Edge',
         body: 'City convenience meets genuine wilderness — an ideal gateway or farewell property with direct access to Nairobi National Park.',
-        image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
+        image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.webp',
       },
     ],
     seoKeywords:
@@ -2326,7 +2326,7 @@ export const countries: Record<string, Country> = {
     heroTitle: 'The Serengeti Eternal\nAfrica in Its Most Original State',
     heroSubtitle:
       "No country holds as much concentrated, uninterrupted wilderness as Tanzania. From the infinite Serengeti where 1.5 million wildebeest move in ancient circular rhythm, to the world's largest intact volcanic caldera at Ngorongoro, the remote wild south, and the spice-scented Indian Ocean coast of Zanzibar — Tanzania is not merely a safari. It is the Earth in its most original state.",
-    heroImage: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg',
+    heroImage: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.webp',
     exploreIntro:
       'From the Great Migration of the Serengeti to the remote river safaris of Nyerere, Tanzania offers the full spectrum of the African wild — curated through private concessions and exclusive camps.',
     parkSummary:
@@ -2338,19 +2338,19 @@ export const countries: Record<string, Country> = {
         title: 'Private Migration Crossing with Sayari Camp',
         location: 'Serengeti (Northern Mara River)',
         body: 'A Mara River crossing viewed from a private vehicle with just your guide — no queues, no competing vehicles. Sayari Camp positions guests based on daily herd intelligence from our partner rangers on the ground.',
-        image: '/images/destinations/tanzania/sayari-game-drive-with-hyena-viewing1.jpg',
+        image: '/images/destinations/tanzania/sayari-game-drive-with-hyena-viewing1.webp',
       },
       {
         title: 'Wild Dog Tracking with the Research Team',
         location: 'Nyerere National Park',
         body: 'Join a specialist researcher for a morning tracking the wild-dog packs of the Rufiji ecosystem — collared packs, telemetry equipment, and the kind of behavioural insight you cannot get from a standard game drive.',
-        image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.jpg',
+        image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.webp',
       },
       {
         title: 'Rubondo Island Chimp Habituation Walk',
         location: 'Rubondo Island National Park',
         body: "Access the chimp habituation programme with the island\'s resident researchers — a morning in the forest with the team, learning how a wild community is slowly brought into human company.",
-        image: '/images/destinations/tanzania/rubondo-island-camp-chimp.jpg',
+        image: '/images/destinations/tanzania/rubondo-island-camp-chimp.webp',
       },
     ],
     lodges: [
@@ -2358,37 +2358,37 @@ export const countries: Record<string, Country> = {
         name: 'Singita Grumeti',
         location: 'Western Serengeti',
         body: 'A private concession of 350,000 acres with four distinct camps. Unmatched migration-season access across the entire Serengeti ecosystem.',
-        image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.jpg',
+        image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.webp',
       },
       {
         name: 'Nomad Tanzania Lamai',
         location: 'Northern Serengeti',
         body: "Positioned in the migration corridor's most productive crossing section — an intimate camp with exceptional big-cat and crossing sightings.",
-        image: '/images/destinations/tanzania/sayari-game-drive-with-hyena-viewing1.jpg',
+        image: '/images/destinations/tanzania/sayari-game-drive-with-hyena-viewing1.webp',
       },
       {
         name: 'Ngorongoro Crater Lodge',
         location: 'Ngorongoro Crater Rim',
         body: 'Three camps perched on the crater rim with butler service, open-fire boudoirs, and the crater floor unfolding 600 metres below your private veranda.',
-        image: '/images/destinations/tanzania/dunia-view-from-the-main-area.jpg',
+        image: '/images/destinations/tanzania/dunia-view-from-the-main-area.webp',
       },
       {
         name: 'Jongomero Camp',
         location: 'Ruaha National Park',
         body: 'Eight exclusive tented suites on the Jongomero River — wild dogs, lions, and elephant, with zero other camps in visible range.',
-        image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.jpg',
+        image: '/images/activities/game-drive/roho-ya-selous-wild-dogs.webp',
       },
       {
         name: 'Roho ya Selous',
         location: 'Nyerere National Park',
         body: "Private sand-bank camp on the Rufiji River with boat safaris, walking safaris, and total seclusion inside Africa's largest game reserve.",
-        image: '/images/activities/big-five/roho-ya-selous-elephant.jpg',
+        image: '/images/activities/big-five/roho-ya-selous-elephant.webp',
       },
       {
         name: 'The Manta Resort',
         location: 'Pemba Island, Zanzibar Archipelago',
         body: "Africa's legendary underwater room — a private floating suite anchored above a coral reef with the Indian Ocean as your entire horizon.",
-        image: '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
+        image: '/images/destinations/tanzania/rubondo-island-camp-beach.webp',
       },
     ],
     seoKeywords:
@@ -2420,7 +2420,7 @@ export const countries: Record<string, Country> = {
       {
         dates: 'Jun – Oct',
         name: 'The Dry Season',
-        image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.jpg',
+        image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.webp',
         wildlife: 'Migration Crossings · Predators · All Big Five',
         description:
           "The premier safari season. Clear skies and sparse vegetation make wildlife viewing exceptional across all parks. Mara River crossings peak July–September in the northern Serengeti — one of nature's most intense spectacles.",
@@ -2428,7 +2428,7 @@ export const countries: Record<string, Country> = {
       {
         dates: 'Nov – Dec',
         name: 'Short Green Season',
-        image: '/images/destinations/tanzania/dunia-game-drive.jpg',
+        image: '/images/destinations/tanzania/dunia-game-drive.webp',
         wildlife: 'Migratory Birds · Lush Landscapes · Newborn Calves',
         description:
           'Short rains transform the landscape to emerald. Far fewer guests, lower rates, and the arrival of thousands of migratory birds. The southern Serengeti sees the first calving action begin in December.',
@@ -2436,7 +2436,7 @@ export const countries: Record<string, Country> = {
       {
         dates: 'Jan – Feb',
         name: 'The Calving Season',
-        image: '/images/destinations/tanzania/sayari-lioness.jpg',
+        image: '/images/destinations/tanzania/sayari-lioness.webp',
         wildlife: 'Wildebeest Calves · Cheetah · Lion · Hyena',
         description:
           'Roughly 8,000 wildebeest calves are born every day in the southern Serengeti. The concentration of predators — cheetah, lion, hyena — creates some of the most intense natural drama on earth.',

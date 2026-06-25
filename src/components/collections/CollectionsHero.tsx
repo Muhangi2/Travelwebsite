@@ -23,6 +23,7 @@ export default function CollectionsHero() {
         alt={hero.imageAlt ?? hero.heading}
         className="absolute inset-0 -z-10 h-full w-full object-cover motion-safe:animate-[fadeIn_1.2s_ease-out]"
         fetchPriority="high"
+        loading="eager"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/45 to-black/70" />
 

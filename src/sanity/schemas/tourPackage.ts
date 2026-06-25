@@ -99,7 +99,7 @@ export const tourPackageType = defineType({
     }),
     defineField({
       name: 'days',
-      title: 'Itinerary days',
+      title: 'Itinenary days',
       type: 'array',
       of: [{ type: 'journeyDay' }],
       description: 'Add one entry per day in order. Required to display the full itinerary on the detail page.',

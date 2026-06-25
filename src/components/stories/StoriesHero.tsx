@@ -21,6 +21,7 @@ export default function StoriesHero() {
         alt={hero.imageAlt ?? hero.heading}
         className="absolute inset-0 -z-10 h-full w-full object-cover motion-safe:animate-[fadeIn_1.2s_ease-out]"
         fetchPriority="high"
+        loading="eager"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/35 to-black/65" />
 

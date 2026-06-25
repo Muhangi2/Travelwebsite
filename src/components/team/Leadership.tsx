@@ -1,33 +1,31 @@
 import TeamMemberCard, { type TeamMember } from './TeamMemberCard'
-import Reveal, { Stagger } from '@/components/ui/Reveal'
+import Reveal from '@/components/ui/Reveal'
 
 const leadership: TeamMember[] = [
   {
     name: 'James Mitchell',
     role: 'The Director',
     bio: "As the visionary Director, James provides the strategic direction and long-term planning that guides our company. His focus is on ensuring sustainable growth, maintaining the highest standards of service, and fostering a culture of excellence and innovation across all operations.",
-    quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  },
-  {
-    name: 'Kagabo Habimana',
-    role: 'Co-director',
-    bio: "Working closely with the Director, Kagabo is the operational backbone of the entire team. The Co-director is responsible for the day-to-day execution of our strategy, optimizing internal processes, and ensuring seamless coordination between all departments to deliver exceptional client experiences.",
-    quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    quote: 'A great safari begins long before the plane lands.',
   },
 ]
 
 export default function Leadership() {
   return (
-    <section className="bg-white pb-16">
-      <div className="mx-auto max-w-4xl px-6">
+    <section className="bg-white py-10">
+      <div className="container-page max-w-5xl">
         <Reveal>
-          <h2 className="text-center">The Leadership</h2>
+          <div className="mb-8 flex items-center gap-4">
+            <div className="h-px flex-1 bg-neutral-200" />
+            <p className="eyebrow">Leadership</p>
+            <div className="h-px flex-1 bg-neutral-200" />
+          </div>
         </Reveal>
-        <Stagger className="cards-scroll-2 mt-10 gap-6">
+        <div className="mx-auto max-w-xl">
           {leadership.map((m) => (
             <TeamMemberCard key={m.name} member={m} />
           ))}
-        </Stagger>
+        </div>
       </div>
     </section>
   )

@@ -4,10 +4,8 @@ import { site } from '@/config/site'
 import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
 
 const team = [
-  { name: 'Rick Cheng', role: 'The Director', image: '/images/team/rick-cheng.jpg' },
-  { name: 'Emma Kiiiza', role: 'Marketing Manager', image: '/images/team/emmanuel-kiiza.jpg' },
-  { name: 'Shakirah', role: 'Travel Designer', image: '/images/team/shakirah.jpg' },
-  { name: 'Ahemd', role: 'Co-director', image: '/images/team/ahmed.jpg' },
+  { name: 'James Mitchell', role: 'The Director' },
+  { name: 'Nakato Namukasa', role: 'Marketing Manager' },
 ]
 
 export default function TeamCTA() {
@@ -74,11 +72,13 @@ export default function TeamCTA() {
   )
 }
 
-function Member({ name, role, image }: { name: string; role: string; image: string }) {
+function Member({ name, role }: { name: string; role: string }) {
   return (
     <NavLink to="/meet-the-team" className="group flex flex-col items-center text-center">
-      <div className="h-20 w-20 overflow-hidden rounded-full bg-neutral-200 ring-2 ring-white/40 transition group-hover:ring-white sm:h-24 sm:w-24">
-        <Picture src={image} alt={name} loading="lazy" imgClassName="h-full w-full object-cover" />
+      <div className="h-20 w-20 overflow-hidden rounded-full bg-white/20 ring-2 ring-white/40 transition group-hover:ring-white sm:h-24 sm:w-24">
+        <svg viewBox="0 0 24 24" fill="currentColor" className="h-full w-full text-white/50">
+          <path d="M12 2a5 5 0 100 10 5 5 0 000-10zM2 22c0-5.523 4.477-10 10-10s10 4.477 10 10H2z" />
+        </svg>
       </div>
       <p className="mt-3 font-serif text-sm sm:text-base">{name}</p>
       <p className="text-[10px] text-white/70 sm:text-xs">{role}</p>

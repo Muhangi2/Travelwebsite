@@ -9,7 +9,7 @@ export default function ArchitectsOfJourney() {
           <Reveal variant="left">
             <div className="img-zoom overflow-hidden rounded-md shadow-md">
               <Picture
-                src="/images/team/ahmed.jpg"
+                src="/images/parks/kenya/amboseli/amboseli-elephants.jpg"
                 alt="Safari planning"
                 className="object-cover"
                 loading="lazy"

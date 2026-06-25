@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Journey into the mist-shrouded forests of Uganda and Rwanda for a profound, luxury encounter with mountain gorillas.',
     cta: 'Explore Gorilla Trekking',
-    image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+    image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
     tagline:
       'A guided, hour-long audience with one of Earth’s last 1,000 mountain gorillas — in the mountains where they were first protected.',
     intro: [
@@ -52,28 +52,28 @@ export const experiences: Experience[] = [
         country: 'Uganda',
         description:
           'Home to nearly half of the world’s mountain gorillas. Four sectors — Buhoma, Ruhija, Rushaga, Nkuringo — each with different habituated families and varying trek difficulty.',
-        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+        image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
         name: 'Volcanoes National Park',
         country: 'Rwanda',
         description:
           'The setting of Dian Fossey’s research. Treks begin at high altitude with views of the Virunga volcanoes, and lodges sit minutes from the park boundary.',
-        image: '/images/activities/gorilla-trekking/27-virunga-lodge-goriila-rf-0464.jpg',
+        image: '/images/activities/gorilla-trekking/27-virunga-lodge-goriila-rf-0464.webp',
       },
       {
         name: 'Mgahinga Gorilla Park',
         country: 'Uganda',
         description:
           'The quiet alternative — one habituated family, dramatic Virunga scenery and the chance to combine gorilla and golden monkey treks in one day.',
-        image: '/images/activities/gorilla-trekking/34-mount-gahinga-lodge-gorilla.jpg',
+        image: '/images/activities/gorilla-trekking/34-mount-gahinga-lodge-gorilla.webp',
       },
     ],
     gallery: [
-      '/images/activities/gorilla-trekking/27-virunga-lodge-goriila-rf-0464.jpg',
-      '/images/activities/gorilla-trekking/30-mount-gahinga-lodge-gorilla.jpg',
-      '/images/activities/gorilla-trekking/31-mount-gahinga-lodge-gorilla.jpg',
-      '/images/activities/gorilla-trekking/32-mount-gahinga-lodge-gorilla.jpg',
+      '/images/activities/gorilla-trekking/27-virunga-lodge-goriila-rf-0464.webp',
+      '/images/activities/gorilla-trekking/30-mount-gahinga-lodge-gorilla.webp',
+      '/images/activities/gorilla-trekking/31-mount-gahinga-lodge-gorilla.webp',
+      '/images/activities/gorilla-trekking/32-mount-gahinga-lodge-gorilla.webp',
     ],
   },
   {
@@ -84,7 +84,7 @@ export const experiences: Experience[] = [
     excerpt:
       "Witness the captivating intelligence of chimpanzees in their natural habitat in Uganda's Kibale or Rwanda's Nyungwe Forest.",
     cta: 'Discover Chimpanzee Expeditions',
-    image: '/images/destinations/tanzania/chimp-habituation-project1.jpg',
+    image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
     tagline:
       'Track our closest living relatives through equatorial forest in Kibale, Nyungwe and Kyambura — where their calls are heard long before they are seen.',
     intro: [
@@ -111,28 +111,28 @@ export const experiences: Experience[] = [
         country: 'Uganda',
         description:
           'The continent’s primate capital — 13 species of primate in one forest, and the world’s most reliable chimpanzee tracking, with habituation experiences available.',
-        image: '/images/activities/gorilla-trekking/18-kibale-lodge-chimpanzee-tadevs-vs-08183.jpg',
+        image: '/images/activities/gorilla-trekking/18-kibale-lodge-chimpanzee-tadevs-vs-08183.webp',
       },
       {
         name: 'Nyungwe Forest',
         country: 'Rwanda',
         description:
           'A montane rainforest with a canopy walkway, 13 primate species, and exceptional birding. Chimp treks can be steep but rewarded with vast forest views.',
-        image: '/images/activities/gorilla-trekking/6-kibale-lodge-chimpanzee-tadevs-vs-08101.jpg',
+        image: '/images/activities/gorilla-trekking/6-kibale-lodge-chimpanzee-tadevs-vs-08101.webp',
       },
       {
         name: 'Kyambura Gorge',
         country: 'Uganda',
         description:
           'A dramatic forested canyon in Queen Elizabeth National Park — combine a half-day chimp trek with afternoon game drives in the same park.',
-        image: '/images/activities/gorilla-trekking/7-kibale-lodge-chimpanzee-tadevs-vs-08284.jpg',
+        image: '/images/activities/gorilla-trekking/7-kibale-lodge-chimpanzee-tadevs-vs-08284.webp',
       },
     ],
     gallery: [
-      '/images/destinations/tanzania/chimp-habituation-project1.jpg',
-      '/images/destinations/tanzania/chimp-habituaion-project1.jpg',
-      '/images/activities/gorilla-trekking/6-kibale-lodge-chimpanzee-tadevs-vs-08101.jpg',
-      '/images/activities/gorilla-trekking/7-kibale-lodge-chimpanzee-tadevs-vs-08284.jpg',
+      '/images/destinations/tanzania/chimp-habituation-project1.webp',
+      '/images/destinations/tanzania/chimp-habituaion-project1.webp',
+      '/images/activities/gorilla-trekking/6-kibale-lodge-chimpanzee-tadevs-vs-08101.webp',
+      '/images/activities/gorilla-trekking/7-kibale-lodge-chimpanzee-tadevs-vs-08284.webp',
     ],
   },
   {
@@ -143,7 +143,7 @@ export const experiences: Experience[] = [
     excerpt:
       "Seek out the elusive and vibrant golden monkeys in Uganda's Mgahinga or Rwanda's Volcanoes National Park for a captivating wildlife experience.",
     cta: 'Learn About Golden Monkey Treks',
-    image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+    image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
     tagline:
       'A bright-orange Old World primate found only on the slopes of the Virunga volcanoes — fast, photogenic and often paired with a gorilla trek.',
     intro: [
@@ -170,21 +170,21 @@ export const experiences: Experience[] = [
         country: 'Uganda',
         description:
           'The quieter of the two — habituated troops on the slopes of Sabyinyo and Gahinga, accessed from Mount Gahinga Lodge.',
-        image: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.jpg',
+        image: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.webp',
       },
       {
         name: 'Volcanoes National Park',
         country: 'Rwanda',
         description:
           'Larger habituated troops at the base of Karisimbi and Bisoke, easy to combine with gorilla treks from Bisate or Sabyinyo Silverback lodges.',
-        image: '/images/activities/gorilla-trekking/36-mount-gahinga-lodge-golden-monkey.jpg',
+        image: '/images/activities/gorilla-trekking/36-mount-gahinga-lodge-golden-monkey.webp',
       },
     ],
     gallery: [
-      '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
-      '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.jpg',
-      '/images/activities/gorilla-trekking/36-mount-gahinga-lodge-golden-monkey.jpg',
-      '/images/activities/gorilla-trekking/37-mount-gahinga-lodge-golden-monkey.jpg',
+      '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
+      '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.webp',
+      '/images/activities/gorilla-trekking/36-mount-gahinga-lodge-golden-monkey.webp',
+      '/images/activities/gorilla-trekking/37-mount-gahinga-lodge-golden-monkey.webp',
     ],
   },
   {
@@ -195,7 +195,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Conquer world-class rapids at the source of the Nile in Jinja, Uganda, with luxury rafting packages.',
     cta: 'Plan Your Rafting Adventure',
-    image: '/images/parks/rwanda/akagera/1738327984197-magashi-boating-12-24-tc-021.jpg',
+    image: '/images/parks/rwanda/akagera/1738327984197-magashi-boating-12-24-tc-021.webp',
     tagline:
       'Grade V rapids at the source of the world’s longest river — paired with luxury riverside lodges and private guides.',
     intro: [
@@ -225,9 +225,9 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/parks/rwanda/akagera/1738327984197-magashi-boating-12-24-tc-021.jpg',
-      '/images/parks/rwanda/akagera/1738327984200-magashi-boating-12-24-tc-026.jpg',
-      '/images/parks/rwanda/akagera/1738331396380-magashi-boating-12-24-tc-029.jpg',
+      '/images/parks/rwanda/akagera/1738327984197-magashi-boating-12-24-tc-021.webp',
+      '/images/parks/rwanda/akagera/1738327984200-magashi-boating-12-24-tc-026.webp',
+      '/images/parks/rwanda/akagera/1738331396380-magashi-boating-12-24-tc-029.webp',
     ],
   },
   {
@@ -238,7 +238,7 @@ export const experiences: Experience[] = [
     excerpt:
       "Glide along Uganda's Kazinga Channel, Murchison Falls, or Kenya's Lake Naivasha for intimate wildlife viewing.",
     cta: 'Explore Boat Cruise Safaris',
-    image: '/images/activities/game-drive/boating-safari-hippo-spot2.jpg',
+    image: '/images/activities/game-drive/boating-safari-hippo-spot2.webp',
     tagline:
       'A different vantage on the same wildlife — slow, silent, water-level, and unmatched for elephants, hippos and waterbirds.',
     intro: [
@@ -280,9 +280,9 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/game-drive/boating-safari-hippo-spot2.jpg',
-      '/images/activities/game-drive/boating-safari-roho1.jpg',
-      '/images/parks/rwanda/akagera/1738327984198-magashi-boating-12-24-tc-022.jpg',
+      '/images/activities/game-drive/boating-safari-hippo-spot2.webp',
+      '/images/activities/game-drive/boating-safari-roho1.webp',
+      '/images/parks/rwanda/akagera/1738327984198-magashi-boating-12-24-tc-022.webp',
     ],
   },
   {
@@ -293,7 +293,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Drift silently above the Serengeti or Masai Mara at sunrise, ending in a celebratory bush breakfast.',
     cta: 'Book Your Balloon Experience',
-    image: '/images/activities/game-drive/guest-sundown.jpg',
+    image: '/images/activities/game-drive/guest-sundown.webp',
     tagline:
       'A predawn lift-off, a silent hour over open plains, and a sparkling-wine breakfast laid out beneath an acacia.',
     intro: [
@@ -329,9 +329,9 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/game-drive/guest-sundown.jpg',
-      '/images/activities/game-drive/cocktail.jpg',
-      '/images/activities/game-drive/decking.jpg',
+      '/images/activities/game-drive/guest-sundown.webp',
+      '/images/activities/game-drive/cocktail.webp',
+      '/images/activities/game-drive/decking.webp',
     ],
   },
   {
@@ -342,7 +342,7 @@ export const experiences: Experience[] = [
     excerpt:
       "Immerse yourself in East Africa's living cultures — Batwa, Maasai, Karamojong and many more.",
     cta: 'Discover Cultural Journeys',
-    image: '/images/activities/game-drive/cocktail.jpg',
+    image: '/images/activities/game-drive/cocktail.webp',
     tagline:
       'Authentic, dignified time with communities — beyond the souvenir-stall stereotype, with profit returning to the people you meet.',
     intro: [
@@ -383,7 +383,7 @@ export const experiences: Experience[] = [
           'A remote, rarely-visited pastoralist culture in northeast Uganda — for travellers wanting somewhere genuinely off the map.',
       },
     ],
-    gallery: ['/images/activities/game-drive/cocktail.jpg', '/images/activities/game-drive/picnic.jpg'],
+    gallery: ['/images/activities/game-drive/cocktail.webp', '/images/activities/game-drive/picnic.webp'],
   },
   {
     slug: 'helicopter-safaris',
@@ -393,7 +393,7 @@ export const experiences: Experience[] = [
     excerpt:
       "Private aerial tours and remote landings across East Africa's most spectacular landscapes.",
     cta: 'Plan a Helicopter Safari',
-    image: '/images/activities/helicopter-rwanda/1000045745.jpg',
+    image: '/images/activities/helicopter-rwanda/1000045745.webp',
     tagline:
       'Land on a crater rim. Picnic beside a lake no road reaches. Photograph the migration from 200ft.',
     intro: [
@@ -429,9 +429,9 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/helicopter-rwanda/1000045745.jpg',
-      '/images/activities/helicopter-rwanda/1000045732.jpg',
-      '/images/activities/helicopter-rwanda/1000045744.jpg',
+      '/images/activities/helicopter-rwanda/1000045745.webp',
+      '/images/activities/helicopter-rwanda/1000045732.webp',
+      '/images/activities/helicopter-rwanda/1000045744.webp',
     ],
   },
   {
@@ -442,7 +442,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Private bush flights to opulent lodges and aerial views of iconic national parks.',
     cta: 'Arrange a Fly-In Safari',
-    image: '/images/activities/helicopter-rwanda/1000045745.jpg',
+    image: '/images/activities/helicopter-rwanda/1000045745.webp',
     tagline:
       'Light aircraft hops between parks — turning a 10-hour drive into a 45-minute window seat.',
     intro: [
@@ -478,9 +478,9 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/helicopter-rwanda/1000045745.jpg',
-      '/images/activities/helicopter-rwanda/1000045744.jpg',
-      '/images/activities/helicopter-rwanda/1000045732.jpg',
+      '/images/activities/helicopter-rwanda/1000045745.webp',
+      '/images/activities/helicopter-rwanda/1000045744.webp',
+      '/images/activities/helicopter-rwanda/1000045732.webp',
     ],
   },
   {
@@ -491,7 +491,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Guided by expert armed rangers through Laikipia or Selous to track wildlife on foot.',
     cta: 'Embark on a Walking Safari',
-    image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.jpg',
+    image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.webp',
     tagline:
       'Read tracks at dawn, watch a leopard from 30m on foot, sleep at a mobile fly-camp lit by lanterns.',
     intro: [
@@ -527,9 +527,9 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.jpg',
-      '/images/activities/walking-safari/1752763546179-wildwatch-africa-kenya-suyian-damen-pheiffer-grevy-2339-s-zebra-01.jpg',
-      '/images/activities/walking-safari/1752763546180-wildwatch-africa-kenya-suyian-damen-pheiffer-lion-pride-on-the-open-plains-07.jpg',
+      '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.webp',
+      '/images/activities/walking-safari/1752763546179-wildwatch-africa-kenya-suyian-damen-pheiffer-grevy-2339-s-zebra-01.webp',
+      '/images/activities/walking-safari/1752763546180-wildwatch-africa-kenya-suyian-damen-pheiffer-lion-pride-on-the-open-plains-07.webp',
     ],
   },
   {
@@ -540,7 +540,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Private 4×4s and expert guides through Serengeti, Masai Mara, or Ngorongoro Crater.',
     cta: 'Book a Classic Game Drive',
-    image: '/images/activities/game-drive/asilia-roho-2017-1-1.jpg',
+    image: '/images/activities/game-drive/asilia-roho-2017-1-1.webp',
     tagline:
       'Two drives a day in a private 4×4, with the right guide, in the right park, at the right time.',
     intro: [
@@ -582,10 +582,10 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/game-drive/asilia-roho-2017-1-1.jpg',
-      '/images/activities/game-drive/asilia-roho-2017-17-1.jpg',
-      '/images/activities/game-drive/asilia-roho-2017-49-1.jpg',
-      '/images/activities/game-drive/leopard-singita-sabi-sand-ross-couper-421-2.jpg',
+      '/images/activities/game-drive/asilia-roho-2017-1-1.webp',
+      '/images/activities/game-drive/asilia-roho-2017-17-1.webp',
+      '/images/activities/game-drive/asilia-roho-2017-49-1.webp',
+      '/images/activities/game-drive/leopard-singita-sabi-sand-ross-couper-421-2.webp',
     ],
   },
   {
@@ -596,7 +596,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Spot elusive nocturnal predators with expert trackers and specialised equipment.',
     cta: 'Explore Night Game Drives',
-    image: '/images/activities/game-drive/night-skies-singita-sabi-sand-ross-couper-12.jpg',
+    image: '/images/activities/game-drive/night-skies-singita-sabi-sand-ross-couper-12.webp',
     tagline:
       'A red-filtered spotlight, a sundowner gin, and a different bush entirely after the sun goes down.',
     intro: [
@@ -632,9 +632,9 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/game-drive/night-skies-singita-sabi-sand-ross-couper-12.jpg',
-      '/images/activities/game-drive/night-skies-singita-sabi-sand-ross-couper-2.jpg',
-      '/images/activities/game-drive/leopard-singita-sabi-sand-ross-couper-421-2.jpg',
+      '/images/activities/game-drive/night-skies-singita-sabi-sand-ross-couper-12.webp',
+      '/images/activities/game-drive/night-skies-singita-sabi-sand-ross-couper-2.webp',
+      '/images/activities/game-drive/leopard-singita-sabi-sand-ross-couper-421-2.webp',
     ],
   },
   {
@@ -645,7 +645,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Yoga on savannah decks, indigenous spa treatments, and full retreats inside your safari.',
     cta: 'Discover Wellness Retreats',
-    image: '/images/destinations/tanzania/kite-in-lodge1.jpg',
+    image: '/images/destinations/tanzania/kite-in-lodge1.webp',
     tagline:
       'A massage after a morning drive. Yoga on the deck at first light. Slow days, when slow is the right speed.',
     intro: [
@@ -680,7 +680,7 @@ export const experiences: Experience[] = [
           'Forest spa, in-room massages and a programme of gentle hikes between gorilla treks.',
       },
     ],
-    gallery: ['/images/destinations/tanzania/kite-in-lodge1.jpg', '/images/activities/big-five/singita-boulders-lodge-27.jpg'],
+    gallery: ['/images/destinations/tanzania/kite-in-lodge1.webp', '/images/activities/big-five/singita-boulders-lodge-27.webp'],
   },
   {
     slug: 'private-island-escapes',
@@ -690,7 +690,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Marine safaris, private beach dinners, and bespoke luxury in pristine coastal havens.',
     cta: 'Plan a Private Island Escape',
-    image: '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
+    image: '/images/destinations/tanzania/rubondo-island-camp-beach.webp',
     tagline:
       'A bush-and-beach itinerary done right — the safari for the wildlife, the island for everything that comes after.',
     intro: [
@@ -732,9 +732,9 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
-      '/images/destinations/tanzania/rubondo-island-camp-chimp.jpg',
-      '/images/destinations/tanzania/rubondo-island-camp-hippos.jpg',
+      '/images/destinations/tanzania/rubondo-island-camp-beach.webp',
+      '/images/destinations/tanzania/rubondo-island-camp-chimp.webp',
+      '/images/destinations/tanzania/rubondo-island-camp-hippos.webp',
     ],
   },
   {
@@ -745,7 +745,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Behind-the-scenes access and direct contribution to wildlife protection and monitoring.',
     cta: 'Join a Conservation Safari',
-    image: '/images/activities/walking-safari/1752763546178-kenya-suyian-wild-dog-4.jpg',
+    image: '/images/activities/walking-safari/1752763546178-kenya-suyian-wild-dog-4.webp',
     tagline:
       'A day with the rhino anti-poaching team. A morning collaring a lion. A week with a wild-dog researcher.',
     intro: [
@@ -781,8 +781,8 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/walking-safari/1752763546178-kenya-suyian-wild-dog-4.jpg',
-      '/images/activities/walking-safari/1752763546180-wildwatch-africa-kenya-suyian-damen-pheiffer-lion-pride-on-the-open-plains-07.jpg',
+      '/images/activities/walking-safari/1752763546178-kenya-suyian-wild-dog-4.webp',
+      '/images/activities/walking-safari/1752763546180-wildwatch-africa-kenya-suyian-damen-pheiffer-lion-pride-on-the-open-plains-07.webp',
     ],
   },
   {
@@ -793,7 +793,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Ride alongside giraffes and zebras with luxury mobile fly-camps and expert equestrian guides.',
     cta: 'Book a Horseback Safari',
-    image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
+    image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.webp',
     tagline:
       'Horses don’t look like threat. Wildlife reacts to a rider very differently to a vehicle — and that’s the magic.',
     intro: [
@@ -829,8 +829,8 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
-      '/images/activities/walking-safari/1752763546179-wildwatch-africa-kenya-suyian-damen-pheiffer-grevy-2339-s-zebra-01.jpg',
+      '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.webp',
+      '/images/activities/walking-safari/1752763546179-wildwatch-africa-kenya-suyian-damen-pheiffer-grevy-2339-s-zebra-01.webp',
     ],
   },
   {
@@ -841,7 +841,7 @@ export const experiences: Experience[] = [
     excerpt:
       'Custom-built vehicles and professional photographer guides to capture stunning wildlife imagery.',
     cta: 'Enhance Your Photography',
-    image: '/images/destinations/tanzania/photo-2013-03-06-11-59-58.jpg',
+    image: '/images/destinations/tanzania/photo-2013-03-06-11-59-58.webp',
     tagline:
       'Custom vehicles, photographer-guides, beanbags, charging, and the time to wait — really wait — for the shot.',
     intro: [
@@ -877,9 +877,9 @@ export const experiences: Experience[] = [
       },
     ],
     gallery: [
-      '/images/destinations/tanzania/photo-2013-03-06-11-59-58.jpg',
-      '/images/activities/game-drive/leopard-singita-sabi-sand-ross-couper-421-2.jpg',
-      '/images/activities/game-drive/lion-singita-sabi-sand-ross-couper-366-1.jpg',
+      '/images/destinations/tanzania/photo-2013-03-06-11-59-58.webp',
+      '/images/activities/game-drive/leopard-singita-sabi-sand-ross-couper-421-2.webp',
+      '/images/activities/game-drive/lion-singita-sabi-sand-ross-couper-366-1.webp',
     ],
   },
 ]
