@@ -4,7 +4,6 @@ import SafariCollection from '@/components/home/SafariCollection'
 import HowWeCraft from '@/components/home/HowWeCraft'
 import Difference from '@/components/home/Difference'
 import DestinationsTeaser from '@/components/home/DestinationsTeaser'
-import TeamCTA from '@/components/home/TeamCTA'
 import Stories from '@/components/home/Stories'
 import StoriesCarousel from '@/components/home/StoriesCarousel'
 import BeginYourLegacy from '@/components/home/BeginYourLegacy'
@@ -19,7 +18,6 @@ export default function Home() {
       <Difference />
       <DestinationsTeaser />
       <StoriesCarousel />
-      <TeamCTA />
       <Stories />
       <BeginYourLegacy />
     </>

@@ -101,7 +101,6 @@ export default function Footer() {
             <h4 className="text-lg text-white">About Us</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li><NavLink to="/about" className="hover:text-white">Our Story</NavLink></li>
-              <li><NavLink to="/meet-the-team" className="hover:text-white">Meet the Team</NavLink></li>
               <li><NavLink to="/know-before-you-go" className="hover:text-white">Know Before You Go</NavLink></li>
               <li><NavLink to="/work-with-us" className="hover:text-white">Work With Us</NavLink></li>
             </ul>

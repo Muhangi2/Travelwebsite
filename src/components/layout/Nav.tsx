@@ -21,8 +21,7 @@ const links: NavLinkItem[] = [
     label: 'About Us',
     subLinks: [
       { to: '/about', label: 'Our Story' },
-      { to: '/meet-the-team', label: 'Meet the Team' },
-      { to: '/work-with-us', label: 'Work With Us' },
+{ to: '/work-with-us', label: 'Work With Us' },
       { to: '/know-before-you-go', label: 'Know Before You Go' },
     ],
   },

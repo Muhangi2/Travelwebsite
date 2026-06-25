@@ -11,7 +11,6 @@ import Destinations from '@/pages/Destinations'
 import DestinationCountry from '@/pages/DestinationCountry'
 import NationalPark from '@/pages/NationalPark'
 import About from '@/pages/About'
-import MeetTheTeam from '@/pages/MeetTheTeam'
 import KnowBeforeYouGo from '@/pages/KnowBeforeYouGo'
 import WorkWithUs from '@/pages/WorkWithUs'
 import Stories from '@/pages/Stories'
@@ -43,7 +42,6 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/destinations/:country" element={<DestinationCountry />} />
           <Route path="/destinations/:country/:park" element={<NationalPark />} />
           <Route path="/about" element={<About />} />
-          <Route path="/meet-the-team" element={<MeetTheTeam />} />
           <Route path="/know-before-you-go" element={<KnowBeforeYouGo />} />
           <Route path="/work-with-us" element={<WorkWithUs />} />
           <Route path="/stories" element={<Stories />} />
