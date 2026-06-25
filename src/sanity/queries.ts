@@ -215,6 +215,27 @@ export const destinationBySlugQuery = /* groq */ `
   }
 `
 
+const tourPackageDetailProjection = /* groq */ `
+  detailTitle,
+  subtitle,
+  heroImage ${mediaImageProjection},
+  overview,
+  days[] {
+    day,
+    title,
+    body,
+    accommodationTier,
+    accommodation,
+    meals,
+    image ${mediaImageProjection}
+  },
+  highlights,
+  included,
+  notIncluded,
+  faq[] { q, a },
+  waypoints[] { name, lng, lat }
+`
+
 export const allTourPackagesQuery = /* groq */ `
   *[_type == "tourPackage" && defined(slug.current)] | order(coalesce(sortOrder, 0) asc, title asc) {
     _id,
@@ -225,18 +246,7 @@ export const allTourPackagesQuery = /* groq */ `
     tags,
     highlight,
     listImage ${mediaImageProjection},
-    detailTitle,
-    subtitle,
-    heroImage ${mediaImageProjection},
-    overview,
-    days[] {
-      day,
-      title,
-      body,
-      accommodation,
-      meals,
-      image ${mediaImageProjection}
-    },
+    ${tourPackageDetailProjection},
     sortOrder
   }
 `
@@ -251,17 +261,6 @@ export const tourPackageBySlugQuery = /* groq */ `
     tags,
     highlight,
     listImage ${mediaImageProjection},
-    detailTitle,
-    subtitle,
-    heroImage ${mediaImageProjection},
-    overview,
-    days[] {
-      day,
-      title,
-      body,
-      accommodation,
-      meals,
-      image ${mediaImageProjection}
-    }
+    ${tourPackageDetailProjection}
   }
 `

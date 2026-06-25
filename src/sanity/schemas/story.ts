@@ -7,8 +7,9 @@ export const storyType = defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Article title',
       type: 'string',
+      description: 'e.g. "Inside Bwindi: What No One Tells You About Gorilla Trekking" — shown as the article headline.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -16,6 +17,7 @@ export const storyType = defineType({
       title: 'Slug',
       type: 'slug',
       options: { source: 'title', maxLength: 96 },
+      description: 'e.g. "inside-bwindi-gorilla-trekking" — auto-generated from the title. Click Generate.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -23,7 +25,7 @@ export const storyType = defineType({
       title: 'Excerpt',
       type: 'text',
       rows: 3,
-      description: 'Short summary shown on the Stories listing and at the top of the article page.',
+      description: 'e.g. "We spent three days in Bwindi\'s Rushaga sector with a habituated gorilla family — here\'s what surprised us most." — 1–2 sentences, max 280 characters. Shown on the Stories listing and at the top of the article.',
       validation: (rule) => rule.max(280),
     }),
     defineField({
@@ -31,8 +33,14 @@ export const storyType = defineType({
       title: 'Main image',
       type: 'image',
       options: { hotspot: true },
+      description: 'The hero photo for this article — shown on the listing card and at the top of the article page. Use a landscape image.',
       fields: [
-        defineField({ name: 'alt', title: 'Alt text', type: 'string' }),
+        defineField({
+          name: 'alt',
+          title: 'Alt text',
+          type: 'string',
+          description: 'e.g. "Mountain gorilla feeding in Bwindi Impenetrable Forest at dawn" — describe the image for accessibility and SEO.',
+        }),
       ],
       validation: (rule) => rule.required(),
     }),
@@ -40,12 +48,14 @@ export const storyType = defineType({
       name: 'author',
       title: 'Author',
       type: 'string',
+      description: 'e.g. "Sarah Mitchell" or "Still Wild Safaris Team" — shown below the article title.',
       initialValue: 'Still Wild Safaris Team',
     }),
     defineField({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
+      description: 'The publication date — shown on the article and used for ordering. Defaults to today.',
       initialValue: () => new Date().toISOString(),
       validation: (rule) => rule.required(),
     }),
@@ -54,6 +64,7 @@ export const storyType = defineType({
       title: 'Tags',
       type: 'array',
       of: [{ type: 'string' }],
+      description: 'Select all relevant categories — shown as filter pills on the Stories page. A story can have multiple tags.',
       options: {
         list: [
           { title: 'Gorillas', value: 'Gorillas' },
@@ -71,14 +82,16 @@ export const storyType = defineType({
     }),
     defineField({
       name: 'featured',
-      title: 'Featured on Stories page',
+      title: 'Feature on Stories page',
       type: 'boolean',
+      description: 'Turn on to pin this story to the top of the Stories listing page.',
       initialValue: false,
     }),
     defineField({
       name: 'body',
-      title: 'Body',
+      title: 'Article body',
       type: 'array',
+      description: 'Write your article here. Use Heading 2 for main section titles, Heading 3 for sub-sections, and Quote for pull-quotes. You can also insert images between paragraphs.',
       of: [
         {
           type: 'block',
@@ -98,7 +111,13 @@ export const storyType = defineType({
                 name: 'link',
                 type: 'object',
                 title: 'Link',
-                fields: [{ name: 'href', type: 'url', title: 'URL' }],
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'url',
+                    title: 'URL',
+                  },
+                ],
               },
             ],
           },
@@ -107,8 +126,18 @@ export const storyType = defineType({
           type: 'image',
           options: { hotspot: true },
           fields: [
-            defineField({ name: 'alt', title: 'Alt text', type: 'string' }),
-            defineField({ name: 'caption', title: 'Caption', type: 'string' }),
+            defineField({
+              name: 'alt',
+              title: 'Alt text',
+              type: 'string',
+              description: 'e.g. "Silverback gorilla resting in Bwindi forest" — describe the image.',
+            }),
+            defineField({
+              name: 'caption',
+              title: 'Caption',
+              type: 'string',
+              description: 'e.g. "A silverback in Bwindi\'s Buhoma sector, photographed at dawn." — shown below the image in the article.',
+            }),
           ],
         },
       ],

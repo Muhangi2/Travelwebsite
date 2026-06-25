@@ -16,6 +16,19 @@ export type TourPackageCard = {
   highlight?: boolean
 }
 
+const TIER_LABELS: Record<string, string> = {
+  luxury: 'Luxury',
+  midRange: 'Mid-Range',
+  budget: 'Budget',
+  flyCamp: 'Fly Camp',
+}
+
+function buildAccommodationString(tier: string | undefined, lodgeNames: string | undefined): string {
+  if (!tier || tier === 'none') return '—'
+  const label = TIER_LABELS[tier] ?? tier
+  return lodgeNames ? `${label}: ${lodgeNames}` : label
+}
+
 function toJourneyData(raw: SanityTourPackage): JourneyData | null {
   if (!raw.days?.length) return null
   const hero = raw.heroImage ? resolveMediaImage(raw.heroImage, 1600) : resolveMediaImage(raw.listImage, 1600)
@@ -24,17 +37,25 @@ function toJourneyData(raw: SanityTourPackage): JourneyData | null {
     title: raw.detailTitle ?? raw.title,
     subtitle: raw.subtitle ?? '',
     heroImage: hero,
+    country: raw.country,
     overview: raw.overview ?? '',
     days: raw.days.map(
       (d): JourneyDay => ({
         day: d.day,
         title: d.title,
         body: d.body,
-        accommodation: d.accommodation ?? '—',
+        accommodation: buildAccommodationString(d.accommodationTier, d.accommodation),
         meals: d.meals ?? '',
         image: resolveMediaImage(d.image, 900),
       }),
     ),
+    highlights: raw.highlights?.length ? raw.highlights : undefined,
+    included: raw.included?.length ? raw.included : undefined,
+    notIncluded: raw.notIncluded?.length ? raw.notIncluded : undefined,
+    faq: raw.faq?.length ? raw.faq.map((f) => ({ q: f.q, a: f.a })) : undefined,
+    waypoints: raw.waypoints?.length
+      ? raw.waypoints.map((w) => ({ name: w.name, coords: [w.lng, w.lat] as [number, number] }))
+      : undefined,
   }
 }
 
@@ -223,11 +244,12 @@ export function useTourPackage(slug: string | undefined): { journey: JourneyData
         if (cancelled || !data) return
         const mapped = toJourneyData(data)
         if (mapped) setJourney((prev) => ({
-          highlights: prev?.highlights,
-          included:   prev?.included,
-          notIncluded: prev?.notIncluded,
-          faq:        prev?.faq,
-          waypoints:  prev?.waypoints,
+          // keep local fallbacks only for fields Sanity didn't supply
+          highlights:  mapped.highlights  ?? prev?.highlights,
+          included:    mapped.included    ?? prev?.included,
+          notIncluded: mapped.notIncluded ?? prev?.notIncluded,
+          faq:         mapped.faq         ?? prev?.faq,
+          waypoints:   mapped.waypoints   ?? prev?.waypoints,
           ...mapped,
         }))
       })

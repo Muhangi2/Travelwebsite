@@ -54,11 +54,18 @@ function toCountry(raw: SanityDestination): Country {
       image: resolveMediaImage(lodge.image, 900),
     })),
     seoKeywords: raw.seoKeywords ?? '',
-    travelStats: raw.travelStats,
+    travelStats: raw.travelStats
+      ? {
+          bestTime: raw.travelStats.bestTime ?? '',
+          duration: raw.travelStats.duration ?? '',
+          keyWildlife: raw.travelStats.keyWildlife ?? '',
+          travelStyle: raw.travelStats.travelStyle ?? '',
+        }
+      : undefined,
     whyVisit: raw.whyVisit
       ? {
           intro: raw.whyVisit.intro,
-          bullets: raw.whyVisit.bullets ?? [],
+          bullets: (raw.whyVisit.bullets ?? []).map((b) => ({ title: b.title, body: b.body ?? '' })),
           stats: raw.whyVisit.stats ?? [],
         }
       : undefined,
@@ -69,7 +76,13 @@ function toCountry(raw: SanityDestination): Country {
       description: s.description,
       image: s.image ? resolveMediaImage(s.image, 900) : undefined,
     })),
-    specialistQuote: raw.specialistQuote,
+    specialistQuote: raw.specialistQuote
+      ? {
+          quote: raw.specialistQuote.quote,
+          author: raw.specialistQuote.author,
+          role: raw.specialistQuote.role ?? '',
+        }
+      : undefined,
     conservation: raw.conservation
       ? {
           intro: raw.conservation.intro,

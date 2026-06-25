@@ -102,6 +102,7 @@ export type SanityJourneyDay = {
   day: number
   title: string
   body: string
+  accommodationTier?: 'luxury' | 'midRange' | 'budget' | 'flyCamp' | 'none'
   accommodation?: string
   meals?: string
   image: SanityMediaImage
@@ -121,4 +122,9 @@ export type SanityTourPackage = {
   heroImage?: SanityMediaImage
   overview?: string
   days?: SanityJourneyDay[]
+  highlights?: string[]
+  included?: string[]
+  notIncluded?: string[]
+  faq?: { q: string; a: string }[]
+  waypoints?: { name: string; lng: number; lat: number }[]
 }

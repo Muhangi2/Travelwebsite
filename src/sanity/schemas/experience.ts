@@ -7,8 +7,9 @@ export const experienceType = defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Full title',
       type: 'string',
+      description: 'e.g. "Gorilla Trekking: An Intimate Encounter" — the full heading shown on the experience detail page.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -16,12 +17,14 @@ export const experienceType = defineType({
       title: 'Slug',
       type: 'slug',
       options: { source: 'title', maxLength: 96 },
+      description: 'e.g. "gorilla-trekking" — auto-generated from the title. Click Generate.',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'badge',
       title: 'Category badge',
       type: 'string',
+      description: 'Select the category shown as a badge on the experience card.',
       options: {
         list: [
           { title: 'Primate', value: 'Primate' },
@@ -38,6 +41,7 @@ export const experienceType = defineType({
       name: 'shortTitle',
       title: 'Short title',
       type: 'string',
+      description: 'e.g. "Gorilla Trekking" — used on navigation and cards where space is limited.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -45,18 +49,21 @@ export const experienceType = defineType({
       title: 'Excerpt',
       type: 'text',
       rows: 3,
+      description: 'e.g. "Journey into the mist-shrouded forests of Uganda and Rwanda for a profound, luxury encounter with mountain gorillas." — 1–2 sentences shown on the experience card.',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'cta',
-      title: 'CTA label',
+      title: 'CTA button label',
       type: 'string',
+      description: 'e.g. "Explore Gorilla Trekking" — the text on the call-to-action button. Defaults to "Explore this experience".',
       initialValue: 'Explore this experience',
     }),
     defineField({
       name: 'image',
       title: 'Hero image',
       type: 'mediaImage',
+      description: 'Full-screen hero image for the experience card and detail page. Use a landscape photo.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -64,6 +71,7 @@ export const experienceType = defineType({
       title: 'Tagline',
       type: 'text',
       rows: 2,
+      description: 'e.g. "A guided, hour-long audience with one of Earth\'s last 1,000 mountain gorillas — in the mountains where they were first protected." — a single compelling sentence shown prominently on the detail page.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -71,6 +79,7 @@ export const experienceType = defineType({
       title: 'Intro paragraphs',
       type: 'array',
       of: [{ type: 'text' }],
+      description: 'Add 2–3 paragraphs introducing the experience. Each paragraph is a separate item — click "Add item" for each new paragraph.',
       validation: (rule) => rule.min(1),
     }),
     defineField({
@@ -78,24 +87,27 @@ export const experienceType = defineType({
       title: 'Highlights',
       type: 'array',
       of: [{ type: 'experienceHighlight' }],
+      description: 'Add 3–5 key differentiators that make this experience unique — e.g. "Permits Secured in Advance", "Expert Tracker-Led Treks".',
     }),
     defineField({
       name: 'locations',
       title: 'Locations',
       type: 'array',
       of: [{ type: 'experienceLocation' }],
+      description: 'Add each location where this experience takes place — e.g. Bwindi for gorilla trekking, Kibale for chimpanzees.',
     }),
     defineField({
       name: 'gallery',
       title: 'Gallery',
       type: 'array',
       of: [{ type: 'mediaImage' }],
+      description: 'Upload 6–10 photos for the gallery section of the experience detail page.',
     }),
     defineField({
       name: 'sortOrder',
       title: 'Sort order',
       type: 'number',
-      description: 'Lower numbers appear first in listings.',
+      description: 'e.g. 1, 2, 3 — lower numbers appear first in the experiences listing.',
       initialValue: 0,
     }),
   ],
