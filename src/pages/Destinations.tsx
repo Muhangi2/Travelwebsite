@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useCountries } from '@/sanity/destinations'
@@ -183,6 +184,11 @@ export default function Destinations() {
 
   return (
     <div>
+      <SEO
+        title="Destinations — Uganda, Rwanda & Kenya Safari"
+        description="Explore East Africa's finest safari destinations. Uganda's gorilla forests, Rwanda's volcanoes, and Kenya's sweeping savannahs — all curated by Still Wild Safaris."
+        url="/destinations"
+      />
       {/* ── Hero ─────────────────────────────────────────── */}
       <div
         className="relative flex h-[100svh] items-end bg-cover bg-center"

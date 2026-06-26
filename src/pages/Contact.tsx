@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO'
 import { useState } from 'react'
 import Picture from '@/components/Picture'
 import Reveal from '@/components/ui/Reveal'
@@ -34,6 +35,11 @@ export default function Contact() {
 
   return (
     <>
+      <SEO
+        title="Contact Us — Plan Your Safari"
+        description="Get in touch with Still Wild Safaris to start planning your bespoke luxury safari in Uganda, Rwanda or Kenya. Our team is ready to craft your perfect itinerary."
+        url="/contact"
+      />
       <section className="relative isolate h-[100svh] overflow-hidden">
         <Picture
           src="/images/destinations/tanzania/sayari-lioness.jpg"

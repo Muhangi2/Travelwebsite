@@ -1,6 +1,7 @@
 import { StrictMode, Suspense, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import Layout from '@/components/layout/Layout'
 import Home from '@/pages/Home'
@@ -23,6 +24,7 @@ const StudioPage = lazy(() => import('@/pages/StudioPage'))
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <HelmetProvider>
     <BrowserRouter>
       <Routes>
         <Route
@@ -52,5 +54,6 @@ createRoot(document.getElementById('root')!).render(
         </Route>
       </Routes>
     </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>,
 )

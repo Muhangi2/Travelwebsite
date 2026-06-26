@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO'
 import KnowBeforeHero from '@/components/know-before/KnowBeforeHero'
 import PolicyBlock from '@/components/know-before/PolicyBlock'
 import PricingPayments from '@/components/know-before/PricingPayments'
@@ -11,6 +12,11 @@ import SafariFaq from '@/components/know-before/SafariFaq'
 export default function KnowBeforeYouGo() {
   return (
     <>
+      <SEO
+        title="Know Before You Go — Safari Guide & Packing List"
+        description="Everything you need to know before your East Africa safari — visa requirements, health advice, packing list, cancellation policy and booking terms from Still Wild Safaris."
+        url="/know-before-you-go"
+      />
       <KnowBeforeHero />
 
       {/* Safari Pricing & Payments */}
