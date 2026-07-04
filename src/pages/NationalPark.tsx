@@ -1,5 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { useCountry } from '@/sanity/destinations'
+import SEO from '@/components/SEO'
 import ParkHero from '@/components/national-park/ParkHero'
 import ParkOverview from '@/components/national-park/ParkOverview'
 import WhyVisit from '@/components/national-park/WhyVisit'
@@ -21,6 +22,13 @@ export default function NationalPark() {
 
   return (
     <>
+      <SEO
+        title={`${parkData.name} — ${countryData.name}`}
+        description={parkData.blurb}
+        image={parkData.image}
+        url={`/destinations/${countrySlug}/${park}`}
+      />
+
       <ParkHero name={parkData.name} blurb={parkData.blurb} image={parkData.image} />
       {parkData.overview && <ParkOverview park={parkData} />}
       {parkData.whyVisit && parkData.whyVisit.length > 0 && <WhyVisit items={parkData.whyVisit} />}

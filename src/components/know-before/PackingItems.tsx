@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture'
 import Reveal from '@/components/ui/Reveal'
 
 const categories = [
@@ -103,14 +104,23 @@ const climate = [
 
 export default function PackingItems() {
   return (
-    <section className="bg-[#F7F4EF] py-20">
+    <section id="packing" className="relative isolate overflow-hidden py-20">
+      <Picture
+        src="/images/lodges/kenya/lakipia/lewa-wilderness/fly-camping-star-dome.jpg"
+        alt="Fly camping under the stars at Lewa Wilderness, Kenya"
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 -z-10 bg-black/70" />
+
       <div className="mx-auto max-w-6xl px-6">
 
         {/* Header */}
         <Reveal variant="scale">
-          <div className="section-rule mx-auto" />
-          <h2 className="mt-4 text-center">Packing List</h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-neutral-500">
+          <div className="section-rule mx-auto" style={{ background: 'rgba(255,255,255,0.5)' }} />
+          <h2 className="mt-4 text-center text-white">Packing List</h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-white/80">
             Everything you need for a comfortable, safari-ready trip — and nothing you don't. Packing for a safari is less about packing more, and more about packing right.
           </p>
         </Reveal>
@@ -119,25 +129,23 @@ export default function PackingItems() {
         <div className="mt-14 space-y-2">
           {categories.map(({ number, title, icon, items }, i) => (
             <Reveal key={title} delay={i * 60}>
-              <div className="group overflow-hidden rounded-xl bg-white transition-shadow hover:shadow-md">
+              <div className="group overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/20 backdrop-blur-sm transition-shadow hover:shadow-md">
                 <div className="flex flex-col gap-6 p-7 sm:flex-row sm:gap-10">
                   {/* Left: number + icon + title */}
                   <div className="flex shrink-0 items-start gap-4 sm:w-52 sm:flex-col sm:gap-3">
-                    <span className="font-mono text-xs text-neutral-300">{number}</span>
-                    <div className="text-[#8B6F4E]">{icon}</div>
-                    <h3 className="text-base font-semibold tracking-tight text-neutral-800 sm:mt-0">{title}</h3>
+                    <span className="font-mono text-xs text-white/40">{number}</span>
+                    <div className="text-[#D9B98C]">{icon}</div>
+                    <h3 className="text-base font-semibold tracking-tight text-white sm:mt-0">{title}</h3>
                   </div>
 
                   {/* Divider */}
-                  <div className="hidden w-px self-stretch bg-neutral-100 sm:block" />
+                  <div className="hidden w-px self-stretch bg-white/15 sm:block" />
 
                   {/* Right: items */}
                   <ul className="flex-1 columns-1 gap-x-8 space-y-2 sm:columns-2">
                     {items.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 break-inside-avoid text-sm leading-relaxed text-neutral-600">
-                        <svg className="mt-1 h-3.5 w-3.5 shrink-0 text-[#8B6F4E]" viewBox="0 0 16 16" fill="currentColor">
-                          <path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z" />
-                        </svg>
+                      <li key={item} className="flex items-start gap-2.5 break-inside-avoid text-sm leading-relaxed text-white/80">
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#D9B98C]" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -172,26 +180,26 @@ export default function PackingItems() {
         <Reveal>
           <div className="mt-14">
             <div className="text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400">Section 06</p>
-              <h3 className="mt-1 text-2xl font-semibold text-neutral-800">Climate at a Glance</h3>
-              <p className="mt-1 text-sm text-neutral-400">Exact temperatures vary by region and altitude — your itinerary will include more specific guidance.</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/60">Section 06</p>
+              <h3 className="mt-1 text-2xl font-semibold text-white">Climate at a Glance</h3>
+              <p className="mt-1 text-sm text-white/70">Exact temperatures vary by region and altitude — your itinerary will include more specific guidance.</p>
             </div>
             <div className="mt-7 grid gap-4 sm:grid-cols-3">
               {climate.map(({ season, months, icon, day, night, notes }) => (
-                <div key={season} className="rounded-xl border border-neutral-200 bg-white p-6">
+                <div key={season} className="rounded-xl bg-white/10 p-6 ring-1 ring-white/20 backdrop-blur-sm">
                   <div className="text-3xl">{icon}</div>
-                  <p className="mt-3 text-base font-semibold text-neutral-800">{season}</p>
-                  <p className="text-xs text-[#8B6F4E]">{months}</p>
-                  <div className="mt-4 space-y-1.5 border-t border-neutral-100 pt-4">
+                  <p className="mt-3 text-base font-semibold text-white">{season}</p>
+                  <p className="text-xs text-[#D9B98C]">{months}</p>
+                  <div className="mt-4 space-y-1.5 border-t border-white/15 pt-4">
                     <div className="flex justify-between text-xs">
-                      <span className="text-neutral-400">Day</span>
-                      <span className="font-medium text-neutral-700">{day}</span>
+                      <span className="text-white/50">Day</span>
+                      <span className="font-medium text-white/85">{day}</span>
                     </div>
                     <div className="flex justify-between text-xs">
-                      <span className="text-neutral-400">Night</span>
-                      <span className="font-medium text-neutral-700">{night}</span>
+                      <span className="text-white/50">Night</span>
+                      <span className="font-medium text-white/85">{night}</span>
                     </div>
-                    <div className="pt-1 text-xs leading-relaxed text-neutral-400">{notes}</div>
+                    <div className="pt-1 text-xs leading-relaxed text-white/60">{notes}</div>
                   </div>
                 </div>
               ))}

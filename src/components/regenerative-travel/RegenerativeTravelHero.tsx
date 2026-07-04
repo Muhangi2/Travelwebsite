@@ -3,15 +3,15 @@ import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
 import { usePageHero } from '@/sanity/pageHeroes'
 
 const FALLBACK = {
-  eyebrow: 'Trade Partnerships',
-  heading: 'Work With Us',
-  body: 'Your regenerative ground partner in Uganda and Rwanda.',
-  image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/23-kyambura-gorge-lodge-qe-30042024-volcanoessafaris-8624-edit-copy.jpg',
-  imageAlt: 'Guide and guest at sunset in Queen Elizabeth National Park, Uganda',
+  eyebrow: 'Our Philosophy',
+  heading: 'What Regenerative Travel Means to Us',
+  body: 'Leaving Uganda and Rwanda better than we found them — not just less harmed.',
+  image: '/images/lodges/rwanda/volcanoes-national-park/singita-kwitonda-lodge/dsc07739.jpg',
+  imageAlt: 'Eco-lodge built into the wetland below the Virunga volcanoes, Rwanda',
 }
 
-export default function WorkWithUsHero() {
-  const hero = usePageHero('workWithUs', FALLBACK)
+export default function RegenerativeTravelHero() {
+  const hero = usePageHero('regenerativeTravel', FALLBACK)
 
   return (
     <section className="relative isolate h-[100svh] overflow-hidden">

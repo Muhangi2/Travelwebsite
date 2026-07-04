@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useParams, Navigate, NavLink } from 'react-router-dom'
 import { useExperience, useExperiences } from '@/sanity/experiences'
+import SEO from '@/components/SEO'
 import Picture from '@/components/Picture'
 
 export default function ExperienceDetail() {
@@ -21,6 +22,13 @@ export default function ExperienceDetail() {
 
   return (
     <>
+      <SEO
+        title={exp.title}
+        description={exp.tagline}
+        image={exp.image}
+        url={`/experiences/${exp.slug}`}
+      />
+
       <section className="relative h-[100svh] overflow-hidden bg-brand-ink text-white">
         <Picture
           src={exp.image}

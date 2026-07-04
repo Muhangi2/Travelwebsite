@@ -1,5 +1,6 @@
 import Picture from '@/components/Picture'
 import { site } from '@/config/site'
+import SEO from '@/components/SEO'
 const personalInfo = [
   'Full name',
   'Email address',
@@ -60,6 +61,12 @@ function BulletList({ items }: { items: string[] }) {
 export default function PrivacyPolicy() {
   return (
     <>
+      <SEO
+        title="Privacy Policy"
+        description="How Still Wild Safaris collects, uses and protects your personal information when you plan a safari with us."
+        url="/privacy-policy"
+      />
+
       <section className="relative isolate h-[100svh] overflow-hidden">
         <Picture
           src="/images/parks/rwanda/volcanoes/wilderness-bisate.jpg"

@@ -7,6 +7,7 @@ const PAGE_OPTIONS = [
   { title: 'Meet the Team', value: 'team' },
   { title: 'Know Before You Go', value: 'knowBefore' },
   { title: 'Work With Us', value: 'workWithUs' },
+  { title: 'Regenerative Travel', value: 'regenerativeTravel' },
 ] as const
 
 const PAGE_LABELS: Record<string, string> = Object.fromEntries(

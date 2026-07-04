@@ -1,47 +1,64 @@
+import Picture from '@/components/Picture'
 import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 const reasons = [
-  { num: 1, title: 'Local Power, Global\nDelivery', body: 'Expertise + international standards.' },
-  { num: 2, title: 'Bespoke Product\nDesign', body: 'Co-created, never copied.' },
-  { num: 3, title: 'White-Label\nOperations', body: 'Your brand stays front-facing.' },
-  { num: 4, title: 'Reliable, Fast\nCommunication', body: 'Clear timelines.' },
+  {
+    num: 1,
+    title: 'Regenerative\nBy Default',
+    body: 'Every itinerary we execute already meets our carbon and community-impact standards, so your brand inherits that story at no extra effort.',
+  },
+  {
+    num: 2,
+    title: 'Two-Country\nDepth',
+    body: 'Most ground partners specialise in one country. We run deep operations in both Uganda and Rwanda, simplifying combined gorilla trekking itineraries for your clients.',
+  },
+  {
+    num: 3,
+    title: 'Lean And\nResponsive',
+    body: "We're a young, hands-on company, which means direct access to decision-makers rather than layers of account managers.",
+  },
+  {
+    num: 4,
+    title: 'Built-In\nStorytelling',
+    body: 'Our regenerative travel model gives your sales and marketing teams a genuine, differentiated narrative to sell against conventional safari operators.',
+  },
 ]
 
 export default function WhyPartnerWithUs() {
   return (
-    <section className="section-alt py-20">
-      <div className="mx-auto max-w-5xl px-6">
+    <section className="relative isolate overflow-hidden py-20 text-white">
+      <Picture
+        src="/images/activities/gorilla-trekking/5-mgl-golden-monkey-bb.jpg"
+        alt="Golden monkey in the Virunga forest near Mgahinga, on the Uganda-Rwanda border"
+        loading="lazy"
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 -z-10 bg-black/70" />
+
+      <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center">Why Partner With Us</h2>
+          <h2 className="text-center text-white">Why Operators Choose Us</h2>
         </Reveal>
 
-        <Stagger className="cards-scroll-4 mt-12 gap-8" staggerMs={100}>
-          {reasons.map((r, idx) => (
-            <div key={r.num} className="relative flex flex-col items-center text-center">
-              {idx < reasons.length - 1 && (
-                <div
-                  aria-hidden
-                  className="absolute left-1/2 top-12 hidden h-px w-full bg-neutral-300 lg:block"
-                />
-              )}
-              <div
-                className={`relative flex h-24 w-24 items-center justify-center rounded-full border-2 ${
-                  r.num === 1 ? 'border-black bg-white' : 'border-dashed border-neutral-300 bg-white'
-                }`}
-              >
-                <span
-                  className={`flex h-12 w-12 items-center justify-center rounded-full font-serif text-xl ${
-                    r.num === 1 ? 'bg-black text-white' : 'bg-white text-neutral-800'
-                  }`}
-                >
+        <Stagger className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4" staggerMs={100}>
+          {reasons.map((r) => (
+            <div key={r.num} className="flex flex-col items-center text-center">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full border-2 border-dashed border-white/40 bg-white/10 backdrop-blur-sm">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 font-serif text-xl text-neutral-900">
                   {r.num}
                 </span>
               </div>
-              <h3 className="mt-5 whitespace-pre-line text-sm text-neutral-900">{r.title}</h3>
-              <p className="mt-2 max-w-[14ch] text-xs text-neutral-500">{r.body}</p>
+              <h3 className="mt-5 whitespace-pre-line text-sm text-white">{r.title}</h3>
+              <p className="mt-2 max-w-[26ch] text-xs leading-relaxed text-white/75">{r.body}</p>
             </div>
           ))}
         </Stagger>
+
+        <Reveal delay={200}>
+          <blockquote className="mx-auto mt-14 max-w-2xl text-center text-base italic leading-relaxed text-white/90 sm:text-lg">
+            "We wanted operators abroad to have one phone call to make for Uganda and Rwanda — not two."
+          </blockquote>
+        </Reveal>
       </div>
     </section>
   )

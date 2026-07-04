@@ -14,7 +14,7 @@ export default function WhyVisit({ items }: { items: NonNullable<Park['whyVisit'
             const body = rest.join(' — ')
             return (
               <li key={item} className="flex gap-4 rounded-md bg-white/10 px-5 py-4">
-                <span className="mt-0.5 shrink-0 text-brand-gold">✦</span>
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold" />
                 <div>
                   {body ? (
                     <>

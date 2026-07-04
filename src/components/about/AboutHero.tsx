@@ -5,11 +5,10 @@ import { usePageHero } from '@/sanity/pageHeroes'
 
 const FALLBACK = {
   eyebrow: 'Our Story',
-  heading: 'Welcome to Still Wild Safaris',
-  body: "East Africa's bespoke destination management company — designing private safaris in Uganda, Rwanda and Kenya for travelers who value depth, access and exclusivity.",
+  heading: 'About Still Wild Safaris',
+  body: 'Regenerative travel, born from a university dorm room.',
   image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
   imageAlt: 'Mountain gorilla in Bwindi Impenetrable Forest',
-  primaryCta: { label: 'START YOUR JOURNEY', href: '/safari-collections' },
 }
 
 export default function AboutHero() {

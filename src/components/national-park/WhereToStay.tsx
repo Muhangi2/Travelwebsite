@@ -19,7 +19,7 @@ export default function WhereToStay({ categories }: { categories: NonNullable<Pa
                   const desc = rest.join(' — ')
                   return (
                     <li key={pick} className="flex gap-2">
-                      <span className="mt-1 shrink-0 text-brand-gold text-xs">✦</span>
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-gold" />
                       <div>
                         <p className="text-xs font-medium text-neutral-800">{name}</p>
                         {desc && (

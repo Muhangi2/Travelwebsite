@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Picture from '@/components/Picture'
 import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 const faqs = [
@@ -61,14 +62,23 @@ const faqs = [
 ]
 
 export default function SafariFaq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="bg-white py-16">
+    <section id="faq" className="relative isolate overflow-hidden py-16">
+      <Picture
+        src="/images/lodges/uganda/queen-elizabeth-national-park/ishasha-wilderness-camp/DSC_6859.jpg"
+        alt="Ishasha Wilderness Camp, Queen Elizabeth National Park"
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 -z-10 bg-black/65" />
+
       <div className="mx-auto max-w-3xl px-6">
         <Reveal>
-          <h2 className="text-center">Safari FAQ for East Africa</h2>
-          <p className="mt-2 text-center text-sm text-neutral-500">
+          <h2 className="text-center text-white">Safari FAQ for East Africa</h2>
+          <p className="mt-2 text-center text-sm text-white/70">
             Answers to the questions we hear most before guests travel with us.
           </p>
         </Reveal>
@@ -77,13 +87,13 @@ export default function SafariFaq() {
           {faqs.map((f, i) => {
             const isOpen = openIndex === i
             return (
-              <div key={f.q} className="card-lift rounded-md border border-neutral-200 bg-white">
+              <div key={f.q} className="card-lift rounded-md bg-white/10 ring-1 ring-white/20 backdrop-blur-sm">
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                 >
-                  <span className="text-sm">{f.q}</span>
+                  <span className="text-sm text-white">{f.q}</span>
                   <svg
                     width="14"
                     height="14"
@@ -91,7 +101,7 @@ export default function SafariFaq() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                    className={`shrink-0 text-white transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                   >
                     <path d="M6 9l6 6 6-6" />
                   </svg>
@@ -102,7 +112,7 @@ export default function SafariFaq() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="border-t border-neutral-100 px-5 py-4 text-sm leading-relaxed text-neutral-600">
+                    <div className="border-t border-white/15 px-5 py-4 text-sm leading-relaxed text-white/80">
                       {f.a}
                     </div>
                   </div>
@@ -113,8 +123,8 @@ export default function SafariFaq() {
         </Stagger>
 
         <Reveal>
-          <p className="mt-8 text-center text-sm text-neutral-500">
-            Still have questions? <a href="/contact" className="underline underline-offset-2 hover:text-neutral-800">Reach out any time</a> — we're always happy to help you plan with confidence.
+          <p className="mt-8 text-center text-sm text-white/70">
+            Still have questions? <a href="/contact" className="underline underline-offset-2 text-white hover:text-white/80">Reach out any time</a> — we're always happy to help you plan with confidence.
           </p>
         </Reveal>
       </div>

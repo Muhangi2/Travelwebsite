@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import { useStories, useStory } from '@/sanity/stories'
+import SEO from '@/components/SEO'
 import StoryBody from '@/components/stories/StoryBody'
 import Picture from '@/components/Picture'
 
@@ -32,6 +33,14 @@ export default function StoryDetail() {
 
   return (
     <>
+      <SEO
+        title={article.title}
+        description={article.excerpt}
+        image={article.image}
+        url={`/stories/${article.slug}`}
+        type="article"
+      />
+
       <section className="relative isolate h-[100svh] overflow-hidden">
         <Picture src={article.image} alt={article.title} loading="eager" fetchPriority="high" className="absolute inset-0 -z-10 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/40 to-black/70" />

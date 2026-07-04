@@ -1,9 +1,12 @@
 import SEO from '@/components/SEO'
 import WorkWithUsHero from '@/components/work-with-us/WorkWithUsHero'
-import WhoWePartnerWith from '@/components/work-with-us/WhoWePartnerWith'
+import WorkWithUsIntro from '@/components/work-with-us/WorkWithUsIntro'
+import WhereWeOperate from '@/components/work-with-us/WhereWeOperate'
+import WhatWeHandle from '@/components/work-with-us/WhatWeHandle'
 import WhyPartnerWithUs from '@/components/work-with-us/WhyPartnerWithUs'
+import WhoWePartnerWith from '@/components/work-with-us/WhoWePartnerWith'
+import PartnerWithOurNetwork from '@/components/work-with-us/PartnerWithOurNetwork'
 import TalkWithAdvisor from '@/components/work-with-us/TalkWithAdvisor'
-import GuestReviews from '@/components/home/GuestReviews'
 
 export default function WorkWithUs() {
   return (
@@ -14,10 +17,13 @@ export default function WorkWithUs() {
         url="/work-with-us"
       />
       <WorkWithUsHero />
-      <WhoWePartnerWith />
+      <WorkWithUsIntro />
+      <WhereWeOperate />
+      <WhatWeHandle />
       <WhyPartnerWithUs />
+      <WhoWePartnerWith />
+      <PartnerWithOurNetwork />
       <TalkWithAdvisor />
-      <GuestReviews />
     </>
   )
 }

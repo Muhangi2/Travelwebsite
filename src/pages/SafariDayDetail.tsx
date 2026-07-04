@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { useTourPackage } from '@/sanity/tourPackages'
+import SEO from '@/components/SEO'
 import Picture from '@/components/Picture'
 
 function parseAccommodation(raw: string): { tier: string | null; name: string }[] {
@@ -40,6 +41,13 @@ export default function SafariDayDetail() {
 
   return (
     <>
+      <SEO
+        title={`Day ${current.day}: ${current.title} — ${journey.title.replace('\n', ' ')}`}
+        description={current.body}
+        image={current.image}
+        url={`/safari-collections/${slug}/day/${current.day}`}
+      />
+
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="relative isolate flex h-[100svh] flex-col justify-end overflow-hidden">
         <img

@@ -2,13 +2,17 @@ import { NavLink } from 'react-router-dom'
 import { site } from '@/config/site'
 import Logo from './Logo'
 
-const Social = ({ label, href, path }: { label: string; href: string; path: string }) => (
+const Social = ({ label, href, path, brand }: { label: string; href: string; path: string; brand?: boolean }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
     aria-label={label}
-    className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/20 transition hover:bg-white/20 hover:ring-white/40"
+    className={
+      brand
+        ? 'flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#20bd5a]'
+        : 'flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/20 transition hover:bg-white/20 hover:ring-white/40'
+    }
   >
     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
       <path d={path} />
@@ -66,6 +70,7 @@ export default function Footer() {
             <Social
               label="Chat on WhatsApp"
               href={site.whatsappHref}
+              brand
               path="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C8.3 9 7.5 9.8 7.5 11.4s1.1 3.1 1.3 3.3c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.3.2-.7.2-1.2.1-1.3-.1-.1-.3-.2-.6-.4zM12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"
             />
           </div>

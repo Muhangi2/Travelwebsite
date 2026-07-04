@@ -14,7 +14,7 @@ type NavLinkItem = {
 
 const links: NavLinkItem[] = [
   { to: '/', label: 'Home' },
-  { to: '/safari-collections', label: 'Safari Collections' },
+  { to: '/safari-collections', label: 'Journeys' },
   { to: '/destinations', label: 'Destinations', hasFlyout: true },
   {
     to: '/about',
@@ -23,9 +23,10 @@ const links: NavLinkItem[] = [
       { to: '/about', label: 'Our Story' },
 { to: '/work-with-us', label: 'Work With Us' },
       { to: '/know-before-you-go', label: 'Know Before You Go' },
+      { to: '/regenerative-travel', label: 'What Regenerative Travel Means to Us' },
     ],
   },
-  { to: '/stories', label: 'Stories' },
+  { to: '/stories', label: 'Blogs' },
   { to: '/contact', label: 'Contact Us' },
 ]
 

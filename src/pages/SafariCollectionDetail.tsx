@@ -1,5 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { useTourPackage } from '@/sanity/tourPackages'
+import SEO from '@/components/SEO'
 import DetailHero from '@/components/collection-detail/DetailHero'
 import TourNav from '@/components/collection-detail/TourNav'
 import TourItinerary from '@/components/collection-detail/TourItinerary'
@@ -23,6 +24,13 @@ export default function SafariCollectionDetail() {
 
   return (
     <>
+      <SEO
+        title={journey.title.replace('\n', ' ')}
+        description={journey.subtitle}
+        image={journey.heroImage}
+        url={`/safari-collections/${slug}`}
+      />
+
       <DetailHero title={journey.title} subtitle={journey.subtitle} image={journey.heroImage} />
 
       <TourNav hasHighlights={hasHighlights} hasFaq={hasFaq} hasIncludes={hasIncludes} />

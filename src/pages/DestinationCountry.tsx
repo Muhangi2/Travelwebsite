@@ -1,5 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { useCountry } from '@/sanity/destinations'
+import SEO from '@/components/SEO'
 import DestinationHero from '@/components/destinations/DestinationHero'
 import DestinationStatBar from '@/components/destinations/DestinationStatBar'
 import DestinationNavTabs from '@/components/destinations/DestinationNavTabs'
@@ -23,6 +24,13 @@ export default function DestinationCountry() {
 
   return (
     <>
+      <SEO
+        title={`${data.name} Safaris`}
+        description={data.heroSubtitle}
+        image={data.heroImage}
+        url={`/destinations/${data.slug}`}
+      />
+
       {/* Hero */}
       <DestinationHero title={data.heroTitle} subtitle={data.heroSubtitle} image={data.heroImage} />
 

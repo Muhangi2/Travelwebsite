@@ -3,12 +3,12 @@ import Picture from '@/components/Picture'
 import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
 import { site } from '@/config/site'
 
-export default function TalkWithAdvisor() {
+export default function TravelOrPartnerCTA() {
   return (
     <section className="relative isolate overflow-hidden py-20 text-white sm:py-24">
       <Picture
-        src="/images/parks/rwanda/volcanoes/wilderness-bisate-29.jpg"
-        alt="Bisate Lodge's nest-like villas on the slopes of Volcanoes National Park, Rwanda"
+        src="/images/parks/uganda/lake-mburo/16261416770-9668a9647a-o.jpg"
+        alt="Dining table overlooking the savannah at a lodge in Lake Mburo National Park, Uganda"
         loading="lazy"
         className="absolute inset-0 -z-10 h-full w-full object-cover motion-safe:animate-[fadeIn_1.2s_ease-out]"
       />
@@ -17,25 +17,27 @@ export default function TalkWithAdvisor() {
       <div className="container-page text-center">
         <HeroStagger className="mx-auto max-w-2xl">
           <HeroItem>
-            <p className="eyebrow text-white/70">Let's Talk</p>
+            <p className="eyebrow text-white/70">Travel — Or Partner — With Purpose</p>
           </HeroItem>
           <HeroItem>
-            <h2 className="text-display mt-3 text-white">
-              If You're Selling Uganda Or Rwanda — Or Want To Start
-            </h2>
+            <h2 className="text-display mt-3 text-white">This Is The Standard Every Itinerary Is Built Against</h2>
           </HeroItem>
           <HeroItem>
             <p className="mt-4 text-sm leading-relaxed text-white/85 sm:text-base">
-              We'll walk you through how we run trips, show you our lodge and guide network, and quote a real
-              itinerary so you can see exactly what working with us looks like before you commit to anything. No
-              formal application. No lengthy onboarding. Just a real team, on the ground in Uganda and Rwanda, ready
-              to make your East Africa offering easier to sell and easier to deliver.
+              Whether you're booking a trip with us directly, or you're a travel agent or tour operator looking for
+              a regenerative-minded ground partner in Uganda and Rwanda, this is the standard every itinerary is
+              built against.
             </p>
           </HeroItem>
           <HeroItem>
-            <NavLink to="/contact" className="btn-primary mt-8">
-              START A CONVERSATION
-            </NavLink>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <NavLink to="/safari-collections" className="btn-primary">
+                START YOUR JOURNEY
+              </NavLink>
+              <NavLink to="/work-with-us" className="btn-ghost">
+                PARTNER WITH US
+              </NavLink>
+            </div>
           </HeroItem>
           <HeroItem>
             <p className="mt-6 text-sm text-white/70">
@@ -47,12 +49,13 @@ export default function TalkWithAdvisor() {
               </a>
               {' · '}
               <a
-                href={`mailto:${site.partnersEmail}`}
+                href={`mailto:${site.email}`}
                 className="underline decoration-white/30 underline-offset-4 hover:text-white"
               >
-                {site.partnersEmail}
+                {site.email}
               </a>
             </p>
+            <p className="mt-1 text-sm text-white/70">Operating in: Uganda | Rwanda</p>
           </HeroItem>
         </HeroStagger>
       </div>

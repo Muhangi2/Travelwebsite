@@ -1,5 +1,6 @@
 import SEO from '@/components/SEO'
 import KnowBeforeHero from '@/components/know-before/KnowBeforeHero'
+import KnowBeforeNav from '@/components/know-before/KnowBeforeNav'
 import PolicyBlock from '@/components/know-before/PolicyBlock'
 import PricingPayments from '@/components/know-before/PricingPayments'
 import CancellationPolicy from '@/components/know-before/CancellationPolicy'
@@ -18,6 +19,7 @@ export default function KnowBeforeYouGo() {
         url="/know-before-you-go"
       />
       <KnowBeforeHero />
+      <KnowBeforeNav />
 
       {/* Safari Pricing & Payments */}
       <PricingPayments />
@@ -25,7 +27,6 @@ export default function KnowBeforeYouGo() {
       {/* Payment Policy */}
       <PolicyBlock
         title="Payment Policy"
-        bg="bg-white"
         body={
           <p>
             A <span className="font-semibold">50% deposit</span> is required to confirm your booking and secure
@@ -35,7 +36,6 @@ export default function KnowBeforeYouGo() {
           </p>
         }
         image="/images/parks/uganda/murchison-falls/dsc-6951.jpg"
-        imageOnRight
       />
 
       {/* Cancellation Policy */}
@@ -46,8 +46,8 @@ export default function KnowBeforeYouGo() {
 
       {/* Visa and Entry Requirements */}
       <PolicyBlock
+        id="visa"
         title="Visa and Entry Requirements for East Africa"
-        bg="section-alt"
         body={
           <p>
             Most visitors require a visa for entry into Uganda and Rwanda. The{' '}
@@ -57,14 +57,12 @@ export default function KnowBeforeYouGo() {
             <span className="font-semibold">six months</span> beyond your intended departure date.
           </p>
         }
-        image=""
-        centered
+        image="/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg"
       />
 
       {/* Health & Vaccinations */}
       <PolicyBlock
         title="Health (Vaccinations)"
-        bg="bg-white"
         body={
           <p>
             A <span className="font-semibold">Yellow Fever vaccination certificate is mandatory</span> for entry
@@ -75,7 +73,6 @@ export default function KnowBeforeYouGo() {
           </p>
         }
         image="/images/parks/uganda/murchison-falls/dsc-7081.jpg"
-        imageOnRight={false}
       />
 
       {/* Packing List */}

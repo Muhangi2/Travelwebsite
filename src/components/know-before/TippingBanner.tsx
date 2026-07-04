@@ -3,7 +3,7 @@ import Reveal from '@/components/ui/Reveal'
 
 export default function TippingBanner() {
   return (
-    <section className="relative isolate overflow-hidden py-24 text-white">
+    <section id="tipping" className="relative isolate overflow-hidden py-24 text-white">
       <Picture
         src="/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.jpg"
         alt="Lodge at twilight"
@@ -15,7 +15,7 @@ export default function TippingBanner() {
 
       <div className="mx-auto max-w-3xl px-6">
         <Reveal>
-          <h2>Tipping and Local Etiquette</h2>
+          <h2 className="text-white">Tipping and Local Etiquette</h2>
           <p className="mt-4 text-sm leading-relaxed text-white/85">
             Tipping is customary and a significant part of the income for guides, drivers, and lodge staff. We provide a
             suggested tipping guideline in your final itinerary. Always ask permission before taking photographs of

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Picture from '@/components/Picture'
 import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 const terms = [
@@ -78,30 +79,53 @@ const terms = [
 ]
 
 export default function BookingTerms() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="bg-white py-16">
-      <div className="mx-auto max-w-3xl px-6">
-        <Reveal>
-          <div className="section-rule" />
-          <h2 className="mt-4">Booking Terms</h2>
-          <p className="mt-2 text-sm text-neutral-500">
-            The details that protect both you and us, so your trip runs exactly as planned. By paying your deposit, you confirm that you accept the terms below.
-          </p>
-        </Reveal>
+    <>
+      <section id="booking-terms" className="relative isolate overflow-hidden py-24 text-white">
+        <Picture
+          src="/images/parks/kenya/samburu/grevys-zebra-1.jpg"
+          alt="Grevy's zebra with guinea fowl in Samburu"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="absolute inset-0 -z-10 bg-black/55" />
 
-        <Stagger className="mt-8 space-y-3" staggerMs={50}>
+        <div className="mx-auto max-w-3xl px-6">
+          <Reveal>
+            <div className="section-rule" style={{ background: 'rgba(255,255,255,0.5)' }} />
+            <h2 className="mt-4 text-white">Booking Terms</h2>
+            <p className="mt-2 text-sm text-white/80">
+              The details that protect both you and us, so your trip runs exactly as planned. By paying your deposit, you confirm that you accept the terms below.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="relative isolate overflow-hidden py-16">
+      <Picture
+        src="/images/parks/kenya/samburu/kenya-8346.jpg"
+        alt="Samburu landscape"
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 -z-10 bg-black/65" />
+      <div className="mx-auto max-w-3xl px-6">
+
+        <Stagger className="space-y-3" staggerMs={50}>
           {terms.map((term, i) => {
             const isOpen = openIndex === i
             return (
-              <div key={term.title} className="card-lift rounded-md border border-neutral-200 bg-white">
+              <div key={term.title} className="card-lift rounded-md bg-white/10 ring-1 ring-white/20 backdrop-blur-sm">
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                 >
-                  <span className="text-sm font-medium">{term.title}</span>
+                  <span className="text-sm font-medium text-white">{term.title}</span>
                   <svg
                     width="14"
                     height="14"
@@ -109,7 +133,7 @@ export default function BookingTerms() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className={`shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                    className={`shrink-0 text-white transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                   >
                     <path d="M6 9l6 6 6-6" />
                   </svg>
@@ -120,39 +144,39 @@ export default function BookingTerms() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="border-t border-neutral-100 px-5 py-4 text-sm leading-relaxed text-neutral-600">
+                    <div className="border-t border-white/15 px-5 py-4 text-sm leading-relaxed text-white/80">
                       {term.body && <p className="mb-3">{term.body}</p>}
                       {term.items && (
                         <ul className="space-y-2">
                           {term.items.map((item) => (
                             <li key={item} className="flex items-start gap-2">
-                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" />
+                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
                               {item}
                             </li>
                           ))}
                         </ul>
                       )}
                       {term.table && (
-                        <div className="mt-3 overflow-x-auto rounded-md border border-neutral-200">
+                        <div className="mt-3 overflow-x-auto rounded-md ring-1 ring-white/15">
                           <table className="w-full min-w-[320px] text-xs">
-                            <thead className="bg-neutral-50">
+                            <thead className="bg-white/10">
                               <tr>
-                                <th className="px-4 py-2 text-left font-medium text-neutral-500">Time before departure</th>
-                                <th className="px-4 py-2 text-left font-medium text-neutral-500">Cancellation charge</th>
+                                <th className="px-4 py-2 text-left font-medium text-white/70">Time before departure</th>
+                                <th className="px-4 py-2 text-left font-medium text-white/70">Cancellation charge</th>
                               </tr>
                             </thead>
-                            <tbody className="divide-y divide-neutral-100">
+                            <tbody className="divide-y divide-white/10">
                               {term.table.map((row) => (
                                 <tr key={row.time}>
-                                  <td className="px-4 py-2 text-neutral-700">{row.time}</td>
-                                  <td className="px-4 py-2 text-neutral-700">{row.charge}</td>
+                                  <td className="px-4 py-2 text-white/85">{row.time}</td>
+                                  <td className="px-4 py-2 text-white/85">{row.charge}</td>
                                 </tr>
                               ))}
                             </tbody>
                           </table>
                         </div>
                       )}
-                      {term.footer && <p className="mt-3 text-xs text-neutral-500">{term.footer}</p>}
+                      {term.footer && <p className="mt-3 text-xs text-white/60">{term.footer}</p>}
                     </div>
                   </div>
                 </div>
@@ -161,6 +185,7 @@ export default function BookingTerms() {
           })}
         </Stagger>
       </div>
-    </section>
+      </section>
+    </>
   )
 }

@@ -14,6 +14,7 @@ import NationalPark from '@/pages/NationalPark'
 import About from '@/pages/About'
 import KnowBeforeYouGo from '@/pages/KnowBeforeYouGo'
 import WorkWithUs from '@/pages/WorkWithUs'
+import RegenerativeTravel from '@/pages/RegenerativeTravel'
 import Stories from '@/pages/Stories'
 import StoryDetail from '@/pages/StoryDetail'
 import ExperienceDetail from '@/pages/ExperienceDetail'
@@ -45,6 +46,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/destinations/:country/:park" element={<NationalPark />} />
           <Route path="/about" element={<About />} />
           <Route path="/know-before-you-go" element={<KnowBeforeYouGo />} />
+          <Route path="/regenerative-travel" element={<RegenerativeTravel />} />
           <Route path="/work-with-us" element={<WorkWithUs />} />
           <Route path="/stories" element={<Stories />} />
           <Route path="/stories/:slug" element={<StoryDetail />} />

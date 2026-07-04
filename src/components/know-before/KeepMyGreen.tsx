@@ -39,7 +39,7 @@ const impact = [
 export default function KeepMyGreen() {
   return (
     <>
-      <section className="relative isolate overflow-hidden py-24 text-white">
+      <section id="keep-green" className="relative isolate overflow-hidden py-24 text-white">
         <Picture
           src="/images/parks/uganda/murchison-falls/dsc-7081.jpg"
           alt="Wild landscape"
@@ -52,7 +52,7 @@ export default function KeepMyGreen() {
         <div className="mx-auto max-w-3xl px-6">
           <Reveal>
             <p className="eyebrow text-white/70">Our Commitment</p>
-            <h2 className="mt-4">Keep My Safari Green</h2>
+            <h2 className="mt-4 text-white">Keep My Safari Green</h2>
             <p className="mt-4 text-sm leading-relaxed text-white/85">
               Wild places stay wild because of the choices we make before, during, and after every trip. Keep My Safari Green is Still Wild Safaris' promise: that the wonder you experience on your trip doesn't come at the cost of the places that make it possible. It shapes who we partner with, how we operate, and what we ask of every guest who travels with us.
             </p>
@@ -63,15 +63,24 @@ export default function KeepMyGreen() {
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="relative isolate overflow-hidden py-16">
+        <Picture
+          src="/images/parks/rwanda/akagera/wilderness-magashi-7.jpg"
+          alt="Wilderness Magashi camp, Akagera National Park, Rwanda"
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-black/70" />
+
         <div className="mx-auto max-w-5xl px-6">
           <Reveal>
-            <div className="section-rule" />
-            <h3 className="mt-4 text-lg sm:text-2xl">How We Operate Responsibly</h3>
+            <div className="section-rule" style={{ background: 'rgba(255,255,255,0.5)' }} />
+            <h3 className="mt-4 text-lg text-white sm:text-2xl">How We Operate Responsibly</h3>
             <ul className="mt-5 space-y-3">
               {practices.map((p) => (
-                <li key={p} className="flex items-start gap-3 text-sm leading-relaxed text-neutral-600">
-                  <span className="mt-1 text-green-600">✦</span>
+                <li key={p} className="flex items-start gap-3 text-sm leading-relaxed text-white/80">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-400/70" />
                   <span>{p}</span>
                 </li>
               ))}
@@ -79,28 +88,28 @@ export default function KeepMyGreen() {
           </Reveal>
 
           <Reveal>
-            <h3 className="mt-12 text-lg sm:text-2xl">Where Your Money Goes</h3>
+            <h3 className="mt-12 text-lg text-white sm:text-2xl">Where Your Money Goes</h3>
             <Stagger className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" staggerMs={70}>
               {impact.map(({ label, description }) => (
                 <div
                   key={label}
-                  className="rounded-md border border-green-100 bg-green-50 p-5"
+                  className="rounded-md bg-white/10 p-5 ring-1 ring-white/20 backdrop-blur-sm"
                 >
-                  <p className="text-xs font-semibold uppercase tracking-wide text-green-700">{label}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-neutral-600">{description}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-green-300">{label}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/80">{description}</p>
                 </div>
               ))}
             </Stagger>
           </Reveal>
 
           <Reveal>
-            <div className="section-rule mt-12" />
-            <h3 className="mt-4 text-lg sm:text-2xl">How You Can Travel Green With Us</h3>
-            <p className="mt-2 text-sm text-neutral-500">Sustainability on safari isn't just about what we do behind the scenes — small choices from guests add up too.</p>
+            <div className="section-rule mt-12" style={{ background: 'rgba(255,255,255,0.5)' }} />
+            <h3 className="mt-4 text-lg text-white sm:text-2xl">How You Can Travel Green With Us</h3>
+            <p className="mt-2 text-sm text-white/70">Sustainability on safari isn't just about what we do behind the scenes — small choices from guests add up too.</p>
             <ul className="mt-5 space-y-3">
               {guestTips.map(({ tip }) => (
-                <li key={tip} className="flex items-start gap-3 text-sm leading-relaxed text-neutral-600">
-                  <span className="mt-1 text-green-600">✦</span>
+                <li key={tip} className="flex items-start gap-3 text-sm leading-relaxed text-white/80">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-400/70" />
                   <span>{tip}</span>
                 </li>
               ))}
