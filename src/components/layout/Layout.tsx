@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Nav from './Nav'
 import Footer from './Footer'
+import OrganizationSchema from '@/components/OrganizationSchema'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -17,6 +18,7 @@ export default function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <OrganizationSchema />
       <ScrollToTop />
       <Nav />
       <main key={pathname} className="page-enter flex-1">

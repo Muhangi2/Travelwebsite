@@ -1,6 +1,7 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { useTourPackage } from '@/sanity/tourPackages'
 import SEO from '@/components/SEO'
+import { buildFaqSchema } from '@/lib/schema'
 import DetailHero from '@/components/collection-detail/DetailHero'
 import TourNav from '@/components/collection-detail/TourNav'
 import TourItinerary from '@/components/collection-detail/TourItinerary'
@@ -22,6 +23,28 @@ export default function SafariCollectionDetail() {
   const hasFaq = Boolean(journey.faq?.length)
   const hasIncludes = Boolean(journey.included?.length || journey.notIncluded?.length)
 
+  const tripSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    name: journey.title.replace('\n', ' '),
+    description: journey.subtitle,
+    image: journey.heroImage,
+    touristType: 'Wildlife safari',
+    itinerary: {
+      '@type': 'ItemList',
+      itemListElement: journey.days.map((d, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: d.title,
+      })),
+    },
+    provider: {
+      '@type': 'TravelAgency',
+      name: 'Still Wild Safaris',
+      url: 'https://stillwildsafaris.com',
+    },
+  }
+
   return (
     <>
       <SEO
@@ -29,6 +52,7 @@ export default function SafariCollectionDetail() {
         description={journey.subtitle}
         image={journey.heroImage}
         url={`/safari-collections/${slug}`}
+        jsonLd={hasFaq ? [tripSchema, buildFaqSchema(journey.faq!)] : tripSchema}
       />
 
       <DetailHero title={journey.title} subtitle={journey.subtitle} image={journey.heroImage} />

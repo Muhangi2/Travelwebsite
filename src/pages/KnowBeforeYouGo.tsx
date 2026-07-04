@@ -9,6 +9,8 @@ import TippingBanner from '@/components/know-before/TippingBanner'
 import PackingItems from '@/components/know-before/PackingItems'
 import KeepMyGreen from '@/components/know-before/KeepMyGreen'
 import SafariFaq from '@/components/know-before/SafariFaq'
+import { safariFaqs } from '@/data/safariFaq'
+import { buildFaqSchema } from '@/lib/schema'
 
 export default function KnowBeforeYouGo() {
   return (
@@ -17,6 +19,7 @@ export default function KnowBeforeYouGo() {
         title="Know Before You Go — Safari Guide & Packing List"
         description="Everything you need to know before your East Africa safari — visa requirements, health advice, packing list, cancellation policy and booking terms from Still Wild Safaris."
         url="/know-before-you-go"
+        jsonLd={buildFaqSchema(safariFaqs)}
       />
       <KnowBeforeHero />
       <KnowBeforeNav />

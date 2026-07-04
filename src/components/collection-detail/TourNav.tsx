@@ -86,14 +86,14 @@ export default function TourNav({ hasHighlights, hasFaq, hasIncludes }: Props) {
           ref={scrollRef}
           className="hide-scrollbar overflow-x-auto flex justify-center px-2 sm:px-6"
         >
-          <div className="flex items-center gap-0.5 rounded-full bg-neutral-100 p-0.5 sm:p-1 md:p-1.5 shadow-inner">
+          <div className="flex items-center gap-1 rounded-full bg-neutral-100 p-1 sm:p-1 md:p-1.5 shadow-inner">
             {items.map((item) => (
               <button
                 key={item.key}
                 data-navkey={item.key}
                 onClick={() => scrollTo(item.id)}
                 className={`relative shrink-0 rounded-full font-semibold uppercase transition-all duration-300
-                  px-2 py-0.5 text-[8px] tracking-[0.04em]
+                  px-3 py-1.5 text-[11px] tracking-[0.06em]
                   sm:px-4 sm:py-1.5 sm:text-[10px] sm:tracking-[0.10em]
                   md:px-5 md:py-2 md:text-[11px] md:tracking-[0.12em]
                   ${active === item.key

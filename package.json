@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "sitemap": "node scripts/generate-sitemap.mjs",
-    "build": "tsc -b && node scripts/generate-sitemap.mjs && vite build",
+    "llms-txt": "node scripts/generate-llms-txt.mjs",
+    "build": "tsc -b && node scripts/generate-sitemap.mjs && node scripts/generate-llms-txt.mjs && vite build && node scripts/prerender.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "playwright install chromium"
   },
   "dependencies": {
     "@portabletext/react": "^6.2.0",
