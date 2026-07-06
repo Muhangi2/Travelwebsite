@@ -14,6 +14,22 @@ import { existsSync, statSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+// Vercel's build container doesn't have the shared libraries (libnspr4, libnss3, etc.)
+// that Playwright's own downloaded Chromium needs, and there's no apt access at build time
+// to add them. @sparticuz/chromium ships a Chromium build with those libs statically
+// bundled, built for exactly this serverless/CI constraint — so we swap to it there.
+async function launchBrowser() {
+  if (process.env.VERCEL) {
+    const { default: sparticuzChromium } = await import('@sparticuz/chromium')
+    return chromium.launch({
+      executablePath: await sparticuzChromium.executablePath(),
+      args: sparticuzChromium.args,
+      headless: true,
+    })
+  }
+  return chromium.launch()
+}
+
 const rootDir = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
 const distDir = path.join(rootDir, 'dist')
 const PORT = 4571
@@ -74,7 +90,7 @@ async function main() {
   const shellHtml = await readFile(path.join(distDir, 'index.html'), 'utf8')
   const server = await startServer(shellHtml)
   const routes = await getRoutes()
-  const browser = await chromium.launch()
+  const browser = await launchBrowser()
   const page = await browser.newPage()
 
   console.log(`[prerender] rendering ${routes.length} routes...`)
