@@ -9,6 +9,7 @@ export type Article = {
   title: string
   excerpt: string
   image: string
+  gallery?: string[]
   author: string
   date: string
   tags: string[]
@@ -21,6 +22,10 @@ export const articles: Article[] = [
     title: "Uganda Gorilla Trekking Permit Cost 2026: Complete Price Guide",
     excerpt: "Uganda gorilla permits cost $800 per person in 2026. Learn booking process, payment methods, price comparisons with Rwanda, and how to secure your permit.",
     image: "/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp",
+    gallery: [
+      "/images/activities/gorilla-trekking/8-gorilla-ah1i2661.webp",
+      "/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "Jun 2026",
     tags: ["Gorillas", "Uganda", "Safari Tips"],
@@ -155,6 +160,10 @@ export const articles: Article[] = [
     title: "Best Time to Visit Uganda for Gorilla Trekking",
     excerpt: "The best time for Uganda gorilla trekking is June-September and December-February (dry seasons). Complete month-by-month weather guide, permit availability, and crowd levels.",
     image: "/images/activities/gorilla-trekking/15-gorilla-ah1i7197.webp",
+    gallery: [
+      "/images/activities/gorilla-trekking/2-mgl-gorilla-bb.webp",
+      "/images/activities/gorilla-trekking/30-mount-gahinga-lodge-gorilla.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "Jun 2026",
     tags: ["Gorillas", "Uganda", "Safari Tips"],
@@ -337,6 +346,10 @@ export const articles: Article[] = [
     title: "What to Pack for Gorilla Trekking in Uganda: Ultimate Checklist",
     excerpt: "Packing for gorilla trekking in Uganda requires careful planning. You’ll be hiking through dense rainforest, navigating muddy trails, and spending an hour with wild mountain gorillas—all while carryin",
     image: "/images/activities/gorilla-trekking/9-gorilla3-bfo9.webp",
+    gallery: [
+      "/images/activities/gorilla-trekking/21-chimpanzee-kya-3-s-g13.webp",
+      "/images/activities/gorilla-trekking/3-mgl-gorilla-bb.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "May 2026",
     tags: ["Safari Tips", "Uganda", "Gorillas"],
@@ -480,6 +493,10 @@ export const articles: Article[] = [
     title: "Uganda vs Rwanda Gorilla Trekking: Which is Better in 2026?",
     excerpt: "Choosing where to go gorilla trekking is one of the most significant decisions you will make when planning an African safari. The mountain gorilla is an endangered species, and seeing them in their na",
     image: "/images/activities/gorilla-trekking/4-mgl-gorilla-bb.webp",
+    gallery: [
+      "/images/activities/gorilla-trekking/27-virunga-lodge-goriila-rf-0464.webp",
+      "/images/activities/gorilla-trekking/2-mgl-gorilla-bb.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "May 2026",
     tags: ["Gorillas", "Uganda", "Rwanda"],
@@ -576,6 +593,10 @@ export const articles: Article[] = [
     title: "Uganda Safari Costs: Complete Budget Breakdown 2026",
     excerpt: "Uganda, often hailed as the \"Pearl of Africa,\" offers an unparalleled safari experience, blending iconic wildlife encounters with the profound privilege of gorilla trekking. From the dense, misty fore",
     image: "/images/parks/uganda/murchison-falls/dsc-6584.webp",
+    gallery: [
+      "/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.webp",
+      "/images/activities/gorilla-trekking/20-chimp-ah1i4531.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "Apr 2026",
     tags: ["Safari Tips", "Uganda"],
@@ -665,6 +686,10 @@ export const articles: Article[] = [
     title: "Bwindi Impenetrable Forest: Complete Visitor Guide 2026",
     excerpt: "Nestled in the southwestern corner of Uganda, Bwindi Impenetrable National Park is a UNESCO World Heritage Site and one of Africa's most ancient and biologically diverse rainforests. Its name, derived",
     image: "/images/activities/gorilla-trekking/26-ah1i3781.webp",
+    gallery: [
+      "/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7518.webp",
+      "/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7863.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "Apr 2026",
     tags: ["Destinations", "Uganda", "Gorillas"],
@@ -752,6 +777,10 @@ export const articles: Article[] = [
     title: "How to Book Gorilla Trekking Permits in Uganda (Step-by-Step Guide 2026)",
     excerpt: "Securing your gorilla trekking permit is the most critical step in planning your unforgettable adventure to Uganda. These permits are your golden ticket to an hour with the magnificent mountain gorill",
     image: "/images/activities/gorilla-trekking/8-gorilla-ah1i2661.webp",
+    gallery: [
+      "/images/activities/gorilla-trekking/11-gorilla-ah1i2713.webp",
+      "/images/activities/gorilla-trekking/3-mgl-gorilla-bb.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "Mar 2026",
     tags: ["Gorillas", "Uganda", "Safari Tips"],
@@ -831,6 +860,10 @@ export const articles: Article[] = [
     title: "How Close Can You Get to Mountain Gorillas?",
     excerpt: "The official rule is 7 meters (23 feet) from mountain gorillas, but gorillas often approach closer. Learn the distance rules, safety protocols, and what to do if a gorilla approaches you.",
     image: "/images/activities/gorilla-trekking/11-gorilla-ah1i2713.webp",
+    gallery: [
+      "/images/activities/gorilla-trekking/20-chimp-ah1i4531.webp",
+      "/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "Mar 2026",
     tags: ["Gorillas", "Uganda"],
@@ -946,6 +979,10 @@ export const articles: Article[] = [
     title: "Can You Trek Gorillas If You’re Over 60 Years Old?",
     excerpt: "Yes! Gorilla trekking over 60 is possible with proper preparation. Learn fitness requirements, porter services, and best sectors for senior travelers in Uganda.",
     image: "/images/activities/gorilla-trekking/12-mgl-gorilla-bb.webp",
+    gallery: [
+      "/images/activities/gorilla-trekking/1-mgl-gorilla-bb.webp",
+      "/images/activities/gorilla-trekking/30-mount-gahinga-lodge-gorilla.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "Feb 2026",
     tags: ["Gorillas", "Safari Tips"],
@@ -1016,6 +1053,10 @@ export const articles: Article[] = [
     title: "What Happens If It Rains During Gorilla Trekking?",
     excerpt: "Rain during gorilla trekking is common in Uganda’s rainforest. Learn what to expect, essential rain gear, and whether treks get cancelled due to weather.",
     image: "/images/activities/gorilla-trekking/10-gorilla-ah1i2740.webp",
+    gallery: [
+      "/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp",
+      "/images/activities/gorilla-trekking/19-chimp-kya-bbp-img-20190218-wa0007.webp",
+    ],
     author: 'Still Wild Safaris Team',
     date: "Feb 2026",
     tags: ["Gorillas", "Safari Tips"],
