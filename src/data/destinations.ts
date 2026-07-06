@@ -1105,7 +1105,7 @@ const serengetiPark = {
   image: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.webp',
   location: 'Northern Tanzania',
   size: '14,763 km²',
-  altitude: '920 — 1,850 m',
+  altitude: '',
   bestTime: 'June–October (northern crossings), January–March (calving season) & November–December (green season)',
   overview:
     "The Serengeti is Tanzania's crown jewel and the stage for the most iconic safari experience on the planet. A UNESCO World Heritage Site and one of the Seven Natural Wonders of Africa, this ancient ecosystem stretches from the volcanic plains of the south to the Mara River in the north, supporting the single largest terrestrial mammal migration in the world — over 1.5 million wildebeest, 350,000 zebra and 500,000 Thomson's gazelle moving in an endless clockwise loop. Beyond the migration, the Serengeti harbours more lions than almost anywhere on earth, dense resident leopard, cheetah on the open plains and a year-round cast of supporting wildlife that makes every drive compelling. The private concessions to the north and west — home to Sayari and Dunia camps — offer off-road driving and night-drive access that transforms the experience entirely. The green season (November–December) brings a quieter, lusher Serengeti with beautiful light and far fewer vehicles — a rewarding alternative for travellers who don't need to time a river crossing.",
@@ -1117,12 +1117,12 @@ const serengetiPark = {
     },
     {
       title: 'Lion & Leopard Density',
-      body: 'The Serengeti holds one of the highest concentrations of lion in Africa, plus resident leopard in the riverine forest, cheetah on the open plains and a near-certain chance of wild dog in the north.',
+      body: 'The Serengeti holds one of the highest concentrations of lion in Africa, plus resident leopard in the riverine forest, cheetah on the open plains and, in the north, one of Africa\'s most rewarding and elusive big carnivore encounters — the chance to track African wild dog.',
       image: '/images/destinations/tanzania/sayari-lioness.webp',
     },
     {
       title: 'Private Northern Concessions',
-      body: "The far north — Lamai Wedge, Mara Triangle interface, the Eastern Loliondo area and the Klein's Camp concession — offers off-road driving, night drives targeting aardvark and serval, and a far lower vehicle count than the central Seronera area. It's where Sayari Camp and our most exclusive itineraries are based.",
+      body: "The far north — Lamai Wedge, the Eastern Loliondo area and the Klein's Camp concession — offers off-road driving, night drives targeting aardvark and serval, and a far lower vehicle count than the central Seronera area. It's where Sayari Camp and our most exclusive itineraries are based.",
       image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.webp',
     },
     {
@@ -1149,7 +1149,7 @@ const serengetiPark = {
     },
     {
       title: 'Ballooning over the Plains',
-      body: 'A dawn balloon flight over the Serengeti, following migrating herds from 500 feet, ending with a champagne breakfast in the bush — the definitive aerial safari experience.',
+      body: 'A dawn balloon flight over the Serengeti, following migrating herds, ending with a champagne breakfast in the bush — the definitive aerial safari experience.',
       image: '/images/destinations/tanzania/dunia-lion-and-plane-in-the-serengeti.webp',
     },
   ],
@@ -1185,7 +1185,7 @@ const serengetiPark = {
   faqs: [
     {
       q: 'When are the Mara River crossings?',
-      a: 'Crossings are most reliable from late July through October, peaking in August and September. The exact timing shifts by a week or two each year — our in-field team monitors the herds daily and positions guests accordingly.',
+      a: 'Crossings are most reliable from July through October. The exact timing shifts by a week or two each year — our in-field team monitors the herds daily and positions guests accordingly.',
     },
     {
       q: 'Is calving season worth visiting?',
@@ -1193,7 +1193,7 @@ const serengetiPark = {
     },
     {
       q: 'Private concession vs the main reserve — which is better?',
-      a: "For luxury safari, the private concessions (northern Serengeti, Wogakuria) are transformative — off-road access, night drives, no vehicle queues. We design itineraries that use both: northern concessions for exclusivity, central Seronera for the long-established resident game.",
+      a: "For luxury safari, the private concessions (Lamai, Loliondo, Klein's) are transformative — off-road access, night drives, no vehicle queues. We design itineraries that use both: northern concessions for exclusivity, central Seronera for the long-established resident game.",
     },
     {
       q: 'How many days should I spend in the Serengeti?',
@@ -1220,14 +1220,14 @@ const ngorongoroPark = {
   image: '/images/destinations/tanzania/dunia-giraffe.webp',
   location: 'Northern Tanzania',
   size: '8,292 km² (crater floor: 260 km²)',
-  altitude: '1,800 — 3,648 m',
+  altitude: '~2,300 m (crater rim)',
   bestTime: 'Year-round (driest June–September)',
   overview:
-    "Ngorongoro Crater is a natural wonder — the intact floor of an ancient volcano estimated to have once stood higher than Kilimanjaro before it collapsed in on itself some 2–3 million years ago, leaving a caldera 600 metres deep that shelters a permanently enclosed ecosystem of extraordinary density. More than 25,000 large mammals live on the crater floor, drinking from freshwater springs and the alkaline Lake Magadi at its centre, and including a population of approximately 20–30 black rhino — one of the densest black rhino populations in East Africa. The crater also holds one of Africa's highest lion densities; the resident prides form a self-contained population, separate from the lions living on the forested rim above. The drive down from the rim at dawn, with the mist clearing to reveal the plains below, is one of the defining moments of an African safari. Ngorongoro pairs beautifully with the Serengeti as part of our northern Tanzania circuit.",
+    "Ngorongoro Crater is a natural wonder — the intact floor of an ancient volcano estimated to have once stood higher than Kilimanjaro before it collapsed in on itself some 2–3 million years ago, leaving a caldera 600 metres deep that shelters a permanently enclosed ecosystem of extraordinary density. Tens of thousands of wildebeest live on the crater floor alongside dense populations of lion, elephant and hippo, drinking from freshwater springs and the alkaline Lake Magadi at its centre, and including a population of approximately 20–30 black rhino — one of the densest black rhino populations in East Africa. The crater also holds one of Africa's highest lion densities; the resident prides form a self-contained population, separate from the lions living on the forested rim above. The drive down from the rim at dawn, with the mist clearing to reveal the plains below, is one of the defining moments of an African safari. Ngorongoro pairs beautifully with the Serengeti as part of our northern Tanzania circuit.",
   attractions: [
     {
       title: 'Black Rhino on the Crater Floor',
-      body: 'One of the last strongholds for critically endangered black rhino in East Africa — a population of approximately 20–30 individuals roams the crater floor, with sightings regular at the Lerai Forest and the crater lake margins.',
+      body: 'One of the last strongholds for critically endangered black rhino in East Africa — a population of approximately 20–30 individuals roams the crater floor, with sightings regular in the fever-tree forest area and the crater lake margins.',
       image: '/images/destinations/tanzania/dunia-leopard.webp',
     },
     {
@@ -1236,7 +1236,7 @@ const ngorongoroPark = {
       image: '/images/destinations/tanzania/dunia-view-from-the-main-area.webp',
     },
     {
-      title: 'Lerai Forest & Flamingo Lake',
+      title: 'Fever-Tree Forest & Flamingo Lake',
       body: "The crater floor\'s fever-tree forest shelters elephant and leopard; the alkaline Lake Magadi at its centre draws thousands of flamingos and is a prime staging ground for the predator–prey dramas that play out here daily.",
       image: '/images/destinations/tanzania/dunia-crane.webp',
     },
@@ -1249,7 +1249,7 @@ const ngorongoroPark = {
   activities: [
     {
       title: 'Full-Day Crater Drive',
-      body: 'An immersive full-day game drive on the crater floor — a circuit of the lake, the Lerai Forest, the Hippo Pool and the open plains, with a bush picnic at a designated viewpoint.',
+      body: 'An immersive full-day game drive on the crater floor — a circuit of the lake, the fever-tree forest, the hippo pools and the open plains, with a bush picnic at a designated viewpoint.',
       image: '/images/destinations/tanzania/dunia-camp-game-drive-serengeti-safari-2.webp',
     },
     {
@@ -1298,11 +1298,11 @@ const ngorongoroPark = {
   faqs: [
     {
       q: 'Can I sleep inside the crater?',
-      a: 'No — overnight access to the crater floor is not permitted. All lodges are on the rim or outside the conservation area. The drive to the floor takes approximately 45 minutes each way.',
+      a: 'No — overnight access to the crater floor is not permitted. All lodges are on the rim or outside the conservation area.',
     },
     {
       q: 'How does it fit with the Serengeti?',
-      a: "Ngorongoro is a natural one- or two-night add-on to a Serengeti safari — the lodges are 2–3 hours by road from the central Serengeti, or 1 hour by charter flight. The two destinations complement each other perfectly.",
+      a: "Ngorongoro is a natural one- or two-night add-on to a Serengeti safari — the lodges are 2–3 hours by road from the central Serengeti. The two destinations complement each other perfectly.",
     },
     {
       q: 'When is the best time to visit?',
@@ -1469,7 +1469,7 @@ const arushaPark = {
     },
     {
       title: 'Mount Meru Crater Hike',
-      body: "A 3–4 day guided trek to Mount Meru's summit at 4,566m, passing through forest, moorland and the dramatic inner crater ash cone — a superb, less-crowded acclimatisation climb before Kilimanjaro.",
+      body: "A 3–4 day guided trek to Mount Meru's summit at 4,566m, passing through forest, moorland and the dramatic inner crater ash cone.",
       image: '/images/destinations/tanzania/dunia-view-from-the-main-area.webp',
     },
     {
@@ -1479,7 +1479,7 @@ const arushaPark = {
     },
     {
       title: 'Arusha Declaration Museum & International Justice',
-      body: "The museum commemorating the 1967 Arusha Declaration and Tanzania's path to independence, plus the Arusha International Conference Centre — home to the International Criminal Tribunal for Rwanda and the East African Court of Justice.",
+      body: "The museum commemorating the Arusha Declaration and Tanzania's path to independence, plus the Arusha International Conference Centre — home to the International Criminal Tribunal for Rwanda and the East African Court of Justice.",
       image: '/images/destinations/tanzania/photo-2013-03-06-11-59-58.webp',
     },
     {
@@ -1567,7 +1567,7 @@ const kilimanjaroPark = {
     "Climb Mount Kilimanjaro, Africa's highest peak at 5,895m — expert guides, multiple trekking routes, and the summit of a lifetime.",
   image: '/images/destinations/tanzania/photo-2013-03-06-11-59-58.webp',
   location: 'Northern Tanzania, near Moshi',
-  size: '1,668 km² (park); summit at 5,895 m',
+  size: '',
   altitude: '1,800 — 5,895 m',
   bestTime: 'January–March (short dry season) & June–October (main dry season)',
   overview:
@@ -1613,7 +1613,7 @@ const kilimanjaroPark = {
   activities: [
     {
       title: 'Machame Route (the "Whiskey Route")',
-      body: 'The most popular and scenic route at 6–7 days, approaching through dense rainforest with stunning views throughout. Success rates of roughly 65–80% thanks to a strong acclimatisation profile.',
+      body: 'The most popular and scenic route at 6–7 days, nicknamed the Whiskey Route for its steeper terrain, with stunning views throughout. Success rates of roughly 65–80% thanks to a strong acclimatisation profile.',
       image: '/images/destinations/tanzania/dunia-game-drive.webp',
     },
     {
@@ -1628,7 +1628,7 @@ const kilimanjaroPark = {
     },
     {
       title: 'Rongai Route',
-      body: 'A 6–7 day approach from the north, offering a different geological and ecological perspective and a quieter, drier trail — a strong alternative during the rainier seasons.',
+      body: 'A 6–7 day approach from the north, offering a different geological and ecological perspective.',
       image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.webp',
     },
   ],
@@ -1675,14 +1675,6 @@ const kilimanjaroPark = {
     {
       q: 'Can I combine Kilimanjaro with a Tanzania safari?',
       a: 'Yes — Kilimanjaro and the northern circuit (Serengeti, Ngorongoro, Tarangire) make a classic combined Tanzania adventure. Most itineraries do the safari first, then climb, or reverse the order. Post-climb, many trekkers reward themselves with a beach stay on Zanzibar.',
-    },
-    {
-      q: 'Do I need previous climbing experience?',
-      a: 'No technical climbing experience is required — Kilimanjaro is a walk, not a climb, with no ropes or ice axes needed on any of the standard trekking routes. What matters far more is cardiovascular fitness, a slow and steady pace, and mental resilience through the cold summit night.',
-    },
-    {
-      q: 'Can I rent trekking gear in Tanzania?',
-      a: "Yes — quality cold-weather gear, including -20°C sleeping bags, down jackets and trekking poles, can be hired in Moshi or Arusha if you don't own your own. By law you must also climb with a licensed guide, and porters carry camp equipment throughout the trek.",
     },
   ],
 }
@@ -1918,8 +1910,8 @@ const zanzibarPark = {
     "Discover Zanzibar's turquoise beaches, UNESCO-listed Stone Town, spice plantations, and Indian Ocean marine life — the perfect Tanzania safari finale.",
   image: '/images/destinations/tanzania/rubondo-island-camp-beach.webp',
   location: 'Indian Ocean, 35km off the Tanzanian coast',
-  size: 'Archipelago; main island (Unguja) 1,554 km²',
-  altitude: '0 — 120 m',
+  size: '',
+  altitude: '',
   bestTime: 'June–October (long dry season) & December–February (short dry season)',
   overview:
     "Zanzibar is Africa's most romantic island destination — a spice-scented archipelago of coral islands in the Indian Ocean 35km off Tanzania's coast, where Arab, Persian, Indian, Portuguese and Swahili cultures have fused over millennia to create one of the world's most distinctive and captivating places. The main island, Unguja (Zanzibar Island), combines the labyrinthine lanes of UNESCO-listed Stone Town with some of the Indian Ocean's most beautiful beaches, making it the ideal finale to any East African safari. Stone Town, Zanzibar's historic capital, is one of Africa's most extraordinary urban environments — a UNESCO World Heritage City of winding stone alleys, carved wooden doors, coral-built merchant houses and minarets that reveal the island's extraordinary history as the East African hub of the Arab spice and slave trade. The Omani Arab sultans who ruled Zanzibar from the 17th to 19th centuries built a city of wealth and sophistication whose architectural legacy survives largely intact as a living, breathing urban heritage zone. Zanzibar's beaches are among the Indian Ocean's finest. The northern beaches (Nungwi, Kendwa) offer calm turquoise water year-round with vibrant beach bar culture, while the eastern beaches (Paje, Jambiani, Matemwe) face the open ocean with dramatic tidal changes and excellent kitesurfing conditions. The southern tip hosts the extraordinary Menai Bay conservation area. Beneath the surface, Zanzibar's fringing reefs support outstanding snorkelling and scuba diving, with coral gardens, sea turtles, manta rays and dolphin pods all accessible from shore. For most travellers completing a Uganda or Tanzania safari, Zanzibar is the perfect beach recovery — turquoise water, fresh seafood, Swahili culture and winter sunshine combining to create one of East Africa's most rewarding travel experiences.",
@@ -1941,7 +1933,7 @@ const zanzibarPark = {
     },
     {
       title: 'Menai Bay & Marine Life',
-      body: "The southern tip of the island hosts the extraordinary Menai Bay conservation area, home to wild spinner and bottlenose dolphins alongside dugongs and a rich fringing reef ecosystem.",
+      body: "The southern tip of the island hosts the extraordinary Menai Bay conservation area, home to wild spinner and bottlenose dolphins and a rich fringing reef ecosystem.",
       image: '/images/destinations/tanzania/dunia-crane.webp',
     },
     {
