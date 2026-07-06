@@ -1,4 +1,5 @@
 import type { ArticleBlock } from '@/data/articles'
+import { slugify } from '@/lib/articleContent'
 
 export default function LocalStoryBody({ value }: { value: ArticleBlock[] }) {
   return (
@@ -6,15 +7,21 @@ export default function LocalStoryBody({ value }: { value: ArticleBlock[] }) {
       {value.map((block, i) => {
         if (block.kind === 'heading') {
           return block.level === 2 ? (
-            <h2 key={i} className="mt-12">{block.text}</h2>
+            <h2
+              key={i}
+              id={slugify(block.text)}
+              className="mt-14 scroll-mt-24 border-t border-neutral-200 pt-8 text-2xl sm:text-3xl"
+            >
+              {block.text}
+            </h2>
           ) : (
-            <h3 key={i} className="mt-8 text-xl">{block.text}</h3>
+            <h3 key={i} className="mt-8 text-lg sm:text-xl">{block.text}</h3>
           )
         }
 
         if (block.kind === 'list') {
           return (
-            <ul key={i} className="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-brand-charcoal">
+            <ul key={i} className="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-brand-charcoal marker:text-neutral-400">
               {block.items.map((item, j) => (
                 <li key={j}>{item}</li>
               ))}
@@ -48,7 +55,7 @@ export default function LocalStoryBody({ value }: { value: ArticleBlock[] }) {
         }
 
         return (
-          <p key={i} className="mt-4 leading-relaxed text-brand-charcoal">{block.text}</p>
+          <p key={i} className="mt-4 text-base leading-relaxed text-brand-charcoal sm:text-lg">{block.text}</p>
         )
       })}
     </>

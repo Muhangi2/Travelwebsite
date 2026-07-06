@@ -4,15 +4,22 @@ import { useStories, useStory } from '@/sanity/stories'
 import SEO from '@/components/SEO'
 import StoryBody from '@/components/stories/StoryBody'
 import LocalStoryBody from '@/components/stories/LocalStoryBody'
+import TableOfContents from '@/components/stories/TableOfContents'
 import Picture from '@/components/Picture'
+import { localToc, sanityToc, localReadingMinutes, sanityReadingMinutes } from '@/lib/articleContent'
 
 const safariTypes = [
-  'Gorilla Trekking',
-  'Big Five & Akagera',
-  'Chimpanzees of Nyungwe',
-  'Lake Kivu Retreat',
-  'Full-Spectrum Rwanda',
+  'Uganda Gorilla Trekking',
+  'Rwanda Gorilla Trekking',
+  'Kenya Big Five Safari',
+  'Multi-Country Safari',
+  'Not Sure Yet',
 ]
+
+function parseDisplayDate(date: string): string | undefined {
+  const parsed = new Date(`1 ${date}`)
+  return Number.isNaN(parsed.getTime()) ? undefined : parsed.toISOString()
+}
 
 export default function StoryDetail() {
   const { slug } = useParams<{ slug: string }>()
@@ -30,6 +37,29 @@ export default function StoryDetail() {
   const hasSanityBody = Boolean(fetched?.body && fetched.body.length > 0)
   const hasLocalBody = Boolean(localArticle?.body && localArticle.body.length > 0)
 
+  const toc = hasSanityBody && fetched?.body
+    ? sanityToc(fetched.body)
+    : hasLocalBody && localArticle?.body
+      ? localToc(localArticle.body)
+      : []
+  const readingMinutes = hasSanityBody && fetched?.body
+    ? sanityReadingMinutes(fetched.body)
+    : hasLocalBody && localArticle?.body
+      ? localReadingMinutes(localArticle.body)
+      : null
+
+  const publishedAt = parseDisplayDate(article.date)
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    description: article.excerpt,
+    image: article.image?.startsWith('http') ? article.image : `https://stillwildsafaris.com${article.image}`,
+    author: { '@type': 'Organization', name: article.author },
+    ...(publishedAt ? { datePublished: publishedAt } : {}),
+    mainEntityOfPage: `https://stillwildsafaris.com/stories/${article.slug}`,
+  }
+
   function update<K extends keyof typeof form>(key: K, value: (typeof form)[K]) {
     setForm((f) => ({ ...f, [key]: value }))
   }
@@ -41,6 +71,7 @@ export default function StoryDetail() {
         description={article.excerpt}
         image={article.image}
         url={`/stories/${article.slug}`}
+        jsonLd={articleSchema}
         type="article"
       />
 
@@ -51,7 +82,10 @@ export default function StoryDetail() {
           <div className="max-w-3xl">
             <p className="eyebrow text-brand-gold">{article.tags.join(' · ')}</p>
             <h1 className="text-display mt-4 text-white">{article.title}</h1>
-            <p className="mt-5 text-sm tracking-wide text-white/80">{article.author} · {article.date}</p>
+            <p className="mt-5 text-sm tracking-wide text-white/80">
+              {article.author} · {article.date}
+              {readingMinutes ? ` · ${readingMinutes} min read` : ''}
+            </p>
           </div>
         </div>
       </section>
@@ -59,6 +93,8 @@ export default function StoryDetail() {
       <article className="container-page py-16 md:py-20">
         <div className="mx-auto max-w-3xl">
           <p className="text-base leading-relaxed text-brand-charcoal sm:text-lg">{article.excerpt}</p>
+
+          <TableOfContents entries={toc} />
 
           {hasSanityBody && fetched?.body ? (
             <div className="mt-8">
@@ -88,22 +124,22 @@ export default function StoryDetail() {
 
       <section className="bg-brand-cream/40 py-16 sm:py-20">
         <div className="container-page text-center">
-          <h2>Begin Your Rwanda Safari Today</h2>
+          <h2>Begin Your East Africa Safari Today</h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-brand-muted sm:text-base">
-            Ready to explore Rwanda beyond the gorillas? The Big Five of Akagera and the chimpanzees of Nyungwe are
-            waiting.
+            From gorilla trekking in Uganda and Rwanda to Big Five safaris in Kenya, our experts design
+            private itineraries built around what you want to see.
           </p>
-          <NavLink to="/contact" className="btn-primary mt-7">PLAN MY RWANDA SAFARI</NavLink>
+          <NavLink to="/contact" className="btn-primary mt-7">PLAN MY SAFARI</NavLink>
         </div>
       </section>
 
       <section className="bg-white py-16 sm:py-20">
         <div className="container-page max-w-3xl">
           <div className="rounded-2xl bg-brand-cream/60 p-6 shadow-sm sm:p-10">
-            <h3 className="text-center">Exclusive Offer · Personalised Rwanda Itinerary</h3>
+            <h3 className="text-center">Exclusive Offer · Personalised Safari Itinerary</h3>
             <p className="mx-auto mt-3 max-w-xl text-center text-sm text-brand-muted sm:text-base">
-              Sign up to receive a <span className="font-semibold text-brand-ink">free 7-day Rwanda safari itinerary</span>{' '}
-              tailored to your budget, plus access to our Gorilla Permit Availability Tracker.
+              Sign up to receive a <span className="font-semibold text-brand-ink">free custom safari itinerary</span>{' '}
+              tailored to your budget, plus insider tips on permits, pricing and the best time to travel.
             </p>
 
             {submitted ? (
@@ -155,7 +191,7 @@ export default function StoryDetail() {
                     onChange={(e) => update('consent', e.target.checked)}
                     className="mt-0.5"
                   />
-                  <span>By signing up, you agree to receive our Rwanda travel insights and exclusive offers.</span>
+                  <span>By signing up, you agree to receive our East Africa travel insights and exclusive offers.</span>
                 </label>
 
                 <button type="submit" className="btn-primary w-full justify-center sm:w-auto">SUBMIT</button>

@@ -1,13 +1,23 @@
 import { PortableText, type PortableTextComponents, type PortableTextBlock } from '@portabletext/react'
 import { urlFor } from '@/sanity/image'
+import { slugify } from '@/lib/articleContent'
+
+function headingText(value: PortableTextBlock): string {
+  const children = (value as { children?: { text?: string }[] }).children ?? []
+  return children.map((c) => c.text ?? '').join('')
+}
 
 const components: PortableTextComponents = {
   block: {
     normal: ({ children }) => (
-      <p className="mt-4 leading-relaxed text-brand-charcoal">{children}</p>
+      <p className="mt-4 text-base leading-relaxed text-brand-charcoal sm:text-lg">{children}</p>
     ),
-    h2: ({ children }) => <h2 className="mt-12">{children}</h2>,
-    h3: ({ children }) => <h3 className="mt-8 text-xl">{children}</h3>,
+    h2: ({ children, value }) => (
+      <h2 id={slugify(headingText(value))} className="mt-14 scroll-mt-24 border-t border-neutral-200 pt-8 text-2xl sm:text-3xl">
+        {children}
+      </h2>
+    ),
+    h3: ({ children }) => <h3 className="mt-8 text-lg sm:text-xl">{children}</h3>,
     blockquote: ({ children }) => (
       <blockquote className="mt-6 border-l-4 border-brand-green pl-4 italic text-brand-charcoal">
         {children}
