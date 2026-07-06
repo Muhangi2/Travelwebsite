@@ -2,6 +2,7 @@ export type Park = {
   slug: string
   name: string
   blurb: string
+  metaDescription?: string
   image: string
   location: string
   size: string
@@ -51,6 +52,8 @@ const bwindi: Park = {
   name: 'Bwindi Impenetrable National Park',
   blurb:
     "Home to roughly half the world's remaining mountain gorillas, this UNESCO World Heritage Site protects 331 km² of ancient Albertine Rift rainforest — one of the most extraordinary wildlife destinations on the planet, where a face-to-face encounter with a wild gorilla family changes you forever.",
+  metaDescription:
+    "Track mountain gorillas in Bwindi Impenetrable National Park, home to half the world's remaining gorillas — permit costs, sectors, and lodges.",
   image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp',
   location: 'Southwestern Uganda',
   size: '331 km²',
@@ -175,6 +178,8 @@ const queenElizabeth: Park = {
   name: 'Queen Elizabeth National Park',
   blurb:
     "Uganda's most visited and ecologically complex park — tree-climbing lions in Ishasha, the wildlife-dense Kazinga Channel, chimpanzee trekking in Kyambura Gorge, and over 600 bird species across 1,978 km² of Albertine Rift wilderness.",
+  metaDescription:
+    "Queen Elizabeth National Park — Uganda's most visited park with tree-climbing lions, the Kazinga Channel boat cruise, and 600+ bird species.",
   image: '/images/activities/game-drive/asilia-roho-2017-1-1.webp',
   location: 'Western Uganda',
   size: '1,978 km²',
@@ -280,6 +285,8 @@ const murchison: Park = {
   name: 'Murchison Falls National Park',
   blurb:
     "Uganda's largest national park — where the entire volume of the Victoria Nile is forced through a 7-metre gorge in the world's most powerful waterfall, then fans into a wildlife-rich delta on Lake Albert. Lions, Rothschild's giraffes, elephants, and shoebill storks across 3,840 km².",
+  metaDescription:
+    "Uganda's largest national park and home to the world's most powerful waterfall — game drives, Nile boat cruise, chimp trekking, and sport fishing.",
   image: '/images/parks/uganda/murchison-falls/dsc-6280.webp',
   location: 'Northwestern Uganda',
   size: '3,840 km²',
@@ -391,6 +398,8 @@ const kibale: Park = {
   name: 'Kibale National Park',
   blurb:
     "The primate capital of the world — 13 species in a single park, including over 1,500 chimpanzees in some of the most accessible and best-studied communities in Africa. Kibale is Uganda's premier chimpanzee trekking destination.",
+  metaDescription:
+    "Kibale is the primate capital of the world — 13 species including 1,500 chimpanzees. Chimp trekking, Bigodi Wetland, and birding in Uganda's finest primate park.",
   image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
   location: 'Western Uganda',
   size: '795 km²',
@@ -499,6 +508,8 @@ const lakeMburo: Park = {
   name: 'Lake Mburo National Park',
   blurb:
     "Uganda's walking safari capital — the only national park in the country offering walking, cycling, and horse-riding safaris through open African savannah. Zebras, impalas, hippos, and leopards on night drives, perfectly positioned between Kampala and Bwindi.",
+  metaDescription:
+    "Lake Mburo is Uganda's only savannah park offering walking safaris, cycling, horse riding, and boat cruises — the perfect stopover to Bwindi.",
   image: '/images/parks/uganda/lake-mburo/52759056582-ed6e6f1573-o.webp',
   location: 'Western Uganda',
   size: '370 km²',
@@ -600,6 +611,8 @@ const mgahinga: Park = {
   slug: 'mgahinga',
   name: 'Mgahinga Gorilla National Park',
   blurb: 'A small park dominated by three Virunga volcanoes, home to mountain gorillas and the only park in Uganda where you can track golden monkeys.',
+  metaDescription:
+    "Mgahinga Gorilla National Park sits among three Virunga volcanoes on Uganda's border with Rwanda and the DRC — gorilla trekking, golden monkeys, and volcano summit hikes.",
   image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.webp',
   location: 'Southwestern Uganda',
   size: '33.7 km²',
@@ -662,6 +675,8 @@ const kidepo: Park = {
   name: 'Kidepo Valley National Park',
   blurb:
     "Uganda's most remote and most rewarding safari destination — 1,442 km² of dramatic semi-arid savannah in the far northeast, with cheetahs, wild dogs, lions, and Karamojong warrior culture in a park that receives very few visitors.",
+  metaDescription:
+    "Kidepo Valley National Park is Uganda's most remote and wild safari destination — lions, cheetahs, wild dogs, and Karamojong cultural encounters.",
   image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.webp',
   location: 'Northeastern Uganda (Karamoja Region)',
   size: '1,442 km²',
@@ -757,6 +772,8 @@ const semuliki: Park = {
   name: 'Semuliki National Park',
   blurb:
     "Uganda's most underrated national park — ancient Congo Basin rainforest, boiling Sempaya Hot Springs, and 441 bird species including 40 Congo Basin endemics found nowhere else in East Africa. The most important forest birding destination in Uganda.",
+  metaDescription:
+    "Semuliki is Uganda's hidden gem — ancient Congo rainforest, Sempaya Hot Springs, and 441 bird species including 40 Congo Basin endemics.",
   image: '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.webp',
   location: 'Western Uganda (Bundibugyo District)',
   size: '220 km²',
@@ -840,6 +857,8 @@ const entebbe: Park = {
   name: 'Entebbe',
   blurb:
     "Uganda's serene lakeside gateway on the shores of Lake Victoria — home to the international airport, a wildlife education centre, and Ngamba Island's rescued chimpanzees, this is where almost every Uganda safari quietly begins and ends.",
+  metaDescription:
+    "Entebbe is Uganda's international gateway on Lake Victoria — the Wildlife Education Centre, Ngamba Island Chimpanzee Sanctuary, and botanical gardens.",
   image: '/images/lodges/uganda/entebbe-hotels/karibu-guesthouse/1karibu-guest-house-entebbe-52473407576-o.webp',
   location: 'Central Uganda, on the shores of Lake Victoria',
   size: 'Lakeside town of approximately 70,000 people',
@@ -955,6 +974,8 @@ const kampala: Park = {
   name: 'Kampala',
   blurb:
     "Uganda's vibrant capital, built across seven hills on the shores of Lake Victoria — a sprawling, energetic city of royal tombs, buzzing markets and vibrant culture that rewards every traveller who slows down long enough to explore it.",
+  metaDescription:
+    "Discover Kampala, Uganda's dynamic capital — the Kasubi Tombs, Ndere Cultural Centre, vibrant markets, and the best restaurants and nightlife.",
   image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
   location: 'Central Uganda, on the northern shores of Lake Victoria',
   size: 'Capital city of over 3.5 million people across seven hills',
@@ -1079,6 +1100,8 @@ const serengetiPark = {
   name: 'Serengeti National Park',
   blurb:
     "The greatest wildlife spectacle on earth — 1.5 million wildebeest and 350,000 zebra crossing an endless plain, with lion, leopard and cheetah in extraordinary numbers year-round.",
+  metaDescription:
+    "Experience the Serengeti — Africa's most famous national park. Witness the Great Wildebeest Migration, Big Five game drives, and endless savannah.",
   image: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.webp',
   location: 'Northern Tanzania',
   size: '14,763 km²',
@@ -1192,6 +1215,8 @@ const ngorongoroPark = {
   name: 'Ngorongoro Conservation Area',
   blurb:
     "An ancient, collapsed caldera sheltering the densest concentration of wildlife in Africa — the world's largest intact volcanic crater and home to all of the Big Five in a single enclosed ecosystem.",
+  metaDescription:
+    "Descend into Ngorongoro Crater, the world's largest intact volcanic caldera and a natural Big Five arena.",
   image: '/images/destinations/tanzania/dunia-giraffe.webp',
   location: 'Northern Tanzania',
   size: '8,292 km² (crater floor: 260 km²)',
@@ -1299,6 +1324,8 @@ const selousPark = {
   name: 'Nyerere National Park',
   blurb:
     "Africa's largest national park — a vast, wild, boat-safari heartland of the Rufiji River, famous for African wild dogs, hippos and a remote, uncrowded safari atmosphere.",
+  metaDescription:
+    "Explore Nyerere National Park, Africa's largest — Rufiji River boat safaris, walking safaris, and some of Tanzania's best African wild dog sightings.",
   image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.webp',
   location: 'Southern Tanzania',
   size: '30,893 km²',
@@ -1361,6 +1388,8 @@ const rubondoPark = {
   name: 'Rubondo Island National Park',
   blurb:
     "An island wilderness on Lake Victoria — chimp habituation, forest walks, fishing, and a cast of reintroduced species in one of Africa's most unusual and uncrowded national parks.",
+  metaDescription:
+    "Discover Rubondo Island National Park on Lake Victoria — chimpanzee reintroduction, forest walks, sitatunga, and a uniquely remote island safari.",
   image: '/images/destinations/tanzania/rubondo-island-camp-landscape.webp',
   location: 'Northwestern Tanzania, Lake Victoria',
   size: '457 km²',
@@ -1423,6 +1452,8 @@ const arushaPark = {
   name: 'Arusha',
   blurb:
     "Tanzania's safari capital and gateway to the northern circuit — a lively highland city beneath Mount Meru, with a half-day safari on its own doorstep, world-famous Tanzanite, and easy connections to the Serengeti, Ngorongoro and Kilimanjaro.",
+  metaDescription:
+    "Discover Arusha, Tanzania's safari capital and gateway to the Serengeti, Ngorongoro, and Kilimanjaro — a vibrant highland city before your safari.",
   image: '/images/destinations/tanzania/dunia-view-from-the-main-area.webp',
   location: 'Northern Tanzania',
   size: 'Highland city, gateway to the Northern Circuit',
@@ -1532,6 +1563,8 @@ const kilimanjaroPark = {
   name: 'Kilimanjaro National Park',
   blurb:
     "Africa's highest mountain and the world's highest walkable peak — a snow-capped 5,895m volcanic massif rising from the Tanzanian plains to Uhuru Peak, reached via five ecological zones and a choice of legendary trekking routes.",
+  metaDescription:
+    "Climb Mount Kilimanjaro, Africa's highest peak at 5,895m — expert guides, multiple trekking routes, and the summit of a lifetime.",
   image: '/images/destinations/tanzania/photo-2013-03-06-11-59-58.webp',
   location: 'Northern Tanzania, near Moshi',
   size: '1,668 km² (park); summit at 5,895 m',
@@ -1659,6 +1692,8 @@ const lakeManyaraPark = {
   name: 'Lake Manyara National Park',
   blurb:
     "A compact Rift Valley gem famous for tree-climbing lions, flamingo-filled soda-lake shores, and a groundwater forest of primates — Ernest Hemingway's 'Green Hills of Africa' and the perfect opening chapter to a northern Tanzania circuit.",
+  metaDescription:
+    "Visit Lake Manyara for tree-climbing lions, flamingo spectacles, and diverse Rift Valley wildlife — the perfect opener to a Tanzania safari.",
   image: '/images/destinations/tanzania/rubondo-island-camp-hippos.webp',
   location: 'Northern Tanzania, Rift Valley',
   size: '325 km²',
@@ -1767,6 +1802,8 @@ const tarangirePark = {
   name: 'Tarangire National Park',
   blurb:
     "Tanzania's most underrated wildlife destination — ancient baobab-studded plains and dry-season elephant herds of 200-300 individuals along the Tarangire River, with a fraction of the Serengeti's crowds.",
+  metaDescription:
+    "Discover Tarangire — Tanzania's hidden gem. Thousands of elephants, ancient baobab trees, diverse wildlife, and far fewer crowds than the Serengeti.",
   image: '/images/destinations/tanzania/sayari-elephant.webp',
   location: 'Manyara Region, south of Arusha',
   size: '2,850 km²',
@@ -1877,6 +1914,8 @@ const zanzibarPark = {
   name: 'Zanzibar Archipelago',
   blurb:
     "Africa's most romantic island destination — the UNESCO-listed lanes of Stone Town, spice plantations that once made the island fabulously wealthy, and Indian Ocean beaches ranging from calm northern shores to kitesurfing hotspots in the east.",
+  metaDescription:
+    "Discover Zanzibar's turquoise beaches, UNESCO-listed Stone Town, spice plantations, and Indian Ocean marine life — the perfect Tanzania safari finale.",
   image: '/images/destinations/tanzania/rubondo-island-camp-beach.webp',
   location: 'Indian Ocean, 35km off the Tanzanian coast',
   size: 'Archipelago; main island (Unguja) 1,554 km²',
@@ -2058,7 +2097,7 @@ export const countries: Record<string, Country> = {
       },
     ],
     seoKeywords:
-      'luxury Uganda safari, gorilla trekking Uganda, bespoke Uganda primate safari, private gorilla trek Bwindi, Murchison Falls luxury camp, Kidepo Valley exclusive safari, Uganda chimp tracking Kibale, mountain gorilla permit Uganda',
+      'luxury Uganda safari, gorilla trekking Uganda, bespoke Uganda primate safari, private gorilla trek Bwindi, Murchison Falls luxury camp, Kidepo Valley exclusive safari, Uganda chimp tracking Kibale, mountain gorilla permit Uganda, Entebbe airport stopover, Kampala city tour',
     travelStats: {
       bestTime: 'Jun–Sep & Dec–Feb',
       duration: '8–12 Days',
@@ -2178,6 +2217,8 @@ export const countries: Record<string, Country> = {
         name: 'Volcanoes National Park',
         blurb:
           "The Rwandan section of the Virunga Massif — five towering volcanoes cloaked in bamboo and rainforest, sanctuary to roughly a third of the world's mountain gorillas and a thriving population of golden monkeys.",
+        metaDescription:
+          "Trek to mountain gorillas in Rwanda's Volcanoes National Park — habituated gorilla families, golden monkeys, and the Virunga volcanoes.",
         image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
         location: 'Northwestern Rwanda',
         size: '160 km²',
@@ -2305,6 +2346,8 @@ export const countries: Record<string, Country> = {
         name: 'Akagera National Park',
         blurb:
           "Africa's most successful conservation comeback story — savannahs, papyrus swamps and lakes restored to a full Big Five reserve since 2010, with reintroduced lions and rhinos thriving alongside elephants, leopards and buffalo.",
+        metaDescription:
+          "Experience Rwanda's only savannah safari park — Akagera offers the Big Five, boat safaris on Lake Ihema, and one of Africa's greatest conservation comebacks.",
         image: '/images/parks/rwanda/akagera/wilderness-magashi-1.webp',
         location: 'Eastern Rwanda',
         size: '1,122 km²',
@@ -2401,6 +2444,8 @@ export const countries: Record<string, Country> = {
         name: 'Kigali',
         blurb:
           "Africa's cleanest, safest and most captivating capital — a city of immaculate streets, profound history, world-class dining and forward momentum that defies every expectation. The essential gateway to gorilla trekking, and a destination in its own right.",
+        metaDescription:
+          "Discover Kigali, Rwanda's vibrant capital — the Genocide Memorial, bustling markets, world-class dining, and your gateway to gorilla trekking.",
         image: '/images/destinations/rwanda/image-20260331125652.webp',
         location: "Rwanda's Capital City",
         size: 'Metropolitan Capital',
@@ -2528,6 +2573,8 @@ export const countries: Record<string, Country> = {
         name: 'Nyungwe Forest National Park',
         blurb:
           "One of Africa's oldest and most biodiverse rainforests — 1,019 km² of ancient montane forest home to 13 primate species including chimpanzees, and the iconic canopy walkway suspended 70 metres above the forest floor.",
+        metaDescription:
+          "Explore Nyungwe Forest, Rwanda's ancient montane rainforest — chimpanzee trekking, the canopy walkway, and 13 primate species.",
         image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
         location: 'Southwestern Rwanda',
         size: '1,019 km²',
@@ -2619,6 +2666,8 @@ export const countries: Record<string, Country> = {
         name: 'Lake Kivu',
         blurb:
           "One of Africa's Great Lakes — a deep mountain lake at 1,460m above sea level, entirely safe for swimming, fringed by volcanic hills, island archipelagos, and Rwanda's most beautiful lakeside resort towns.",
+        metaDescription:
+          "Discover Lake Kivu, one of Africa's Great Lakes — boat trips, island stays, beach relaxation, and coffee tours on Rwanda's most beautiful lake.",
         image: '/images/destinations/rwanda/image-20260331125636.webp',
         location: "Rwanda's Western Shore",
         size: '2,700 km² (lake surface)',
@@ -2887,6 +2936,8 @@ export const countries: Record<string, Country> = {
         name: 'Masai Mara National Reserve',
         blurb:
           "The northern extension of the Serengeti and the stage for the Great Migration each July to October — plus year-round resident lion, leopard and cheetah on Africa's most photographed plains.",
+        metaDescription:
+          "Experience Africa's greatest wildlife spectacle in the Maasai Mara — the Great Wildebeest Migration, Big Five game drives, and hot air balloon safaris.",
         image: '/images/parks/kenya/masai-mara/a-balloon-sunrise.webp',
         location: 'Southwest Kenya',
         size: '1,510 km² + 6 conservancies',
@@ -3006,6 +3057,8 @@ export const countries: Record<string, Country> = {
         name: 'Amboseli National Park',
         blurb:
           "The classic 'elephants under Kilimanjaro' park — small, accessible, and home to some of Africa's largest tuskers in front of an impossibly photogenic mountain backdrop.",
+        metaDescription:
+          "Amboseli National Park: elephant herds beneath Mount Kilimanjaro, one of Africa's most iconic safari backdrops in Kenya.",
         image: '/images/parks/kenya/amboseli/amboseli-elephants.webp',
         location: 'Southern Kenya',
         size: '392 km²',
@@ -3099,6 +3152,8 @@ export const countries: Record<string, Country> = {
         name: 'Laikipia & Loisaba',
         blurb:
           "A 9,500 km² conservancy mosaic north of Mount Kenya — home to half of Kenya's black rhino, all of its Grevy's zebras, and some of the most innovative community-led conservation work in Africa.",
+        metaDescription:
+          "Laikipia's private conservancies north of Mount Kenya protect half of Kenya's black rhino and all of its Grevy's zebra — walking, horseback, and night safaris in a working conservation landscape.",
         image: '/images/parks/kenya/laikipia-loisaba/1752747854365-kenya-suyian-lodge-exterior-elephant-view-8.webp',
         location: 'Central Kenya',
         size: '9,500 km² (private conservancies)',
@@ -3155,6 +3210,8 @@ export const countries: Record<string, Country> = {
         name: 'Samburu National Reserve',
         blurb:
           "Kenya's remote northern frontier — home to the Samburu Special Five (Grevy's zebra, reticulated giraffe, gerenuk, beisa oryx and Somali ostrich) found nowhere else in the region, in a dramatic landscape defined by the Ewaso Ng'iro River.",
+        metaDescription:
+          "Explore Samburu National Reserve, home to Kenya's Special Five species found nowhere else, and authentic northern Kenya wilderness.",
         image: '/images/parks/kenya/samburu/grevys-zebra-1.webp',
         location: 'Northern Kenya',
         size: '165 km² (plus surrounding conservancies)',
@@ -3278,6 +3335,8 @@ export const countries: Record<string, Country> = {
         name: 'Tsavo National Park',
         blurb:
           "Kenya's largest park — a vast, red-earth wilderness famous for its 'red elephants' coated in Tsavo's distinctive dust, and for raw, uncrowded wildness.",
+        metaDescription:
+          "Tsavo National Park is Kenya's largest — a vast red-earth wilderness famous for its dust-red elephants, Mzima Springs, and raw, uncrowded safari country.",
         image: '/images/parks/kenya/tsavo/1736494647848-4z6a7096.webp',
         location: 'Southern Kenya',
         size: '21,812 km²',
@@ -3339,6 +3398,8 @@ export const countries: Record<string, Country> = {
         name: 'Lake Nakuru National Park',
         blurb:
           "A compact soda lake sanctuary in the heart of the Great Rift Valley — famous for its dramatic flamingo flocks, Kenya's best rhino viewing, and remarkable wildlife diversity packed into just 188 square kilometres.",
+        metaDescription:
+          "Discover Lake Nakuru's famous flamingo flocks, black and white rhinos, and diverse Rift Valley wildlife on your Kenya safari.",
         image: '/images/parks/kenya/lake-nakuru/flamingos-lake-nakuru.webp',
         location: 'Central Kenya, Rift Valley',
         size: '188 km²',
@@ -3436,6 +3497,8 @@ export const countries: Record<string, Country> = {
         name: 'Nairobi',
         blurb:
           "Africa's safari capital — a dynamic metropolis where lions and rhinos roam in a national park on the city's doorstep, elephant orphans are bottle-fed at 11am, and giraffes join guests for breakfast.",
+        metaDescription:
+          "Discover Nairobi, Africa's most dynamic safari capital — Nairobi National Park, giraffe centres, world-class restaurants, and Kenya's vibrant culture.",
         image: '/images/lodges/kenya/nairobi/giraffe-manor/a-spot-of-tea-and-a-giraffe.webp',
         location: 'Central Kenya',
         size: 'Metropolitan city at 1,660 m elevation',
@@ -3761,7 +3824,7 @@ export const countries: Record<string, Country> = {
       },
     ],
     seoKeywords:
-      'luxury Tanzania safari, Serengeti private camp, Great Migration luxury tour, Ngorongoro crater exclusive access, Ruaha wild dog safari, Zanzibar luxury villa, southern Tanzania safari, bespoke Tanzania travel, Tanzania fly-camp',
+      'luxury Tanzania safari, Serengeti private camp, Great Migration luxury tour, Ngorongoro crater exclusive access, Ruaha wild dog safari, Zanzibar luxury villa, southern Tanzania safari, bespoke Tanzania travel, Tanzania fly-camp, Arusha safari lodge, Kilimanjaro climbing, Lake Manyara tree-climbing lions, Tarangire elephant safari, Zanzibar beach holiday',
     travelStats: {
       bestTime: 'Jun–Oct & Jan–Feb',
       duration: '10–14 Days',

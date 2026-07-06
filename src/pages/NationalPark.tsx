@@ -1,6 +1,7 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { useCountry } from '@/sanity/destinations'
 import SEO from '@/components/SEO'
+import { buildFaqSchema } from '@/lib/schema'
 import ParkHero from '@/components/national-park/ParkHero'
 import ParkOverview from '@/components/national-park/ParkOverview'
 import WhyVisit from '@/components/national-park/WhyVisit'
@@ -20,13 +21,25 @@ export default function NationalPark() {
     return <Navigate to={countrySlug ? `/destinations/${countrySlug}` : '/destinations'} replace />
   }
 
+  const hasFaq = parkData.faqs.length > 0
+
+  const attractionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristAttraction',
+    name: parkData.name,
+    description: parkData.metaDescription ?? parkData.blurb,
+    image: parkData.image,
+    touristType: 'Wildlife safari',
+  }
+
   return (
     <>
       <SEO
         title={`${parkData.name} — ${countryData.name}`}
-        description={parkData.blurb}
+        description={parkData.metaDescription ?? parkData.blurb}
         image={parkData.image}
         url={`/destinations/${countrySlug}/${park}`}
+        jsonLd={hasFaq ? [attractionSchema, buildFaqSchema(parkData.faqs)] : attractionSchema}
       />
 
       <ParkHero name={parkData.name} blurb={parkData.blurb} image={parkData.image} />

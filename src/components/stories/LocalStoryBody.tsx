@@ -3,24 +3,27 @@ import type { ArticleBlock } from '@/data/articles'
 import { slugify } from '@/lib/articleContent'
 import Picture from '@/components/Picture'
 
-const H2_PER_IMAGE = 4
+const HEADINGS_PER_IMAGE = 6
 
 export default function LocalStoryBody({ value, gallery = [] }: { value: ArticleBlock[]; gallery?: string[] }) {
   const nodes: ReactNode[] = []
-  let h2Count = 0
+  let headingCount = 0
+  let imagesUsed = 0
 
   value.forEach((block, i) => {
     if (block.kind === 'heading') {
+      if (headingCount > 0 && headingCount % HEADINGS_PER_IMAGE === 0 && gallery.length > 0) {
+        const src = gallery[imagesUsed % gallery.length]
+        imagesUsed += 1
+        nodes.push(
+          <div key={`img-${i}`} className="relative left-1/2 -ml-[50vw] mt-14 w-screen">
+            <Picture src={src} alt="" loading="lazy" className="h-[42vh] w-full object-cover sm:h-[56vh]" />
+          </div>,
+        )
+      }
+      headingCount += 1
+
       if (block.level === 2) {
-        if (h2Count > 0 && h2Count % H2_PER_IMAGE === 0 && gallery.length > 0) {
-          const src = gallery[(h2Count / H2_PER_IMAGE - 1) % gallery.length]
-          nodes.push(
-            <div key={`img-${i}`} className="relative left-1/2 -ml-[50vw] mt-14 w-screen">
-              <Picture src={src} alt="" loading="lazy" className="h-[42vh] w-full object-cover sm:h-[56vh]" />
-            </div>,
-          )
-        }
-        h2Count += 1
         nodes.push(
           <h2
             key={i}
