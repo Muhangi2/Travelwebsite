@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { useTourPackages } from '@/sanity/tourPackages'
 import Reveal from '@/components/ui/Reveal'
 import Picture from '@/components/Picture'
@@ -74,9 +74,12 @@ function Pill({
 
 export default function CollectionsGrid() {
   const { cards: journeys } = useTourPackages()
+  const [searchParams] = useSearchParams()
   const [search, setSearch] = useState('')
   const [activeTag, setActiveTag] = useState<string | null>(null)
-  const [activeCountry, setActiveCountry] = useState<string | null>(null)
+  const [activeCountry, setActiveCountry] = useState<string | null>(
+    () => searchParams.get('country')?.toUpperCase() ?? null,
+  )
   const [activeDuration, setActiveDuration] = useState<string | null>(null)
 
   const allCountries = useMemo(() => {

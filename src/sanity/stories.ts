@@ -24,7 +24,7 @@ function toArticle(s: SanityStorySummary): Article {
   }
 }
 
-export type ArticleWithBody = Article & {
+export type ArticleWithBody = Omit<Article, 'body'> & {
   body?: PortableTextBlock[]
 }
 
@@ -58,7 +58,7 @@ export function useStories(): { items: Article[]; loading: boolean } {
 export function useStory(slug: string | undefined): { article: ArticleWithBody | null; loading: boolean } {
   const [article, setArticle] = useState<ArticleWithBody | null>(() => {
     const local = localArticles.find((a) => a.slug === slug)
-    return local ?? null
+    return local ? { ...local, body: undefined } : null
   })
   const [loading, setLoading] = useState<boolean>(Boolean(sanityClient && slug))
 

@@ -1086,7 +1086,7 @@ export const countries: Record<string, Country> = {
           },
         ],
         gettingThere:
-          "Volcanoes National Park is approximately 2–3 hours by road from Kigali (110km). Most visitors are transferred by their tour operator from Kigali hotels to the park briefing point at 7:00am for the morning trek. The nearest town is Musanze (Ruhengeri), which has basic accommodation options. Beautiful Safaris Uganda arranges all transport and logistics for Kigali-based gorilla trekking departures. Helicopter transfers from Kigali are also available.",
+          "Volcanoes National Park is approximately 2–3 hours by road from Kigali (110km). Most visitors are transferred by their tour operator from Kigali hotels to the park briefing point at 7:00am for the morning trek. The nearest town is Musanze (Ruhengeri), which has basic accommodation options. Still Wild Safaris arranges all transport and logistics for Kigali-based gorilla trekking departures. Helicopter transfers from Kigali are also available.",
         whereToStay: [
           {
             category: 'Luxury',
@@ -1124,7 +1124,7 @@ export const countries: Record<string, Country> = {
           },
           {
             q: 'How do I book a Rwanda gorilla permit?',
-            a: 'Permits are booked through the Rwanda Development Board (RDB) or through an authorised tour operator like Beautiful Safaris Uganda, which handles all permit procurement, transport, and lodge bookings as part of a complete package.',
+            a: 'Permits are booked through the Rwanda Development Board (RDB) or through an authorised tour operator like Still Wild Safaris, which handles all permit procurement, transport, and lodge bookings as part of a complete package.',
           },
           {
             q: 'What is the difference between gorilla trekking in Rwanda vs. Uganda?',
@@ -1296,7 +1296,7 @@ export const countries: Record<string, Country> = {
           },
         ],
         gettingThere:
-          "Kigali is served by Kigali International Airport (KGL), with direct flights from Nairobi, Entebbe, Addis Ababa, Dubai, Brussels, and London. RwandAir is the national carrier offering connections across Africa and beyond. Overland, Kigali is approximately 9–10 hours from Kampala by road (via the Cyanika or Katuna border), and Beautiful Safaris Uganda arranges cross-border transfers for combined Uganda–Rwanda itineraries.",
+          "Kigali is served by Kigali International Airport (KGL), with direct flights from Nairobi, Entebbe, Addis Ababa, Dubai, Brussels, and London. RwandAir is the national carrier offering connections across Africa and beyond. Overland, Kigali is approximately 9–10 hours from Kampala by road (via the Cyanika or Katuna border), and Still Wild Safaris arranges cross-border transfers for combined Uganda–Rwanda itineraries.",
         whereToStay: [
           {
             category: 'Luxury',
@@ -1344,7 +1344,7 @@ export const countries: Record<string, Country> = {
           },
           {
             q: 'Can I combine a Kigali visit with a Uganda safari?',
-            a: 'Absolutely. Beautiful Safaris Uganda specialises in combined Uganda–Rwanda itineraries departing from Kigali, including gorilla trekking in both Bwindi (Uganda) and Volcanoes (Rwanda), as well as Uganda wildlife safaris.',
+            a: 'Absolutely. Still Wild Safaris specialises in combined Uganda–Rwanda itineraries departing from Kigali, including gorilla trekking in both Bwindi (Uganda) and Volcanoes (Rwanda), as well as Uganda wildlife safaris.',
           },
           {
             q: 'What should I not bring to Rwanda?',

@@ -47,10 +47,10 @@ export default function NationalParksList({ countrySlug, parks, backgroundImage 
             <h3 className="mt-4 text-2xl">{park.name}</h3>
             <p className="mt-4 text-sm leading-relaxed text-neutral-600">{park.blurb}</p>
             <Link
-              to={`/destinations/${countrySlug}/${park.slug}`}
+              to={`/safari-collections?country=${countrySlug.toUpperCase()}`}
               className="btn-primary mt-6"
             >
-              EXPLORE {park.name.split(' ')[0].toUpperCase()}
+              VIEW SAFARIS
             </Link>
           </Reveal>
         </div>

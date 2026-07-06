@@ -35,10 +35,8 @@ export default function Contact() {
     setForm((f) => ({ ...f, [key]: value }))
   }
 
-  function handleSubmit(e: { preventDefault: () => void }) {
-    e.preventDefault()
-
-    const lines = [
+  function buildInquiryLines() {
+    return [
       `Hi ${site.name}, I'd like to make a safari inquiry.`,
       '',
       `Name: ${form.fullName}`,
@@ -51,10 +49,20 @@ export default function Contact() {
       form.duration && `Trip duration: ${form.duration}`,
       form.lookingFor && `Looking for: ${form.lookingFor}`,
       form.comments && `Comments: ${form.comments}`,
-    ].filter(Boolean)
+    ].filter(Boolean) as string[]
+  }
 
-    const url = `${site.whatsappHref}?text=${encodeURIComponent(lines.join('\n'))}`
+  function handleWhatsAppSubmit(e: { preventDefault: () => void }) {
+    e.preventDefault()
+    const url = `${site.whatsappHref}?text=${encodeURIComponent(buildInquiryLines().join('\n'))}`
     window.open(url, '_blank', 'noopener,noreferrer')
+  }
+
+  function handleEmailSubmit(e: { preventDefault: () => void }) {
+    e.preventDefault()
+    const subject = `Safari Inquiry from ${form.fullName || 'Website Visitor'}`
+    const url = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(buildInquiryLines().join('\n'))}`
+    window.location.href = url
   }
 
   const fieldClass =
@@ -102,10 +110,10 @@ export default function Contact() {
             <div className="section-rule" />
             <h2 className="mt-3">Make an Inquiry</h2>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-600">
-              Fill this in and we'll get in touch to confirm your travel requirements — or send it straight to us on WhatsApp.
+              Fill this in and we'll get in touch to confirm your travel requirements — or send it straight to us on WhatsApp or email.
             </p>
 
-            <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+            <form onSubmit={handleWhatsAppSubmit} className="mt-8 space-y-6">
               <div>
                 <span className={labelClass}>Are you looking for</span>
                 <div className="grid gap-2 sm:grid-cols-2">
@@ -240,15 +248,29 @@ export default function Contact() {
                 />
               </div>
 
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-xs font-medium tracking-[0.18em] text-white shadow-md transition hover:bg-[#20bd5a] hover:shadow-lg sm:px-8"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C8.3 9 7.5 9.8 7.5 11.4s1.1 3.1 1.3 3.3c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.3.2-.7.2-1.2.1-1.3-.1-.1-.3-.2-.6-.4zM12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z" />
-                </svg>
-                SUBMIT ON WHATSAPP
-              </button>
+              <div className="flex flex-wrap gap-3">
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-xs font-medium tracking-[0.18em] text-white shadow-md transition hover:bg-[#20bd5a] hover:shadow-lg sm:px-8"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C8.3 9 7.5 9.8 7.5 11.4s1.1 3.1 1.3 3.3c.2.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.3.2-.7.2-1.2.1-1.3-.1-.1-.3-.2-.6-.4zM12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z" />
+                  </svg>
+                  SUBMIT ON WHATSAPP
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleEmailSubmit}
+                  className="inline-flex items-center gap-2 rounded-full border border-black bg-white px-6 py-3 text-xs font-medium tracking-[0.18em] text-black shadow-md transition hover:bg-black hover:text-white hover:shadow-lg sm:px-8"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z" />
+                    <path d="m22 6-10 7L2 6" />
+                  </svg>
+                  SUBMIT ON EMAIL
+                </button>
+              </div>
             </form>
           </Reveal>
         </div>
