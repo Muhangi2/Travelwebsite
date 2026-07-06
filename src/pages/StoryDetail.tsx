@@ -90,7 +90,7 @@ export default function StoryDetail() {
         </div>
       </section>
 
-      <article className="container-page bg-[#faf9f6] py-16 md:py-20">
+      <article className="container-page py-16 md:py-20">
         <div className="mx-auto max-w-3xl">
           <p className="text-base leading-relaxed text-brand-charcoal sm:text-lg">{article.excerpt}</p>
 

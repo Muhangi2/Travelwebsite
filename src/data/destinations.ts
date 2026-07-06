@@ -169,7 +169,7 @@ const bwindi: Park = {
     { label: 'Porter Fees', body: 'Local community porters are available for hire at each sector’s starting point for approximately USD 10–15 per trek — they carry bags and provide welcome support on steep terrain, and hiring one directly benefits the local community.' },
     { label: 'Group Size', body: 'Maximum 8 people per gorilla family per day, keeping encounters intimate and minimising stress on the gorillas.' },
     { label: 'Minimum Age', body: 'Gorilla trekking is restricted to those 15 years and older.' },
-    { label: 'Health Restrictions', body: 'Do not trek if you have an infectious illness — gorillas share over 98% of human DNA and are highly susceptible to human respiratory diseases.' },
+    { label: 'Health Restrictions', body: 'Do not trek if you have an infectious illness.' },
   ],
 }
 
@@ -293,7 +293,7 @@ const murchison: Park = {
   altitude: '619 — 1,292 m',
   bestTime: 'December–February & June–September',
   overview:
-    "Murchison Falls National Park stands as Uganda's largest and most magnificent national park, encompassing 3,840 square kilometres of diverse wilderness in the northwestern corner of the country. The park takes its name from the extraordinary Murchison Falls — where the entire volume of the Victoria Nile is forced through a rocky gorge barely 7 metres wide before plunging 45 metres in a thundering curtain of white water, recognised as one of the world's most powerful waterfalls. The sheer power of the falls has awed every visitor since Sir Samuel Baker became the first European to see them in 1864, naming them after Sir Roderick Murchison, President of the Royal Geographical Society. Above the falls, vast savannahs of borassus palms host Rothschild's giraffes (in Uganda's largest population), elephants, Cape buffalos, lions, and leopards. Below the falls, the legendary Nile boat cruise brings visitors within metres of massive hippo pods, enormous Nile crocodiles, and forest elephants drinking at the river's edge. For sport fishing enthusiasts, the Victoria Nile is one of the world's greatest Nile Perch fisheries, while the adjacent Budongo Forest Reserve hosts the largest known chimpanzee population in Uganda.",
+    "Murchison Falls National Park stands as Uganda's largest and most magnificent national park, encompassing 3,840 square kilometres of diverse wilderness in the northwestern corner of the country. The park takes its name from the extraordinary Murchison Falls — where the entire volume of the Victoria Nile is forced through a rocky gorge barely 7 metres wide before plunging 45 metres in a thundering curtain of white water, recognised as one of the world's most powerful waterfalls. The sheer power of the falls has awed every visitor since Sir Samuel Baker became the first European to see them in 1864, naming them after Sir Roderick Murchison, President of the Royal Geographical Society. Above the falls, vast savannahs host Rothschild's giraffes, elephants, Cape buffalos, lions, and leopards. Below the falls, the legendary Nile boat cruise brings visitors within metres of massive hippo pods, enormous Nile crocodiles, and forest elephants drinking at the river's edge. For sport fishing enthusiasts, the Victoria Nile is one of the world's greatest Nile Perch fisheries, while the adjacent Budongo Forest Reserve hosts the largest known chimpanzee population in Uganda.",
   attractions: [
     {
       title: 'Murchison Falls Nile Boat Cruise',
@@ -304,7 +304,7 @@ const murchison: Park = {
     {
       title: "Rothschild's Giraffe & North Bank Game Drives",
       body:
-        "The savannah north of the Victoria Nile hosts outstanding game viewing. Lions in family prides, Rothschild's giraffes (Uganda's largest and most endangered giraffe subspecies), African elephants, Cape buffalos, Uganda kobs, oribi, and Jackson's hartebeests are regularly seen on morning and afternoon drives. The Buligi Circuit is particularly productive for large predators and giraffe.",
+        "The savannah north of the Victoria Nile hosts outstanding game viewing. Lions in family prides, Rothschild's giraffes, African elephants, Cape buffalos, Uganda kobs, oribi, and Jackson's hartebeests are regularly seen on morning and afternoon drives. The Buligi Circuit is particularly productive for large predators and giraffe.",
       image: '/images/parks/uganda/murchison-falls/dsc-6828.webp',
     },
     {
@@ -411,7 +411,7 @@ const kibale: Park = {
     {
       title: 'Chimpanzee Trekking',
       body:
-        "Led by expert Uganda Wildlife Authority rangers and trackers, morning and afternoon trekking sessions follow habituated chimpanzee communities through ancient rainforest. You spend one hour with the chimpanzees — observing complex social interactions, grooming, foraging, infant play, and the extraordinary vocal performances that fill the forest. With over 1,500 chimpanzees in the park, success rates run at over 90%. Permits cost USD 250 per person.",
+        "Led by expert Uganda Wildlife Authority rangers and trackers, morning and afternoon trekking sessions follow habituated chimpanzee communities through ancient rainforest. You spend one hour with the chimpanzees — observing complex social interactions, grooming, foraging, infant play, and the extraordinary vocal performances that fill the forest. Kibale is home to over 1,500 chimpanzees. Permits cost USD 250 per person.",
       image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
     },
     {
@@ -462,7 +462,7 @@ const kibale: Park = {
   faqs: [
     {
       q: 'How likely am I to see chimpanzees?',
-      a: "Success rates on the morning trek run at over 90%. Communities are tracked daily by researchers and our guides coordinate with the ranger team to position guests correctly. The afternoon session is equally productive.",
+      a: "Communities are tracked daily by researchers and our guides coordinate with the ranger team to position guests correctly. The afternoon session is equally productive.",
     },
     {
       q: 'Standard trek or Habituation Experience?',
@@ -862,13 +862,13 @@ const entebbe: Park = {
   image: '/images/lodges/uganda/entebbe-hotels/karibu-guesthouse/1karibu-guest-house-entebbe-52473407576-o.webp',
   location: 'Central Uganda, on the shores of Lake Victoria',
   size: 'Lakeside town of approximately 70,000 people',
-  altitude: '1,155 m',
+  altitude: '',
   bestTime: 'June–September & December–February',
   overview:
     "Entebbe is Uganda's international gateway to the world — a charming, leafy lakeside town of approximately 70,000 people spread across a green peninsula jutting into the vast expanse of Lake Victoria, the world's second-largest freshwater lake. Home to Uganda's only international airport, Entebbe has a pleasantly unhurried atmosphere compared to the bustle of Kampala 40km to the north, and offers visitors a graceful, colonial-era setting of wide avenues, magnificent trees, and beautiful lakeshore gardens. Most international visitors to Uganda spend at least one night in Entebbe — either on arrival before heading into the national parks, or on departure after completing their safari. However, Entebbe is far more than simply a transit point. The Uganda Wildlife Education Centre, Ngamba Island Chimpanzee Sanctuary, beautiful botanical gardens, and the tranquil shores of Lake Victoria all make Entebbe a destination worth exploring properly. Entebbe enjoys a pleasant, lake-moderated climate year-round, with temperatures averaging a comfortable 22–27°C thanks to the cooling effect of Lake Victoria. The two dry seasons — June to September and December to February — are the most pleasant for outdoor activities and boat trips to Ngamba Island, while the rainy seasons (March to May and October to November) bring afternoon showers but leave the town easily navigable. For those who prefer a quieter base than Kampala, Entebbe's lakeshore hotels offer an idyllic pre- or post-safari staging point.",
   whyVisit: [
     "The most family-friendly wildlife encounter in Uganda at the Uganda Wildlife Education Centre — lions, leopards, chimpanzees, shoebills and 300+ other rescued species across 45 hectares of naturalistic enclosures.",
-    "Uganda's only sanctuary for rescued chimpanzees on Ngamba Island — a 100-acre forested island reached by a scenic 45-minute boat ride across Lake Victoria.",
+    "A sanctuary for rescued chimpanzees on Ngamba Island — a 100-acre forested island reached by a scenic 45-minute boat ride across Lake Victoria.",
     "The country's oldest botanical gardens, established in 1898, with outstanding lakeside birding and the setting used to film the 1950s Tarzan movies.",
     "The natural, relaxed launchpad for every Uganda safari — direct road and domestic flight connections to Bwindi, Murchison Falls, Queen Elizabeth, Kidepo and beyond.",
   ],
@@ -999,7 +999,7 @@ const kampala: Park = {
     {
       title: 'Uganda Museum',
       body:
-        "Explore ancient tools, musical instruments, household artefacts and cultural objects dating back thousands of years, telling the story of Uganda's diverse ethnic groups in the country's oldest museum.",
+        "Explore ancient tools, musical instruments, household artefacts and cultural objects dating back thousands of years, telling the story of Uganda's diverse ethnic groups.",
       image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
     },
     {
@@ -2216,13 +2216,13 @@ export const countries: Record<string, Country> = {
         slug: 'volcanoes',
         name: 'Volcanoes National Park',
         blurb:
-          "The Rwandan section of the Virunga Massif — five towering volcanoes cloaked in bamboo and rainforest, sanctuary to roughly a third of the world's mountain gorillas and a thriving population of golden monkeys.",
+          "The Rwandan section of the Virunga Massif — a chain of ancient volcanoes cloaked in bamboo and rainforest, sanctuary to some of the last remaining mountain gorillas on the planet and a thriving population of golden monkeys.",
         metaDescription:
           "Trek to mountain gorillas in Rwanda's Volcanoes National Park — habituated gorilla families, golden monkeys, and the Virunga volcanoes.",
         image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
         location: 'Northwestern Rwanda',
         size: '160 km²',
-        altitude: '2,400 — 4,507 m',
+        altitude: '2,400 — 4,500 m',
         bestTime: 'June–September & December–February',
         overview:
           "Volcanoes National Park is Rwanda's crown jewel and one of the most extraordinary wildlife destinations on Earth. Nestled in the Virunga Massif — a chain of ancient volcanoes straddling Rwanda, Uganda, and the Democratic Republic of Congo — this 160 square kilometre park protects some of the last remaining mountain gorillas on the planet, with an estimated population of just over 1,000 individuals worldwide. Encountering these magnificent primates in their natural habitat is a profoundly rare and life-changing privilege. The park was made famous by primatologist Dian Fossey, whose decades of research and conservation advocacy are documented in Gorillas in the Mist. Her grave lies within the park alongside the gorillas she dedicated her life to protecting, and her legacy continues through the Dian Fossey Gorilla Fund, headquartered in Kigali. Trekking permits are priced at USD 1,500 per person — the revenue directly funds park management, anti-poaching operations, and community development programmes. The trek winds through bamboo forest, Hagenia woodland, and volcanic moorland, with treks ranging from 1 to 7 hours depending on where the gorilla family has settled for the day. The dry seasons of June–September and December–February offer the firmest trails and clearest skies, while the wetter months bring lush vegetation, fewer visitors, and a mistier, uniquely atmospheric forest — gorillas are present and trekked year-round.",
@@ -2259,31 +2259,21 @@ export const countries: Record<string, Country> = {
           },
           {
             title: 'Mount Bisoke Summit Hike',
-            body: "Climb this active volcano to its crater lake summit — a demanding but rewarding day hike through montane forest and bamboo, with sweeping views over the Virunga chain and into the DRC on a clear day.",
+            body: "Climb this active volcano to its summit — a demanding but rewarding day hike through montane forest and bamboo, with sweeping views over the Virunga chain and into the DRC on a clear day.",
             image: '/images/parks/rwanda/volcanoes/wilderness-bisate-15.webp',
           },
           {
             title: 'Mount Karisimbi Summit Hike',
-            body: "Tackle the tallest of the Virunga volcanoes on a two-day trek with an overnight camp near the summit — a serious high-altitude challenge for adventurous trekkers, rewarded with sunrise views above the clouds.",
+            body: "Tackle the tallest of the Virunga volcanoes — a serious high-altitude challenge for adventurous trekkers, rewarded with sunrise views above the clouds.",
             image: '/images/parks/rwanda/volcanoes/wilderness-bisate-29.webp',
           },
           {
             title: 'Musanze Caves',
-            body: "Explore a network of lava tube caves formed by ancient volcanic activity near Musanze town, complete with bat colonies and dramatic rock formations — an easy, atmospheric half-day addition to a gorilla trekking itinerary.",
+            body: "Explore the remarkable Musanze Caves near Musanze town — an easy, atmospheric half-day addition to a gorilla trekking itinerary.",
             image: '/images/destinations/rwanda/image-20260331125636.webp',
           },
         ],
         activities: [
-          {
-            title: 'Helicopter Transfers',
-            body: 'Skip the road and arrive in style — aerial transfers from Kigali deliver guests to the lodges with sweeping views over the Twin Lakes and the Virunga volcanoes.',
-            image: '/images/activities/helicopter-rwanda/1000045745.webp',
-          },
-          {
-            title: 'Bisate Reforestation Walk',
-            body: 'Plant a sapling in the Wilderness Bisate reforestation project — your contribution to a 100,000-tree restoration of native forest at the foot of the volcanoes.',
-            image: '/images/parks/rwanda/volcanoes/1750336906468-the-sanctuary-at-bisate-view-1-aerial.webp',
-          },
           {
             title: 'Kigali Genocide Memorial',
             body: 'A respectful, contextual visit to the Kigali Genocide Memorial — essential reading on the journey of modern Rwanda, ideally on arrival or departure day.',
@@ -2291,7 +2281,7 @@ export const countries: Record<string, Country> = {
           },
         ],
         gettingThere:
-          "Volcanoes National Park is approximately 2–3 hours by road from Kigali (110km). Most visitors are transferred by their tour operator from Kigali hotels to the park briefing point at 7:00am for the morning trek. The nearest town is Musanze (Ruhengeri), which has basic accommodation options. Still Wild Safaris arranges all transport and logistics for Kigali-based gorilla trekking departures. Helicopter transfers from Kigali are also available.",
+          "Volcanoes National Park is approximately 2–3 hours by road from Kigali (110km). Most visitors are transferred by their tour operator from Kigali hotels to the park briefing point at 7:00am for the morning trek. The nearest town is Musanze (Ruhengeri), which has basic accommodation options. Still Wild Safaris arranges all transport and logistics for Kigali-based gorilla trekking departures.",
         whereToStay: [
           {
             category: 'Luxury',
@@ -2351,7 +2341,7 @@ export const countries: Record<string, Country> = {
         image: '/images/parks/rwanda/akagera/wilderness-magashi-1.webp',
         location: 'Eastern Rwanda',
         size: '1,122 km²',
-        altitude: '1,250 — 1,825 m',
+        altitude: '',
         bestTime: 'July–September & December–February',
         overview:
           "Akagera National Park is Rwanda's most dramatic conservation success story and the country's only savannah wildlife park. Covering 1,122 square kilometres of rolling savannahs, dense woodlands, lakes, and wetlands along the Tanzanian border, Akagera has undergone a remarkable transformation from a neglected, poaching-ravaged park in the 1990s to a thriving Big Five destination that stands as a model for African wildlife management. The park is managed in partnership by the Rwanda Development Board and African Parks — a non-profit conservation organisation that has driven extraordinary results since taking over management in 2010. Lions were reintroduced in 2015, black rhinoceros were brought back in 2017 and 2021, and the overall wildlife population has surged. Today Akagera offers elephant, buffalo, hippopotamus, giraffe, zebra, leopard, spotted hyena, and numerous antelope species alongside its recovering lion and rhino populations. The park's landscape diversity is exceptional, spanning open savannah and acacia-studded hills, dense riverine forest along the Akagera River, and a chain of lakes that support enormous hippo and crocodile populations. Boat safaris on Lake Ihema are one of Akagera's signature experiences, drifting past pods of hundreds of hippos and basking crocodiles while painted storks, African fish eagles, and malachite kingfishers watch from the papyrus fringe. The dry seasons concentrate wildlife around remaining water sources for predictable game viewing, while the wet seasons transform the park into lush green landscapes with excellent birdwatching and newborn animals underfoot.",
@@ -2380,18 +2370,8 @@ export const countries: Record<string, Country> = {
         activities: [
           {
             title: 'Wilderness Magashi Camp Stay',
-            body: "Six tented suites on the shore of Lake Rwanyakazinga — Rwanda's flagship eco-luxury safari camp in the heart of the best game-viewing terrain.",
+            body: "Tented suites on the shore of Lake Rwanyakazinga — Rwanda's flagship eco-luxury safari camp in the heart of the best game-viewing terrain.",
             image: '/images/parks/rwanda/akagera/wilderness-magashi-23.webp',
-          },
-          {
-            title: 'Behind-the-Scenes with Park Rangers',
-            body: "Spend a morning with the African Parks ranger team — a privileged window into anti-poaching operations, rhino monitoring, and the conservation science driving Akagera's recovery.",
-            image: '/images/parks/rwanda/akagera/1738328418703-magashi-staff-12-24-tc-035.webp',
-          },
-          {
-            title: 'Sundowners on the Plains',
-            body: 'Bush bar set up at sunset on a remote escarpment with views over the Tanzania border — the perfect end to an Akagera game drive day.',
-            image: '/images/parks/rwanda/akagera/1738328545766-magashi-sundowners-12-24-tc-012.webp',
           },
         ],
         gettingThere:
@@ -2487,7 +2467,7 @@ export const countries: Record<string, Country> = {
           {
             title: 'Kigali Convention Centre',
             body:
-              "Admire the striking dome architecture of this landmark building, illuminated in shifting colours after dark — it has become the defining symbol of modern Rwanda's economic ambition and rapid development.",
+              "Admire the striking dome architecture of this landmark building — it has become the defining symbol of modern Rwanda's economic ambition and rapid development.",
             image: '/images/destinations/rwanda/image-20260331125738.webp',
           },
         ],
@@ -2552,7 +2532,7 @@ export const countries: Record<string, Country> = {
         faqs: [
           {
             q: 'How far is Kigali from Volcanoes National Park?',
-            a: 'Volcanoes National Park is approximately 2–3 hours from Kigali by road (about 110km), making it easily reachable for gorilla trekking on either a day trip or as a multi-night stay at a park lodge. Helicopter transfers are also available.',
+            a: 'Volcanoes National Park is approximately 2–3 hours from Kigali by road (about 110km), making it easily reachable for gorilla trekking on either a day trip or as a multi-night stay at a park lodge.',
           },
           {
             q: 'Is Kigali safe for tourists?',
@@ -2670,7 +2650,7 @@ export const countries: Record<string, Country> = {
           "Discover Lake Kivu, one of Africa's Great Lakes — boat trips, island stays, beach relaxation, and coffee tours on Rwanda's most beautiful lake.",
         image: '/images/destinations/rwanda/image-20260331125636.webp',
         location: "Rwanda's Western Shore",
-        size: '2,700 km² (lake surface)',
+        size: '',
         altitude: '1,460 m',
         bestTime: 'Year-round (Jun–Sep & Dec–Feb preferred)',
         overview:
@@ -2683,7 +2663,7 @@ export const countries: Record<string, Country> = {
           },
           {
             title: 'Napoleon Island',
-            body: "Visit this small island at dusk to witness an enormous fruit bat colony take to the sky — thousands of bats streaming out over the water in one of the region's most spectacular wildlife spectacles.",
+            body: "Visit this small island at dusk to witness an enormous fruit bat colony take to the sky in one of the region's most spectacular wildlife spectacles.",
             image: '/images/parks/rwanda/akagera/1738328545766-magashi-sundowners-12-24-tc-012.webp',
           },
           {
@@ -3065,12 +3045,12 @@ export const countries: Record<string, Country> = {
         altitude: '1,100 — 1,200 m',
         bestTime: 'June–October & January–February',
         overview:
-          "Amboseli National Park covers 392 sq km and is home to one of Africa's most iconic images — vast elephant herds moving across open plains with the snow-capped peak of Mount Kilimanjaro behind them. The park protects one of the highest densities of free-roaming elephants in Africa and has been the site of landmark elephant research for over 50 years. A swampy heart fed by Kilimanjaro's snowmelt sustains hundreds of elephants year-round, alongside lion, cheetah, giraffe, hippo and over 600 bird species. The Observation Hill viewpoint delivers one of the most photographed sunsets in Africa — Kilimanjaro glowing pink above a sea of elephants as the plains below turn to gold.",
+          "Amboseli National Park covers 392 sq km and is home to one of Africa's most iconic images — vast elephant herds moving across open plains with the snow-capped peak of Mount Kilimanjaro behind them. The park protects one of the highest densities of free-roaming elephants in Africa and has been the site of landmark elephant research for over 50 years. A swampy heart sustains the park's elephants and lion, alongside over 600 bird species. The Observation Hill viewpoint delivers one of the most photographed sunsets in Africa — Kilimanjaro glowing pink above a sea of elephants as the plains below turn to gold.",
         attractions: [
           {
             title: 'Big-Tusker Elephant Herds',
             body:
-              "Among the world's largest concentrations of giant-tusked elephants, easily observed from open vehicles. Amboseli's elephant research, running for over 50 years, has produced the most comprehensive elephant behavioural database in the world — and the guides here know individual animals by name.",
+              "Among the world's largest concentrations of giant-tusked elephants, easily observed from open vehicles. Amboseli has been the site of landmark elephant research running for over 50 years.",
             image: '/images/parks/kenya/amboseli/amboseli-elephants.webp',
           },
           {
@@ -3082,20 +3062,14 @@ export const countries: Record<string, Country> = {
           {
             title: 'Swamp & Wetland Birdlife',
             body:
-              "Amboseli's permanent swamps — fed year-round by Kilimanjaro's snowmelt — host pelicans, flamingos, herons, sacred ibis and over 600 bird species. The swamps also draw lion and cheetah that hunt the waterbirds and wading birds at the water's edge.",
+              "Amboseli's permanent swamps host over 600 bird species, part of a rich wetland ecosystem at the heart of the park.",
             image: '/images/parks/kenya/amboseli/amboseli-waterhole.webp',
           },
         ],
         activities: [
           {
-            title: 'Stay at ol Donyo Lodge',
-            body:
-              "Great Plains' spectacular property in the Chyulu Hills with hide-walking, horseriding and Maasai cultural visits — the most complete safari experience in the greater Amboseli ecosystem.",
-            image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.webp',
-          },
-          {
             title: 'Stay at Elewana Tortilis Camp',
-            body: 'Inside the park boundary with Kilimanjaro views from every tent — the most photogenic lodge in Amboseli and the closest to the iconic elephant herds.',
+            body: 'Elegant tented luxury under fever trees, offering a classic Amboseli safari atmosphere.',
             image: '/images/lodges/kenya/amboseli-national-park/elewana-tortilis-camp-amboseli/elewana-tortilis-camp-amboseli-1.webp',
           },
           {
@@ -3139,7 +3113,7 @@ export const countries: Record<string, Country> = {
           },
           {
             q: 'Is Amboseli good for families?',
-            a: "Yes. Amboseli's short distances, large elephant herds and easy game viewing make it one of the most family-friendly parks in East Africa. ol Donyo and Tortilis both welcome children with dedicated family activities.",
+            a: "Yes. Amboseli's short distances, large elephant herds and easy game viewing make it one of the most family-friendly parks in East Africa.",
           },
           {
             q: 'How do I get to Amboseli?',
@@ -3259,7 +3233,7 @@ export const countries: Record<string, Country> = {
           {
             title: 'Hot Springs at Samburu',
             body:
-              "Visit natural hot springs in the greater Samburu landscape — a fascinating geological feature amid the arid northern frontier terrain, and an easy half-day addition to a game-drive itinerary.",
+              "Visit natural hot springs in the greater Samburu landscape — a fascinating geological feature amid the arid northern frontier terrain.",
             image: '/images/parks/kenya/samburu/grevys-zebra.webp',
           },
         ],
@@ -3267,13 +3241,13 @@ export const countries: Record<string, Country> = {
           {
             title: 'Stay at Sasaab',
             body:
-              "The Safari Collection's Moroccan-inspired villa-style lodge above the Ewaso Ng'iro — vast open-air suites with private plunge pools and one of the most distinctive architectural addresses in northern Kenya.",
+              "Sasaab Lodge — striking Moroccan-inspired suites overlooking the river, one of Kenya's most photographed lodges.",
             image: '/images/parks/kenya/samburu/sasaab.webp',
           },
           {
             title: 'Camel-Back Bush Walks',
             body:
-              "A relaxed half-day walking safari with a string of pack camels — the Samburu way of crossing the bush, with bush breakfast served on a riverbank. A genuinely immersive and culturally authentic experience.",
+              "A relaxed half-day walking safari with a string of pack camels — the Samburu way of crossing the bush. A genuinely immersive and culturally authentic experience.",
             image: '/images/parks/kenya/laikipia-loisaba/1752747977434-kenya-suyian-conservancy-walk-with-camels-5.webp',
           },
           {
@@ -3443,7 +3417,7 @@ export const countries: Record<string, Country> = {
           {
             title: 'Rift Valley Two-Lake Circuit',
             body:
-              "Combine Lake Nakuru with Lake Naivasha (60km south) and Lake Bogoria for a scenic Rift Valley circuit — the flamingos, hot springs and geysers of Bogoria alongside Nakuru's rhinos make one of Kenya's finest scenic road journeys.",
+              "Combine Lake Nakuru with Lake Naivasha (60km south) and Lake Bogoria for a scenic Rift Valley circuit — the flamingos and hot springs of Bogoria alongside Nakuru's rhinos make one of Kenya's finest scenic road journeys.",
             image: '/images/lodges/kenya/lake-nakuru-national-park/loldia-house-1/Governors Loldia House.webp',
           },
         ],
@@ -3542,7 +3516,7 @@ export const countries: Record<string, Country> = {
           {
             title: 'Stay at The Emakoko',
             body:
-              "Safari-edge luxury right on the Nairobi National Park boundary — direct park access, game-viewing decks over the Mbagathi River, and a genuine wild atmosphere within minutes of the city centre.",
+              "Safari-edge luxury right on the Nairobi National Park boundary, with a genuine wild atmosphere within minutes of the city centre.",
             image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-at-giraffe-manor-1.webp',
           },
         ],

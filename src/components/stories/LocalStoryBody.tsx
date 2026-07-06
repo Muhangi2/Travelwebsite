@@ -9,19 +9,42 @@ export default function LocalStoryBody({ value, gallery = [] }: { value: Article
   const nodes: ReactNode[] = []
   let headingCount = 0
   let imagesUsed = 0
+  let skipIndex = -1
 
   value.forEach((block, i) => {
+    if (i === skipIndex) return
+
     if (block.kind === 'heading') {
-      if (headingCount > 0 && headingCount % HEADINGS_PER_IMAGE === 0 && gallery.length > 0) {
+      const isImageBreak = headingCount > 0 && headingCount % HEADINGS_PER_IMAGE === 0 && gallery.length > 0
+      headingCount += 1
+
+      if (isImageBreak) {
         const src = gallery[imagesUsed % gallery.length]
         imagesUsed += 1
+        const next = value[i + 1]
+        const subtext = next?.kind === 'paragraph' ? next.text : null
+        if (subtext) skipIndex = i + 1
+
         nodes.push(
-          <div key={`img-${i}`} className="relative left-1/2 -ml-[50vw] mt-14 w-screen">
-            <Picture src={src} alt="" loading="lazy" className="h-[42vh] w-full object-cover sm:h-[56vh]" />
-          </div>,
+          <section
+            key={`imgbreak-${i}`}
+            className="relative isolate left-1/2 -ml-[50vw] mt-14 w-screen overflow-hidden py-20 text-white"
+          >
+            <Picture src={src} alt="" loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover" />
+            <div className="absolute inset-0 -z-10 bg-black/60" />
+            <div className="mx-auto max-w-2xl px-6 text-center">
+              <div className="section-rule mx-auto" style={{ background: 'rgba(255,255,255,0.5)' }} />
+              <h2 id={slugify(block.text)} className="mt-4 scroll-mt-24 text-2xl text-white sm:text-3xl">
+                {block.text}
+              </h2>
+              {subtext && (
+                <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/85">{subtext}</p>
+              )}
+            </div>
+          </section>,
         )
+        return
       }
-      headingCount += 1
 
       if (block.level === 2) {
         nodes.push(
