@@ -895,14 +895,7 @@ const entebbe: Park = {
       image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.webp',
     },
   ],
-  activities: [
-    {
-      title: 'Sunset Boat Cruise on Lake Victoria',
-      body:
-        "An easy, relaxed way to see the lake at its most beautiful — gliding past fishing villages and forested shoreline as the sun sets over the world's second-largest freshwater lake, often combined with a Ngamba Island or Mabamba Swamp excursion.",
-      image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.webp',
-    },
-  ],
+  activities: [],
   gettingThere:
     "Entebbe International Airport (EBB) is the primary international gateway to Uganda, receiving flights from Nairobi, Addis Ababa, Dubai, Amsterdam, London, Johannesburg, Kigali, and many other destinations. The town is directly adjacent to the airport — just 5 minutes by road. From Kampala: 40–60 minutes by private transfer or taxi (longer during peak traffic). Entebbe is also the hub for all Uganda domestic flights: Aerolink Uganda and BAA Uganda operate scheduled services to Kihihi (Bwindi/Queen Elizabeth), Pakuba and Chobe (Murchison Falls), Kisoro (Mgahinga), and other destinations.",
   whereToStay: [
@@ -1121,13 +1114,7 @@ const serengetiPark = {
       image: '/images/destinations/tanzania/sayari-lioness.webp',
     },
   ],
-  activities: [
-    {
-      title: 'Ballooning over the Plains',
-      body: 'A dawn balloon flight over the Serengeti, following migrating herds, ending with a champagne breakfast in the bush — the definitive aerial safari experience.',
-      image: '/images/destinations/tanzania/dunia-lion-and-plane-in-the-serengeti.webp',
-    },
-  ],
+  activities: [],
   gettingThere:
     "The Serengeti is accessed via Arusha — approximately 8–9 hours by road, or 1–2 hours by charter flight from Kilimanjaro or Arusha airports. Several airstrips within the park (Seronera, Kogatende, Lobo and Grumeti) receive scheduled and charter flights daily. Flying into the Serengeti is strongly recommended over the long, rough road journey.",
   whereToStay: [
@@ -2247,13 +2234,7 @@ export const countries: Record<string, Country> = {
             image: '/images/destinations/rwanda/image-20260331125636.webp',
           },
         ],
-        activities: [
-          {
-            title: 'Kigali Genocide Memorial',
-            body: 'A respectful, contextual visit to the Kigali Genocide Memorial — essential reading on the journey of modern Rwanda, ideally on arrival or departure day.',
-            image: '/images/destinations/rwanda/image-20260331125636.webp',
-          },
-        ],
+        activities: [],
         gettingThere:
           "Volcanoes National Park is approximately 2–3 hours by road from Kigali (110km). Most visitors are transferred by their tour operator from Kigali hotels to the park briefing point at 7:00am for the morning trek. The nearest town is Musanze (Ruhengeri), which has basic accommodation options. Still Wild Safaris arranges all transport and logistics for Kigali-based gorilla trekking departures.",
         whereToStay: [
@@ -3029,14 +3010,7 @@ export const countries: Record<string, Country> = {
             image: '/images/parks/kenya/amboseli/amboseli-waterhole.webp',
           },
         ],
-        activities: [
-          {
-            title: 'Maasai Cultural Village Visit',
-            body:
-              'Spend a morning with a local Maasai community — traditional homestead, warrior demonstrations and beadwork. The pastoral Maasai culture has coexisted with Amboseli wildlife for centuries and adds rich human depth to the safari experience.',
-            image: '/images/parks/kenya/amboseli/view-from-observation-hill.webp',
-          },
-        ],
+        activities: [],
         gettingThere:
           'Fly from Wilson Airport to Amboseli airstrip in 45 minutes, or drive from Nairobi in approximately 4 hours via Namanga.',
         whereToStay: [
@@ -3458,14 +3432,7 @@ export const countries: Record<string, Country> = {
             image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-popping-in-for-treats.webp',
           },
         ],
-        activities: [
-          {
-            title: 'Karen Blixen Museum',
-            body:
-              "Tour the beautifully preserved farmhouse where Karen Blixen lived and wrote Out of Africa, surrounded by the Ngong Hills she described. An essential cultural visit combining colonial history with the landscape that inspired one of Africa's most celebrated memoirs.",
-            image: '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.webp',
-          },
-        ],
+        activities: [],
         gettingThere:
           "Nairobi is served by Jomo Kenyatta International Airport (NBO), one of Africa's busiest hubs with direct connections to London, Dubai, Amsterdam, Addis Ababa, Johannesburg, and most major African cities. Wilson Airport serves domestic and safari charter flights. Overland, Nairobi is approximately 8–9 hours from Kampala by road.",
         whereToStay: [

@@ -21,7 +21,6 @@ export default function TourNav({ hasHighlights, hasFaq, hasIncludes }: Props) {
     ...(hasIncludes   ? [{ key: 'includes',   label: 'Included',   short: 'Incl',  id: 'includes' }]   : []),
     ...(hasFaq        ? [{ key: 'faq',        label: 'FAQ',        short: 'FAQ',   id: 'faq' }]        : []),
     { key: 'accommodation',  label: 'Accommodation', short: 'Stay',  id: 'accommodation' },
-    { key: 'contact',        label: 'Contact',       short: 'Book',  id: 'contact' },
   ]
 
   // Track active section via IntersectionObserver

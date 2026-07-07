@@ -52,7 +52,6 @@ function DestinationsCarousel({ countries }: { countries: Country[] }) {
 
           const abs = Math.abs(offset)
           const isActive = abs === 0
-          const isAdjacent = abs === 1
 
           if (abs > 1) return null
 
@@ -78,16 +77,12 @@ function DestinationsCarousel({ countries }: { countries: Country[] }) {
                 zIndex: isActive ? 10 : 4,
 
                 transition: 'transform 0.9s cubic-bezier(0.22,1,0.36,1), opacity 0.9s cubic-bezier(0.22,1,0.36,1)',
-                cursor: isAdjacent ? 'pointer' : 'auto',
+                cursor: 'pointer',
               }}
-              // Clicking a side card makes it the active one (no navigation)
-              onClick={() => isAdjacent && setActive(i)}
             >
               <Link
                 to={`/destinations/${c.slug}`}
                 className="group block h-full"
-                // Prevent navigation when the user clicks a side card to select it
-                onClick={e => isAdjacent && e.preventDefault()}
               >
                 <div
                   className="relative h-full overflow-hidden rounded-3xl"

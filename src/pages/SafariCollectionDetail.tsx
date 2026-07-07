@@ -9,9 +9,7 @@ import TourHighlights from '@/components/collection-detail/TourHighlights'
 import TourIncludes from '@/components/collection-detail/TourIncludes'
 import TourFAQ from '@/components/collection-detail/TourFAQ'
 import HandpickedLodges from '@/components/collection-detail/HandpickedLodges'
-import FlyInOption from '@/components/collection-detail/FlyInOption'
-import WhyChoose from '@/components/collection-detail/WhyChoose'
-import BookingForm from '@/components/collection-detail/BookingForm'
+import RelatedJourneysCarousel from '@/components/collection-detail/RelatedJourneysCarousel'
 
 export default function SafariCollectionDetail() {
   const { slug } = useParams<{ slug: string }>()
@@ -93,12 +91,7 @@ export default function SafariCollectionDetail() {
         <HandpickedLodges days={journey.days} />
       </div>
 
-      <FlyInOption />
-      <WhyChoose />
-
-      <div id="contact">
-        <BookingForm />
-      </div>
+      <RelatedJourneysCarousel excludeSlug={slug} />
 
       {hasFaq && (
         <div id="faq">

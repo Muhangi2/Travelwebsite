@@ -136,20 +136,19 @@ export default function Footer() {
                   {site.email}
                 </a>
               </li>
-              <li>{site.address}</li>
               <li>
-                <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="hover:text-white">
-                  {site.phone}
-                </a>
-              </li>
-              <li>
-                <a href={`tel:${site.phoneAlt.replace(/\s/g, '')}`} className="hover:text-white">
-                  {site.phoneAlt}
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${site.mapsQuery}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  {site.address}
                 </a>
               </li>
               <li>
                 <a href={site.whatsappHref} target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                  WhatsApp: {site.whatsapp}
+                  {site.whatsapp}
                 </a>
               </li>
             </ul>

@@ -9,6 +9,6 @@ export const site = {
   whatsappHref: 'https://wa.me/256779378628',
   instagram: 'https://www.instagram.com/stillwildsafaris?igsh=dmphN3Q0OTJyc214',
   facebook: 'https://www.facebook.com/share/18ZKkFXWb2/',
-  address: 'Imperial Mall — Ground Level, Suite 30, Uganda',
-  mapsQuery: 'Imperial+Mall+Entebbe+Uganda',
+  address: 'Baskerville House, Suite 19, Kampala, Uganda',
+  mapsQuery: 'Baskerville+House+Kampala+Uganda',
 } as const
