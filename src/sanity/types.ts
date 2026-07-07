@@ -26,6 +26,7 @@ export type SanityStorySummary = {
 
 export type SanityStory = SanityStorySummary & {
   body?: PortableTextBlock[]
+  gallery?: SanityMediaImage[]
 }
 
 export type SanityExperience = {
@@ -62,6 +63,14 @@ export type SanityPark = {
   attractions?: { title: string; body: string; image: SanityMediaImage }[]
   activities?: { title: string; body?: string; image: SanityMediaImage }[]
   faqs?: { q: string; a: string }[]
+  metaDescription?: string
+  whyVisit?: string[]
+  gettingThere?: string
+  whereToStay?: {
+    category: string
+    picks: { name: string; description?: string; image?: SanityMediaImage }[]
+  }[]
+  practicalInfo?: { label: string; body: string }[]
 }
 
 export type SanityStatItem = { number: string; label: string }

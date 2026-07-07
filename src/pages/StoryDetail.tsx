@@ -98,7 +98,7 @@ export default function StoryDetail() {
 
           {hasSanityBody && fetched?.body ? (
             <div className="mt-8">
-              <StoryBody value={fetched.body} />
+              <StoryBody value={fetched.body} gallery={fetched.gallery} />
             </div>
           ) : hasLocalBody && localArticle?.body ? (
             <div className="mt-8">

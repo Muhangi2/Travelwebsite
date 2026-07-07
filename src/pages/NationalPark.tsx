@@ -48,7 +48,13 @@ export default function NationalPark() {
       {parkData.attractions.length > 0 && <KeyAttractions items={parkData.attractions} />}
       {parkData.activities.length > 0 && <TopActivities items={parkData.activities} />}
       {parkData.gettingThere && <GettingThere text={parkData.gettingThere} />}
-      {parkData.whereToStay && parkData.whereToStay.length > 0 && <WhereToStay categories={parkData.whereToStay} />}
+      {parkData.whereToStay && parkData.whereToStay.length > 0 && (
+        <WhereToStay
+          categories={parkData.whereToStay}
+          activities={parkData.activities}
+          fallbackImage={parkData.image}
+        />
+      )}
       {parkData.practicalInfo && parkData.practicalInfo.length > 0 && <PracticalInfo items={parkData.practicalInfo} />}
       {parkData.faqs.length > 0 && <Faq items={parkData.faqs} />}
     </>

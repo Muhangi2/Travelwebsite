@@ -492,6 +492,84 @@ export const lodgeType = defineType({
   ],
 })
 
+export const whereToStayPickType = defineType({
+  name: 'whereToStayPick',
+  title: 'Lodge pick',
+  type: 'object',
+  fields: [
+    defineField({
+      name: 'name',
+      title: 'Lodge name',
+      type: 'string',
+      description: 'e.g. "Bwindi Lodge"',
+      validation: (r) => r.required(),
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      rows: 2,
+      description: 'e.g. "Top-end stone cottages with spectacular forest valley views above the Buhoma sector."',
+    }),
+    defineField({
+      name: 'image',
+      title: 'Lodge image',
+      type: 'mediaImage',
+      description: 'Upload a photo of this specific lodge — shown as the card image in the Where to Stay carousel.',
+    }),
+  ],
+  preview: {
+    select: { title: 'name', subtitle: 'description', media: 'image.asset' },
+  },
+})
+
+export const whereToStayCategoryType = defineType({
+  name: 'whereToStayCategory',
+  title: 'Accommodation category',
+  type: 'object',
+  fields: [
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      description: 'e.g. "Ultra-Luxury", "Luxury", "Mid-Range"',
+      validation: (r) => r.required(),
+    }),
+    defineField({
+      name: 'picks',
+      title: 'Picks',
+      type: 'array',
+      of: [{ type: 'whereToStayPick' }],
+      description: 'Add each lodge in this category, with a name, description, and optional photo.',
+      validation: (r) => r.required().min(1),
+    }),
+  ],
+  preview: { select: { title: 'category' } },
+})
+
+export const practicalInfoItemType = defineType({
+  name: 'practicalInfoItem',
+  title: 'Practical info item',
+  type: 'object',
+  fields: [
+    defineField({
+      name: 'label',
+      title: 'Label',
+      type: 'string',
+      description: 'e.g. "Currency", "Safety", "Health", "Connectivity"',
+      validation: (r) => r.required(),
+    }),
+    defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'text',
+      rows: 3,
+      validation: (r) => r.required(),
+    }),
+  ],
+  preview: { select: { title: 'label' } },
+})
+
 export const parkType = defineType({
   name: 'park',
   title: 'National park',
@@ -557,6 +635,20 @@ export const parkType = defineType({
       description: 'Detailed description of the park — ecology, history, wildlife, and what makes it special. 3–6 paragraphs.',
     }),
     defineField({
+      name: 'metaDescription',
+      title: 'SEO meta description',
+      type: 'text',
+      rows: 2,
+      description: 'e.g. "Track mountain gorillas in Bwindi Impenetrable National Park, home to half the world\'s remaining gorillas — permit costs, sectors, and lodges." Falls back to the blurb if left blank.',
+    }),
+    defineField({
+      name: 'whyVisit',
+      title: 'Why visit — bullet points',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'Short bullet points on why this park is worth visiting. Leave blank to hide this section.',
+    }),
+    defineField({
       name: 'attractions',
       title: 'Key attractions',
       type: 'array',
@@ -576,6 +668,27 @@ export const parkType = defineType({
       type: 'array',
       of: [{ type: 'faqItem' }],
       description: 'Add 4–6 frequently asked questions specific to this park.',
+    }),
+    defineField({
+      name: 'gettingThere',
+      title: 'Getting there',
+      type: 'text',
+      rows: 4,
+      description: 'How to reach the park by air and road. Leave blank to hide this section.',
+    }),
+    defineField({
+      name: 'whereToStay',
+      title: 'Where to stay',
+      type: 'array',
+      of: [{ type: 'whereToStayCategory' }],
+      description: 'Accommodation options grouped by category (Ultra-Luxury, Luxury, Mid-Range, etc). Leave blank to hide this section.',
+    }),
+    defineField({
+      name: 'practicalInfo',
+      title: 'Practical information',
+      type: 'array',
+      of: [{ type: 'practicalInfoItem' }],
+      description: 'Quick-reference travel tips — currency, safety, health, connectivity, etc. Leave blank to hide this section.',
     }),
   ],
 })
@@ -730,6 +843,57 @@ export const journeyDayType = defineType({
   },
 })
 
+export const tableRowType = defineType({
+  name: 'tableRow',
+  title: 'Row',
+  type: 'object',
+  fields: [
+    defineField({
+      name: 'cells',
+      title: 'Cells',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'One entry per column, in order — must match the number of table headers.',
+      validation: (r) => r.required().min(1),
+    }),
+  ],
+  preview: {
+    select: { cells: 'cells' },
+    prepare({ cells }: { cells?: string[] }) {
+      return { title: (cells ?? []).join(' · ') }
+    },
+  },
+})
+
+export const articleTableType = defineType({
+  name: 'articleTable',
+  title: 'Table',
+  type: 'object',
+  fields: [
+    defineField({
+      name: 'headers',
+      title: 'Column headers',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'e.g. "Feature", "Uganda", "Rwanda" — one entry per column.',
+      validation: (r) => r.required().min(1),
+    }),
+    defineField({
+      name: 'rows',
+      title: 'Rows',
+      type: 'array',
+      of: [{ type: 'tableRow' }],
+      validation: (r) => r.required().min(1),
+    }),
+  ],
+  preview: {
+    select: { headers: 'headers' },
+    prepare({ headers }: { headers?: string[] }) {
+      return { title: `Table: ${(headers ?? []).join(' · ')}` }
+    },
+  },
+})
+
 export const objectTypes = [
   statItemType,
   whyVisitBulletType,
@@ -748,8 +912,13 @@ export const objectTypes = [
   parkActivityType,
   privilegedAccessType,
   lodgeType,
+  whereToStayPickType,
+  whereToStayCategoryType,
+  practicalInfoItemType,
   parkType,
   experienceHighlightType,
   experienceLocationType,
   journeyDayType,
+  tableRowType,
+  articleTableType,
 ]

@@ -10,6 +10,12 @@ export const pageHeroByKeyQuery = /* groq */ `
   }
 `
 
+const mediaImageProjection = /* groq */ `{
+  asset,
+  path,
+  alt
+}`
+
 export const allStoriesQuery = /* groq */ `
   *[_type == "story" && defined(slug.current)] | order(coalesce(featured, false) desc, publishedAt desc) {
     _id,
@@ -34,15 +40,10 @@ export const storyBySlugQuery = /* groq */ `
     author,
     publishedAt,
     tags,
-    body
+    body,
+    gallery[] ${mediaImageProjection}
   }
 `
-
-const mediaImageProjection = /* groq */ `{
-  asset,
-  path,
-  alt
-}`
 
 export const allExperiencesQuery = /* groq */ `
   *[_type == "experience" && defined(slug.current)] | order(coalesce(sortOrder, 0) asc, title asc) {
@@ -56,7 +57,7 @@ export const allExperiencesQuery = /* groq */ `
     image ${mediaImageProjection},
     tagline,
     intro,
-    highlights,
+    highlights[] { title, body },
     locations[] {
       name,
       country,
@@ -80,7 +81,7 @@ export const experienceBySlugQuery = /* groq */ `
     image ${mediaImageProjection},
     tagline,
     intro,
-    highlights,
+    highlights[] { title, body },
     locations[] {
       name,
       country,
@@ -145,7 +146,12 @@ export const allDestinationsQuery = /* groq */ `
         body,
         image ${mediaImageProjection}
       },
-      faqs[] { q, a }
+      faqs[] { q, a },
+      metaDescription,
+      whyVisit,
+      gettingThere,
+      whereToStay[] { category, picks[] { name, description, image ${mediaImageProjection} } },
+      practicalInfo[] { label, body }
     },
     privilegedAccess[] {
       title,
@@ -196,7 +202,12 @@ export const destinationBySlugQuery = /* groq */ `
         body,
         image ${mediaImageProjection}
       },
-      faqs[] { q, a }
+      faqs[] { q, a },
+      metaDescription,
+      whyVisit,
+      gettingThere,
+      whereToStay[] { category, picks[] { name, description, image ${mediaImageProjection} } },
+      practicalInfo[] { label, body }
     },
     privilegedAccess[] {
       title,

@@ -13,7 +13,10 @@ export type Park = {
   attractions: { title: string; body: string; image: string }[]
   activities: { title: string; body?: string; image: string }[]
   gettingThere?: string
-  whereToStay?: { category: string; picks: string[] }[]
+  whereToStay?: {
+    category: string
+    picks: (string | { name: string; description?: string; image?: string })[]
+  }[]
   practicalInfo?: { label: string; body: string }[]
   faqs: { q: string; a: string }[]
 }

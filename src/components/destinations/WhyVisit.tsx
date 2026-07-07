@@ -46,19 +46,24 @@ export default function WhyVisit({
                 </p>
                 <ul className="grid gap-5 sm:grid-cols-2">
                   {data.bullets.map((bullet) => {
-                    const isRich = typeof bullet === 'object'
-                    const key = isRich ? bullet.title : bullet
+                    const title = typeof bullet === 'object' ? bullet.title : bullet
+                    const body = typeof bullet === 'object' ? bullet.body : undefined
+                    // Sanity can only ever store the { title, body } shape (no plain-string bullets),
+                    // so key the two-line layout off actual body content rather than the value's
+                    // shape — otherwise every Sanity-sourced bullet with an empty body would gain a
+                    // blank second line that the original plain-string bullets never had.
+                    const isRich = Boolean(body)
                     return (
-                      <li key={key} className="flex items-start gap-3">
+                      <li key={title} className="flex items-start gap-3">
                         <span className="mt-1 shrink-0 text-amber-500 text-xs" aria-hidden>◉</span>
                         <div>
                           {isRich ? (
                             <>
-                              <p className="text-sm font-semibold leading-snug text-neutral-900">{bullet.title}</p>
-                              <p className="mt-1 text-sm leading-relaxed text-neutral-500">{bullet.body}</p>
+                              <p className="text-sm font-semibold leading-snug text-neutral-900">{title}</p>
+                              <p className="mt-1 text-sm leading-relaxed text-neutral-500">{body}</p>
                             </>
                           ) : (
-                            <span className="text-sm leading-relaxed text-neutral-700">{bullet}</span>
+                            <span className="text-sm leading-relaxed text-neutral-700">{title}</span>
                           )}
                         </div>
                       </li>

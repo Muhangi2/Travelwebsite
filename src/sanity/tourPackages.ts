@@ -29,7 +29,7 @@ function buildAccommodationString(tier: string | undefined, lodgeNames: string |
   return lodgeNames ? `${label}: ${lodgeNames}` : label
 }
 
-function toJourneyData(raw: SanityTourPackage): JourneyData | null {
+export function toJourneyData(raw: SanityTourPackage): JourneyData | null {
   if (!raw.days?.length) return null
   const hero = raw.heroImage ? resolveMediaImage(raw.heroImage, 1600) : resolveMediaImage(raw.listImage, 1600)
   return {
@@ -59,7 +59,7 @@ function toJourneyData(raw: SanityTourPackage): JourneyData | null {
   }
 }
 
-function toCard(raw: SanityTourPackage): TourPackageCard {
+export function toCard(raw: SanityTourPackage): TourPackageCard {
   return {
     id: raw.slug,
     image: resolveMediaImage(raw.listImage, 800),

@@ -5,7 +5,7 @@ import { allExperiencesQuery, experienceBySlugQuery } from './queries'
 import type { SanityExperience } from './types'
 import { resolveMediaImage, resolveMediaImages } from './utils/media'
 
-function toExperience(raw: SanityExperience): Experience {
+export function toExperience(raw: SanityExperience): Experience {
   return {
     slug: raw.slug,
     badge: raw.badge,

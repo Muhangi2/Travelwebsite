@@ -37,6 +37,7 @@ export function localReadingMinutes(body: ArticleBlock[]): number {
 }
 
 type SanityBlock = PortableTextBlock & { style?: string; children?: { text?: string }[] }
+type SanityTableBlock = { _type: 'articleTable'; headers?: string[]; rows?: { cells?: string[] }[] }
 
 export function sanityToc(body: PortableTextBlock[]): TocEntry[] {
   return (body as SanityBlock[])
@@ -49,8 +50,16 @@ export function sanityToc(body: PortableTextBlock[]): TocEntry[] {
 }
 
 export function sanityReadingMinutes(body: PortableTextBlock[]): number {
-  const words = (body as SanityBlock[]).reduce((sum, b) => {
-    const text = (b.children ?? []).map((c) => c.text ?? '').join('')
+  const words = body.reduce((sum, b) => {
+    if ((b as { _type?: string })._type === 'articleTable') {
+      const table = b as unknown as SanityTableBlock
+      const text = [
+        (table.headers ?? []).join(' '),
+        ...(table.rows ?? []).map((r) => (r.cells ?? []).join(' ')),
+      ].join(' ')
+      return sum + countWords(text)
+    }
+    const text = ((b as SanityBlock).children ?? []).map((c) => c.text ?? '').join('')
     return sum + countWords(text)
   }, 0)
   return Math.max(1, Math.round(words / WORDS_PER_MINUTE))

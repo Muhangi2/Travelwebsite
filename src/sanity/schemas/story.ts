@@ -88,6 +88,13 @@ export const storyType = defineType({
       initialValue: false,
     }),
     defineField({
+      name: 'gallery',
+      title: 'Background gallery',
+      type: 'array',
+      of: [{ type: 'mediaImage' }],
+      description: 'Optional photos used as full-bleed background breaks between sections of the article body. Add 3–6 images. Leave blank for a plain article layout.',
+    }),
+    defineField({
       name: 'body',
       title: 'Article body',
       type: 'array',
@@ -140,6 +147,7 @@ export const storyType = defineType({
             }),
           ],
         },
+        { type: 'articleTable' },
       ],
     }),
   ],

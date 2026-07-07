@@ -5,7 +5,7 @@ import { allDestinationsQuery, destinationBySlugQuery } from './queries'
 import type { SanityDestination, SanityPark } from './types'
 import { resolveMediaImage } from './utils/media'
 
-function toPark(raw: SanityPark): Park {
+export function toPark(raw: SanityPark): Park {
   return {
     slug: raw.slug,
     name: raw.name,
@@ -27,10 +27,22 @@ function toPark(raw: SanityPark): Park {
       image: resolveMediaImage(a.image, 900),
     })),
     faqs: raw.faqs ?? [],
+    metaDescription: raw.metaDescription,
+    whyVisit: raw.whyVisit,
+    gettingThere: raw.gettingThere,
+    whereToStay: raw.whereToStay?.map((cat) => ({
+      category: cat.category,
+      picks: cat.picks.map((p) => ({
+        name: p.name,
+        description: p.description ?? '',
+        image: p.image ? resolveMediaImage(p.image, 900) : undefined,
+      })),
+    })),
+    practicalInfo: raw.practicalInfo,
   }
 }
 
-function toCountry(raw: SanityDestination): Country {
+export function toCountry(raw: SanityDestination): Country {
   return {
     slug: raw.slug,
     name: raw.name,

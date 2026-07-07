@@ -5,6 +5,7 @@ import { urlFor } from './image'
 import { allStoriesQuery, storyBySlugQuery } from './queries'
 import type { SanityStory, SanityStorySummary } from './types'
 import { articles as localArticles, type Article } from '@/data/articles'
+import { resolveMediaImages } from './utils/media'
 
 function formatDate(iso: string): string {
   const d = new Date(iso)
@@ -12,7 +13,7 @@ function formatDate(iso: string): string {
   return d.toLocaleString('en-US', { month: 'short', year: 'numeric' })
 }
 
-function toArticle(s: SanityStorySummary): Article {
+export function toArticle(s: SanityStorySummary): Article {
   return {
     slug: s.slug,
     title: s.title,
@@ -72,6 +73,7 @@ export function useStory(slug: string | undefined): { article: ArticleWithBody |
         setArticle({
           ...toArticle(data),
           body: data.body,
+          gallery: resolveMediaImages(data.gallery),
         })
       })
       .catch((err) => {
