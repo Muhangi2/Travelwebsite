@@ -109,12 +109,6 @@ const bwindi: Park = {
         "The most scenically spectacular sector, with ridge-top accommodation and stunning views into the Democratic Republic of Congo. The gorillas here range across Bwindi's most dramatic terrain — a visually unforgettable combination of wilderness and wildlife.",
       image: '/images/activities/gorilla-trekking/10-gorilla-ah1i2740.webp',
     },
-    {
-      title: 'Stay at Clouds Mountain Gorilla Lodge',
-      body:
-        "Uganda's highest-altitude gorilla lodge on the Nkuringo ridge, with heated plunge pools, private butler service, and the most dramatic panoramic viewpoint in the entire Bwindi region — including views into the Democratic Republic of Congo.",
-      image: '/images/lodges/uganda/bwindi/clouds-moutain-gorilla-lodge-by-wildplaces/1761689756443ugandawildplaces-samchurchill-6773.webp',
-    },
   ],
   faqs: [
     {
@@ -148,7 +142,11 @@ const bwindi: Park = {
       picks: [
         "Bwindi Lodge — top-end stone cottages with spectacular forest valley views above the Buhoma sector.",
         "Mahogany Springs — high-end tented camp on a hill above Buhoma.",
-        "Clouds Mountain Gorilla Lodge — Uganda's highest-altitude gorilla lodge on the Nkuringo ridge, with heated plunge pools, private butler service, and views into the Democratic Republic of Congo.",
+        {
+          name: 'Clouds Mountain Gorilla Lodge',
+          description: "Uganda's highest-altitude gorilla lodge on the Nkuringo ridge, with heated plunge pools, private butler service, and views into the Democratic Republic of Congo.",
+          image: '/images/lodges/uganda/bwindi/clouds-moutain-gorilla-lodge-by-wildplaces/1761689756443ugandawildplaces-samchurchill-6773.webp',
+        },
       ],
     },
     {
@@ -218,12 +216,6 @@ const queenElizabeth: Park = {
   ],
   activities: [
     {
-      title: 'Stay at Kyambura Gorge Lodge',
-      body:
-        "Perched on the gorge rim with the chimpanzee habitat below, managed by Volcanoes Safaris with exceptional guiding and one of Uganda's most progressive community-conservation models. Direct access to chimp trekking from the lodge doorstep.",
-      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/23-kyambura-gorge-lodge-qe-30042024-volcanoessafaris-8624-edit-copy.webp',
-    },
-    {
       title: 'Crater Lakes Scenic Drive',
       body:
         "Wind along the dramatic escarpment road above the Albertine Rift past a string of ancient volcanic crater lakes. Lake Munyanyange regularly hosts flocks of flamingos, while Lake Katwe is the site of traditional salt extraction. The views from the escarpment edge across Lake Edward and into the Democratic Republic of Congo are extraordinary.",
@@ -261,7 +253,11 @@ const queenElizabeth: Park = {
       category: 'Ultra-Luxury',
       picks: [
         "The River Station — private plunge pools, a safari spa over a waterhole, and the only lodge in the Kyambura Wildlife Reserve.",
-        "Kyambura Gorge Lodge — perched on the gorge rim with exceptional guiding, managed by Volcanoes Safaris.",
+        {
+          name: 'Kyambura Gorge Lodge',
+          description: 'Perched on the gorge rim with exceptional guiding, managed by Volcanoes Safaris.',
+          image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/23-kyambura-gorge-lodge-qe-30042024-volcanoessafaris-8624-edit-copy.webp',
+        },
       ],
     },
     {
@@ -444,12 +440,6 @@ const kibale: Park = {
       image: '/images/lodges/uganda/kibale-national-park/primate-lodge/1.webp',
     },
     {
-      title: 'Stay at Kibale Lodge by Volcanoes Safaris',
-      body:
-        "Hand-built bandas perched on a hilltop ridge above Kibale's forest canopy with panoramic Rwenzori mountain views and direct access to the chimp trekking departure point. Personal butler service, spa, and exceptional guiding.",
-      image: '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.webp',
-    },
-    {
       title: "Crater Lakes Walk",
       body:
         "A gentle afternoon walk along the chain of volcanic crater lakes between Kibale and Fort Portal — passing through tea estates, swimming in crater lakes, and experiencing rural Uganda. Fort Portal town (22km from Kanyanchu) offers a pleasant highland base.",
@@ -482,7 +472,11 @@ const kibale: Park = {
     {
       category: 'Luxury',
       picks: [
-        "Kibale Lodge by Volcanoes Safaris — hand-built bandas on a hilltop ridge with Rwenzori views, personal butler service, and spa.",
+        {
+          name: 'Kibale Lodge by Volcanoes Safaris',
+          description: 'Hand-built bandas on a hilltop ridge with Rwenzori views, personal butler service, and spa.',
+          image: '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.webp',
+        },
         "Crater Safari Lodge — award-winning eco-lodge on Nyinabulitwa Crater Lake with thatched chalets and stunning crater views.",
         "Tabebuia Spa & Safari Resort — forest sanctuary with full spa, elegant rooms, and scenic garden terraces.",
         "Mirima Kibale Lodge — luxury cottages perched on a forested ridge above twin crater lakes, perfectly positioned for early morning chimp trekking.",
@@ -559,12 +553,6 @@ const lakeMburo: Park = {
         "Guided night drives after sunset reveal Lake Mburo's nocturnal fauna: leopards (regularly seen), African civets, large-spotted genets, white-tailed mongooses, spring hares, and African bushbabies. The sounds of hippos grunting on the lake and hyenas calling across the savannah add to the atmosphere. USD 20 per person.",
       image: '/images/parks/uganda/lake-mburo/16261416770-9668a9647a-o.webp',
     },
-    {
-      title: 'Stay at Mihingo Lodge',
-      body:
-        "Uganda's most distinctive luxury lodge — 12 beautifully designed stone and wood cottages perched dramatically on rocky outcrops above the savannah, with stunning views, private pools, horse-riding stables, and exceptional guiding. One of Uganda's most photographed safari properties.",
-      image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.webp',
-    },
   ],
   faqs: [
     {
@@ -590,7 +578,11 @@ const lakeMburo: Park = {
     {
       category: 'Luxury',
       picks: [
-        "Mihingo Lodge — Uganda's most distinctive luxury lodge, with 12 stone and wood cottages perched dramatically on rocky outcrops above the savannah, private pools, and horse-riding stables.",
+        {
+          name: 'Mihingo Lodge',
+          description: 'Uganda\'s most distinctive luxury lodge, with 12 stone and wood cottages perched dramatically on rocky outcrops above the savannah, private pools, and horse-riding stables.',
+          image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.webp',
+        },
         "Rwakobo Rock — a similarly dramatic rocky hilltop setting with high-end accommodation and excellent views.",
       ],
     },
@@ -715,12 +707,6 @@ const kidepo: Park = {
       image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.webp',
     },
     {
-      title: 'Stay at Apoka Safari Lodge',
-      body:
-        "Inside the park on a rocky kopje with sweeping Narus Valley views. Stone and canvas cottages with a rock-carved pool, outdoor stone bathtubs, and some of the most exclusive guiding in Uganda. Managed by Wildplaces Africa — Apoka punches well above its weight as a genuine luxury property in Uganda's most remote park.",
-      image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.webp',
-    },
-    {
       title: 'Birdwatching (475 Species)',
       body:
         "Kidepo has the highest bird count of any national park in Uganda. Many species here have Ethiopian and Sudanese affinities and are found nowhere else in Uganda — including the Kori Bustard (Africa's heaviest flying bird), Black-bellied Bustard, Yellow-billed Shrike, and numerous raptors. A specialist birding guide transforms the experience.",
@@ -749,7 +735,11 @@ const kidepo: Park = {
     {
       category: 'Luxury',
       picks: [
-        "Apoka Safari Lodge — inside the park on a rocky kopje, with a rock-carved pool, outdoor stone bathtubs, canvas cottages, and sweeping Narus Valley views. Managed by Wildplaces Africa.",
+        {
+          name: 'Apoka Safari Lodge',
+          description: 'Inside the park on a rocky kopje, with a rock-carved pool, outdoor stone bathtubs, canvas cottages, and sweeping Narus Valley views. Managed by Wildplaces Africa.',
+          image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.webp',
+        },
         "Adere Safari Lodge — 17 thatched cottages on the park edge with private patios, spa, sauna, pool, and bush cuisine.",
         "Kidepo Valley Lodge — comfortable luxury near the park with direct savannah views.",
       ],
@@ -812,12 +802,6 @@ const semuliki: Park = {
       image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.webp',
     },
     {
-      title: 'Stay at Kyaninga Lodge (Fort Portal)',
-      body:
-        "Stone-and-wood cottages on the rim of a volcanic crater lake near Fort Portal — one of Uganda's most spectacular properties and the perfect luxury base for a Semuliki day trip. The lodge is 1.5 hours from the park and combines beautifully with Kibale National Park for a western Uganda circuit.",
-      image: '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.webp',
-    },
-    {
       title: 'Combine with Kibale & Queen Elizabeth',
       body:
         "Semuliki is best experienced as a 1–2 day addition to a western Uganda circuit from Fort Portal. Combine with Kibale National Park (1.5 hours away) and Queen Elizabeth National Park (3 hours via Kasese) for an outstanding 5–6 day western Uganda birding and primate itinerary.",
@@ -848,7 +832,11 @@ const semuliki: Park = {
     {
       category: 'Luxury',
       picks: [
-        "Kyaninga Lodge — stone-and-wood cottages on the rim of a volcanic crater lake near Fort Portal, one of Uganda's most spectacular properties and the perfect base for a Semuliki day trip.",
+        {
+          name: 'Kyaninga Lodge',
+          description: "Stone-and-wood cottages on the rim of a volcanic crater lake near Fort Portal, one of Uganda's most spectacular properties and the perfect base for a Semuliki day trip.",
+          image: '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.webp',
+        },
         "Semliki Safari Lodge — tented luxury directly in a private wildlife reserve at the park itself, the closest upmarket lodge to the forest and hot springs.",
       ],
     },
@@ -909,22 +897,10 @@ const entebbe: Park = {
   ],
   activities: [
     {
-      title: 'Stay at Lake Victoria Serena Golf Resort & Spa',
-      body:
-        "A full resort experience on the Lake Victoria shoreline, with a golf course, spa, and sweeping lake views — the most complete luxury base for an Entebbe stay before or after safari.",
-      image: '/images/parks/uganda/lake-mburo/16498738142-978e9993ef-o.webp',
-    },
-    {
       title: 'Sunset Boat Cruise on Lake Victoria',
       body:
         "An easy, relaxed way to see the lake at its most beautiful — gliding past fishing villages and forested shoreline as the sun sets over the world's second-largest freshwater lake, often combined with a Ngamba Island or Mabamba Swamp excursion.",
       image: '/images/parks/uganda/lake-mburo/16245935126-a25c42431c-o.webp',
-    },
-    {
-      title: 'Stay at Boma Guesthouse',
-      body:
-        "Colonial-era charm, beautiful gardens, and an excellent restaurant make this a local favourite — a relaxed, characterful alternative to the larger resort hotels, perfect for an unhurried arrival or departure night.",
-      image: '/images/lodges/uganda/entebbe-hotels/karibu-guesthouse/1karibu-guest-house-entebbe-52473407576-o.webp',
     },
   ],
   gettingThere:
@@ -933,14 +909,22 @@ const entebbe: Park = {
     {
       category: 'Luxury',
       picks: [
-        'Lake Victoria Serena Golf Resort & Spa — golf course, spa, lake views, full resort facilities.',
+        {
+          name: 'Lake Victoria Serena Golf Resort & Spa',
+          description: 'Golf course, spa, lake views, full resort facilities.',
+          image: '/images/parks/uganda/lake-mburo/16498738142-978e9993ef-o.webp',
+        },
         'Protea Hotel Entebbe by Marriott — reliable international standard, right near the airport.',
       ],
     },
     {
       category: 'Mid-Range',
       picks: [
-        'Boma Guesthouse — colonial-era charm, beautiful gardens, excellent restaurant. A local favourite.',
+        {
+          name: 'Boma Guesthouse',
+          description: 'Colonial-era charm, beautiful gardens, excellent restaurant. A local favourite.',
+          image: '/images/lodges/uganda/entebbe-hotels/karibu-guesthouse/1karibu-guest-house-entebbe-52473407576-o.webp',
+        },
         'Airport View Hotel — convenient, comfortable, no-fuss.',
         'Entebbe Backpackers — great social atmosphere, easy on the wallet.',
       ],
@@ -1038,12 +1022,6 @@ const kampala: Park = {
       image: '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.webp',
     },
     {
-      title: 'Stay at Serena Kampala Hotel',
-      body:
-        "A 5-star hotel on Nakasero Hill with a pool and fine dining — the most established luxury address in the capital, and a comfortable base for a city exploration day before heading out on safari.",
-      image: '/images/parks/uganda/lake-mburo/16498738142-978e9993ef-o.webp',
-    },
-    {
       title: 'Guided City Cultural Tour',
       body:
         "A half-day or full-day guided tour combining the Kasubi Tombs, Uganda Museum, Ndere Cultural Centre and the markets — tailored for groups, families and solo travellers, and the ideal way to see Kampala's highlights in limited time.",
@@ -1056,7 +1034,11 @@ const kampala: Park = {
     {
       category: 'Luxury',
       picks: [
-        'Serena Kampala Hotel — 5-star, Nakasero hill, pool & fine dining.',
+        {
+          name: 'Serena Kampala Hotel',
+          description: '5-star, Nakasero hill, pool & fine dining.',
+          image: '/images/parks/uganda/lake-mburo/16498738142-978e9993ef-o.webp',
+        },
         'Sheraton Kampala — iconic city tower, large pool, central location.',
         'Hotel Mestil — boutique luxury in upmarket Kololo.',
       ],
@@ -1141,16 +1123,6 @@ const serengetiPark = {
   ],
   activities: [
     {
-      title: 'Stay at Sayari Camp',
-      body: "Asilia's northernmost Serengeti camp — closest to the Mara River crossings, with just fifteen tented rooms, a stellar guiding team and full off-road access.",
-      image: '/images/destinations/tanzania/sayari-elephant.webp',
-    },
-    {
-      title: 'Stay at Dunia Camp',
-      body: "A mobile-style camp in the Central Serengeti — brilliantly positioned for the resident game of the Seronera valley and following the migration into the south in calving season.",
-      image: '/images/destinations/tanzania/dunia-camp-game-drive-vehicle-lookout-hr-eliza-deacon1.webp',
-    },
-    {
       title: 'Ballooning over the Plains',
       body: 'A dawn balloon flight over the Serengeti, following migrating herds, ending with a champagne breakfast in the bush — the definitive aerial safari experience.',
       image: '/images/destinations/tanzania/dunia-lion-and-plane-in-the-serengeti.webp',
@@ -1162,7 +1134,11 @@ const serengetiPark = {
     {
       category: 'Luxury',
       picks: [
-        "Sayari Camp — Asilia's northernmost Serengeti camp, closest to the Mara River crossings, with just fifteen tented rooms and full off-road access. Our featured partner camp.",
+        {
+          name: 'Sayari Camp',
+          description: "Asilia's northernmost Serengeti camp, closest to the Mara River crossings, with just fifteen tented rooms and full off-road access. Our featured partner camp.",
+          image: '/images/destinations/tanzania/sayari-elephant.webp',
+        },
         'andBeyond Serengeti Under Canvas — a mobile luxury camp that relocates with the Migration throughout the year.',
         'Singita Mara River Tented Camp — riverside luxury in the northern Serengeti, in prime crossing territory.',
         'Four Seasons Safari Lodge Serengeti — the only permanent luxury structure in the central Serengeti.',
@@ -1172,7 +1148,11 @@ const serengetiPark = {
     {
       category: 'Mid-Range',
       picks: [
-        'Dunia Camp — a mobile-style camp in the Central Serengeti, brilliantly positioned for the resident game of the Seronera valley. Our featured partner camp.',
+        {
+          name: 'Dunia Camp',
+          description: 'A mobile-style camp in the Central Serengeti, brilliantly positioned for the resident game of the Seronera valley. Our featured partner camp.',
+          image: '/images/destinations/tanzania/dunia-camp-game-drive-vehicle-lookout-hr-eliza-deacon1.webp',
+        },
         "Seronera Wildlife Lodge — a central location in the Serengeti's best year-round predator territory.",
         'Serengeti Serena Safari Lodge — comfortable, well-positioned and reliable.',
         'Kati Kati Tented Camp — a classic tented safari experience at good value.',
@@ -1498,11 +1478,6 @@ const arushaPark = {
   ],
   activities: [
     {
-      title: 'Stay at Arusha Coffee Lodge',
-      body: "An atmospheric lodge set within a working coffee estate — one of northern Tanzania's most charming properties and an ideal first or last night before and after safari.",
-      image: '/images/destinations/tanzania/rubondo-island-camp-landscape.webp',
-    },
-    {
       title: 'Tanzanite Shopping',
       body: 'Buy certified Tanzanite — found only in a small mining area near Kilimanjaro — from reputable dealers including Tanzanite Experience, Himo Gems, and the Cultural Heritage Centre gemstone section.',
       image: '/images/destinations/tanzania/sayari-elephant.webp',
@@ -1519,7 +1494,11 @@ const arushaPark = {
     {
       category: 'Luxury',
       picks: [
-        "Arusha Coffee Lodge — an atmospheric lodge set within a working coffee estate, one of northern Tanzania's most charming properties.",
+        {
+          name: 'Arusha Coffee Lodge',
+          description: "An atmospheric lodge set within a working coffee estate, one of northern Tanzania's most charming properties.",
+          image: '/images/destinations/tanzania/rubondo-island-camp-landscape.webp',
+        },
         'Elewana Mount Meru Game Lodge — comfortable luxury with views toward Mount Meru.',
         'Rivertrees Country Inn — colonial-style country house with beautiful gardens on the Usa River.',
       ],
@@ -2362,13 +2341,7 @@ export const countries: Record<string, Country> = {
             image: '/images/parks/rwanda/akagera/wilderness-magashi-19.webp',
           },
         ],
-        activities: [
-          {
-            title: 'Wilderness Magashi Camp Stay',
-            body: "Tented suites on the shore of Lake Rwanyakazinga — Rwanda's flagship eco-luxury safari camp in the heart of the best game-viewing terrain.",
-            image: '/images/parks/rwanda/akagera/wilderness-magashi-23.webp',
-          },
-        ],
+        activities: [],
         gettingThere:
           "Akagera National Park is approximately 2.5–3 hours east of Kigali by road (90km). The main gate is near Kayonza on the highway to Tanzania. Most visitors are driven by their tour operator or can arrange transfers from Kigali. There is no commercial air access to the park.",
         whereToStay: [
@@ -2575,11 +2548,6 @@ export const countries: Record<string, Country> = {
           },
         ],
         activities: [
-          {
-            title: "One&Only Nyungwe House Stay",
-            body: "Set within a working tea estate at the forest edge — exceptional service, sweeping views across the plantation to the ancient forest, and the most luxurious base for all Nyungwe activities.",
-            image: '/images/parks/rwanda/volcanoes/1750336906468-the-sanctuary-at-bisate-view-1-aerial.webp',
-          },
           {
             title: 'Albertine Rift Birding',
             body: "Over 310 recorded bird species including 29 Albertine Rift endemics found nowhere else on earth — Nyungwe is one of Africa's premier birdwatching destinations for serious listers.",
@@ -3063,11 +3031,6 @@ export const countries: Record<string, Country> = {
         ],
         activities: [
           {
-            title: 'Stay at Elewana Tortilis Camp',
-            body: 'Elegant tented luxury under fever trees, offering a classic Amboseli safari atmosphere.',
-            image: '/images/lodges/kenya/amboseli-national-park/elewana-tortilis-camp-amboseli/elewana-tortilis-camp-amboseli-1.webp',
-          },
-          {
             title: 'Maasai Cultural Village Visit',
             body:
               'Spend a morning with a local Maasai community — traditional homestead, warrior demonstrations and beadwork. The pastoral Maasai culture has coexisted with Amboseli wildlife for centuries and adds rich human depth to the safari experience.',
@@ -3081,7 +3044,11 @@ export const countries: Record<string, Country> = {
             category: 'Luxury',
             picks: [
               'andBeyond Tortilis Camp — exclusive tented camp on a private conservancy with unobstructed Kilimanjaro views.',
-              'Elewana Tortilis Camp — elegant tented luxury under fever trees, classic Amboseli safari atmosphere.',
+              {
+                name: 'Elewana Tortilis Camp',
+                description: 'Elegant tented luxury under fever trees, classic Amboseli safari atmosphere.',
+                image: '/images/lodges/kenya/amboseli-national-park/elewana-tortilis-camp-amboseli/elewana-tortilis-camp-amboseli-1.webp',
+              },
             ],
           },
           {
@@ -3234,12 +3201,6 @@ export const countries: Record<string, Country> = {
         ],
         activities: [
           {
-            title: 'Stay at Sasaab',
-            body:
-              "Sasaab Lodge — striking Moroccan-inspired suites overlooking the river, one of Kenya's most photographed lodges.",
-            image: '/images/parks/kenya/samburu/sasaab.webp',
-          },
-          {
             title: 'Camel-Back Bush Walks',
             body:
               "A relaxed half-day walking safari with a string of pack camels — the Samburu way of crossing the bush. A genuinely immersive and culturally authentic experience.",
@@ -3259,7 +3220,11 @@ export const countries: Record<string, Country> = {
             category: 'Luxury',
             picks: [
               "Elephant Bedroom Camp — riverside luxury tents right on the Ewaso Ng'iro, elephants regularly pass through camp.",
-              "Sasaab Lodge — striking Moroccan-inspired suites overlooking the river, one of Kenya's most photographed lodges.",
+              {
+                name: 'Sasaab Lodge',
+                description: "Striking Moroccan-inspired suites overlooking the river, one of Kenya's most photographed lodges.",
+                image: '/images/parks/kenya/samburu/sasaab.webp',
+              },
               'Samburu Intrepids Camp — classic luxury tented camp with excellent river frontage and guiding.',
             ],
           },
@@ -3404,12 +3369,6 @@ export const countries: Record<string, Country> = {
             image: '/images/lodges/kenya/lake-nakuru-national-park/the-cliff/The Cliff_3.webp',
           },
           {
-            title: 'Stay at Sarova Lion Hill',
-            body:
-              "Perched on Lion Hill with panoramic views over the lake and savannah — the classic Nakuru lodge address, combining comfort with direct park access and excellent guiding.",
-            image: '/images/lodges/kenya/lake-nakuru-national-park/the-cliff/The Cliff_1.webp',
-          },
-          {
             title: 'Rift Valley Two-Lake Circuit',
             body:
               "Combine Lake Nakuru with Lake Naivasha (60km south) and Lake Bogoria for a scenic Rift Valley circuit — the flamingos and hot springs of Bogoria alongside Nakuru's rhinos make one of Kenya's finest scenic road journeys.",
@@ -3422,7 +3381,11 @@ export const countries: Record<string, Country> = {
           {
             category: 'Luxury',
             picks: [
-              'Sarova Lion Hill Game Lodge — perched on Lion Hill with panoramic views over the lake and savannah.',
+              {
+                name: 'Sarova Lion Hill Game Lodge',
+                description: 'Perched on Lion Hill with panoramic views over the lake and savannah.',
+                image: '/images/lodges/kenya/lake-nakuru-national-park/the-cliff/The Cliff_1.webp',
+              },
               'Lake Nakuru Lodge — lake-view rooms with direct access to the park.',
               'Mbweha Camp (Elementaita) — intimate luxury camp near the neighbouring Lake Elementaita, excellent for a flamingo and conservancy combo.',
             ],
@@ -3497,22 +3460,10 @@ export const countries: Record<string, Country> = {
         ],
         activities: [
           {
-            title: 'Stay at Giraffe Manor',
-            body:
-              "East Africa's most iconic boutique hotel — resident Rothschild's giraffes poke their heads through breakfast windows and join guests for sundowners. Booking typically required 18+ months in advance. The ultimate Nairobi arrival or farewell experience.",
-            image: '/images/lodges/kenya/nairobi/giraffe-manor/afternoon-tea-experience.webp',
-          },
-          {
             title: 'Karen Blixen Museum',
             body:
               "Tour the beautifully preserved farmhouse where Karen Blixen lived and wrote Out of Africa, surrounded by the Ngong Hills she described. An essential cultural visit combining colonial history with the landscape that inspired one of Africa's most celebrated memoirs.",
             image: '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.webp',
-          },
-          {
-            title: 'Stay at The Emakoko',
-            body:
-              "Safari-edge luxury right on the Nairobi National Park boundary, with a genuine wild atmosphere within minutes of the city centre.",
-            image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-at-giraffe-manor-1.webp',
           },
         ],
         gettingThere:
@@ -3523,11 +3474,19 @@ export const countries: Record<string, Country> = {
             picks: [
               "Fairmont The Norfolk — Nairobi's oldest luxury hotel, colonial-era charm.",
               "Hemingways Nairobi — consistently ranked among the city's top premium hotels.",
-              'Giraffe Manor — the iconic breakfast-with-giraffes experience.',
+              {
+                name: 'Giraffe Manor',
+                description: 'The iconic breakfast-with-giraffes experience.',
+                image: '/images/lodges/kenya/nairobi/giraffe-manor/afternoon-tea-experience.webp',
+              },
               "JW Marriott Nairobi — one of the city's tallest buildings, state-of-the-art spa.",
               'Villa Rosa Kempinski — regularly featured in current luxury roundups.',
               'Tribe Hotel Gigiri — design-forward, Design Hotels member, near Village Market.',
-              'The Emakoko — safari-edge luxury right on the Nairobi National Park boundary.',
+              {
+                name: 'The Emakoko',
+                description: 'Safari-edge luxury right on the Nairobi National Park boundary.',
+                image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-at-giraffe-manor-1.webp',
+              },
               'Radisson Blu Upper Hill — skyline or park views, 20 minutes from Nairobi National Park.',
             ],
           },

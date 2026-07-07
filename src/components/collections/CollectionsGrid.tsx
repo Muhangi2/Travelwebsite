@@ -141,7 +141,7 @@ export default function CollectionsGrid() {
         {/* Heading */}
         <Reveal>
           <h2 className="text-center">
-            Safari Collections and Journeys
+            Our Journeys
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center leading-relaxed text-neutral-500">
             Hand-crafted itineraries across Uganda, Rwanda and Kenya — filter by type, destination or length.

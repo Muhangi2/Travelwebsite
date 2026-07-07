@@ -89,12 +89,6 @@ export default function SafariCollectionDetail() {
         </div>
       )}
 
-      {hasFaq && (
-        <div id="faq">
-          <TourFAQ faq={journey.faq!} />
-        </div>
-      )}
-
       <div id="accommodation">
         <HandpickedLodges days={journey.days} />
       </div>
@@ -105,6 +99,12 @@ export default function SafariCollectionDetail() {
       <div id="contact">
         <BookingForm />
       </div>
+
+      {hasFaq && (
+        <div id="faq">
+          <TourFAQ faq={journey.faq!} />
+        </div>
+      )}
     </>
   )
 }
