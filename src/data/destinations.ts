@@ -96,20 +96,7 @@ const bwindi: Park = {
       image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.webp',
     },
   ],
-  activities: [
-    {
-      title: 'Trek in Buhoma — The Original Sector',
-      body:
-        "Bwindi's first and most established gorilla trekking sector, with the best infrastructure, most comfortable approach track, and multiple gorilla families including the famous Mubare group — the first habituated gorilla family in Uganda. The natural choice for first-time trekkers.",
-      image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.webp',
-    },
-    {
-      title: 'Nkuringo — The Most Dramatic Sector',
-      body:
-        "The most scenically spectacular sector, with ridge-top accommodation and stunning views into the Democratic Republic of Congo. The gorillas here range across Bwindi's most dramatic terrain — a visually unforgettable combination of wilderness and wildlife.",
-      image: '/images/activities/gorilla-trekking/10-gorilla-ah1i2740.webp',
-    },
-  ],
+  activities: [],
   faqs: [
     {
       q: 'When is the best time for gorilla trekking?',
@@ -214,20 +201,7 @@ const queenElizabeth: Park = {
       image: '/images/activities/game-drive/asilia-roho-2017-1-1.webp',
     },
   ],
-  activities: [
-    {
-      title: 'Crater Lakes Scenic Drive',
-      body:
-        "Wind along the dramatic escarpment road above the Albertine Rift past a string of ancient volcanic crater lakes. Lake Munyanyange regularly hosts flocks of flamingos, while Lake Katwe is the site of traditional salt extraction. The views from the escarpment edge across Lake Edward and into the Democratic Republic of Congo are extraordinary.",
-      image: '/images/parks/uganda/murchison-falls/dsc-6584.webp',
-    },
-    {
-      title: 'Night Game Drive',
-      body:
-        "After dark in the northern sector, leopards emerge in the riverine thickets, African civets and large-spotted genets appear in the headlights, and the unmistakable silhouette of the aardvark crosses the track. Night drives at USD 20 per person reveal an entirely different dimension of the park.",
-      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.webp',
-    },
-  ],
+  activities: [],
   faqs: [
     {
       q: 'How many nights should I plan in Queen Elizabeth?',
@@ -699,20 +673,7 @@ const kidepo: Park = {
       image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.webp',
     },
   ],
-  activities: [
-    {
-      title: 'Walking Safari in the Savannah',
-      body:
-        "Guided walks with armed Uganda Wildlife Authority rangers through the park's open savannahs and dry riverbeds provide an intimate, ground-level perspective — reading animal tracks, identifying insects and plants, and approaching wildlife in a fundamentally different way than vehicle-based game drives. In Kidepo's empty wilderness, walking is a profound experience.",
-      image: '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.webp',
-    },
-    {
-      title: 'Birdwatching (475 Species)',
-      body:
-        "Kidepo has the highest bird count of any national park in Uganda. Many species here have Ethiopian and Sudanese affinities and are found nowhere else in Uganda — including the Kori Bustard (Africa's heaviest flying bird), Black-bellied Bustard, Yellow-billed Shrike, and numerous raptors. A specialist birding guide transforms the experience.",
-      image: '/images/activities/birding/lensoffthegreen-1748944212110.webp',
-    },
-  ],
+  activities: [],
   faqs: [
     {
       q: 'Is Kidepo Valley National Park worth the long journey?',
@@ -794,20 +755,7 @@ const semuliki: Park = {
       image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
     },
   ],
-  activities: [
-    {
-      title: 'Early Morning Specialist Bird Walk',
-      body:
-        "Semuliki's birdwatching is best conducted on foot with expert specialist guides in the pre-dawn hours when Congo Basin endemics are most active. A dedicated 3–4 hour walk through the forest at first light, with a knowledgeable guide interpreting the extraordinary sounds and sightings, is an unforgettable experience for any birder.",
-      image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.webp',
-    },
-    {
-      title: 'Combine with Kibale & Queen Elizabeth',
-      body:
-        "Semuliki is best experienced as a 1–2 day addition to a western Uganda circuit from Fort Portal. Combine with Kibale National Park (1.5 hours away) and Queen Elizabeth National Park (3 hours via Kasese) for an outstanding 5–6 day western Uganda birding and primate itinerary.",
-      image: '/images/lodges/uganda/kibale-national-park/crater-safari-lodge/1746563630437_090A2589.webp',
-    },
-  ],
+  activities: [],
   faqs: [
     {
       q: 'What makes Semuliki special for birdwatching?',
@@ -1007,20 +955,7 @@ const kampala: Park = {
       image: '/images/parks/uganda/lake-mburo/52760819657-a6f9d6bf99-o.webp',
     },
   ],
-  activities: [
-    {
-      title: 'Rolex Street-Food Tour',
-      body:
-        "Sample Uganda's most beloved street food: the rolex (a rolled omelette and vegetables in chapati) from street vendors across Kampala. A culinary adventure costing less than a dollar and one of the most authentic ways to experience the city.",
-      image: '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.webp',
-    },
-    {
-      title: 'Guided City Cultural Tour',
-      body:
-        "A half-day or full-day guided tour combining the Kasubi Tombs, Uganda Museum, Ndere Cultural Centre and the markets — tailored for groups, families and solo travellers, and the ideal way to see Kampala's highlights in limited time.",
-      image: '/images/parks/uganda/lake-mburo/16261416770-9668a9647a-o.webp',
-    },
-  ],
+  activities: [],
   gettingThere:
     "Entebbe International Airport (EBB), located 40km south of Kampala on the Lake Victoria peninsula, is Uganda's only international airport. It receives direct flights from Nairobi (Kenya Airways, Ethiopian Airlines), Addis Ababa (Ethiopian Airlines), Dubai (Emirates), Amsterdam (KLM), London (British Airways), Johannesburg (South African Airways, RwandAir), Kigali (RwandAir), Brussels (Brussels Airlines) and multiple other African hubs. Travel time from Entebbe Airport to Kampala city centre is 45 minutes to 1.5 hours depending on traffic conditions (morning and evening rush hours can be very congested). Options include a registered taxi (approximately USD 30–50), pre-booked private transfers (recommended), or ride-hailing apps (Bolt, SafeBoda). By road from neighbouring countries: Kigali is 8–9 hours, Nairobi 10–12 hours via Jinja and Eldoret, and Dar es Salaam 18–20 hours.",
   whereToStay: [
@@ -1463,18 +1398,7 @@ const arushaPark = {
       image: '/images/destinations/tanzania/dunia-seronera-river.webp',
     },
   ],
-  activities: [
-    {
-      title: 'Tanzanite Shopping',
-      body: 'Buy certified Tanzanite — found only in a small mining area near Kilimanjaro — from reputable dealers including Tanzanite Experience, Himo Gems, and the Cultural Heritage Centre gemstone section.',
-      image: '/images/destinations/tanzania/sayari-elephant.webp',
-    },
-    {
-      title: 'Momella Lakes Flamingo & Giraffe Drive',
-      body: "A satisfying 2–3 hour morning game drive around Arusha National Park's Momella Lakes, with reliable giraffe, buffalo and flamingo sightings — perfect on the morning you depart for Serengeti or Ngorongoro.",
-      image: '/images/destinations/tanzania/dunia-crane.webp',
-    },
-  ],
+  activities: [],
   gettingThere:
     'Arusha is served by Kilimanjaro International Airport (JRO), 50km east of the city, with connections from Nairobi, Dar es Salaam, Addis Ababa, Dubai, Amsterdam and London. Arusha Airport (ARK) in the city centre serves domestic and charter routes. Bus services connect Arusha to Nairobi (5–6 hours) and Dar es Salaam (10–12 hours).',
   whereToStay: [
@@ -2528,18 +2452,7 @@ export const countries: Record<string, Country> = {
             image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.webp',
           },
         ],
-        activities: [
-          {
-            title: 'Albertine Rift Birding',
-            body: "Over 310 recorded bird species including 29 Albertine Rift endemics found nowhere else on earth — Nyungwe is one of Africa's premier birdwatching destinations for serious listers.",
-            image: '/images/activities/birding/lensoffthegreen-1748944212110.webp',
-          },
-          {
-            title: 'Combine with Lake Kivu',
-            body: "Nyungwe is most rewarding when combined with a Lake Kivu stay, creating a complete south-western Rwanda circuit of ancient forest, primates, and lakeside relaxation.",
-            image: '/images/parks/rwanda/akagera/1738328545766-magashi-sundowners-12-24-tc-012.webp',
-          },
-        ],
+        activities: [],
         gettingThere:
           "Nyungwe Forest is approximately 5–6 hours by road from Kigali (225km south-west). Most visitors travel via Huye (Butare), Rwanda's second city. The park entrance at Uwinka is on the main Huye–Cyangugu highway. Some travellers combine Nyungwe with a Lake Kivu stay, arriving via the scenic road from Cyangugu. Domestic flights may connect Kigali to Kamembe airport near the forest.",
         whereToStay: [
@@ -3173,20 +3086,7 @@ export const countries: Record<string, Country> = {
             image: '/images/parks/kenya/samburu/grevys-zebra.webp',
           },
         ],
-        activities: [
-          {
-            title: 'Camel-Back Bush Walks',
-            body:
-              "A relaxed half-day walking safari with a string of pack camels — the Samburu way of crossing the bush. A genuinely immersive and culturally authentic experience.",
-            image: '/images/parks/kenya/laikipia-loisaba/1752747977434-kenya-suyian-conservancy-walk-with-camels-5.webp',
-          },
-          {
-            title: 'Samburu Cultural Village Visit',
-            body:
-              "A genuine, unstaged visit to a Samburu manyatta — meeting warrior families and seeing the extraordinary beaded jewellery, warrior demonstrations and the everyday life of a semi-nomadic pastoralist community whose culture is distinct from the Maasai despite their relatedness.",
-            image: '/images/parks/kenya/samburu/samburu-village-visit-residents.webp',
-          },
-        ],
+        activities: [],
         gettingThere:
           "Samburu is approximately 6 hours by road from Nairobi (350km north) via Isiolo. Charter flights from Nairobi's Wilson Airport reach Samburu airstrip in approximately 1 hour. Most visitors fly up and drive back, or combine Samburu with a Laikipia stop on a circuit.",
         whereToStay: [
@@ -3335,20 +3235,7 @@ export const countries: Record<string, Country> = {
             image: '/images/parks/kenya/lake-nakuru/baboon-cliff-view.webp',
           },
         ],
-        activities: [
-          {
-            title: 'Leopard & Lion Tracking',
-            body:
-              "The lake-shore forest is excellent leopard habitat — the park's resident individuals are regularly spotted in forest trees and rocky outcrops. Nakuru's lion pride is also regularly located by guides in the woodland and grassland habitats.",
-            image: '/images/lodges/kenya/lake-nakuru-national-park/the-cliff/The Cliff_3.webp',
-          },
-          {
-            title: 'Rift Valley Two-Lake Circuit',
-            body:
-              "Combine Lake Nakuru with Lake Naivasha (60km south) and Lake Bogoria for a scenic Rift Valley circuit — the flamingos and hot springs of Bogoria alongside Nakuru's rhinos make one of Kenya's finest scenic road journeys.",
-            image: '/images/lodges/kenya/lake-nakuru-national-park/loldia-house-1/Governors Loldia House.webp',
-          },
-        ],
+        activities: [],
         gettingThere:
           "Lake Nakuru is approximately 160km from Nairobi — about 2.5–3 hours by road via the A104 highway. The nearest town is Nakuru city, Kenya's fourth largest, with good road links. No regular scheduled flights serve Nakuru directly.",
         whereToStay: [

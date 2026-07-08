@@ -7,11 +7,27 @@ import Picture from '@/components/Picture'
 const CARD_W = 300
 const GAP = 24
 
-export default function RelatedJourneysCarousel({ excludeSlug }: { excludeSlug?: string }) {
+function extractCountries(country?: string): string[] {
+  if (!country) return []
+  return country.split(/[·•/,]/).map((s) => s.trim().toUpperCase()).filter(Boolean)
+}
+
+type Props = {
+  excludeSlug?: string
+  countryFilter?: string
+  eyebrow?: string
+  heading: string
+}
+
+export default function JourneysCarousel({ excludeSlug, countryFilter, eyebrow = 'Keep Exploring', heading }: Props) {
   const { cards } = useTourPackages()
   const [paused, setPaused] = useState(false)
 
-  const journeys = cards.filter((c) => c.id !== excludeSlug)
+  const journeys = cards.filter(
+    (c) =>
+      c.id !== excludeSlug &&
+      (!countryFilter || extractCountries(c.country).includes(countryFilter.toUpperCase())),
+  )
   if (journeys.length < 2) return null
 
   // Triple the list so the loop is seamless
@@ -24,8 +40,8 @@ export default function RelatedJourneysCarousel({ excludeSlug }: { excludeSlug?:
       <div className="container-page">
         <Reveal>
           <div className="text-center">
-            <p className="eyebrow">Keep Exploring</p>
-            <h2 className="mt-3">Other Journeys You Might Like</h2>
+            <p className="eyebrow">{eyebrow}</p>
+            <h2 className="mt-3">{heading}</h2>
           </div>
         </Reveal>
       </div>
@@ -41,7 +57,7 @@ export default function RelatedJourneysCarousel({ excludeSlug }: { excludeSlug?:
             gap: `${GAP}px`,
             paddingLeft: `${GAP}px`,
             width: 'max-content',
-            animationName: 'related-journeys-marquee',
+            animationName: 'journeys-carousel-marquee',
             animationDuration: `${duration}s`,
             animationTimingFunction: 'linear',
             animationIterationCount: 'infinite',
@@ -86,7 +102,7 @@ export default function RelatedJourneysCarousel({ excludeSlug }: { excludeSlug?:
       </div>
 
       <style>{`
-        @keyframes related-journeys-marquee {
+        @keyframes journeys-carousel-marquee {
           from { transform: translateX(0); }
           to   { transform: translateX(-${shiftPx}px); }
         }

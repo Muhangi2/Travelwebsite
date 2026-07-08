@@ -7,8 +7,8 @@ import DestinationNavTabs from '@/components/destinations/DestinationNavTabs'
 import WhyVisit from '@/components/destinations/WhyVisit'
 import WhenToGo from '@/components/destinations/WhenToGo'
 import SpecialistQuote from '@/components/destinations/SpecialistQuote'
-import NationalParksList from '@/components/destinations/NationalParksList'
 import WhereToGo from '@/components/destinations/WhereToGo'
+import JourneysCarousel from '@/components/ui/JourneysCarousel'
 import PrivilegedAccess from '@/components/destinations/PrivilegedAccess'
 import CuratedLodges from '@/components/destinations/CuratedLodges'
 import ConservationImpact from '@/components/destinations/ConservationImpact'
@@ -60,11 +60,11 @@ export default function DestinationCountry() {
         backgroundImage={data.heroImage}
       />
 
-      {/* Individual park detail cards — uses parkSummaryImage */}
-      <NationalParksList
-        countrySlug={data.slug}
-        parks={data.parks}
-        backgroundImage={data.parkSummaryImage}
+      {/* Safari collections available in this country */}
+      <JourneysCarousel
+        countryFilter={data.name}
+        eyebrow="Safari Collections"
+        heading={`Journeys in ${data.name}`}
       />
 
       {/* 05 Unique Experiences */}

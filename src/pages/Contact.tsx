@@ -282,7 +282,7 @@ export default function Contact() {
           <div className="mt-8 overflow-hidden rounded-md border border-neutral-200">
             <iframe
               title="Still Wild Safaris office location"
-              src="https://www.google.com/maps?q=Imperial+Mall+Entebbe+Uganda&output=embed"
+              src={`https://www.google.com/maps?q=${site.mapsQuery}&output=embed`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="h-[420px] w-full"
