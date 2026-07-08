@@ -1,4 +1,6 @@
+import { NavLink } from 'react-router-dom'
 import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
+import WhatsAppCTA from '@/components/ui/WhatsAppCTA'
 
 type Props = {
   title: string
@@ -24,6 +26,14 @@ export default function DetailHero({ title, subtitle, image }: Props) {
           </HeroItem>
           <HeroItem>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/90">{subtitle}</p>
+          </HeroItem>
+          <HeroItem>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <NavLink to="/contact" className="btn-ghost">
+                REQUEST A CUSTOM QUOTE
+              </NavLink>
+              <WhatsAppCTA />
+            </div>
           </HeroItem>
         </HeroStagger>
       </div>

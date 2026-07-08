@@ -36,6 +36,21 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
   const [active, setActive] = useState(0)
   const day = days[active]
 
+  // Tap-to-select on the horizontally-scrollable day strip: on iOS Safari, a tap
+  // that lands while the strip is still settling from a swipe stops the scroll
+  // but doesn't fire a click event. pointerup still fires, so we use movement
+  // distance to distinguish a tap from a drag.
+  const pointerStart = useRef<{ x: number; y: number } | null>(null)
+  const handleCardPointerDown = (e: React.PointerEvent) => {
+    pointerStart.current = { x: e.clientX, y: e.clientY }
+  }
+  const handleCardPointerUp = (i: number) => (e: React.PointerEvent) => {
+    const start = pointerStart.current
+    pointerStart.current = null
+    if (!start) return
+    if (Math.abs(e.clientX - start.x) < 10 && Math.abs(e.clientY - start.y) < 10) setActive(i)
+  }
+
   const miniMapRef = useRef<HTMLDivElement>(null)
   const miniMapInstance = useRef<mapboxgl.Map | null>(null)
   const markerEls = useRef<HTMLDivElement[]>([])
@@ -154,6 +169,8 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
                     <button
                       key={d.day}
                       onClick={() => setActive(i)}
+                      onPointerDown={handleCardPointerDown}
+                      onPointerUp={handleCardPointerUp(i)}
                       className="group snap-start shrink-0 relative rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl"
                       style={{
                         width: 150,
@@ -344,7 +361,7 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
                                     {tier && (
                                       <span className={`mt-0.5 shrink-0 rounded px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wide ${
                                         tier.toLowerCase().includes('luxury')
-                                          ? isDark ? 'bg-white/20 text-white/80' : 'bg-black text-white'
+                                          ? 'bg-amber-500 text-white'
                                           : isDark ? 'bg-white/10 text-white/50' : 'bg-neutral-100 text-neutral-500 ring-1 ring-neutral-200'
                                       }`}>{tier}</span>
                                     )}

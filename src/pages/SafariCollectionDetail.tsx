@@ -9,6 +9,7 @@ import TourHighlights from '@/components/collection-detail/TourHighlights'
 import TourIncludes from '@/components/collection-detail/TourIncludes'
 import TourFAQ from '@/components/collection-detail/TourFAQ'
 import HandpickedLodges from '@/components/collection-detail/HandpickedLodges'
+import TripQuoteBanner from '@/components/collection-detail/TripQuoteBanner'
 import JourneysCarousel from '@/components/ui/JourneysCarousel'
 
 export default function SafariCollectionDetail() {
@@ -68,6 +69,8 @@ export default function SafariCollectionDetail() {
           country={journey.country}
         />
       </div>
+
+      <TripQuoteBanner />
 
       {hasHighlights && (
         <div id="highlights">
