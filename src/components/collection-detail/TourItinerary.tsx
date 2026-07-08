@@ -379,9 +379,18 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
                             <p className={`mb-2 text-[9px] font-bold uppercase tracking-[0.18em] ${isDark ? 'text-white/30' : 'text-neutral-400'}`}>
                               Meals
                             </p>
-                            <span className={`text-[11px] ${isDark ? 'text-white/70' : 'text-neutral-600'}`}>
-                              {day.meals}
-                            </span>
+                            <div className="flex flex-wrap justify-end gap-1.5">
+                              {day.meals.split(',').map((meal) => meal.trim()).filter(Boolean).map((meal) => (
+                                <span
+                                  key={meal}
+                                  className={`rounded px-1.5 py-0.5 text-[10px] font-medium leading-snug ${
+                                    isDark ? 'bg-white text-neutral-900' : 'bg-white text-neutral-700 ring-1 ring-neutral-200'
+                                  }`}
+                                >
+                                  {meal}
+                                </span>
+                              ))}
+                            </div>
                           </div>
                         )}
                       </div>
