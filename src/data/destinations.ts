@@ -64,6 +64,12 @@ const bwindi: Park = {
   bestTime: 'June–September & December–February',
   overview:
     "Bwindi Impenetrable National Park is one of the most extraordinary wildlife destinations on the planet. Nestled in the rugged Albertine Rift mountains, this UNESCO World Heritage Site protects 331 square kilometres of some of Africa's most ancient and biodiverse tropical rainforest — a dense tangle of ancient trees, vines, bamboo, and undergrowth covering steep ridges and mist-filled valleys that have sheltered life through ice ages and millennia of human history. Today Bwindi is home to approximately 459 mountain gorillas — roughly half the entire global population of this critically endangered great ape. With 19 habituated gorilla families spread across four distinct trekking sectors (Buhoma, Ruhija, Rushaga, and Nkuringo), it offers the largest selection of gorilla families at any destination on earth. Beyond the gorillas, the forest holds over 350 bird species including 23 Albertine Rift endemics found nowhere else on earth, 120 mammal species, and 200 tree species, and profound cultural connections to the Batwa Forest People — the original inhabitants of this ancient ecosystem. This is one of Africa's oldest forest ecosystems, estimated at over 25,000 years old and having survived multiple ice ages — a living record of how long life has flourished on these ridges.",
+  whyVisit: [
+    "Home to half the world's mountain gorillas — 19 habituated families across four sectors, more gorilla families than any other destination on earth.",
+    "The Gorilla Habituation Experience — an exclusive full day with a family still being habituated, available only in the Rushaga sector.",
+    "23 Albertine Rift bird endemics found nowhere else on earth, in a forest estimated at over 25,000 years old.",
+    "A profound cultural encounter with the Batwa Forest People, the original inhabitants of this ancient ecosystem.",
+  ],
   attractions: [
     {
       title: 'Mountain Gorilla Trekking',
@@ -175,6 +181,12 @@ const queenElizabeth: Park = {
   bestTime: 'June–September & December–February',
   overview:
     "Queen Elizabeth National Park is Uganda's most visited, most diverse, and most ecologically complex national park. Stretching across 1,978 square kilometres of the spectacular Albertine Rift Valley, the park encompasses a remarkable mosaic — open savannah grasslands, tropical rainforest, papyrus swamps, volcanic crater lakes, and the shores of both Lake Edward and Lake George, connected by the famous Kazinga Channel. Named after Queen Elizabeth II, who visited Uganda in 1954, the park has earned a legendary reputation for several extraordinary wildlife experiences: the tree-climbing lions of the Ishasha sector (one of only a handful of populations in the world that habitually rest in trees), the Kazinga Channel launch cruise (a 2-hour boat safari along one of Africa's most wildlife-rich waterways with enormous hippo pods and 100+ bird species), and chimpanzee trekking at the atmospheric Kyambura Gorge — a dramatic 100-metre-deep rainforest canyon cutting through open savannah. With over 600 recorded bird species, Queen Elizabeth is one of Africa's greatest birding destinations.",
+  whyVisit: [
+    "Tree-climbing lions in the Ishasha sector — one of only a handful of lion populations in the world that habitually rest in trees.",
+    "The Kazinga Channel boat cruise — one of Africa's most wildlife-rich waterways, with what may be the continent's highest concentration of hippos.",
+    "Chimpanzee trekking in the dramatic Kyambura Gorge, a 100-metre-deep rainforest canyon cutting through open savannah.",
+    "Over 600 recorded bird species across five distinct habitats, making it one of Africa's greatest birding destinations.",
+  ],
   attractions: [
     {
       title: 'Kazinga Channel Boat Cruise',
@@ -250,6 +262,12 @@ const queenElizabeth: Park = {
       ],
     },
   ],
+  practicalInfo: [
+    { label: 'Recommended Stay', body: 'A minimum of 3 nights split between the northern Mweya area and the southern Ishasha sector, approximately 90km apart by road.' },
+    { label: 'Kazinga Channel Cruise', body: 'USD 30 per person for the 2-hour launch trip — book directly through your lodge or the Uganda Wildlife Authority office at Mweya.' },
+    { label: 'Kyambura Gorge Permit', body: 'Chimpanzee trekking permits in Kyambura Gorge cost USD 150 per person and should be booked in advance.' },
+    { label: 'Getting Between Sectors', body: 'The drive between the Mweya/Kazinga area and the Ishasha sector takes roughly 2–2.5 hours on unpaved roads — a 4WD vehicle is recommended.' },
+  ],
 }
 
 
@@ -267,6 +285,12 @@ const murchison: Park = {
   bestTime: 'December–February & June–September',
   overview:
     "Murchison Falls National Park stands as Uganda's largest and most magnificent national park, encompassing 3,840 square kilometres of diverse wilderness in the northwestern corner of the country. The park takes its name from the extraordinary Murchison Falls — where the entire volume of the Victoria Nile is forced through a rocky gorge barely 7 metres wide before plunging 45 metres in a thundering curtain of white water, recognised as one of the world's most powerful waterfalls. The sheer power of the falls has awed every visitor since Sir Samuel Baker became the first European to see them in 1864, naming them after Sir Roderick Murchison, President of the Royal Geographical Society. Above the falls, vast savannahs host Rothschild's giraffes, elephants, Cape buffalos, lions, and leopards. Below the falls, the legendary Nile boat cruise brings visitors within metres of massive hippo pods, enormous Nile crocodiles, and forest elephants drinking at the river's edge. For sport fishing enthusiasts, the Victoria Nile is one of the world's greatest Nile Perch fisheries, while the adjacent Budongo Forest Reserve hosts the largest known chimpanzee population in Uganda.",
+  whyVisit: [
+    "The world's most powerful waterfall — the entire volume of the Victoria Nile forced through a 7-metre gorge.",
+    "The legendary Nile boat cruise, drifting within metres of massive hippo pods, crocodiles, and elephants at the water's edge.",
+    "Uganda's largest park, with outstanding populations of Rothschild's giraffes, lions, and elephants on open savannah.",
+    "Rhino tracking on foot at Ziwa Sanctuary, home to Uganda's only wild rhinos, on the way into the park.",
+  ],
   attractions: [
     {
       title: 'Murchison Falls Nile Boat Cruise',
@@ -363,6 +387,12 @@ const murchison: Park = {
       ],
     },
   ],
+  practicalInfo: [
+    { label: 'Recommended Stay', body: 'A minimum of three nights covers the falls boat cruise, north bank game drives, and a hike to the Top of the Falls; add a fourth night for Budongo chimpanzee trekking.' },
+    { label: 'Budongo Chimp Permit', body: 'Chimpanzee trekking permits at Budongo Forest Reserve cost USD 90 per person, bookable through the Kaniyo-Pabidi or Busingiro forest stations.' },
+    { label: 'The Paraa Ferry', body: 'Crossing the Victoria Nile by vehicle ferry at Paraa is required to reach the North Bank game-viewing circuit and runs throughout the day — allow extra time in your schedule during peak season.' },
+    { label: 'What to Pack', body: 'A hat, sunscreen and light rain layer for boat cruise spray, plus sturdy shoes for the 30-minute climb to the Top of the Falls viewpoint.' },
+  ],
 }
 
 
@@ -380,6 +410,12 @@ const kibale: Park = {
   bestTime: 'June–September & December–February',
   overview:
     "Kibale National Park holds a title that is superlative yet entirely accurate: the primate capital of the world. This magnificent tropical rainforest park in western Uganda covers 795 square kilometres of ancient montane and lowland forest that is home to 13 species of primates — the highest primate diversity of any protected area in East Africa. At the centre of this primate world are the chimpanzees: over 1,500 individuals estimated to live within Kibale's boundaries, the highest density of any national park in Uganda and one of the highest anywhere on earth. Multiple chimpanzee communities in the Kanyanchu area have been habituated to human presence through years of patient scientific research, and twice-daily guided trekking sessions allow visitors to observe these remarkable animals in their natural forest environment. Beyond the chimpanzees, Kibale's canopy resonates with red colobus monkeys in troops of up to 500 — one of East Africa's most spectacular primate sights — alongside grey-cheeked mangabeys, L'Hoest's monkeys, olive baboons, and eight other primate species. The Bigodi Wetland Sanctuary, a community-managed area on the park's boundary, offers superb birdwatching with over 200 species and all revenue benefiting local communities. Kibale is also one of Uganda's finest birding destinations with over 375 species including 35 Albertine Rift endemics.",
+  whyVisit: [
+    "13 primate species in a single park — the highest primate diversity of any protected area in East Africa.",
+    "Over 1,500 chimpanzees, the highest density of any national park in Uganda, with twice-daily trekking sessions.",
+    "Red colobus troops of up to 500 individuals, one of East Africa's most spectacular primate sights.",
+    "375 bird species including 35 Albertine Rift endemics, plus the community-run Bigodi Wetland Sanctuary.",
+  ],
   attractions: [
     {
       title: 'Chimpanzee Trekking',
@@ -488,6 +524,12 @@ const lakeMburo: Park = {
   bestTime: 'Year-round',
   overview:
     "Lake Mburo National Park occupies a uniquely special position in Uganda's safari landscape as the country's smallest savannah national park at 370 square kilometres, yet one that offers several wildlife experiences unavailable anywhere else in Uganda. Most significantly, Lake Mburo is the only national park in Uganda where visitors can undertake walking safaris, cycling safaris, and horse-riding safaris through open African savannah — an extraordinary opportunity to experience the bush at ground level, tracking animals by spoor, listening to sounds unfiltered by a vehicle engine. The park is also the only place in southern Uganda where Burchell's zebras are found in numbers, alongside impalas (found in southern Uganda only within Mburo), elands, topis, Defassa waterbucks, oribis, and a large hippo population in the lake. With five lakes within its boundaries, the boat cruise on Lake Mburo provides outstanding hippo, crocodile, and waterbird viewing. Perfectly positioned as a stopover destination — just 3–4 hours from Kampala and 3 hours from Bwindi — Lake Mburo is the natural overnight stop on the Uganda western circuit.",
+  whyVisit: [
+    "Uganda's only national park offering walking, cycling, and horse-riding safaris through open savannah.",
+    "The only accessible population of Burchell's zebras and impalas in southern Uganda.",
+    "Five lakes within the park, with a boat cruise past one of Uganda's densest hippo populations.",
+    "A perfectly placed stopover — just 3–4 hours from Kampala and 3 hours from Bwindi.",
+  ],
   attractions: [
     {
       title: 'Walking Safari',
@@ -573,6 +615,12 @@ const lakeMburo: Park = {
       ],
     },
   ],
+  practicalInfo: [
+    { label: 'Safety on Foot', body: 'Lake Mburo has no lions or elephants in its open areas, making it one of the few Uganda parks where walking and cycling safaris are permitted.' },
+    { label: 'Activity Costs', body: 'Approximate per-person rates: boat cruise USD 25, cycling safari USD 20–30, night game drive USD 20, horse-riding USD 35–50 per hour.' },
+    { label: 'Cash & Facilities', body: 'Mbarara town, 30km from the park, has ATMs and full facilities — the park itself has none, so carry sufficient cash.' },
+    { label: 'Recommended Stay', body: 'One or two nights is sufficient for most itineraries, typically as an overnight stop between Kampala/Entebbe and Bwindi.' },
+  ],
 }
 
 
@@ -589,6 +637,12 @@ const mgahinga: Park = {
   bestTime: 'June–August & December–February',
   overview:
     "Mgahinga is Uganda's quiet alternative to Bwindi — smaller, higher and dramatically framed by three Virunga volcanoes that march along the Rwandan border. A single habituated gorilla family, the Nyakagezi group, roams freely across the three countries (Uganda, Rwanda and the DRC) and when they're home, the trekking is exceptional. Add habituated golden monkeys found nowhere else in Uganda, a half-day immersion with the indigenous Batwa, and the option to summit Mt Sabyinyo straddling all three borders — Mgahinga is small but layered, and well worth the effort.",
+  whyVisit: [
+    "The Nyakagezi gorilla family, ranging freely across the Virunga volcanoes of Uganda, Rwanda and the DRC.",
+    "Habituated golden monkeys found nowhere else in Uganda, with an easier trek than gorilla tracking.",
+    "Three climbable Virunga volcanoes — Sabyinyo, Gahinga and Muhabura — with views into three countries.",
+    "A half-day Batwa Trail with the indigenous forest-dwelling people of the Virungas.",
+  ],
   attractions: [
     {
       title: 'The Nyakagezi Gorilla Family',
@@ -637,6 +691,31 @@ const mgahinga: Park = {
       a: "Mgahinga pairs beautifully with Bwindi (2.5-hour drive) and is the natural border-crossing point into Rwanda's Volcanoes National Park — a classic combined-Virunga itinerary.",
     },
   ],
+  gettingThere:
+    "By air: fly from Entebbe International Airport to Kisoro Airstrip (approximately 2 hours by charter), followed by a 15–20 minute road transfer to the park headquarters at Ntebeko. By road from Kampala: 9–10 hours via Kabale and Kisoro on mostly paved roads. By road from Bwindi: approximately 2.5 hours. By road from Kigali (Rwanda): 2–3 hours via the Cyanika border crossing, making Mgahinga a natural link between the Uganda and Rwanda gorilla-trekking circuits.",
+  whereToStay: [
+    {
+      category: 'Luxury',
+      picks: [
+        {
+          name: 'Mount Gahinga Lodge',
+          description: 'Stone-and-thatch bandas at the foot of the volcanoes, with fireplaces in every room — the most direct base for both gorilla and golden-monkey trekking.',
+          image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/10-kyambura-lodge-main-lodge-area-04.webp',
+        },
+      ],
+    },
+    {
+      category: 'Budget',
+      picks: [
+        "UWA-run bandas and campsite at the Ntebeko park headquarters — the most affordable base, directly at the trailhead.",
+      ],
+    },
+  ],
+  practicalInfo: [
+    { label: 'Permits', body: "Gorilla trekking permits cost USD 800 per person, the same nationwide rate as Bwindi. Golden monkey permits cost significantly less. Because only one gorilla family is available and it occasionally crosses into Rwanda or the DRC, we confirm the group's location in Uganda before issuing a permit." },
+    { label: 'Minimum Age', body: 'Gorilla trekking is restricted to those 15 years and older.' },
+    { label: 'What to Pack', body: 'Warm layers for high-altitude starts, waterproof hiking boots, gardening gloves, and rain protection — conditions on the volcanic slopes can turn cold and wet quickly.' },
+  ],
 }
 
 const kidepo: Park = {
@@ -653,6 +732,12 @@ const kidepo: Park = {
   bestTime: 'June–September & December–February',
   overview:
     "Kidepo Valley National Park is widely regarded by those who have experienced it as one of the finest and most authentic national parks in all of Africa. Located in the Karamoja region near the borders with South Sudan and Kenya, Kidepo covers 1,442 square kilometres of dramatic semi-arid savannah, vast open plains, dry riverbeds, and imposing mountain ranges that create one of the most visually dramatic safari landscapes on the continent. The park receives very few visitors relative to its size and wildlife richness — this remoteness is its greatest asset. In terms of wildlife, Kidepo stands apart from all other Uganda parks: it supports species found nowhere else in the country including the cheetah, caracal, Burchell's zebra, greater kudu, roan antelope, Guenther's dik-dik, and ostrich — species more typically associated with the dry savannahs of Kenya and Ethiopia. The park also holds Uganda's best population of lions and reliably produces the most dramatic predator sightings in the country. With 475 recorded bird species (the highest of any Uganda park), Kidepo is also one of East Africa's great birding destinations.",
+  whyVisit: [
+    "Species found in Uganda ONLY at Kidepo — cheetah, caracal, Burchell's zebra, greater kudu, roan antelope, and ostrich.",
+    "Uganda's best population of lions, seen in prides of up to 20 individuals in the Narus Valley.",
+    "475 recorded bird species, the highest of any Uganda national park.",
+    "One of the least-visited parks on the continent — dramatic Karamoja landscapes with very few other tourists.",
+  ],
   attractions: [
     {
       title: 'Narus Valley Game Drives',
@@ -692,6 +777,8 @@ const kidepo: Park = {
       a: "Yes — Apoka Safari Lodge is a genuine luxury property with stone and canvas cottages, a rock-carved pool, outdoor stone bathtubs, and outstanding guiding. For such a remote destination, it punches well above its weight in quality and comfort.",
     },
   ],
+  gettingThere:
+    "By air (strongly recommended): fly from Entebbe International Airport to Apoka Airstrip, approximately 1.5–2 hours by charter with Aerolink Uganda. By road from Kampala: 10–12 hours via Gulu — a genuine expedition, and exhausting even with an overnight stop, though some travellers combine it with a Murchison Falls visit en route. There is no practical way to reach Kidepo except by these two routes, which is part of what keeps visitor numbers so low.",
   whereToStay: [
     {
       category: 'Luxury',
@@ -735,6 +822,12 @@ const semuliki: Park = {
   bestTime: 'June–August & December–January',
   overview:
     "Semuliki National Park is Uganda's most underrated and most rewarding national park for birders and wilderness seekers. The park protects 220 square kilometres of lowland tropical rainforest that forms an eastern extension of the vast Congo Basin forest — one of the world's great forest ecosystems and the second-largest tropical rainforest on earth. This Congo connection is what makes Semuliki so special: the park harbours wildlife assemblages and bird species with strong central African affinities, many found nowhere else in East Africa. Of Semuliki's 441 recorded bird species, approximately 40 are Congo Basin endemics — species whose East African populations exist only in this small park, making it the most important forest birding destination in Uganda and one of the best in the African Great Lakes region. Beyond the extraordinary birdlife, Semuliki is famous for the Sempaya Hot Springs — two spectacular boiling geysers in the heart of the forest, one of which can project water and steam up to 2 metres into the air. The park is also home to chimpanzees, red-tailed monkeys, De Brazza's monkeys, and forest elephants, and borders the territory of the Batwa pygmy people, who have historical connections to the Semuliki forest.",
+  whyVisit: [
+    "40 Congo Basin bird endemics found in Uganda ONLY at Semuliki — the most important forest birding destination in the country.",
+    "The boiling Sempaya Hot Springs, two spectacular geysers held sacred by local communities.",
+    "441 recorded bird species drawn from the Congo Basin's central African forest affinities.",
+    "Undisturbed primate populations — chimpanzees, De Brazza's monkeys, and red-tailed monkeys — in some of the least-visited rainforest in East Africa.",
+  ],
   attractions: [
     {
       title: 'Congo Basin Birding — 40 Endemics',
@@ -788,6 +881,12 @@ const semuliki: Park = {
         "Semliki Safari Lodge — tented luxury directly in a private wildlife reserve at the park itself, the closest upmarket lodge to the forest and hot springs.",
       ],
     },
+  ],
+  practicalInfo: [
+    { label: 'What to Pack', body: 'Binoculars and a good field guide are essential — Semuliki rewards serious birders far more than casual visitors. Bring lightweight rain gear, closed shoes, and insect repellent for the humid forest.' },
+    { label: 'Specialist Guides', body: 'A specialist birding guide is strongly recommended to locate and identify the Congo Basin endemics by call.' },
+    { label: 'Recommended Stay', body: 'One night combined with an early-morning birding walk and a visit to the Sempaya Hot Springs covers the essentials; serious birders often stay two nights to maximise species counts.' },
+    { label: 'Connectivity', body: 'Mobile coverage is limited within the forest. Fort Portal, 1.5 hours away, has full connectivity.' },
   ],
 }
 
@@ -1022,6 +1121,12 @@ const serengetiPark = {
   bestTime: 'June–October (northern crossings), January–March (calving season) & November–December (green season)',
   overview:
     "The Serengeti is Tanzania's crown jewel and the stage for the most iconic safari experience on the planet. A UNESCO World Heritage Site and one of the Seven Natural Wonders of Africa, this ancient ecosystem stretches from the volcanic plains of the south to the Mara River in the north, supporting the single largest terrestrial mammal migration in the world — over 1.5 million wildebeest, 350,000 zebra and 500,000 Thomson's gazelle moving in an endless clockwise loop. Beyond the migration, the Serengeti harbours more lions than almost anywhere on earth, dense resident leopard, cheetah on the open plains and a year-round cast of supporting wildlife that makes every drive compelling. The private concessions to the north and west — home to Sayari and Dunia camps — offer off-road driving and night-drive access that transforms the experience entirely. The green season (November–December) brings a quieter, lusher Serengeti with beautiful light and far fewer vehicles — a rewarding alternative for travellers who don't need to time a river crossing.",
+  whyVisit: [
+    "The largest terrestrial mammal migration on earth — 1.5 million wildebeest, 350,000 zebra, and 500,000 gazelle moving in an endless circuit.",
+    "One of Africa's highest lion densities, alongside resident leopard, cheetah, and the chance to track wild dog in the north.",
+    "Exclusive private concessions — Lamai Wedge, Loliondo, and Klein's Camp — offering off-road driving and night drives.",
+    "The Grumeti River crossings in the western corridor, second only to the Mara in drama, with a fraction of the crowds.",
+  ],
   attractions: [
     {
       title: 'The Great Migration',
@@ -1129,6 +1234,12 @@ const ngorongoroPark = {
   bestTime: 'Year-round (driest June–September)',
   overview:
     "Ngorongoro Crater is a natural wonder — the intact floor of an ancient volcano estimated to have once stood higher than Kilimanjaro before it collapsed in on itself some 2–3 million years ago, leaving a caldera 600 metres deep that shelters a permanently enclosed ecosystem of extraordinary density. Tens of thousands of wildebeest live on the crater floor alongside dense populations of lion, elephant and hippo, drinking from freshwater springs and the alkaline Lake Magadi at its centre, and including a population of approximately 20–30 black rhino — one of the densest black rhino populations in East Africa. The crater also holds one of Africa's highest lion densities; the resident prides form a self-contained population, separate from the lions living on the forested rim above. The drive down from the rim at dawn, with the mist clearing to reveal the plains below, is one of the defining moments of an African safari. Ngorongoro pairs beautifully with the Serengeti as part of our northern Tanzania circuit.",
+  whyVisit: [
+    "The world's largest intact volcanic caldera, sheltering a permanently enclosed Big Five ecosystem.",
+    "One of the last strongholds for critically endangered black rhino in East Africa.",
+    "One of Africa's highest lion densities, in a self-contained crater-floor population separate from the rim lions.",
+    "A short diversion to Olduvai Gorge, the cradle of human evolution.",
+  ],
   attractions: [
     {
       title: 'Black Rhino on the Crater Floor',
@@ -1238,6 +1349,12 @@ const selousPark = {
   bestTime: 'June–October',
   overview:
     "Formerly the Selous Game Reserve, now Nyerere National Park, this vast southern wilderness is four times the size of the Serengeti and sees a fraction of its visitors. The Rufiji River and its system of lakes and channels is the lifeblood of the park — boat safaris here, drifting past hippo pods, crocodile banks and waterbirds, rival anything in East Africa. Nyerere holds one of the largest lion populations on the continent, significant wild-dog packs, and elephant herds in the thousands. For the traveller who values space, privacy and an authentic bush experience, it is incomparable.",
+  whyVisit: [
+    "Africa's largest national park — four times the size of the Serengeti, with a fraction of the visitors.",
+    "Rufiji River boat safaris rivaling anything in East Africa, drifting past hippo pods and bathing elephants.",
+    "One of Tanzania's most reliable places to track the endangered African wild dog.",
+    "One of the few Tanzanian parks where walking safaris are permitted.",
+  ],
   attractions: [
     {
       title: 'Rufiji River Boat Safaris',
@@ -1286,6 +1403,28 @@ const selousPark = {
       a: "Three nights minimum — one for the boat safari, one for a full game drive and walking, one to simply exhale and appreciate the scale. Four nights is better.",
     },
   ],
+  gettingThere:
+    "Nyerere is reached exclusively by charter flight — approximately 45 minutes from Dar es Salaam or 1.5 hours from Kilimanjaro International Airport, landing on an airstrip near your camp. There is no scheduled airline service, and the road journey from Dar es Salaam is long and impractical, so every Nyerere itinerary is built around chartered light aircraft.",
+  whereToStay: [
+    {
+      category: 'Luxury',
+      picks: [
+        {
+          name: 'Roho ya Selous',
+          description: 'Eight tented suites on a private concession within the park — boat safaris, game drives, walking, and a guiding team with decades of Selous experience.',
+          image: '/images/activities/big-five/roho-ya-selous-elephant.webp',
+        },
+        'Sand Rivers Selous — a Nomad Tanzania icon perched above the Rufiji rapids, one of the original luxury camps in the reserve.',
+        "Beho Beho — a historic, intimate camp with its own private concession and decades of southern Tanzania guiding heritage.",
+      ],
+    },
+  ],
+  practicalInfo: [
+    { label: 'Recommended Stay', body: 'Three nights minimum — one for the boat safari, one for a full game drive and walking safari, and one simply to appreciate the scale. Four nights is even better.' },
+    { label: 'Access', body: 'Nyerere has no scheduled airline service — all visitors arrive by charter flight, which we build into every itinerary.' },
+    { label: 'Malaria', body: 'Southern Tanzania is a high malaria zone. Prophylaxis, repellent, and long clothing at dusk are essential.' },
+    { label: 'Combine With', body: 'Nyerere pairs naturally with the Serengeti as a contrasting final leg — wild, remote, and boat-based rather than vehicle-based.' },
+  ],
 }
 
 const rubondoPark = {
@@ -1302,6 +1441,12 @@ const rubondoPark = {
   bestTime: 'June–February',
   overview:
     "Rubondo Island is one of Africa's best-kept secrets — an island park on Lake Victoria where chimps were reintroduced and are now partially habituated, where sitatunga and grey-cheeked mangabey move through riverine forest, and where Nile perch fishing from the lake shore can be world class. With just one camp on the island, this is genuinely off-the-beaten-track East Africa — best woven into an itinerary as a remarkable four-night detour from the northern Tanzania circuit.",
+  whyVisit: [
+    "A rare island wilderness on Lake Victoria, with just one camp and almost no other visitors.",
+    "A long-running chimpanzee habituation project — an intimate, rarely visited alternative to Kibale.",
+    "World-class Nile perch fishing alongside forest walks and canoe safaris.",
+    "Reintroduced species — sitatunga, giraffe and grey-cheeked mangabey — moving through pristine island forest.",
+  ],
   attractions: [
     {
       title: 'Chimpanzee Habituation',
@@ -1350,6 +1495,26 @@ const rubondoPark = {
       a: "Best as a 3–4 night detour from a northern Tanzania circuit — fly from the Serengeti to Rubondo, spend three nights on the island, then fly directly back to Kilimanjaro or Dar es Salaam.",
     },
   ],
+  gettingThere:
+    "Rubondo Island is reached by charter flight from the Serengeti or Mwanza — approximately 1–1.5 hours — landing on the island's grass airstrip, followed by a short boat transfer to camp. There is no road access; every visitor arrives by air and water.",
+  whereToStay: [
+    {
+      category: 'Luxury',
+      picks: [
+        {
+          name: 'Rubondo Island Camp',
+          description: 'The only camp on the island — forest-facing suites run by Asilia, positioned for chimp forest walks, canoe safaris and lakeshore fishing.',
+          image: '/images/destinations/tanzania/rubondo-island-camp-landscape.webp',
+        },
+      ],
+    },
+  ],
+  practicalInfo: [
+    { label: 'Recommended Stay', body: 'Three to four nights, ideally as a detour from a northern Tanzania circuit — enough time for forest walks, fishing, and a canoe safari without feeling rushed.' },
+    { label: 'Access', body: 'The only way in is by charter flight followed by a short boat transfer — there is no road access to the island.' },
+    { label: 'What to Pack', body: 'Closed walking shoes for forest trails, insect repellent, and swimwear for the lake — plus fishing gear if you plan to fish, though camp equipment can usually be arranged.' },
+    { label: 'Combine With', body: 'Best woven into a northern Tanzania circuit as a 3–4 night detour from the Serengeti.' },
+  ],
 }
 
 const arushaPark = {
@@ -1366,6 +1531,12 @@ const arushaPark = {
   bestTime: 'June–October (main dry season) & January–February (short dry season)',
   overview:
     "Arusha is Tanzania's safari capital — a lively, welcoming highland city at the foot of Mount Meru that serves as the gateway to the country's legendary northern safari circuit: Serengeti, Ngorongoro, Tarangire and the start of the Kilimanjaro climb. Set at 1,400 metres in the shadow of the 4,566m Mount Meru, Arusha enjoys a beautifully temperate climate and a cosmopolitan energy fuelled by its status as East Africa's most important safari hub. The city punches above its weight in cultural and historical significance too. Arusha National Park sits literally on its doorstep, offering a half-day safari experience with giraffe, buffalo and flamingo within minutes of the city centre. The Arusha Declaration Museum commemorates the founding of Tanzania's political independence movement, while the Cultural Heritage Centre houses one of the finest collections of East African art, craft and gemstones in the region, including Tanzanite — a gemstone found nowhere else on Earth outside a small area near Kilimanjaro. Arusha also hosts the Arusha International Conference Centre, site of the International Criminal Tribunal for Rwanda and the East African Court of Justice, lending the city a significance that extends well beyond tourism into the fabric of regional history and governance. For travellers combining Uganda and Tanzania safaris, Arusha is the logical African hub — connecting flights from Entebbe via Nairobi are under two hours, and the northern circuit can be covered in 5–10 days from Arusha.",
+  whyVisit: [
+    "Tanzania's safari capital and gateway to the northern circuit — Serengeti, Ngorongoro, Tarangire and Kilimanjaro all within easy reach.",
+    "A half-day safari on the city's own doorstep in Arusha National Park, with giraffe, buffalo and flamingo on the Momella Lakes.",
+    "Tanzanite — a violet-blue gemstone found nowhere else on Earth, sourced from a mine near Kilimanjaro.",
+    "The Mount Meru crater hike, a 3–4 day trek through forest, moorland and dramatic ash cone.",
+  ],
   attractions: [
     {
       title: 'Arusha National Park Half-Day Safari',
@@ -1586,6 +1757,12 @@ const lakeManyaraPark = {
   bestTime: 'Year-round (driest June–October & January–February)',
   overview:
     "Lake Manyara National Park is one of Tanzania's most compact and yet surprisingly diverse wildlife destinations — a narrow strip of land between the dramatic Rift Valley escarpment and the soda shores of Lake Manyara, covering just 325 square kilometres but harbouring exceptional wildlife and one of East Africa's most famous animal behavioural curiosities: lions that climb trees. The park was immortalised by Ernest Hemingway in The Green Hills of Africa, and its tree-climbing lions — large prides that regularly lounge in the branches of acacia and sycamore fig trees — have fascinated wildlife biologists and delighted visitors for decades. While tree-climbing lion behaviour occurs in a few other locations across Africa, Manyara's lions do so with a frequency and regularity that makes sightings relatively predictable for patient visitors. Lake Manyara itself is an alkaline soda lake that periodically hosts hundreds of thousands of lesser flamingos, turning the lake shore spectacular pink; even when flamingo concentrations are lower, the shores support pelicans, marabou storks, yellow-billed storks and hundreds of other waterbird species. The park's habitat diversity is remarkable for its size — groundwater forest at the escarpment base shelters olive baboons, blue monkeys and red-tailed monkeys, open savannah and acacia woodland support elephant, impala, zebra and giraffe, and the lake margins draw hippopotamus, water mongoose and a staggering diversity of aquatic birds. Manyara's richness makes it a perfect opening or closing chapter for any Tanzania northern circuit, complementing the Serengeti and Ngorongoro with its intimate, accessible scale.",
+  whyVisit: [
+    "Tree-climbing lions — one of the few places in Africa where sightings are relatively predictable.",
+    "An alkaline soda lake that periodically hosts hundreds of thousands of flamingos, turning the shoreline pink.",
+    "A lush groundwater forest sheltering olive baboons, blue monkeys and forest elephants.",
+    "Remarkable habitat diversity for its size — the perfect opening or closing chapter to a northern circuit.",
+  ],
   attractions: [
     {
       title: 'Tree-Climbing Lions',
@@ -1696,6 +1873,12 @@ const tarangirePark = {
   bestTime: 'June–October (dry season, peak elephant concentrations)',
   overview:
     "Tarangire National Park is Tanzania's most underrated wildlife destination and one of Africa's genuine hidden gems. Covering 2,850 square kilometres in the Manyara region south of Arusha, Tarangire is famous for its extraordinary baobab landscape — ancient sentinel trees of immense girth and character dotting open savannah plains that in the dry season host some of Africa's largest elephant concentrations outside Botswana. The Tarangire River is the park's lifeblood. During Tanzania's long dry season (June–October), when surrounding areas dry out completely, the Tarangire remains the only permanent water source in a vast region. As a result, wildlife from an enormous catchment area — well beyond the park's boundaries — converges on the river in spectacular concentrations. Elephant herds of 200–300 individuals are a routine dry-season sighting, while lion prides, leopard, cheetah, wild dog and enormous herds of buffalo follow the water and the prey. The bird diversity is staggering — over 550 species recorded, including large numbers of dry-country specials and migrant species. What makes Tarangire additionally special is what it lacks: the crowds. Receiving a fraction of the visitors that the Serengeti and Ngorongoro attract, Tarangire delivers genuinely private game drive experiences in a landscape of extraordinary beauty. For travellers combining Tanzania's northern circuit, Tarangire is the perfect opening act — a spectacular introduction to East African wildlife that prepares and excites visitors for the vastness of the Serengeti to come.",
+  whyVisit: [
+    "Elephant herds of 200–300 individuals gathering along the Tarangire River in the dry season — among Africa's largest concentrations outside Botswana.",
+    "An ancient baobab-studded landscape, one of Africa's most photographed safari scenes.",
+    "Over 550 recorded bird species, a genuine paradise for birders.",
+    "A fraction of the Serengeti's crowds, with private concessions offering walking safaris and night drives.",
+  ],
   attractions: [
     {
       title: 'Tarangire River Elephant Herds',
@@ -1808,6 +1991,12 @@ const zanzibarPark = {
   bestTime: 'June–October (long dry season) & December–February (short dry season)',
   overview:
     "Zanzibar is Africa's most romantic island destination — a spice-scented archipelago of coral islands in the Indian Ocean 35km off Tanzania's coast, where Arab, Persian, Indian, Portuguese and Swahili cultures have fused over millennia to create one of the world's most distinctive and captivating places. The main island, Unguja (Zanzibar Island), combines the labyrinthine lanes of UNESCO-listed Stone Town with some of the Indian Ocean's most beautiful beaches, making it the ideal finale to any East African safari. Stone Town, Zanzibar's historic capital, is one of Africa's most extraordinary urban environments — a UNESCO World Heritage City of winding stone alleys, carved wooden doors, coral-built merchant houses and minarets that reveal the island's extraordinary history as the East African hub of the Arab spice and slave trade. The Omani Arab sultans who ruled Zanzibar from the 17th to 19th centuries built a city of wealth and sophistication whose architectural legacy survives largely intact as a living, breathing urban heritage zone. Zanzibar's beaches are among the Indian Ocean's finest. The northern beaches (Nungwi, Kendwa) offer calm turquoise water year-round with vibrant beach bar culture, while the eastern beaches (Paje, Jambiani, Matemwe) face the open ocean with dramatic tidal changes and excellent kitesurfing conditions. The southern tip hosts the extraordinary Menai Bay conservation area. Beneath the surface, Zanzibar's fringing reefs support outstanding snorkelling and scuba diving, with coral gardens, sea turtles, manta rays and dolphin pods all accessible from shore. For most travellers completing a Uganda or Tanzania safari, Zanzibar is the perfect beach recovery — turquoise water, fresh seafood, Swahili culture and winter sunshine combining to create one of East Africa's most rewarding travel experiences.",
+  whyVisit: [
+    "UNESCO-listed Stone Town, a labyrinth of coral-built merchant houses and carved wooden doors.",
+    "Indian Ocean beaches ranging from the calm turquoise north to world-class kitesurfing in the east.",
+    "World-class snorkelling and diving at Mnemba Atoll, with coral gardens, turtles and manta rays.",
+    "The perfect beach finale after a Uganda or Tanzania safari.",
+  ],
   attractions: [
     {
       title: 'Stone Town (UNESCO World Heritage)',
@@ -2111,6 +2300,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'June–September & December–February',
         overview:
           "Volcanoes National Park is Rwanda's crown jewel and one of the most extraordinary wildlife destinations on Earth. Nestled in the Virunga Massif — a chain of ancient volcanoes straddling Rwanda, Uganda, and the Democratic Republic of Congo — this 160 square kilometre park protects some of the last remaining mountain gorillas on the planet, with an estimated population of just over 1,000 individuals worldwide. Encountering these magnificent primates in their natural habitat is a profoundly rare and life-changing privilege. The park was made famous by primatologist Dian Fossey, whose decades of research and conservation advocacy are documented in Gorillas in the Mist. Her grave lies within the park alongside the gorillas she dedicated her life to protecting, and her legacy continues through the Dian Fossey Gorilla Fund, headquartered in Kigali. Trekking permits are priced at USD 1,500 per person — the revenue directly funds park management, anti-poaching operations, and community development programmes. The trek winds through bamboo forest, Hagenia woodland, and volcanic moorland, with treks ranging from 1 to 7 hours depending on where the gorilla family has settled for the day. The dry seasons of June–September and December–February offer the firmest trails and clearest skies, while the wetter months bring lush vegetation, fewer visitors, and a mistier, uniquely atmospheric forest — gorillas are present and trekked year-round.",
+        whyVisit: [
+          "One of just over 1,000 remaining mountain gorillas worldwide, tracked through misty bamboo forest in the Virunga Massif.",
+          "Golden monkey tracking — a playful, endangered species found nowhere else in the world outside the Virunga range.",
+          "The legacy of Dian Fossey, whose grave and research station lie within the forest she dedicated her life to protecting.",
+          "Rwanda's Kwita Izina gorilla naming ceremony each September, a national celebration of conservation success.",
+        ],
         attractions: [
           {
             title: 'Mountain Gorilla Trekking',
@@ -2224,6 +2419,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'July–September & December–February',
         overview:
           "Akagera National Park is Rwanda's most dramatic conservation success story and the country's only savannah wildlife park. Covering 1,122 square kilometres of rolling savannahs, dense woodlands, lakes, and wetlands along the Tanzanian border, Akagera has undergone a remarkable transformation from a neglected, poaching-ravaged park in the 1990s to a thriving Big Five destination that stands as a model for African wildlife management. The park is managed in partnership by the Rwanda Development Board and African Parks — a non-profit conservation organisation that has driven extraordinary results since taking over management in 2010. Lions were reintroduced in 2015, black rhinoceros were brought back in 2017 and 2021, and the overall wildlife population has surged. Today Akagera offers elephant, buffalo, hippopotamus, giraffe, zebra, leopard, spotted hyena, and numerous antelope species alongside its recovering lion and rhino populations. The park's landscape diversity is exceptional, spanning open savannah and acacia-studded hills, dense riverine forest along the Akagera River, and a chain of lakes that support enormous hippo and crocodile populations. Boat safaris on Lake Ihema are one of Akagera's signature experiences, drifting past pods of hundreds of hippos and basking crocodiles while painted storks, African fish eagles, and malachite kingfishers watch from the papyrus fringe. The dry seasons concentrate wildlife around remaining water sources for predictable game viewing, while the wet seasons transform the park into lush green landscapes with excellent birdwatching and newborn animals underfoot.",
+        whyVisit: [
+          "Africa's most successful conservation comeback — lions reintroduced in 2015 and black rhinos in 2017 and 2021, restoring a full Big Five reserve.",
+          "Rwanda's only savannah safari park, spanning open plains, papyrus swamps, and a chain of hippo- and crocodile-filled lakes.",
+          "The Lake Ihema boat safari, drifting past hundreds of hippos and outstanding waterbird congregations.",
+          "Managed in partnership with African Parks, a model for African wildlife management now regularly seeing lion, elephant, buffalo, and giraffe on a single drive.",
+        ],
         attractions: [
           {
             title: 'Big Five Game Drives',
@@ -2435,6 +2636,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'June–September & December–February',
         overview:
           "Nyungwe Forest National Park is one of Africa's oldest and most biodiverse rainforests, covering 1,019 square kilometres of ancient montane forest in Rwanda's south-west corner. Estimated to be over 29,000 years old, Nyungwe has survived multiple ice ages and global climate shifts, earning its status as one of the continent's most ecologically significant protected areas. The forest is home to 13 primate species — the highest concentration in East Africa — including chimpanzees, Angola colobus, L'Hoest's monkeys, olive baboons, and the rare grey-cheeked mangabey. Nyungwe's iconic canopy walkway — a series of suspended bridges stretching 200 metres through the forest canopy at heights of up to 70 metres — has become one of Rwanda's most photographed tourist attractions. The park is also exceptional for birdwatching, with over 310 recorded species including 29 Albertine Rift endemics — the wet season brings migrant species and more active forest bird behaviour, making it a rewarding time for serious birders despite muddier trails. The forest protects the headwaters of the Nile river, adding historical and geographical significance to its ecological importance.",
+        whyVisit: [
+          "13 primate species — the highest concentration in East Africa — including chimpanzees, Angola colobus, and the rare grey-cheeked mangabey.",
+          "The iconic canopy walkway, suspended up to 70 metres above the forest floor across 200 metres of bridges.",
+          "One of Africa's oldest rainforests, estimated at over 29,000 years old and home to the headwaters of the Nile.",
+          "Over 310 recorded bird species including 29 Albertine Rift endemics.",
+        ],
         attractions: [
           {
             title: 'Chimpanzee Trekking',
@@ -2512,6 +2719,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'Year-round (Jun–Sep & Dec–Feb preferred)',
         overview:
           "Lake Kivu is one of Africa's Great Lakes and one of the continent's most beautiful and unique freshwater bodies. Straddling the border between Rwanda and the Democratic Republic of Congo, this deep mountain lake sits at 1,460 metres above sea level, framed by steep volcanic hills, lush island archipelagos, and the dramatic Congo-Nile watershed escarpment. Unlike many East African lakes, Lake Kivu is free from bilharzia and dangerous aquatic animals, making it safe for swimming and water sports — a rare quality that has made it Rwanda's premier beach destination. The lake's shores are dotted with charming resort towns, the most prominent being Rubavu (Gisenyi) in the north and Rusizi (Cyangugu) in the south. Lake Kivu is also geologically extraordinary: beneath its tranquil surface lie enormous reserves of dissolved methane gas, an unusual phenomenon caused by the lake's unique chemistry. Rwanda has developed the world's first commercial methane extraction project from the lake's depths, turning a geological curiosity into a source of national electricity and a fascinating industrial tourism story. The Congo Nile Trail — a 227-kilometre cycling and hiking route along the lake's shore — is rapidly establishing itself as one of Africa's premier adventure tourism routes. Temperatures at lake level are pleasant year-round, typically 18–27°C — noticeably warmer than Rwanda's higher-altitude parks.",
+        whyVisit: [
+          "One of Africa's only Great Lakes entirely safe for swimming — free from bilharzia and dangerous aquatic life.",
+          "An island archipelago reachable by boat or traditional pirogue, from fruit-bat colonies to secluded snorkelling coves.",
+          "The 227km Congo Nile Trail, one of Africa's premier cycling and hiking adventure routes.",
+          "The perfect wind-down after gorilla trekking — just 2.5 hours from Volcanoes National Park.",
+        ],
         attractions: [
           {
             title: 'Island Boat Trip',
@@ -2782,6 +2995,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'July–October (migration) & January–February (calving in Serengeti)',
         overview:
           "The Maasai Mara National Reserve is Kenya's most celebrated wildlife sanctuary and one of the greatest wildlife destinations on Earth. Covering 1,510 square kilometres of open savannah grassland in Kenya's south-western corner, the Mara forms the northern extension of Tanzania's Serengeti ecosystem — together creating the world's largest continuous savannah wildlife sanctuary stretching over 25,000 square kilometres. The Maasai Mara is most famous for the annual Great Wildebeest Migration, widely regarded as the greatest natural spectacle on the planet. Between July and October each year, over 1.5 million wildebeest, accompanied by hundreds of thousands of zebra and gazelle, cross the Mara River in dramatic scenes — with enormous Nile crocodiles launching from the water to intercept the crossing herds. Beyond the Migration, the Mara maintains the highest density of large predators in Africa year-round. Lion prides are large and frequently visible in open grassland. Leopard are seen with exceptional regularity along the riverine forest. Cheetah hunt on the open plains. The Mara's private conservancy system — including Mara North, Naboisho, Ol Kinyei and Oiseki — extends the protected ecosystem, offering exclusive game drives and premium lodge experiences beyond the main reserve's boundaries.",
+        whyVisit: [
+          "The Great Wildebeest Migration — over 1.5 million wildebeest crossing the Mara River between July and October, one of nature's greatest spectacles.",
+          "The highest density of large predators in Africa, with lion, leopard and cheetah seen year-round.",
+          "A private conservancy system — Mara North, Naboisho, Ol Kinyei and Oiseki — offering off-road drives and exclusive sightings beyond the main reserve.",
+          "Dawn hot-air balloon safaris over the plains, followed by a champagne bush breakfast.",
+        ],
         attractions: [
           {
             title: 'Mara River Crossing',
@@ -2903,6 +3122,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'June–October & January–February',
         overview:
           "Amboseli National Park covers 392 sq km and is home to one of Africa's most iconic images — vast elephant herds moving across open plains with the snow-capped peak of Mount Kilimanjaro behind them. The park protects one of the highest densities of free-roaming elephants in Africa and has been the site of landmark elephant research for over 50 years. A swampy heart sustains the park's elephants and lion, alongside over 600 bird species. The Observation Hill viewpoint delivers one of the most photographed sunsets in Africa — Kilimanjaro glowing pink above a sea of elephants as the plains below turn to gold.",
+        whyVisit: [
+          "One of Africa's largest concentrations of giant-tusked elephants, the subject of over 50 years of landmark research.",
+          "The definitive Kilimanjaro backdrop — vast elephant herds crossing open plains beneath Africa's highest peak.",
+          "Observation Hill, delivering one of the most photographed sunset panoramas in Africa.",
+          "Permanent swamps supporting over 600 bird species at the heart of the park.",
+        ],
         attractions: [
           {
             title: 'Big-Tusker Elephant Herds',
@@ -2984,6 +3209,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'Year-round',
         overview:
           "Laikipia is private-conservancy Kenya at its purest — a working ecosystem where ranches, communities and wildlife share the land. Sirikoi, Lewa Wilderness, Loisaba and Segera Retreat lead the way.",
+        whyVisit: [
+          "Half of Kenya's black rhino population and all of its Grevy's zebras, protected across a 9,500 km² conservancy mosaic.",
+          "One of the few places in East Africa offering horseback safaris across open savannah.",
+          "Pioneering private rhino conservation at Lewa, Borana and Ol Pejeta.",
+          "A working landscape where ranches, communities and wildlife share the land — off-road drives, night drives and walking are all permitted.",
+        ],
         attractions: [
           {
             title: 'Rhino Conservation',
@@ -3027,6 +3258,47 @@ export const countries: Record<string, Country> = {
             a: 'Outstanding — many Laikipia properties (Sirikoi, Lewa Wilderness, Loisaba) welcome children with bespoke activities, family suites and guides who genuinely engage with younger guests.',
           },
         ],
+        gettingThere:
+          "Laikipia's conservancies cluster around Nanyuki, at the foot of Mount Kenya. Scheduled and charter flights from Nairobi's Wilson Airport reach Nanyuki or individual conservancy airstrips (Lewa, Loisaba, Segera) in about 45–60 minutes. By road, Nanyuki is approximately 3–4 hours from Nairobi via Nyeri, with a further 30 minutes to 1.5 hours on to individual conservancies depending on location.",
+        whereToStay: [
+          {
+            category: 'Luxury',
+            picks: [
+              {
+                name: 'Lewa Wilderness',
+                description: 'The original family-run lodge on the Lewa Wildlife Conservancy, offering horseback safaris and access to some of Kenya\'s best rhino conservation work.',
+                image: '/images/lodges/kenya/lakipia/lewa-wilderness/fly-camping-star-dome.webp',
+              },
+              {
+                name: 'Sirikoi',
+                description: 'An intimate, family-run camp inside Lewa — personal, authentic and exceptional in every detail.',
+                image: '/images/lodges/kenya/lakipia/sirikoi-lodge-kenya/1744025471001-2024-cottage-outside-dec-sunset.webp',
+              },
+              {
+                name: 'Segera Retreat',
+                description: 'An art-filled, sustainability-driven retreat with private spa villas and the ZEITZ Foundation art collection.',
+                image: '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.webp',
+              },
+              'Loisaba Tented Camp — classic tented luxury on the Loisaba Conservancy, with a Star Beds sleepout experience under the open sky.',
+            ],
+          },
+          {
+            category: 'Mid-Range',
+            picks: [
+              {
+                name: 'Elewana Kifaru House',
+                description: "Boutique lodge on the Lewa Wildlife Conservancy, positioned for rhino tracking and Mount Kenya views.",
+                image: '/images/lodges/kenya/lakipia/elewana-kifaru-house/1770879317943whiterhino-elewanacar.webp',
+              },
+            ],
+          },
+        ],
+        practicalInfo: [
+          { label: 'Conservancy Fees', body: 'Conservancy fees are typically bundled into nightly lodge rates rather than charged separately, unlike Kenya\'s public reserves.' },
+          { label: 'Altitude & Climate', body: 'Days are warm and nights can be cool given the 1,500–2,500m altitude — pack layers for game drives that start before dawn.' },
+          { label: 'Malaria', body: "Malaria risk is generally lower than in Kenya's lowland parks due to the altitude, though prophylaxis is still commonly recommended — check current guidance with your doctor." },
+          { label: 'Recommended Stay', body: '3–4 nights allows time to combine game drives with walking, horseback safaris and community conservation visits across more than one conservancy.' },
+        ],
       },
       {
         slug: 'samburu',
@@ -3042,6 +3314,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'June–October & January–February',
         overview:
           "Samburu National Reserve is one of Kenya's most compelling wildlife destinations — a remote, dramatic wilderness in the arid north where the Ewaso Ng'iro River cuts through a landscape of doum palms, acacia scrub and dramatic rocky escarpments to create an unexpected oasis of extraordinary biodiversity. What makes Samburu genuinely unique in East Africa is its collection of five wildlife species found nowhere else in the region — collectively known as the Samburu Special Five: the reticulated giraffe, Grevy's zebra, Somali ostrich, beisa oryx and gerenuk. These northern dry-country specialists occur only in Kenya's arid northern frontier, making Samburu an essential destination for any serious wildlife enthusiast. The Ewaso Ng'iro River is Samburu's lifeblood — a permanent waterway attracting enormous concentrations of wildlife in an otherwise stark landscape. Game drives along the river reveal elephant drinking in the morning light, crocodile basking on the banks, leopard resting in the riverside trees, and a constant parade of dry-country specialists. The river is also the cultural heartland of the Samburu people — a Nilo-Cushitic community closely related to the Maasai, whose distinctive beaded jewellery, warrior traditions and semi-nomadic cattle culture add rich dimensions to the wilderness experience.",
+        whyVisit: [
+          "The Samburu Special Five — reticulated giraffe, Grevy's zebra, Somali ostrich, beisa oryx and gerenuk — found nowhere else in the region.",
+          "One of Kenya's highest leopard sighting rates, with cats regularly resting in riverside trees.",
+          "The Ewaso Ng'iro River, a permanent lifeline drawing elephants, crocodiles and wildlife to its banks in an otherwise arid landscape.",
+          "A rich cultural encounter with the Samburu people, close relatives of the Maasai.",
+        ],
         attractions: [
           {
             title: 'Samburu Special Five Game Drive',
@@ -3152,6 +3430,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'June–October & January–February',
         overview:
           "Tsavo East and Tsavo West together cover 4% of Kenya — vast, raw and beautifully under-visited. Best experienced as part of a longer Kenya circuit alongside Amboseli or the coast.",
+        whyVisit: [
+          "Kenya's largest park, covering 4% of the country's land area — vast, raw, and beautifully uncrowded.",
+          "The iconic 'red elephants,' their skin stained ochre by Tsavo's iron-rich dust.",
+          "Mzima Springs — crystal-clear, hippo-filled waters viewable from a partly submerged glass tank.",
+          "Chyulu Hills riding and walking safaris, blurring into Tsavo West's volcanic grasslands.",
+        ],
         attractions: [
           {
             title: '“Red Elephants” of Tsavo',
@@ -3200,6 +3484,34 @@ export const countries: Record<string, Country> = {
             a: "Different. Sightings are less concentrated than the Mara, but you'll have entire stretches of bush to yourself, and the elephants here are bigger, dustier, and far less photographed.",
           },
         ],
+        gettingThere:
+          "Tsavo straddles the Nairobi–Mombasa highway, making it one of Kenya's most accessible large parks by road. Tsavo West's Mtito Andei Gate and Tsavo East's Voi Gate are both roughly 4–5 hours from Nairobi on tarmac. Charter flights from Nairobi's Wilson Airport reach airstrips in both sectors in under an hour, and a short hop links Tsavo directly to Amboseli (about 1 hour by road) or onward to the coast at Diani or Mombasa.",
+        whereToStay: [
+          {
+            category: 'Luxury',
+            picks: [
+              {
+                name: 'ol Donyo Lodge',
+                description: "Zebra-striped adobe suites in the Chyulu Hills on Tsavo's northern edge, with horseriding, walking and star-bed sleepouts.",
+                image: '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.webp',
+              },
+              'Finch Hattons Luxury Tented Camp — safari-era elegance beside Tsavo West\'s natural springs.',
+            ],
+          },
+          {
+            category: 'Mid-Range',
+            picks: [
+              "Kilaguni Serena Safari Lodge — Kenya's oldest safari lodge, with a waterhole view and Kilimanjaro visible on clear days.",
+              'Voyager Ziwani — tented camp on the Tsavo West boundary with private conservancy access.',
+            ],
+          },
+        ],
+        practicalInfo: [
+          { label: 'Recommended Stay', body: 'Two nights is the minimum — three to four if you want to explore both East and West, walk with a guide, or add the Chyulu Hills.' },
+          { label: 'East vs West', body: "Tsavo East and Tsavo West are separate sectors with their own gates. Most itineraries focus on one side rather than driving between them, or link the two via a short charter flight." },
+          { label: 'What to Pack', body: "Tsavo's fine red dust gets everywhere — lightweight, easily washable clothing works better than pale khaki, and a scarf or buff is welcome on open game drives." },
+          { label: 'Combine With', body: 'Tsavo pairs naturally with Amboseli (about 1 hour by road) or as a bush stop en route to the Kenyan coast.' },
+        ],
       },
       {
         slug: 'lake-nakuru',
@@ -3215,6 +3527,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'June–October & January–February',
         overview:
           "Lake Nakuru National Park is one of Kenya's most visited and visually spectacular parks — a compact 188 square kilometre sanctuary built around the alkaline soda lake of Lake Nakuru in the heart of the Great Rift Valley. At its most spectacular, Lake Nakuru was home to millions of lesser flamingos that turned its shores an extraordinary shade of pink — one of the most famous wildlife images in the world. Flamingo concentrations fluctuate as the birds periodically shift to other Rift Valley lakes, but even when flamingo numbers are reduced, Lake Nakuru remains an outstanding wildlife destination. It is now Kenya's best park for rhino viewing, with both black and white rhinos protected within a 74km electric security fence — one of the highest rhino densities in Africa. Beyond rhinos and flamingos, Lake Nakuru supports remarkably diverse wildlife for its size. Euphorbia-studded escarpment and forested ridges shelter leopard, lion, hyena, waterbuck, buffalo and Rothschild's giraffe. The lake draws pelicans, cormorants and an extraordinary diversity of waterbirds. Nakuru is easily combined with Kenya's other Rift Valley attractions — Lake Bogoria, Lake Elementaita and Ol Pejeta Conservancy.",
+        whyVisit: [
+          "One of Kenya's best parks for rhino viewing, with both black and white rhino inside a 74km electric security fence.",
+          "Dramatic flamingo flocks turning the alkaline shoreline pink, one of the world's most famous wildlife images.",
+          "Remarkable diversity for its size — leopard, lion, Rothschild's giraffe, and hundreds of waterbird species within just 188 km².",
+          "Easily combined with Kenya's other Rift Valley lakes on a single circuit.",
+        ],
         attractions: [
           {
             title: 'Flamingo Shore Drive',
@@ -3299,6 +3617,12 @@ export const countries: Record<string, Country> = {
         bestTime: 'Year-round',
         overview:
           "Nairobi is Africa's safari capital — a sprawling, energetic metropolis of over 4 million people that sits at the intersection of the modern African city and the wild natural world. Founded in 1899 as a railway depot for the Uganda Railway, Nairobi grew with extraordinary speed to become the region's dominant commercial hub, and today it hosts the headquarters of more international organisations than any other African city. What makes Nairobi genuinely unique among world capitals is the presence of Nairobi National Park directly on the city's doorstep — a 117 square kilometre wildlife sanctuary where lion, leopard, black rhino, buffalo and giraffe roam against the backdrop of the city's skyscraper skyline. Watching a giraffe walk past with glass towers behind it is one of Africa's most surreal and memorable visual experiences, available within 20 minutes of the city centre. Beyond the national park, Nairobi offers a richness of wildlife and conservation experiences unmatched by any other African capital. The David Sheldrick Wildlife Trust operates the world's most successful elephant orphanage. The AFEW Giraffe Centre allows visitors to hand-feed endangered Rothschild's giraffes at eye level. For safari travellers, Nairobi is the natural hub for Kenya's extraordinary network of national parks and reserves, all accessible within half a day's drive.",
+        whyVisit: [
+          "Nairobi National Park, the world's only capital-city wildlife park, with lion, rhino and giraffe roaming against a skyscraper skyline.",
+          "The David Sheldrick Wildlife Trust, the world's most successful elephant orphanage, with daily 11am public feedings.",
+          "Hand-feeding endangered Rothschild's giraffes at eye level at the AFEW Giraffe Centre.",
+          "The natural hub for Kenya's national parks, all reachable within half a day's drive.",
+        ],
         attractions: [
           {
             title: 'Nairobi National Park Game Drive',

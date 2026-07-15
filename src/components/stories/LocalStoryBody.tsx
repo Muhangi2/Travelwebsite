@@ -3,7 +3,7 @@ import type { ArticleBlock } from '@/data/articles'
 import { slugify } from '@/lib/articleContent'
 import Picture from '@/components/Picture'
 
-const HEADINGS_PER_IMAGE = 6
+const HEADINGS_PER_IMAGE = 4
 
 function renderContentBlock(block: ArticleBlock, key: number, dark: boolean) {
   const textClass = dark ? 'text-white/90' : 'text-brand-charcoal'
@@ -91,7 +91,22 @@ export default function LocalStoryBody({ value, gallery = [] }: { value: Article
       if (!isImageSection) continue
 
       const src = gallery[imagesUsed % gallery.length]
+      const useCardStyle = imagesUsed % 2 === 1
       imagesUsed += 1
+
+      if (useCardStyle) {
+        // Alternate style: an inline framed image card, content stays in normal light flow.
+        nodes.push(
+          <figure key={`imgcard-${i}`} className="mt-10 overflow-hidden rounded-xl shadow-md">
+            <Picture src={src} alt="" loading="lazy" className="aspect-[16/9] w-full object-cover" />
+          </figure>,
+        )
+        while (i < value.length && value[i].kind !== 'heading') {
+          nodes.push(renderContentBlock(value[i], i, false))
+          i += 1
+        }
+        continue
+      }
 
       // Collect every block up to (but not including) the next heading into this image section.
       const group: ReactNode[] = []

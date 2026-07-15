@@ -4,26 +4,26 @@ import Picture from '@/components/Picture'
 
 const posts = [
   {
-    slug: 'visit-saves-uganda-mountain-gorillas',
-    image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
-    title: 'Tracking the Mountain Gorillas of Bwindi',
+    slug: 'bwindi-impenetrable-forest-visitor-guide',
+    image: '/images/activities/gorilla-trekking/26-ah1i3781.webp',
+    title: 'Bwindi Impenetrable Forest: Complete Visitor Guide 2026',
     author: 'Still Wild Safaris Team',
-    date: 'Jan 2026',
+    date: 'Jun 2026',
   },
   {
-    slug: 'beyond-gorillas-rwanda-big-five',
-    image: '/images/parks/rwanda/akagera/wilderness-magashi-7.jpg',
-    title: 'Beyond the Gorillas: Discovering Rwanda’s Big Five and Hidden Gems',
+    slug: 'uganda-vs-rwanda-gorilla-trekking',
+    image: '/images/activities/gorilla-trekking/4-mgl-gorilla-bb.webp',
+    title: 'Uganda vs Rwanda Gorilla Trekking: Which is Better in 2026?',
     author: 'Still Wild Safaris Team',
-    date: 'Jan 2026',
+    date: 'Jun 2026',
     tag: 'Rwanda',
   },
   {
-    slug: 'safari-photography-uganda',
-    image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.jpg',
-    title: 'Photography in the African Bush',
+    slug: 'what-to-pack-gorilla-trekking-uganda',
+    image: '/images/activities/gorilla-trekking/9-gorilla3-bfo9.webp',
+    title: 'What to Pack for Gorilla Trekking in Uganda: Ultimate Checklist',
     author: 'Still Wild Safaris Team',
-    date: 'Jan 2026',
+    date: 'May 2026',
   },
 ]
 

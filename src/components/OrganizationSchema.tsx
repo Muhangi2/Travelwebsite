@@ -16,7 +16,7 @@ const ORGANIZATION_SCHEMA = {
     addressCountry: 'UG',
   },
   areaServed: ['Uganda', 'Rwanda', 'Kenya'],
-  sameAs: [site.instagram, site.facebook],
+  sameAs: [site.instagram, site.facebook, site.youtube],
 }
 
 export default function OrganizationSchema() {

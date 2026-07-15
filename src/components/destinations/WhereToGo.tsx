@@ -109,11 +109,11 @@ export default function WhereToGo({
                 <NavLink
                   key={`${park.slug}-${i}`}
                   to={`/destinations/${countrySlug}/${park.slug}`}
-                  className="group flex shrink-0 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl"
-                  style={{ width: `min(85vw, ${CARD_W}px)`, height: 'clamp(300px, 55vw, 420px)' }}
+                  className="group flex shrink-0 flex-col overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl sm:h-[clamp(300px,55vw,420px)] sm:flex-row"
+                  style={{ width: `min(90vw, ${CARD_W}px)` }}
                 >
-                  {/* Image — left 45% */}
-                  <div className="relative w-[45%] shrink-0 overflow-hidden">
+                  {/* Image — top on mobile, left 45% on larger screens */}
+                  <div className="relative h-44 w-full shrink-0 overflow-hidden sm:h-auto sm:w-[45%]">
                     <Picture
                       src={park.image}
                       alt={park.name}
@@ -121,14 +121,14 @@ export default function WhereToGo({
                       imgClassName="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                     {/* Gradient fade into content */}
-                    <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-r from-transparent to-white" />
+                    <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white to-transparent sm:inset-y-0 sm:left-auto sm:right-0 sm:h-full sm:w-10 sm:bg-gradient-to-r sm:from-transparent sm:to-white" />
                     <span className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 font-mono text-[12px] font-bold text-white backdrop-blur-sm">
                       {String((i % parks.length) + 1).padStart(2, '0')}
                     </span>
                   </div>
 
-                  {/* Content — right 55% */}
-                  <div className="flex flex-1 flex-col justify-between px-8 py-8">
+                  {/* Content — bottom on mobile, right 55% on larger screens */}
+                  <div className="flex flex-1 flex-col justify-between px-6 py-6 sm:px-8 sm:py-8">
                     {/* Top: location + name */}
                     <div>
                       <p className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-400">

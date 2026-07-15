@@ -9,6 +9,7 @@ export const site = {
   whatsappHref: 'https://wa.me/256779378628',
   instagram: 'https://www.instagram.com/stillwildsafaris?igsh=dmphN3Q0OTJyc214',
   facebook: 'https://www.facebook.com/share/18ZKkFXWb2/',
+  youtube: 'http://www.youtube.com/@stillwildsafaris',
   address: 'Baskerville Ave, Kampala, Uganda',
   mapsQuery: 'Still+Wild+Safaris,+Baskerville+Ave,+Kampala',
 } as const
