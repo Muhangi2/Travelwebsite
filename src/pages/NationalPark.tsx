@@ -6,6 +6,7 @@ import ParkHero from '@/components/national-park/ParkHero'
 import ParkOverview from '@/components/national-park/ParkOverview'
 import WhyVisit from '@/components/national-park/WhyVisit'
 import KeyAttractions from '@/components/national-park/KeyAttractions'
+import TopActivities from '@/components/national-park/TopActivities'
 import GettingThere from '@/components/national-park/GettingThere'
 import WhereToStay from '@/components/national-park/WhereToStay'
 import PracticalInfo from '@/components/national-park/PracticalInfo'
@@ -45,6 +46,7 @@ export default function NationalPark() {
       {parkData.overview && <ParkOverview park={parkData} />}
       {parkData.whyVisit && parkData.whyVisit.length > 0 && <WhyVisit items={parkData.whyVisit} />}
       {parkData.attractions.length > 0 && <KeyAttractions items={parkData.attractions} />}
+      {parkData.activities.length > 0 && <TopActivities items={parkData.activities} />}
       {parkData.gettingThere && <GettingThere text={parkData.gettingThere} />}
       {parkData.whereToStay && parkData.whereToStay.length > 0 && (
         <WhereToStay

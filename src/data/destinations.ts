@@ -65,10 +65,16 @@ const bwindi: Park = {
   overview:
     "Bwindi Impenetrable National Park is one of the most extraordinary wildlife destinations on the planet. Nestled in the rugged Albertine Rift mountains, this UNESCO World Heritage Site protects 331 square kilometres of some of Africa's most ancient and biodiverse tropical rainforest — a dense tangle of ancient trees, vines, bamboo, and undergrowth covering steep ridges and mist-filled valleys that have sheltered life through ice ages and millennia of human history. Today Bwindi is home to approximately 459 mountain gorillas — roughly half the entire global population of this critically endangered great ape. With 19 habituated gorilla families spread across four distinct trekking sectors (Buhoma, Ruhija, Rushaga, and Nkuringo), it offers the largest selection of gorilla families at any destination on earth. Beyond the gorillas, the forest holds over 350 bird species including 23 Albertine Rift endemics found nowhere else on earth, 120 mammal species, and 200 tree species, and profound cultural connections to the Batwa Forest People — the original inhabitants of this ancient ecosystem. This is one of Africa's oldest forest ecosystems, estimated at over 25,000 years old and having survived multiple ice ages — a living record of how long life has flourished on these ridges.",
   whyVisit: [
-    "Home to half the world's mountain gorillas — 19 habituated families across four sectors, more gorilla families than any other destination on earth.",
-    "The Gorilla Habituation Experience — an exclusive full day with a family still being habituated, available only in the Rushaga sector.",
-    "23 Albertine Rift bird endemics found nowhere else on earth, in a forest estimated at over 25,000 years old.",
-    "A profound cultural encounter with the Batwa Forest People, the original inhabitants of this ancient ecosystem.",
+    'Home to approximately 459 mountain gorillas — roughly half the entire world population of this critically endangered great ape.',
+    '19 habituated gorilla families available across four trekking sectors — the largest selection of any gorilla destination.',
+    'UNESCO World Heritage Site recognising outstanding universal natural and cultural value.',
+    'Over 350 bird species recorded including 23 Albertine Rift endemic species found nowhere else on earth.',
+    "Rich Batwa cultural heritage — encounter the Forest People whose ancestors lived in this forest for thousands of years.",
+    'Ancient rainforest ecosystem over 25,000 years old — one of the oldest forests in Africa, surviving through multiple ice ages.',
+    '120 mammal species including forest elephants, chimpanzees, and golden monkeys.',
+    'Gorilla habituation experience — spend a full day accompanying researchers with a gorilla family being habituated to humans.',
+    'Four distinct trekking sectors each offering different scenery, gorilla families, and experiences.',
+    'Just 4–5 hours from Kigali — making Bwindi an essential cross-border Rwanda-Uganda destination.',
   ],
   attractions: [
     {
@@ -102,7 +108,28 @@ const bwindi: Park = {
       image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.webp',
     },
   ],
-  activities: [],
+  activities: [
+    {
+      title: 'Buhoma Sector Trekking',
+      body: "The original and most established gorilla trekking sector, with the best infrastructure and multiple gorilla families including the famous Mubare group — Uganda's first habituated family.",
+      image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
+    },
+    {
+      title: 'Ruhija Sector',
+      body: "Bwindi's highest-altitude sector at over 2,300m, combining gorilla trekking with some of the forest's finest birdwatching among the Albertine Rift endemics.",
+      image: '/images/activities/birding/lensoffthegreen-1748944212110.webp',
+    },
+    {
+      title: 'Rushaga Sector',
+      body: 'The southern sector bordering Rwanda, offering the greatest number of habituated gorilla families and the exclusive Gorilla Habituation Experience.',
+      image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.webp',
+    },
+    {
+      title: 'Nkuringo Sector',
+      body: 'The most dramatic sector, with ridge-top accommodation and stunning views into the Democratic Republic of Congo.',
+      image: '/images/activities/gorilla-trekking/10-gorilla-ah1i2740.webp',
+    },
+  ],
   faqs: [
     {
       q: 'When is the best time for gorilla trekking?',
@@ -213,7 +240,23 @@ const queenElizabeth: Park = {
       image: '/images/activities/game-drive/asilia-roho-2017-1-1.webp',
     },
   ],
-  activities: [],
+  activities: [
+    {
+      title: 'Crater Lakes Scenic Drive',
+      body: "Wind along the dramatic escarpment road above the Albertine Rift past a string of ancient volcanic crater lakes. Lake Munyanyange regularly hosts flocks of flamingos, while Lake Katwe is the site of traditional salt extraction — with extraordinary views across Lake Edward into the DRC.",
+      image: '/images/activities/game-drive/boating-safari-hippo-spot2.webp',
+    },
+    {
+      title: 'Night Game Drives',
+      body: 'Available in the northern sector, night drives reveal leopards on the hunt, African civets, large-spotted genets, African wild cats, spring hares, and the unmistakable striped silhouette of the aardvark. USD 20 per person.',
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/ishasha-wilderness-camp/DSC_6859.webp',
+    },
+    {
+      title: 'Combine with Bwindi Gorilla Trekking',
+      body: "Queen Elizabeth and Bwindi's Buhoma sector are approximately 3–4 hours apart, making a combined Kazinga Channel, tree-climbing lion and gorilla trekking itinerary Uganda's classic safari circuit.",
+      image: '/images/lodges/uganda/queen-elizabeth-national-park/kyambura-lodge-by-volcanoes-safaris/25-kyambura-gorge-rf-dsc-3399-copie.webp',
+    },
+  ],
   faqs: [
     {
       q: 'How many nights should I plan in Queen Elizabeth?',
@@ -263,6 +306,7 @@ const queenElizabeth: Park = {
     },
   ],
   practicalInfo: [
+    { label: 'Park & Vehicle Entry', body: 'USD 40 per person per day for foreign non-residents, plus USD 30 per vehicle.' },
     { label: 'Recommended Stay', body: 'A minimum of 3 nights split between the northern Mweya area and the southern Ishasha sector, approximately 90km apart by road.' },
     { label: 'Kazinga Channel Cruise', body: 'USD 30 per person for the 2-hour launch trip — book directly through your lodge or the Uganda Wildlife Authority office at Mweya.' },
     { label: 'Kyambura Gorge Permit', body: 'Chimpanzee trekking permits in Kyambura Gorge cost USD 150 per person and should be booked in advance.' },
@@ -348,6 +392,11 @@ const murchison: Park = {
         "The Budongo Forest Reserve, adjacent to Murchison's southern boundary, contains the largest known population of East African chimpanzees in Uganda. Guided treks depart from Kaniyo-Pabidi and Busingiro forest stations at USD 90 per person — a remarkable primate experience combined with savannah game drives.",
       image: '/images/parks/uganda/murchison-falls/dsc-6884.webp',
     },
+    {
+      title: 'Buligi Circuit',
+      body: 'A scenic game drive circuit through the Buligi area north of Paraa, known for large lion prides and the best Rothschild\'s giraffe sightings in the park.',
+      image: '/images/parks/uganda/murchison-falls/dsc-6828.webp',
+    },
   ],
   faqs: [
     {
@@ -388,10 +437,12 @@ const murchison: Park = {
     },
   ],
   practicalInfo: [
-    { label: 'Recommended Stay', body: 'A minimum of three nights covers the falls boat cruise, north bank game drives, and a hike to the Top of the Falls; add a fourth night for Budongo chimpanzee trekking.' },
+    { label: 'Park & Vehicle Entry', body: 'USD 40 per person per day for foreign non-residents, plus USD 30 per vehicle.' },
+    { label: 'Nile Boat Cruise', body: 'USD 30 per person for the classic upstream cruise from Paraa to the base of the falls.' },
     { label: 'Budongo Chimp Permit', body: 'Chimpanzee trekking permits at Budongo Forest Reserve cost USD 90 per person, bookable through the Kaniyo-Pabidi or Busingiro forest stations.' },
-    { label: 'The Paraa Ferry', body: 'Crossing the Victoria Nile by vehicle ferry at Paraa is required to reach the North Bank game-viewing circuit and runs throughout the day — allow extra time in your schedule during peak season.' },
-    { label: 'What to Pack', body: 'A hat, sunscreen and light rain layer for boat cruise spray, plus sturdy shoes for the 30-minute climb to the Top of the Falls viewpoint.' },
+    { label: 'Sport Fishing Licence', body: 'A fishing licence is required for Nile Perch and Tiger Fish fishing, available at park headquarters.' },
+    { label: 'Ziwa Rhino Sanctuary', body: 'Entry and rhino tracking on foot costs USD 40 per person, an easy stop on the drive from Kampala.' },
+    { label: 'Recommended Stay', body: 'A minimum of 2 nights is recommended to comfortably fit in a game drive, Nile boat cruise, Top of Falls hike, and Nile delta birding trip.' },
   ],
 }
 
@@ -411,10 +462,16 @@ const kibale: Park = {
   overview:
     "Kibale National Park holds a title that is superlative yet entirely accurate: the primate capital of the world. This magnificent tropical rainforest park in western Uganda covers 795 square kilometres of ancient montane and lowland forest that is home to 13 species of primates — the highest primate diversity of any protected area in East Africa. At the centre of this primate world are the chimpanzees: over 1,500 individuals estimated to live within Kibale's boundaries, the highest density of any national park in Uganda and one of the highest anywhere on earth. Multiple chimpanzee communities in the Kanyanchu area have been habituated to human presence through years of patient scientific research, and twice-daily guided trekking sessions allow visitors to observe these remarkable animals in their natural forest environment. Beyond the chimpanzees, Kibale's canopy resonates with red colobus monkeys in troops of up to 500 — one of East Africa's most spectacular primate sights — alongside grey-cheeked mangabeys, L'Hoest's monkeys, olive baboons, and eight other primate species. The Bigodi Wetland Sanctuary, a community-managed area on the park's boundary, offers superb birdwatching with over 200 species and all revenue benefiting local communities. Kibale is also one of Uganda's finest birding destinations with over 375 species including 35 Albertine Rift endemics.",
   whyVisit: [
-    "13 primate species in a single park — the highest primate diversity of any protected area in East Africa.",
-    "Over 1,500 chimpanzees, the highest density of any national park in Uganda, with twice-daily trekking sessions.",
-    "Red colobus troops of up to 500 individuals, one of East Africa's most spectacular primate sights.",
-    "375 bird species including 35 Albertine Rift endemics, plus the community-run Bigodi Wetland Sanctuary.",
+    'Home to over 1,500 chimpanzees — the highest density of any national park in Uganda.',
+    '13 primate species in a single park — the most diverse primate community in all of East Africa.',
+    'The best chimpanzee trekking experience in Uganda, with multiple fully habituated communities.',
+    "Red colobus monkey troops of up to 500 individuals — one of East Africa's most impressive wildlife sights.",
+    'Bigodi Wetland Sanctuary — an outstanding community-managed conservation area with superb birding and primate viewing.',
+    '375+ bird species including 35 Albertine Rift endemic species.',
+    'Excellent access from Fort Portal — a charming highland town with good facilities and onward connections.',
+    "Night forest walks revealing the forest's hidden nocturnal life, including bushbabies and pottos.",
+    'Combines perfectly with Queen Elizabeth National Park and Bwindi on the classic western Uganda circuit.',
+    'A full-day chimpanzee habituation experience for the deepest possible chimp encounter.',
   ],
   attractions: [
     {
@@ -616,8 +673,9 @@ const lakeMburo: Park = {
     },
   ],
   practicalInfo: [
+    { label: 'Park Entry Fee', body: 'USD 40 per person per day for foreign non-residents.' },
     { label: 'Safety on Foot', body: 'Lake Mburo has no lions or elephants in its open areas, making it one of the few Uganda parks where walking and cycling safaris are permitted.' },
-    { label: 'Activity Costs', body: 'Approximate per-person rates: boat cruise USD 25, cycling safari USD 20–30, night game drive USD 20, horse-riding USD 35–50 per hour.' },
+    { label: 'Activity Costs', body: 'Approximate per-person rates: boat cruise USD 15–25, cycling safari USD 20–30, night game drive USD 20, horse-riding USD 35–50 per hour.' },
     { label: 'Cash & Facilities', body: 'Mbarara town, 30km from the park, has ATMs and full facilities — the park itself has none, so carry sufficient cash.' },
     { label: 'Recommended Stay', body: 'One or two nights is sufficient for most itineraries, typically as an overnight stop between Kampala/Entebbe and Bwindi.' },
   ],
@@ -758,7 +816,23 @@ const kidepo: Park = {
       image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.webp',
     },
   ],
-  activities: [],
+  activities: [
+    {
+      title: '475 Bird Species',
+      body: "Kidepo holds the highest bird species count of any Uganda national park, making it one of East Africa's great birding destinations alongside its exceptional mammal viewing.",
+      image: '/images/activities/game-drive/asilia-roho-2017-1-1.webp',
+    },
+    {
+      title: 'Walking Safaris',
+      body: "Guided walks with armed Uganda Wildlife Authority rangers through the park's open savannahs and dry riverbeds offer an intimate, ground-level perspective — reading tracks and approaching wildlife in a way no vehicle can match.",
+      image: '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.webp',
+    },
+    {
+      title: "Sundowners at Apoka's Rock Pool",
+      body: "Apoka Safari Lodge's rock-carved pool overlooks the Narus Valley — an unforgettable spot to watch the sun set over one of Africa's least-visited wildernesses.",
+      image: '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.webp',
+    },
+  ],
   faqs: [
     {
       q: 'Is Kidepo Valley National Park worth the long journey?',
@@ -778,7 +852,7 @@ const kidepo: Park = {
     },
   ],
   gettingThere:
-    "By air (strongly recommended): fly from Entebbe International Airport to Apoka Airstrip, approximately 1.5–2 hours by charter with Aerolink Uganda. By road from Kampala: 10–12 hours via Gulu — a genuine expedition, and exhausting even with an overnight stop, though some travellers combine it with a Murchison Falls visit en route. There is no practical way to reach Kidepo except by these two routes, which is part of what keeps visitor numbers so low.",
+    "By air (strongly recommended): charter flights from Entebbe International Airport or Kajjansi Airstrip to Kidepo Airstrip take approximately 1.5–2 hours with Aerolink Uganda; no scheduled services currently operate to Kidepo. By road from Kampala: approximately 700km and 10–12 hours via Gulu and Kitgum towns, on a mixture of paved highway (Kampala to Gulu) and increasingly rough tracks (Kitgum to Kidepo) — a sturdy 4WD is essential, and most road-access visitors break the journey with an overnight stop in Gulu.",
   whereToStay: [
     {
       category: 'Luxury',
@@ -805,6 +879,8 @@ const kidepo: Park = {
     { label: 'Cash', body: 'There are no ATMs in the remote Karamoja region — bring sufficient cash for the duration of your stay, as resupply is difficult.' },
     { label: 'Recommended Stay', body: 'A minimum of 3–4 nights is recommended given the effort of reaching Kidepo — enough time to properly explore the Narus Valley and beyond.' },
     { label: 'Connectivity', body: 'Mobile connectivity is very limited in the park — Airtel has some coverage near Apoka, but do not rely on a signal elsewhere.' },
+    { label: 'Book Well in Advance', body: 'Apoka Safari Lodge and other camps have very limited capacity — book as early as possible, especially for the dry season.' },
+    { label: 'Karamoja Safety', body: "The Karamoja region is politically stable and safe for tourists. Its history of cattle raiding has given it an unwarranted reputation — the park and surrounding area are entirely safe under park management." },
   ],
 }
 
@@ -848,7 +924,23 @@ const semuliki: Park = {
       image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
     },
   ],
-  activities: [],
+  activities: [
+    {
+      title: 'Batwa Forest Heritage',
+      body: "Semuliki borders the territory of the Batwa pygmy people, whose ancestors have deep historical connections to this Congo Basin forest — a meaningful cultural dimension to a Semuliki visit.",
+      image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
+    },
+    {
+      title: 'Forest Elephant Sign-Tracking',
+      body: "Semuliki's dense lowland forest is home to elusive forest elephants — guides read tracks, dung and browsed vegetation to piece together their movements through the undisturbed rainforest.",
+      image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
+    },
+    {
+      title: 'Congo Basin Rainforest Walk',
+      body: "Beyond the hot springs and birding, guided walks through Semuliki's ancient lowland forest reveal an ecosystem with strong central African affinities found nowhere else in Uganda.",
+      image: '/images/activities/birding/lensoffthegreen-1748944212110.webp',
+    },
+  ],
   faqs: [
     {
       q: 'What makes Semuliki special for birdwatching?',
@@ -883,10 +975,11 @@ const semuliki: Park = {
     },
   ],
   practicalInfo: [
+    { label: 'Park & Activity Fees', body: 'USD 40 per person per day, which includes hot springs entry. Night walks cost an additional USD 20 per person.' },
     { label: 'What to Pack', body: 'Binoculars and a good field guide are essential — Semuliki rewards serious birders far more than casual visitors. Bring lightweight rain gear, closed shoes, and insect repellent for the humid forest.' },
     { label: 'Specialist Guides', body: 'A specialist birding guide is strongly recommended to locate and identify the Congo Basin endemics by call.' },
-    { label: 'Recommended Stay', body: 'One night combined with an early-morning birding walk and a visit to the Sempaya Hot Springs covers the essentials; serious birders often stay two nights to maximise species counts.' },
-    { label: 'Connectivity', body: 'Mobile coverage is limited within the forest. Fort Portal, 1.5 hours away, has full connectivity.' },
+    { label: 'Recommended Stay', body: 'Best experienced as a 2–3 day extension from Fort Portal, combined with Kibale National Park.' },
+    { label: 'Connectivity', body: 'Mobile connectivity is very limited — Airtel has some signal near Bundibugyo. Bring sufficient cash and any personal medications.' },
   ],
 }
 
@@ -942,7 +1035,23 @@ const entebbe: Park = {
       image: '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.webp',
     },
   ],
-  activities: [],
+  activities: [
+    {
+      title: "Stroll Entebbe's Lakeshore Gardens",
+      body: "Wander the graceful, colonial-era streets and beautiful lakeshore gardens that give Entebbe its unhurried, leafy character — a world away from the bustle of Kampala 40km north.",
+      image: '/images/lodges/uganda/entebbe-hotels/karibu-guesthouse/1karibu-guest-house-entebbe-52473407576-o.webp',
+    },
+    {
+      title: 'Relax at Your Pre- or Post-Safari Base',
+      body: "Most international visitors spend at least one night here on arrival or departure — Entebbe's pleasant, lake-moderated climate and idyllic lakeshore hotels make it a far more relaxed staging point than the capital.",
+      image: '/images/parks/uganda/lake-mburo/16498738142-978e9993ef-o.webp',
+    },
+    {
+      title: 'Get Around by Boda-Boda',
+      body: "Entebbe's airport area and main town are compact and easy to navigate on foot or by boda-boda, with excellent 4G coverage throughout for staying connected between flights.",
+      image: '/images/parks/uganda/lake-bunyonyi/image-20260406160732.webp',
+    },
+  ],
   gettingThere:
     "Entebbe International Airport (EBB) is the primary international gateway to Uganda, receiving flights from Nairobi, Addis Ababa, Dubai, Amsterdam, London, Johannesburg, Kigali, and many other destinations. The town is directly adjacent to the airport — just 5 minutes by road. From Kampala: 40–60 minutes by private transfer or taxi (longer during peak traffic). Entebbe is also the hub for all Uganda domestic flights: Aerolink Uganda and BAA Uganda operate scheduled services to Kihihi (Bwindi/Queen Elizabeth), Pakuba and Chobe (Murchison Falls), Kisoro (Mgahinga), and other destinations.",
   whereToStay: [
@@ -1054,7 +1163,23 @@ const kampala: Park = {
       image: '/images/parks/uganda/lake-mburo/52760819657-a6f9d6bf99-o.webp',
     },
   ],
-  activities: [],
+  activities: [
+    {
+      title: 'Kabalagala Nightlife',
+      body: "Kampala's neon-lit nightlife strip comes alive after dark with bars, live music and restaurants — a lively counterpoint to the city's historic sites.",
+      image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
+    },
+    {
+      title: 'Rolex Food Tour',
+      body: "Sample Uganda's most beloved street food — the rolex, a rolled omelette and vegetables wrapped in chapati — from street vendors across the city. A culinary adventure costing less than a dollar.",
+      image: '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.webp',
+    },
+    {
+      title: 'Lake Victoria Shoreline',
+      body: "Kampala is built across seven hills overlooking the northern shores of Lake Victoria, Africa's largest lake — a tranquil counterpoint to the city's energy.",
+      image: '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.webp',
+    },
+  ],
   gettingThere:
     "Entebbe International Airport (EBB), located 40km south of Kampala on the Lake Victoria peninsula, is Uganda's only international airport. It receives direct flights from Nairobi (Kenya Airways, Ethiopian Airlines), Addis Ababa (Ethiopian Airlines), Dubai (Emirates), Amsterdam (KLM), London (British Airways), Johannesburg (South African Airways, RwandAir), Kigali (RwandAir), Brussels (Brussels Airlines) and multiple other African hubs. Travel time from Entebbe Airport to Kampala city centre is 45 minutes to 1.5 hours depending on traffic conditions (morning and evening rush hours can be very congested). Options include a registered taxi (approximately USD 30–50), pre-booked private transfers (recommended), or ride-hailing apps (Bolt, SafeBoda). By road from neighbouring countries: Kigali is 8–9 hours, Nairobi 10–12 hours via Jinja and Eldoret, and Dar es Salaam 18–20 hours.",
   whereToStay: [
@@ -1154,7 +1279,23 @@ const serengetiPark = {
       image: '/images/destinations/tanzania/sayari-lioness.webp',
     },
   ],
-  activities: [],
+  activities: [
+    {
+      title: 'Hot Air Balloon at Sunrise',
+      body: 'Drift over the Serengeti in a dawn balloon flight, watching herds of wildebeest, elephant and giraffe below before landing for a champagne breakfast in the bush.',
+      image: '/images/destinations/tanzania/dunia-camp-game-drive-vehicle-lookout-hr-eliza-deacon1.webp',
+    },
+    {
+      title: 'Wild Dog Tracking',
+      body: "Work with specialist guides to track African wild dog packs in the northern Serengeti — one of Africa's most rewarding and elusive big carnivore encounters.",
+      image: '/images/destinations/tanzania/sayari-elephant.webp',
+    },
+    {
+      title: 'Night Drive in a Private Concession',
+      body: "Stay in a Serengeti concession — Lamai, Klein's or Loliondo — for exclusive night drives targeting aardvark, leopard, serval and other nocturnal species.",
+      image: '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.webp',
+    },
+  ],
   gettingThere:
     "The Serengeti is accessed via Arusha — approximately 8–9 hours by road, or 1–2 hours by charter flight from Kilimanjaro or Arusha airports. Several airstrips within the park (Seronera, Kogatende, Lobo and Grumeti) receive scheduled and charter flights daily. Flying into the Serengeti is strongly recommended over the long, rough road journey.",
   whereToStay: [
@@ -1282,6 +1423,11 @@ const ngorongoroPark = {
       title: 'Ngorongoro Highlands Walking Safari',
       body: "Multi-day guided walks through the crater highlands with Maasai guides, camping under star-filled skies in some of Tanzania's most dramatic and least-visited terrain — a rewarding, active alternative to game drives.",
       image: '/images/destinations/tanzania/dunia-view-from-the-main-area.webp',
+    },
+    {
+      title: 'Bush Lunch on the Crater Floor',
+      body: 'Experience a guided bush lunch on the crater floor, dining in the open wilderness with the sounds of the ecosystem all around.',
+      image: '/images/destinations/tanzania/dunia-camp-game-drive-serengeti-safari-2.webp',
     },
   ],
   gettingThere:
@@ -1569,7 +1715,23 @@ const arushaPark = {
       image: '/images/destinations/tanzania/dunia-seronera-river.webp',
     },
   ],
-  activities: [],
+  activities: [
+    {
+      title: 'Combine with a Uganda Safari',
+      body: 'Connecting flights from Entebbe to Kilimanjaro via Nairobi run under two hours, making Arusha a natural link for travellers combining gorilla trekking with a Tanzania safari.',
+      image: '/images/destinations/tanzania/dunia-view-from-the-main-area.webp',
+    },
+    {
+      title: 'A Temperate Highland Climate',
+      body: "Set at 1,400m in the shadow of Mount Meru, Arusha enjoys a cool, comfortable climate year-round — a pleasant contrast to the heat of the parks that follow.",
+      image: '/images/destinations/tanzania/kite-in-lodge1.webp',
+    },
+    {
+      title: 'Choose a Reputable Operator',
+      body: 'Arusha has hundreds of safari operators ranging from highly reputable to unreliable — always book through an established operator with verifiable references before heading into the parks.',
+      image: '/images/destinations/tanzania/forest-walk-096.webp',
+    },
+  ],
   gettingThere:
     'Arusha is served by Kilimanjaro International Airport (JRO), 50km east of the city, with connections from Nairobi, Dar es Salaam, Addis Ababa, Dubai, Amsterdam and London. Arusha Airport (ARK) in the city centre serves domestic and charter routes. Bus services connect Arusha to Nairobi (5–6 hours) and Dar es Salaam (10–12 hours).',
   whereToStay: [
@@ -1926,6 +2088,11 @@ const tarangirePark = {
       title: 'Hot Air Balloon Safari',
       body: "Float over Tarangire's baobab plains at dawn, watching elephant herds and lion prides from above in an utterly magical aerial perspective.",
       image: '/images/destinations/tanzania/dunia-lion-and-plane-in-the-serengeti.webp',
+    },
+    {
+      title: 'Sunset Sundowners by a Baobab',
+      body: 'End the day with cold sundowners beside an ancient baobab as the savannah turns amber in the fading light — the quintessential Tarangire experience.',
+      image: '/images/destinations/tanzania/dunia-view-from-the-main-area.webp',
     },
   ],
   gettingThere:
@@ -2353,7 +2520,23 @@ export const countries: Record<string, Country> = {
             image: '/images/destinations/rwanda/image-20260331125636.webp',
           },
         ],
-        activities: [],
+        activities: [
+          {
+            title: 'Acclimatise in Kigali First',
+            body: 'The park sits at 2,400–4,500m, so allowing a day to acclimatise in Kigali (1,500m) before trekking helps minimise altitude effects on the volcanic slopes.',
+            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-15.webp',
+          },
+          {
+            title: 'Every Permit Funds Conservation',
+            body: 'The USD 1,500 trekking permit fee directly funds park management, anti-poaching operations and community development programmes across the Virunga Massif.',
+            image: '/images/activities/gorilla-trekking/17-gorilla-ah1i6854.webp',
+          },
+          {
+            title: "A Trek Shaped by the Gorillas' Day",
+            body: 'Treks range from 1 to 7 hours depending on where the gorilla family has settled that morning — part of the unpredictability that makes each trek unique.',
+            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-29.webp',
+          },
+        ],
         gettingThere:
           "Volcanoes National Park is approximately 2–3 hours by road from Kigali (110km). Most visitors are transferred by their tour operator from Kigali hotels to the park briefing point at 7:00am for the morning trek. The nearest town is Musanze (Ruhengeri), which has basic accommodation options. Still Wild Safaris arranges all transport and logistics for Kigali-based gorilla trekking departures.",
         whereToStay: [
@@ -2447,7 +2630,23 @@ export const countries: Record<string, Country> = {
             image: '/images/parks/rwanda/akagera/wilderness-magashi-19.webp',
           },
         ],
-        activities: [],
+        activities: [
+          {
+            title: 'Self-Drive Safari',
+            body: 'Self-drive safaris are permitted in Akagera, with roads generally accessible in 2WD during the dry season — a rare freedom among East African Big Five parks.',
+            image: '/images/parks/rwanda/akagera/wilderness-magashi-7.webp',
+          },
+          {
+            title: 'Night Game Drive',
+            body: 'Book ahead for a guided night drive, departing around 6:00pm and returning by 9:00pm, for a chance at nocturnal species not seen on daytime drives.',
+            image: '/images/parks/rwanda/akagera/wilderness-magashi-31.webp',
+          },
+          {
+            title: 'African Parks Conservation Model',
+            body: 'Managed in partnership between the Rwanda Development Board and African Parks since 2010, Akagera stands as a model for African wildlife management and rewilding.',
+            image: '/images/parks/rwanda/akagera/1738327984199-magashi-boating-12-24-tc-025.webp',
+          },
+        ],
         gettingThere:
           "Akagera National Park is approximately 2.5–3 hours east of Kigali by road (90km). The main gate is near Kayonza on the highway to Tanzania. Most visitors are driven by their tour operator or can arrange transfers from Kigali. There is no commercial air access to the park.",
         whereToStay: [
@@ -2659,7 +2858,23 @@ export const countries: Record<string, Country> = {
             image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.webp',
           },
         ],
-        activities: [],
+        activities: [
+          {
+            title: '310 Bird Species',
+            body: 'Over 310 recorded bird species, including 29 Albertine Rift endemics, make Nyungwe a rewarding stop for birders alongside its exceptional primate viewing.',
+            image: '/images/parks/rwanda/volcanoes/wilderness-bisate-15.webp',
+          },
+          {
+            title: 'Headwaters of the Nile',
+            body: "Nyungwe's forest protects the headwaters of the Nile River, adding historical and geographical significance to one of Africa's oldest rainforests.",
+            image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
+          },
+          {
+            title: 'Tea Estate Views',
+            body: 'One&Only Nyungwe House sits within a working tea estate at the forest edge, with sweeping views across the plantation to the ancient canopy beyond.',
+            image: '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.webp',
+          },
+        ],
         gettingThere:
           "Nyungwe Forest is approximately 5–6 hours by road from Kigali (225km south-west). Most visitors travel via Huye (Butare), Rwanda's second city. The park entrance at Uwinka is on the main Huye–Cyangugu highway. Some travellers combine Nyungwe with a Lake Kivu stay, arriving via the scenic road from Cyangugu. Domestic flights may connect Kigali to Kamembe airport near the forest.",
         whereToStay: [
@@ -3148,7 +3363,23 @@ export const countries: Record<string, Country> = {
             image: '/images/parks/kenya/amboseli/amboseli-waterhole.webp',
           },
         ],
-        activities: [],
+        activities: [
+          {
+            title: 'Maasai Cultural Village Visit',
+            body: "Visit a Maasai village bordering the park to meet community members, learn about traditional customs, and see beadwork and craft demonstrations — a meaningful complement to the game drives.",
+            image: '/images/parks/kenya/amboseli/amboseli-elephants.webp',
+          },
+          {
+            title: 'Pair with Tsavo',
+            body: "Amboseli pairs naturally with neighbouring Tsavo for a complete southern Kenya circuit, combining elephant herds under Kilimanjaro with Tsavo's vast red-earth wilderness.",
+            image: '/images/parks/kenya/amboseli/amboseli-waterhole.webp',
+          },
+          {
+            title: 'Best Light for Kilimanjaro Photography',
+            body: "Kilimanjaro's cloud cap is most likely to lift in early morning and late afternoon — plan your game drives around these windows for the classic shot.",
+            image: '/images/parks/kenya/amboseli/sundowner-on-observation-hill-overlooking-mt-kilimanjaro.webp',
+          },
+        ],
         gettingThere:
           'Fly from Wilson Airport to Amboseli airstrip in 45 minutes, or drive from Nairobi in approximately 4 hours via Namanga.',
         whereToStay: [
@@ -3364,7 +3595,23 @@ export const countries: Record<string, Country> = {
             image: '/images/parks/kenya/samburu/grevys-zebra.webp',
           },
         ],
-        activities: [],
+        activities: [
+          {
+            title: 'Samburu Cultural Village Visit',
+            body: "Visit a traditional Samburu manyatta, meeting warrior families and seeing the extraordinary beaded jewellery, warrior demonstrations, and livestock culture of a Nilo-Cushitic community closely related to the Maasai.",
+            image: '/images/parks/kenya/samburu/kenya-8346.webp',
+          },
+          {
+            title: 'Beat the Heat',
+            body: 'Samburu averages 30–35°C — start game drives before 7am and rest from midday to 4pm, as lodges are designed around the heat with airy architecture and pools.',
+            image: '/images/parks/kenya/samburu/sasaab-1.webp',
+          },
+          {
+            title: 'Camel Safari',
+            body: "Explore the wider Samburu landscape on a traditional camel trek with local Samburu guides, experiencing the terrain as the community has for generations.",
+            image: '/images/parks/kenya/samburu/grevys-zebra.webp',
+          },
+        ],
         gettingThere:
           "Samburu is approximately 6 hours by road from Nairobi (350km north) via Isiolo. Charter flights from Nairobi's Wilson Airport reach Samburu airstrip in approximately 1 hour. Most visitors fly up and drive back, or combine Samburu with a Laikipia stop on a circuit.",
         whereToStay: [
@@ -3553,7 +3800,23 @@ export const countries: Record<string, Country> = {
             image: '/images/parks/kenya/lake-nakuru/baboon-cliff-view.webp',
           },
         ],
-        activities: [],
+        activities: [
+          {
+            title: 'Lake Shore Walk with Rangers',
+            body: "Walk sections of the lake shore with armed rangers for a close-range encounter with flamingos, pelicans and waterbirds — a rare on-foot perspective in a Kenyan park.",
+            image: '/images/parks/kenya/lake-nakuru/rhinos-lake-nakuru.webp',
+          },
+          {
+            title: 'Combine with Lake Naivasha',
+            body: 'Lake Naivasha is just 60km from Nakuru, making a two-lake Rift Valley circuit easily achievable in a single day.',
+            image: '/images/parks/kenya/lake-nakuru/flamingos-lake-nakuru.webp',
+          },
+          {
+            title: 'A Poaching-Free Sanctuary',
+            body: "The park is entirely enclosed by a 74km electric security fence, which has successfully eliminated poaching and created one of Africa's highest rhino densities.",
+            image: '/images/parks/kenya/lake-nakuru/baboon-cliff-view.webp',
+          },
+        ],
         gettingThere:
           "Lake Nakuru is approximately 160km from Nairobi — about 2.5–3 hours by road via the A104 highway. The nearest town is Nakuru city, Kenya's fourth largest, with good road links. No regular scheduled flights serve Nakuru directly.",
         whereToStay: [
@@ -3643,7 +3906,23 @@ export const countries: Record<string, Country> = {
             image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-popping-in-for-treats.webp',
           },
         ],
-        activities: [],
+        activities: [
+          {
+            title: 'Breakfast with Giraffes at Giraffe Manor',
+            body: "Nairobi's most famous boutique hotel, where resident Rothschild's giraffes roam the grounds and famously poke their heads through the breakfast room windows — book 18+ months ahead.",
+            image: '/images/lodges/kenya/nairobi/giraffe-manor/giraffes-at-giraffe-manor-1.webp',
+          },
+          {
+            title: 'Karen Blixen Museum',
+            body: 'Tour the beautifully preserved farmhouse where Karen Blixen lived and wrote, surrounded by the Ngong Hills she described in Out of Africa.',
+            image: '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.webp',
+          },
+          {
+            title: "Nairobi's Safari Hub",
+            body: "As the natural hub for Kenya's national parks, Nairobi puts the Maasai Mara, Amboseli, Samburu and the Rift Valley lakes all within half a day's drive.",
+            image: '/images/parks/kenya/masai-mara/activites-game-drive.webp',
+          },
+        ],
         gettingThere:
           "Nairobi is served by Jomo Kenyatta International Airport (NBO), one of Africa's busiest hubs with direct connections to London, Dubai, Amsterdam, Addis Ababa, Johannesburg, and most major African cities. Wilson Airport serves domestic and safari charter flights. Overland, Nairobi is approximately 8–9 hours from Kampala by road.",
         whereToStay: [
