@@ -25,6 +25,7 @@ const partners = [
   { label: 'One & Only', logo: '/images/logos/partners/one-and-only.jpg' },
   { label: 'Marriott', logo: '/images/logos/partners/marriot.png' },
   { label: 'MARASA Africa', logo: '/images/logos/partners/marasa-africa.png' },
+  { label: 'Africa Safaris', logo: '/images/logos/partners/africa-safaris.png', href: 'https://www.africa-safaris.com' },
 ]
 
 const destinations = [
@@ -37,17 +38,28 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white/75">
       <div className="container-page pb-10 pt-14 sm:pt-16">
-        <div className="grid grid-cols-2 items-center gap-6 border-b border-white/10 pb-10 sm:grid-cols-4 sm:gap-10">
-          {partners.map((p) => (
-            <div key={p.label} className="flex items-center justify-center">
+        <div className="grid grid-cols-2 items-center gap-6 border-b border-white/10 pb-10 sm:grid-cols-5 sm:gap-10">
+          {partners.map((p) => {
+            const img = (
               <img
                 src={p.logo}
                 alt={p.label}
                 loading="lazy"
                 className="h-10 w-auto max-w-[140px] object-contain opacity-70 invert mix-blend-screen transition hover:opacity-100 sm:h-12 sm:max-w-[160px]"
               />
-            </div>
-          ))}
+            )
+            return (
+              <div key={p.label} className="flex items-center justify-center">
+                {p.href ? (
+                  <a href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.label}>
+                    {img}
+                  </a>
+                ) : (
+                  img
+                )}
+              </div>
+            )
+          })}
         </div>
 
         <div className="mt-12 text-center">
