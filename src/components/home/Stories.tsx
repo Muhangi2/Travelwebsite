@@ -36,7 +36,16 @@ export default function Stories() {
             <p className="eyebrow">Journal</p>
             <h2 className="mt-3">Stories from the Wild</h2>
             <p className="mx-auto mt-4 max-w-xl text-sm text-brand-muted sm:text-base">
-              Travel tales, wildlife moments and behind-the-scenes safari life from East Africa.
+              Travel tales, wildlife moments and behind-the-scenes{' '}
+              <a
+                href="https://safarioptions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-700"
+              >
+                safari
+              </a>{' '}
+              life from East Africa.
             </p>
           </div>
         </Reveal>
