@@ -16,15 +16,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom') || id.includes('node_modules/react-router-dom')) return 'react'
-          if (id.includes('node_modules/@sanity') || id.includes('node_modules/@portabletext')) return 'sanity'
-          if (id.includes('node_modules/mapbox-gl')) return 'mapbox'
-        },
-      },
-    },
-  },
 })
