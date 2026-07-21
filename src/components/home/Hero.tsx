@@ -13,7 +13,9 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
+        // Autoplay starts the request when it is needed; preloading the full
+        // 35 MB movie competes with the page's first meaningful content.
+        preload="metadata"
         src={videoSrc}
       />
 
