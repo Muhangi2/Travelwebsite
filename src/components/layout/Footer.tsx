@@ -29,7 +29,7 @@ const partners = [
 ]
 
 const destinations = [
-  { label: 'Explore Uganda — The Pearl of Africa', logo: '/images/logos/tourism-boards/explore-uganda.png', light: true },
+  { label: 'Explore Uganda The Pearl of Africa', logo: '/images/logos/tourism-boards/explore-uganda.png', light: true },
   { label: 'Magical Kenya', logo: '/images/logos/tourism-boards/magical-kenya-logo.png', light: false },
   { label: 'Visit Rwanda', logo: '/images/logos/tourism-boards/visit-rwanda-logo.jpg', light: false },
 ]

@@ -27,19 +27,19 @@ export const experiences: Experience[] = [
     cta: 'Explore Gorilla Trekking',
     image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
     tagline:
-      'A guided, hour-long audience with one of Earth’s last 1,000 mountain gorillas — in the mountains where they were first protected.',
+      'A guided, hour-long audience with one of Earth’s last 1,000 mountain gorillas in the mountains where they were first protected.',
     intro: [
       'A mountain gorilla trek is unlike any other wildlife encounter. After a briefing at the park headquarters, a small group of no more than eight travellers sets off on foot, led by trackers who have followed your assigned family since dawn. The hike can take anywhere from an hour to most of a day, climbing through bamboo, vines and equatorial mist.',
-      'When you reach the family, the protocol is hushed and respectful: seven metres of distance, no flash, and exactly sixty minutes in their presence. What follows is an experience guests describe more like a quiet meeting than a sighting — a silverback dozing, juveniles tumbling, a mother nursing — entirely unbothered by your presence.',
+      'When you reach the family, the protocol is hushed and respectful: seven metres of distance, no flash, and exactly sixty minutes in their presence. What follows is an experience guests describe more like a quiet meeting than a sighting a silverback dozing, juveniles tumbling, a mother nursing entirely unbothered by your presence.',
     ],
     highlights: [
       {
         title: 'Permits Secured in Advance',
-        body: 'We hold a small allocation of Bwindi and Volcanoes permits each season — including the rare habituation experience permits in Uganda for guests who want four hours instead of one.',
+        body: 'We hold a small allocation of Bwindi and Volcanoes permits each season including the rare habituation experience permits in Uganda for guests who want four hours instead of one.',
       },
       {
         title: 'Luxury Lodges at the Trailhead',
-        body: 'Stays at Bisate Lodge, Sabyinyo Silverback, One&Only Gorilla’s Nest or Bwindi Lodge — each within a short drive of the park gate, so you trek rested and return to a hot bath and a fire.',
+        body: 'Stays at Bisate Lodge, Sabyinyo Silverback, One&Only Gorilla’s Nest or Bwindi Lodge each within a short drive of the park gate, so you trek rested and return to a hot bath and a fire.',
       },
       {
         title: 'Private Porters & Guides',
@@ -51,7 +51,7 @@ export const experiences: Experience[] = [
         name: 'Bwindi Impenetrable Forest',
         country: 'Uganda',
         description:
-          'Home to nearly half of the world’s mountain gorillas. Four sectors — Buhoma, Ruhija, Rushaga, Nkuringo — each with different habituated families and varying trek difficulty.',
+          'Home to nearly half of the world’s mountain gorillas. Four sectors Buhoma, Ruhija, Rushaga, Nkuringo each with different habituated families and varying trek difficulty.',
         image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.webp',
       },
       {
@@ -65,7 +65,7 @@ export const experiences: Experience[] = [
         name: 'Mgahinga Gorilla Park',
         country: 'Uganda',
         description:
-          'The quiet alternative — one habituated family, dramatic Virunga scenery and the chance to combine gorilla and golden monkey treks in one day.',
+          'The quiet alternative one habituated family, dramatic Virunga scenery and the chance to combine gorilla and golden monkey treks in one day.',
         image: '/images/activities/gorilla-trekking/34-mount-gahinga-lodge-gorilla.webp',
       },
     ],
@@ -86,19 +86,19 @@ export const experiences: Experience[] = [
     cta: 'Discover Chimpanzee Expeditions',
     image: '/images/destinations/tanzania/chimp-habituation-project1.webp',
     tagline:
-      'Track our closest living relatives through equatorial forest in Kibale, Nyungwe and Kyambura — where their calls are heard long before they are seen.',
+      'Track our closest living relatives through equatorial forest in Kibale, Nyungwe and Kyambura where their calls are heard long before they are seen.',
     intro: [
-      'Chimpanzee tracking is loud, kinetic and fast — the opposite of a gorilla encounter. Habituated chimp communities of 80 to 150 individuals roam over wide ranges, and your guides use audible cues — pant-hoots, drumming, branch-cracking — to converge on the group.',
+      'Chimpanzee tracking is loud, kinetic and fast the opposite of a gorilla encounter. Habituated chimp communities of 80 to 150 individuals roam over wide ranges, and your guides use audible cues pant-hoots, drumming, branch-cracking to converge on the group.',
       'Once with them, the forest theatre unfolds: juveniles wrestling overhead, adults grooming on the trail, hunting parties moving fast through the canopy. Standard treks give one hour with the chimps; habituation experiences in Kibale offer a full morning with researchers as they record behaviour.',
     ],
     highlights: [
       {
         title: 'Habituation Experience',
-        body: 'In Kibale, join the habituation team for four to six hours — far quieter, far closer access, and limited to four guests per day.',
+        body: 'In Kibale, join the habituation team for four to six hours far quieter, far closer access, and limited to four guests per day.',
       },
       {
         title: 'Forest Lodges',
-        body: 'Stay at Kyaninga, Ndali or Kibale Lodge in Uganda; One&Only Nyungwe House in Rwanda — all built into the forest with vast verandas overlooking it.',
+        body: 'Stay at Kyaninga, Ndali or Kibale Lodge in Uganda; One&Only Nyungwe House in Rwanda all built into the forest with vast verandas overlooking it.',
       },
       {
         title: 'Twin-Primate Combinations',
@@ -110,7 +110,7 @@ export const experiences: Experience[] = [
         name: 'Kibale Forest',
         country: 'Uganda',
         description:
-          'The continent’s primate capital — 13 species of primate in one forest, and the world’s most reliable chimpanzee tracking, with habituation experiences available.',
+          'The continent’s primate capital 13 species of primate in one forest, and the world’s most reliable chimpanzee tracking, with habituation experiences available.',
         image: '/images/activities/gorilla-trekking/18-kibale-lodge-chimpanzee-tadevs-vs-08183.webp',
       },
       {
@@ -124,7 +124,7 @@ export const experiences: Experience[] = [
         name: 'Kyambura Gorge',
         country: 'Uganda',
         description:
-          'A dramatic forested canyon in Queen Elizabeth National Park — combine a half-day chimp trek with afternoon game drives in the same park.',
+          'A dramatic forested canyon in Queen Elizabeth National Park combine a half-day chimp trek with afternoon game drives in the same park.',
         image: '/images/activities/gorilla-trekking/7-kibale-lodge-chimpanzee-tadevs-vs-08284.webp',
       },
     ],
@@ -145,15 +145,15 @@ export const experiences: Experience[] = [
     cta: 'Learn About Golden Monkey Treks',
     image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.webp',
     tagline:
-      'A bright-orange Old World primate found only on the slopes of the Virunga volcanoes — fast, photogenic and often paired with a gorilla trek.',
+      'A bright-orange Old World primate found only on the slopes of the Virunga volcanoes fast, photogenic and often paired with a gorilla trek.',
     intro: [
-      'Golden monkeys live in troops of up to 80 in the bamboo zones of the Virungas. They are quick, social and far more visible than gorillas — leaping between bamboo, feeding low, and largely unbothered by visitors.',
-      'A trek is typically two to four hours, gentler than a gorilla hike, and many guests combine it with a gorilla trek the previous day. Photographers love them — the bright orange against bamboo green produces some of the most striking primate imagery in Africa.',
+      'Golden monkeys live in troops of up to 80 in the bamboo zones of the Virungas. They are quick, social and far more visible than gorillas leaping between bamboo, feeding low, and largely unbothered by visitors.',
+      'A trek is typically two to four hours, gentler than a gorilla hike, and many guests combine it with a gorilla trek the previous day. Photographers love them the bright orange against bamboo green produces some of the most striking primate imagery in Africa.',
     ],
     highlights: [
       {
         title: 'Easier Trekking',
-        body: 'Shorter and lower-altitude than gorilla treks — a good option for guests building up to (or recovering from) a tougher trek.',
+        body: 'Shorter and lower-altitude than gorilla treks a good option for guests building up to (or recovering from) a tougher trek.',
       },
       {
         title: 'Two-Trek Days',
@@ -169,7 +169,7 @@ export const experiences: Experience[] = [
         name: 'Mgahinga Gorilla Park',
         country: 'Uganda',
         description:
-          'The quieter of the two — habituated troops on the slopes of Sabyinyo and Gahinga, accessed from Mount Gahinga Lodge.',
+          'The quieter of the two habituated troops on the slopes of Sabyinyo and Gahinga, accessed from Mount Gahinga Lodge.',
         image: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.webp',
       },
       {
@@ -197,7 +197,7 @@ export const experiences: Experience[] = [
     cta: 'Plan Your Rafting Adventure',
     image: '/images/parks/rwanda/akagera/1738327984197-magashi-boating-12-24-tc-021.webp',
     tagline:
-      'Grade V rapids at the source of the world’s longest river — paired with luxury riverside lodges and private guides.',
+      'Grade V rapids at the source of the world’s longest river paired with luxury riverside lodges and private guides.',
     intro: [
       'Jinja, where the White Nile leaves Lake Victoria, is one of three places on Earth that offers commercial Grade V rafting. We work with the most experienced safety-rated operators on the river, and arrange private boats with no more than four guests plus crew.',
       'Half-day and full-day options are available, all with riverside lunches, hot showers afterwards, and the option to combine with kayaking, sunset boat cruises or a flat-water family-friendly section.',
@@ -205,11 +205,11 @@ export const experiences: Experience[] = [
     highlights: [
       {
         title: 'Private Boats',
-        body: 'We book entire rafts so your group runs the river at your pace, with your own guide — no shuffling between strangers.',
+        body: 'We book entire rafts so your group runs the river at your pace, with your own guide no shuffling between strangers.',
       },
       {
         title: 'Riverside Stays',
-        body: 'Wildwaters Lodge sits on a private island in the middle of the rapids — fall asleep to the sound of the cataracts.',
+        body: 'Wildwaters Lodge sits on a private island in the middle of the rapids fall asleep to the sound of the cataracts.',
       },
       {
         title: 'Mixed-Ability Options',
@@ -221,7 +221,7 @@ export const experiences: Experience[] = [
         name: 'Jinja & the Source of the Nile',
         country: 'Uganda',
         description:
-          'Grade III–V rapids over a long stretch of warm water — runnable year-round, with the biggest water in March–May and October–November.',
+          'Grade III–V rapids over a long stretch of warm water runnable year-round, with the biggest water in March–May and October–November.',
       },
     ],
     gallery: [
@@ -240,15 +240,15 @@ export const experiences: Experience[] = [
     cta: 'Explore Boat Cruise Safaris',
     image: '/images/activities/game-drive/boating-safari-hippo-spot2.webp',
     tagline:
-      'A different vantage on the same wildlife — slow, silent, water-level, and unmatched for elephants, hippos and waterbirds.',
+      'A different vantage on the same wildlife slow, silent, water-level, and unmatched for elephants, hippos and waterbirds.',
     intro: [
-      'Africa’s great rivers and lakes concentrate wildlife along their banks. A boat safari brings you within metres of an elephant herd drinking, or a yawning hippo, or a fish eagle striking — angles that simply aren’t available from a vehicle.',
+      'Africa’s great rivers and lakes concentrate wildlife along their banks. A boat safari brings you within metres of an elephant herd drinking, or a yawning hippo, or a fish eagle striking angles that simply aren’t available from a vehicle.',
       'We book private boats wherever possible (typically four to eight guests), with your own skipper-guide and timing built around golden hour. Cruises pair perfectly with morning or afternoon game drives in the same park.',
     ],
     highlights: [
       {
         title: 'Private Vessels',
-        body: 'Avoid the larger 30-seat cruisers — our boats hold your group only, with binoculars, drinks and a guide who knows the residents.',
+        body: 'Avoid the larger 30-seat cruisers our boats hold your group only, with binoculars, drinks and a guide who knows the residents.',
       },
       {
         title: 'Golden-Hour Timing',
@@ -256,7 +256,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Specialist Birding',
-        body: 'Our skipper-guides are some of the best birders in their parks — bring a list, leave with surprises.',
+        body: 'Our skipper-guides are some of the best birders in their parks bring a list, leave with surprises.',
       },
     ],
     locations: [
@@ -264,7 +264,7 @@ export const experiences: Experience[] = [
         name: 'Kazinga Channel',
         country: 'Uganda',
         description:
-          '32 km of water linking Lake Edward and Lake George — Africa’s densest hippo and elephant concentration along a single waterway.',
+          '32 km of water linking Lake Edward and Lake George Africa’s densest hippo and elephant concentration along a single waterway.',
       },
       {
         name: 'Murchison Falls (Victoria Nile)',
@@ -276,7 +276,7 @@ export const experiences: Experience[] = [
         name: 'Lake Naivasha',
         country: 'Kenya',
         description:
-          'Hippos, fish eagles and Crescent Island game walks — a peaceful Rift Valley counterpoint to the Mara.',
+          'Hippos, fish eagles and Crescent Island game walks a peaceful Rift Valley counterpoint to the Mara.',
       },
     ],
     gallery: [
@@ -297,8 +297,8 @@ export const experiences: Experience[] = [
     tagline:
       'A predawn lift-off, a silent hour over open plains, and a sparkling-wine breakfast laid out beneath an acacia.',
     intro: [
-      'A balloon safari is a ritual: a 4am wake-up, a drive in the dark to the launch site, the burner lighting the inside of the balloon as the sky greys. Then you’re up — at first low over the dew-wet grass, then climbing for a wider view as the sun crests the horizon.',
-      'Drift time is roughly an hour. On landing, a full bush breakfast — eggs, pastries, fresh fruit, sparkling wine, coffee — is laid out under acacias, often with a giraffe or two as company.',
+      'A balloon safari is a ritual: a 4am wake-up, a drive in the dark to the launch site, the burner lighting the inside of the balloon as the sky greys. Then you’re up at first low over the dew-wet grass, then climbing for a wider view as the sun crests the horizon.',
+      'Drift time is roughly an hour. On landing, a full bush breakfast eggs, pastries, fresh fruit, sparkling wine, coffee is laid out under acacias, often with a giraffe or two as company.',
     ],
     highlights: [
       {
@@ -307,7 +307,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Two-Guest Baskets',
-        body: 'On request we book private compartments so couples don’t share a basket — at a premium, but worth it.',
+        body: 'On request we book private compartments so couples don’t share a basket at a premium, but worth it.',
       },
       {
         title: 'Photographer-Friendly',
@@ -319,7 +319,7 @@ export const experiences: Experience[] = [
         name: 'Serengeti National Park',
         country: 'Tanzania',
         description:
-          'Launch sites in the central and southern Serengeti — best views over the calving grounds in February.',
+          'Launch sites in the central and southern Serengeti best views over the calving grounds in February.',
       },
       {
         name: 'Masai Mara',
@@ -340,13 +340,13 @@ export const experiences: Experience[] = [
     title: 'Cultural & Community Experiences: The Heart of Africa',
     shortTitle: 'Cultural Experiences',
     excerpt:
-      "Immerse yourself in East Africa's living cultures — Batwa, Maasai, Karamojong and many more.",
+      "Immerse yourself in East Africa's living cultures Batwa, Maasai, Karamojong and many more.",
     cta: 'Discover Cultural Journeys',
     image: '/images/activities/game-drive/cocktail.webp',
     tagline:
-      'Authentic, dignified time with communities — beyond the souvenir-stall stereotype, with profit returning to the people you meet.',
+      'Authentic, dignified time with communities beyond the souvenir-stall stereotype, with profit returning to the people you meet.',
     intro: [
-      'A proper cultural visit is not a performance. We work only with community-led programmes where the people you meet have invited visitors on their own terms — and where revenue funds schools, clinics and conservation.',
+      'A proper cultural visit is not a performance. We work only with community-led programmes where the people you meet have invited visitors on their own terms and where revenue funds schools, clinics and conservation.',
       'These range from a half-day Batwa forest walk in Mgahinga to a multi-day Maasai stay in a private conservancy, joining herders by day and elders around the fire at night.',
     ],
     highlights: [
@@ -368,7 +368,7 @@ export const experiences: Experience[] = [
         name: 'Batwa Communities',
         country: 'Uganda',
         description:
-          'Forest people displaced from Bwindi and Mgahinga — visit traditional homesteads, herbal-medicine demonstrations and a powerful storytelling session.',
+          'Forest people displaced from Bwindi and Mgahinga visit traditional homesteads, herbal-medicine demonstrations and a powerful storytelling session.',
       },
       {
         name: 'Maasai Conservancies',
@@ -380,7 +380,7 @@ export const experiences: Experience[] = [
         name: 'Karamojong of Kidepo',
         country: 'Uganda',
         description:
-          'A remote, rarely-visited pastoralist culture in northeast Uganda — for travellers wanting somewhere genuinely off the map.',
+          'A remote, rarely-visited pastoralist culture in northeast Uganda for travellers wanting somewhere genuinely off the map.',
       },
     ],
     gallery: ['/images/activities/game-drive/cocktail.webp', '/images/activities/game-drive/picnic.webp'],
@@ -397,8 +397,8 @@ export const experiences: Experience[] = [
     tagline:
       'Land on a crater rim. Picnic beside a lake no road reaches. Photograph the migration from 200ft.',
     intro: [
-      'A helicopter doesn’t replace a safari — it unlocks the parts you’d otherwise never see. From the rim of Nyiragongo to the high lakes of the Virungas, our pilots fly Robinson R44s and Bell 407s with experienced safari guides on board.',
-      'Helicopter days are bespoke — anywhere from a 30-minute scenic flight to multi-day adventures landing for fly-camp lunches, sundowners on crater ridges, or doorless photography sorties over Lake Magadi.',
+      'A helicopter doesn’t replace a safari it unlocks the parts you’d otherwise never see. From the rim of Nyiragongo to the high lakes of the Virungas, our pilots fly Robinson R44s and Bell 407s with experienced safari guides on board.',
+      'Helicopter days are bespoke anywhere from a 30-minute scenic flight to multi-day adventures landing for fly-camp lunches, sundowners on crater ridges, or doorless photography sorties over Lake Magadi.',
     ],
     highlights: [
       {
@@ -407,7 +407,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Hidden-Lake Picnics',
-        body: 'Land at lakes that road vehicles can’t reach — Lake Magadi, Bisoke crater, the high tarns of Mount Kenya.',
+        body: 'Land at lakes that road vehicles can’t reach Lake Magadi, Bisoke crater, the high tarns of Mount Kenya.',
       },
       {
         title: 'Add-On Days',
@@ -419,13 +419,13 @@ export const experiences: Experience[] = [
         name: 'Virunga Volcanoes',
         country: 'Rwanda',
         description:
-          'The most photographed flight in Africa — circling Karisimbi, Bisoke and Sabyinyo with the Albertine Rift on the horizon.',
+          'The most photographed flight in Africa circling Karisimbi, Bisoke and Sabyinyo with the Albertine Rift on the horizon.',
       },
       {
         name: 'Northern Kenya',
         country: 'Kenya',
         description:
-          'The Suguta Valley, Lake Turkana, Mount Kenya and Lake Magadi — vast, remote, helicopter-only country.',
+          'The Suguta Valley, Lake Turkana, Mount Kenya and Lake Magadi vast, remote, helicopter-only country.',
       },
     ],
     gallery: [
@@ -444,10 +444,10 @@ export const experiences: Experience[] = [
     cta: 'Arrange a Fly-In Safari',
     image: '/images/activities/helicopter-rwanda/1000045745.webp',
     tagline:
-      'Light aircraft hops between parks — turning a 10-hour drive into a 45-minute window seat.',
+      'Light aircraft hops between parks turning a 10-hour drive into a 45-minute window seat.',
     intro: [
       'East Africa has one of the most developed bush-aviation networks on the planet. Most major parks have one or more airstrips, and operators like Auric Air, Coastal Aviation, Aerolink and Akagera Aviation connect them with light aircraft hops, often multiple times a day.',
-      'A fly-in safari is the simplest way to combine very distant parks — and the most comfortable. Bags go in the hold, you watch the wildlife below, and the next lodge’s vehicle is waiting at the strip.',
+      'A fly-in safari is the simplest way to combine very distant parks and the most comfortable. Bags go in the hold, you watch the wildlife below, and the next lodge’s vehicle is waiting at the strip.',
     ],
     highlights: [
       {
@@ -456,11 +456,11 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Smaller Aircraft',
-        body: 'Most flights are 6-12 seat Cessna Caravans — quiet, low-altitude and great for spotting from the air.',
+        body: 'Most flights are 6-12 seat Cessna Caravans quiet, low-altitude and great for spotting from the air.',
       },
       {
         title: 'Private Charters',
-        body: 'For groups, we arrange private charters with custom routings and timings — no fixed schedules.',
+        body: 'For groups, we arrange private charters with custom routings and timings no fixed schedules.',
       },
     ],
     locations: [
@@ -468,13 +468,13 @@ export const experiences: Experience[] = [
         name: 'Northern Tanzania Circuit',
         country: 'Tanzania',
         description:
-          'Arusha → Tarangire → Serengeti → Ngorongoro by air — each leg under an hour.',
+          'Arusha → Tarangire → Serengeti → Ngorongoro by air each leg under an hour.',
       },
       {
         name: 'Kenya Mara & North',
         country: 'Kenya',
         description:
-          'Wilson Airport in Nairobi to the Mara, Laikipia, Samburu and the Northern Frontier — daily scheduled flights.',
+          'Wilson Airport in Nairobi to the Mara, Laikipia, Samburu and the Northern Frontier daily scheduled flights.',
       },
     ],
     gallery: [
@@ -495,13 +495,13 @@ export const experiences: Experience[] = [
     tagline:
       'Read tracks at dawn, watch a leopard from 30m on foot, sleep at a mobile fly-camp lit by lanterns.',
     intro: [
-      'The walking safari is the original safari. Before the vehicle, this was how it was done — and on foot, the bush takes on detail invisible from a car: tracks, dung, scent, sound.',
-      'We work with senior walking guides — most with armed-ranger backup — in the conservancies of Laikipia, Selous and Loisaba. Walks range from a half-day at a single lodge to multi-day point-to-point traverses with mobile fly-camps.',
+      'The walking safari is the original safari. Before the vehicle, this was how it was done and on foot, the bush takes on detail invisible from a car: tracks, dung, scent, sound.',
+      'We work with senior walking guides most with armed-ranger backup in the conservancies of Laikipia, Selous and Loisaba. Walks range from a half-day at a single lodge to multi-day point-to-point traverses with mobile fly-camps.',
     ],
     highlights: [
       {
         title: 'Senior Guides',
-        body: 'Only the most experienced guides lead walks — many with 20+ years of bush time and rifle certification.',
+        body: 'Only the most experienced guides lead walks many with 20+ years of bush time and rifle certification.',
       },
       {
         title: 'Mobile Fly-Camps',
@@ -509,7 +509,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Specialty Tracking',
-        body: 'On request, dedicated tracking days with conservation researchers — wild dog, cheetah, rhino.',
+        body: 'On request, dedicated tracking days with conservation researchers wild dog, cheetah, rhino.',
       },
     ],
     locations: [
@@ -517,13 +517,13 @@ export const experiences: Experience[] = [
         name: 'Laikipia',
         country: 'Kenya',
         description:
-          'High-altitude plateau north of Mount Kenya — superb walking country with wildlife including elephant, giraffe, lion and rhino.',
+          'High-altitude plateau north of Mount Kenya superb walking country with wildlife including elephant, giraffe, lion and rhino.',
       },
       {
         name: 'Selous (Nyerere) Game Reserve',
         country: 'Tanzania',
         description:
-          'Vast and wild — walking safaris from Roho ya Selous and mobile camps along the Rufiji.',
+          'Vast and wild walking safaris from Roho ya Selous and mobile camps along the Rufiji.',
       },
     ],
     gallery: [
@@ -544,13 +544,13 @@ export const experiences: Experience[] = [
     tagline:
       'Two drives a day in a private 4×4, with the right guide, in the right park, at the right time.',
     intro: [
-      'The classic safari is built around two game drives a day — typically four to five hours each, sandwiching a bush breakfast or a midday rest at the lodge.',
-      'What separates a great game drive from a forgettable one is almost always the guide. We work with a hand-picked roster of senior guides across our preferred parks — many of them silver-level guides, several of them gold.',
+      'The classic safari is built around two game drives a day typically four to five hours each, sandwiching a bush breakfast or a midday rest at the lodge.',
+      'What separates a great game drive from a forgettable one is almost always the guide. We work with a hand-picked roster of senior guides across our preferred parks many of them silver-level guides, several of them gold.',
     ],
     highlights: [
       {
         title: 'Private Vehicles',
-        body: 'A private 4×4 with your own guide is standard for every itinerary we design — never shared rotations.',
+        body: 'A private 4×4 with your own guide is standard for every itinerary we design never shared rotations.',
       },
       {
         title: 'Hand-Picked Guides',
@@ -566,7 +566,7 @@ export const experiences: Experience[] = [
         name: 'Serengeti',
         country: 'Tanzania',
         description:
-          'The greatest game-viewing area on Earth — 14,750 km² of grasslands, woodlands and the heart of the great migration.',
+          'The greatest game-viewing area on Earth 14,750 km² of grasslands, woodlands and the heart of the great migration.',
       },
       {
         name: 'Masai Mara',
@@ -578,7 +578,7 @@ export const experiences: Experience[] = [
         name: 'Ngorongoro Crater',
         country: 'Tanzania',
         description:
-          'A natural wildlife amphitheatre with the densest predator population in Africa — and the only place to reliably see all of the Big Five in a single drive.',
+          'A natural wildlife amphitheatre with the densest predator population in Africa and the only place to reliably see all of the Big Five in a single drive.',
       },
     ],
     gallery: [
@@ -600,13 +600,13 @@ export const experiences: Experience[] = [
     tagline:
       'A red-filtered spotlight, a sundowner gin, and a different bush entirely after the sun goes down.',
     intro: [
-      'National parks across East Africa close their gates at sunset — but private conservancies don’t. That’s where the night drive happens: the same animals you saw at noon are doing different things, and the bush is full of species you simply won’t encounter by day.',
-      'Aardvark, pangolin, civet, genet, leopard hunting in the dark — every drive is genuinely a roll of the dice. The set-up is always the same: a tracker on a spotter seat at the front, a red-filtered spotlight, and a vehicle moving slowly with as little engine noise as possible.',
+      'National parks across East Africa close their gates at sunset but private conservancies don’t. That’s where the night drive happens: the same animals you saw at noon are doing different things, and the bush is full of species you simply won’t encounter by day.',
+      'Aardvark, pangolin, civet, genet, leopard hunting in the dark every drive is genuinely a roll of the dice. The set-up is always the same: a tracker on a spotter seat at the front, a red-filtered spotlight, and a vehicle moving slowly with as little engine noise as possible.',
     ],
     highlights: [
       {
         title: 'Private-Conservancy Only',
-        body: 'We arrange night drives in Mara conservancies, Laikipia and Selous — never in parks where they’re forbidden.',
+        body: 'We arrange night drives in Mara conservancies, Laikipia and Selous never in parks where they’re forbidden.',
       },
       {
         title: 'Trained Spotters',
@@ -622,7 +622,7 @@ export const experiences: Experience[] = [
         name: 'Mara Conservancies',
         country: 'Kenya',
         description:
-          'Mara North, Olare Motorogi, Naboisho — night drives included with every conservancy stay.',
+          'Mara North, Olare Motorogi, Naboisho night drives included with every conservancy stay.',
       },
       {
         name: 'Laikipia',
@@ -649,8 +649,8 @@ export const experiences: Experience[] = [
     tagline:
       'A massage after a morning drive. Yoga on the deck at first light. Slow days, when slow is the right speed.',
     intro: [
-      'Some safaris are built for adventure, some for rest — and a great many guests want both. We pair high-activity safari days with lodges that have proper spas, qualified therapists and outdoor yoga decks.',
-      'On request, we add resident wellness practitioners to a private safari — yoga teachers, masseurs, sound-bath facilitators — who travel with you for the duration of the trip.',
+      'Some safaris are built for adventure, some for rest and a great many guests want both. We pair high-activity safari days with lodges that have proper spas, qualified therapists and outdoor yoga decks.',
+      'On request, we add resident wellness practitioners to a private safari yoga teachers, masseurs, sound-bath facilitators who travel with you for the duration of the trip.',
     ],
     highlights: [
       {
@@ -663,7 +663,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Quiet Itineraries',
-        body: 'Where you want it, we’ll design itineraries that simply move less — one lodge, deep stays, no rush.',
+        body: 'Where you want it, we’ll design itineraries that simply move less one lodge, deep stays, no rush.',
       },
     ],
     locations: [
@@ -692,15 +692,15 @@ export const experiences: Experience[] = [
     cta: 'Plan a Private Island Escape',
     image: '/images/destinations/tanzania/rubondo-island-camp-beach.webp',
     tagline:
-      'A bush-and-beach itinerary done right — the safari for the wildlife, the island for everything that comes after.',
+      'A bush-and-beach itinerary done right the safari for the wildlife, the island for everything that comes after.',
     intro: [
-      'Most safaris benefit from a few coastal days at the end — slowing down, sleeping in, drying out. We work with private-island and beach properties on Lamu, Manda, Mafia, Mnemba and Pemba, as well as Rubondo Island inside Lake Victoria.',
-      'Bush-and-beach itineraries are some of the most popular journeys we plan — and the easiest to extend or shrink based on how the safari has gone.',
+      'Most safaris benefit from a few coastal days at the end slowing down, sleeping in, drying out. We work with private-island and beach properties on Lamu, Manda, Mafia, Mnemba and Pemba, as well as Rubondo Island inside Lake Victoria.',
+      'Bush-and-beach itineraries are some of the most popular journeys we plan and the easiest to extend or shrink based on how the safari has gone.',
     ],
     highlights: [
       {
         title: 'Private Islands',
-        body: 'Whole-island bookings at Mnemba, Mafia and Manda Bay are possible — for groups wanting total seclusion.',
+        body: 'Whole-island bookings at Mnemba, Mafia and Manda Bay are possible for groups wanting total seclusion.',
       },
       {
         title: 'Marine Safaris',
@@ -708,7 +708,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Direct Bush-to-Beach Flights',
-        body: 'Single-aircraft connections from the Mara, Serengeti or Ruaha straight to the coast — no Nairobi or Dar layovers.',
+        body: 'Single-aircraft connections from the Mara, Serengeti or Ruaha straight to the coast no Nairobi or Dar layovers.',
       },
     ],
     locations: [
@@ -716,19 +716,19 @@ export const experiences: Experience[] = [
         name: 'Mnemba Island',
         country: 'Tanzania (Zanzibar)',
         description:
-          'A 12-bed private island ringed with reef — the gold standard of East African beach lodges.',
+          'A 12-bed private island ringed with reef the gold standard of East African beach lodges.',
       },
       {
         name: 'Manda Bay',
         country: 'Kenya (Lamu Archipelago)',
         description:
-          'A laid-back family-favourite property on a quiet bay — dhow sailing, fishing and tidal-flat picnics.',
+          'A laid-back family-favourite property on a quiet bay dhow sailing, fishing and tidal-flat picnics.',
       },
       {
         name: 'Rubondo Island',
         country: 'Tanzania (Lake Victoria)',
         description:
-          'A freshwater alternative — forested island, introduced chimpanzees, tiger fish and quiet beaches.',
+          'A freshwater alternative forested island, introduced chimpanzees, tiger fish and quiet beaches.',
       },
     ],
     gallery: [
@@ -749,13 +749,13 @@ export const experiences: Experience[] = [
     tagline:
       'A day with the rhino anti-poaching team. A morning collaring a lion. A week with a wild-dog researcher.',
     intro: [
-      'For travellers who want to contribute meaningfully, not just visit, we design conservation safaris that put guests inside the conservation work — not on the touristed periphery of it.',
+      'For travellers who want to contribute meaningfully, not just visit, we design conservation safaris that put guests inside the conservation work not on the touristed periphery of it.',
       'These journeys are arranged in partnership with conservancy managers, NGOs and university researchers. Days are spent in the field with scientists and rangers; evenings unpack what was seen with the people doing the work.',
     ],
     highlights: [
       {
         title: 'Field Days',
-        body: 'Game-counting, collaring, telemetry tracking, community engagement — actual conservation work, not staged.',
+        body: 'Game-counting, collaring, telemetry tracking, community engagement actual conservation work, not staged.',
       },
       {
         title: 'Researcher-Led',
@@ -763,7 +763,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Tangible Funding',
-        body: 'A portion of the cost goes directly to the projects you visit — itemised in your trip dossier.',
+        body: 'A portion of the cost goes directly to the projects you visit itemised in your trip dossier.',
       },
     ],
     locations: [
@@ -777,7 +777,7 @@ export const experiences: Experience[] = [
         name: 'Lewa Wildlife Conservancy',
         country: 'Kenya',
         description:
-          'A model conservancy with active rhino and Grevy’s zebra programmes — anti-poaching ride-alongs available.',
+          'A model conservancy with active rhino and Grevy’s zebra programmes anti-poaching ride-alongs available.',
       },
     ],
     gallery: [
@@ -795,7 +795,7 @@ export const experiences: Experience[] = [
     cta: 'Book a Horseback Safari',
     image: '/images/activities/big-five/roho-ya-selous-elephants-walking-along-the-river.webp',
     tagline:
-      'Horses don’t look like threat. Wildlife reacts to a rider very differently to a vehicle — and that’s the magic.',
+      'Horses don’t look like threat. Wildlife reacts to a rider very differently to a vehicle and that’s the magic.',
     intro: [
       'East Africa has one of the world’s great horseback safari traditions, going back to the early 20th century. Today’s rides are run by long-established outfits with strings of well-schooled horses and senior guides.',
       'Multi-day rides cross conservancies between mobile fly-camps; shorter morning rides can be added to almost any safari at a lodge with a stable.',
@@ -803,7 +803,7 @@ export const experiences: Experience[] = [
     highlights: [
       {
         title: 'For Experienced Riders',
-        body: 'Multi-day rides require confident intermediate-plus riders — but we arrange shorter introduction rides at almost any horse-equipped lodge.',
+        body: 'Multi-day rides require confident intermediate-plus riders but we arrange shorter introduction rides at almost any horse-equipped lodge.',
       },
       {
         title: 'Mobile Camps',
@@ -811,7 +811,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'String of 60+',
-        body: 'Our preferred outfitter keeps a string of more than 60 horses — guaranteed match to your size, weight and skill.',
+        body: 'Our preferred outfitter keeps a string of more than 60 horses guaranteed match to your size, weight and skill.',
       },
     ],
     locations: [
@@ -819,7 +819,7 @@ export const experiences: Experience[] = [
         name: 'Mara & Loita Hills',
         country: 'Kenya',
         description:
-          'A classic horseback country — open plains, scattered wildlife, and the Mara escarpment as a backdrop.',
+          'A classic horseback country open plains, scattered wildlife, and the Mara escarpment as a backdrop.',
       },
       {
         name: 'Borana / Laikipia',
@@ -843,10 +843,10 @@ export const experiences: Experience[] = [
     cta: 'Enhance Your Photography',
     image: '/images/destinations/tanzania/photo-2013-03-06-11-59-58.webp',
     tagline:
-      'Custom vehicles, photographer-guides, beanbags, charging, and the time to wait — really wait — for the shot.',
+      'Custom vehicles, photographer-guides, beanbags, charging, and the time to wait really wait for the shot.',
     intro: [
-      'Photographic safaris are different. The vehicles are configured for cameras — pop-tops, drop sides, beanbags on the rails, charging stations on the dashboard. The pacing is slower, the lighting prioritised, and the willingness to sit on a single subject for an hour is the point.',
-      'We work with professional photographer-guides who lead these trips themselves — including a number of Nikon and Canon ambassadors based in East Africa. Tuition is built in, gear can be rented, and post-processing sessions are an evening fixture.',
+      'Photographic safaris are different. The vehicles are configured for cameras pop-tops, drop sides, beanbags on the rails, charging stations on the dashboard. The pacing is slower, the lighting prioritised, and the willingness to sit on a single subject for an hour is the point.',
+      'We work with professional photographer-guides who lead these trips themselves including a number of Nikon and Canon ambassadors based in East Africa. Tuition is built in, gear can be rented, and post-processing sessions are an evening fixture.',
     ],
     highlights: [
       {
@@ -855,7 +855,7 @@ export const experiences: Experience[] = [
       },
       {
         title: 'Photographer-Guides',
-        body: 'Trips led by senior wildlife photographers — Greg du Toit, Marlon du Toit, Federico Veronesi and others.',
+        body: 'Trips led by senior wildlife photographers Greg du Toit, Marlon du Toit, Federico Veronesi and others.',
       },
       {
         title: 'Big-Subject Time',
@@ -873,7 +873,7 @@ export const experiences: Experience[] = [
         name: 'South Luangwa (June–October)',
         country: 'Zambia (extension)',
         description:
-          'For guests willing to extend — leopard density unrivalled anywhere on the continent.',
+          'For guests willing to extend leopard density unrivalled anywhere on the continent.',
       },
     ],
     gallery: [

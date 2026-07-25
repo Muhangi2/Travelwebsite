@@ -5,7 +5,7 @@ import { usePageHero } from '@/sanity/pageHeroes'
 const FALLBACK = {
   eyebrow: 'Our Team',
   heading: 'Meet Our Safari Experts',
-  body: 'A passionate team of local experts based in Kampala — combining deep local knowledge, expert planning and decades of field experience to deliver seamless, unforgettable safari journeys.',
+  body: 'A passionate team of local experts based in Kampala combining deep local knowledge, expert planning and decades of field experience to deliver seamless, unforgettable safari journeys.',
   image: '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
   imageAlt: 'Still Wild Safaris team in the field',
 }

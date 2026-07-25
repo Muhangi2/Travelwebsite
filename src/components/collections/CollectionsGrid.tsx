@@ -144,11 +144,11 @@ export default function CollectionsGrid() {
             Our Journeys
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center leading-relaxed text-neutral-500">
-            Hand-crafted itineraries across Uganda, Rwanda and Kenya — filter by type, destination or length.
+            Hand-crafted itineraries across Uganda, Rwanda and Kenya filter by type, destination or length.
           </p>
         </Reveal>
 
-        {/* ── Search + filter bar (Stories pattern) ── */}
+        {/* Search + filter bar (Stories pattern) */}
         <Reveal delay={40}>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
             <div className="relative flex flex-1 items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-4 py-2.5 shadow-sm transition focus-within:border-neutral-400 focus-within:bg-white focus-within:shadow-md">
@@ -245,7 +245,7 @@ export default function CollectionsGrid() {
           </div>
         </Reveal>
 
-        {/* ── Section header + clear ── */}
+        {/* Section header + clear */}
         <Reveal delay={120}>
           <div className="mt-10 flex items-baseline justify-between border-b border-neutral-100 pb-4">
             <h3>All Journeys</h3>
@@ -270,7 +270,7 @@ export default function CollectionsGrid() {
                   to={`/safari-collections/${j.id}`}
                   className="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-black transition-shadow duration-500 hover:shadow-xl"
                 >
-                  {/* ── Image ── */}
+                  {/* Image */}
                   <div className="relative aspect-[4/3] shrink-0 overflow-hidden">
                     <Picture
                       src={j.image}
@@ -293,7 +293,7 @@ export default function CollectionsGrid() {
                       </span>
                     </div>
 
-                    {/* Country badge — fades out on hover */}
+                    {/* Country badge fades out on hover */}
                     {j.country && (
                       <span className="absolute right-3 top-3 rounded-full bg-black px-3.5 py-1 text-[10px] font-medium tracking-[0.18em] text-white transition-opacity duration-300 group-hover:opacity-0">
                         {j.country}
@@ -311,7 +311,7 @@ export default function CollectionsGrid() {
                     )}
                   </div>
 
-                  {/* ── Content ── */}
+                  {/* Content */}
                   <div className="flex flex-1 flex-col p-5 pt-4">
 
                     {/* Tags as small bordered pills */}
@@ -331,10 +331,18 @@ export default function CollectionsGrid() {
                       {j.title}
                     </h3>
 
-                    {/* Divider + duration */}
+                    {/* Divider + duration + price */}
                     <div className="mt-3 flex items-center gap-3">
                       <span className="h-px flex-1 bg-neutral-100 transition-colors duration-300 group-hover:bg-neutral-200" />
                       <p className="shrink-0 text-xs font-medium tracking-wide text-neutral-400">{j.duration}</p>
+                      {j.priceFromUsd && (
+                        <>
+                          <span className="h-3 w-px shrink-0 bg-neutral-200" />
+                          <p className="shrink-0 text-xs font-semibold tracking-wide text-[#B8942F]">
+                            From ${j.priceFromUsd.toLocaleString()}
+                          </p>
+                        </>
+                      )}
                     </div>
 
                     {/* CTA button */}

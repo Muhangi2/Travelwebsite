@@ -24,7 +24,7 @@ export default function OurStory() {
             costing them.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-white/85">
-            It began as a university project called Keep Your Safari Green — a small research initiative built
+            It began as a university project called Keep Your Safari Green a small research initiative built
             around one question: how much carbon does a single safari actually produce, and what could
             realistically be done about it? What started as a class assignment quickly became something neither
             founder could put down. The data was sobering. The opportunity was obvious. And the idea that travel
@@ -32,7 +32,7 @@ export default function OurStory() {
             problem, refused to let them go.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-white/85">
-            That university project became Still Wild Safaris — a tour operator built from the ground up around
+            That university project became Still Wild Safaris a tour operator built from the ground up around
             regenerative travel, with carbon reduction stitched into every itinerary we design.
           </p>
         </Reveal>

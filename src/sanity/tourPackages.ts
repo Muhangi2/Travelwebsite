@@ -14,6 +14,7 @@ export type TourPackageCard = {
   title: string
   duration: string
   highlight?: boolean
+  priceFromUsd?: number
 }
 
 const TIER_LABELS: Record<string, string> = {
@@ -56,6 +57,15 @@ export function toJourneyData(raw: SanityTourPackage): JourneyData | null {
     waypoints: raw.waypoints?.length
       ? raw.waypoints.map((w) => ({ name: w.name, coords: [w.lng, w.lat] as [number, number] }))
       : undefined,
+    rates: raw.rates
+      ? {
+          priceFromUsd: raw.rates.priceFromUsd,
+          table: raw.rates.table ?? [],
+          singleSupplement: raw.rates.singleSupplement,
+          permitNote: raw.rates.permitNote,
+          validityNote: raw.rates.validityNote,
+        }
+      : undefined,
   }
 }
 
@@ -68,12 +78,20 @@ export function toCard(raw: SanityTourPackage): TourPackageCard {
     title: raw.title,
     duration: raw.duration ?? '',
     highlight: raw.highlight,
+    priceFromUsd: raw.rates?.priceFromUsd,
   }
 }
 
 function localCards(): TourPackageCard[] {
+  return rawLocalCards().map((c) => ({
+    ...c,
+    priceFromUsd: localJourneys[c.id]?.rates?.priceFromUsd,
+  }))
+}
+
+function rawLocalCards(): TourPackageCard[] {
   return [
-    // ── Rwanda / Cross-border journeys ────────────────────────────────────────
+    // Rwanda / Cross-border journeys
     {
       id: '2-day-rwanda-gorilla',
       image: '/images/activities/gorilla-trekking/1-mgl-gorilla-bb.jpg',
@@ -83,20 +101,28 @@ function localCards(): TourPackageCard[] {
       duration: '2 Days / 1 Night',
     },
     {
+      id: 'rwanda-gorilla-express',
+      image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.jpg',
+      country: 'RWANDA',
+      tags: ['Luxury Adventure'],
+      title: 'The 3-Day Rwanda Gorilla Express',
+      duration: '3 Days / 2 Nights',
+    },
+    {
       id: '3-day-kigali-gorilla',
       image: '/images/activities/gorilla-trekking/4-mgl-gorilla-bb.jpg',
       country: 'RWANDA · UGANDA',
       tags: ['Luxury Adventure', 'Photography Focus'],
-      title: '3 Days from Kigali into Gorilla Country',
-      duration: '3 Days / 2 Nights',
+      title: '4 Days from Kigali into Gorilla Country',
+      duration: '4 Days / 3 Nights',
     },
     {
       id: '4-day-rwanda-uganda-primate',
       image: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.jpg',
       country: 'RWANDA · UGANDA',
       tags: ['Luxury Adventure', 'Photography Focus'],
-      title: '4-Day Rwanda–Uganda Primate Safari',
-      duration: '4 Days / 3 Nights',
+      title: '5-Day Rwanda–Uganda Primate Safari',
+      duration: '5 Days / 4 Nights',
     },
     {
       id: '5-day-kigali-great-apes',
@@ -107,7 +133,7 @@ function localCards(): TourPackageCard[] {
       duration: '5 Days / 4 Nights',
       highlight: true,
     },
-    // ── Uganda standalone packages ─────────────────────────────────────────────
+    // Uganda standalone packages
     {
       id: '3-day-classic-uganda-gorilla',
       image: '/images/activities/gorilla-trekking/8-gorilla-ah1i2661.jpg',
@@ -121,7 +147,7 @@ function localCards(): TourPackageCard[] {
       image: '/images/activities/gorilla-trekking/11-gorilla-ah1i2713.jpg',
       country: 'RWANDA · UGANDA',
       tags: ['Luxury Adventure'],
-      title: '3-Day Gorilla Safari — Kigali to Uganda',
+      title: '3-Day Gorilla Safari Kigali to Uganda',
       duration: '3 Days / 2 Nights',
     },
     {
@@ -146,7 +172,7 @@ function localCards(): TourPackageCard[] {
       image: '/images/parks/uganda/murchison-falls/mf-1.jpg',
       country: 'UGANDA',
       tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'],
-      title: '10-Day Grand Uganda Safari — The Complete Loop',
+      title: '10-Day Grand Uganda Safari The Complete Loop',
       duration: '10 Days / 9 Nights',
     },
     {
@@ -154,7 +180,7 @@ function localCards(): TourPackageCard[] {
       image: '/images/parks/uganda/murchison-falls/dsc-7062.jpg',
       country: 'UGANDA',
       tags: ['Photography Focus'],
-      title: 'Rhythm & Roots — 9-Day Creative Safari',
+      title: 'Rhythm & Roots 9-Day Creative Safari',
       duration: '9 Days / 8 Nights',
     },
     {
@@ -162,7 +188,7 @@ function localCards(): TourPackageCard[] {
       image: '/images/parks/uganda/murchison-falls/dsc-6828.jpg',
       country: 'UGANDA',
       tags: ['Luxury Adventure', 'Family-Friendly'],
-      title: 'Uganda Primate & Fishing Safari — 11 Days',
+      title: 'Uganda Primate & Fishing Safari 11 Days',
       duration: '11 Days / 10 Nights',
     },
     {
@@ -178,7 +204,7 @@ function localCards(): TourPackageCard[] {
       image: '/images/parks/uganda/murchison-falls/dsc-7442.jpg',
       country: 'UGANDA',
       tags: ['Photography Focus'],
-      title: 'The Deep Dive — 12-Day Creative Residency',
+      title: 'The Deep Dive 12-Day Creative Residency',
       duration: '12 Days / 11 Nights',
     },
     {
@@ -186,8 +212,70 @@ function localCards(): TourPackageCard[] {
       image: '/images/parks/uganda/murchison-falls/dsc-6828.jpg',
       country: 'UGANDA',
       tags: ['Photography Focus'],
-      title: 'The Wild Muse — 7-Day Creative Safari',
+      title: 'The Wild Muse 7-Day Creative Safari',
       duration: '7 Days / 6 Nights',
+    },
+    // Kenya packages
+    {
+      id: 'kenya-4-day-masai-mara',
+      image: '/images/parks/kenya/masai-mara/the-dangers-of-crossing-the-mara-river.jpg',
+      country: 'KENYA',
+      tags: ['Luxury Adventure', 'Family-Friendly'],
+      title: '4-Day Masai Mara Safari',
+      duration: '4 Days / 3 Nights',
+    },
+    {
+      id: 'kenya-7-day-classic',
+      image: '/images/parks/kenya/amboseli/sundowner-on-observation-hill-overlooking-mt-kilimanjaro.jpg',
+      country: 'KENYA',
+      tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'],
+      title: '7-Day Classic Kenya Safari',
+      duration: '7 Days / 6 Nights',
+      highlight: true,
+    },
+    {
+      id: 'kenya-8-day-migration-gorillas',
+      image: '/images/parks/kenya/masai-mara/the-dangers-of-crossing-the-mara-river.jpg',
+      country: 'KENYA · UGANDA · RWANDA',
+      tags: ['Luxury Adventure', 'Photography Focus'],
+      title: 'Migration & Gorillas 8-Day Fly-In Journey',
+      duration: '8 Days / 7 Nights',
+      highlight: true,
+    },
+    {
+      id: 'kenya-10-day-grand-circuit',
+      image: '/images/parks/kenya/samburu/sasaab.jpg',
+      country: 'KENYA',
+      tags: ['Luxury Adventure', 'Photography Focus'],
+      title: '10-Day Kenya Grand Circuit',
+      duration: '10 Days / 9 Nights',
+    },
+    // Tanzania packages
+    {
+      id: 'tanzania-7-day-northern-circuit',
+      image: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg',
+      country: 'TANZANIA',
+      tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'],
+      title: '7-Day Tanzania Northern Circuit',
+      duration: '7 Days / 6 Nights',
+      highlight: true,
+    },
+    {
+      id: 'tanzania-10-day-safari-zanzibar',
+      image: '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
+      country: 'TANZANIA',
+      tags: ['Luxury Adventure', 'Family-Friendly'],
+      title: '10-Day Tanzania Safari & Zanzibar',
+      duration: '10 Days / 9 Nights',
+    },
+    {
+      id: 'kenya-tanzania-12-day-grand-safari',
+      image: '/images/parks/kenya/masai-mara/the-dangers-of-crossing-the-mara-river.jpg',
+      country: 'KENYA · TANZANIA',
+      tags: ['Luxury Adventure', 'Photography Focus'],
+      title: '12-Day Kenya & Tanzania Grand Safari',
+      duration: '12 Days / 11 Nights',
+      highlight: true,
     },
   ]
 }

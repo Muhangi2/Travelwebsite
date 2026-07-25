@@ -35,7 +35,7 @@ export default function NationalPark() {
   return (
     <>
       <SEO
-        title={`${parkData.name} — ${countryData.name}`}
+        title={`${parkData.name} ${countryData.name}`}
         description={parkData.metaDescription ?? parkData.blurb}
         image={parkData.image}
         url={`/destinations/${countrySlug}/${park}`}

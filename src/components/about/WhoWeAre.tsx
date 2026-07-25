@@ -11,7 +11,7 @@ export default function WhoWeAre() {
             <h2 className="mt-3">Who We Are</h2>
             <p className="mt-4 text-sm leading-relaxed text-neutral-600">
               We are local experts with a global outlook. Based in Uganda and operating across East Africa, we design
-              journeys that go beyond sightseeing — connecting people to nature, wildlife, and culture with comfort,
+              journeys that go beyond sightseeing connecting people to nature, wildlife, and culture with comfort,
               respect, and meaning.
             </p>
           </Reveal>

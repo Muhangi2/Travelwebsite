@@ -7,6 +7,7 @@ import TourNav from '@/components/collection-detail/TourNav'
 import TourItinerary from '@/components/collection-detail/TourItinerary'
 import TourHighlights from '@/components/collection-detail/TourHighlights'
 import TourIncludes from '@/components/collection-detail/TourIncludes'
+import TourRates from '@/components/collection-detail/TourRates'
 import TourFAQ from '@/components/collection-detail/TourFAQ'
 import HandpickedLodges from '@/components/collection-detail/HandpickedLodges'
 import TripQuoteBanner from '@/components/collection-detail/TripQuoteBanner'
@@ -21,6 +22,7 @@ export default function SafariCollectionDetail() {
   const hasHighlights = Boolean(journey.highlights?.length)
   const hasFaq = Boolean(journey.faq?.length)
   const hasIncludes = Boolean(journey.included?.length || journey.notIncluded?.length)
+  const hasRates = Boolean(journey.rates)
 
   const tripSchema = {
     '@context': 'https://schema.org',
@@ -54,9 +56,14 @@ export default function SafariCollectionDetail() {
         jsonLd={hasFaq ? [tripSchema, buildFaqSchema(journey.faq!)] : tripSchema}
       />
 
-      <DetailHero title={journey.title} subtitle={journey.subtitle} image={journey.heroImage} />
+      <DetailHero
+        title={journey.title}
+        subtitle={journey.subtitle}
+        image={journey.heroImage}
+        priceFromUsd={journey.rates?.priceFromUsd}
+      />
 
-      <TourNav hasHighlights={hasHighlights} hasFaq={hasFaq} hasIncludes={hasIncludes} />
+      <TourNav hasHighlights={hasHighlights} hasFaq={hasFaq} hasIncludes={hasIncludes} hasRates={hasRates} />
 
       <div id="overview" />
 
@@ -69,6 +76,12 @@ export default function SafariCollectionDetail() {
           country={journey.country}
         />
       </div>
+
+      {hasRates && (
+        <div id="rates">
+          <TourRates rates={journey.rates!} />
+        </div>
+      )}
 
       <TripQuoteBanner />
 

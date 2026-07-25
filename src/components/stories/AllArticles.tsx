@@ -60,7 +60,7 @@ export default function AllArticles() {
     <section id="articles" className="bg-white pb-24">
       <div className="container-page">
 
-        {/* ── Search + filter bar ── */}
+        {/* Search + filter bar */}
         <Reveal>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
             {/* Search input */}
@@ -83,7 +83,7 @@ export default function AllArticles() {
           </div>
         </Reveal>
 
-        {/* ── Category pills ── */}
+        {/* Category pills */}
         <Reveal delay={60}>
           <div className="mt-5 flex gap-2 overflow-x-auto pb-1 hide-scrollbar sm:flex-wrap">
             {categories.map((c) => {
@@ -114,7 +114,7 @@ export default function AllArticles() {
           </div>
         </Reveal>
 
-        {/* ── Heading ── */}
+        {/* Heading */}
         <Reveal delay={80}>
           <div className="mt-12 flex items-baseline justify-between border-b border-neutral-100 pb-4">
             <h2>All Articles</h2>
@@ -130,7 +130,7 @@ export default function AllArticles() {
           </div>
         </Reveal>
 
-        {/* ── Grid ── */}
+        {/* Grid */}
         {visible.length > 0 ? (
           <Stagger className="cards-scroll-3 mt-8 gap-6" staggerMs={80}>
             {visible.map((a) => (
@@ -187,7 +187,7 @@ export default function AllArticles() {
           </Reveal>
         )}
 
-        {/* ── Pagination ── */}
+        {/* Pagination */}
         {totalPages > 1 && (
           <Reveal>
             <div className="mt-14 flex items-center justify-center gap-2">

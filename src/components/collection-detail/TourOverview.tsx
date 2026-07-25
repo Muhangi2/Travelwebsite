@@ -11,7 +11,7 @@ export default function TourOverview({ overview, subtitle, country, daysCount }:
       <div className="container-page">
         <div className="grid gap-8 sm:gap-12 lg:grid-cols-[1fr_320px] xl:gap-20">
 
-          {/* Left — text */}
+          {/* Left text */}
           <div>
             <p className="eyebrow mb-4">Overview</p>
             {subtitle && (
@@ -20,7 +20,7 @@ export default function TourOverview({ overview, subtitle, country, daysCount }:
             <p className="text-[15px] leading-[1.85] text-neutral-600">{overview}</p>
           </div>
 
-          {/* Right — key facts */}
+          {/* Right key facts */}
           <div className="flex flex-col gap-4 lg:pt-12">
             {country && (
               <div className="rounded-2xl bg-neutral-50 px-6 py-5 ring-1 ring-neutral-100">

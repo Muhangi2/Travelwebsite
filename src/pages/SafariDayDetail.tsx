@@ -42,13 +42,13 @@ export default function SafariDayDetail() {
   return (
     <>
       <SEO
-        title={`Day ${current.day}: ${current.title} — ${journey.title.replace('\n', ' ')}`}
+        title={`Day ${current.day}: ${current.title} ${journey.title.replace('\n', ' ')}`}
         description={current.body}
         image={current.image}
         url={`/safari-collections/${slug}/day/${current.day}`}
       />
 
-      {/* ── HERO ─────────────────────────────────────────────────── */}
+      {/* HERO */}
       <section className="relative isolate flex h-[100svh] flex-col justify-end overflow-hidden">
         <img
           src={current.image}
@@ -94,7 +94,7 @@ export default function SafariDayDetail() {
         </div>
       </section>
 
-      {/* ── CONTENT ──────────────────────────────────────────────── */}
+      {/* CONTENT */}
       <section className="bg-white">
         <div className="container-page py-14 sm:py-20 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-[1fr_280px] lg:gap-16 xl:grid-cols-[1fr_320px]">
@@ -167,7 +167,7 @@ export default function SafariDayDetail() {
         </div>
       </section>
 
-      {/* ── GALLERY ─────────────────────────────────────────────── */}
+      {/* GALLERY */}
       {allImages.length > 1 && (
         <section className="bg-neutral-950 py-14 sm:py-20">
           <div className="container-page">
@@ -200,7 +200,7 @@ export default function SafariDayDetail() {
         </section>
       )}
 
-      {/* ── PREV / NEXT ─────────────────────────────────────────── */}
+      {/* PREV / NEXT */}
       {(prev || next) && (
         <section className="bg-white">
           <div className="container-page py-12 sm:py-16">

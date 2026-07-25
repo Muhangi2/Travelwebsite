@@ -8,8 +8,8 @@ export default function SafariCollections() {
   return (
     <>
       <SEO
-        title="Safari Collections — Bespoke Uganda & East Africa Safaris"
-        description="Browse our curated safari packages in Uganda, Rwanda and Kenya. From gorilla trekking circuits to Big Five game drives — each itinerary is crafted for discerning travellers."
+        title="Safari Collections Bespoke Uganda & East Africa Safaris"
+        description="Browse our curated safari packages in Uganda, Rwanda and Kenya. From gorilla trekking circuits to Big Five game drives each itinerary is crafted for discerning travellers."
         url="/safari-collections"
       />
       <CollectionsHero />

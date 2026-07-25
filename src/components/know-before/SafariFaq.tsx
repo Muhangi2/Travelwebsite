@@ -66,7 +66,7 @@ export default function SafariFaq() {
 
         <Reveal>
           <p className="mt-8 text-center text-sm text-white/70">
-            Still have questions? <a href="/contact" className="underline underline-offset-2 text-white hover:text-white/80">Reach out any time</a> — we're always happy to help you plan with confidence.
+            Still have questions? <a href="/contact" className="underline underline-offset-2 text-white hover:text-white/80">Reach out any time</a> we're always happy to help you plan with confidence.
           </p>
         </Reveal>
       </div>

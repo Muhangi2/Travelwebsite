@@ -9,7 +9,7 @@ export const experienceType = defineType({
       name: 'title',
       title: 'Full title',
       type: 'string',
-      description: 'e.g. "Gorilla Trekking: An Intimate Encounter" — the full heading shown on the experience detail page.',
+      description: 'e.g. "Gorilla Trekking: An Intimate Encounter" the full heading shown on the experience detail page.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -17,7 +17,7 @@ export const experienceType = defineType({
       title: 'Slug',
       type: 'slug',
       options: { source: 'title', maxLength: 96 },
-      description: 'e.g. "gorilla-trekking" — auto-generated from the title. Click Generate.',
+      description: 'e.g. "gorilla-trekking" auto-generated from the title. Click Generate.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -41,7 +41,7 @@ export const experienceType = defineType({
       name: 'shortTitle',
       title: 'Short title',
       type: 'string',
-      description: 'e.g. "Gorilla Trekking" — used on navigation and cards where space is limited.',
+      description: 'e.g. "Gorilla Trekking" used on navigation and cards where space is limited.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -49,14 +49,14 @@ export const experienceType = defineType({
       title: 'Excerpt',
       type: 'text',
       rows: 3,
-      description: 'e.g. "Journey into the mist-shrouded forests of Uganda and Rwanda for a profound, luxury encounter with mountain gorillas." — 1–2 sentences shown on the experience card.',
+      description: 'e.g. "Journey into the mist-shrouded forests of Uganda and Rwanda for a profound, luxury encounter with mountain gorillas." 1–2 sentences shown on the experience card.',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'cta',
       title: 'CTA button label',
       type: 'string',
-      description: 'e.g. "Explore Gorilla Trekking" — the text on the call-to-action button. Defaults to "Explore this experience".',
+      description: 'e.g. "Explore Gorilla Trekking" the text on the call-to-action button. Defaults to "Explore this experience".',
       initialValue: 'Explore this experience',
     }),
     defineField({
@@ -71,7 +71,7 @@ export const experienceType = defineType({
       title: 'Tagline',
       type: 'text',
       rows: 2,
-      description: 'e.g. "A guided, hour-long audience with one of Earth\'s last 1,000 mountain gorillas — in the mountains where they were first protected." — a single compelling sentence shown prominently on the detail page.',
+      description: 'e.g. "A guided, hour-long audience with one of Earth\'s last 1,000 mountain gorillas in the mountains where they were first protected." a single compelling sentence shown prominently on the detail page.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -79,7 +79,7 @@ export const experienceType = defineType({
       title: 'Intro paragraphs',
       type: 'array',
       of: [{ type: 'text' }],
-      description: 'Add 2–3 paragraphs introducing the experience. Each paragraph is a separate item — click "Add item" for each new paragraph.',
+      description: 'Add 2–3 paragraphs introducing the experience. Each paragraph is a separate item click "Add item" for each new paragraph.',
       validation: (rule) => rule.min(1),
     }),
     defineField({
@@ -87,14 +87,14 @@ export const experienceType = defineType({
       title: 'Highlights',
       type: 'array',
       of: [{ type: 'experienceHighlight' }],
-      description: 'Add 3–5 key differentiators that make this experience unique — e.g. "Permits Secured in Advance", "Expert Tracker-Led Treks".',
+      description: 'Add 3–5 key differentiators that make this experience unique e.g. "Permits Secured in Advance", "Expert Tracker-Led Treks".',
     }),
     defineField({
       name: 'locations',
       title: 'Locations',
       type: 'array',
       of: [{ type: 'experienceLocation' }],
-      description: 'Add each location where this experience takes place — e.g. Bwindi for gorilla trekking, Kibale for chimpanzees.',
+      description: 'Add each location where this experience takes place e.g. Bwindi for gorilla trekking, Kibale for chimpanzees.',
     }),
     defineField({
       name: 'gallery',
@@ -107,7 +107,7 @@ export const experienceType = defineType({
       name: 'sortOrder',
       title: 'Sort order',
       type: 'number',
-      description: 'e.g. 1, 2, 3 — lower numbers appear first in the experiences listing.',
+      description: 'e.g. 1, 2, 3 lower numbers appear first in the experiences listing.',
       initialValue: 0,
     }),
   ],

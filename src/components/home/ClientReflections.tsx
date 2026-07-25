@@ -47,7 +47,7 @@ export default function ClientReflections() {
                   decoding="async"
                 />
               </div>
-              <p className="text-sm text-neutral-600">— The Harrison Family, New York</p>
+              <p className="text-sm text-neutral-600"> The Harrison Family, New York</p>
             </div>
           </Reveal>
         </div>

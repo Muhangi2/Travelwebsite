@@ -153,9 +153,9 @@ export default function ExperienceDetail() {
         <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/85 via-brand-ink/70 to-brand-ink/90" />
         <div className="container-page relative z-10 text-center">
           <p className="eyebrow text-brand-gold">Ready to Plan?</p>
-          <h2 className="mx-auto mt-3 max-w-3xl text-white">{exp.cta} — privately, with us.</h2>
+          <h2 className="mx-auto mt-3 max-w-3xl text-white">{exp.cta} privately, with us.</h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-            Our travel designers will hand-craft a journey around {exp.shortTitle.toLowerCase()} — paired with the right
+            Our travel designers will hand-craft a journey around {exp.shortTitle.toLowerCase()} paired with the right
             lodges, the right guides and the right time of year. Start the conversation; we&rsquo;ll take it from there.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">

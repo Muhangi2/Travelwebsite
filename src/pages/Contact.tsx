@@ -73,7 +73,7 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact Us — Plan Your Safari"
+        title="Contact Us Plan Your Safari"
         description="Get in touch with Still Wild Safaris to start planning your bespoke luxury safari in Uganda, Rwanda or Kenya. Our team is ready to craft your perfect itinerary."
         url="/contact"
       />
@@ -110,7 +110,7 @@ export default function Contact() {
             <div className="section-rule" />
             <h2 className="mt-3">Make an Inquiry</h2>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-600">
-              Fill this in and we'll get in touch to confirm your travel requirements — or send it straight to us on WhatsApp or email.
+              Fill this in and we'll get in touch to confirm your travel requirements or send it straight to us on WhatsApp or email.
             </p>
 
             <form onSubmit={handleWhatsAppSubmit} className="mt-8 space-y-6">

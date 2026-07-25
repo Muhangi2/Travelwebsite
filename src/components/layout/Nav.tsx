@@ -88,9 +88,9 @@ export default function Nav() {
       if (y < 80) {
         setNavVisible(true)
       } else if (y > lastScrollY.current + 6) {
-        setNavVisible(false) // scrolling down — hide
+        setNavVisible(false) // scrolling down hide
       } else if (y < lastScrollY.current - 6) {
-        setNavVisible(true)  // scrolling up — show
+        setNavVisible(true) // scrolling up show
       }
       lastScrollY.current = y
     }
@@ -131,7 +131,7 @@ export default function Nav() {
         navVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
       }`}>
 
-        {/* ── Desktop: centred-logo split nav ── */}
+        {/* Desktop: centred-logo split nav */}
         <div className={`container-page hidden items-center xl:grid xl:grid-cols-[1fr_auto_1fr] transition-all duration-500 ${scrolled ? 'h-[5rem]' : 'h-[13rem]'}`}>
 
           {/* Left links */}
@@ -252,7 +252,7 @@ export default function Nav() {
           </nav>
         </div>
 
-        {/* Destinations mega-menu — absolute from the fixed header so it centres correctly */}
+        {/* Destinations mega-menu absolute from the fixed header so it centres correctly */}
         {destOpen && (
           <div
             onPointerEnter={(e) => { if (e.pointerType === 'mouse') openWithGrace(setDestOpen, destTimer) }}
@@ -262,7 +262,7 @@ export default function Nav() {
           </div>
         )}
 
-        {/* ── Mobile: logo centred absolutely, hamburger left ── */}
+        {/* Mobile: logo centred absolutely, hamburger left */}
         <div className={`container-page relative flex items-center xl:hidden transition-all duration-500 ${scrolled ? 'h-16' : 'h-40 sm:h-[9rem] md:h-[11rem]'}`}>
           {/* Burger left */}
           <button

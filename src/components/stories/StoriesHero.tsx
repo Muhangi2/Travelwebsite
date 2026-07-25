@@ -5,7 +5,7 @@ import { usePageHero } from '@/sanity/pageHeroes'
 const FALLBACK = {
   eyebrow: 'Journal',
   heading: 'Stories from the Wild',
-  body: 'Travel tales, wildlife insights and behind-the-scenes moments from our safaris across Uganda, Rwanda and Kenya — written by guides, designers and the explorers we travel alongside.',
+  body: 'Travel tales, wildlife insights and behind-the-scenes moments from our safaris across Uganda, Rwanda and Kenya written by guides, designers and the explorers we travel alongside.',
   image: '/images/activities/game-drive/asilia-roho-2017-1-1.jpg',
   imageAlt: 'Safari game drive at golden hour',
   primaryCta: { label: 'EXPLORE OUR STORIES', href: '#articles' },

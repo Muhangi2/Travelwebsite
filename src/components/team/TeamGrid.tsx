@@ -48,7 +48,7 @@ const members: Member[] = [
     name: 'Sarah Thompson',
     role: 'Birding Specialist',
     group: 'Field',
-    bio: 'Sarah leads our specialist birding circuits with a sharp eye and encyclopedic knowledge — from shoebills in Mabamba to Albertine endemics in Bwindi.',
+    bio: 'Sarah leads our specialist birding circuits with a sharp eye and encyclopedic knowledge from shoebills in Mabamba to Albertine endemics in Bwindi.',
     quote: 'You came for the gorillas. You will leave dreaming of the birds.',
   },
 ]

@@ -244,7 +244,14 @@ const tourPackageDetailProjection = /* groq */ `
   included,
   notIncluded,
   faq[] { q, a },
-  waypoints[] { name, lng, lat }
+  waypoints[] { name, lng, lat },
+  rates {
+    priceFromUsd,
+    table[] { label, midrange, luxury },
+    singleSupplement { midrange, luxury },
+    permitNote,
+    validityNote
+  }
 `
 
 export const allTourPackagesQuery = /* groq */ `

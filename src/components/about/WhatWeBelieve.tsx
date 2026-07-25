@@ -17,7 +17,7 @@ export default function WhatWeBelieve() {
           <div className="section-rule mx-auto" style={{ background: 'rgba(255,255,255,0.5)' }} />
           <h2 className="mt-3 text-white">What We Believe</h2>
           <p className="mt-5 text-sm leading-relaxed text-white/85">
-            We believe a safari should leave a place better than it found it. Not just "do less harm" — actively
+            We believe a safari should leave a place better than it found it. Not just "do less harm" actively
             contribute to the health of the ecosystems, communities, and wildlife that make the journey worth taking
             in the first place. That's what regenerative travel means to us: travel that restores, not just travel
             that tries to tread lightly.

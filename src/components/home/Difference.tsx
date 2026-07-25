@@ -48,7 +48,7 @@ export default function Difference() {
             <p className="text-sm leading-relaxed text-brand-muted sm:text-base">
               At Still Wild Safaris, we believe that extraordinary adventure and profound conservation are not mutually
               exclusive; they are intrinsically linked. We craft journeys that immerse you in the breathtaking beauty of
-              Africa while actively contributing to its preservation — a promise to the wild and its communities.
+              Africa while actively contributing to its preservation a promise to the wild and its communities.
             </p>
           </Reveal>
         </div>

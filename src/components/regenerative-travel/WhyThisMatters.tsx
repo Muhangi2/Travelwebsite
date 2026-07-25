@@ -20,8 +20,8 @@ export default function WhyThisMatters() {
             Gorilla trekking, chimp tracking, and savannah safaris all depend entirely on healthy, intact ecosystems
             and communities that have a real stake in protecting them. In Uganda and Rwanda specifically,
             conservation areas like Bwindi, Mgahinga, Volcanoes National Park, and Nyungwe Forest exist in direct
-            relationship with the communities living on their borders. When that relationship is extractive —
-            tourism revenue flowing out, communities seeing little benefit — the pressure on these ecosystems only
+            relationship with the communities living on their borders. When that relationship is extractive
+            tourism revenue flowing out, communities seeing little benefit the pressure on these ecosystems only
             grows.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-white/85">

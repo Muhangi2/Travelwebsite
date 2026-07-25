@@ -138,7 +138,7 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
       <div className="container-page">
         <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-[2fr_3fr] xl:grid-cols-[400px_1fr] xl:gap-14">
 
-          {/* ── LEFT PANEL ─────────────────────────────────── */}
+          {/* LEFT PANEL */}
           <div className="flex flex-col gap-6 sm:gap-8 min-w-0">
 
             {/* Overview */}
@@ -188,19 +188,19 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
                       {/* Gradient */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
 
-                      {/* Day badge — top left */}
+                      {/* Day badge top left */}
                       <div className="absolute top-2.5 left-2.5 rounded-full bg-black/70 px-2.5 py-1 backdrop-blur-sm">
                         <span className="text-[9px] font-bold tracking-[0.14em] uppercase text-white">Day {d.day}</span>
                       </div>
 
-                      {/* Active check — top right */}
+                      {/* Active check top right */}
                       {active === i && (
                         <div className="absolute top-2.5 right-2.5 flex h-5 w-5 items-center justify-center rounded-full bg-white shadow-md">
                           <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="3.5"><path d="M5 12l5 5L20 7" /></svg>
                         </div>
                       )}
 
-                      {/* Title — bottom */}
+                      {/* Title bottom */}
                       <div className="absolute bottom-0 inset-x-0 px-3 py-3">
                         <p className="text-[11px] font-semibold leading-snug text-white line-clamp-2">{d.title}</p>
                       </div>
@@ -214,7 +214,7 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
             </div>
           </div>
 
-          {/* ── RIGHT PANEL ─────────────────────────────────── */}
+          {/* RIGHT PANEL */}
           <div className="flex flex-col gap-4 sm:gap-5 min-w-0">
 
             {/* Heading + arrow chevron day stepper */}
@@ -310,7 +310,7 @@ export default function TourItinerary({ days, overview, waypoints, title, countr
                 </button>
               </div>
 
-              {/* Info card — overlaps photo bottom, alternates black / white per day */}
+              {/* Info card overlaps photo bottom, alternates black / white per day */}
               {(() => {
                 const isDark = active % 2 === 0
                 return (

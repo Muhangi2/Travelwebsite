@@ -16,8 +16,8 @@ export default function KnowBeforeYouGo() {
   return (
     <>
       <SEO
-        title="Know Before You Go — Safari Guide & Packing List"
-        description="Everything you need to know before your East Africa safari — visa requirements, health advice, packing list, cancellation policy and booking terms from Still Wild Safaris."
+        title="Know Before You Go Safari Guide & Packing List"
+        description="Everything you need to know before your East Africa safari visa requirements, health advice, packing list, cancellation policy and booking terms from Still Wild Safaris."
         url="/know-before-you-go"
         jsonLd={buildFaqSchema(safariFaqs)}
       />

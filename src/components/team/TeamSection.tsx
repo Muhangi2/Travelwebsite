@@ -54,10 +54,10 @@ function MemberCard({ member }: { member: Member }) {
         </svg>
       </div>
 
-      {/* Name — black */}
+      {/* Name black */}
       <p className="text-lg font-bold leading-tight text-black">{member.name}</p>
 
-      {/* Role — green */}
+      {/* Role green */}
       <p className="mt-1 text-[11px] font-semibold uppercase tracking-widest" style={{ color: '#166534' }}>
         {member.role}
       </p>
@@ -65,7 +65,7 @@ function MemberCard({ member }: { member: Member }) {
       {/* Green divider */}
       <div className="my-4 h-0.5 w-10" style={{ backgroundColor: '#166534' }} />
 
-      {/* Bio — dark gray / near black */}
+      {/* Bio dark gray / near black */}
       <p className="flex-1 text-sm leading-relaxed text-gray-700">{member.bio}</p>
     </div>
   )

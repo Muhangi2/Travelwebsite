@@ -28,7 +28,7 @@ const pricingPoints = [
   },
   {
     num: '02',
-    text: 'Rates vary by season — high season (peak wildlife viewing) is priced differently from low/green season.',
+    text: 'Rates vary by season high season (peak wildlife viewing) is priced differently from low/green season.',
   },
   {
     num: '03',
@@ -81,7 +81,7 @@ export default function PricingPayments() {
             <p className="eyebrow mt-5 text-white/70">Planning Your Safari</p>
             <h2 className="mt-3 text-white">Pricing &amp; Payments</h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-white/85">
-              Transparent pricing, fully itemised quotes, and flexible payment plans — so you can focus on the adventure ahead.
+              Transparent pricing, fully itemised quotes, and flexible payment plans so you can focus on the adventure ahead.
             </p>
           </Reveal>
         </div>
@@ -101,7 +101,7 @@ export default function PricingPayments() {
 
         <div className="space-y-16">
 
-          {/* ── How Our Pricing Works ── */}
+          {/* How Our Pricing Works */}
           <Reveal>
             <p className="eyebrow mb-7 text-white/70">How Our Pricing Works</p>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -122,7 +122,7 @@ export default function PricingPayments() {
             </div>
           </Reveal>
 
-          {/* ── Included / Not Included ── */}
+          {/* Included / Not Included */}
           <Reveal>
             <p className="eyebrow mb-7 text-white/70">What's Included &amp; What's Not</p>
             <div className="rounded-2xl bg-white/10 p-8 ring-1 ring-white/20 backdrop-blur-sm sm:p-10">
@@ -162,7 +162,7 @@ export default function PricingPayments() {
             </div>
           </Reveal>
 
-          {/* ── Payment Details ── */}
+          {/* Payment Details */}
           <Reveal>
             <p className="eyebrow mb-7 text-white/70">Payment Details</p>
             <div className="grid gap-4 sm:grid-cols-2">

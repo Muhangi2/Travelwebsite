@@ -19,7 +19,7 @@ export default function TravelWithUs() {
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/80">
             If you're looking for a safari that's as conscious about its footprint as it is about its wildlife
             sightings, we'd love to plan your journey. Every itinerary we build carries the same DNA as the project
-            that started it all — smaller footprint, deeper impact, still wild.
+            that started it all smaller footprint, deeper impact, still wild.
           </p>
 
           <p className="mt-6 text-sm text-white/70">

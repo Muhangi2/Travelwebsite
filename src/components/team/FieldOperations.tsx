@@ -5,7 +5,7 @@ const guides: TeamMember[] = [
   {
     name: 'Ssemanda Kayiwa',
     role: 'Head Guide',
-    bio: "Ssemanda is the senior-most member of our field team. As the Head Guide, he sets the standard for safety, professionalism and local knowledge — mentoring the guiding team and personally leading our most challenging and exclusive expeditions.",
+    bio: "Ssemanda is the senior-most member of our field team. As the Head Guide, he sets the standard for safety, professionalism and local knowledge mentoring the guiding team and personally leading our most challenging and exclusive expeditions.",
     quote: 'Every safari is a story written by the land. My job is to read it for you.',
   },
   {

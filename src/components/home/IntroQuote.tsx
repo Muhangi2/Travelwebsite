@@ -19,7 +19,7 @@ export default function IntroQuote() {
             </blockquote>
 
             <p className="mt-4 text-[11px] font-medium uppercase tracking-[0.3em] text-brand-muted">
-              — David Attenborough
+               David Attenborough
             </p>
 
             <p className="mt-6 max-w-2xl text-sm leading-relaxed text-brand-muted sm:text-base">

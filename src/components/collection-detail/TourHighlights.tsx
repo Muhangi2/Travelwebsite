@@ -84,7 +84,7 @@ function HighlightCard({ text, image, index }: { text: string; image: string; in
           decoding="async"
         />
 
-        {/* Gradient — lightens slightly on hover to reveal more image */}
+        {/* Gradient lightens slightly on hover to reveal more image */}
         <div
           className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/5"
           style={{ transition: 'opacity 0.5s ease', opacity: hovered ? 0.8 : 1 }}
@@ -112,7 +112,7 @@ function HighlightCard({ text, image, index }: { text: string; image: string; in
           {String(index + 1).padStart(2, '0')}
         </span>
 
-        {/* Check badge — inverts on hover */}
+        {/* Check badge inverts on hover */}
         <div
           className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center rounded-full backdrop-blur-sm"
           style={{

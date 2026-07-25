@@ -15,7 +15,7 @@ export const tourPackageType = defineType({
       name: 'title',
       title: 'Package title',
       type: 'string',
-      description: 'e.g. "8-Day Western Circuit Primate & Wildlife" — shown on the listing card.',
+      description: 'e.g. "8-Day Western Circuit Primate & Wildlife" shown on the listing card.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -23,7 +23,7 @@ export const tourPackageType = defineType({
       title: 'Slug',
       type: 'slug',
       options: { source: 'title', maxLength: 96 },
-      description: 'e.g. "8-day-western-circuit-primate" — auto-generated from the title. Click Generate.',
+      description: 'e.g. "8-day-western-circuit-primate" auto-generated from the title. Click Generate.',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -46,7 +46,7 @@ export const tourPackageType = defineType({
       name: 'duration',
       title: 'Duration',
       type: 'string',
-      description: 'e.g. "8 Days / 7 Nights" or "2 Days / 1 Night" — shown on the listing card.',
+      description: 'e.g. "8 Days / 7 Nights" or "2 Days / 1 Night" shown on the listing card.',
     }),
     defineField({
       name: 'tags',
@@ -54,7 +54,7 @@ export const tourPackageType = defineType({
       type: 'array',
       of: [{ type: 'string' }],
       options: { list: tagOptions },
-      description: 'Select all that apply — used as filter buttons on the Safari Collections grid. A package can have multiple tags.',
+      description: 'Select all that apply used as filter buttons on the Safari Collections grid. A package can have multiple tags.',
     }),
     defineField({
       name: 'highlight',
@@ -75,14 +75,14 @@ export const tourPackageType = defineType({
       title: 'Detail page title (optional override)',
       type: 'text',
       rows: 2,
-      description: 'e.g. "8 Days — Western Circuit\nPrimate & Wildlife" — overrides the main title in the detail page hero. Add \\n for a line break. Leave blank to use the main title.',
+      description: 'e.g. "8 Days Western Circuit\nPrimate & Wildlife" overrides the main title in the detail page hero. Add \\n for a line break. Leave blank to use the main title.',
     }),
     defineField({
       name: 'subtitle',
       title: 'Detail subtitle',
       type: 'text',
       rows: 3,
-      description: 'e.g. "Uganda\'s most complete wildlife circuit — gorillas, chimpanzees, tree-climbing lions and the Nile." — shown below the heading on the detail hero.',
+      description: 'e.g. "Uganda\'s most complete wildlife circuit gorillas, chimpanzees, tree-climbing lions and the Nile." shown below the heading on the detail hero.',
     }),
     defineField({
       name: 'heroImage',
@@ -95,7 +95,7 @@ export const tourPackageType = defineType({
       title: 'Overview',
       type: 'text',
       rows: 6,
-      description: 'e.g. "Designed for discerning travellers with limited time who refuse to compromise on experience..." — 2–4 paragraphs introducing the package shown on the detail page.',
+      description: 'e.g. "Designed for discerning travellers with limited time who refuse to compromise on experience..." 2–4 paragraphs introducing the package shown on the detail page.',
     }),
     defineField({
       name: 'days',
@@ -109,21 +109,21 @@ export const tourPackageType = defineType({
       title: 'Trip highlights',
       type: 'array',
       of: [{ type: 'string' }],
-      description: 'e.g. "Private, expert English-speaking driver-guide from arrival to departure" — add 5–8 bullet points shown in the Highlights tab. Leave blank to use the default highlights.',
+      description: 'e.g. "Private, expert English-speaking driver-guide from arrival to departure" add 5–8 bullet points shown in the Highlights tab. Leave blank to use the default highlights.',
     }),
     defineField({
       name: 'included',
       title: "What's included",
       type: 'array',
       of: [{ type: 'string' }],
-      description: 'e.g. "All accommodation as listed per itinerary" or "Mountain gorilla trekking permit" — add each item included in the tour price. Leave blank to use the default list.',
+      description: 'e.g. "All accommodation as listed per itinerary" or "Mountain gorilla trekking permit" add each item included in the tour price. Leave blank to use the default list.',
     }),
     defineField({
       name: 'notIncluded',
       title: "What's not included",
       type: 'array',
       of: [{ type: 'string' }],
-      description: 'e.g. "International flights & departure taxes" or "Travel insurance" — add each item NOT covered by the tour price. Leave blank to use the default list.',
+      description: 'e.g. "International flights & departure taxes" or "Travel insurance" add each item NOT covered by the tour price. Leave blank to use the default list.',
     }),
     defineField({
       name: 'faq',
@@ -133,18 +133,77 @@ export const tourPackageType = defineType({
       description: 'Frequently asked questions specific to this tour. Leave blank to use the standard FAQ set.',
     }),
     defineField({
+      name: 'rates',
+      title: 'Rates',
+      type: 'object',
+      description: 'Pricing table shown in the Rates tab. Leave blank to hide the Rates tab entirely.',
+      fields: [
+        defineField({
+          name: 'priceFromUsd',
+          title: 'Price from (USD)',
+          type: 'number',
+          description: 'e.g. 3150 the headline "From $X per person sharing" figure. Always entered in US dollars; the site converts to other currencies automatically.',
+          validation: (rule) => rule.required().positive(),
+        }),
+        defineField({
+          name: 'table',
+          title: 'Group size rates',
+          type: 'array',
+          description: 'One row per group size, e.g. "2 sharing". Leave a tier blank if that row has no price for it.',
+          of: [{
+            type: 'object',
+            name: 'rateRow',
+            fields: [
+              defineField({ name: 'label', title: 'Group size', type: 'string', validation: (rule) => rule.required() }),
+              defineField({ name: 'midrange', title: 'Midrange (USD)', type: 'number' }),
+              defineField({ name: 'luxury', title: 'Luxury (USD)', type: 'number' }),
+            ],
+            preview: {
+              select: { title: 'label', midrange: 'midrange', luxury: 'luxury' },
+              prepare: ({ title, midrange, luxury }) => ({
+                title,
+                subtitle: [midrange && `Midrange $${midrange}`, luxury && `Luxury $${luxury}`].filter(Boolean).join(' · '),
+              }),
+            },
+          }],
+        }),
+        defineField({
+          name: 'singleSupplement',
+          title: 'Single supplement (USD)',
+          type: 'object',
+          fields: [
+            defineField({ name: 'midrange', title: 'Midrange', type: 'number' }),
+            defineField({ name: 'luxury', title: 'Luxury', type: 'number' }),
+          ],
+        }),
+        defineField({
+          name: 'permitNote',
+          title: 'Permit & booking notice',
+          type: 'text',
+          rows: 4,
+          description: 'e.g. permit cost, inclusion, and booking terms shown in a highlighted callout below the table.',
+        }),
+        defineField({
+          name: 'validityNote',
+          title: 'Validity note',
+          type: 'string',
+          description: 'e.g. "Rates are valid for travel through 31 December 2026 and are subject to tariff revision."',
+        }),
+      ],
+    }),
+    defineField({
       name: 'waypoints',
       title: 'Route waypoints',
       type: 'array',
       of: [{ type: 'routeWaypoint' }],
-      description: 'Add stops in order — used to draw the route line on the map. Right-click a location in Google Maps → "What\'s here?" to get coordinates.',
+      description: 'Add stops in order used to draw the route line on the map. Right-click a location in Google Maps → "What\'s here?" to get coordinates.',
     }),
     defineField({
       name: 'sortOrder',
       title: 'Sort order',
       type: 'number',
       initialValue: 0,
-      description: 'e.g. 1, 2, 3 — lower numbers appear first in the collections grid.',
+      description: 'e.g. 1, 2, 3 lower numbers appear first in the collections grid.',
     }),
   ],
   orderings: [

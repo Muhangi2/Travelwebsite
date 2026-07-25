@@ -36,7 +36,7 @@ export default function BeyondSustainability() {
             <div className="h-full rounded-md bg-white p-6 text-left text-neutral-900 shadow-lg">
               <h3 className="text-base">Regenerative Travel</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">
-                Goes further. It aims to actively restore — healthier ecosystems, stronger local economies, more
+                Goes further. It aims to actively restore healthier ecosystems, stronger local economies, more
                 resilient communities.
               </p>
             </div>

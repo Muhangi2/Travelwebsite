@@ -6,9 +6,10 @@ type Props = {
   hasHighlights: boolean
   hasFaq: boolean
   hasIncludes: boolean
+  hasRates: boolean
 }
 
-export default function TourNav({ hasHighlights, hasFaq, hasIncludes }: Props) {
+export default function TourNav({ hasHighlights, hasFaq, hasIncludes, hasRates }: Props) {
   const [active, setActive] = useState('overview')
   const navRef = useRef<HTMLDivElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -19,6 +20,7 @@ export default function TourNav({ hasHighlights, hasFaq, hasIncludes }: Props) {
     { key: 'itinerary',      label: 'Itinerary',     short: 'Plan',  id: 'itinerary' },
     ...(hasHighlights ? [{ key: 'highlights', label: 'Highlights', short: 'Best',  id: 'highlights' }] : []),
     ...(hasIncludes   ? [{ key: 'includes',   label: 'Included',   short: 'Incl',  id: 'includes' }]   : []),
+    ...(hasRates      ? [{ key: 'rates',      label: 'Rates',      short: 'Rates', id: 'rates' }]      : []),
     ...(hasFaq        ? [{ key: 'faq',        label: 'FAQ',        short: 'FAQ',   id: 'faq' }]        : []),
     { key: 'accommodation',  label: 'Accommodation', short: 'Stay',  id: 'accommodation' },
   ]

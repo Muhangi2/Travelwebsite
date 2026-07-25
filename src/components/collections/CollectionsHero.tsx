@@ -7,7 +7,7 @@ import { usePageHero } from '@/sanity/pageHeroes'
 const FALLBACK = {
   eyebrow: 'Journeys',
   heading: 'Curated Journeys Across East Africa',
-  body: 'Six themed journeys — from gorilla encounters and migration safaris to family adventures and photography tours. Each itinerary is hand-built by our travel designers and personally vetted in the field.',
+  body: 'Six themed journeys from gorilla encounters and migration safaris to family adventures and photography tours. Each itinerary is hand-built by our travel designers and personally vetted in the field.',
   image: '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
   imageAlt: 'Mountain gorilla portrait',
   primaryCta: { label: 'EXPLORE OUR JOURNEYS', href: '/safari-collections' },

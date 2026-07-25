@@ -46,13 +46,13 @@ export default function DestinationCountry() {
       {/* 02 When to Go */}
       <WhenToGo countryName={data.name} seasons={data.seasons} />
 
-      {/* Specialist quote — uses last park image */}
+      {/* Specialist quote uses last park image */}
       <SpecialistQuote
         data={data.specialistQuote}
         backgroundImage={data.parks.at(-1)?.image ?? data.heroImage}
       />
 
-      {/* 03 Where to Go — carousel uses heroImage */}
+      {/* 03 Where to Go carousel uses heroImage */}
       <WhereToGo
         countryName={data.name}
         countrySlug={data.slug}
@@ -73,21 +73,21 @@ export default function DestinationCountry() {
       {/* 06 Curated Luxury Lodges */}
       <CuratedLodges lodges={data.lodges} />
 
-      {/* 08 Conservation & Impact — uses middle park's image */}
+      {/* 08 Conservation & Impact uses middle park's image */}
       <ConservationImpact
         countryName={data.name}
         data={data.conservation}
         backgroundImage={data.parks[Math.floor(data.parks.length / 2)]?.image ?? data.heroImage}
       />
 
-      {/* 09 FAQ — uses second lodge image */}
+      {/* 09 FAQ uses second lodge image */}
       <DestinationFAQ
         countryName={data.name}
         faqs={data.countryFaqs}
         backgroundImage={data.lodges[1]?.image ?? data.lodges[0]?.image}
       />
 
-      {/* 10 Speak to a Specialist — uses first lodge's image */}
+      {/* 10 Speak to a Specialist uses first lodge's image */}
       <BespokeJourneyCTA
         backgroundImage={data.lodges[0]?.image ?? data.heroImage}
       />

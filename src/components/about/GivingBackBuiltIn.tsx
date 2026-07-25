@@ -41,7 +41,7 @@ export default function GivingBackBuiltIn() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="text-center">
-            <h2 className="text-white">Giving Back, Built In — Not Bolted On</h2>
+            <h2 className="text-white">Giving Back, Built In Not Bolted On</h2>
           </div>
         </Reveal>
 

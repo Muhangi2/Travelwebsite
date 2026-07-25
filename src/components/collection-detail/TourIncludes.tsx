@@ -108,7 +108,7 @@ export default function TourIncludes({ included, notIncluded }: Props) {
               <div className="mt-6 rounded-xl bg-white p-4 ring-1 ring-neutral-200">
                 <p className="text-xs leading-relaxed text-neutral-500">
                   <span className="font-semibold text-neutral-700">Need help arranging extras?</span>{' '}
-                  Our team can assist with flights, visas, vaccinations, and travel insurance — just ask when you enquire.
+                  Our team can assist with flights, visas, vaccinations, and travel insurance just ask when you enquire.
                 </p>
               </div>
             </div>

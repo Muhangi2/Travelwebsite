@@ -190,7 +190,7 @@ export default function TourRouteMap({ waypoints, days, title }: Props) {
         </div>
       </div>
 
-      {/* Map — full width edge to edge */}
+      {/* Map full width edge to edge */}
       <div className="relative overflow-hidden" style={{ lineHeight: 0 }}>
         {!ready && (
           <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-center bg-neutral-100" style={{ height: 560 }}>
@@ -202,7 +202,7 @@ export default function TourRouteMap({ waypoints, days, title }: Props) {
           style={{ width: '100%', height: 560, opacity: ready ? 1 : 0, transition: 'opacity 700ms ease' }}
         />
 
-        {/* Zoom controls — always rendered so they're usable as soon as map loads */}
+        {/* Zoom controls always rendered so they're usable as soon as map loads */}
         <div
           className="absolute top-4 right-4 z-10 flex flex-col overflow-hidden rounded-lg shadow-lg ring-1 ring-black/10"
           style={{ opacity: ready ? 1 : 0, transition: 'opacity 400ms ease', pointerEvents: ready ? 'auto' : 'none' }}

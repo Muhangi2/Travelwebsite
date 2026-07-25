@@ -84,7 +84,7 @@ export default function WhereToGo({
           </Reveal>
         </div>
 
-        {/* Infinite marquee strip — full bleed */}
+        {/* Infinite marquee strip full bleed */}
         <div className="mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
           <div
             style={{
@@ -112,7 +112,7 @@ export default function WhereToGo({
                   className="group flex shrink-0 flex-col overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl sm:h-[clamp(300px,55vw,420px)] sm:flex-row"
                   style={{ width: `min(90vw, ${CARD_W}px)` }}
                 >
-                  {/* Image — top on mobile, left 45% on larger screens */}
+                  {/* Image top on mobile, left 45% on larger screens */}
                   <div className="relative h-44 w-full shrink-0 overflow-hidden sm:h-auto sm:w-[45%]">
                     <Picture
                       src={park.image}
@@ -127,7 +127,7 @@ export default function WhereToGo({
                     </span>
                   </div>
 
-                  {/* Content — bottom on mobile, right 55% on larger screens */}
+                  {/* Content bottom on mobile, right 55% on larger screens */}
                   <div className="flex flex-1 flex-col justify-between px-6 py-6 sm:px-8 sm:py-8">
                     {/* Top: location + name */}
                     <div>

@@ -226,6 +226,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://stillwildsafaris.com/safari-collections/rwanda-gorilla-express</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://stillwildsafaris.com/safari-collections/3-day-kigali-gorilla</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -287,6 +292,41 @@
   </url>
   <url>
     <loc>https://stillwildsafaris.com/safari-collections/wild-muse-creative</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/kenya-4-day-masai-mara</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/kenya-7-day-classic</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/kenya-8-day-migration-gorillas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/kenya-10-day-grand-circuit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/tanzania-7-day-northern-circuit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/tanzania-10-day-safari-zanzibar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/kenya-tanzania-12-day-grand-safari</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -144,7 +144,7 @@ export default function StoryDetail() {
 
             {submitted ? (
               <p className="mt-8 text-center text-base text-brand-green">
-                Thank you — our team will be in touch within one business day.
+                Thank you our team will be in touch within one business day.
               </p>
             ) : (
               <form

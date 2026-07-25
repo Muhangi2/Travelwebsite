@@ -16,7 +16,7 @@ export default function TourFAQ({ faq }: Props) {
 
         <div className="grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-[1fr_580px] lg:gap-16 xl:gap-20 items-start">
 
-          {/* Left — sticky heading */}
+          {/* Left sticky heading */}
           <div className="lg:sticky lg:top-24">
             <AnimateIn variant="fade-up" duration={500}>
               <p className="eyebrow mb-3">Before You Go</p>
@@ -33,12 +33,12 @@ export default function TourFAQ({ faq }: Props) {
             </AnimateIn>
             <AnimateIn variant="blur-up" delay={220} duration={650}>
               <p className="mt-5 text-sm leading-relaxed text-neutral-400 max-w-xs">
-                Everything you need to know before your safari begins — answered by our team of specialists.
+                Everything you need to know before your safari begins answered by our team of specialists.
               </p>
             </AnimateIn>
           </div>
 
-          {/* Right — accordion */}
+          {/* Right accordion */}
           <div className="divide-y divide-neutral-200">
             {faq.map((item, i) => {
               const isOpen = open === i

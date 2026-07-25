@@ -5,7 +5,7 @@ import { usePageHero } from '@/sanity/pageHeroes'
 const FALLBACK = {
   eyebrow: 'Travel Essentials',
   heading: 'Know Before You Go',
-  body: 'Practical information to make sure your safari runs effortlessly — visas, packing, payments, tipping and trekking fitness.',
+  body: 'Practical information to make sure your safari runs effortlessly visas, packing, payments, tipping and trekking fitness.',
   image: '/images/parks/uganda/murchison-falls/dsc-6951.jpg',
   imageAlt: 'Safari preparation',
 }

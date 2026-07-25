@@ -5,7 +5,7 @@ import { usePageHero } from '@/sanity/pageHeroes'
 const FALLBACK = {
   eyebrow: 'Our Philosophy',
   heading: 'What Regenerative Travel Means to Us',
-  body: 'Leaving Uganda and Rwanda better than we found them — not just less harmed.',
+  body: 'Leaving Uganda and Rwanda better than we found them not just less harmed.',
   image: '/images/lodges/rwanda/volcanoes-national-park/singita-kwitonda-lodge/dsc07739.jpg',
   imageAlt: 'Eco-lodge built into the wetland below the Virunga volcanoes, Rwanda',
 }

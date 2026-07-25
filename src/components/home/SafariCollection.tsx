@@ -16,21 +16,21 @@ const cards: Card[] = [
     image: '/images/parks/uganda/murchison-falls/mf-1.jpg',
     duration: '10 Days  ·  Uganda',
     title: '10-Day Grand Uganda Safari',
-    desc: 'The complete loop — rhinos, Murchison Falls, chimpanzees, tree-climbing lions, and the mountain gorillas of Bwindi.',
+    desc: 'The complete loop rhinos, Murchison Falls, chimpanzees, tree-climbing lions, and the mountain gorillas of Bwindi.',
     href: '/safari-collections/10-day-grand-uganda-safari',
   },
   {
     image: '/images/activities/gorilla-trekking/18-kibale-lodge-chimpanzee-tadevs-vs-08183.jpg',
     duration: '5 Days  ·  Rwanda · Uganda',
     title: "5 Days Among Uganda's Great Apes",
-    desc: "From Kigali into Bwindi — gorillas and chimpanzees in one immersive journey through Uganda's most extraordinary forest.",
+    desc: "From Kigali into Bwindi gorillas and chimpanzees in one immersive journey through Uganda's most extraordinary forest.",
     href: '/safari-collections/5-day-kigali-great-apes',
   },
   {
     image: '/images/activities/gorilla-trekking/19-chimp-kya-bbp-img-20190218-wa0007.jpg',
     duration: '8 Days  ·  Uganda',
     title: '8-Day Western Circuit Primate & Wildlife',
-    desc: "Chimps in Kibale, tree-climbing lions in Ishasha, and mountain gorillas in Bwindi — Uganda's greatest wildlife corridor.",
+    desc: "Chimps in Kibale, tree-climbing lions in Ishasha, and mountain gorillas in Bwindi Uganda's greatest wildlife corridor.",
     href: '/safari-collections/8-day-western-circuit-primate',
   },
 ]
@@ -114,7 +114,7 @@ export default function SafariCollection() {
             <p className="eyebrow">Curated Itineraries</p>
             <h2 className="mt-3">Our Safari Collection</h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-brand-muted sm:text-base">
-              Six signature journeys across East Africa — each itinerary handcrafted by our travel designers, every
+              Six signature journeys across East Africa each itinerary handcrafted by our travel designers, every
               lodge personally vetted, every moment privately curated.
             </p>
           </div>

@@ -39,8 +39,8 @@ export default function WhereToStay({
       const isLuxury = !/mid-range/i.test(cat.category)
 
       if (typeof pick === 'string') {
-        const [name, ...rest] = pick.split(' — ')
-        const desc = rest.join(' — ')
+        const [name, ...rest] = pick.split(' ')
+        const desc = rest.join(' ')
         return {
           key: pick,
           name,

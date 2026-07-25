@@ -5,15 +5,15 @@ import Reveal from '@/components/ui/Reveal'
 const faqs = [
   {
     q: 'Does choosing a regenerative safari cost more?',
-    a: "Not necessarily. Many of our eco-lodge partners are competitively priced with conventional options. Where there's a small premium, it's usually tied directly to a specific, traceable impact — like solar infrastructure or community wages — not vague marketing.",
+    a: "Not necessarily. Many of our eco-lodge partners are competitively priced with conventional options. Where there's a small premium, it's usually tied directly to a specific, traceable impact like solar infrastructure or community wages not vague marketing.",
   },
   {
     q: 'Will I have to compromise on comfort or wildlife sightings?',
-    a: 'No. We design itineraries around the same world-class parks, lodges, and guiding standards as any premium safari operator. Regenerative travel is a layer we build in — not a downgrade you accept.',
+    a: 'No. We design itineraries around the same world-class parks, lodges, and guiding standards as any premium safari operator. Regenerative travel is a layer we build in not a downgrade you accept.',
   },
   {
     q: 'How do I know the carbon offset claims are real?',
-    a: "We only partner with verified offset and reforestation programs, and we're committed to publishing our impact numbers transparently as we grow — including the years where progress is slower than we'd like.",
+    a: "We only partner with verified offset and reforestation programs, and we're committed to publishing our impact numbers transparently as we grow including the years where progress is slower than we'd like.",
   },
 ]
 

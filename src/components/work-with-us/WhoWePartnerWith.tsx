@@ -4,7 +4,7 @@ import Reveal from '@/components/ui/Reveal'
 const categories = [
   {
     title: 'Travel Agents & Travel Agencies',
-    body: 'Independent agents and agency teams selling Africa to their clients, who need a dependable local operator to turn a sold itinerary into a flawlessly run trip — without having to manage logistics, permits, or vehicles themselves.',
+    body: 'Independent agents and agency teams selling Africa to their clients, who need a dependable local operator to turn a sold itinerary into a flawlessly run trip without having to manage logistics, permits, or vehicles themselves.',
   },
   {
     title: 'Tour Operators',
@@ -12,7 +12,7 @@ const categories = [
   },
   {
     title: 'Other DMCs',
-    body: 'DMCs based in other African countries, or globally, who occasionally need Uganda or Rwanda coverage outside their usual footprint — and would rather sub-contract to a specialist than build local capacity from scratch.',
+    body: 'DMCs based in other African countries, or globally, who occasionally need Uganda or Rwanda coverage outside their usual footprint and would rather sub-contract to a specialist than build local capacity from scratch.',
   },
   {
     title: 'Specialist & Niche Operators',

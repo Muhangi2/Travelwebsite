@@ -30,7 +30,7 @@ export default function WhyVisit({
         </Reveal>
 
         <div className="grid gap-16 lg:grid-cols-[3fr_2fr] lg:gap-24">
-          {/* Left — headline + intro + bullets */}
+          {/* Left headline + intro + bullets */}
           <div>
             <Reveal>
               <h2 className="text-4xl leading-tight text-neutral-900 sm:text-5xl lg:text-6xl">
@@ -50,7 +50,7 @@ export default function WhyVisit({
                     const body = typeof bullet === 'object' ? bullet.body : undefined
                     // Sanity can only ever store the { title, body } shape (no plain-string bullets),
                     // so key the two-line layout off actual body content rather than the value's
-                    // shape — otherwise every Sanity-sourced bullet with an empty body would gain a
+                    // shape otherwise every Sanity-sourced bullet with an empty body would gain a
                     // blank second line that the original plain-string bullets never had.
                     const isRich = Boolean(body)
                     return (
@@ -74,7 +74,7 @@ export default function WhyVisit({
             </Reveal>
           </div>
 
-          {/* Right — dark stat panel */}
+          {/* Right dark stat panel */}
           <Reveal variant="right" delay={100}>
             <div className="rounded-2xl bg-[#111] px-8 py-10 text-white lg:sticky lg:top-28">
               <p className="mb-8 text-[9px] font-bold uppercase tracking-[0.28em] text-white/30">

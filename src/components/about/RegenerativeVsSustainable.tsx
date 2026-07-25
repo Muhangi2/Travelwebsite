@@ -19,7 +19,7 @@ export default function RegenerativeVsSustainable() {
             <h2 className="mt-3 text-white">Regenerative, Not Just Sustainable</h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/85">
               These two words get used interchangeably in travel marketing, but they mean very different
-              things — and the difference matters to us.
+              things and the difference matters to us.
             </p>
           </div>
         </Reveal>
@@ -38,7 +38,7 @@ export default function RegenerativeVsSustainable() {
               <h3 className="text-base">Regenerative Travel</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                 Goes further. It aims to leave a destination measurably better off than before the
-                visit — healthier ecosystems, stronger local economies, more resilient communities.
+                visit healthier ecosystems, stronger local economies, more resilient communities.
               </p>
             </div>
           </Reveal>

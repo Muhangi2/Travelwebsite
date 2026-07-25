@@ -21,7 +21,7 @@ export default function TalkWithAdvisor() {
           </HeroItem>
           <HeroItem>
             <h2 className="text-display mt-3 text-white">
-              If You're Selling Uganda Or Rwanda — Or Want To Start
+              If You're Selling Uganda Or Rwanda Or Want To Start
             </h2>
           </HeroItem>
           <HeroItem>

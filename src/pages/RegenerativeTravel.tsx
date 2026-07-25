@@ -10,7 +10,7 @@ export default function RegenerativeTravel() {
   return (
     <>
       <SEO
-        title="What Regenerative Travel Means to Us — Still Wild Safaris"
+        title="What Regenerative Travel Means to Us Still Wild Safaris"
         description="Sustainability is the floor, regeneration is the goal. Discover how Still Wild Safaris builds carbon reduction, local-first hiring, and community impact into every Uganda and Rwanda itinerary."
         url="/regenerative-travel"
       />

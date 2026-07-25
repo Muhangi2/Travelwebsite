@@ -56,7 +56,7 @@ export default function WhyPartnerWithUs() {
 
         <Reveal delay={200}>
           <blockquote className="mx-auto mt-14 max-w-2xl text-center text-base italic leading-relaxed text-white/90 sm:text-lg">
-            "We wanted operators abroad to have one phone call to make for Uganda and Rwanda — not two."
+            "We wanted operators abroad to have one phone call to make for Uganda and Rwanda not two."
           </blockquote>
         </Reveal>
       </div>

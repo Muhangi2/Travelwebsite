@@ -14,7 +14,7 @@ export default function About() {
   return (
     <>
       <SEO
-        title="Our Story — About Still Wild Safaris"
+        title="Our Story About Still Wild Safaris"
         description="Regenerative travel, born from a university dorm room. Learn how Still Wild Safaris builds carbon reduction and community impact into every East African safari itinerary."
         url="/about"
       />

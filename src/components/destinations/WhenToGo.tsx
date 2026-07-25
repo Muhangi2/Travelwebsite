@@ -58,7 +58,7 @@ export default function WhenToGo({
                     </span>
                   </div>
                 ) : (
-                  /* No image fallback — show date as plain badge */
+                  /* No image fallback show date as plain badge */
                   <div className="px-8 pt-8">
                     <span className="inline-flex self-start rounded-full border border-neutral-300 bg-white px-3 py-1 text-[11px] font-semibold tracking-wide text-neutral-600">
                       {season.dates}

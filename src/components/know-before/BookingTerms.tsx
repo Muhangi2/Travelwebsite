@@ -74,7 +74,7 @@ const terms = [
   },
   {
     title: '10. Governing Law',
-    body: "These terms are governed by the applicable laws of Uganda. Questions about these terms before you book? Get in touch — we're happy to walk you through anything.",
+    body: "These terms are governed by the applicable laws of Uganda. Questions about these terms before you book? Get in touch we're happy to walk you through anything.",
   },
 ]
 

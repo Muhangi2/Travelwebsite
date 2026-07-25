@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
 const PAGE_OPTIONS = [
-  { title: 'About — Our Story', value: 'about' },
+  { title: 'About Our Story', value: 'about' },
   { title: 'Safari Collections', value: 'collections' },
   { title: 'Stories / Journal', value: 'stories' },
   { title: 'Meet the Team', value: 'team' },
@@ -31,14 +31,14 @@ export const pageHeroType = defineType({
       name: 'eyebrow',
       title: 'Eyebrow label',
       type: 'string',
-      description: 'e.g. "Our Story" or "Journal" or "Travel Essentials" — small text shown above the main heading.',
+      description: 'e.g. "Our Story" or "Journal" or "Travel Essentials" small text shown above the main heading.',
     }),
     defineField({
       name: 'heading',
       title: 'Heading (H1)',
       type: 'text',
       rows: 2,
-      description: 'e.g. "Welcome to Still Wild Safaris" — the main full-screen heading. Keep it short and impactful.',
+      description: 'e.g. "Welcome to Still Wild Safaris" the main full-screen heading. Keep it short and impactful.',
       validation: (r) => r.required(),
     }),
     defineField({
@@ -46,7 +46,7 @@ export const pageHeroType = defineType({
       title: 'Body text',
       type: 'text',
       rows: 4,
-      description: 'e.g. "East Africa\'s bespoke destination management company — designing private safaris in Uganda, Rwanda and Kenya." — 1–2 sentences shown below the heading.',
+      description: 'e.g. "East Africa\'s bespoke destination management company designing private safaris in Uganda, Rwanda and Kenya." 1–2 sentences shown below the heading.',
     }),
     defineField({
       name: 'image',
@@ -59,13 +59,13 @@ export const pageHeroType = defineType({
       name: 'primaryCta',
       title: 'Primary CTA button',
       type: 'pageHeroCta',
-      description: 'e.g. label "START YOUR JOURNEY" → href "/safari-collections" — the main call-to-action button.',
+      description: 'e.g. label "START YOUR JOURNEY" → href "/safari-collections" the main call-to-action button.',
     }),
     defineField({
       name: 'secondaryCta',
       title: 'Secondary CTA button (optional)',
       type: 'pageHeroCta',
-      description: 'e.g. label "REQUEST A CUSTOM QUOTE" → href "/contact" — an optional second button shown alongside the primary.',
+      description: 'e.g. label "REQUEST A CUSTOM QUOTE" → href "/contact" an optional second button shown alongside the primary.',
     }),
   ],
   preview: {

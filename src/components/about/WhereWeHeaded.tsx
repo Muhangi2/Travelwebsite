@@ -17,7 +17,7 @@ export default function WhereWeHeaded() {
           <div className="section-rule mx-auto" style={{ background: 'rgba(255,255,255,0.5)' }} />
           <h2 className="mt-3 text-white">Where We're Headed</h2>
           <p className="mt-5 text-sm leading-relaxed text-white/85">
-            We're still early in this journey — and we mean that literally. Still Wild Safaris is a young company
+            We're still early in this journey and we mean that literally. Still Wild Safaris is a young company
             built by people who are still learning, still testing, and still improving every itinerary we put out
             into the world. But our founding question hasn't changed since our university days: how do we make sure
             the wild places we love are still wild for the next generation of travellers?

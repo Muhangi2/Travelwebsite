@@ -17,7 +17,7 @@ export default function TravelOrPartnerCTA() {
       <div className="container-page text-center">
         <HeroStagger className="mx-auto max-w-2xl">
           <HeroItem>
-            <p className="eyebrow text-white/70">Travel — Or Partner — With Purpose</p>
+            <p className="eyebrow text-white/70">Travel Or Partner With Purpose</p>
           </HeroItem>
           <HeroItem>
             <h2 className="text-display mt-3 text-white">This Is The Standard Every Itinerary Is Built Against</h2>

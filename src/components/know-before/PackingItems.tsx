@@ -11,9 +11,9 @@ const categories = [
       </svg>
     ),
     items: [
-      "Neutral-coloured clothing — khaki, olive, sand and brown blend into the bush and won't startle wildlife. Avoid bright white and dark blue or black (attracts tsetse flies in some areas).",
+      "Neutral-coloured clothing khaki, olive, sand and brown blend into the bush and won't startle wildlife. Avoid bright white and dark blue or black (attracts tsetse flies in some areas).",
       'Lightweight, long-sleeved shirts and trousers for sun and insect protection, especially at dawn and dusk.',
-      'A warm fleece or light jacket — early morning game drives can be surprisingly cold, even in the dry season.',
+      'A warm fleece or light jacket early morning game drives can be surprisingly cold, even in the dry season.',
       'A light rain jacket if travelling in the wetter months.',
       'Comfortable shorts or t-shirts for warm afternoons at camp.',
       'Swimwear, if your lodge or camp has a pool.',
@@ -45,10 +45,10 @@ const categories = [
     ),
     items: [
       'Any personal medication in its original packaging, plus a copy of the prescription.',
-      'Anti-malarial medication, if prescribed by your doctor — please consult a travel clinic before departure.',
+      'Anti-malarial medication, if prescribed by your doctor please consult a travel clinic before departure.',
       'Insect repellent, ideally DEET-based, for evenings and early mornings.',
       'Sunscreen (reef- and eco-safe where your itinerary includes lake or coastal areas).',
-      'A small personal first-aid kit — plasters, rehydration salts, basic pain relief.',
+      'A small personal first-aid kit plasters, rehydration salts, basic pain relief.',
       'Hand sanitiser and travel-size toiletries.',
     ],
   },
@@ -62,13 +62,13 @@ const categories = [
       </svg>
     ),
     items: [
-      'Binoculars — a must for spotting wildlife at a distance.',
+      'Binoculars a must for spotting wildlife at a distance.',
       'Camera, spare batteries and memory cards.',
       'A reusable water bottle.',
       'A power bank and a universal travel adapter (East Africa uses Type G/D, 220–240V).',
       'A small daypack for game drives.',
       'A headlamp or torch for camps without 24-hour power.',
-      'A soft-sided duffel bag rather than a hard suitcase — easier to pack into safari vehicles and small aircraft.',
+      'A soft-sided duffel bag rather than a hard suitcase easier to pack into safari vehicles and small aircraft.',
     ],
   },
   {
@@ -99,7 +99,7 @@ const doNotBring = [
 const climate = [
   { season: 'Dry Season', months: 'Jun – Oct', icon: '☀', day: 'Warm', night: 'Cold mornings', notes: 'Best wildlife visibility, dusty roads' },
   { season: 'Short Rains', months: 'Nov', icon: '🌦', day: 'Warm', night: 'Mild', notes: 'Brief afternoon showers' },
-  { season: 'Long Rains', months: 'Mar – May', icon: '🌿', day: 'Warm', night: 'Mild', notes: 'Lush scenery, fewer crowds — pack rain gear' },
+  { season: 'Long Rains', months: 'Mar – May', icon: '🌿', day: 'Warm', night: 'Mild', notes: 'Lush scenery, fewer crowds pack rain gear' },
 ]
 
 export default function PackingItems() {
@@ -121,7 +121,7 @@ export default function PackingItems() {
           <div className="section-rule mx-auto" style={{ background: 'rgba(255,255,255,0.5)' }} />
           <h2 className="mt-4 text-center text-white">Packing List</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-white/80">
-            Everything you need for a comfortable, safari-ready trip — and nothing you don't. Packing for a safari is less about packing more, and more about packing right.
+            Everything you need for a comfortable, safari-ready trip and nothing you don't. Packing for a safari is less about packing more, and more about packing right.
           </p>
         </Reveal>
 
@@ -182,7 +182,7 @@ export default function PackingItems() {
             <div className="text-center">
               <p className="text-xs font-semibold uppercase tracking-widest text-white/60">Section 06</p>
               <h3 className="mt-1 text-2xl font-semibold text-white">Climate at a Glance</h3>
-              <p className="mt-1 text-sm text-white/70">Exact temperatures vary by region and altitude — your itinerary will include more specific guidance.</p>
+              <p className="mt-1 text-sm text-white/70">Exact temperatures vary by region and altitude your itinerary will include more specific guidance.</p>
             </div>
             <div className="mt-7 grid gap-4 sm:grid-cols-3">
               {climate.map(({ season, months, icon, day, night, notes }) => (

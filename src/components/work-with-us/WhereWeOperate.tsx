@@ -28,7 +28,7 @@ export default function WhereWeOperate() {
                   Gorilla trekking across Bwindi Impenetrable Forest and Mgahinga, chimpanzee trekking at Kibale and
                   Budongo, the Nile and savannah landscapes of Murchison Falls and Queen Elizabeth National Park, and
                   the remote wilderness of Kidepo Valley. We know the roads, the rangers, the permit offices, and the
-                  lodges — and we know which ones actually deliver.
+                  lodges and we know which ones actually deliver.
                 </p>
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function WhereWeOperate() {
                 <p className="mt-2 text-sm leading-relaxed text-white/90">
                   Mountain gorilla trekking at Volcanoes National Park, chimpanzee and canopy walk experiences at
                   Nyungwe Forest, Big Five safari at Akagera, and Lake Kivu stays. Our Rwanda ground team mirrors the
-                  same standard as our Uganda operation — local, accountable, and responsive.
+                  same standard as our Uganda operation local, accountable, and responsive.
                 </p>
               </div>
             </div>
@@ -56,8 +56,8 @@ export default function WhereWeOperate() {
 
         <Reveal delay={160}>
           <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-neutral-600">
-            Cross-border logistics between Uganda and Rwanda — including the Cyanika and Katuna border crossings
-            used for combined gorilla trekking itineraries — are something we manage routinely, not occasionally.
+            Cross-border logistics between Uganda and Rwanda including the Cyanika and Katuna border crossings
+            used for combined gorilla trekking itineraries are something we manage routinely, not occasionally.
           </p>
         </Reveal>
       </div>

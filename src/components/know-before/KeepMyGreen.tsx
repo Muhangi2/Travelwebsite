@@ -2,7 +2,7 @@ import Picture from '@/components/Picture'
 import Reveal, { Stagger } from '@/components/ui/Reveal'
 
 const practices = [
-  'We work with accommodation and transport partners who meet our own environmental standards — not just the ones with the best views.',
+  'We work with accommodation and transport partners who meet our own environmental standards not just the ones with the best views.',
   'A portion of every park entry and conservation fee on your itinerary goes directly toward anti-poaching efforts, habitat protection, and wildlife research.',
   'We prioritise hiring guides, drivers, and camp staff from the communities neighbouring the parks we operate in, so tourism revenue stays local.',
   'We keep group sizes manageable and routes considerate of wildlife, reducing pressure on high-traffic viewing areas.',
@@ -12,8 +12,8 @@ const practices = [
 const guestTips = [
   { tip: 'Bring a reusable water bottle and refill it at camp, rather than buying bottled water at every stop.' },
   { tip: 'Choose reef- and eco-safe sunscreen and insect repellent, especially near lakes, rivers, and coastal waters.' },
-  { tip: "Keep a respectful distance from wildlife and follow your guide's lead — for their safety and yours." },
-  { tip: "Buy local where you can — community cooperatives and local curio markets put your spending directly into the hands of the people who live alongside the wildlife you've come to see." },
+  { tip: "Keep a respectful distance from wildlife and follow your guide's lead for their safety and yours." },
+  { tip: "Buy local where you can community cooperatives and local curio markets put your spending directly into the hands of the people who live alongside the wildlife you've come to see." },
   { tip: 'Leave every campsite, viewpoint, and trail exactly as you found it. Nothing taken, nothing left behind.' },
 ]
 
@@ -57,7 +57,7 @@ export default function KeepMyGreen() {
               Wild places stay wild because of the choices we make before, during, and after every trip. Keep My Safari Green is Still Wild Safaris' promise: that the wonder you experience on your trip doesn't come at the cost of the places that make it possible. It shapes who we partner with, how we operate, and what we ask of every guest who travels with us.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-white/75">
-              East Africa's parks and reserves are under real pressure — from habitat loss, climate change, and the sheer popularity of the destinations that draw travellers here in the first place. Responsible tourism isn't a marketing line for us; it's the difference between these landscapes thriving for the next generation, or not.
+              East Africa's parks and reserves are under real pressure from habitat loss, climate change, and the sheer popularity of the destinations that draw travellers here in the first place. Responsible tourism isn't a marketing line for us; it's the difference between these landscapes thriving for the next generation, or not.
             </p>
           </Reveal>
         </div>
@@ -105,7 +105,7 @@ export default function KeepMyGreen() {
           <Reveal>
             <div className="section-rule mt-12" style={{ background: 'rgba(255,255,255,0.5)' }} />
             <h3 className="mt-4 text-lg text-white sm:text-2xl">How You Can Travel Green With Us</h3>
-            <p className="mt-2 text-sm text-white/70">Sustainability on safari isn't just about what we do behind the scenes — small choices from guests add up too.</p>
+            <p className="mt-2 text-sm text-white/70">Sustainability on safari isn't just about what we do behind the scenes small choices from guests add up too.</p>
             <ul className="mt-5 space-y-3">
               {guestTips.map(({ tip }) => (
                 <li key={tip} className="flex items-start gap-3 text-sm leading-relaxed text-white/80">

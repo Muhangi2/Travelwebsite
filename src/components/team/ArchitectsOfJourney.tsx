@@ -27,7 +27,7 @@ export default function ArchitectsOfJourney() {
               At the heart of every unforgettable journey is a team of dedicated experts. We are the architects of your
               adventure, the navigators of the wild, and the friendly faces that ensure every detail of your experience
               is seamless and enriching. Our team blends strategic leadership, specialized regional knowledge, and
-              unparalleled field expertise — all united by a passion for authentic travel.
+              unparalleled field expertise all united by a passion for authentic travel.
             </p>
           </Reveal>
         </div>

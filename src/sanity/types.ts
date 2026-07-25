@@ -117,6 +117,16 @@ export type SanityJourneyDay = {
   image: SanityMediaImage
 }
 
+export type SanityRateRow = { label: string; midrange?: number; luxury?: number }
+
+export type SanityTourRates = {
+  priceFromUsd: number
+  table?: SanityRateRow[]
+  singleSupplement?: { midrange?: number; luxury?: number }
+  permitNote?: string
+  validityNote?: string
+}
+
 export type SanityTourPackage = {
   _id: string
   title: string
@@ -136,4 +146,5 @@ export type SanityTourPackage = {
   notIncluded?: string[]
   faq?: { q: string; a: string }[]
   waypoints?: { name: string; lng: number; lat: number }[]
+  rates?: SanityTourRates
 }

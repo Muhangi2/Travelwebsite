@@ -10,12 +10,12 @@ const practices = [
   {
     num: '02',
     title: 'Reusable, Not Disposable',
-    body: 'Every guest on a Still Wild Safaris trip receives a refillable bottle at the start of their journey — removing a meaningful amount of single-use plastic waste across a multi-day safari.',
+    body: 'Every guest on a Still Wild Safaris trip receives a refillable bottle at the start of their journey removing a meaningful amount of single-use plastic waste across a multi-day safari.',
   },
   {
     num: '03',
     title: 'Eco-Lodge Partnerships',
-    body: 'We prioritise accommodation built and run on genuine sustainability principles — solar power, water recycling, local sourcing — over properties that simply use the language of eco-tourism.',
+    body: 'We prioritise accommodation built and run on genuine sustainability principles solar power, water recycling, local sourcing over properties that simply use the language of eco-tourism.',
   },
   {
     num: '04',
@@ -25,7 +25,7 @@ const practices = [
   {
     num: '05',
     title: 'Carbon Offset & Reforestation',
-    body: 'A percentage of every booking is channelled into verified offset and reforestation initiatives across Uganda and Rwanda — real trees, real funding, real accountability.',
+    body: 'A percentage of every booking is channelled into verified offset and reforestation initiatives across Uganda and Rwanda real trees, real funding, real accountability.',
   },
 ]
 

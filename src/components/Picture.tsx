@@ -1,5 +1,5 @@
 /**
- * Picture — drop-in <img> replacement that serves a .webp companion when the
+ * Picture drop-in <img> replacement that serves a .webp companion when the
  * browser supports it (almost all modern browsers), falling back to the
  * original JPG/PNG for legacy clients. WebP companions are pre-generated on
  * disk by scripts/gen-webp.

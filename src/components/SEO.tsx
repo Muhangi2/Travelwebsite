@@ -15,7 +15,7 @@ const DEFAULT_IMAGE = `${BASE_URL}/images/og-default.jpg`
 const DEFAULT_DESC = 'Bespoke luxury safari experiences in Uganda, Rwanda and Kenya. Expert-guided gorilla trekking, wildlife safaris and cultural journeys.'
 
 export default function SEO({ title, description, image, url, type = 'website', jsonLd }: SEOProps) {
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — Luxury Safaris in Uganda, Rwanda & Kenya`
+  const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} Luxury Safaris in Uganda, Rwanda & Kenya`
   const desc = description ?? DEFAULT_DESC
   const img = image ?? DEFAULT_IMAGE
   const canonical = url ? `${BASE_URL}${url}` : BASE_URL

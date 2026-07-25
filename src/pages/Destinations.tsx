@@ -7,7 +7,7 @@ import Reveal from '@/components/ui/Reveal'
 import HeroStagger, { HeroItem } from '@/components/ui/HeroStagger'
 import Picture from '@/components/Picture'
 
-// ─── 3-D rotating card carousel ───────────────────────────────────────────────
+// 3-D rotating card carousel
 
 function DestinationsCarousel({ countries }: { countries: Country[] }) {
   const [active, setActive] = useState(0)
@@ -38,7 +38,7 @@ function DestinationsCarousel({ countries }: { countries: Country[] }) {
         </div>
       </Reveal>
 
-      {/* ── card stage ─────────────────────────────────── */}
+      {/* card stage */}
       {/*  perspective is set on the parent so that all children share the   */}
       {/*  same vanishing point and appear to live in a single 3-D space.    */}
       <div
@@ -172,7 +172,7 @@ function DestinationsCarousel({ countries }: { countries: Country[] }) {
   )
 }
 
-// ─── Page ─────────────────────────────────────────────────────────────────────
+// Page
 
 export default function Destinations() {
   const { list } = useCountries()
@@ -180,11 +180,11 @@ export default function Destinations() {
   return (
     <div>
       <SEO
-        title="Destinations — Uganda, Rwanda & Kenya Safari"
-        description="Explore East Africa's finest safari destinations. Uganda's gorilla forests, Rwanda's volcanoes, and Kenya's sweeping savannahs — all curated by Still Wild Safaris."
+        title="Destinations Uganda, Rwanda & Kenya Safari"
+        description="Explore East Africa's finest safari destinations. Uganda's gorilla forests, Rwanda's volcanoes, and Kenya's sweeping savannahs all curated by Still Wild Safaris."
         url="/destinations"
       />
-      {/* ── Hero ─────────────────────────────────────────── */}
+      {/* Hero */}
       <div
         className="relative flex h-[100svh] items-end bg-cover bg-center"
         style={{
@@ -239,7 +239,7 @@ export default function Destinations() {
         </div>
       </div>
 
-      {/* ── Carousel ─────────────────────────────────────── */}
+      {/* Carousel */}
       <div id="destinations-carousel">
         <DestinationsCarousel countries={list} />
       </div>
