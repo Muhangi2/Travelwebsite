@@ -162,6 +162,7 @@ export const allDestinationsQuery = /* groq */ `
     lodges[] {
       name,
       location,
+      tier,
       body,
       image ${mediaImageProjection}
     },
@@ -218,6 +219,7 @@ export const destinationBySlugQuery = /* groq */ `
     lodges[] {
       name,
       location,
+      tier,
       body,
       image ${mediaImageProjection}
     },
@@ -235,8 +237,8 @@ const tourPackageDetailProjection = /* groq */ `
     day,
     title,
     body,
-    accommodationTier,
-    accommodation,
+    luxuryLodges,
+    midRangeLodges,
     meals,
     image ${mediaImageProjection}
   },
@@ -251,6 +253,13 @@ const tourPackageDetailProjection = /* groq */ `
     singleSupplement { midrange, luxury },
     permitNote,
     validityNote
+  },
+  lodges[] {
+    name,
+    location,
+    tier,
+    body,
+    image ${mediaImageProjection}
   }
 `
 

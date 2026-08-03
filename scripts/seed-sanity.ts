@@ -11,6 +11,11 @@ import { journeys, type JourneyData } from '../src/data/journeys.ts'
 import { experiences, type Experience } from '../src/data/experiences.ts'
 import { articles, type Article, type ArticleBlock } from '../src/data/articles.ts'
 
+// NOTE: this script runs under plain `node`, which cannot resolve the app's `@/*` path aliases
+// or import.meta.env — so it cannot import src/sanity/tourPackages.ts or any React component
+// directly (that's why the card list below is a plain duplicate, not an import). If you add a
+// new tour package to src/sanity/tourPackages.ts's localCards(), add the matching entry here too.
+
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PUBLIC_DIR = join(__dirname, '..', 'public')
 
@@ -183,38 +188,52 @@ type TourCard = {
   highlight?: boolean
 }
 
-// Mirrors the listing-card metadata hardcoded in src/components/collections/CollectionsGrid.tsx —
-// duration/tags/highlight/listing-image live there rather than in src/data/journeys.ts.
+// Mirrors localCards() in src/sanity/tourPackages.ts (kept in sync by hand — see the note above
+// on why this can't just be imported). Update both places when a package is added/renamed.
 export const tourCards: TourCard[] = [
   { id: '2-day-rwanda-gorilla', image: '/images/activities/gorilla-trekking/1-mgl-gorilla-bb.jpg', country: 'RWANDA · UGANDA', tags: ['Luxury Adventure'], title: '2 Days from Rwanda to the Mountain Gorillas', duration: '2 Days / 1 Night' },
-  { id: '3-day-kigali-gorilla', image: '/images/activities/gorilla-trekking/4-mgl-gorilla-bb.jpg', country: 'RWANDA · UGANDA', tags: ['Luxury Adventure', 'Photography Focus'], title: '3 Days from Kigali into Gorilla Country', duration: '3 Days / 2 Nights' },
-  { id: '4-day-rwanda-uganda-primate', image: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.jpg', country: 'RWANDA · UGANDA', tags: ['Luxury Adventure', 'Photography Focus'], title: '4-Day Rwanda–Uganda Primate Safari', duration: '4 Days / 3 Nights' },
+  { id: 'rwanda-gorilla-express', image: '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.jpg', country: 'RWANDA', tags: ['Luxury Adventure'], title: 'The 3-Day Rwanda Gorilla Express', duration: '3 Days / 2 Nights' },
+  { id: '3-day-kigali-gorilla', image: '/images/activities/gorilla-trekking/4-mgl-gorilla-bb.jpg', country: 'RWANDA · UGANDA', tags: ['Luxury Adventure', 'Photography Focus'], title: '4 Days from Kigali into Gorilla Country', duration: '4 Days / 3 Nights' },
+  { id: '4-day-rwanda-uganda-primate', image: '/images/activities/gorilla-trekking/35-mount-gahinga-lodge-golden-monkey.jpg', country: 'RWANDA · UGANDA', tags: ['Luxury Adventure', 'Photography Focus'], title: '5-Day Rwanda–Uganda Primate Safari', duration: '5 Days / 4 Nights' },
   { id: '5-day-kigali-great-apes', image: '/images/activities/gorilla-trekking/18-kibale-lodge-chimpanzee-tadevs-vs-08183.jpg', country: 'RWANDA · UGANDA', tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'], title: "5 Days from Kigali Among Uganda's Great Apes", duration: '5 Days / 4 Nights', highlight: true },
   { id: '3-day-classic-uganda-gorilla', image: '/images/activities/gorilla-trekking/8-gorilla-ah1i2661.jpg', country: 'UGANDA', tags: ['Luxury Adventure', 'Family-Friendly'], title: '3-Day Classic Uganda Gorilla Safari', duration: '3 Days / 2 Nights' },
-  { id: '3-day-kigali-uganda-gorilla', image: '/images/activities/gorilla-trekking/11-gorilla-ah1i2713.jpg', country: 'RWANDA · UGANDA', tags: ['Luxury Adventure'], title: '3-Day Gorilla Safari — Kigali to Uganda', duration: '3 Days / 2 Nights' },
+  { id: '3-day-kigali-uganda-gorilla', image: '/images/activities/gorilla-trekking/11-gorilla-ah1i2713.jpg', country: 'RWANDA · UGANDA', tags: ['Luxury Adventure'], title: '3-Day Gorilla Safari Kigali to Uganda', duration: '3 Days / 2 Nights' },
   { id: '4-day-luxury-flyin-gorilla', image: '/images/activities/gorilla-trekking/10-gorilla-ah1i2740.jpg', country: 'UGANDA', tags: ['Luxury Adventure'], title: '4-Day Luxury Uganda Gorilla Trekking (Fly-In)', duration: '4 Days / 3 Nights' },
   { id: '8-day-western-circuit-primate', image: '/images/activities/gorilla-trekking/19-chimp-kya-bbp-img-20190218-wa0007.jpg', country: 'UGANDA', tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'], title: '8-Day Western Circuit Primate & Wildlife', duration: '8 Days / 7 Nights', highlight: true },
-  { id: '10-day-grand-uganda-safari', image: '/images/parks/uganda/murchison-falls/mf-1.jpg', country: 'UGANDA', tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'], title: '10-Day Grand Uganda Safari — The Complete Loop', duration: '10 Days / 9 Nights' },
-  { id: '9-day-rhythm-roots', image: '/images/parks/uganda/murchison-falls/dsc-7062.jpg', country: 'UGANDA', tags: ['Photography Focus'], title: 'Rhythm & Roots — 9-Day Creative Safari', duration: '9 Days / 8 Nights' },
-  { id: '11-day-primate-fishing', image: '/images/parks/uganda/murchison-falls/dsc-6828.jpg', country: 'UGANDA', tags: ['Luxury Adventure', 'Family-Friendly'], title: 'Uganda Primate & Fishing Safari — 11 Days', duration: '11 Days / 10 Nights' },
+  { id: '10-day-grand-uganda-safari', image: '/images/parks/uganda/murchison-falls/mf-1.jpg', country: 'UGANDA', tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'], title: '10-Day Grand Uganda Safari The Complete Loop', duration: '10 Days / 9 Nights' },
+  { id: '9-day-rhythm-roots', image: '/images/parks/uganda/murchison-falls/dsc-7062.jpg', country: 'UGANDA', tags: ['Photography Focus'], title: 'Rhythm & Roots 9-Day Creative Safari', duration: '9 Days / 8 Nights' },
+  { id: '11-day-primate-fishing', image: '/images/parks/uganda/murchison-falls/dsc-6828.jpg', country: 'UGANDA', tags: ['Luxury Adventure', 'Family-Friendly'], title: 'Uganda Primate & Fishing Safari 11 Days', duration: '11 Days / 10 Nights' },
   { id: '7-day-shoebill-primates', image: '/images/activities/gorilla-trekking/33-mount-gahinga-lodge-gorilla.jpg', country: 'UGANDA', tags: ['Luxury Adventure', 'Photography Focus'], title: '7-Day Shoebill & Primates Fly-In Safari', duration: '7 Days / 6 Nights' },
-  { id: 'deep-dive-creative', image: '/images/parks/uganda/murchison-falls/dsc-7442.jpg', country: 'UGANDA', tags: ['Photography Focus'], title: 'The Deep Dive — 12-Day Creative Residency', duration: '12 Days / 11 Nights' },
-  { id: 'wild-muse-creative', image: '/images/parks/uganda/murchison-falls/dsc-6828.jpg', country: 'UGANDA', tags: ['Photography Focus'], title: 'The Wild Muse — 7-Day Creative Safari', duration: '7 Days / 6 Nights' },
+  { id: 'deep-dive-creative', image: '/images/parks/uganda/murchison-falls/dsc-7442.jpg', country: 'UGANDA', tags: ['Photography Focus'], title: 'The Deep Dive 12-Day Creative Residency', duration: '12 Days / 11 Nights' },
+  { id: 'wild-muse-creative', image: '/images/parks/uganda/murchison-falls/dsc-6828.jpg', country: 'UGANDA', tags: ['Photography Focus'], title: 'The Wild Muse 7-Day Creative Safari', duration: '7 Days / 6 Nights' },
+  { id: 'kenya-4-day-masai-mara', image: '/images/parks/kenya/masai-mara/the-dangers-of-crossing-the-mara-river.jpg', country: 'KENYA', tags: ['Luxury Adventure', 'Family-Friendly'], title: '4-Day Masai Mara Safari', duration: '4 Days / 3 Nights' },
+  { id: 'kenya-7-day-classic', image: '/images/parks/kenya/amboseli/sundowner-on-observation-hill-overlooking-mt-kilimanjaro.jpg', country: 'KENYA', tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'], title: '7-Day Classic Kenya Safari', duration: '7 Days / 6 Nights', highlight: true },
+  { id: 'kenya-8-day-migration-gorillas', image: '/images/parks/kenya/masai-mara/the-dangers-of-crossing-the-mara-river.jpg', country: 'KENYA · UGANDA · RWANDA', tags: ['Luxury Adventure', 'Photography Focus'], title: 'Migration & Gorillas 8-Day Fly-In Journey', duration: '8 Days / 7 Nights', highlight: true },
+  { id: 'kenya-10-day-grand-circuit', image: '/images/parks/kenya/samburu/sasaab.jpg', country: 'KENYA', tags: ['Luxury Adventure', 'Photography Focus'], title: '10-Day Kenya Grand Circuit', duration: '10 Days / 9 Nights' },
+  { id: 'tanzania-7-day-northern-circuit', image: '/images/destinations/tanzania/sayari-serengeti-elephant-walking-safari.jpg', country: 'TANZANIA', tags: ['Luxury Adventure', 'Family-Friendly', 'Photography Focus'], title: '7-Day Tanzania Northern Circuit', duration: '7 Days / 6 Nights', highlight: true },
+  { id: 'tanzania-10-day-safari-zanzibar', image: '/images/destinations/tanzania/rubondo-island-camp-beach.jpg', country: 'TANZANIA', tags: ['Luxury Adventure', 'Family-Friendly'], title: '10-Day Tanzania Safari & Zanzibar', duration: '10 Days / 9 Nights' },
+  { id: 'kenya-tanzania-12-day-grand-safari', image: '/images/parks/kenya/masai-mara/the-dangers-of-crossing-the-mara-river.jpg', country: 'KENYA · TANZANIA', tags: ['Luxury Adventure', 'Photography Focus'], title: '12-Day Kenya & Tanzania Grand Safari', duration: '12 Days / 11 Nights', highlight: true },
 ]
 
-const TIER_LABEL_TO_VALUE: Record<string, string> = {
-  Luxury: 'luxury',
-  'Mid-Range': 'midRange',
-  Budget: 'budget',
-  'Fly Camp': 'flyCamp',
+// Splits the site's combined display string (e.g. "Luxury: X / Y | Mid-Range: Z") back into
+// the two independent journeyDay fields the schema now stores.
+export function splitAccommodation(raw: string): { luxuryLodges?: string; midRangeLodges?: string } {
+  if (!raw || raw === '—') return {}
+  const out: { luxuryLodges?: string; midRangeLodges?: string } = {}
+  for (const segment of raw.split('|').map((s) => s.trim())) {
+    const m = segment.match(/^(Luxury|Mid-Range):\s*(.*)$/)
+    if (!m) continue
+    if (m[1] === 'Luxury') out.luxuryLodges = m[2]
+    else out.midRangeLodges = m[2]
+  }
+  return out
 }
 
-export function parseAccommodation(raw: string): { accommodationTier?: string; accommodation?: string } {
-  if (!raw || raw === '—') return { accommodationTier: 'none' }
-  const m = raw.match(/^(Luxury|Mid-Range|Budget|Fly Camp):\s*(.*)$/)
-  if (!m) return { accommodation: raw }
-  return { accommodationTier: TIER_LABEL_TO_VALUE[m[1]], accommodation: m[2] }
-}
+// NOTE: `lodges` (per-package photos) is deliberately left unset here — the ~130-entry
+// name → image lookup used to render lodge photos today lives in
+// src/components/collection-detail/HandpickedLodges.tsx, which (like tourPackages.ts) can't be
+// imported into this plain-Node script. Handpicked Lodges will keep working exactly as it does
+// today (falling back to that lookup) until real lodge photos are authored per package in Studio.
 
 export function toTourPackageDoc(card: TourCard, journey: JourneyData, sortOrder: number) {
   return {
@@ -232,15 +251,15 @@ export function toTourPackageDoc(card: TourCard, journey: JourneyData, sortOrder
     heroImage: img(journey.heroImage, card.title),
     overview: journey.overview,
     days: (journey.days ?? []).map((d) => {
-      const { accommodationTier, accommodation } = parseAccommodation(d.accommodation)
+      const { luxuryLodges, midRangeLodges } = splitAccommodation(d.accommodation)
       return {
         _type: 'journeyDay',
         _key: key(),
         day: d.day,
         title: d.title,
         body: d.body,
-        accommodationTier,
-        accommodation,
+        luxuryLodges,
+        midRangeLodges,
         meals: d.meals,
         image: img(d.image, d.title),
       }
@@ -256,6 +275,21 @@ export function toTourPackageDoc(card: TourCard, journey: JourneyData, sortOrder
       lng: w.coords[0],
       lat: w.coords[1],
     })),
+    rates: journey.rates
+      ? {
+          priceFromUsd: journey.rates.priceFromUsd,
+          table: (journey.rates.table ?? []).map((r) => ({
+            _type: 'rateRow',
+            _key: key(),
+            label: r.label,
+            midrange: r.midrange,
+            luxury: r.luxury,
+          })),
+          singleSupplement: journey.rates.singleSupplement,
+          permitNote: journey.rates.permitNote,
+          validityNote: journey.rates.validityNote,
+        }
+      : undefined,
     sortOrder,
   }
 }

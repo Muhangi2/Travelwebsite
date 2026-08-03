@@ -8,6 +8,14 @@ export type RouteWaypoint = {
 
 export type TourFAQ = { q: string; a: string }
 
+export type JourneyLodge = {
+  name: string
+  location?: string
+  tier?: 'luxury' | 'midRange'
+  body?: string
+  image: string
+}
+
 export type JourneyData = {
   slug: string
   title: string
@@ -22,6 +30,9 @@ export type JourneyData = {
   notIncluded?: string[]
   faq?: TourFAQ[]
   rates?: TourRatesData
+  /** Structured lodge data (name/location/tier/image) authored in Sanity. When present,
+   * HandpickedLodges renders directly from this instead of text-matching day accommodation names. */
+  lodges?: JourneyLodge[]
 }
 
 

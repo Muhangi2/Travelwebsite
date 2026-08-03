@@ -473,15 +473,26 @@ export const lodgeType = defineType({
       name: 'location',
       title: 'Location',
       type: 'string',
-      description: 'e.g. "Bwindi Impenetrable Forest, Uganda" or "Murchison Falls National Park"',
+      description: 'e.g. "Bwindi Impenetrable Forest, Uganda" or "Murchison Falls National Park" — used to group lodges by location on the page.',
+    }),
+    defineField({
+      name: 'tier',
+      title: 'Tier',
+      type: 'string',
+      description: 'Select the price tier this lodge belongs to. Leave blank for destination pages where every lodge is presented as a single curated list.',
+      options: {
+        list: [
+          { title: 'Luxury', value: 'luxury' },
+          { title: 'Mid-Range', value: 'midRange' },
+        ],
+      },
     }),
     defineField({
       name: 'body',
       title: 'Description',
       type: 'text',
       rows: 3,
-      description: 'e.g. "Set within the forest boundary, this intimate camp offers six luxury tents with sweeping canopy views and direct gorilla access."',
-      validation: (r) => r.required(),
+      description: 'e.g. "Set within the forest boundary, this intimate camp offers six luxury tents with sweeping canopy views and direct gorilla access." Optional — leave blank for lodges migrated without a hand-written description.',
     }),
     defineField({
       name: 'image',
@@ -788,25 +799,16 @@ export const journeyDayType = defineType({
       validation: (r) => r.required(),
     }),
     defineField({
-      name: 'accommodationTier',
-      title: 'Accommodation tier',
+      name: 'luxuryLodges',
+      title: 'Luxury lodge(s)',
       type: 'string',
-      description: 'Select the tier that matches the lodge(s) for this night.',
-      options: {
-        list: [
-          { title: 'Luxury', value: 'luxury' },
-          { title: 'Mid-Range', value: 'midRange' },
-          { title: 'Budget', value: 'budget' },
-          { title: 'Fly Camp', value: 'flyCamp' },
-          { title: 'No overnight', value: 'none' },
-        ],
-      },
+      description: 'e.g. "Gorilla Forest Camp / Mahogany Springs" — separate alternative lodge options with " / ". Leave blank if there is no luxury option this night.',
     }),
     defineField({
-      name: 'accommodation',
-      title: 'Lodge name(s)',
+      name: 'midRangeLodges',
+      title: 'Mid-range lodge(s)',
       type: 'string',
-      description: 'e.g. "Gorilla Forest Camp / Mahogany Springs / Bwindi Lodge" separate alternative lodge options with " / ". Leave blank if no overnight stay.',
+      description: 'e.g. "Ichumbi Gorilla Lodge / Rushaga Gorilla Lodge" — separate alternative lodge options with " / ". Leave blank if there is no mid-range option this night.',
     }),
     defineField({
       name: 'meals',

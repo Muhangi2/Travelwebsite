@@ -17,17 +17,12 @@ export type TourPackageCard = {
   priceFromUsd?: number
 }
 
-const TIER_LABELS: Record<string, string> = {
-  luxury: 'Luxury',
-  midRange: 'Mid-Range',
-  budget: 'Budget',
-  flyCamp: 'Fly Camp',
-}
-
-function buildAccommodationString(tier: string | undefined, lodgeNames: string | undefined): string {
-  if (!tier || tier === 'none') return '—'
-  const label = TIER_LABELS[tier] ?? tier
-  return lodgeNames ? `${label}: ${lodgeNames}` : label
+function buildAccommodationString(luxuryLodges: string | undefined, midRangeLodges: string | undefined): string {
+  const segments = [
+    luxuryLodges && `Luxury: ${luxuryLodges}`,
+    midRangeLodges && `Mid-Range: ${midRangeLodges}`,
+  ].filter(Boolean)
+  return segments.length ? segments.join(' | ') : '—'
 }
 
 export function toJourneyData(raw: SanityTourPackage): JourneyData | null {
@@ -45,7 +40,7 @@ export function toJourneyData(raw: SanityTourPackage): JourneyData | null {
         day: d.day,
         title: d.title,
         body: d.body,
-        accommodation: buildAccommodationString(d.accommodationTier, d.accommodation),
+        accommodation: buildAccommodationString(d.luxuryLodges, d.midRangeLodges),
         meals: d.meals ?? '',
         image: resolveMediaImage(d.image, 900),
       }),
@@ -66,6 +61,15 @@ export function toJourneyData(raw: SanityTourPackage): JourneyData | null {
           validityNote: raw.rates.validityNote,
         }
       : undefined,
+    lodges: raw.lodges?.length
+      ? raw.lodges.map((l) => ({
+          name: l.name,
+          location: l.location,
+          tier: l.tier,
+          body: l.body,
+          image: resolveMediaImage(l.image, 800),
+        }))
+      : undefined,
   }
 }
 
@@ -82,7 +86,7 @@ export function toCard(raw: SanityTourPackage): TourPackageCard {
   }
 }
 
-function localCards(): TourPackageCard[] {
+export function localCards(): TourPackageCard[] {
   return rawLocalCards().map((c) => ({
     ...c,
     priceFromUsd: localJourneys[c.id]?.rates?.priceFromUsd,
@@ -338,6 +342,7 @@ export function useTourPackage(slug: string | undefined): { journey: JourneyData
           notIncluded: mapped.notIncluded ?? prev?.notIncluded,
           faq:         mapped.faq         ?? prev?.faq,
           waypoints:   mapped.waypoints   ?? prev?.waypoints,
+          lodges:      mapped.lodges      ?? prev?.lodges,
           ...mapped,
         }))
       })

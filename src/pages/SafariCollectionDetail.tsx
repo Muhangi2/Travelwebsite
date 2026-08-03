@@ -104,7 +104,7 @@ export default function SafariCollectionDetail() {
       )}
 
       <div id="accommodation">
-        <HandpickedLodges days={journey.days} />
+        <HandpickedLodges days={journey.days} lodges={journey.lodges} />
       </div>
 
       <JourneysCarousel excludeSlug={slug} heading="Other Journeys You Might Like" />

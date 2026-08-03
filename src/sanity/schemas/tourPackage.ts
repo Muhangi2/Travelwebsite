@@ -199,6 +199,13 @@ export const tourPackageType = defineType({
       description: 'Add stops in order used to draw the route line on the map. Right-click a location in Google Maps → "What\'s here?" to get coordinates.',
     }),
     defineField({
+      name: 'lodges',
+      title: 'Handpicked lodges',
+      type: 'array',
+      of: [{ type: 'lodge' }],
+      description: 'Add each lodge featured in the Handpicked Lodges section, with its own photo, location grouping and tier. Set the "Location" field to match a park/area mentioned in the itinerary so lodges group correctly under that tab. Leave blank to fall back to a generic photo for lodge names mentioned only in the day-by-day accommodation fields.',
+    }),
+    defineField({
       name: 'sortOrder',
       title: 'Sort order',
       type: 'number',

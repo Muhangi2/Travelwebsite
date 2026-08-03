@@ -108,6 +108,10 @@ export const storyType = defineType({
             { title: 'Heading 3', value: 'h3' },
             { title: 'Quote', value: 'blockquote' },
           ],
+          lists: [
+            { title: 'Bullet list', value: 'bullet' },
+            { title: 'Numbered list', value: 'number' },
+          ],
           marks: {
             decorators: [
               { title: 'Strong', value: 'strong' },

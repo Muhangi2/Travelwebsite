@@ -62,7 +62,7 @@ export function toCountry(raw: SanityDestination): Country {
     lodges: (raw.lodges ?? []).map((lodge) => ({
       name: lodge.name,
       location: lodge.location ?? '',
-      body: lodge.body,
+      body: lodge.body ?? '',
       image: resolveMediaImage(lodge.image, 900),
     })),
     seoKeywords: raw.seoKeywords ?? '',

@@ -1,9 +1,24 @@
 import { useState } from 'react'
 import Reveal, { Stagger } from '@/components/ui/Reveal'
 import type { JourneyDay } from '@/components/collection-detail/SafariJourney'
+import type { JourneyLodge } from '@/data/journeys'
 
-type LodgeEntry = { name: string; nights: string; image: string; tier: 'luxury' | 'midRange' }
+type LodgeEntry = { name: string; nights?: string; image: string; tier: 'luxury' | 'midRange' }
 type LocationGroup = { location: string; lodges: LodgeEntry[] }
+
+function groupsFromLodges(lodges: JourneyLodge[]): LocationGroup[] {
+  const locationMap = new Map<string, LodgeEntry[]>()
+  for (const lodge of lodges) {
+    const location = lodge.location ?? 'Other'
+    if (!locationMap.has(location)) locationMap.set(location, [])
+    locationMap.get(location)!.push({
+      name: lodge.name,
+      image: lodge.image,
+      tier: lodge.tier ?? 'luxury',
+    })
+  }
+  return Array.from(locationMap.entries()).map(([location, entries]) => ({ location, lodges: entries }))
+}
 
 const LODGE_IMAGES: Record<string, string> = {
   'Kigali Serena Hotel':          '/images/lodges/rwanda/kigali/serena-kigali/1000045517.jpg',
@@ -19,7 +34,7 @@ const LODGE_IMAGES: Record<string, string> = {
   'Gorilla Forest Camp by A&K':   '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.jpg',
   'Sanctuary Gorilla Forest Camp':'/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.jpg',
   'Gorilla Forest Lodge by A&K Sanctuary': '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.jpg',
-  'Clouds Mountain Gorilla Lodge': '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7419.jpg',
+  'Clouds Mountain Gorilla Lodge': '/images/lodges/uganda/bwindi/clouds-moutain-gorilla-lodge-by-wildplaces/1761689756443ugandawildplaces-samchurchill-6773.jpg',
   'Mahogany Springs':             '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7419.jpg',
   'Buhoma Lodge':                 '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7518.jpg',
   'Bwindi Lodge':                 '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7863.jpg',
@@ -43,60 +58,60 @@ const LODGE_IMAGES: Record<string, string> = {
   'No.5 Boutique Hotel':          '/images/lodges/uganda/entebbe-hotels/karibu-guesthouse/1karibu-guest-house-entebbe-52473407576-o.jpg',
   'Protea Hotel Entebbe':         '/images/lodges/uganda/entebbe-hotels/karibu-guesthouse/1karibu-guest-house-entebbe-52473407576-o.jpg',
   'Serena Kampala Hotel':         '/images/parks/uganda/murchison-falls/dsc-7062.jpg',
-  'Kansanga Guest House':         '/images/parks/uganda/murchison-falls/dsc-7062.jpg',
+  'Kansanga Guest House':         '/images/activities/gorilla-trekking/13-mgl-golden-monkey-bb.jpg',
   'Amuka Safari Lodge':           '/images/parks/uganda/murchison-falls/dsc-7442.jpg',
   'Jinja Nile Resort':            '/images/parks/uganda/murchison-falls/dsc-6200.jpg',
-  'Nile Porch':                   '/images/parks/uganda/murchison-falls/dsc-6200.jpg',
+  'Nile Porch':                   '/images/activities/gorilla-trekking/5-mgl-golden-monkey-bb.jpg',
   "Mountains of the Moon Hotel":  '/images/parks/uganda/murchison-falls/dsc-5888.jpg',
   'Apoka Safari Lodge':           '/images/lodges/uganda/kidepo-national-park/apoka-safari-lodge/apoka7.jpg',
   'Aardvark Safari Lodge':        '/images/parks/uganda/murchison-falls/dsc-5888.jpg',
   'Arcadia Cottages':             '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
   'Birdnest Resort':              '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
-  'Buhoma Community Lodge':       '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7518.jpg',
+  'Buhoma Community Lodge':       '/images/activities/gorilla-trekking/26-ah1i3781.jpg',
   'Bwindi Lodge (Volcanoes Safaris)': '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7863.jpg',
   'Chameleon Hill Lodge':         '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
-  'Chobe Safari Lodge':           '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
-  'Crater Safari Lodge':          '/images/activities/gorilla-trekking/7-kibale-lodge-chimpanzee-tadevs-vs-08284.jpg',
+  'Chobe Safari Lodge':           '/images/parks/uganda/murchison-falls/dsc-6828.jpg',
+  'Crater Safari Lodge':          '/images/lodges/uganda/kibale-national-park/crater-safari-lodge/1746563630437_090A2589.jpg',
   'Enjojo Lodge (Luxury Cottages)': '/images/parks/uganda/lake-mburo/15651972443-ec37184968-o.jpg',
   'Enjojo Lodge (Standard)':      '/images/parks/uganda/lake-mburo/15651972443-ec37184968-o.jpg',
   'Fort Murchison Lodge':         '/images/parks/uganda/murchison-falls/dsc-6271.jpg',
-  'Four Gorillas Lodge':          '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.jpg',
-  'Gorilla Safari Lodge':         '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7419.jpg',
-  'Ishasha Jungle Lodge':         '/images/parks/uganda/lake-mburo/15651972443-ec37184968-o.jpg',
+  'Four Gorillas Lodge':          '/images/activities/gorilla-trekking/4-mgl-gorilla-bb.jpg',
+  'Gorilla Safari Lodge':         '/images/activities/gorilla-trekking/16-mgl-gorilla-bb.jpg',
+  'Ishasha Jungle Lodge':         '/images/parks/uganda/lake-mburo/16261416770-9668a9647a-o.jpg',
   'Karibu Guest House':           '/images/lodges/uganda/entebbe-hotels/karibu-guesthouse/1karibu-guest-house-entebbe-52473407576-o.jpg',
-  'Kibale Canopy Lodge':          '/images/activities/gorilla-trekking/6-kibale-lodge-chimpanzee-tadevs-vs-08101.jpg',
-  'Kibale Tourist Lodge':         '/images/activities/gorilla-trekking/6-kibale-lodge-chimpanzee-tadevs-vs-08101.jpg',
-  'Kigambira Safari Lodge':       '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
-  'Kyaninga Lodge':               '/images/parks/uganda/murchison-falls/dsc-5888.jpg',
-  'Lake Albert Safari Lodge':     '/images/parks/uganda/murchison-falls/dsc-6271.jpg',
+  'Kibale Canopy Lodge':          '/images/lodges/uganda/kibale-national-park/kibale-lodges-by-volcanoes/28-kibale-lodge-landscape.jpg',
+  'Kibale Tourist Lodge':         '/images/activities/gorilla-trekking/18-kibale-lodge-chimpanzee-tadevs-vs-08183.jpg',
+  'Kigambira Safari Lodge':       '/images/parks/uganda/lake-mburo/16261416770-9668a9647a-o.jpg',
+  'Kyaninga Lodge':               '/images/lodges/uganda/kibale-national-park/kyaninga-lodge/Kyanainga.jpg',
+  'Lake Albert Safari Lodge':     '/images/parks/uganda/murchison-falls/dsc-7494.jpg',
   'Lake Bunyonyi Rock Resort':    '/images/parks/uganda/lake-bunyonyi/image-20260406160732.jpg',
   'Lake Mulehe Safari Lodge':     '/images/activities/gorilla-trekking/31-mount-gahinga-lodge-gorilla.jpg',
-  'Latitude 0° Hotel':            '/images/parks/uganda/murchison-falls/dsc-7062.jpg',
-  'Mount Gahinga Safari Lodge':   '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
-  "Traveller's Rest":             '/images/parks/rwanda/volcanoes/wilderness-bisate-1.jpg',
-  'Mpogo Safari Lodge':           '/images/parks/uganda/lake-mburo/52760819772-d845e2062c-o.jpg',
-  'Mucha Hotel Kisoro':           '/images/activities/gorilla-trekking/31-mount-gahinga-lodge-gorilla.jpg',
-  'Mutanda Lake Resort':          '/images/activities/gorilla-trekking/31-mount-gahinga-lodge-gorilla.jpg',
-  'Nile River Camp':              '/images/parks/uganda/murchison-falls/dsc-6200.jpg',
-  'Nile Safari Lodge':            '/images/parks/uganda/murchison-falls/mf-1.jpg',
-  'Nkuringo Bwindi Gorilla Lodge':'/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7863.jpg',
-  'Pakuba Safari Lodge':          '/images/parks/uganda/murchison-falls/dsc-6226.jpg',
-  'Queen Elizabeth Bush Lodge':   '/images/parks/uganda/murchison-falls/dsc-5888.jpg',
-  'Red Chilli Rest Camp':         '/images/parks/uganda/murchison-falls/dsc-6280.jpg',
-  'Rushaga Gorilla Lodge':        '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7389.jpg',
+  'Latitude 0° Hotel':            '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+  'Mount Gahinga Safari Lodge':   '/images/parks/rwanda/volcanoes/wilderness-bisate.jpg',
+  "Traveller's Rest":             '/images/activities/gorilla-trekking/1-mgl-gorilla-bb.jpg',
+  'Mpogo Safari Lodge':           '/images/parks/uganda/lake-mburo/16498738142-978e9993ef-o.jpg',
+  'Mucha Hotel Kisoro':           '/images/activities/gorilla-trekking/32-mount-gahinga-lodge-gorilla.jpg',
+  'Mutanda Lake Resort':          '/images/activities/gorilla-trekking/34-mount-gahinga-lodge-gorilla.jpg',
+  'Nile River Camp':              '/images/activities/gorilla-trekking/15-gorilla-ah1i7197.jpg',
+  'Nile Safari Lodge':            '/images/parks/uganda/murchison-falls/dsc-6951.jpg',
+  'Nkuringo Bwindi Gorilla Lodge':'/images/activities/gorilla-trekking/17-gorilla-ah1i6854.jpg',
+  'Pakuba Safari Lodge':          '/images/parks/uganda/murchison-falls/dsc-6584.jpg',
+  'Queen Elizabeth Bush Lodge':   '/images/parks/uganda/murchison-falls/dsc-7081.jpg',
+  'Red Chilli Rest Camp':         '/images/parks/uganda/murchison-falls/dsc-6884.jpg',
+  'Rushaga Gorilla Lodge':        '/images/activities/gorilla-trekking/12-mgl-gorilla-bb.jpg',
   'The Boma Entebbe':             '/images/lodges/uganda/entebbe-hotels/karibu-guesthouse/1karibu-guest-house-entebbe-52473407576-o.jpg',
   'Volcanoes Bwindi Lodge':       '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7863.jpg',
-  'Wildwaters Lodge':             '/images/parks/uganda/murchison-falls/dsc-6200.jpg',
+  'Wildwaters Lodge':             '/images/activities/gorilla-trekking/19-chimp-kya-bbp-img-20190218-wa0007.jpg',
   'Ziwa Rhino Sanctuary Camp':    '/images/parks/uganda/murchison-falls/dsc-6271.jpg',
-  'Engagi Lodge':                 '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7518.jpg',
-  'Gorilla Heights Lodge':        '/images/lodges/uganda/bwindi/buhoma-lodge/dsc-7419.jpg',
+  'Engagi Lodge':                 '/images/activities/gorilla-trekking/8-gorilla-ah1i2661.jpg',
+  'Gorilla Heights Lodge':        '/images/activities/gorilla-trekking/9-gorilla3-bfo9.jpg',
   'Hemingways Nairobi':           '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.jpg',
   "Fairmont The Norfolk":         '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.jpg',
   'Villa Rosa Kempinski':         '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.jpg',
   'Ole Sereni':                   '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.jpg',
   'Eka Hotel':                    '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.jpg',
   'Sarova Panafric':              '/images/lodges/kenya/nairobi/hemingways-nairobi/fountain.jpg',
-  'Mara Serena Safari Lodge':     '/images/parks/kenya/masai-mara/activites-game-drive.jpg',
+  'Mara Serena Safari Lodge':     '/images/parks/kenya/masai-mara/angama-mara-s-sundowner-boma.jpg',
   "Governors' Camp":              '/images/parks/kenya/masai-mara/the-dangers-of-crossing-the-mara-river.jpg',
   'Kichwa Tembo Tented Camp':     '/images/parks/kenya/masai-mara/cheetahs-in-the-conservancy.jpg',
   'Mara Sopa Lodge':              '/images/parks/kenya/masai-mara/a-balloon-sunrise.jpg',
@@ -108,12 +123,12 @@ const LODGE_IMAGES: Record<string, string> = {
   'Ol Tukai Lodge':               '/images/parks/kenya/amboseli/amboseli-waterhole.jpg',
   'Amboseli Serena Safari Lodge': '/images/parks/kenya/amboseli/view-from-observation-hill.jpg',
   'Amboseli Serena':              '/images/parks/kenya/amboseli/view-from-observation-hill.jpg',
-  'Kibo Safari Camp':             '/images/parks/kenya/amboseli/amboseli-waterhole.jpg',
+  'Kibo Safari Camp':             '/images/lodges/kenya/amboseli-national-park/ol-donyo-lodge-1/masaai.jpg',
   'Amboseli Sopa Lodge':          '/images/parks/kenya/amboseli/sundowner-on-observation-hill-overlooking-mt-kilimanjaro.jpg',
   'Enashipai Resort & Spa':       '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
-  'Lake Naivasha Sopa Resort':    '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
-  'Lake Naivasha Country Club':   '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
-  'Sawela Lodge':                 '/images/activities/walking-safari/1752747977431-kenya-suyian-conservancy-horseriding-28.jpg',
+  'Lake Naivasha Sopa Resort':    '/images/activities/walking-safari/1752747977432-kenya-suyian-conservancy-nature-walk-16.jpg',
+  'Lake Naivasha Country Club':   '/images/activities/walking-safari/1752747977434-kenya-suyian-conservancy-nature-walk-20.jpg',
+  'Sawela Lodge':                 '/images/activities/walking-safari/1752763546178-kenya-suyian-wild-dog-4.jpg',
   'Elephant Bedroom Camp':        '/images/parks/kenya/samburu/sasaab.jpg',
   'Saruni Samburu':               '/images/parks/kenya/samburu/grevys-zebra.jpg',
   'Ashnil Samburu':               '/images/parks/kenya/samburu/kenya-8346.jpg',
@@ -121,8 +136,8 @@ const LODGE_IMAGES: Record<string, string> = {
   'Samburu Sopa Lodge':           '/images/parks/kenya/samburu/samburu-village-visit-residents.jpg',
   'Samburu Simba Lodge':          '/images/parks/kenya/samburu/grevys-zebra-1.jpg',
   'Ol Pejeta Bush Camp':          '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.jpg',
-  'Sweetwaters Serena Camp':      '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.jpg',
-  'Ol Pejeta House':              '/images/lodges/kenya/lakipia/segera-retreat-2/17716019637244-segera-crookesandjackson-vl-2025-0688.jpg',
+  'Sweetwaters Serena Camp':      '/images/lodges/kenya/lakipia/lewa-wilderness/fly-camping-star-dome.jpg',
+  'Ol Pejeta House':              '/images/lodges/kenya/lakipia/sirikoi-lodge-kenya/1744025471001-2024-cottage-outside-dec-sunset.jpg',
   'Sarova Lion Hill Game Lodge':  '/images/parks/kenya/lake-nakuru/rhinos-lake-nakuru.jpg',
   'Lake Nakuru Lodge':            '/images/parks/kenya/lake-nakuru/flamingos-lake-nakuru.jpg',
   'Flamingo Hill Tented Camp':    '/images/parks/kenya/lake-nakuru/baboon-cliff-view.jpg',
@@ -131,21 +146,21 @@ const LODGE_IMAGES: Record<string, string> = {
   'Mount Meru Hotel':             '/images/destinations/tanzania/sayari-elephant.jpg',
   'Arusha Planet Lodge':          '/images/destinations/tanzania/rubondo-island-camp-landscape.jpg',
   'Tarangire Treetops':           '/images/destinations/tanzania/sayari-elephant.jpg',
-  'Tarangire Safari Lodge':       '/images/destinations/tanzania/sayari-elephant.jpg',
-  'Tarangire Simba Lodge':        '/images/destinations/tanzania/sayari-elephant.jpg',
-  'Maramboi Tented Lodge':        '/images/destinations/tanzania/sayari-elephant.jpg',
+  'Tarangire Safari Lodge':       '/images/destinations/tanzania/sayari-camp-game-drive-leopard-on-mound2.jpg',
+  'Tarangire Simba Lodge':        '/images/destinations/tanzania/dunia-game-drive.jpg',
+  'Maramboi Tented Lodge':        '/images/destinations/tanzania/sayari-lioness.jpg',
   'Four Seasons Safari Lodge':    '/images/destinations/tanzania/sayari-lioness.jpg',
   'Serengeti Serena':             '/images/destinations/tanzania/dunia-camp-game-drive-serengeti-safari-2.jpg',
   'Sanctuary Kichakani':          '/images/destinations/tanzania/dunia-view-from-the-main-area.jpg',
   'Serengeti Kati Kati Tented Camp': '/images/destinations/tanzania/dunia-lion-and-plane-in-the-serengeti.jpg',
   'Mbuzi Mawe Serena Camp':       '/images/destinations/tanzania/dunia-seronera-river.jpg',
   'Ngorongoro Serena Safari Lodge': '/images/destinations/tanzania/dunia-view-from-the-main-area.jpg',
-  'Ngorongoro Sopa Lodge':        '/images/destinations/tanzania/dunia-view-from-the-main-area.jpg',
+  'Ngorongoro Sopa Lodge':        '/images/destinations/tanzania/dunia-camp-game-drive-vehicle-lookout-hr-eliza-deacon1.jpg',
   'Rhino Lodge':                  '/images/destinations/tanzania/dunia-crane.jpg',
   'Ngorongoro Farm House':        '/images/destinations/tanzania/dunia-giraffe.jpg',
   'Baraza Resort & Spa':          '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
-  'The Residence Zanzibar':       '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
-  'Sunset Kendwa':                '/images/destinations/tanzania/rubondo-island-camp-beach.jpg',
+  'The Residence Zanzibar':       '/images/destinations/tanzania/rubondo-island-camp-fish-eagle-eric-frank-mr.jpg',
+  'Sunset Kendwa':                '/images/destinations/tanzania/rubondo-island-camp-hippos.jpg',
   'Zanzibar Bay Resort':          '/images/destinations/tanzania/rubondo-island-camp-landscape.jpg',
 }
 
@@ -361,10 +376,10 @@ const STATIC_GROUPS: LocationGroup[] = [
   },
 ]
 
-type Props = { days?: JourneyDay[] }
+type Props = { days?: JourneyDay[]; lodges?: JourneyLodge[] }
 
-export default function HandpickedLodges({ days }: Props) {
-  const groups = days ? parseDays(days) : STATIC_GROUPS
+export default function HandpickedLodges({ days, lodges }: Props) {
+  const groups = lodges?.length ? groupsFromLodges(lodges) : days ? parseDays(days) : STATIC_GROUPS
 
   const [activeLocation, setActiveLocation] = useState(groups[0]?.location ?? '')
 
@@ -437,9 +452,11 @@ export default function HandpickedLodges({ days }: Props) {
                 }`}>
                   {l.tier === 'luxury' ? 'Luxury' : 'Mid-Range'}
                 </span>
-                <span className="rounded-full bg-black/70 px-3 py-1 text-[10px] tracking-[0.18em] text-white backdrop-blur-sm">
-                  {l.nights}
-                </span>
+                {l.nights && (
+                  <span className="rounded-full bg-black/70 px-3 py-1 text-[10px] tracking-[0.18em] text-white backdrop-blur-sm">
+                    {l.nights}
+                  </span>
+                )}
               </div>
 
               {/* Bottom name + divider */}

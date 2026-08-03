@@ -183,11 +183,13 @@ function appToCard(raw: ReturnType<typeof toTourPackageDoc>) {
   }
 }
 
-const TIER_LABELS: Record<string, string> = { luxury: 'Luxury', midRange: 'Mid-Range', budget: 'Budget', flyCamp: 'Fly Camp' }
-function buildAccommodationString(tier: string | undefined, lodgeNames: string | undefined): string {
-  if (!tier || tier === 'none') return '—'
-  const label = TIER_LABELS[tier] ?? tier
-  return lodgeNames ? `${label}: ${lodgeNames}` : label
+// Mirrors buildAccommodationString in src/sanity/tourPackages.ts.
+function buildAccommodationString(luxuryLodges: string | undefined, midRangeLodges: string | undefined): string {
+  const segments = [
+    luxuryLodges && `Luxury: ${luxuryLodges}`,
+    midRangeLodges && `Mid-Range: ${midRangeLodges}`,
+  ].filter(Boolean)
+  return segments.length ? segments.join(' | ') : '—'
 }
 
 function appToJourneyData(raw: ReturnType<typeof toTourPackageDoc>) {
@@ -202,7 +204,7 @@ function appToJourneyData(raw: ReturnType<typeof toTourPackageDoc>) {
       day: d.day,
       title: d.title,
       body: d.body,
-      accommodation: buildAccommodationString(d.accommodationTier, d.accommodation),
+      accommodation: buildAccommodationString(d.luxuryLodges, d.midRangeLodges),
       meals: d.meals ?? '',
       image: resolveMediaImage(d.image),
     })),
@@ -211,6 +213,15 @@ function appToJourneyData(raw: ReturnType<typeof toTourPackageDoc>) {
     notIncluded: raw.notIncluded?.length ? raw.notIncluded : undefined,
     faq: raw.faq?.length ? raw.faq.map((f) => ({ q: f.q, a: f.a })) : undefined,
     waypoints: raw.waypoints?.length ? raw.waypoints.map((w) => ({ name: w.name, coords: [w.lng, w.lat] as [number, number] })) : undefined,
+    rates: raw.rates
+      ? {
+          priceFromUsd: raw.rates.priceFromUsd,
+          table: (raw.rates.table ?? []).map((r) => ({ label: r.label, midrange: r.midrange, luxury: r.luxury })),
+          singleSupplement: raw.rates.singleSupplement,
+          permitNote: raw.rates.permitNote,
+          validityNote: raw.rates.validityNote,
+        }
+      : undefined,
   }
 }
 
@@ -232,7 +243,10 @@ for (const card of tourCards) {
     })
   })
   check(`tourPackage "${card.id}" journey detail round-trips`, () => {
-    assertEquivalent(appToJourneyData(doc as never), journey)
+    // `lodges` is deliberately not produced by toTourPackageDoc (see the note in seed-sanity.ts),
+    // so it isn't part of this round-trip — everything else must match exactly.
+    const { lodges: _lodges, ...journeyWithoutLodges } = journey
+    assertEquivalent(appToJourneyData(doc as never), journeyWithoutLodges)
   })
 }
 

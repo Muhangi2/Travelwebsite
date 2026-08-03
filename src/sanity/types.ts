@@ -75,6 +75,14 @@ export type SanityPark = {
 
 export type SanityStatItem = { number: string; label: string }
 
+export type SanityLodge = {
+  name: string
+  location?: string
+  tier?: 'luxury' | 'midRange'
+  body?: string
+  image: SanityMediaImage
+}
+
 export type SanityDestination = {
   _id: string
   name: string
@@ -87,7 +95,7 @@ export type SanityDestination = {
   parkSummaryImage?: SanityMediaImage
   parks?: SanityPark[]
   privilegedAccess?: { title: string; location?: string; body: string; image: SanityMediaImage }[]
-  lodges?: { name: string; location?: string; body: string; image: SanityMediaImage }[]
+  lodges?: SanityLodge[]
   travelStats?: { bestTime?: string; duration?: string; keyWildlife?: string; travelStyle?: string }
   whyVisit?: {
     intro: string
@@ -111,8 +119,8 @@ export type SanityJourneyDay = {
   day: number
   title: string
   body: string
-  accommodationTier?: 'luxury' | 'midRange' | 'budget' | 'flyCamp' | 'none'
-  accommodation?: string
+  luxuryLodges?: string
+  midRangeLodges?: string
   meals?: string
   image: SanityMediaImage
 }
@@ -147,4 +155,5 @@ export type SanityTourPackage = {
   faq?: { q: string; a: string }[]
   waypoints?: { name: string; lng: number; lat: number }[]
   rates?: SanityTourRates
+  lodges?: SanityLodge[]
 }
