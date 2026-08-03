@@ -5,11 +5,6 @@ import Reveal from '@/components/ui/Reveal'
 import Picture from '@/components/Picture'
 
 const tagIcon: Record<string, React.ReactNode> = {
-  'Luxury Adventure': (
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M12 2l2.4 6.5L21 10l-5 4.4 1.6 6.6L12 17.7 6.4 21 8 14.4 3 10l6.6-1.5z" />
-    </svg>
-  ),
   'Family-Friendly': (
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <circle cx="9" cy="8" r="3" /><circle cx="17" cy="9" r="2" />
@@ -321,7 +316,7 @@ export default function CollectionsGrid() {
                           key={t}
                           className="inline-flex items-center gap-1 rounded-full border border-neutral-200 px-2.5 py-0.5 text-[10px] font-medium tracking-wide text-neutral-500"
                         >
-                          {tagIcon[t]} {t}
+                          {tagIcon[t] ? <>{tagIcon[t]} {t}</> : t}
                         </span>
                       ))}
                     </div>

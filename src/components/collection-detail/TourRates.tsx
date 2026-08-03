@@ -65,27 +65,27 @@ export default function TourRates({ rates }: Props) {
         {/* Rates table */}
         <Reveal delay={100}>
           <div className="mt-8 overflow-hidden overflow-x-auto rounded-2xl border border-neutral-200 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-            <table className="w-full min-w-[420px] border-collapse text-sm">
+            <table className="w-full min-w-[300px] border-collapse text-xs sm:text-sm">
               <thead>
                 <tr className="bg-neutral-900 text-white">
-                  <th className="px-5 py-3.5 text-left text-[11px] font-semibold uppercase tracking-widest">Group size</th>
-                  {hasMidrange && <th className="px-5 py-3.5 text-right text-[11px] font-semibold uppercase tracking-widest">Midrange</th>}
-                  {hasLuxury && <th className="px-5 py-3.5 text-right text-[11px] font-semibold uppercase tracking-widest">Luxury</th>}
+                  <th className="px-2.5 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wide sm:px-5 sm:py-3.5 sm:text-[11px] sm:tracking-widest">Group size</th>
+                  {hasMidrange && <th className="px-2.5 py-2.5 text-right text-[10px] font-semibold uppercase tracking-wide sm:px-5 sm:py-3.5 sm:text-[11px] sm:tracking-widest">Midrange</th>}
+                  {hasLuxury && <th className="px-2.5 py-2.5 text-right text-[10px] font-semibold uppercase tracking-wide sm:px-5 sm:py-3.5 sm:text-[11px] sm:tracking-widest">Luxury</th>}
                 </tr>
               </thead>
               <tbody className="divide-y divide-neutral-100">
                 {rates.table.map((row) => (
                   <tr key={row.label} className="transition-colors hover:bg-[#B8942F]/[0.06]">
-                    <td className="px-5 py-3.5 text-neutral-600">{row.label}</td>
-                    {hasMidrange && <td className="px-5 py-3.5 text-right font-medium text-neutral-900">{price(row.midrange)}</td>}
-                    {hasLuxury && <td className="px-5 py-3.5 text-right font-medium text-neutral-900">{price(row.luxury)}</td>}
+                    <td className="px-2.5 py-2.5 text-neutral-600 sm:px-5 sm:py-3.5">{row.label}</td>
+                    {hasMidrange && <td className="px-2.5 py-2.5 text-right font-medium text-neutral-900 sm:px-5 sm:py-3.5">{price(row.midrange)}</td>}
+                    {hasLuxury && <td className="px-2.5 py-2.5 text-right font-medium text-neutral-900 sm:px-5 sm:py-3.5">{price(row.luxury)}</td>}
                   </tr>
                 ))}
                 {rates.singleSupplement && (
                   <tr className="border-t-2 border-neutral-900/10 bg-neutral-50">
-                    <td className="px-5 py-3.5 font-medium text-neutral-700">Single supplement</td>
-                    {hasMidrange && <td className="px-5 py-3.5 text-right font-medium text-neutral-900">{price(rates.singleSupplement.midrange)}</td>}
-                    {hasLuxury && <td className="px-5 py-3.5 text-right font-medium text-neutral-900">{price(rates.singleSupplement.luxury)}</td>}
+                    <td className="px-2.5 py-2.5 font-medium text-neutral-700 sm:px-5 sm:py-3.5">Single supplement</td>
+                    {hasMidrange && <td className="px-2.5 py-2.5 text-right font-medium text-neutral-900 sm:px-5 sm:py-3.5">{price(rates.singleSupplement.midrange)}</td>}
+                    {hasLuxury && <td className="px-2.5 py-2.5 text-right font-medium text-neutral-900 sm:px-5 sm:py-3.5">{price(rates.singleSupplement.luxury)}</td>}
                   </tr>
                 )}
               </tbody>
