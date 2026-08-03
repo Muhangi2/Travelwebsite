@@ -11,11 +11,14 @@ type Item = {
 }
 
 const buildItems = (countries: Country[]): Item[] => {
+  // Cycle through each country's park photos for visual variety, but always link to the
+  // country's own destination page — these cards represent "Kenya" / "Tanzania" / "Uganda",
+  // not any one specific park within them.
   const buckets = countries.map((c) =>
     c.parks.map<Item>((p) => ({
       country: c.name,
       image: p.image,
-      href: `/destinations/${c.slug}/${p.slug}`,
+      href: `/destinations/${c.slug}`,
     })),
   )
   const out: Item[] = []
