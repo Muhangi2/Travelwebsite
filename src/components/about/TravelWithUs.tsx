@@ -29,6 +29,18 @@ export default function TravelWithUs() {
               {site.email}
             </a>
           </p>
+
+          <p className="mt-3 text-xs text-white/50">
+            We are represented on{' '}
+            <a
+              href="https://www.safaribookings.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-white/30 underline-offset-4 hover:text-white"
+            >
+              SafariBookings.com
+            </a>
+          </p>
         </Reveal>
       </div>
     </section>
