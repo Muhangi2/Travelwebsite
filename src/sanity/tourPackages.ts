@@ -137,6 +137,31 @@ function rawLocalCards(): TourPackageCard[] {
       duration: '5 Days / 4 Nights',
       highlight: true,
     },
+    {
+      id: 'rwanda-gorillas-golden-monkeys',
+      image: '/images/activities/gorilla-trekking/14-mgl-golden-monkey-bb.jpg',
+      country: 'RWANDA',
+      tags: ['Luxury Adventure', 'Photography Focus'],
+      title: 'Gorillas & Golden Monkeys of the Virungas',
+      duration: '4 Days / 3 Nights',
+    },
+    {
+      id: 'rwanda-gorillas-lake-kivu',
+      image: '/images/destinations/rwanda/image-20260331125636.jpg',
+      country: 'RWANDA',
+      tags: ['Luxury Adventure', 'Family-Friendly'],
+      title: '5 Days Gorillas & Lake Kivu Escape',
+      duration: '5 Days / 4 Nights',
+    },
+    {
+      id: 'rwanda-7-day-grand-safari',
+      image: '/images/parks/rwanda/akagera/wilderness-magashi-1.jpg',
+      country: 'RWANDA',
+      tags: ['Luxury Adventure', 'Photography Focus'],
+      title: 'The 7-Day Best of Rwanda Grand Safari',
+      duration: '7 Days / 6 Nights',
+      highlight: true,
+    },
     // Uganda standalone packages
     {
       id: '3-day-classic-uganda-gorilla',
