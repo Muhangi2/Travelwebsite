@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { experiences as localExperiences, type Experience } from '@/data/experiences'
+import type { Experience } from '@/data/experiences'
 import { sanityClient } from './client'
 import { allExperiencesQuery, experienceBySlugQuery } from './queries'
 import type { SanityExperience } from './types'
@@ -32,7 +32,7 @@ function toRecord(items: Experience[]): Record<string, Experience> {
 }
 
 export function useExperiences(): { items: Experience[]; bySlug: Record<string, Experience>; loading: boolean } {
-  const [items, setItems] = useState<Experience[]>(localExperiences)
+  const [items, setItems] = useState<Experience[]>([])
   const [loading, setLoading] = useState(Boolean(sanityClient))
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export function useExperiences(): { items: Experience[]; bySlug: Record<string, 
         setItems(data.map(toExperience))
       })
       .catch((err) => {
-        console.warn('Sanity experiences fetch failed, using local data:', err)
+        console.warn('Sanity experiences fetch failed:', err)
       })
       .finally(() => {
         if (!cancelled) setLoading(false)
@@ -59,10 +59,7 @@ export function useExperiences(): { items: Experience[]; bySlug: Record<string, 
 }
 
 export function useExperience(slug: string | undefined): { experience: Experience | null; loading: boolean } {
-  const [experience, setExperience] = useState<Experience | null>(() => {
-    if (!slug) return null
-    return localExperiences.find((e) => e.slug === slug) ?? null
-  })
+  const [experience, setExperience] = useState<Experience | null>(null)
   const [loading, setLoading] = useState(Boolean(sanityClient && slug))
 
   useEffect(() => {
@@ -75,7 +72,7 @@ export function useExperience(slug: string | undefined): { experience: Experienc
         setExperience(toExperience(data))
       })
       .catch((err) => {
-        console.warn('Sanity experience fetch failed, using local data:', err)
+        console.warn('Sanity experience fetch failed:', err)
       })
       .finally(() => {
         if (!cancelled) setLoading(false)

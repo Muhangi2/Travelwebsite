@@ -1,20 +1,10 @@
 // Regenerates public/sitemap.xml before every build. Static marketing pages are
-// hardcoded below; destination/park/collection/story/experience pages are the
-// UNION of local data (src/data/*.ts) and live Sanity documents, keyed by slug.
-// This is deliberately additive rather than Sanity-replaces-local: browser-side
-// Sanity fetches on production currently don't render (verified — a real Sanity
-// "experience" doc redirects home instead of loading), so local slugs are the
-// only ones confirmed live. Merging means new Sanity content is picked up as
-// soon as it's reachable, without risking dropping pages that are live today.
+// hardcoded below; destination/park/collection/story/experience pages are read
+// live from Sanity, keyed by slug.
 import { createClient } from '@sanity/client'
 import { writeFileSync, readFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
-
-import { countries as localCountries } from '../src/data/destinations.ts'
-import { journeys as localJourneys } from '../src/data/journeys.ts'
-import { articles as localArticles } from '../src/data/articles.ts'
-import { experiences as localExperiences } from '../src/data/experiences.ts'
 
 const rootDir = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
 
@@ -49,16 +39,6 @@ const STATIC_PAGES = [
   { loc: '/privacy-policy', changefreq: 'yearly', priority: '0.3' },
 ]
 
-// Local fallbacks — same slugs the app itself falls back to when a Sanity
-// document type has no entries yet (see src/sanity/*.ts hooks).
-const localDestinations = Object.values(localCountries).map((c) => ({
-  slug: c.slug,
-  parks: c.parks.map((p) => ({ slug: p.slug })),
-}))
-const localTourPackages = Object.keys(localJourneys).map((slug) => ({ slug }))
-const localStories = localArticles.map((a) => ({ slug: a.slug }))
-const localExperienceSlugs = localExperiences.map((e) => ({ slug: e.slug }))
-
 const projectId = process.env.VITE_SANITY_PROJECT_ID ?? ''
 const dataset = process.env.VITE_SANITY_DATASET ?? 'production'
 const apiVersion = process.env.VITE_SANITY_API_VERSION ?? '2025-01-01'
@@ -77,29 +57,8 @@ async function fetchSanity(query, label) {
   }
 }
 
-function mergeBySlug(local, sanity) {
-  const bySlug = new Map(local.map((item) => [item.slug, item]))
-  for (const item of sanity) {
-    if (!bySlug.has(item.slug)) bySlug.set(item.slug, item)
-  }
-  return [...bySlug.values()]
-}
-
-function mergeDestinations(local, sanity) {
-  const bySlug = new Map(local.map((c) => [c.slug, { slug: c.slug, parks: [...c.parks] }]))
-  for (const country of sanity) {
-    const existing = bySlug.get(country.slug)
-    if (!existing) {
-      bySlug.set(country.slug, { slug: country.slug, parks: [...(country.parks ?? [])] })
-      continue
-    }
-    existing.parks = mergeBySlug(existing.parks, country.parks ?? [])
-  }
-  return [...bySlug.values()]
-}
-
 async function fetchDynamicEntries() {
-  const [sanityDestinations, sanityTourPackages, sanityStories, sanityExperiences] = await Promise.all([
+  const [destinations, tourPackages, stories, experiences] = await Promise.all([
     fetchSanity(
       `*[_type == "destination" && defined(slug.current)]{ "slug": slug.current, parks[]{ "slug": slug.current } }`,
       'destinations',
@@ -109,12 +68,7 @@ async function fetchDynamicEntries() {
     fetchSanity(`*[_type == "experience" && defined(slug.current)]{ "slug": slug.current }`, 'experiences'),
   ])
 
-  return {
-    destinations: mergeDestinations(localDestinations, sanityDestinations),
-    tourPackages: mergeBySlug(localTourPackages, sanityTourPackages),
-    stories: mergeBySlug(localStories, sanityStories),
-    experiences: mergeBySlug(localExperienceSlugs, sanityExperiences),
-  }
+  return { destinations, tourPackages, stories, experiences }
 }
 
 function urlEntry({ loc, changefreq, priority }) {

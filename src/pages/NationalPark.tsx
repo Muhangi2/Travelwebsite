@@ -14,10 +14,11 @@ import Faq from '@/components/national-park/Faq'
 
 export default function NationalPark() {
   const { country: countrySlug, park } = useParams<{ country: string; park: string }>()
-  const { country: countryData } = useCountry(countrySlug)
+  const { country: countryData, loading } = useCountry(countrySlug)
   const parkData = countryData?.parks.find((p) => p.slug === park)
 
   if (!countryData || !parkData) {
+    if (loading) return null
     return <Navigate to={countrySlug ? `/destinations/${countrySlug}` : '/destinations'} replace />
   }
 

@@ -1,3 +1,9 @@
+export const safariFaqPageQuery = /* groq */ `
+  *[_type == "safariFaqPage" && _id == "safariFaqPage-main"][0] {
+    faqs[] { q, a }
+  }
+`
+
 export const pageHeroByKeyQuery = /* groq */ `
   *[_type == "pageHero" && _id == $id][0] {
     pageKey,

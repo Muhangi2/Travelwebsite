@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import Picture from '@/components/Picture'
 import Reveal, { Stagger } from '@/components/ui/Reveal'
-import { safariFaqs as faqs } from '@/data/safariFaq'
+import { useSafariFaq } from '@/sanity/safariFaq'
 
 export default function SafariFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const { faqs } = useSafariFaq()
 
   return (
     <section id="faq" className="relative isolate overflow-hidden py-16">

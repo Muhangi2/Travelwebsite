@@ -99,6 +99,9 @@ async function main() {
     const url = `http://localhost:${PORT}${route}`
     await page.goto(url, { waitUntil: 'load', timeout: 30_000 })
     await page.waitForSelector('#root :is(h1, h2)', { timeout: 8_000 }).catch(() => {})
+    // Some sections (e.g. the Know Before You Go FAQ) fetch from Sanity independently of
+    // whatever gates the page's own h1/h2, so wait for that to settle too before snapshotting.
+    await page.waitForLoadState('networkidle', { timeout: 5_000 }).catch(() => {})
     await page.waitForTimeout(300)
 
     const html = await page.content()

@@ -9,10 +9,12 @@ import TippingBanner from '@/components/know-before/TippingBanner'
 import PackingItems from '@/components/know-before/PackingItems'
 import KeepMyGreen from '@/components/know-before/KeepMyGreen'
 import SafariFaq from '@/components/know-before/SafariFaq'
-import { safariFaqs } from '@/data/safariFaq'
+import { useSafariFaq } from '@/sanity/safariFaq'
 import { buildFaqSchema } from '@/lib/schema'
 
 export default function KnowBeforeYouGo() {
+  const { faqs: safariFaqs } = useSafariFaq()
+
   return (
     <>
       <SEO

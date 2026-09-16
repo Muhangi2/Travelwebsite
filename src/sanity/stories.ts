@@ -4,7 +4,7 @@ import { sanityClient } from './client'
 import { urlFor } from './image'
 import { allStoriesQuery, storyBySlugQuery } from './queries'
 import type { SanityStory, SanityStorySummary } from './types'
-import { articles as localArticles, type Article } from '@/data/articles'
+import type { Article } from '@/data/articles'
 import { resolveMediaImages } from './utils/media'
 
 function formatDate(iso: string): string {
@@ -30,7 +30,7 @@ export type ArticleWithBody = Omit<Article, 'body'> & {
 }
 
 export function useStories(): { items: Article[]; loading: boolean } {
-  const [items, setItems] = useState<Article[]>(localArticles)
+  const [items, setItems] = useState<Article[]>([])
   const [loading, setLoading] = useState<boolean>(Boolean(sanityClient))
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export function useStories(): { items: Article[]; loading: boolean } {
         if (data && data.length > 0) setItems(data.map(toArticle))
       })
       .catch((err) => {
-        console.warn('Sanity fetch failed, using local stories:', err)
+        console.warn('Sanity stories fetch failed:', err)
       })
       .finally(() => {
         if (!cancelled) setLoading(false)
@@ -57,10 +57,7 @@ export function useStories(): { items: Article[]; loading: boolean } {
 }
 
 export function useStory(slug: string | undefined): { article: ArticleWithBody | null; loading: boolean } {
-  const [article, setArticle] = useState<ArticleWithBody | null>(() => {
-    const local = localArticles.find((a) => a.slug === slug)
-    return local ? { ...local, body: undefined } : null
-  })
+  const [article, setArticle] = useState<ArticleWithBody | null>(null)
   const [loading, setLoading] = useState<boolean>(Boolean(sanityClient && slug))
 
   useEffect(() => {
@@ -77,7 +74,7 @@ export function useStory(slug: string | undefined): { article: ArticleWithBody |
         })
       })
       .catch((err) => {
-        console.warn('Sanity fetch failed, using local story:', err)
+        console.warn('Sanity story fetch failed:', err)
       })
       .finally(() => {
         if (!cancelled) setLoading(false)

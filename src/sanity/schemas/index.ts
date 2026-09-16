@@ -5,6 +5,7 @@ import { experienceType } from './experience'
 import { destinationType } from './destination'
 import { tourPackageType } from './tourPackage'
 import { pageHeroType } from './pageHero'
+import { safariFaqPageType } from './safariFaqPage'
 
 export const schemaTypes: SchemaTypeDefinition[] = [
   ...objectTypes,
@@ -13,4 +14,5 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   experienceType,
   destinationType,
   tourPackageType,
+  safariFaqPageType,
 ]

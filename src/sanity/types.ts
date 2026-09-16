@@ -2,6 +2,10 @@ import type { PortableTextBlock } from '@portabletext/react'
 import type { SanityImageSource } from '@sanity/image-url'
 import type { SanityMediaImage } from './utils/media'
 
+export type SanitySafariFaqPage = {
+  faqs: { q: string; a: string }[]
+}
+
 export type SanityPageHero = {
   pageKey: string
   eyebrow?: string

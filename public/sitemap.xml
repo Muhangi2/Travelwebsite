@@ -46,6 +46,126 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://stillwildsafaris.com/destinations/kenya</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/kenya/masai-mara</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/kenya/amboseli</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/kenya/laikipia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/kenya/samburu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/kenya/tsavo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/kenya/lake-nakuru</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/kenya/nairobi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/rwanda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/rwanda/volcanoes</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/rwanda/akagera</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/rwanda/kigali</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/rwanda/nyungwe</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/rwanda/lake-kivu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania/serengeti</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania/ngorongoro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania/nyerere</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania/rubondo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania/arusha</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania/kilimanjaro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania/lake-manyara</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania/tarangire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/destinations/tanzania/zanzibar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://stillwildsafaris.com/destinations/uganda</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -101,124 +221,14 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/destinations/rwanda</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/10-day-grand-uganda-safari</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/destinations/rwanda/volcanoes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/rwanda/akagera</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/rwanda/kigali</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/rwanda/nyungwe</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/rwanda/lake-kivu</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/kenya</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/11-day-primate-fishing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/kenya/masai-mara</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/kenya/amboseli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/kenya/laikipia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/kenya/samburu</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/kenya/tsavo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/kenya/lake-nakuru</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/kenya/nairobi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania/serengeti</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania/ngorongoro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania/nyerere</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania/rubondo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania/arusha</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania/kilimanjaro</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania/lake-manyara</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania/tarangire</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/destinations/tanzania/zanzibar</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://stillwildsafaris.com/safari-collections/2-day-rwanda-gorilla</loc>
@@ -226,27 +236,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/safari-collections/rwanda-gorilla-express</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/3-day-classic-uganda-gorilla</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://stillwildsafaris.com/safari-collections/3-day-kigali-gorilla</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/safari-collections/4-day-rwanda-uganda-primate</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/safari-collections/5-day-kigali-great-apes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/safari-collections/3-day-classic-uganda-gorilla</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -261,22 +256,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/safari-collections/8-day-western-circuit-primate</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/4-day-rwanda-uganda-primate</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/safari-collections/10-day-grand-uganda-safari</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/safari-collections/9-day-rhythm-roots</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/safari-collections/11-day-primate-fishing</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/5-day-kigali-great-apes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -286,12 +271,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://stillwildsafaris.com/safari-collections/8-day-western-circuit-primate</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/9-day-rhythm-roots</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://stillwildsafaris.com/safari-collections/deep-dive-creative</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/safari-collections/wild-muse-creative</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/kenya-10-day-grand-circuit</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -311,12 +306,27 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/safari-collections/kenya-10-day-grand-circuit</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/kenya-tanzania-12-day-grand-safari</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/safari-collections/tanzania-7-day-northern-circuit</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/rwanda-7-day-grand-safari</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/rwanda-gorilla-express</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/rwanda-gorillas-golden-monkeys</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/safari-collections/rwanda-gorillas-lake-kivu</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -326,57 +336,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/safari-collections/kenya-tanzania-12-day-grand-safari</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/tanzania-7-day-northern-circuit</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/stories/uganda-gorilla-trekking-permit-cost-2026</loc>
+    <loc>https://stillwildsafaris.com/safari-collections/wild-muse-creative</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://stillwildsafaris.com/stories/best-time-visit-uganda-gorilla-trekking</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/stories/what-to-pack-gorilla-trekking-uganda</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/stories/uganda-vs-rwanda-gorilla-trekking</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/stories/uganda-safari-costs-budget-breakdown-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/stories/bwindi-impenetrable-forest-visitor-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/stories/how-to-book-gorilla-trekking-permits-uganda</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/stories/how-close-can-you-get-to-mountain-gorillas</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/stories/gorilla-trekking-over-60</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/stories/what-happens-if-it-rains-gorilla-trekking</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -386,27 +356,22 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/stories/rwanda-safari-planning-101</loc>
+    <loc>https://stillwildsafaris.com/stories/bwindi-impenetrable-forest-visitor-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/stories/rwanda-future-eco-tourism</loc>
+    <loc>https://stillwildsafaris.com/stories/gorilla-trekking-over-60</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/stories/safari-photography-uganda</loc>
+    <loc>https://stillwildsafaris.com/stories/how-close-can-you-get-to-mountain-gorillas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/stories/visit-saves-uganda-mountain-gorillas</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/stories/solo-female-travel-uganda</loc>
+    <loc>https://stillwildsafaris.com/stories/how-to-book-gorilla-trekking-permits-uganda</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -416,7 +381,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/stories/sustainable-luxury-rwanda</loc>
+    <loc>https://stillwildsafaris.com/stories/rwanda-future-eco-tourism</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -426,22 +391,57 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/experiences/gorilla-trekking</loc>
+    <loc>https://stillwildsafaris.com/stories/rwanda-safari-planning-101</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/experiences/chimpanzee-trekking</loc>
+    <loc>https://stillwildsafaris.com/stories/safari-photography-uganda</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/experiences/golden-monkey-trekking</loc>
+    <loc>https://stillwildsafaris.com/stories/solo-female-travel-uganda</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/experiences/white-water-rafting</loc>
+    <loc>https://stillwildsafaris.com/stories/sustainable-luxury-rwanda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/stories/uganda-gorilla-trekking-permit-cost-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/stories/uganda-safari-costs-budget-breakdown-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/stories/uganda-vs-rwanda-gorilla-trekking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/stories/visit-saves-uganda-mountain-gorillas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/stories/what-happens-if-it-rains-gorilla-trekking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/stories/what-to-pack-gorilla-trekking-uganda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/forestry-discovery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -451,27 +451,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/experiences/hot-air-balloon</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/experiences/cultural-experiences</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/experiences/helicopter-safaris</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/experiences/fly-in-safaris</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/experiences/walking-safaris</loc>
+    <loc>https://stillwildsafaris.com/experiences/chimpanzee-trekking</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -481,22 +461,32 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://stillwildsafaris.com/experiences/night-game-drives</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/experiences/wellness-spa</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://stillwildsafaris.com/experiences/private-island-escapes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://stillwildsafaris.com/experiences/conservation-safaris</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/cultural-experiences</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/fly-in-safaris</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/golden-monkey-trekking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/gorilla-trekking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/helicopter-safaris</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -506,7 +496,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://stillwildsafaris.com/experiences/hot-air-balloon</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/night-game-drives</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://stillwildsafaris.com/experiences/photographic-safaris</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/private-island-escapes</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/walking-safaris</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/wellness-spa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stillwildsafaris.com/experiences/white-water-rafting</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

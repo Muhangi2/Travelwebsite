@@ -15,9 +15,12 @@ import JourneysCarousel from '@/components/ui/JourneysCarousel'
 
 export default function SafariCollectionDetail() {
   const { slug } = useParams<{ slug: string }>()
-  const { journey } = useTourPackage(slug)
+  const { journey, loading } = useTourPackage(slug)
 
-  if (!journey) return <Navigate to="/safari-collections" replace />
+  if (!journey) {
+    if (loading) return null
+    return <Navigate to="/safari-collections" replace />
+  }
 
   const hasHighlights = Boolean(journey.highlights?.length)
   const hasFaq = Boolean(journey.faq?.length)

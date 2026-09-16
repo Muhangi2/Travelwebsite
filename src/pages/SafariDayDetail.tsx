@@ -21,13 +21,19 @@ function parseAccommodation(raw: string): { tier: string | null; name: string }[
 
 export default function SafariDayDetail() {
   const { slug, day } = useParams<{ slug: string; day: string }>()
-  const { journey } = useTourPackage(slug)
+  const { journey, loading } = useTourPackage(slug)
 
-  if (!journey) return <Navigate to="/safari-collections" replace />
+  if (!journey) {
+    if (loading) return null
+    return <Navigate to="/safari-collections" replace />
+  }
 
   const dayNumber = parseInt(day ?? '1', 10)
   const current = journey.days.find((d) => d.day === dayNumber)
-  if (!current) return <Navigate to={`/safari-collections/${slug}`} replace />
+  if (!current) {
+    if (loading) return null
+    return <Navigate to={`/safari-collections/${slug}`} replace />
+  }
 
   const prev = journey.days.find((d) => d.day === dayNumber - 1) ?? null
   const next = journey.days.find((d) => d.day === dayNumber + 1) ?? null

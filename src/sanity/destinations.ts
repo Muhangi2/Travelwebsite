@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { countries as localCountries, type Country, type Park } from '@/data/destinations'
+import type { Country, Park } from '@/data/destinations'
 import { sanityClient } from './client'
 import { allDestinationsQuery, destinationBySlugQuery } from './queries'
 import type { SanityDestination, SanityPark } from './types'
@@ -111,7 +111,7 @@ function toRecord(items: Country[]): Record<string, Country> {
 }
 
 export function useCountries(): { countries: Record<string, Country>; list: Country[]; loading: boolean } {
-  const [countries, setCountries] = useState<Record<string, Country>>(localCountries)
+  const [countries, setCountries] = useState<Record<string, Country>>({})
   const [loading, setLoading] = useState(Boolean(sanityClient))
 
   useEffect(() => {
@@ -124,7 +124,7 @@ export function useCountries(): { countries: Record<string, Country>; list: Coun
         setCountries(toRecord(data.map(toCountry)))
       })
       .catch((err) => {
-        console.warn('Sanity destinations fetch failed, using local data:', err)
+        console.warn('Sanity destinations fetch failed:', err)
       })
       .finally(() => {
         if (!cancelled) setLoading(false)
@@ -138,10 +138,7 @@ export function useCountries(): { countries: Record<string, Country>; list: Coun
 }
 
 export function useCountry(slug: string | undefined): { country: Country | null; loading: boolean } {
-  const [country, setCountry] = useState<Country | null>(() => {
-    if (!slug) return null
-    return localCountries[slug] ?? null
-  })
+  const [country, setCountry] = useState<Country | null>(null)
   const [loading, setLoading] = useState(Boolean(sanityClient && slug))
 
   useEffect(() => {
@@ -154,7 +151,7 @@ export function useCountry(slug: string | undefined): { country: Country | null;
         setCountry(toCountry(data))
       })
       .catch((err) => {
-        console.warn('Sanity destination fetch failed, using local data:', err)
+        console.warn('Sanity destination fetch failed:', err)
       })
       .finally(() => {
         if (!cancelled) setLoading(false)

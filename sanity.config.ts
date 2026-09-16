@@ -41,6 +41,19 @@ const structure: StructureResolver = (S) =>
       S.divider(),
 
       S.listItem()
+        .title('Safari FAQ')
+        .icon(() => '❓')
+        .id('safariFaqPage-main')
+        .child(
+          S.document()
+            .schemaType('safariFaqPage')
+            .documentId('safariFaqPage-main')
+            .title('Safari FAQ'),
+        ),
+
+      S.divider(),
+
+      S.listItem()
         .title('Stories')
         .schemaType('story')
         .child(S.documentTypeList('story').title('Stories')),

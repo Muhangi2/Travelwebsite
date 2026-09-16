@@ -6,14 +6,17 @@ import Picture from '@/components/Picture'
 
 export default function ExperienceDetail() {
   const { slug } = useParams<{ slug: string }>()
-  const { experience: exp } = useExperience(slug)
+  const { experience: exp, loading } = useExperience(slug)
   const { items: experiences } = useExperiences()
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' })
   }, [slug])
 
-  if (!exp) return <Navigate to="/" replace />
+  if (!exp) {
+    if (loading) return null
+    return <Navigate to="/" replace />
+  }
 
   const related = experiences.filter((e) => e.slug !== exp.slug && e.badge === exp.badge).slice(0, 3)
   const fallback = related.length

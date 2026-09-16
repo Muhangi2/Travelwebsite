@@ -18,9 +18,12 @@ import SeoKeywords from '@/components/destinations/SeoKeywords'
 
 export default function DestinationCountry() {
   const { country: countrySlug } = useParams<{ country: string }>()
-  const { country: data } = useCountry(countrySlug)
+  const { country: data, loading } = useCountry(countrySlug)
 
-  if (!data) return <Navigate to="/destinations" replace />
+  if (!data) {
+    if (loading) return null
+    return <Navigate to="/destinations" replace />
+  }
 
   return (
     <>
